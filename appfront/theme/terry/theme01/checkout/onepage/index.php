@@ -1,425 +1,258 @@
-<?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<div class="main container one-column">
-	<div class="col-main">
-		<?= Yii::$service->page->widget->render('flashmessage'); ?>
-		<form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
-			<?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
-			<fieldset style="margin: 0;" class="group-select">
-				<p class="onestepcheckout-description"><?= Yii::$service->page->translate->__('Welcome to the checkout,Fill in the fields below to complete your purchase');?> !</p>
-				<p class="onestepcheckout-login-link">
-					<a href="<?= Yii::$service->url->getUrl('customer/account/login'); ?>" id="onestepcheckout-login-link"><?= Yii::$service->page->translate->__('Already registered? Click here to login');?>.</a>
-				</p>
-				<div class="onestepcheckout-threecolumns checkoutcontainer onestepcheckout-skin-generic onestepcheckout-enterprise">
-					<div class="onestepcheckout-column-left">
-						<?php # address 部门
-							//echo $address_view_file;
-							$addressView = [
-								'view'	=> $address_view_file,
-							];
-							//var_dump($address_list);
-							$addressParam = [
-								'cart_address_id' 	=> $cart_address_id,
-								'address_list'	  	=> $address_list,
-								'customer_info'	  	=> $customer_info,
-								'country_select'  	=> $country_select,
-								'state_html'  	  	=> $state_html,
-								'cart_address'		=> $cart_address,
-								//'payments' => $payments,
-								//'current_payment_mothod' => $current_payment_mothod,
-							];
-						?>
-						<?= Yii::$service->page->widget->render($addressView,$addressParam); ?>
-					
-					</div>
+<div class="main">
+    <div class="page_where_l"><a href="../">Home</a> - Check Out for Order:&nbsp;&nbsp;Serial No. U2170826416376</div><div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
+    <div class="blank8px"></div>
 
-					<div class="onestepcheckout-column-middle">
-						<div class="shipping_method_html">
-							<?php # shipping部分
-								$shippingView = [
-									'view'	=> 'checkout/onepage/index/shipping.php'
-								];
-								$shippingParam = [
-									'shippings' => $shippings,
-								];
-							?>
-							<?= Yii::$service->page->widget->render($shippingView,$shippingParam); ?>
-						</div>
-				
-				
-						<?php # payment部分
-							$paymentView = [
-								'view'	=> 'checkout/onepage/index/payment.php'
-							];
-							$paymentParam = [
-								'payments' => $payments,
-								'current_payment_mothod' => $current_payment_mothod,
-							];
-						?>
-						<?= Yii::$service->page->widget->render($paymentView,$paymentParam); ?>
-					
-							
-						<div class="onestepcheckout-coupons">
-							<div style="display: none;" id="coupon-notice"></div>
-							<div class="op_block_title"><?= Yii::$service->page->translate->__('Coupon codes (optional)');?></div>
-							<label for="id_couponcode"><?= Yii::$service->page->translate->__('Enter your coupon code if you have one.');?></label>
-							
-							<input type="hidden" class="couponType"  value="<?= $cart_info['coupon_code'] ? 1 : 2 ; ?>"  />
-							<input style="color:#777;" class="input-text" id="id_couponcode" name="coupon_code" value="<?= $cart_info['coupon_code']; ?>">
-							<br>
-							<button style="" type="button" class="submitbutton add_coupon_submit" id="onestepcheckout-coupon-add"><?= Yii::$service->page->translate->__($cart_info['coupon_code'] ? 'Cancel Coupon' : 'Add Coupon') ; ?></button>
-							<div class="clear"></div>
-							<div class="coupon_add_log"></div>
-						</div>
-						
-						
-					</div>
 
-					<div class="onestepcheckout-column-right">
-						<div class="review_order_view">
-							<?php # review order部分
-								$reviewOrderView = [
-									'view'	=> 'checkout/onepage/index/review_order.php'
-								];
-								$reviewOrderParam = [
-									'cart_info' => $cart_info,
-									'currency_info' => $currency_info,
-								];
-							?>
-							<?= Yii::$service->page->widget->render($reviewOrderView,$reviewOrderParam); ?>
-							
-						</div>
-						<div class="onestepcheckout-place-order">
-							<a class="large orange onestepcheckout-button" href="javascript:void(0)" id="onestepcheckout-place-order"><?= Yii::$service->page->translate->__('Place order now');?></a>
-							<div class="onestepcheckout-place-order-loading"><img src="<?= Yii::$service->image->getImgUrl('images/opc-ajax-loader.gif'); ?>">&nbsp;&nbsp;<?= Yii::$service->page->translate->__('Please wait, processing your order...');?></div>
-						</div>
-					</div>
-					<div style="clear: both;">&nbsp;</div>
-				</div>
-			</fieldset>
-		</form>
-	</div>
+    <div class="exh_full_top"></div>
+    <div class="exh_full_main">
+        <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>
+
+
+        <div class="blank10px"></div>
+
+        <b class="red_dark px16">You placed an order on our site successfully! </b>
+
+        <div class="blank10px"></div>
+        <span id="sRtnGetOrderFormStatus"></span>
+        <div class="blank10px"></div>
+
+
+        <span class="px14">You choosed <b class="blue">PayPal</b> payment.</span> <b>After <span id="id_span_jump_sec" class="red px13">30</span> seconds, the system will redirect to the secure PayPal site to finish your order.</b> If it doesn't work, please click the following corresponding button.<a href="javascript:countGoPay"></a>
+        <script type="text/javascript">
+            function countGoPay(secs){
+                document.getElementById("id_span_jump_sec").innerHTML = secs;
+                if(--secs>0) {
+                    setTimeout("countGoPay("+secs+")",1000);
+                }
+                else {
+                    document.getElementById("form_jumpto_checkout_papal_ecs").submit();;}
+            }
+            countGoPay(30);
+        </script>
+
+
+        <div class="blank10px"></div><div class="blank10px"></div>
+
+
+
+        <div class="p_order_step">
+            <div class="o_stp_s_off" id="m_os_shippingcart" onclick="javascript:AreaShowHide('ar_os_shippingcart');OrderStepCSSswitch('m_os_shippingcart');" style="cursor:pointer"><span class="sn">1</span> &nbsp;Order Details</div>
+            <div class="scene_nopadding" id="ar_os_shippingcart" style="display:"><table class="tab_comm">
+                    <tr class="tr_head">
+                        <td width="110">&nbsp;</td>
+                        <td>Product Name</td>
+                        <td width="100">Unit Price</td>
+                        <td width="100">Qty.</td>
+                        <td width="100">Subtotal</td>
+                    </tr>
+
+
+                    <tr class="tr_info">
+                        <td><div class="img90px"><a href="/wholesale/latest-mb-sd-c4-c5-software-hdd.html" title="Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System" target="_blank"><img src="/upload/pro/500gb-mb-sd-connect-compact-c4-software-hdd-180.jpg" width="90" height="90" border="0" hspace="0" vspace="0" alt="Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System" align="absmiddle" /></a></div></td>
+                        <td class="align_left gray">
+                            <a href="/wholesale/latest-mb-sd-c4-c5-software-hdd.html" target="_blank"><span class="px13">Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System</span></a>
+                            <div class="blank10px"></div>
+                            <span class="gray px12">Item No. SS195-D7</span>
+
+                        </td>
+                        <td>$109.00</td>
+                        <td>1</td>
+                        <td><b>$109.00</b></td>
+                    </tr>
+
+                    <tr class="tr_info">
+                        <td colspan="5" class="align_right verdana px13 line18em">
+
+                            Items Total: <span class="red_dark">$109.00</span>
+
+
+                            <br /><span class="green">Free Shipping</span>
+
+
+                            <div class="blank10px"></div>
+                            <b class="red px16" style="border-top:1px solid #CCCCCC; padding-top:5px; padding-left:20px;">
+                                Total Sum: $109.00
+                            </b>
+                            <div class="blank5px"></div>
+                        </td>
+                    </tr>
+                </table></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="p_order_step">
+            <div class="o_stp_s_off" id="m_os_paymentMethod" onclick="javascript:AreaShowHide('ar_os_paymentMethod');OrderStepCSSswitch('m_os_paymentMethod');" style="cursor:pointer"><span class="sn">2</span> &nbsp;You Choosed Payment Method</div>
+            <div class="scene" id="ar_os_paymentMethod" style="display:none"><b>PayPalECS</b></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="p_order_step">
+            <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer"><span class="sn">3</span> &nbsp;Shipping Address</div>
+            <div class="scene px13 line15em" id="ar_os_shippingAddress" style="display:none">
+                <div class="float_right"><a href="javascript:void(0);" onclick="javascript:document.formOrderAddressChange.submit();return false;"><b class="px11">Change</b></a></div>
+                <form action="/app/order_address.asp" method="post" name="formOrderAddressChange">
+                    <input type="hidden" name="addAction" value="editAddress" />
+                    <input type="hidden" name="OrderID" value="416376" />
+                </form>
+
+
+                Receiver: 221 2121<br />
+                212121<br />
+                212121<br />212121, France<br />
+                Post Code: 2121<br />
+                Phone: 212121<br />
+
+
+                <div class="blank10px"></div></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="p_order_step">
+            <div class="o_stp_s_cur"><span class="sn_cur">4</span> &nbsp;Checkout and Payment Details</div>
+            <div class="scene">
+
+
+                <div class="blank5px"></div>
+                <label for="PayPalECS">
+                    <input name="PaymentMethod" type="radio" id="PayPalECS" value="PayPalECS" checked="checked" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);" />
+
+                    <img src="/images/pay/PayPal_mark_60x38.gif" alt="PayPalECS" border="0" align="absmiddle" />&nbsp;&nbsp;<b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
+                </label>
+
+
+
+                <div class="blank5px"></div>
+                <div style="display:" class="pay_ex_a" id="area_pay_method_exp_1">
+                    <img align="right" alt="" border="0" hspace="5" src="/images/pay/pay_remark_paypal.gif" />If you have PayPal account, you can pay your order by your PayPal account.<br />
+                    If you don&#39;t have PayPal account, it doesn&#39;t matter. You firstly charge your Paypal with you credit card or bank debit card , then also pay via PayPal.<br />
+                    Payment can be submitted in any currency.&nbsp;<br />
+                    Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
+                    <div class="blank10px"></div>
+
+                    <form action="/api_ppec/paypal_ec_redirect.php" method="POST" id="form_jumpto_checkout_papal_ecs">
+                        <input type="hidden" name="PAYMENTREQUEST_0_INVNUM" value="U2170826416376">
+
+                        <input type="hidden" name="paymentType" value="Sale">
+
+
+                        <input type="hidden" name="CANCELURL" value="http://www.UOBDII.com/app/order_checkout.asp?OrderSN=U2170826416376">
+
+                        <input type="hidden" name="currencyCodeType" value="USD" />
+
+
+                        <input type="hidden" name="L_PAYMENTREQUEST_0_NAME0" value="Newest+500GB+V2017%2E07+MB+SD+C4%2FC5+Software+HDD+For+DELL+D630+Support+WIN7%26amp%3BWIN10+System" />
+                        <input type="hidden" name="L_PAYMENTREQUEST_0_NUMBER0" value="SS195-D7" />
+                        <input type="hidden" name="L_PAYMENTREQUEST_0_AMT0" value="109.00" />
+                        <input type="hidden" name="L_PAYMENTREQUEST_0_QTY0" value="1" />
+                        <input type="hidden" name="L_PAYMENTREQUEST_0_DESC0" value="69820; 1; %2D; %2D; 275" />
+
+
+                        <input type="hidden" name="PAYMENTREQUEST_0_ITEMAMT" value="109.00" />
+                        <input type="hidden" name="PAYMENTREQUEST_0_SHIPPINGAMT" value="0.00">
+
+
+
+                        <input type="hidden" name="PAYMENTREQUEST_0_AMT" value="109.00">
+
+                        <input type="hidden" name="PAYMENTREQUEST_0_CUSTOM" value="0|351041|0.0||0.0|0.00|0|275|http://www.UOBDII.com" />
+
+
+                        <input type="hidden" name="myOrderProNum" value="0" />
+
+                        <input type="hidden" name="LOGOIMG" value="http://www.UOBDII.com/images/logo.png">
+
+                        <input type="submit" style="display:none" />
+                        <input name="" type="image" class="ipt_img" src="/images/pay/pp-checkout-logo-large.png" alt="Check out with PayPal" id="myPPECbutton" />
+
+
+                        <div style="float:right;" id="myContainer"></div>
+
+                    </form>
+
+                    <script type="text/javascript">
+                        window.paypalCheckoutReady = function () {
+                            paypal.checkout.setup('sinpecal_api1.gmail.com', {
+                                button: 'myPPECbutton',
+                                environment: 'production'
+                            });
+                        };
+                    </script>
+                    <script src="/api_ppec/js/checkout.js" async></script>
+
+
+
+                </div>
+                <div class="dashed_line"></div>
+                <div class="blank5px"></div>
+
+
+                <div class="blank5px"></div>
+                <label for="Western Union">
+                    <input name="PaymentMethod" type="radio" id="Western Union" value="Western Union" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);" />
+
+                    <img src="/images/pay/ico_western_union.gif" alt="Western Union" border="0" align="absmiddle" />&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
+                </label>
+
+
+
+                <div class="blank5px"></div>
+                <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_2">
+                    <p><strong>First Name: Donglian<br />
+                            Last Name : Xu</strong><br />
+                        <strong>City: SHENZHEN</strong><br />
+                        <strong>Country:CHINA</strong><br />
+                        <strong>Postal Code:518112</strong><br />
+                        <strong>Mobile: +</strong><strong>0086-13995696053</strong><br />
+                        <strong>Tel: +86-755-28704781</strong><br />
+                        <strong>Fax:+86-755-28700303</strong></p>
+
+                    <p>Note: Please make sure leave the Order# in the remark section.<br />
+                        After you make the payment, please remember to Sign In &quot;My Account&quot; on our site, and submit the Western Union Money Transfer Control Number (MTCN) on the page of &quot;Submit a Request Ticket&quot;. We will confirm your payment within 24 hours upon the receipt of the money.</p>
+
+                </div>
+                <div class="dashed_line"></div>
+                <div class="blank5px"></div>
+
+
+                <div class="blank5px"></div>
+                <label for="Bank Transfer">
+                    <input name="PaymentMethod" type="radio" id="Bank Transfer" value="Bank Transfer" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);" />
+
+                    <img src="/images/pay/ico_hsbc.gif" alt="Bank Transfer" border="0" align="absmiddle" />&nbsp;&nbsp;<b class="px13 verdana">Bank Transfer</b>
+                </label>
+
+
+
+                <div class="blank5px"></div>
+                <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_3">
+                    <div><strong>Name of Corporation: Sinoy Electronic Technology HK Limited<br />
+                            Account:168-308187-838<br />
+                            Bank name:HSBC HongKong<br />
+                            Swift Code:HSBCHKHH<br />
+                            BANK number:004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+                            Bank Address:BASEMENT L/G &amp; U/G 673 NATHAN ROAD,MONG KOK,KOWLOON,HONGKONG</strong></div>
+
+                    <p><strong>Sinoy Electronic Technology HK Limited</strong> is&nbsp;the designated bank and transfer the money to the designated account above. The money will arrive in our account in about 2-4business days.<br />
+                        <strong>Note: Please make sure leave the Order# in the remark section.</strong><br />
+                        After you make the payment, please remember to Sign In &quot;My Account&quot; on our site, and submit a notice about payment on the page of &quot;Submit a Request Ttcket&quot;. We will confirm your payment within 24 hours upon the receipt of the money.</p>
+
+                </div>
+                <div class="dashed_line"></div>
+                <div class="blank5px"></div>
+
+
+
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="exh_full_bottom"></div>
+    <div class="clear"></div>
 </div>
-
-<script>
-<?php $this->beginBlock('placeOrder') ?>
-	function validateEmail(email) {
-		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(email);
-	}
-	// ajax
-	function ajaxreflush(){
-		shipping_method = $("input[name=shipping_method]:checked").val();
-		//alert(shipping_method);
-		country = $(".billing_country").val();
-		address_id = $(".address_list").val();
-		state   = $(".address_state").val();
-		//alert(state);
-		if(country || address_id){
-			$(".onestepcheckout-summary").html('<div style="text-align:center;min-height:40px;"><img src="<?= Yii::$service->image->getImgUrl('images/ajax-loader.gif'); ?>"  /></div>');
-			$(".onestepcheckout-shipping-method-block").html('<div style="text-align:center;min-height:40px;"><img src="<?= Yii::$service->image->getImgUrl('images/ajax-loader.gif'); ?>"  /></div>');
-				
-			ajaxurl = "<?= Yii::$service->url->getUrl('checkout/onepage/ajaxupdateorder');  ?>";
-			
-			
-			$.ajax({
-				async:false,
-				timeout: 8000,
-				dataType: 'json', 
-				type:'get',
-				data: {
-						'country':country,
-						'shipping_method':shipping_method,
-						'address_id':address_id,
-						'state':state,
-						},
-				url:ajaxurl,
-				success:function(data, textStatus){ 
-					status = data.status;
-					if(status == 'success'){
-						$(".review_order_view").html(data.reviewOrderHtml)
-						$(".shipping_method_html").html(data.shippingHtml);
-					
-					}
-						
-				},
-				error:function (XMLHttpRequest, textStatus, errorThrown){
-						
-				}
-			});
-		}
-	}	
-	$(document).ready(function(){
-		currentUrl = "<?= Yii::$service->url->getUrl('checkout/onepage') ?>"
-		//优惠券
-		$(".add_coupon_submit").click(function(){
-			coupon_code = $("#id_couponcode").val();
-			coupon_type = $(".couponType").val();
-			coupon_url = "";
-			$succ_coupon_type = 0;
-			if(coupon_type == 2){
-				coupon_url = "<?=  Yii::$service->url->getUrl('checkout/cart/addcoupon'); ?>";
-				$succ_coupon_type = 1;
-			}else if(coupon_type == 1){
-				coupon_url = "<?=  Yii::$service->url->getUrl('checkout/cart/cancelcoupon'); ?>";
-				$succ_coupon_type = 2;
-			}
-			//alert(coupon_type);
-			if(!coupon_code){
-				//alert("coupon can not empty!");
-			}
-			//coupon_url = $("#discount-coupon-form").attr("action");
-			//alert(coupon_url);
-			$.ajax({
-				async:true,
-				timeout: 6000,
-				dataType: 'json', 
-				type:'post',
-				data: {"coupon_code":coupon_code},
-				url:coupon_url,
-				success:function(data, textStatus){ 
-					if(data.status == 'success'){
-						$(".couponType").val($succ_coupon_type);
-						hml = $('.add_coupon_submit').html();
-						if(hml == 'Add Coupon'){
-							$('.add_coupon_submit').html('<?= Yii::$service->page->translate->__('Cancel Coupon');?>');
-						}else{
-							$('.add_coupon_submit').html('<?= Yii::$service->page->translate->__('Add Coupon');?>');
-						}
-						$(".coupon_add_log").html("");
-						ajaxreflush();
-					}else if(data.content == 'nologin'){
-						$(".coupon_add_log").html("<?= Yii::$service->page->translate->__('you must login your account before you use coupon');?>");
-					}else{
-						$(".coupon_add_log").html(data.content);
-					}
-				},
-				error:function (XMLHttpRequest, textStatus, errorThrown){}
-			});
-				
-			
-		});
-		
-		// 对于非登录用户，可以填写密码，进行注册账户，这里进行信息的检查。
-		$("#id_create_account").click(function(){
-			if($(this).is(':checked')){
-				email = $("input[name='billing[email]']").val();
-				if(!email){
-					$(this).prop('checked', false);
-					$(".label_create_account").html(" <?= Yii::$service->page->translate->__('email address is empty, you must Fill in email');?>");
-				}else{
-					thischeckbox = this;
-					if(!validateEmail(email)){
-						$(this).prop('checked', false);
-						$(".label_create_account").html(" <?= Yii::$service->page->translate->__('email address format is incorrect');?>");
-						
-					}else{
-						// ajax  get if  email is register
-						$.ajax({
-							async:true,
-							timeout: 6000,
-							dataType: 'json', 
-							type:'get',
-							data: {"email":email},
-							url:"<?= Yii::$service->url->getUrl('customer/ajax/isregister'); ?>",
-							success:function(data, textStatus){ 
-								if(data.registered == 2){
-									$(".label_create_account").html("");
-									$("#onestepcheckout-li-password").show();
-									$("#onestepcheckout-li-password input").addClass("required-entry");
-					
-								}else{
-									$(thischeckbox).prop('checked', false);
-									$(".label_create_account").html(" <?= Yii::$service->page->translate->__('This email is registered , you must fill in another email');?>");
-								}
-							},
-							error:function (XMLHttpRequest, textStatus, errorThrown){}
-						});
-					}
-				}
-			}else{
-				$(".label_create_account").html("");
-				$("#onestepcheckout-li-password").hide();
-				$("#onestepcheckout-li-password input").removeClass("required-entry");
-			}
-		});
-		//###########################
-		//下单(这个部分未完成。)
-		$("#onestepcheckout-place-order").click(function(){
-			$(".validation-advice").remove();
-			i = 0;
-			j = 0;
-			address_list = $(".address_list").val();
-			// shipping
-			shipment_method = $(".onestepcheckout-shipping-method-block input[name='shipping_method']:checked").val();
-			//alert(shipment_method);
-			if(!shipment_method){
-				$(".shipment-methods").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
-				j = 1;
-			}
-			//alert(j);
-			//payment  
-			payment_method = $("#checkout-payment-method-load input[name='payment_method']:checked").val();
-			//alert(shipment_method);
-			if(!payment_method){
-				$(".checkout-payment-method-load").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
-				j = 1;
-			}
-			
-			
-			
-			if(address_list){
-				if(!j){
-					$(".onestepcheckout-place-order").addClass('visit');
-				
-					$("#onestepcheckout-form").submit();
-				}
-			}else{
-				//alert(11);
-				//alert(j);
-				$("#onestepcheckout-form .required-entry").each(function(){
-					value = $(this).val();
-					if(!value){
-						//alert(this);
-						//alert($(this).attr('name'));
-						i++;
-						$(this).after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
-					}
-				});
-				//email  format validate
-				user_email = $("#billing_address .validate-email").val();
-				if(user_email && !validateEmail(user_email)){
-					$("#billing_address .validate-email").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('email address format is incorrect');?></div>');
-					i++;
-				}
-				// password 是否长度大于6，并且两个密码一致
-				if($("#id_create_account").is(':checked')){
-					
-					new_user_pass = $(".customer_password").val();
-					new_user_pass_cm = $(".customer_confirm_password").val();
-					//alert(new_user_pass);
-					//alert(new_user_pass.length);
-					//alert(new_user_pass_cm);
-					<?php 
-						$passwdMinLength = Yii::$service->customer->getRegisterPassMinLength();
-						$passwdMaxLength = Yii::$service->customer->getRegisterPassMaxLength();
-					?>
-					passwdMinLength = "<?= $passwdMinLength ?>";
-					passwdMaxLength = "<?= $passwdMaxLength ?>";
-					if(new_user_pass.length < passwdMinLength){
-						$(".customer_password").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('Password length must be greater than or equal to {passwdMinLength}',['passwdMinLength' => $passwdMinLength]);?></div>');
-						i++;
-					}else if(new_user_pass.length > passwdMaxLength){
-						$(".customer_password").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('Password length must be less than or equal to {passwdMaxLength}',['passwdMaxLength' => $passwdMaxLength]);?></div>');
-						i++;
-					}else if(new_user_pass != new_user_pass_cm){
-						$(".customer_confirm_password").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('The passwords are inconsistent');?></div>');
-						i++; 
-					}  
-				}
-				
-				//alert(222);
-				if(!i && !j){
-					//alert(333);
-					$(".onestepcheckout-place-order").addClass('visit');
-					$("#onestepcheckout-form").submit();
-				}
-			}
-			
-		});
-		
-		//登录用户切换地址列表
-		$(".address_list").change(function(){
-			val = $(this).val();
-			if(!val){
-				$(".billing_address_list_new").show();
-				 
-				$(".save_in_address_book").attr("checked","checked");
-				ajaxreflush();
-				
-			}else{
-				$(".billing_address_list_new").hide();
-				$(".save_in_address_book").attr("checked",false);
-				addressid = $(this).val();
-				
-				if(addressid){
-					ajaxreflush();
-				}
-			}
-		});
-		
-		// 国家选择后，state需要清空，重新选择或者填写
-		$(".billing_country").change(function(){
-			country = $(this).val();
-			//state   = $(".address_state").val();
-			//shipping_method = $("input[name=shipping_method]:checked").val();
-			//alert(shipping_method);
-			
-			//$(".onestepcheckout-shipping-method-block").html('<div style="text-align:center;min-height:40px;"><img src="http://www.intosmile.com/skin/default/images/ajax-loader.gif"  /></div>');
-			//$(".onestepcheckout-summary").html('<div style="text-align:center;min-height:40px;"><img src="http://www.intosmile.com/skin/default/images/ajax-loader.gif"  /></div>');
-			ajaxurl = "<?= Yii::$service->url->getUrl('checkout/onepage/changecountry'); ?>";
-			
-			$.ajax({
-				async:true,
-				timeout: 8000,
-				dataType: 'json', 
-				type:'get',
-				data: {
-						'country':country,
-						//'shipping_method':shipping_method,
-						//'state':state
-						},
-				url:ajaxurl,
-				success:function(data, textStatus){ 
-					$(".state_html").html(data.state);
-					
-				},
-				error:function (XMLHttpRequest, textStatus, errorThrown){
-						
-				}
-			});
-			ajaxreflush();	
-		});
-		
-		// state select 改变后的事件
-		$(".input-state").off("change").on("change","select.address_state",function(){
-			ajaxreflush();
-		});
-		// state input 改变后的事件
-		$(".input-state").off("blur").on("blur","input.address_state",function(){
-			ajaxreflush();
-		});
-		
-		
-		//改变shipping methos
-		$(".onestepcheckout-column-middle").off("click").on("click","input[name=shipping_method]",function(){
-			ajaxreflush();
-		});
-		
-		
-		
-		//$("#billing_address_list").off("change").on("change",".selectstate",function(){
-		//	value = $(".selectstate option:selected").text();
-		//	if($(".selectstate").val()){
-		//		$(".inputstate").val(value);
-		//	}else{
-		//		$(".inputstate").val('');
-		//	}
-		//});
-		
-	});	
-	//ajaxreflush();
-<?php $this->endBlock(); ?> 
-<?php $this->registerJs($this->blocks['placeOrder'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
-
-</script>
-    
-
-	
