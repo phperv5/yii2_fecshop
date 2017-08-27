@@ -1,179 +1,136 @@
-<?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<?php
-use fecshop\app\appfront\helper\Format;
-?>
-<div class="main container two-columns-left">
-	<div class="col-main account_center">
-		<div class="std">
-			<div style="margin:19px 0 0">
-				<div class="my_account_order">
-					<div class="page-title title-buttons">
-						<h1><?= Yii::$service->page->translate->__('Order #');?><?=  $increment_id ?>				<?= Yii::$service->page->translate->__($order_status);?>				</h1>
-					</div>
-					<p class="order-date"><?=  date('Y-m-d H:i:s',$created_at); ?></p>
-					<div class="col2-set order-info-box">
-						<div class="col-1">
-							<div class="box">
-                                <div class="box-title">
-                                    <h2><?= Yii::$service->page->translate->__('Shipping Address');?></h2>
-                                </div>
-                                <div class="box-content">
-                                    <address><?=  $customer_firstname ?> <?=  $customer_lastname ?><br>
-                                    <?=  $customer_address_street1 ?><br><?=  $customer_address_street2 ?><br><?=  $customer_address_city ?>,<?=  $customer_address_state_name ?>,<?=  $customer_address_country_name ?><br>
-                                    <?= Yii::$service->page->translate->__('T:');?><?=  $customer_telephone ?>
+<div class="main">
+    <div class="main_left">
+        <div class="col_d_t">My Account</div>
+        <div class="col_d_m">
+            <div class="blank5px"></div>
+            <div class="ml_dir ml_dir_cur"><a href="orderList.asp">View My Orders</a></div>
+            <div class="ml_dir"><a href="accountSet.asp">Account Settings</a></div>
+            <div class="ml_dir"><a href="addressBook.asp">Manage Address Book</a></div>
+            <div class="ml_dir"><a href="msg_list.asp">Tickets Center</a></div>
+            <div class="ml_dir"><a href="msg_add.asp?DirID=2">Submit a Ticket</a></div>
+            <div class="ml_dir"><a href="pro_rev_list.asp">My Products' Reviews</a></div>
+            <div class="ml_dir"><a href="my_favorites_list.asp">My Favorites</a></div>
+            <div class="blank5px"></div>
+        </div>
+        <div class="col_d_b"></div>
+        <div class="blank10px"></div>
+        <div class="fun_column px11 gray word_wrap word_break">
+            <div class="clear"></div>
+            <b class="px14">Welcome!</b><br />
+            <b class="px12">&nbsp;zewe&nbsp;jewew</b><br />
+            User ID: 312043814@qq.com<br />
+            E-Mail: 312043814@qq.com<br />
+            Account Status:<b>Normal</b><br />
+            <div class="dashed5px"></div>
+            <div class="align_right"><a href="../members/?action=SignOut"><img src="../images/ico/logout.gif" hspace="5" border="0" align="absmiddle" />Sign out</a>&nbsp;&nbsp;</div>
+            <div class="clear"></div>
+        </div>
+        <div class="blank10px"></div>
+        <div class="fun_column px11 gray">
+            <b class="px14">Need help?</b><br />
+            If you have questions or need help with your account, you may goto "<a href="../support" target="_blank">Help</a>" or <a href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
+            <div class="clear"></div>
+        </div></div>
+    <div class="main_scene">
+        <div class="exh_top"></div>
+        <div class="exh_main">
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - My Order Form: S/N.<b class="red">U2170826416375</b></div><div class="blank5px"></div><h1>My Order Form: S/N.<b class="red">U2170826416375</b></h1>
+            <div class="blank10px"></div>
+            <div class="p_sub_a">Order Status</div>
+            <table class="tab_comm">
+                <tr class="tr_head">
+                    <td width="180"><b>Status</b></td>
+                    <td width="150"><b>Added Time</b></td>
+                    <td><b>Comments</b></td>
+                </tr>
 
-                                    </address>
-                                </div>
-                            </div>				
-                        </div>
-						<div class="col-2">
-							<div class="box">
-								<div class="box-title">
-									<h2><?= Yii::$service->page->translate->__('Shipping Method');?></h2>
-								</div>
-								<div class="box-content">
-								<?=  $shipping_method ?>             
-								</div>
-							</div>				</div>
-						<div class="col-2">
-							<div class="box box-payment">
-								<div class="box-title">
-									<h2><?= Yii::$service->page->translate->__('Payment Method');?></h2>
-								</div>
-								<div class="box-content">
-									<p><strong><?=  $payment_method ?></strong></p>
-								</div>
-							</div>				
-                        </div>
-					</div>
-					
-					<div class="order-items order-details">
-						<h2 class="table-caption"><?= Yii::$service->page->translate->__('Items Ordered');?></h2>
+                <tr class="tr_info">
+                    <td><font color=#333>Pending</font></td>
+                    <td class="px11 gray">Aug 26, 2017&nbsp;&nbsp;6:43:18 PM</td>
+                    <td></td>
+                </tr>
 
-						<table summary="Items Ordered" id="my-orders-table" class="data-table">
-							<colgroup><col>
-							<col width="1">
-							<col width="1">
-							<col width="1">
-							<col width="1">
-							</colgroup>
-							<thead>
-								<tr class="first last">
-									<th><?= Yii::$service->page->translate->__('Product Name');?></th>
-									<th><?= Yii::$service->page->translate->__('Product Image');?></th>
-									<th><?= Yii::$service->page->translate->__('Sku');?></th>
-									<th class="a-right"><?= Yii::$service->page->translate->__('Price');?></th>
-									<th class="a-center"><?= Yii::$service->page->translate->__('Qty');?></th>
-									<th class="a-right"><?= Yii::$service->page->translate->__('Subtotal');?></th>
-								</tr>
-							</thead>
-							<tfoot>
-								<tr class="subtotal first">
-									<td class="a-right" colspan="5"><?= Yii::$service->page->translate->__('Subtotal');?></td>
-									<td class="last a-right"><span class="price"><?= $currency_symbol ?><?=  Format::price($subtotal); ?></span></td>
-								</tr>
-								<tr class="shipping">
-									<td class="a-right" colspan="5"><?= Yii::$service->page->translate->__('Shipping Cost');?></td>
-									<td class="last a-right">
-										<span class="price"><?= $currency_symbol ?><?=  Format::price($shipping_total); ?></span>    
-									</td>
-								</tr>
-								<tr class="discount">
-									<td class="a-right" colspan="5"><?= Yii::$service->page->translate->__('Discount');?></td>
-									<td class="last a-right">
-										<span class="price"><?= $currency_symbol ?><?=  Format::price($subtotal_with_discount); ?></span>    
-									</td>
-								</tr>
-								<tr class="grand_total last">
-									<td class="a-right" colspan="5">
-										<strong><?= Yii::$service->page->translate->__('Grand Total');?></strong>
-									</td>
-									<td class="last a-right">
-										<strong><span class="price"><?= $currency_symbol ?><?=  Format::price($grand_total); ?></span></strong>
-									</td>
-								</tr>
-							</tfoot>
-							<tbody class="odd">
-								<?php if(is_array($products) && !empty($products)):  ?>
-									<?php foreach($products as $product): ?>
-									<tr id="order-item-row" class="border first">	
-										<td>
-											<a href="<?=  Yii::$service->url->getUrl($product['redirect_url']) ; ?>">
-												<h3 class="product-name">
-													<?= $product['name'] ?>
-												</h3>
-											</a>
-											<?php  if(is_array($product['custom_option_info'])):  ?>
-											<ul>
-												<?php foreach($product['custom_option_info'] as $label => $val):  ?>
-													
-													<li><?= Yii::$service->page->translate->__($label.':') ?><?= Yii::$service->page->translate->__($val) ?> </li>
-													
-												<?php endforeach;  ?>
-											</ul>
-											<?php endif;  ?>
-											<dl class="item-options">
-												
-											</dl>
-											
-										</td>
-										<td>
-											<a href="<?=  Yii::$service->url->getUrl($product['redirect_url']) ; ?>">
-												<img src="<?= Yii::$service->product->image->getResize($product['image'],[100,100],false) ?>" alt="<?= $product['name'] ?>" width="75" height="75">
-											</a>
-										</td>
-										<td><?= $product['sku'] ?></td>
-										<td class="a-right">
-											<span class="price-excl-tax">
-												<span class="cart-price">
-													<span class="price"><?= $currency_symbol ?><?= Format::price($product['price']); ?></span>                    
-												</span>
-											</span>
-											<br>
-										</td>
-										<td class="a-right">
-											<span class="nobr" ><strong><?= $product['qty'] ?></strong><br>
-											</span>
-										</td>
-										<td class="a-right last">
-											<span class="price-excl-tax">
-												<span class="cart-price">
-													<span class="price"><?= $currency_symbol ?><?= Format::price($product['row_total']); ?></span>                    
-												</span>
-											</span>
-											<br>
-										</td>
-									</tr>
-									<?php endforeach; ?>
-								<?php endif; ?>
-								</tbody>								   
-						</table>
-						<br/>
-						<div class="buttons-set">
-							<p class="back-link"><a href="<?= Yii::$service->url->getUrl('customer/order/index'); ?>"><small> « </small><?= Yii::$service->page->translate->__('Back to My Orders');?></a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col-left ">
-		<?php
-			$leftMenu = [
-				'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
-				'view'	=> 'customer/leftmenu.php'
-			];
-		?>
-		<?= Yii::$service->page->widget->render($leftMenu,$this); ?>
-	</div>
-	<div class="clear"></div>
+            </table>
+            <div class="blank15px"></div>
+            <div class="p_sub_a">Order Information</div>
+            <div class="p_con_a">
+                <form name="formGotoCheckout" id="formGotoCheckout" method="post" action="../app/order_checkout.asp">
+                    <input type="hidden" name="OrderID" id="OrderID" value="416375" />
+                    <input type="submit" style="display:none" />
+                </form>
+                <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="javascript:document.getElementById('formGotoCheckout').submit();" /></div>
+                <span class="px11">Order Serial Number: </span><b class="blue_dark">U2170826416375</b><br />
+                <span class="px11">Order Date: </span><span class="px11 verdana">Saturday,&nbsp;Aug 26, 2017</span><br />
+                <span class="px11">Order Total Sum: </span><b class="red px14">$109.00</b>
+            </div>
+
+            <table class="tab_comm">
+                <tr class="tr_head">
+                    <td width="110">&nbsp;</td>
+                    <td>Product Name</td>
+                    <td width="100">Unit Price</td>
+                    <td width="100">Qty.</td>
+                    <td width="100">Subtotal</td>
+                </tr>
+                <tr class="tr_info">
+                    <td><div class="img90px"><a href="/wholesale/latest-mb-sd-c4-c5-software-hdd.html" title="Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System" target="_blank"><img src="/upload/pro/500gb-mb-sd-connect-compact-c4-software-hdd-180.jpg" width="90" height="90" border="0" hspace="0" vspace="0" alt="Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System" align="absmiddle" /></a></div></td>
+                    <td class="align_left gray">
+                        <a href="/wholesale/latest-mb-sd-c4-c5-software-hdd.html" target="_blank"><span class="px13">Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System</span></a>
+                        <div class="blank10px"></div>
+                        <span class="gray px12">Item No. SS195-D7</span>
+                    </td>
+                    <td>$109.00</td>
+                    <td>1</td>
+                    <td><b>$109.00</b></td>
+                </tr>
+
+                <tr class="tr_info">
+                    <td colspan="5" class="align_right verdana px13 line18em">
+                        Items Total: <span class="red_dark">$109.00</span>
+                        <br /><span class="green">Free Shipping</span>
+                        <div class="blank10px"></div>
+                        <b class="red px16" style="border-top:1px solid #CCCCCC; padding-top:5px; padding-left:20px;">
+                            Total Sum: $109.00
+                        </b>
+                        <div class="blank5px"></div>
+                    </td>
+                </tr>
+            </table>
+            <div class="p_con_a">
+                <b class="green_dark">Your Shipping Address:</b><br />
+                Receiver: zhuang jian<br />
+                rwrewrewrewrew<br />
+                ewrewr, werwe, Germany<br />
+                Post Code: 233223<br />
+                Phone: 23232323<br />
+                <div class="blank10px"></div>
+            </div>
+            <div class="blank15px"></div>
+            <div class="p_sub_a">Order Comments</div>
+            <div class="p_con_a">
+                <div class="blank10px"></div>
+                <div class="p_sub_a"><span class="red_dark"><img src="../images/ico/edit.gif" border="0" align="absmiddle" hspace="5" />Post a New Comment</span></div>
+                <div class="p_con_a">
+                    <form action="order_comment_app.asp" method="post" name="formAddOrderComment" onsubmit="return OrderCommentAddSim();">
+                        <textarea name="CommentMessage" cols="120" rows="6" id="CommentMessage" class="input"></textarea><span class="alert" id="txtOrderCommentMessage"></span>
+                        <div class="blank5px"></div>
+                        <input type="submit" name="Submit5" value="Submit" class="btn_submit">
+
+                        <input name="OrderID" type="hidden" value="416375">
+                        <input type="hidden" name="UserID" value="351041">
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="exh_bottom"></div>
+    </div>
+    <div class="main_bottom"></div>
 </div>
+
+
+
+
+
+

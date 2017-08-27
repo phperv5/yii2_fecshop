@@ -96,7 +96,7 @@
 		</form>
 	</div>
 </div>
-<?php 
+<?php
 $requiredValidate 			= Yii::$service->page->translate->__('This is a required field.');
 $emailFormatValidate 		= Yii::$service->page->translate->__('Please enter a valid email address. For example johndoe@domain.com.');
 $firstNameLenghtValidate 	= Yii::$service->page->translate->__('first name length must between');
@@ -105,19 +105,19 @@ $passwordLenghtValidate 	= Yii::$service->page->translate->__('Please enter 6 or
 $passwordMatchValidate 		= Yii::$service->page->translate->__('Please make sure your passwords match. ');
 //$minNameLength = 2;
 //$maxNameLength = 20;
-//$minPassLength = 6;  
+//$minPassLength = 6;
 //$maxPassLength = 30;
 
 ?>
 <script>
-<?php $this->beginBlock('customer_account_register') ?>  
+<?php $this->beginBlock('customer_account_register') ?>
 $(document).ready(function(){
-	
+
 	$("#js_registBtn").click(function(){
 		validate = 1;
 		$(".validation-advice").remove();
 		$(".validation-failed").removeClass("validation-failed");
-		
+
 		var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
 		// empty check
 		$(".account-register .required-entry").each(function(){
@@ -128,7 +128,7 @@ $(document).ready(function(){
 				validate = 0;
 			}
 		});
-		
+
 		// email check
 		$(".account-register .validate-email").each(function(){
 			email = $(this).val();
@@ -144,16 +144,16 @@ $(document).ready(function(){
 				validate = 0;
 			}
 		});
-		
+
 		//first name lenght check;
 		firstname 	= $("#firstname").val();
 		lastname 	= $("#lastname").val();
 		password  	= $("#password").val();
 		confirmation= $("#confirmation").val();
-		minNameLength = <?= $minNameLength ? $minNameLength : 4 ?>;  
+		minNameLength = <?= $minNameLength ? $minNameLength : 4 ?>;
 		maxNameLength = <?= $maxNameLength ? $maxNameLength : 30 ?>;
-		minPassLength = <?= $minPassLength ? $minPassLength : 4 ?>;  
-		maxPassLength = <?= $maxPassLength ? $maxPassLength : 30 ?>; 
+		minPassLength = <?= $minPassLength ? $minPassLength : 4 ?>;
+		maxPassLength = <?= $maxPassLength ? $maxPassLength : 30 ?>;
 		firstNameLength = firstname.length;
 		lastNameLength  = lastname.length;
 		passwordLength  = password.length;
@@ -163,7 +163,7 @@ $(document).ready(function(){
 				//alert(111);
 				$("#firstname").parent().append('<div class="validation-advice" id="min_lenght" style=""><?= $firstNameLenghtValidate; ?> '+minNameLength+' , '+maxNameLength+'</div>');
 				$("#firstname").addClass("validation-failed");
-				validate = 0;		
+				validate = 0;
 			}
 		}
 		//lastname length validate
@@ -172,7 +172,7 @@ $(document).ready(function(){
 				//alert(111);
 				$("#lastname").parent().append('<div class="validation-advice" id="min_lenght" style=""><?= $lastNameLenghtValidate; ?> '+minNameLength+' , '+maxNameLength+'</div>');
 				$("#lastname").addClass("validation-failed");
-				validate = 0;		
+				validate = 0;
 			}
 		}
 		//password length validate
@@ -181,7 +181,7 @@ $(document).ready(function(){
 				//alert(111);
 				$("#password").parent().append('<div class="validation-advice" id="min_lenght" style=""><?= $passwordLenghtValidate; ?> </div>');
 				$("#password").addClass("validation-failed");
-				validate = 0;		
+				validate = 0;
 			}
 		}
 		//password validate
@@ -190,11 +190,11 @@ $(document).ready(function(){
 				//alert(111);
 				$("#confirmation").parent().append('<div class="validation-advice" id="min_lenght" style=""><?= $passwordMatchValidate; ?></div>');
 				$("#confirmation").addClass("validation-failed");
-				validate = 0;		
+				validate = 0;
 			}
 		}
-		
-		
+
+
 		if(validate){
 		//	alert("validate success");
 			$(this).addClass("dataUp");
@@ -202,8 +202,8 @@ $(document).ready(function(){
 		}
 	});
 });
-<?php $this->endBlock(); ?>  
-</script>  
+<?php $this->endBlock(); ?>
+</script>
 <?php $this->registerJs($this->blocks['customer_account_register'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
 
 
