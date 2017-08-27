@@ -1,9 +1,7 @@
-
-<div class="main">
+<div class="main container one-column">
+    <?= Yii::$service->page->widget->render('flashmessage'); ?>
     <div class="page_where_l"><a href="../www.uobdii.html">Home</a> - Membership Registration</div><div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
-
-
     <div class="mn_full">
         <h1>Membership Registration</h1>
 
@@ -12,31 +10,24 @@
         <div class="float_right px13">New Customer? <a href="signin.asp�sSignReturnURL=.html" class="btn_blue"><span class="white">Sign In</span></a></div>
         <div class="blank10px"></div>
 
-        <form action="registCheck.asp" method="post" onsubmit="javascript:return CheckFormReg();">
-
-
-
+        <form action="<?= Yii::$service->url->getUrl('customer/account/register'); ?>" method="post" id="form-validate">
 
             <div id="u_reg_email" class="rowfull">
                 <div class="rowf_per25tr"><span class="red_star">*</span><b>E-mail Address:</b></div>
                 <div class="rowf_per70">
-                    <input type="text" name="email" id="email" maxlength="40" size="50" onblur="CheckVerifyUserEmail('email', 'u_reg_email', 'alert_reg_email', 'Register', '', 0);">
-                    <span id="alert_reg_email" class="alert_remark"></span>
+                    <input name="editForm[email]" id="email_address" value="<?= $email ?>" title="Email Address" class="input-text validate-email required-entry" type="text">
                 </div>
                 <div class="clear"></div>
             </div>
-
 
             <div id="u_reg_password" class="rowfull">
                 <div class="rowf_per25tr"><span class="red_star">*</span><b>Password:</b></div>
                 <div class="rowf_per70">
-                    <input type="password" name="pwd" id="pwd" maxlength="20" size="25" onblur="CheckVerifyUserPwd('pwd', '', 'u_reg_password', 'alert_reg_pwd', 0);"> <span id="alert_reg_pwd" class="alert_remark"></span>
+                    <input name="editForm[password]" id="password" title="Password" class="input-text required-entry validate-password" type="password">
                     <br /><span class="remark">4 to 20 characters (A-Z, a-z, 0-9, no space).<span class="red">Case sensitive.</span></span>
                 </div>
                 <div class="clear"></div>
             </div>
-
-
 
             <div id="u_reg_password_confirm" class="rowfull">
                 <div class="rowf_per25tr"><span class="red_star">*</span><b>Confirm Password:</b></div>
@@ -325,7 +316,6 @@
             </div>
 
 
-
             <div id="u_reg_usertype" class="rowfull">
                 <div class="rowf_per25tr"><b>Best describes you:</b></div>
                 <div class="rowf_per70">
@@ -333,7 +323,6 @@
                 </div>
                 <div class="clear"></div>
             </div>
-
 
 
             <div id="u_reg_verification_code" class="rowfull">
@@ -348,18 +337,13 @@
             <div class="rowfull">
                 <div class="rowf_per25tr">&nbsp;</div>
                 <div class="rowf_per70">
-                    <input name="Submit" type="submit" class="btn_submit btn_big" value="Submit &amp; Continue">
+                    <input name="Submit" type="submit"  value="Submit &amp; Continue" id="js_registBtn" class="redBtn btn_submit btn_big">
                     <div class="blank10px"></div>
                     <span class="gray_dark">Click "Submit &amp; Continue" button, which means you have read and agree to <a href="http://www.uobdii.com/info/Privacy-Policy" target="_blank"><b>Privacy Policy of UOBDII.com</b></a>.</span>
                 </div>
                 <div class="clear"></div>
             </div>
-
-
-
         </form>
-
-
         <div class="clear"></div>
     </div>
     <div class="clear"></div>
