@@ -79,21 +79,22 @@
 </div>
 <div class="main">
     <div class="main_h_flashsale">
-        <div class="main_h_fs_title"><span class="red">New Arrivals</span><span class="gray">  &amp; </span><span class="green">Flash Sale</span>
-            <div class="fr"><span class="px12 arial no_bold"><a href="producttags/new-arrivals.html" class="gray">View More</a></span></div>
+        <div class="main_h_fs_title"><span class="red">New Arrivals</span><span class="gray">  &amp; </span><span
+                    class="green">Flash Sale</span>
+            <div class="fr"><span class="px12 arial no_bold"><a href="producttags/new-arrivals.html" class="gray">View More</a></span>
+            </div>
         </div>
         <div class="main_h_fs_are">
             <div class="main_h_fs_item">
-                <div class="mhfsi_photo">
-                    <a href="wholesale/skp1000-tablet-auto-key-programmer.html"
+                <div class="mhfsi_photo"><a href="wholesale/skp1000-tablet-auto-key-programmer.html"
                                             title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order"><img
                                 src="upload/pro/skp1000-tablet-auto-key-programmer-ad-1.3.jpg" width="280" height="280"
                                 border="0" hspace="0" vspace="0"
                                 alt="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order"
-                                align="absmiddle"/></a>
-                </div>
+                                align="absmiddle"/></a></div>
                 <div class="mhfsi_bri">
-                    <a href="wholesale/skp1000-tablet-auto-key-programmer.html" title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order">2017
+                    <a href="wholesale/skp1000-tablet-auto-key-programmer.html"
+                       title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order">2017
                         New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly
                         Replace CI600 Plus and SKP900 Pre-Order</a>
                     <div class="blank10px"></div>
