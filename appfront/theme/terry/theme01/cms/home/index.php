@@ -219,73 +219,25 @@
     </div>
     <div class="hm_box">
         <div class="hm_pro_grid">
-            <div class="hm_pro_gr_item hm_pro_gr_item_noad_left">
-                <div class="hm_progrd_photo"><a href="wholesale/obdstar-x300dp-diagnosis-programmer-key-master.html"><img src="upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-180.3.jpg" width="180" height="180" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" /></a></div>
-                <div class="hm_progrd_name"><a href="wholesale/obdstar-x300dp-diagnosis-programmer-key-master.html" title="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL">OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Confi...</a></div>
-                <div class="hm_progrd_price" id="ProPriDisp_h_dp_51561"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$999.00</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;849.15</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;779.22</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$1,278.72</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;110,889</span>
-                </div>
-                <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:72px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro51561.html" target="_blank">55</a>)</div></div></div>
-            </div>
-        </div>
-        <div class="hm_pro_grid">
-            <div class="hm_pro_gr_item">
-                <div class="hm_progrd_photo"><a href="wholesale/launch-x431-v-8-inch-tablet-wifi-bluetooth-diagnostic-tool.html"><img src="upload/pro/launch-x431-v-8-inch-tablet-wifi-bluetooth-diagnostic-tool-ad-180.jpg" width="180" height="180" border="0" hspace="0" vspace="0" alt="【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetooth Full System Diagnostic Tool Two Years Free Update Online" align="absmiddle" /></a></div>
-                <div class="hm_progrd_name"><a href="wholesale/launch-x431-v-8-inch-tablet-wifi-bluetooth-diagnostic-tool.html" title="【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetooth Full System Diagnostic Tool Two Years Free Update Online">【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetoo...</a></div>
-                <div class="hm_progrd_price" id="ProPriDisp_h_dp_57665"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$956.00</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;812.60</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;745.68</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$1,223.68</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;106,116</span>
-                    <span class="pro_pri_off_s" name="cc_v_USD" style="display:">20% off</span>
-                    <span class="pro_pri_off_s" name="cc_v_EUR" style="display:none;">20% off</span>
-                    <span class="pro_pri_off_s" name="cc_v_GBP" style="display:none;">20% off</span>
-                    <span class="pro_pri_off_s" name="cc_v_AUD" style="display:none;">20% off</span>
-                    <span class="pro_pri_off_s" name="cc_v_JPY" style="display:none;">20% off</span>
-                </div>
-                <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:72px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro57665.html" target="_blank">24</a>)</div></div></div>
-            </div>
-        </div>
-        <div class="hm_pro_grid">
-            <div class="hm_pro_gr_item">
-                <div class="hm_progrd_photo"><a href="wholesale/autel-maxidas-ds808k-full-set.html"><img src="upload/pro/autel-maxidas-ds808k-full-set-ad-180.jpg" width="180" height="180" border="0" hspace="0" vspace="0" alt="【Ship from US No Tax】Latest AUTEL MaxiDAS DS808 KIT Tablet Diagnostic Tool Full Set Support Injector &amp; Key Coding Update Online" align="absmiddle" /></a></div>
-                <div class="hm_progrd_name"><a href="wholesale/autel-maxidas-ds808k-full-set.html" title="【Ship from US No Tax】Latest AUTEL MaxiDAS DS808 KIT Tablet Diagnostic Tool Full Set Support Injector &amp; Key Coding Update Online">【Ship from US No Tax】Latest AUTEL MaxiDAS DS808 KIT Tablet D...</a></div>
-                <div class="hm_progrd_price" id="ProPriDisp_h_dp_59730"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$845.00</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;718.25</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;659.10</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$1,081.60</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;93,795</span>
-                </div>
-                <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro59730.html" target="_blank">13</a>)</div></div></div>
-            </div>
-        </div>
-        <div class="hm_pro_grid">
-            <div class="hm_pro_gr_item">
-                <div class="hm_progrd_photo"><a href="wholesale/diagspeed-mb-key-obd2-benz-key-programmer.html"><img src="upload/pro/diagspeed-mb-key-obd2-benz-key-programmer-180.jpg" width="180" height="180" border="0" hspace="0" vspace="0" alt="2017 Original V1.06.08 Diagspeed MB Key OBD2 Mercedes Benz Key Programmer(Powerful than VVDI Benz BGA Tool) Supports All keys Lost" align="absmiddle" /></a></div>
-                <div class="hm_progrd_name"><a href="wholesale/diagspeed-mb-key-obd2-benz-key-programmer.html" title="2017 Original V1.06.08 Diagspeed MB Key OBD2 Mercedes Benz Key Programmer(Powerful than VVDI Benz BGA Tool) Supports All keys Lost">2017 Original V1.06.08 Diagspeed MB Key OBD2 Mercedes Benz K...</a></div>
-                <div class="hm_progrd_price" id="ProPriDisp_h_dp_73880"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$3,819.00</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;3,246.15</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;2,978.82</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$4,888.32</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;423,909</span>
-                </div>
-            </div>
-        </div>
-        <div class="hm_pro_grid">
-            <div class="hm_pro_gr_item">
-                <div class="hm_progrd_photo"><a href="wholesale/obdstar-x300-pro3-key-master-english-version.html"><img src="upload/pro/obdstar-x300-pro3-new-180.jpg" width="180" height="180" border="0" hspace="0" vspace="0" alt="【Ship from US No Tax】OBDSTAR X300 PRO3 X-300 Key Master with Immobiliser + Odometer Adjustment +EEPROM/PIC+OBDII" align="absmiddle" /></a></div>
-                <div class="hm_progrd_name"><a href="wholesale/obdstar-x300-pro3-key-master-english-version.html" title="【Ship from US No Tax】OBDSTAR X300 PRO3 X-300 Key Master with Immobiliser + Odometer Adjustment +EEPROM/PIC+OBDII">【Ship from US No Tax】OBDSTAR X300 PRO3 X-300 Key Master with...</a></div>
-                <div class="hm_progrd_price" id="ProPriDisp_h_dp_48455"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$549.00</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;466.65</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;428.22</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$702.72</span>
-                    <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;60,939</span>
-                </div>
-                <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro48455.html" target="_blank">20</a>)</div></div></div>
-            </div>
+<!--            <div class="hm_pro_gr_item hm_pro_gr_item_noad_left">-->
+<!--                <div class="hm_progrd_photo"><a href="wholesale/obdstar-x300dp-diagnosis-programmer-key-master.html"><img src="upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-180.3.jpg" width="180" height="180" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" /></a></div>-->
+<!--                <div class="hm_progrd_name"><a href="wholesale/obdstar-x300dp-diagnosis-programmer-key-master.html" title="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL">OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Confi...</a></div>-->
+<!--                <div class="hm_progrd_price" id="ProPriDisp_h_dp_51561"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$999.00</span>-->
+<!--                    <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;849.15</span>-->
+<!--                    <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;779.22</span>-->
+<!--                    <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$1,278.72</span>-->
+<!--                    <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;110,889</span>-->
+<!--                </div>-->
+<!--                <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:72px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro51561.html" target="_blank">55</a>)</div></div></div>-->
+<!--            </div>-->
+            <?php
+            $parentThis['products'] = $bestSellerProducts;
+            $parentThis['name'] = 'best-seller';
+            $config = [
+                'view'  		=> 'cms/home/index/product.php',
+            ];
+            echo Yii::$service->page->widget->renderContent('category_product_price',$config,$parentThis);
+            ?>
         </div>
         <div class="hm_pro_grid hm_pro_gr_col_2">
             <div class="hm_pro_gr_item hm_pro_gr_item_noad_left">
