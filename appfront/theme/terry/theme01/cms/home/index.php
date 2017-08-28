@@ -1,16 +1,9 @@
 ﻿<div class="main_h">
-    <div class="main_h_left"><a href="wholesale/original-brand-tool/list.html" class="mhl_first">Original Brand Tool</a><a
-                href="wholesale/car-diagnostic-tool/car-diagnostic-tool.html">Car Diagnostic Tool</a><a
-                href="wholesale/auto-key-programmer/auto-key-programmer.html">Auto Key Programmer</a><a
-                href="wholesale/heavy-duty-diagnostic/heavy-duty-diagnostic.html">Heavy Duty Diagnostic</a><a
-                href="wholesale/ecu-chip-tuning/ecu-chip-tuning.html">ECU Chip Tuning</a><a
-                href="wholesale/key-cutting-lock-pick-tool/key-cutting-lock-pick-tool.html">Key Cutting &amp; Lock Pick
-            Tool</a><a href="wholesale/oversea-warehouse/oversea-warehouse.html">Oversea Warehouse</a><a
-                href="wholesale/mileage-programmer/mileage-programmer.html">Mileage Programmer</a><a
-                href="wholesale/car-diagnostic-software/car-diagnostic-software.html">Car Diagnostic Software</a><a
-                href="wholesale/car-key-blanks/car-key-blanks.html">Car Key Blanks</a><a
-                href="wholesale/auto-locksmith-tool/auto-locksmith-tool.html">Auto Locksmith Tool</a><a
-                href="search/search.html" class="mhl_last">All Categories</a>
+    <div class="main_h_left">
+        <?php foreach($categoryArr as $category1): ?>
+            <a href="wholesale/original-brand-tool/list.html" class="mhl_first"><?= $category1['menu_custom'];  ?></a>
+        <?php endforeach; ?>
+
     </div>
     <div class="main_h_banner">
         <!--        <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/assets/owl.carousel.min.css"/>-->
@@ -207,7 +200,8 @@
         </div>
         <div class="main_h_fs_are">
             <div class="main_h_fs_item">
-                <div class="mhfsi_photo"><a href="wholesale/firmware-ktag-v7.020-ecu-programming-tool.html"
+                <div class="mhfsi_photo">
+                    <a href="wholesale/firmware-ktag-v7.020-ecu-programming-tool.html"
                                             title="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping"><img
                                 src="upload/pro/firmware-ktag-v7.020-ecu-programming-tool-ad-1.3.jpg" width="280"
                                 height="280" border="0" hspace="0" vspace="0"
