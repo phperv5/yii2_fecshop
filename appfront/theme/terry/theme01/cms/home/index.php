@@ -1,4 +1,110 @@
 ﻿
+<div class="header" id="WebPageTop">
+    <div class="hd_logo"><a href="www.uobdii.html" target="_top"><h1>UOBD2 - China Auto Diagnostic Tool Center for Workshop, Wholesale, DIY, Drop-ship</h1></a></div>
+    <div class="hd_sch">
+        <form name="formSearch" method="get" onsubmit="javascript:return CF_Search();" action="/search/">
+            <input name="q" type="text" id="q" class="kw" maxlength="50" onfocus="javascript:if (this.value == 'VVDI2 BMW FEM/BDC Authorization')  this.value = '';document.getElementById('q').className='kw_focus';" onblur="javascript:if (this.value == '')  this.value = 'VVDI2 BMW FEM/BDC Authorization';if (this.value == 'VVDI2 BMW FEM/BDC Authorization')  document.getElementById('q').className='kw';" value="VVDI2 BMW FEM/BDC Authorization">
+            <select name="DirID">
+                <option value="" style="color:#999;">all categories</option>
+                <option value="81">Original Brand Tool</option>
+                <option value="30">Car Diagnostic Tool</option>
+                <option value="35">Auto Key Programmer</option>
+                <option value="52">Heavy Duty Diagnostic</option>
+                <option value="33">ECU Chip Tuning</option>
+                <option value="82">Key Cutting &amp; Lock Pick Tool</option>
+                <option value="78">Oversea Warehouse</option>
+                <option value="32">Mileage Programmer</option>
+                <option value="37">Car Diagnostic Software</option>
+                <option value="50">Car Key Blanks</option>
+                <option value="49">Auto Locksmith Tool</option>
+                <option value="31">OBD2 Code Scanner</option>
+                <option value="55">Car Key Chips</option>
+                <option value="54">Packages &amp; Offers</option>
+                <option value="34">VAG Diagnostic Tool</option>
+                <option value="46">OBD2 Cable and Connector</option>
+                <option value="45">Airbag  Reset Tool</option>
+                <option value="73">Original AUGOCOM Tools</option>
+                <option value="64">Hot Car Accessories</option>
+                <option value="77">Wholesale Dropship</option>
+                <option value="63">LED Parking Sensor and Monitor Display</option>
+                <option value="67">Auto Modification Accessories</option>
+                <option value="80">Original Launch X431 Tool</option>
+                <option value="83">Factory Expired Tool</option>
+            </select>
+            <input type="submit" value="" class="go" title="Search" />
+        </form>
+    </div>
+    <div class="hd_cart"><a href="app/order.asp.html" target="_top" rel="nofollow"><span id="str_num_mycart">My Shopping Cart</span></a></div>
+    <div class="hd_pop_kw"><a href="producttags/mb-bga-tool.html">MB BGA Tool</a><a href="producttags/vvdi2.html">VVDI2</a><a href="producttags/2017-launch-x431.html">2017 Launch X431</a><a href="producttags/xtruck-usb-link.html">XTruck USB Link</a><a href="producttags/vxdiag-vcx-nano.html">VXDIAG VCX NANO</a><a href="producttags/volvo-vcads.html">Volvo VCADS</a><a href="producttags/xtuner.html">XTUNER</a><a href="producttags/launch-x431-v.html">Launch X431 V</a><a href="search/�q=X100 Pad.html">X100 Pad</a><a href="search/�q=CBAY Handy Baby.html">CBAY Handy Baby</a></div>
+    <div class="clear"></div>
+    <div class="hd_menu hd_menu_home">
+        <div class="hd_menu_home_cate">OBD2 Categories</div>
+        <div class="hd_menu_brands">
+            <div class="hd_wr_nav"><a href="search/search.html"><b>Brands</b></a>
+                <ul class="hdbrands">
+                    <a href="wholesale/brand-xhorse/brand-xhorse.html"><img src="upload/brand/logo_xhorse_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="Xhorse" align="absmiddle" /></a><a href="wholesale/brand-obdstar/brand-obdstar.html"><img src="upload/brand/2016042882959489.png" width="120" height="23" border="0" hspace="0" vspace="0" alt="OBDSTAR" align="absmiddle" /></a><a href="wholesale/brand-xtool/brand-xtool.html"><img src="upload/brand/logo_xtool_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="Xtool" align="absmiddle" /></a><a href="wholesale/brand-xtuner/brand-xtuner.html"><img src="upload/brand/2016122203679854.png" width="120" height="32" border="0" hspace="0" vspace="0" alt="XTUNER" align="absmiddle" /></a><a href="wholesale/brand-autel/brand-autel.html"><img src="upload/brand/logo_autel_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="Autel" align="absmiddle" /></a><a href="wholesale/brand-launch-x431/brand-launch-x431.html"><img src="upload/brand/logo_launch_x431_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="Launch-X431" align="absmiddle" /></a><a href="wholesale/brand-allscanner/brand-allscanner.html"><img src="upload/brand/allscanner-logo.jpg" width="120" height="29" border="0" hspace="0" vspace="0" alt="ALLScanner" align="absmiddle" /></a><a href="wholesale/brand-foxwell/brand-foxwell.html"><img src="upload/brand/foxwell-logo.jpg" width="120" height="40" border="0" hspace="0" vspace="0" alt="Foxwell" align="absmiddle" /></a><a href="wholesale/brand-lishi/brand-lishi.html"><img src="upload/brand/new-lishi-logo.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="LISHI" align="absmiddle" /></a><a href="wholesale/brand-augocom/brand-augocom.html"><img src="upload/brand/augocom-logo.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="AUGOCOM" align="absmiddle" /></a><a href="wholesale/brand-yanhua/brand-yanhua.html"><img src="upload/brand/logo_yanhua_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="Yanhua" align="absmiddle" /></a><a href="wholesale/brand-creator/brand-creator.html"><img src="upload/brand/2016122901406265.jpg" width="120" height="40" border="0" hspace="0" vspace="0" alt="Creator" align="absmiddle" /></a><a href="wholesale/brand-master/brand-master.html"><img src="upload/brand/logo_master_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="Master" align="absmiddle" /></a><a href="wholesale/brand-hrt/brand-hrt.html"><img src="upload/brand/logo_hrt_120x40.gif" width="120" height="40" border="0" hspace="0" vspace="0" alt="HRT" align="absmiddle" /></a><a href="wholesale/brand-vxscan/brand-vxscan.html"><img src="upload/brand/2017041870585985.jpg" width="120" height="24" border="0" hspace="0" vspace="0" alt="VXSCAN" align="absmiddle" /></a>					<div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="hd_menu_nav">
+            <a class="" href="producttags/new-arrivals.html">What&#39;s New</a>			<a class="" href="wholesale/brand-xhorse/brand-xhorse.html">XHORSE</a>			<a class="" href="producttags/2017-kess-ktag.html"><span id="hd_mn_inf_dir_blink">2017 KESS KTAG</span></a><script type="text/javascript" src="js/hd_mn_blink.js"></script>			<a class="" href="producttags/vvdi-key-tool.html"><span id="hd_mn_inf_dir_blink">VVDI Key Tool</span></a><script type="text/javascript" src="js/hd_mn_blink.js"></script>			<a class="" href="producttags/bmw-fem-key-programmer.html">BWM FEM Key Programmer</a>			<a class=" ms_weekly_special" href="producttags/special-offer.html">Weekly Special</a>			<a class="" href="service/service.html">Tech Support</a>			<a class="" href="info/news-notice/news-notice.html">News &amp; Notice</a>			<a class="" href="info/contact/contact.html">Contact</a>			<a class="" href="info/payment/payment.html">Payment</a>		</div>
+    </div>
+    <div class="clear"></div>
+    <span id="hd_important_notice"></span>
+    <script type="text/javascript">
+        SiteHeader('Home');
+        EDMtracking();
+    </script>
+    <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>
+<div class="main_h">
+    <div class="main_h_left"><a href="wholesale/original-brand-tool/list.html" class="mhl_first">Original Brand Tool</a><a href="wholesale/car-diagnostic-tool/car-diagnostic-tool.html">Car Diagnostic Tool</a><a href="wholesale/auto-key-programmer/auto-key-programmer.html">Auto Key Programmer</a><a href="wholesale/heavy-duty-diagnostic/heavy-duty-diagnostic.html">Heavy Duty Diagnostic</a><a href="wholesale/ecu-chip-tuning/ecu-chip-tuning.html">ECU Chip Tuning</a><a href="wholesale/key-cutting-lock-pick-tool/key-cutting-lock-pick-tool.html">Key Cutting &amp; Lock Pick Tool</a><a href="wholesale/oversea-warehouse/oversea-warehouse.html">Oversea Warehouse</a><a href="wholesale/mileage-programmer/mileage-programmer.html">Mileage Programmer</a><a href="wholesale/car-diagnostic-software/car-diagnostic-software.html">Car Diagnostic Software</a><a href="wholesale/car-key-blanks/car-key-blanks.html">Car Key Blanks</a><a href="wholesale/auto-locksmith-tool/auto-locksmith-tool.html">Auto Locksmith Tool</a><a href="search/search.html" class="mhl_last">All Categories</a>
+    </div>
+    <div class="main_h_banner"><link rel="stylesheet" type="text/css" href="plugins/owlcarousel/assets/owl.carousel.min.css" />
+        <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+        <ul class="owl-carousel" id="hm_ads_banner_a2">
+            <li><a href="producttags/yh-bmw-fem.html"><img src="upload/advs/2017081083887417.jpg" border="0" alt="2017 Latest Yanhua BMW FEM Key Programmer Pre-Order"></a></li>
+            <li><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html"><img src="upload/advs/2017081807662885.jpg" border="0" alt="CGDI Prog BMW MSV80 "></a></li>
+        </ul>
+        <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var owl = $('#hm_ads_banner_a2');
+                owl.owlCarousel({
+                    items:1,
+                    loop:true,
+                    nav:false,
+                    dots:true,
+                    dotsContainer:$('#hm_bnr_dots'),
+                    dotClass:'hm_bnr_dot',
+                    autoplay:true,
+                    autoplayTimeout:3000
+                });
+            });
+        </script>
+    </div>
+    <div class="clear"></div>
+    <div class="blank15px"></div>
+    <div class="hm_box_jmp_left">
+        <ul>
+            <li><a href="wholesale/brand-xhorse/brand-xhorse.html"><img src="upload/advs/2017011802685309.jpg" border="0" alt="Brand Xhorse"></a></li>
+            <li><a href="wholesale/brand-launch-x431/brand-launch-x431.html"><img src="upload/advs/2017011802730456.jpg" border="0" alt="Brand Launch X431"></a></li>
+            <li><a href="wholesale/brand-obdstar/brand-obdstar.html"><img src="upload/advs/2017011802749706.jpg" border="0" alt="Brand obdstar "></a></li>
+            <li><a href="wholesale/brand-xtool/brand-xtool.html"><img src="upload/advs/2017011802768676.jpg" border="0" alt="Brand Xtool"></a></li>
+            <li><a href="wholesale/brand-xtuner/brand-xtuner.html"><img src="upload/advs/2017011802785508.jpg" border="0" alt="Brand Xtuner"></a></li>
+            <li><a href="wholesale/brand-autel/brand-autel.html"><img src="upload/advs/2017011802803183.jpg" border="0" alt="Brand Autel"></a></li>
+            <li><a href="wholesale/brand-foxwell/brand-foxwell.html"><img src="upload/advs/2017011802818939.jpg" border="0" alt="Brand Foxwell"></a></li>
+            <li><a href="wholesale/brand-lishi/brand-lishi.html"><img src="upload/advs/2017011802840124.jpg" border="0" alt="Brand Lishi"></a></li>
+        </ul>
+    </div>
+    <div class="hm_box_jmp_right">
+        <ul>
+            <li><a href="producttags/fcar-f3-g.html"><img src="upload/advs/2017081501679468.jpg" border="0" alt="Fcar F3-G (F3-W + F3-D) Fcar Scanner"></a></li>
+            <li><a href="wholesale/vpecker-e4-multi-functional-tablet-diagnostic-tool.html"><img src="upload/advs/2017081786055905.jpg" border="0" alt="VPECKER E4 Multi Functional Tablet Diagnostic Tool"></a></li>
+            <li><a href="wholesale/vxdiag-vcx-nano-pro-gm-ford-mazda-vm.html"><img src="upload/advs/2017073074269977.jpg" border="0" alt="VXDIAG VCX NANO PRO For GM Ford Mazda 3 in 1"></a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
 <div class="main">
     <div class="main_h_flashsale">
         <div class="main_h_fs_title"><span class="red">New Arrivals</span><span class="gray">  &amp; </span><span class="green">Flash Sale</span>
