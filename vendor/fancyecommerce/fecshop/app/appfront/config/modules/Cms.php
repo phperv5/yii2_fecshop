@@ -38,7 +38,7 @@ return [
                 'home_meta_description_es' => 'Fashion E-Commerce Shop , Base On Yii2 Framework Es',
             ],
             'homeBestSellerSku' => [
-                '10001', '10002', '1003', '1004',
+                '10001', '10002', '10003', '10004',
             ],
             'homeFeaturedSku' => [
                 'men0003', 'men0002', 'men0001', 'sk10002', 'sk10003-001', 'sk10005', 'sk1000-khak', 'sk0003'
