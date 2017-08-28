@@ -9,17 +9,9 @@
         </div>
     </div>
     <div class="hd_menu_nav">
-        <a class="" href="producttags/new-arrivals.html">What&#39;s New</a>
-        <a class="" href="wholesale/brand-xhorse/brand-xhorse.html">XHORSE</a>
-        <a class="" href="producttags/2017-kess-ktag.html"><span id="hd_mn_inf_dir_blink">2017 KESS KTAG</span></a>
-        <script type="text/javascript" src="js/hd_mn_blink.js"></script>
-        <a class="" href="producttags/vvdi-key-tool.html"><span id="hd_mn_inf_dir_blink">VVDI Key Tool</span></a><script type="text/javascript" src="js/hd_mn_blink.js"></script>
-        <a class="" href="producttags/bmw-fem-key-programmer.html">BWM FEM Key Programmer</a>
-        <a class=" ms_weekly_special" href="producttags/special-offer.html">Weekly Special</a>
-        <a class="" href="service/service.html">Tech Support</a>
-        <a class="" href="info/news-notice/news-notice.html">News &amp; Notice</a>
-        <a class="" href="info/contact/contact.html">Contact</a>
-        <a class="" href="info/payment/payment.html">Payment</a>
+        <?php foreach($categoryArr as $category1): ?>
+        <a class="" href="<?= $category1['url'] ?>"><?= $category1['name'] ?></a>
+        <?php endforeach; ?>
     </div>
 </div>
 <div class="clear"></div>

@@ -1,9 +1,16 @@
 ﻿<div class="main_h">
-    <div class="main_h_left">
-        <?php foreach($categoryArr as $category1): ?>
-            <a href="wholesale/original-brand-tool/list.html" class="mhl_first"><?= $category1['menu_custom'];  ?></a>
-        <?php endforeach; ?>
-
+    <div class="main_h_left"><a href="wholesale/original-brand-tool/list.html" class="mhl_first">Original Brand Tool</a><a
+                href="wholesale/car-diagnostic-tool/car-diagnostic-tool.html">Car Diagnostic Tool</a><a
+                href="wholesale/auto-key-programmer/auto-key-programmer.html">Auto Key Programmer</a><a
+                href="wholesale/heavy-duty-diagnostic/heavy-duty-diagnostic.html">Heavy Duty Diagnostic</a><a
+                href="wholesale/ecu-chip-tuning/ecu-chip-tuning.html">ECU Chip Tuning</a><a
+                href="wholesale/key-cutting-lock-pick-tool/key-cutting-lock-pick-tool.html">Key Cutting &amp; Lock PickTool</a>
+                <a href="wholesale/oversea-warehouse/oversea-warehouse.html">Oversea Warehouse</a><a
+                href="wholesale/mileage-programmer/mileage-programmer.html">Mileage Programmer</a><a
+                href="wholesale/car-diagnostic-software/car-diagnostic-software.html">Car Diagnostic Software</a><a
+                href="wholesale/car-key-blanks/car-key-blanks.html">Car Key Blanks</a><a
+                href="wholesale/auto-locksmith-tool/auto-locksmith-tool.html">Auto Locksmith Tool</a><a
+                href="search/search.html" class="mhl_last">All Categories</a>
     </div>
     <div class="main_h_banner">
         <!--        <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/assets/owl.carousel.min.css"/>-->
