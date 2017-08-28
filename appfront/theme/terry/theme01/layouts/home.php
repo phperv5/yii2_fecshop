@@ -16,10 +16,9 @@ $jsOptions = [
 		//	'condition'=> 'lt IE 9',
 		],
 		'js'	=>[
-			'js/jquery-3.0.0.min.js',
-			'js/jquery.lazyload.min.js',
-			'js/owl.carousel.min.js',
-			'js/js.js',
+			'js/common.js',
+			'js/jquery.js',
+			'js/plugins/layer/layer.js',
 		],
 	],
 ];
@@ -30,7 +29,7 @@ $cssOptions = [
 	[
 		'css'	=>[
 			'css/style.css',
-			'css/owl.carousel.css',
+			'css/style_h.css',
 		],
 	],
 ];
