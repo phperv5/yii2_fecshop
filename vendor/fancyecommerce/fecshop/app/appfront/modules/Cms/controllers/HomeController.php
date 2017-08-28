@@ -9,7 +9,6 @@ class HomeController extends AppfrontController
 {
     public function init()
     {
-        //echo 1222;exit;
         parent::init();
     }
 
@@ -17,7 +16,6 @@ class HomeController extends AppfrontController
     public function actionIndex()
     {
         $data = $this->getBlock()->getLastData();
-
         return $this->render($this->action->id, $data);
     }
 

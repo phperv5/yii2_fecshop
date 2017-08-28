@@ -77,7 +77,6 @@ class AppfrontController extends FecController
         $relativeFile .= '\\'.$viewId.'\\'.ucfirst($blockName);
         //查找是否在rewriteMap中存在重写
         $relativeFile = Yii::mapGetName($relativeFile);
-        
         return new $relativeFile();
     }
 
