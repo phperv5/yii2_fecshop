@@ -227,41 +227,27 @@
                     application and service, such as creating maintenance data base and case library, providing instant
                     maintenance information, establishing public and private maintenance social circle etc.
                     <div class="blank5px"></div>
-                    <div class="pro_sch_tags">
-                        <b>Tags: </b>
-                        <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39; Tablet PC</a>,
-                        <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,
-                        <a href="../../producttags/launch.html">Launch</a>,
-                        <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,
-                        <a href="../../producttags/ship-from-us.html">Ship from US</a>,
-                        <a href="../../producttags/ship-from-uk.html">Ship from UK</a></div>
-                    <div class="clear"></div>
-                </div>
-                <div class="order_fun px11">
-
-                    <div class="blank5px"></div>
-                    <span class="pro_pri_tit_sale_s">Latest price:</span><span class="pro_pri_curr_sale_s" name="cc_v_USD" style="display:"><strong>$1,196.00</strong></span>
-                    <span class="pro_pri_curr_sale_s" name="cc_v_EUR" style="display:none;"><strong>&euro;1,016.60</strong></span>
-                    <span class="pro_pri_curr_sale_s" name="cc_v_GBP" style="display:none;"><strong>&pound;932.88</strong></span>
-                    <span class="pro_pri_curr_sale_s" name="cc_v_AUD" style="display:none;"><strong>AU$1,530.88</strong></span>
-                    <span class="pro_pri_curr_sale_s" name="cc_v_JPY" style="display:none;"><strong>&yen;132,756</strong></span>
-                    <span class="pro_pri_tit_vip_m">Buy It Now:</span>
-                    <span class="pro_pri_curr_vip_m" name="cc_v_USD" style="display:">$956.00</span>
-                    <span class="pro_pri_curr_vip_m" name="cc_v_EUR" style="display:none;">&euro;812.60</span>
-                    <span class="pro_pri_curr_vip_m" name="cc_v_GBP" style="display:none;">&pound;745.68</span>
-                    <span class="pro_pri_curr_vip_m" name="cc_v_AUD" style="display:none;">AU$1,223.68</span>
-                    <span class="pro_pri_curr_vip_m" name="cc_v_JPY" style="display:none;">&yen;106,116</span>
-                    <span class="pro_pri_of_sr" name="cc_v_USD" style="display:">20% off</span>
-                    <span class="pro_pri_of_sr" name="cc_v_EUR" style="display:none;">20% off</span>
-                    <span class="pro_pri_of_sr" name="cc_v_GBP" style="display:none;">20% off</span>
-                    <span class="pro_pri_of_sr" name="cc_v_AUD" style="display:none;">20% off</span>
-                    <span class="pro_pri_of_sr" name="cc_v_JPY" style="display:none;">20% off</span>
-                    <div class="blank5px"></div>
-                    <div class="dashed_line"></div>
-                    <div class="blank5px"></div>
-                    <div class="blank5px"></div>
-                    <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:ShoppingCartAdd('57665','Single','N','oSize_57665','N','oColor_57665','N','');return false;"/>
-                </div>
+<!--                    <div class="pro_sch_tags">-->
+<!--                        <b>Tags: </b>-->
+<!--                        <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39; Tablet PC</a>,-->
+<!--                        <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,-->
+<!--                        <a href="../../producttags/launch.html">Launch</a>,-->
+<!--                        <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,-->
+<!--                        <a href="../../producttags/ship-from-us.html">Ship from US</a>,-->
+<!--                        <a href="../../producttags/ship-from-uk.html">Ship from UK</a></div>-->
+<!--                    <div class="clear"></div>-->
+<!--                </div>-->
+                <?php
+                $config = [
+                    'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                    'view' => 'catalog/category/price.php',
+                    'price' => $product['price'],
+                    'special_price' => $product['special_price'],
+                    'special_from' => $product['special_from'],
+                    'special_to' => $product['special_to'],
+                ];
+                echo Yii::$service->page->widget->renderContent('category_product_price', $config);
+                ?>
                 <div class="clear"></div>
             </div>
             <?php endforeach; ?>
