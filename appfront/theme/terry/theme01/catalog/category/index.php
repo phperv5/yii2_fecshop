@@ -199,9 +199,10 @@
                 <div class="photo">
                     <a href="../launch-x431-v-8-inch-tablet-wifi-bluetooth-diagnostic-tool.html"
                        title="【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetooth Full System Diagnostic Tool Two Years Free Update Online">
-                        <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/></a></div>
+                        <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>"
+                             width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/></a>
+                </div>
                 <div class="brief">
-
                     <h2>
                         <span class="specialoffer"></span>
                         <a href="<?= $product['url'] ?>">
@@ -209,7 +210,7 @@
                         </a>
                     </h2>
                     <div class="clear"></div>
-                    <span class="px11">Item No. HKSP183-D</span>&nbsp;&nbsp;&nbsp;
+                    <span class="px11">Item No.<?= $product['sku']; ?></span>&nbsp;&nbsp;&nbsp;
                     <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;
                     <div class="fr w150px">
                         <div class="rate_star_w100">
@@ -221,54 +222,55 @@
                         </div>
                     </div>
                     <div class="blank10px"></div>
-                    Launch X431 V 8&#39;&#39; Lenovo Tablet PC can replace X-431 V WiFi/Bluetooth and with 2 years free
-                    update on the official site. It communicates with your car by connecting DBSCAR with Bluetooth. it
-                    achieves X431 series full car model and full-system diagnose function. It integrates more
-                    application and service, such as creating maintenance data base and case library, providing instant
-                    maintenance information, establishing public and private maintenance social circle etc.
+                    short description
                     <div class="blank5px"></div>
-<!--                    <div class="pro_sch_tags">-->
-<!--                        <b>Tags: </b>-->
-<!--                        <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39; Tablet PC</a>,-->
-<!--                        <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,-->
-<!--                        <a href="../../producttags/launch.html">Launch</a>,-->
-<!--                        <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,-->
-<!--                        <a href="../../producttags/ship-from-us.html">Ship from US</a>,-->
-<!--                        <a href="../../producttags/ship-from-uk.html">Ship from UK</a></div>-->
-<!--                    <div class="clear"></div>-->
-<!--                </div>-->
-                <?php
-                $config = [
-                    'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
-                    'view' => 'catalog/category/price.php',
-                    'price' => $product['price'],
-                    'special_price' => $product['special_price'],
-                    'special_from' => $product['special_from'],
-                    'special_to' => $product['special_to'],
-                ];
-                echo Yii::$service->page->widget->renderContent('category_product_price', $config);
-                ?>
-                <div class="clear"></div>
-            </div>
-            <?php endforeach; ?>
-            <?php endif; ?>
-            <div class="page_nav">
-                <form onsubmit="location.replace(&quot?ProDirURL=original%2Dbrand%2Dtool&ListPager=9276441,135,&quot+this.PageNumber.value);return false">
-                    <div class="fr">
-                        <span>1</span> <a href="p2/p2.html">2</a> <a href="p3/p3.html">3</a> <a href="p4/p4.html">4</a>
-                        <a href="p5/p5.html">5</a> <a href="p6/p6.html">6</a> <a href="p7/p7.html">7</a>
-                        <a href="p2/p2.html" title="Next">Next &raquo;</a>
+
+                    <div class="pro_sch_tags">
+                        <b>Tags: </b>
+                        <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39; Tablet
+                            PC</a>,
+                        <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,
+                        <a href="../../producttags/launch.html">Launch</a>,
+                        <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,
+                        <a href="../../producttags/ship-from-us.html">Ship from US</a>,
+                        <a href="../../producttags/ship-from-uk.html">Ship from UK</a>
                     </div>
-                    <div class="fl">
-                        Total:135 items,&nbsp;20 items/p,&nbsp; Page:<b class=red>1</b>/7.
-                    </div>
-                    <div class=clear></div>
-                </form>
+                    <div class="clear"></div>
+
             </div>
+            <?php
+            $config = [
+                'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                'view' => 'catalog/category/price.php',
+                'price' => $product['price'],
+                'special_price' => $product['special_price'],
+                'special_from' => $product['special_from'],
+                'special_to' => $product['special_to'],
+            ];
+            echo Yii::$service->page->widget->renderContent('category_product_price', $config);
+            ?>
             <div class="clear"></div>
         </div>
-        <div class="exh_bottom"></div>
+        </div>
+        <?php endforeach; ?>
+        <?php endif; ?>
+        <div class="page_nav">
+            <form onsubmit="location.replace(&quot?ProDirURL=original%2Dbrand%2Dtool&ListPager=9276441,135,&quot+this.PageNumber.value);return false">
+                <div class="fr">
+                    <span>1</span> <a href="p2/p2.html">2</a> <a href="p3/p3.html">3</a> <a href="p4/p4.html">4</a>
+                    <a href="p5/p5.html">5</a> <a href="p6/p6.html">6</a> <a href="p7/p7.html">7</a>
+                    <a href="p2/p2.html" title="Next">Next &raquo;</a>
+                </div>
+                <div class="fl">
+                    Total:135 items,&nbsp;20 items/p,&nbsp; Page:<b class=red>1</b>/7.
+                </div>
+                <div class=clear></div>
+            </form>
+        </div>
+        <div class="clear"></div>
     </div>
+    <div class="exh_bottom"></div>
+</div>
 </div>
 
 
