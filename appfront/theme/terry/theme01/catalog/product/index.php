@@ -5,7 +5,7 @@
 
     <div class="ms_f_m">
         <div itemscope itemtype="http://schema.org/Product">
-            <meta itemprop="name" content="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" />
+            <meta itemprop="name" content="<?= $name; ?>" />
             <meta itemprop="sku" content="HKSP283" />
             <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <meta itemprop="priceCurrency" content="USD" />
@@ -47,9 +47,9 @@
                 </script>
             </div>
             <div class="pro_chf_brief">
-                <h1>OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL</h1>
+                <h1><?= $name; ?></h1>
                 <div class="blank5px"></div>
-                <div class="pro_chf_bri_itemno">Item No. HKSP283<div class="blank5px"></div><span class="gray verdana no_bold">Manufacturer: <a href="/wholesale/brand-obdstar/">OBDSTAR</a></span>
+                <div class="pro_chf_bri_itemno">Item No.<?= $sku; ?><div class="blank5px"></div><span class="gray verdana no_bold">Manufacturer: <a href="/wholesale/brand-obdstar/">OBDSTAR</a></span>
                     <span id="num_pro_sold_51561"></span>
                 </div>
                 <div class="pro_ch_bf_rate" id="pro_rate_51561"><div class="pro_ch_bf_rate_bg"><div class="pro_ch_bf_rate_vw" style="width:144px;"></div></div><div class="pro_ch_bf_rate_tx">4.8 stars, <a href="/reviews/pro51561" target="_blank">55 reviews.</a></div></div>
@@ -99,7 +99,19 @@
                     <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.<a href="/support/return-policy-4174.html" target="_blank"><span class="px11 verdana">Read details »</span></a></dd>
                 </dl>
                 <div class="blank10px"></div><div class="dashed5px"></div>
-                <div class="line18em"><b class="green_dark">Related Download Files:</b><br />&nbsp;&nbsp;<a href="/upload/pro/obdstar-x300dp-register-guide.pdf" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-register-guide.pdf</b></a>&nbsp;&nbsp;<span class="px11 gray">(710.9K)</span></a><br />&nbsp;&nbsp;<a href="/upload/pro/obdstar-x300-dp-user-manual.pdf" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300-dp-user-manual.pdf</b></a>&nbsp;&nbsp;<span class="px11 gray">(6,727.1K)</span></a><br />&nbsp;&nbsp;<a href="/upload/pro/obdstar-x300dp-upgrade-guide.pdf" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-upgrade-guide.pdf</b></a>&nbsp;&nbsp;<span class="px11 gray">(262.5K)</span></a></div>
+                <div class="line18em"><b class="green_dark">Related Download Files:</b><br />&nbsp;&nbsp;
+                    <a href="/upload/pro/obdstar-x300dp-register-guide.pdf" target="_blank"><b>
+                            <img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-register-guide.pdf</b>
+                    </a>&nbsp;&nbsp;
+                    <span class="px11 gray">(710.9K)</span></a><br />&nbsp;&nbsp;
+                    <a href="/upload/pro/obdstar-x300-dp-user-manual.pdf" target="_blank"><b>
+                            <img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300-dp-user-manual.pdf</b></a>
+                    &nbsp;&nbsp;<span class="px11 gray">(6,727.1K)</span></a><br />&nbsp;&nbsp;
+                    <a href="/upload/pro/obdstar-x300dp-upgrade-guide.pdf" target="_blank"><b>
+                            <img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-upgrade-guide.pdf</b></a>&nbsp;
+                    &nbsp;<span class="px11 gray">(262.5K)</span>
+                    </a>
+                </div>
                 <div class="blank5px"></div>
                 <div class="dashed5px"></div>
                 <div class="pro_ch_bf_digg">
