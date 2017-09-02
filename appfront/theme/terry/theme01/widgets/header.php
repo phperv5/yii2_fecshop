@@ -3,13 +3,13 @@
         <div class="hd_wr_f_nav" id="hd_f_signin"><a href="app/signin.asp.html" class="link_green" rel="nofollow"><b>Sign In</b></a><span class="gray px11">or</span><a href="app/regist.asp.html" class="link_green" rel="nofollow"><b>Register</b></a></div>
         <div class="hd_wr_f_bar">
             <div class="hd_wr_f_my">
-                <div class="hd_wr_nav"><a href="members/members.html" rel="nofollow">My Account</a>
+                <div class="hd_wr_nav"><a href="<?= Yii::$service->url->getUrl('customer/account') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Account'); ?></a>
                     <ul>
-                        <a href="members/�action=orders.html" rel="nofollow">My Orders<span id="myaccount_num_orders"></span></a>
-                        <a href="members/�action=inbox.html" rel="nofollow">My Tickets<span id="myaccount_num_orders"></span></a>
-                        <a href="members/�action=reviews.html" rel="nofollow">My Reviews<span id="myaccount_num_orders"></span></a>
-                        <a href="members/�action=specialproducts.html" rel="nofollow">VIP Special Products<span id="myaccount_num_orders"></span></a>
-                        <a id="myaccount_myfavorites" href="members/�action=myfavorites.html" rel="nofollow">My Favorites<span id="myaccount_num_orders"></span></a>
+                        <a href="<?= Yii::$service->url->getUrl('customer/order') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Orders'); ?><span id="myaccount_num_orders"></span></a>
+<!--                        <a href="members/�action=inbox.html" rel="nofollow">My Tickets<span id="myaccount_num_orders"></span></a>-->
+                        <a href="<?= Yii::$service->url->getUrl('customer/productreview') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Review'); ?><span id="myaccount_num_orders"></span></a>
+<!--                        <a href="members/�action=specialproducts.html" rel="nofollow">VIP Special Products<span id="myaccount_num_orders"></span></a>-->
+                        <a id="myaccount_myfavorites" href="<?= Yii::$service->url->getUrl('customer/productfavorite') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Favorites'); ?><span id="myaccount_num_orders"></span></a>
                     </ul>
                 </div>
             </div>
