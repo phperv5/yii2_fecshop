@@ -25,22 +25,30 @@
                     <td>Remark</td>
                 </tr>
                 <?php if(is_array($coll) && !empty($coll)):  ?>
-                    <?php  foreach($coll as $one):  ?>
-                        <?php var_dump($one);?>
+                    <?php  foreach($coll as $key=>$one):  ?>
                         <?php  $main_img = $one['image']['main']['image'];  ?>
                 <tr class="tr_info">
-                    <td class="px11"><?= Yii::$service->url->getUrl($one['url_key'])  ?></td>
-                    <td width="70"><div class="img60px"><a href="/wholesale/yanhua-bmw-fem-key-programmer.html" target="_blank"><img src="/upload/pro/yanhua-bmw-fem-key-programmer-180.1.jpg" width="60" height="60" border="0" hspace="0" vspace="0" alt="" align="absmiddle" /></a></div></td>
-                    <td class="align_left">
-                        <span class="pro_t_newrelease"></span> <a href="/wholesale/yanhua-bmw-fem-key-programmer.html" target="_blank">2017 Latest Yanhua BMW FEM/BDC Key Programmer</a><br /><span class="px11 gray_dark">Item No.SK226</span> 　　<span class="green verdana px10">In Stock</span>
+                    <td class="px11"><?php echo $key+1;?></td>
+                    <td width="70">
+                        <div class="img60px"><a href="<?= Yii::$service->url->getUrl($one['url_key'])  ?>" target="_blank">
+                                <img src="<?= Yii::$service->product->image->getResize($main_img,[120,120],false) ?>" width="60" height="60" border="0" hspace="0" vspace="0" alt="" align="absmiddle" /></a>
+                        </div>
                     </td>
                     <td class="align_left">
-                        <span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$679.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;577.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;529.62</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$869.12</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;75,369</span>
-
+                        <span class="pro_t_newrelease"></span> <a href="<?= Yii::$service->url->getUrl($one['url_key'])  ?>" target="_blank"><?= Yii::$service->store->getStoreAttrVal($one['name'],'name')  ?></a><br /><span class="px11 gray_dark">Item No.SK226</span> 　　<span class="green verdana px10">In Stock</span>
+                    </td>
+                    <td class="align_left">
+                        <?php
+                        $config = [
+                        'class' 		=> 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                        'view'  		=> 'catalog/category/price.php',
+                        'price' 		=> $one['price'],
+                        'special_price' => $one['special_price'],
+                        'special_from' 	=> $one['special_from'],
+                        'special_to' 	=> $one['special_to'],
+                        ];
+                        echo Yii::$service->page->widget->renderContent('category_product_price',$config);
+                        ?>
                     </td>
                     <td class="align_left px11">
                         Weight:0.3KG<br />
@@ -55,7 +63,11 @@
                         <div class="blank5px"></div>
                         <input name="btn_buyitnow" type="button" class="btn_buyitnow_s_mem" value="" title="Buy It Now" onclick="javascript:ShoppingCartAdd('71861','BuyItNow','N','oSize','N','oColor','N','oQty');return false;" onmouseover="javascript:IsOrderNeedSize('N','oSize');IsOrderNeedColor('N','oColor');IsOrderNeedQty('N','oQty');return false;" />
                         <div class="blank5px"></div>
-                        <a href="javascript:void(0);" onclick="MyFavoritesDelete(71861);return false;" title="Delet it from My Favorites">Delete</a></td>
+                        <a href="<?= Yii::$service->url->getUrl('customer/productfavorite',['type'=>'remove','favorite_id' => $one['favorite_id']]); ?>">
+                            <?= Yii::$service->page->translate->__('Delete');?>
+                        </a>
+                    </td>
+
                 </tr>
                         <?php  endforeach;  ?>
                 <?php endif; ?>
