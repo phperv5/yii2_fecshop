@@ -1,40 +1,19 @@
+<?php
+use fecshop\app\appfront\helper\Format;
+?>
 <div class="main">
-    <div class="main_left">
-        <div class="col_d_t">My Account</div>
-        <div class="col_d_m">
-            <div class="blank5px"></div>
-            <div class="ml_dir ml_dir_cur"><a href="orderList.asp">View My Orders</a></div>
-            <div class="ml_dir"><a href="accountSet.asp">Account Settings</a></div>
-            <div class="ml_dir"><a href="addressBook.asp">Manage Address Book</a></div>
-            <div class="ml_dir"><a href="msg_list.asp">Tickets Center</a></div>
-            <div class="ml_dir"><a href="msg_add.asp?DirID=2">Submit a Ticket</a></div>
-            <div class="ml_dir"><a href="pro_rev_list.asp">My Products' Reviews</a></div>
-            <div class="ml_dir"><a href="my_favorites_list.asp">My Favorites</a></div>
-            <div class="blank5px"></div>
-        </div>
-        <div class="col_d_b"></div>
-        <div class="blank10px"></div>
-        <div class="fun_column px11 gray word_wrap word_break">
-            <div class="clear"></div>
-            <b class="px14">Welcome!</b><br />
-            <b class="px12">&nbsp;zewe&nbsp;jewew</b><br />
-            User ID: 312043814@qq.com<br />
-            E-Mail: 312043814@qq.com<br />
-            Account Status:<b>Normal</b><br />
-            <div class="dashed5px"></div>
-            <div class="align_right"><a href="../members/?action=SignOut"><img src="../images/ico/logout.gif" hspace="5" border="0" align="absmiddle" />Sign out</a>&nbsp;&nbsp;</div>
-            <div class="clear"></div>
-        </div>
-        <div class="blank10px"></div>
-        <div class="fun_column px11 gray">
-            <b class="px14">Need help?</b><br />
-            If you have questions or need help with your account, you may goto "<a href="../support" target="_blank">Help</a>" or <a href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
-            <div class="clear"></div>
-        </div></div>
+    <?php
+    $leftMenu = [
+        'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
+        'view'	=> 'customer/leftmenu.php'
+    ];
+    ?>
+    <?= Yii::$service->page->widget->render($leftMenu,$this); ?>
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - My Order Form: S/N.<b class="red">U2170826416375</b></div><div class="blank5px"></div><h1>My Order Form: S/N.<b class="red">U2170826416375</b></h1>
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - My Order Form: S/N.<b class="red">U2170826416375</b></div><div class="blank5px"></div>
+            <h1>My Order Form: S/N.<b class="red"><?=  $increment_id ?></b></h1>
             <div class="blank10px"></div>
             <div class="p_sub_a">Order Status</div>
             <table class="tab_comm">
@@ -45,8 +24,8 @@
                 </tr>
 
                 <tr class="tr_info">
-                    <td><font color=#333>Pending</font></td>
-                    <td class="px11 gray">Aug 26, 2017&nbsp;&nbsp;6:43:18 PM</td>
+                    <td><font color=#333><?= Yii::$service->page->translate->__($order_status);?></font></td>
+                    <td class="px11 gray"><?=  date('Y-m-d H:i:s',$created_at); ?></td>
                     <td></td>
                 </tr>
 
