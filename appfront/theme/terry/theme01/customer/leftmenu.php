@@ -7,21 +7,48 @@
  * @license http://www.fecshop.com/license/
  */
 ?>
-<div class="col-left sidebar">
-	<div class="block block-account">
-		<div class="block-title">
-			<strong><span><?= Yii::$service->page->translate->__('My Account'); ?></span></strong>
-		</div>
-		<div class="block-content">
-			<ul>
-				<?php  if(!empty($leftMenuArr) && is_array($leftMenuArr)):  ?>
-					<?php foreach($leftMenuArr as $one): ?>
-					<li <?= $one['current'] ?>>
-						<a href="<?= $one['url'] ?>"  ><?= Yii::$service->page->translate->__($one['name']); ?></a>
-					</li>
-					<?php endforeach; ?>
-				<?php endif; ?>	
-			</ul>
-		</div>
-	</div>
+<div class="main_left">
+
+    <div class="col_d_t">My Account</div>
+    <div class="col_d_m">
+        <div class="blank5px"></div>
+        <?php if (!empty($leftMenuArr) && is_array($leftMenuArr)): ?>
+            <?php foreach ($leftMenuArr as $one): ?>
+                    <div class="ml_dir <?php if($one['current']) echo 'ml_dir_cur';?>">
+                        <a href="<?= $one['url'] ?>"><?= Yii::$service->page->translate->__($one['name']); ?></a>
+                    </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+        <div class="blank5px"></div>
+    </div>
+    <div class="col_d_b"></div>
+
+    <div class="blank10px"></div>
+
+
+    <div class="fun_column px11 gray word_wrap word_break">
+        <div class="clear"></div>
+        <b class="px14">Welcome!</b><br/>
+        <b class="px12">&nbsp;zewe&nbsp;jewew</b><br/>
+        User ID: 312043814@qq.com<br/>
+        E-Mail: 312043814@qq.com<br/>
+        Account Status:<b>Normal</b><br/>
+
+        <div class="dashed5px"></div>
+        <div class="align_right"><a href="../members/?action=SignOut"><img src="../images/ico/logout.gif" hspace="5"
+                                                                           border="0" align="absmiddle"/>Sign out</a>&nbsp;&nbsp;
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="blank10px"></div>
+
+
+    <div class="fun_column px11 gray">
+        <b class="px14">Need help?</b><br/>
+        If you have questions or need help with your account, you may goto "<a href="../support"
+                                                                               target="_blank">Help</a>" or <a
+                href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
+        <div class="clear"></div>
+    </div>
 </div>
