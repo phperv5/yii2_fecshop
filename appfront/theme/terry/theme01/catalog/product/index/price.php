@@ -8,17 +8,10 @@
  */
 ?>
 <?php  $price_info = $parentThis['price_info'];   ?>
-<?php if(isset($price_info['special_price']['value'])):  ?>			
-	<div class="special_price special_active">
-		<?= $price_info['special_price']['symbol']  ?><?= $price_info['special_price']['value'] ?>
-	</div>
-	<div class="price special_active">
-		<?= $price_info['price']['symbol']  ?>
-		<?= $price_info['price']['value'] ?>
-	</div>
-	<div class="clear"></div>
+<?php if(isset($price_info['special_price']['value'])):  ?>
+    <span class="pro_pri_tit_vip">Buy It Now:</span><span class="pro_pri_curr_vip" name="cc_v_USD" style="display:"><?= $price_info['price']['symbol']  ?><?= $price_info['price']['value'] ?></span>
 <?php else:  ?>
 	<div class="price no-special">
-		<?= $price_info['price']['symbol']  ?><?= $price_info['price']['value'] ?>
+        <span class="pro_pri_tit_vip">Buy It Now:</span><span class="pro_pri_curr_vip" name="cc_v_USD" style="display:"><?= $price_info['price']['symbol']  ?><?= $price_info['price']['value'] ?></span>
 	</div>
 <?php endif; ?>

@@ -196,7 +196,6 @@
             <?php if (is_array($products) && !empty($products)): ?>
             <?php foreach ($products as $product): ?>
             <div class="pro_list pro_list_feaured">
-                <?php var_dump($product['image']);?>
                 <div class="photo">
                     <a href="../launch-x431-v-8-inch-tablet-wifi-bluetooth-diagnostic-tool.html"
                        title="【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetooth Full System Diagnostic Tool Two Years Free Update Online">
@@ -252,11 +251,11 @@
             ?>
             <div class="clear"></div>
         </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-        <?php endforeach; ?>
-        <?php endif; ?>
         <div class="page_nav">
-            <form onsubmit="location.replace(&quot?ProDirURL=original%2Dbrand%2Dtool&ListPager=9276441,135,&quot+this.PageNumber.value);return false">
+<!--            <form onsubmit="location.replace(&quot?ProDirURL=original%2Dbrand%2Dtool&ListPager=9276441,135,&quot+this.PageNumber.value);return false">-->
                 <div class="fr">
                     <span>1</span> <a href="p2/p2.html">2</a> <a href="p3/p3.html">3</a> <a href="p4/p4.html">4</a>
                     <a href="p5/p5.html">5</a> <a href="p6/p6.html">6</a> <a href="p7/p7.html">7</a>
@@ -266,7 +265,7 @@
                     Total:135 items,&nbsp;20 items/p,&nbsp; Page:<b class=red>1</b>/7.
                 </div>
                 <div class=clear></div>
-            </form>
+<!--            </form>-->
         </div>
         <div class="clear"></div>
     </div>

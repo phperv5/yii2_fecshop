@@ -31,6 +31,7 @@ $cssOptions = [
 	[
 		'css'	=>[
 			'css/style.css',
+			'css/style_fecshop.css',
 			'css/owl.carousel.css',
 			'fancybox/jquery.fancybox.css',
 		],

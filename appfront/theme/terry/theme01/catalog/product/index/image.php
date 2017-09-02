@@ -44,9 +44,9 @@ $middle_img_width = $media_size['middle_img_width'];
 				$sort_order = $gallery['sort_order'];
 				$label 		= $gallery['label'];
 		?>
-						<a href="#" data-image="<?= Yii::$service->product->image->getResize($image,$middle_img_width,false) ?>" data-zoom-image="<?= Yii::$service->product->image->getUrl($image);  ?>">
-							<img class="elevateZoom lazyOwl" id="img_01" src="<?= Yii::$service->product->image->getResize($image,[$small_img_width,$small_img_height],false) ?>" />
-						</a>
+           <a href="#" data-image="<?= Yii::$service->product->image->getResize($image,$middle_img_width,false) ?>" data-zoom-image="<?= Yii::$service->product->image->getUrl($image);  ?>">
+				<img class="elevateZoom lazyOwl" id="img_01" src="<?= Yii::$service->product->image->getResize($image,[$small_img_width,$small_img_height],false) ?>" />
+		   </a>
 		<?php
 			endforeach;
 		?>
@@ -60,25 +60,25 @@ $middle_img_width = $media_size['middle_img_width'];
 <?php endif; ?>
 
 <script>
-<?php $this->beginBlock('product_view_zoom') ?>  
+<?php $this->beginBlock('product_view_zoom') ?>
 $(document).ready(function(){
    //initiate the plugin and pass the id of the div containing gallery images
 	$("#zoom_03").elevateZoom({
-			gallery:'gal1', 
+			gallery:'gal1',
 			cursor: 'pointer',
 			galleryActiveClass: 'active',
 			imageCrossfade: true,
 			//preloading: 1,
-			loadingIcon: '<?= Yii::$service->image->getImgUrl('images/lazyload.gif'); ?>',  
+			loadingIcon: '<?= Yii::$service->image->getImgUrl('images/lazyload.gif'); ?>',
 		<?php if(!$productImgMagnifier):  ?>
 			zoomType:"inner",
 			cursor: "crosshair"
 		<?php endif;  ?>
-	}); 
+	});
 
 	//pass the images to Fancybox
-	$("#zoom_03").bind("click", function(e) {  
-		var ez =   $('#zoom_03').data('elevateZoom');	
+	$("#zoom_03").bind("click", function(e) {
+		var ez =   $('#zoom_03').data('elevateZoom');
 		$.fancybox(ez.getGalleryList());
 		return false;
 	});
@@ -95,14 +95,14 @@ $(document).ready(function(){
 			abs_nowright = Math.abs(nowright);
 			//alert(nowright);
 			if(abs_nowright >= maxright && (nowright < 0)){
-				$(".product-img-box .list-img").animate({top: '0px'}, "slow");  
+				$(".product-img-box .list-img").animate({top: '0px'}, "slow");
 			}else{
-				$(".product-img-box .list-img").animate({top: '-=125px'}, "fast"); 
-			}		
+				$(".product-img-box .list-img").animate({top: '-=125px'}, "fast");
+			}
 		});
-		
+
 		$(".pre_images").click(function(){
-			
+
 			//83
 			i = 0;
 			$(".product-img-box .box-img .list-img img").each(function(){
@@ -112,18 +112,18 @@ $(document).ready(function(){
 			nowright = $(".product-img-box .list-img").css("top");
 			nowright = parseFloat(nowright.replace("px",""));
 			abs_nowright = Math.abs(nowright);
-			
+
 			if(nowright<0){
-				
-				$(".product-img-box .list-img").animate({top: '+=125px'}, "fast"); 
+
+				$(".product-img-box .list-img").animate({top: '+=125px'}, "fast");
 			}else{
-				$(".product-img-box .list-img").animate({top: '0px'}, "slow"); 
-			}	
-			 
+				$(".product-img-box .list-img").animate({top: '0px'}, "slow");
+			}
+
 		});
 	});
 });
-<?php $this->endBlock(); ?>  
+<?php $this->endBlock(); ?>
 </script>  
 <?php $this->registerJs($this->blocks['product_view_zoom'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
 
