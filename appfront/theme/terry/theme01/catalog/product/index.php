@@ -57,8 +57,14 @@
                     <div class="blank10px"></div>
                     <div class="exh_m_bri">Free Shipping Promotion for 2017 New & Hot sale Auto Key Programmer<br>Valid time: 10th to 20th August, Shopping Now!</div><div class="blank10px"></div>
                     <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now"   /></div>
-                    <div class="pro_bo_add_m"><input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value="" title="Add to Cart"  /></div>
-                    <div class="pro_bo_add_r"><input name="add_to_favorites" type="button" class="btn_add_to_favorites" id="divMyFavorite" value="" /><span id="txt_r_addToFavorites"></span></div>
+                    <div class="pro_bo_add_m">
+                        <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value="" title="Add to Cart"/>
+                    </div>
+
+                    <div class="pro_bo_add_r">
+                        <input name="add_to_favorites" type="button" class="btn_add_to_favorites" id="divMyFavorite" url="<?= Yii::$service->url->getUrl('catalog/favoriteproduct/add', ['product_id' => $_id]); ?>" />
+                        <span id="txt_r_addToFavorites"></span>
+                    </div>
                     <div class="blank5px"></div>
                 </div>
                 <div class="blank10px"></div>
