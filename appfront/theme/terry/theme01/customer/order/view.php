@@ -38,9 +38,9 @@ use fecshop\app\appfront\helper\Format;
                     <input type="submit" style="display:none" />
                 </form>
                 <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="javascript:document.getElementById('formGotoCheckout').submit();" /></div>
-                <span class="px11">Order Serial Number: </span><b class="blue_dark">U2170826416375</b><br />
-                <span class="px11">Order Date: </span><span class="px11 verdana">Saturday,&nbsp;Aug 26, 2017</span><br />
-                <span class="px11">Order Total Sum: </span><b class="red px14">$109.00</b>
+                <span class="px11">Order Serial Number: </span><b class="blue_dark"><?=  $increment_id ?></b><br />
+                <span class="px11">Order Date: </span><span class="px11 verdana"><?=  date('Y-m-d H:i:s',$created_at); ?></span><br />
+                <span class="px11">Order Total Sum: </span><b class="red px14"><?= $currency_symbol ?><?= Format::price($product['row_total']); ?></b>
             </div>
 
             <table class="tab_comm">
@@ -51,25 +51,34 @@ use fecshop\app\appfront\helper\Format;
                     <td width="100">Qty.</td>
                     <td width="100">Subtotal</td>
                 </tr>
+                <?php if(is_array($products) && !empty($products)):  ?>
+                    <?php foreach($products as $product): ?>
                 <tr class="tr_info">
-                    <td><div class="img90px"><a href="/wholesale/latest-mb-sd-c4-c5-software-hdd.html" title="Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System" target="_blank"><img src="/upload/pro/500gb-mb-sd-connect-compact-c4-software-hdd-180.jpg" width="90" height="90" border="0" hspace="0" vspace="0" alt="Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System" align="absmiddle" /></a></div></td>
-                    <td class="align_left gray">
-                        <a href="/wholesale/latest-mb-sd-c4-c5-software-hdd.html" target="_blank"><span class="px13">Newest 500GB V2017.07 MB SD C4/C5 Software HDD For DELL D630 Support WIN7&amp;WIN10 System</span></a>
-                        <div class="blank10px"></div>
-                        <span class="gray px12">Item No. SS195-D7</span>
+                    <td><div class="img90px">
+                            <a href="<?=  Yii::$service->url->getUrl($product['redirect_url']) ; ?>" title="<?= $product['name'] ?>">
+                                <img src="<?= Yii::$service->product->image->getResize($product['image'],[100,100],false) ?>" width="90" height="90" border="0" hspace="0" vspace="0" alt="<?= $product['name'] ?>" align="absmiddle" />
+                            </a></div>
                     </td>
-                    <td>$109.00</td>
-                    <td>1</td>
-                    <td><b>$109.00</b></td>
+                    <td class="align_left gray">
+                        <a href="<?=  Yii::$service->url->getUrl($product['redirect_url']) ; ?>" target="_blank"><span class="px13"><?= $product['name'] ?></span></a>
+                        <div class="blank10px"></div>
+                        <span class="gray px12">Item No.<?= $product['sku'] ?></span>
+                    </td>
+                    <td><?= $currency_symbol ?><?= Format::price($product['price']); ?></td>
+                    <td><?= $product['qty'] ?></td>
+                    <td><b><?= $currency_symbol ?><?= Format::price($product['row_total']); ?></b></td>
                 </tr>
-
+                    <?php endforeach; ?>
+                <?php endif; ?>
                 <tr class="tr_info">
                     <td colspan="5" class="align_right verdana px13 line18em">
-                        Items Total: <span class="red_dark">$109.00</span>
-                        <br /><span class="green">Free Shipping</span>
+                        Items Total: <span class="red_dark"><?= $currency_symbol ?><?=  Format::price($subtotal); ?></span>
+                        <br />
+                        <?= Yii::$service->page->translate->__('Shipping Cost');?>:
+                        <span class="green"><?= $currency_symbol ?><?=  Format::price($shipping_total); ?></span>
                         <div class="blank10px"></div>
                         <b class="red px16" style="border-top:1px solid #CCCCCC; padding-top:5px; padding-left:20px;">
-                            Total Sum: $109.00
+                            Total Sum:<?=  Format::price($grand_total); ?>
                         </b>
                         <div class="blank5px"></div>
                     </td>
@@ -77,11 +86,12 @@ use fecshop\app\appfront\helper\Format;
             </table>
             <div class="p_con_a">
                 <b class="green_dark">Your Shipping Address:</b><br />
-                Receiver: zhuang jian<br />
-                rwrewrewrewrew<br />
-                ewrewr, werwe, Germany<br />
+                Receiver: <?=  $customer_firstname ?> <?=  $customer_lastname ?><br />
+                <?=  $customer_address_street1 ?><br />
+                <?=  $customer_address_street2 ?><br />
+                <?=  $customer_address_city ?>,<?=  $customer_address_state_name ?>,<?=  $customer_address_country_name ?><br />
                 Post Code: 233223<br />
-                Phone: 23232323<br />
+                Phone: <?=  $customer_telephone ?><br />
                 <div class="blank10px"></div>
             </div>
             <div class="blank15px"></div>

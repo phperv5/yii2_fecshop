@@ -30,7 +30,8 @@ use fecshop\app\appfront\helper\Format;
                                 </div>
                                 <div class="box-content">
                                     <address><?=  $customer_firstname ?> <?=  $customer_lastname ?><br>
-                                    <?=  $customer_address_street1 ?><br><?=  $customer_address_street2 ?><br><?=  $customer_address_city ?>,<?=  $customer_address_state_name ?>,<?=  $customer_address_country_name ?><br>
+                                    <?=  $customer_address_street1 ?><br><?=  $customer_address_street2 ?><br>
+                                        <?=  $customer_address_city ?>,<?=  $customer_address_state_name ?>,<?=  $customer_address_country_name ?><br>
                                     <?= Yii::$service->page->translate->__('T:');?><?=  $customer_telephone ?>
 
                                     </address>
