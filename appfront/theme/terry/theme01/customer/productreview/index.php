@@ -1,92 +1,72 @@
-<?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<div class="main container two-columns-left">
-	<div class="col-main account_center">
-		<div class="account_review_product">
-			<div style="margin:4px 0 0">
-				<div class="page-title">
-					<h2><?= Yii::$service->page->translate->__('Product Review');?></h2>
-				</div>
-				<div style="width:100%;min-height:500px;">
-					<div style="width:100%;">
-						<div>
-							<?php  if(is_array($coll) && !empty($coll)):  ?>
-							<div class="product-Reviews"> 
-								<div class="clear"></div>
-								<div class="product-Reviews_top">
-									<ul id="review_description">
-										<?php foreach($coll as $one):  ?>
-										<li>
-											<?php $main_image = isset($one['image']['main']['image']) ? $one['image']['main']['image'] : '' ?>
-											<div class="review_description_left">
-												<a class="product_img" href="<?= Yii::$service->url->getUrl($one['url_key']);  ?>">
-													<img src="<?= Yii::$service->product->image->getResize($main_image,[120,120],false) ?>" />
-												</a>
-												<a  href="#" class="review_star review_star_<?= $one['rate_star'] ?>" onclick="javascript:return false;"></a>
-												
-											</div>
-											<div class="review_description_right">
-												<span class="review_description_right_span"><b><?= $one['summary'] ?></b></span>
-												<span class="review_date_time"><?= $one['review_date'] ? date('Y-m-d H:i:s',$one['review_date']) : '' ?></span>
-												<div class="clear"></div>
-												<div class="review_description_centen">
-													<div class="addsize"></div>
-													<div class="review-content">
-														<?= $one['review_content'] ?>
-													</div>
-													
-													<?php if($one['status'] == $noActiveStatus): ?>  
-													<div class="review_moderation">
-														<?= Yii::$service->page->translate->__('Your Review is awaiting moderation...');?>
-													</div>
-													<?php elseif($one['status'] == $refuseStatus): ?>
-													<div class="review_refuse">
-														<?= Yii::$service->page->translate->__('Your Review is refused.');?>
-													</div>
-													<?php elseif($one['status'] == $activeStatus): ?>
-													<div class="review_accept">
-														<?= Yii::$service->page->translate->__('Your Review is accept.');?>
-													</div>
-													<?php endif; ?>
-												</div>
-											</div>
-											<div class="clear"></div>
-										</li>
-										<?php endforeach; ?>
-									</ul>
-								</div>
-								<?php if($pageToolBar): ?>
-								<div class="pageToolbar">
-									<label class="title"><?= Yii::$service->page->translate->__('Page:');?></label><?= $pageToolBar ?>
-								</div>
-								<?php endif; ?>
-							</div>
-							<?php else: ?>
-								<?= Yii::$service->page->translate->__('You have submitted no reviews');?>.
-							<?php endif; ?>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col-left ">
-		<?php
-			$leftMenu = [
-				'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
-				'view'	=> 'customer/leftmenu.php'
-			];
-		?>
-		<?= Yii::$service->page->widget->render($leftMenu,$this); ?>
-	</div>
-	<div class="clear"></div>
+<div class="main">
+    <?php
+    $leftMenu = [
+        'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
+        'view'	=> 'customer/leftmenu.php'
+    ];
+    ?>
+    <?= Yii::$service->page->widget->render($leftMenu,$this); ?>
+    <div class="main_scene">
+        <div class="exh_top"></div>
+        <div class="exh_main">
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - My Favorites</div><div class="blank5px"></div><h1>My Favorites</h1>
+
+            <div class="blank10px"></div>
+
+
+            <table class="tab_comm">
+                <tr class="tr_head">
+                    <td>No.</td>
+                    <td width="70">Rating</td>
+                    <td>Related Product or Article</td>
+                    <td>Date</td>
+                    <td>Remark</td>
+                </tr>
+                <?php if(is_array($coll) && !empty($coll)):  ?>
+                    <?php  foreach($coll as $key=>$one):  ?>
+                        <?php  $main_img = $one['image']['main']['image'];  ?>
+                <tr class="tr_info">
+                    <td class="px11"><?php echo $key+1;?></td>
+                    <td width="70">
+                        <a  href="#" class="review_star review_star_<?= $one['rate_star'] ?>" onclick="javascript:return false;"></a>
+                    </td>
+                    <td class="align_left">
+                        <a class="product_img" href="<?= Yii::$service->url->getUrl($one['url_key']);  ?>">
+                            <img src="<?= Yii::$service->product->image->getResize($main_image,[120,120],false) ?>" />
+                        </a>
+                    </td>
+                    <td class="align_left">
+                        <span class="review_date_time"><?= $one['review_date'] ? date('Y-m-d H:i:s',$one['review_date']) : '' ?></span>
+                    </td>
+                    <td class="align_left px11">
+                        <div class="review-content">
+                            <?= $one['review_content'] ?>
+                        </div>
+                    </td>
+                </tr>
+                        <?php  endforeach;  ?>
+                <?php endif; ?>
+            </table>
+
+
+            <div class="page_nav">
+                <?php if($pageToolBar): ?>
+                    <div class="pageToolbar">
+                        <?= $pageToolBar ?>
+                    </div>
+                <?php endif; ?></div>
+            </div>
+            <form method="post" name="formOrderAdd" id="formOrderAdd" action="../app/order.asp"><input type="hidden" name="ProID" value="" /><input type="hidden" name="oSize" value="" /><input type="hidden" name="oColor" value="" /><input type="hidden" name="oQty" value="" /><input type="hidden" name="Action" value="" /><input type="hidden" name="AddMethod" value="" /><input type="submit" style="display:none" /></form>
+
+            <form name="formMyFavoritesDelete" method="post" action="my_favorites_app.asp">
+                <input type="hidden" name="ProID" value="" />
+                <input type="hidden" name="SetAction" value="del" />
+                <input type="submit" style="display:none" />
+            </form>
+
+            <div class="clear"></div>
+        </div>
+        <div class="exh_bottom"></div>
+    </div>
+    <div class="main_bottom"></div>
 </div>
-	
