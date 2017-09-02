@@ -2,31 +2,38 @@
     <?php
     $leftMenu = [
         'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
-        'view'	=> 'customer/leftmenu.php'
+        'view' => 'customer/leftmenu.php'
     ];
     ?>
-    <?= Yii::$service->page->widget->render($leftMenu,$this); ?>
+    <?= Yii::$service->page->widget->render($leftMenu, $this); ?>
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
 
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - Account Settings</div><div class="blank5px"></div><h1>Account Settings</h1>
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a
+                        href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - Account Settings
+            </div>
+            <div class="blank5px"></div>
+            <h1>Account Settings</h1>
             <div class="blank15px"></div>
             <fieldset>
-                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0" align="absmiddle" /> Change My Password</legend>
-                <form name="formAccountSet" method="post" id="form-validate" autocomplete="off" action="<?=  $actionUrl ?>">
+                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0"
+                                                   align="absmiddle"/> Change My Password
+                </legend>
+                <form method="post" id="form-validate" autocomplete="off" action="<?= $actionUrl ?>">
+                    <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
                     <dl class="px660">
                         <dt><span class="red_star">*</span><b>Current Password:</b></dt>
                         <dd>
                             <input title="Current Password" class="input_normal" name="editForm[current_password]" id="current_password" type="password">
-                            <span id="txtIDpwd_forPwd" class="red_dark"></span><br />
+                            <span id="txtIDpwd_forPwd" class="red_dark"></span><br/>
                             <span class="remark">Input password for confirm changing your password.</span>
                         </dd>
 
                         <dt><span class="red_star">*</span><b>New Password:</b></dt>
                         <dd>
                             <input class="input_normal" title="New Password" class="input-text validate-password required-entry" name="editForm[password]" id="password" type="password">
-                            <span id="txtIDpwd" class="red_dark"></span><br />
+                            <span id="txtIDpwd" class="red_dark"></span><br/>
                             <span class="remark">4 to 20 characters (A-Z, a-z, 0-9, no space).<strong class="red">Case sensitive.</strong></span>
                         </dd>
 
@@ -38,31 +45,35 @@
 
                         <dt>&nbsp;</dt>
                         <dd>
-                            <button type="submit" title="Save" class="btn_submit" onclick="return check_edit()"><span><span><?= Yii::$service->page->translate->__('Submit &amp; Save');?></span></span></button>
+                            <button type="submit" title="Save" class="btn_submit" onclick="return check_edit()">
+                                <span><span><?= Yii::$service->page->translate->__('Submit &amp; Save'); ?></span></span>
+                            </button>
                         </dd>
 
                     </dl>
-
-                    <input name="UserID_confirm" type="hidden" value="351041">
-                    <input name="AccountSetChangeType" type="hidden" value="pwd">
-
                 </form>
             </fieldset>
 
             <div class="blank15px"></div>
             <fieldset>
-                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0" align="absmiddle" /> My E-mail Address</legend>
-                <form name="formAccountSet" onsubmit="return CheckFormSetNewEmail(351041);" action="accountSet_app.asp" method="post">
+                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0"
+                                                   align="absmiddle"/> My E-mail Address
+                </legend>
+                <form name="formAccountSet" onsubmit="return CheckFormSetNewEmail(351041);" action="accountSet_app.asp"
+                      method="post">
 
                     <dl class="px660">
                         <dt><span class="red_star">*</span><b>Current Password:</b></dt>
                         <dd>
                             <input type="password" name="pwd_forEmail" id="pwd_forEmail" size="40" maxlength=20 class="input_normal" onfocus="InputCss(this,'focus');" onblur="CheckVerifyPWDconfirm('pwd_forEmail','txtIDpwd_forEmail','351041');">
-                            <span id="txtIDpwd_forEmail" class="alert"></span><br /><span class="remark">Input password for confirm changing e-mail address.</span>
+                            <span id="txtIDpwd_forEmail" class="alert"></span><br/><span class="remark">Input password for confirm changing e-mail address.</span>
                         </dd>
 
                         <dt><span class="red_star">*</span><b>New E-mail Address:</b></dt>
-                        <dd><input name="email" id="email" type="text" size="40" maxlength="40" class="input_normal" value="312043814@qq.com" onfocus="InputCss(this,'focus');" onblur="CheckVerifyEmailSetNew('email','txtIDemail',351041);"><span id="txtIDemail" class="alert"></span>
+                        <dd><input name="email" id="email" type="text" size="40" maxlength="40" class="input_normal"
+                                   value="312043814@qq.com" onfocus="InputCss(this,'focus');"
+                                   onblur="CheckVerifyEmailSetNew('email','txtIDemail',351041);"><span id="txtIDemail"
+                                                                                                       class="alert"></span>
                         </dd>
 
                         <dt>&nbsp;</dt>
@@ -77,36 +88,72 @@
 
             <div class="blank15px"></div>
             <fieldset>
-                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0" align="absmiddle" /> Enter a New Address</legend>
-                <form name="formAccountSet" onsubmit="return CheckFormSetBasicInfo();" action="accountSet_app.asp" method="post">
+                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0"
+                                                   align="absmiddle"/> Enter a New Address
+                </legend>
+                <form name="formAccountSet" onsubmit="return CheckFormSetBasicInfo();" action="accountSet_app.asp"
+                      method="post">
 
                     <dl class="px660">
                         <dt><span class="red_star">*</span><b>Membership Type:</b></dt>
-                        <dd><select name="usertype" id="usertype" class="input"><option value="0">please select</option><option value="1">Wholesale</option><option value="2" selected="selected">Common</option><option value="3">Drop-ship wholesale</option></select><span id="txtIDusertype" class="alert"></span></dd>
+                        <dd><select name="usertype" id="usertype" class="input">
+                                <option value="0">please select</option>
+                                <option value="1">Wholesale</option>
+                                <option value="2" selected="selected">Common</option>
+                                <option value="3">Drop-ship wholesale</option>
+                            </select><span id="txtIDusertype" class="alert"></span></dd>
 
                         <dt><span class="red_star">*</span><b>My Name is:</b></dt>
                         <dd>
-                            <div class="fl w70px"><b class="px11">Gender</b></div><div class="fl w10px"></div>
-                            <div class="fl w200px"><b class="px11">First Name</b></div><div class="fl w10px"></div>
+                            <div class="fl w70px"><b class="px11">Gender</b></div>
+                            <div class="fl w10px"></div>
+                            <div class="fl w200px"><b class="px11">First Name</b></div>
+                            <div class="fl w10px"></div>
                             <div class="fl w200px"><b class="px11">Last Name</b></div>
                             <div class="clear"></div>
 
-                            <div class="fl w70px"><div class="blank2px"></div><select name="uGender" id="uGender" class="input"><option value="" style="color:#999;">select</option><option value="Mr." >Mr.</option><option value="Ms." >Ms.</option></select></div><div class="fl w10px"></div>
-                            <div class="fl w200px"><input name="uFirstName" id="uFirstName" type="text" size="22" maxlength="30" value="zewe" class="input_normal" onfocus="InputCss(this,'focus');" onblur="CheckVerifyFirstLastName(this,'txtIDuFirstName','First Name');"><span id="txtIDuFirstName" class="alert"></span></div>
+                            <div class="fl w70px">
+                                <div class="blank2px"></div>
+                                <select name="uGender" id="uGender" class="input">
+                                    <option value="" style="color:#999;">select</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Ms.">Ms.</option>
+                                </select></div>
                             <div class="fl w10px"></div>
-                            <div class="fl w200px"><input name="uLastName" id="uLastName" type="text" size="22" maxlength="30" value="jewew" class="input_normal" onfocus="InputCss(this,'focus');" onblur="CheckVerifyFirstLastName(this,'txtIDuLastName','Last Name');"><span id="txtIDuLastName" class="alert"></span></div>
+                            <div class="fl w200px"><input name="uFirstName" id="uFirstName" type="text" size="22"
+                                                          maxlength="30" value="zewe" class="input_normal"
+                                                          onfocus="InputCss(this,'focus');"
+                                                          onblur="CheckVerifyFirstLastName(this,'txtIDuFirstName','First Name');"><span
+                                        id="txtIDuFirstName" class="alert"></span></div>
+                            <div class="fl w10px"></div>
+                            <div class="fl w200px"><input name="uLastName" id="uLastName" type="text" size="22"
+                                                          maxlength="30" value="jewew" class="input_normal"
+                                                          onfocus="InputCss(this,'focus');"
+                                                          onblur="CheckVerifyFirstLastName(this,'txtIDuLastName','Last Name');"><span
+                                        id="txtIDuLastName" class="alert"></span></div>
                             <div class="clear"></div>
                         </dd>
 
                         <dt><span class="red_star">*</span><b>Country / Region:</b></dt>
                         <dd>
-                            <select name="uCountry" id="uCountry" class="input" onchange="CheckVerifyUCountry(this,'txtIDucountry');"><option value="">please select your country or region</option>
-                                <option value="CA"><img src="/images/ico_country/CA.gif" border="0" align="absmiddle" />Canada</option>
-                                <option value="FR" selected="selected"><img src="/images/ico_country/FR.gif" border="0" align="absmiddle" />France</option>
-                                <option value="DE"><img src="/images/ico_country/DE.gif" border="0" align="absmiddle" />Germany</option>
-                                <option value="IT"><img src="/images/ico_country/IT.gif" border="0" align="absmiddle" />Italy</option>
-                                <option value="GB"><img src="/images/ico_country/GB.gif" border="0" align="absmiddle" />United Kingdom</option>
-                                <option value="US"><img src="/images/ico_country/US.gif" border="0" align="absmiddle" />United States</option>
+                            <select name="uCountry" id="uCountry" class="input"
+                                    onchange="CheckVerifyUCountry(this,'txtIDucountry');">
+                                <option value="">please select your country or region</option>
+                                <option value="CA"><img src="/images/ico_country/CA.gif" border="0" align="absmiddle"/>Canada
+                                </option>
+                                <option value="FR" selected="selected"><img src="/images/ico_country/FR.gif" border="0"
+                                                                            align="absmiddle"/>France
+                                </option>
+                                <option value="DE"><img src="/images/ico_country/DE.gif" border="0" align="absmiddle"/>Germany
+                                </option>
+                                <option value="IT"><img src="/images/ico_country/IT.gif" border="0" align="absmiddle"/>Italy
+                                </option>
+                                <option value="GB"><img src="/images/ico_country/GB.gif" border="0" align="absmiddle"/>United
+                                    Kingdom
+                                </option>
+                                <option value="US"><img src="/images/ico_country/US.gif" border="0" align="absmiddle"/>United
+                                    States
+                                </option>
                                 <option value="">---- All Countries &amp; Territories (A to Z) ----</option>
                                 <option value="AF">Afghanistan</option>
                                 <option value="AL">Albania</option>
@@ -360,34 +407,53 @@
                         </dd>
 
                         <dt>Company Name:</dt>
-                        <dd><input name="uCompanyName" id="uCompanyName" type="text" size="60" maxlength="200" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uCompanyName" id="uCompanyName" type="text" size="60" maxlength="200" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>My Title:</dt>
-                        <dd><input name="uTitle" id="uTitle" type="text" size="30" maxlength="50" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uTitle" id="uTitle" type="text" size="30" maxlength="50" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>Contact Address:</dt>
-                        <dd><input name="uAddress" id="uAddress" type="text" size="60" maxlength="200" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uAddress" id="uAddress" type="text" size="60" maxlength="200" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>ZIP/Postal Code:</dt>
-                        <dd><input name="uPostalCode" id="uPostalCode" type="text" size="30" maxlength="10" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uPostalCode" id="uPostalCode" type="text" size="30" maxlength="10" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>Phone Number:</dt>
-                        <dd><input name="uTel" id="uTel" type="text" size="60" maxlength="100" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uTel" id="uTel" type="text" size="60" maxlength="100" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>Fax Number:</dt>
-                        <dd><input name="uFax" id="uFax" type="text" size="60" maxlength="100" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uFax" id="uFax" type="text" size="60" maxlength="100" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>IM <span class="px11 gray">(Instant Messaging)</span>:</dt>
-                        <dd><input name="uIM" id="uIM" type="text" size="60" maxlength="100" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uIM" id="uIM" type="text" size="60" maxlength="100" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                        </dd>
 
                         <dt>Website URL:</dt>
-                        <dd><input name="uWebsiteURL" id="uWebsiteURL" type="text" size="30" maxlength="50" value="http://" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></dd>
+                        <dd><input name="uWebsiteURL" id="uWebsiteURL" type="text" size="30" maxlength="50"
+                                   value="http://" class="input_normal" onfocus="InputCss(this,'focus');"
+                                   onblur="InputCss(this,'');"></dd>
 
                         <dt>My Birthday:</dt>
-                        <dd><input name="uBirthday" id="uBirthday" type="text" size="30" maxlength="30" value="" class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"> <span class="px11 gray">e.g.:July 4,1980</span></dd>
+                        <dd><input name="uBirthday" id="uBirthday" type="text" size="30" maxlength="30" value=""
+                                   class="input_normal" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');">
+                            <span class="px11 gray">e.g.:July 4,1980</span></dd>
 
                         <dt>Other Menu:</dt>
-                        <dd><textarea name="uOtherMenu" cols="65" rows="5" class="input_normal" id="uOtherMenu" onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></textarea></dd>
+                        <dd><textarea name="uOtherMenu" cols="65" rows="5" class="input_normal" id="uOtherMenu"
+                                      onfocus="InputCss(this,'focus');" onblur="InputCss(this,'');"></textarea></dd>
 
                         <dt>&nbsp;</dt>
                         <dd><input name="Submit" type="submit" class="btn_submit" value="  Submit &amp; Save  "></dd>
@@ -405,3 +471,90 @@
     </div>
     <div class="main_bottom"></div>
 </div>
+<script>
+    <?php $this->beginBlock('customer_account_info_update') ?>
+    function check_edit() {
+        $check_current_password = true;
+        $check_new_password = true;
+        $check_confir_password = true;
+        $check_confir_password_with_pass = true;
+
+        $current_password = $('#current_password').val();
+        $password = $('#password').val();
+        $confirmation = $('#confirmation').val();
+        if ($current_password == '') {
+            $('#current_password').addClass('validation-failed');
+            $('#required_current_password').show();
+            $check_current_password = false;
+        } else {
+            $('#current_password').removeClass('validation-failed');
+            $('#required_current_password').hide();
+            $check_current_password = true;
+        }
+        if ($password == '') {
+            $('#password').addClass('validation-failed');
+            $('#required_new_password').show().html('This is a required field.');
+            ;
+            $check_new_password = false;
+        } else {
+            if (!checkPass($password)) {
+                $('#password').addClass('validation-failed');
+                $('#required_new_password').show();
+                $('#required_new_password').html('Must have 6 to 30 characters and no spaces.');
+                $check_new_password = false;
+            } else {
+                $('#password').removeClass('validation-failed');
+                $('#required_new_password').hide();
+                $check_new_password = true;
+            }
+        }
+
+        if ($confirmation == '') {
+            $('#confirmation').addClass('validation-failed');
+            $('#required_confirm_password').show().html('This is a required field.');
+            $check_confir_password = false;
+        } else {
+            if (!checkPass($confirmation)) {
+                $('#confirmation').addClass('validation-failed');
+                $('#required_confirm_password').show();
+                $('#required_confirm_password').html('Must have 6 to 30 characters and no spaces.');
+                $check_confir_password = false;
+            } else {
+                if ($password != $confirmation) {
+                    $('#confirmation').addClass('validation-failed');
+                    $('#required_confirm_password').show();
+                    $('#required_confirm_password').html('Two password is not the same！');
+                    $check_confir_password_with_pass = false;
+                } else {
+                    $('#confirmation').removeClass('validation-failed');
+                    $('#required_confirm_password').hide();
+                    $check_confir_password = true;
+                }
+
+            }
+        }
+
+
+        if ($check_confir_password_with_pass && $check_confir_password && $check_new_password && $check_current_password) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkPass(str) {
+        var re = /^\w{6,30}$/;
+        if (re.test(str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function checkEmail(str) {
+        var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/;
+        if (myReg.test(str)) return true;
+        return false;
+    }
+    <?php $this->endBlock(); ?>
+</script>
+<?php $this->registerJs($this->blocks['customer_account_info_update'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
