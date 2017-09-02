@@ -104,7 +104,6 @@ use fecshop\app\appfront\helper\Format;
                         <textarea name="CommentMessage" cols="120" rows="6" id="CommentMessage" class="input"></textarea><span class="alert" id="txtOrderCommentMessage"></span>
                         <div class="blank5px"></div>
                         <input type="submit" name="Submit5" value="Submit" class="btn_submit">
-
                         <input name="OrderID" type="hidden" value="416375">
                         <input type="hidden" name="UserID" value="351041">
                     </form>

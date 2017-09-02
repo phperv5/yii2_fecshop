@@ -1,76 +1,45 @@
 <div class="main">
-    <div class="main_left">
-
-        <div class="col_d_t">My Account</div>
-        <div class="col_d_m">
-            <div class="blank5px"></div>
-            <div class="ml_dir"><a href="orderList.asp">View My Orders</a></div>
-            <div class="ml_dir ml_dir_cur"><a href="accountSet.asp">Account Settings</a></div>
-            <div class="ml_dir"><a href="addressBook.asp">Manage Address Book</a></div>
-            <div class="ml_dir"><a href="msg_list.asp">Tickets Center</a></div>
-            <div class="ml_dir"><a href="msg_add.asp?DirID=2">Submit a Ticket</a></div>
-            <div class="ml_dir"><a href="pro_rev_list.asp">My Products' Reviews</a></div>
-            <div class="ml_dir"><a href="my_favorites_list.asp">My Favorites</a></div>
-            <div class="blank5px"></div>
-        </div>
-        <div class="col_d_b"></div>
-        <div class="blank10px"></div>
-        <div class="fun_column px11 gray word_wrap word_break">
-            <div class="clear"></div>
-            <b class="px14">Welcome!</b><br />
-            <b class="px12">&nbsp;zewe&nbsp;jewew</b><br />
-            User ID: 312043814@qq.com<br />
-            E-Mail: 312043814@qq.com<br />
-            Account Status:<b>Normal</b><br />
-
-            <div class="dashed5px"></div>
-            <div class="align_right"><a href="../members/?action=SignOut"><img src="../images/ico/logout.gif" hspace="5" border="0" align="absmiddle" />Sign out</a>&nbsp;&nbsp;</div>
-            <div class="clear"></div>
-        </div>
-
-        <div class="blank10px"></div>
-
-
-        <div class="fun_column px11 gray">
-            <b class="px14">Need help?</b><br />
-            If you have questions or need help with your account, you may goto "<a href="../support" target="_blank">Help</a>" or <a href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
-            <div class="clear"></div>
-        </div></div>
+    <?php
+    $leftMenu = [
+        'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
+        'view'	=> 'customer/leftmenu.php'
+    ];
+    ?>
+    <?= Yii::$service->page->widget->render($leftMenu,$this); ?>
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
 
             <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - Account Settings</div><div class="blank5px"></div><h1>Account Settings</h1>
-
             <div class="blank15px"></div>
-
             <fieldset>
                 <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0" align="absmiddle" /> Change My Password</legend>
-                <form name="formAccountSet" onsubmit="return CheckFormSetNewPwd(351041);" action="accountSet_app.asp" method="post">
-
+                <form name="formAccountSet" method="post" id="form-validate" autocomplete="off" action="<?=  $actionUrl ?>">
                     <dl class="px660">
                         <dt><span class="red_star">*</span><b>Current Password:</b></dt>
                         <dd>
-                            <input type="password" name="pwd_forPwd" id="pwd_forPwd" size="40" maxlength=20 class="input_normal" onfocus="InputCss(this,'focus');" onblur="CheckVerifyPWDconfirm(this,'txtIDpwd_forPwd','351041');">
+                            <input title="Current Password" class="input_normal" name="editForm[current_password]" id="current_password" type="password">
                             <span id="txtIDpwd_forPwd" class="red_dark"></span><br />
                             <span class="remark">Input password for confirm changing your password.</span>
                         </dd>
 
                         <dt><span class="red_star">*</span><b>New Password:</b></dt>
                         <dd>
-                            <input type="password" name="pwd" id="pwd" size="40" maxlength=20 class="input_normal" onfocus="InputCss(this,'focus');" onblur="CheckVerifyPWD(this,'txtIDpwd');">
+                            <input class="input_normal" title="New Password" class="input-text validate-password required-entry" name="editForm[password]" id="password" type="password">
                             <span id="txtIDpwd" class="red_dark"></span><br />
                             <span class="remark">4 to 20 characters (A-Z, a-z, 0-9, no space).<strong class="red">Case sensitive.</strong></span>
                         </dd>
 
                         <dt><span class="red_star">*</span><b>Confirm New Password:</b></dt>
                         <dd>
-                            <input type="password" name="pwd2" id="pwd2" size="40" maxlength=20 class="input_normal" onfocus="InputCss(this,'focus');" onblur="CheckVerifyPWD2(this,'pwd','txtIDpwd2');">
+                            <input class="input_normal" title="Confirm New Password" class="input-text validate-cpassword required-entry" name="editForm[confirmation]" id="confirmation" type="password">
                             <span id="txtIDpwd2" class="red_dark"></span>
                         </dd>
 
                         <dt>&nbsp;</dt>
-                        <dd><input name="Submit" type="submit" class="btn_submit" value="  Submit &amp; Save  "></dd>
+                        <dd>
+                            <button type="submit" title="Save" class="btn_submit" onclick="return check_edit()"><span><span><?= Yii::$service->page->translate->__('Submit &amp; Save');?></span></span></button>
+                        </dd>
 
                     </dl>
 
