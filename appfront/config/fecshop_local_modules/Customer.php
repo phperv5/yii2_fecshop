@@ -54,7 +54,7 @@ return [
 
             'contacts'    => [
                 // 联系我们页面的验证码是否开启
-                'contactsCaptcha' => true,
+                'contactsCaptcha' => false,
                 // 设置联系我们邮箱，如果不设置，则从email service配置中读取。
                 //'address' => '',
             ],
