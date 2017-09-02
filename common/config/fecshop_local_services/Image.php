@@ -12,7 +12,7 @@ return [
         'appbase'    => [
             'appfront' => [
                 'basedir'    => '@appimage/appfront',
-                'basedomain' => 'http://img.51openheart.cn/appimage/appfront',
+                'basedomain' => 'http://img.51openheart.cn',
             ],
             'apphtml5' => [
                 'basedir'    => '@appimage/apphtml5',
@@ -20,7 +20,7 @@ return [
             ],
             'appadmin' => [
             	'basedir' => '@appimage/appadmin',
-            	'basedomain' => 'http://img.51openheart.cn/appimage/appadmin',
+            	'basedomain' => 'http://img.51openheart.cn',
             ],
             'common' => [
                 'basedir'    => '@appimage/common',

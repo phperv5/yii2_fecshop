@@ -196,6 +196,7 @@
             <?php if (is_array($products) && !empty($products)): ?>
             <?php foreach ($products as $product): ?>
             <div class="pro_list pro_list_feaured">
+                <?php var_dump($product['image']);?>
                 <div class="photo">
                     <a href="../launch-x431-v-8-inch-tablet-wifi-bluetooth-diagnostic-tool.html"
                        title="【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetooth Full System Diagnostic Tool Two Years Free Update Online">
