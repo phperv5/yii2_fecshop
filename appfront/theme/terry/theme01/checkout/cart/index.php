@@ -71,11 +71,16 @@ use fecshop\app\appfront\helper\Format;
             </table>
         </form>
         <div class="blank10px"></div>
-        <div class="fl" style="margin-top:10px;"><input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage');  ?>'" />paypal</div>
-        <div class="float_right" style="margin-top:10px;"> -- OR --
-            <a class="btn_near btn_mid" href="<?= Yii::$service->url->getUrl('payment/paypal/express/start');    ?>">Proceed to Checkout</a>
+        <div class="fl" style="margin-top:10px;">
+            <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">
         </div>
-
+        <div class="float_right" style="margin-top:10px;">
+                -- OR -- <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid" value="Proceed to Checkout" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage');  ?>'">
+        </div>
+        <div class="float_right" style="margin-right:10px;">
+                <input name="" type="image" class="ipt_img" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png');?>" alt="Check out with PayPal" id="myPPECbutton" onclick="location.href='<?= Yii::$service->url->getUrl('payment/paypal/express/start');    ?>'">
+        </div>
+        
         <div class="blank10px"></div><div class="blank10px"></div><div class="blank10px"></div>
         <br />
         <p style="text-align:justify"><span style="color:#993300"><strong>Continue Shopping:</strong></span>&nbsp;Please click <strong>Continue Shopping</strong>&nbsp;if you have not finish your order. And your present order&nbsp;will not be cleared.<br />
