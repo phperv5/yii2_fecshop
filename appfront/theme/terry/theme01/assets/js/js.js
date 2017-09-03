@@ -2,7 +2,6 @@ $(document).ready(function(){
 	currentBaseUrl = $(".currentBaseUrl").val();
 	$(".top_currency .currency_list ul li").click(function(){
 		currency = $(this).attr("rel");
-		
 		htmlobj=$.ajax({url:currentBaseUrl+"/cms/home/changecurrency?currency="+currency,async:false});
 		//alert(htmlobj.responseText);
 		location.reload() ;
@@ -34,7 +33,7 @@ $(document).ready(function(){
 			'product_id':product_id
 		},
 		url:loginInfoUrl,
-		success:function(data, textStatus){ 
+		success:function(data, textStatus){
 			welcome = $('.welcome_str').val();
 			logoutStr = $('.logoutStr').val();
 			if(data.loginStatus){
@@ -59,10 +58,9 @@ $(document).ready(function(){
 			if(data.cart_qty){
 				$("#js_cart_items").html(data.cart_qty);
 			}
-			
-			
 		},
-		error:function (XMLHttpRequest, textStatus, errorThrown){}
+		error:function (XMLHttpRequest, textStatus, errorThrown){
+		}
 	});
 	
 	$("#goTop").click(function(){
