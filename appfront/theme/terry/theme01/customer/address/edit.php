@@ -22,8 +22,7 @@
                         <div class="clear"></div>
 
                         <div class="fl w200px">
-                            <input class="input-text required-entry input_normal" maxlength="255" title="First Name"
-                                   value="<?= $first_name ?>" name="address[first_name]" id="firstname" type="text">
+                            <input class="input-text required-entry input_normal" maxlength="255" title="First Name" value="<?= $first_name ?>" name="address[first_name]" id="firstname" type="text">
                         </div>
 
                         <div class="fl w10px"></div>
@@ -108,6 +107,67 @@
     </div>
     <div class="main_bottom"></div>
 </div>
+
+
+<script>
+    <?php $this->beginBlock('editCustomerAddress') ?>
+    $(document).ready(function(){
+        $(".address_country").change(function(){
+            //alert(111);
+            ajaxurl = "<?= Yii::$service->url->getUrl('customer/address/changecountry') ?>";
+            country = $(this).val();
+            $.ajax({
+                async:false,
+                timeout: 8000,
+                dataType: 'json',
+                type:'get',
+                data: {
+                    'country':country,
+                },
+                url:ajaxurl,
+                success:function(data, textStatus){
+                    $(".state_html").html(data.state);
+                },
+                error:function (XMLHttpRequest, textStatus, errorThrown){
+
+                }
+            });
+
+        });
+
+    });
+    function submit_address(){
+        i = 1;
+        jQuery(".addressedit input").each(function(){
+            type = jQuery(this).attr("type");
+            if(type != "hidden"){
+                value = jQuery(this).val();
+                if(!value){
+                    //alert($(this).hasClass('optional'));
+                    if(!$(this).hasClass('optional')){
+                        i = 0;
+                    }
+                }
+            }
+        });
+
+        jQuery(".addressedit select").each(function(){
+            value = jQuery(this).val();
+            if(!value){
+                i = 0;
+            }
+        });
+        if(i){
+            jQuery(".addressedit").submit();
+        }else{
+            alert("You Must Fill All Field");
+        }
+    }
+
+    <?php $this->endBlock(); ?>
+    <?php $this->registerJs($this->blocks['editCustomerAddress'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
+
+</script>
 
 
 
