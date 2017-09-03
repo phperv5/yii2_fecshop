@@ -161,6 +161,7 @@
             jQuery(".addressedit").submit();
         }else{
             alert("You Must Fill All Field");
+            return false;
         }
     }
 
