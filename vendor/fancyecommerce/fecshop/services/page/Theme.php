@@ -42,6 +42,7 @@ class Theme extends Service
      * array that contains mutil theme dir.
      */
     protected $_themeDirArr;
+
     /**
      * @return  array ，根据模板路径的优先级，以及得到各个模板路径，组合成数组
      * 数组前面的模板路径优先级最高
@@ -81,13 +82,13 @@ class Theme extends Service
         $relativeFile = '';
         $module = Yii::$app->controller->module;
         if ($module && $module->id) {
-            $relativeFile = $module->id.'/';
+            $relativeFile = $module->id . '/';
         }
-        $relativeFile .= Yii::$app->controller->id.'/'.$view.'.php';
+        $relativeFile .= Yii::$app->controller->id . '/' . $view . '.php';
         $absoluteDir = Yii::$service->page->theme->getThemeDirArr();
         foreach ($absoluteDir as $dir) {
             if ($dir) {
-                $file = $dir.'/'.$relativeFile;
+                $file = $dir . '/' . $relativeFile;
                 if (file_exists($file)) {
                     return $file;
                 }
@@ -98,15 +99,16 @@ class Theme extends Service
             $notExistFile = [];
             foreach ($absoluteDir as $dir) {
                 if ($dir) {
-                    $file = $dir.'/'.$relativeFile;
+                    $file = $dir . '/' . $relativeFile;
                     $notExistFile[] = $file;
                 }
             }
-            throw new InvalidValueException('view file is not exist in'.implode(',', $notExistFile));
+            throw new InvalidValueException('view file is not exist in' . implode(',', $notExistFile));
         } else {
             return false;
         }
     }
+
     /**
      * @property $dir | string 设置本地模板路径
      */
@@ -114,11 +116,17 @@ class Theme extends Service
     {
         $this->localThemeDir = $dir;
     }
+
     /**
      * @property $dir | string 设置第三方模板路径
      */
     protected function actionSetThirdThemeDir($dir)
     {
         $this->thirdThemeDir = $dir;
+    }
+
+    protected function actionGetLocalThemeDir()
+    {
+        return '..' . strstr($this->localThemeDir, '/') . '/';
     }
 }

@@ -197,7 +197,7 @@
                         </div>
                     </div>
                     <div class="blank10px"></div>
-                    short description
+                    <?= $product['short_description']; ?>
                     <div class="blank5px"></div>
 
                     <div class="pro_sch_tags">

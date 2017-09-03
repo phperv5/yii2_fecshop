@@ -114,6 +114,7 @@ class Product extends Service
                     'special_price' => $special_price,
                     'url'           => Yii::$service->url->getUrl($url_key),
                     'product_id'    => (string)$one['_id'],
+                    'short_description'    => Yii::$service->store->getStoreAttrVal($one['short_description'], 'short_description'),
                 ];
             }
         }
