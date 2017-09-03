@@ -1,18 +1,14 @@
-<?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<form method="get" name="searchFrom" class="js_topSeachForm" action="<?= Yii::$service->url->getUrl('catalogsearch/index');   ?>">
-	<div class="top_seachBox">
-		<div class="searchInput fl">
-			<input type="text"  value="<?=  \Yii::$service->helper->htmlEncode(Yii::$app->request->get('q'));  ?>" maxlength="150" placeholder="<?= Yii::$service->page->translate->__('Products keyword'); ?>" class="searchArea js_k2 ac_input" name="q">
-		</div>
-		<button class="fl js_topSearch seachBtn" type="submit"><span class="t_hidden">search</span></button>
-		<!-- <input type="hidden" class="category" value="0" name="category"> -->
-	</div><!--end .top_seachBox-->
-</form>
+<div class="hd_sch">
+    <form method="get" name="searchFrom" class="js_topSeachForm" action="<?= Yii::$service->url->getUrl('catalogsearch/index');   ?>">
+        <input name="q" type="text" id="q" class="kw"  value="<?=  \Yii::$service->helper->htmlEncode(Yii::$app->request->get('q'));  ?>"
+               placeholder="<?= Yii::$service->page->translate->__('Products keyword'); ?>">
+        <select name="DirID">
+            <option value="" style="color:#999;">all categories</option>
+            <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
+            <?php foreach($categories as $category): ?>
+                <option value="<?= $category['url'] ?>"><?= $category['name'] ?></option>
+            <?php endforeach; ?>
+        </select>
+        <input type="submit" value="" class="go fl js_topSearch seachBtn" title="Search"/>
+    </form>
+</div>

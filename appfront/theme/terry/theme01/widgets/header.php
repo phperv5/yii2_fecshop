@@ -49,44 +49,8 @@
     </div>
 </div>
 <div class="header" id="WebPageTop">
-    <div class="hd_logo"><a href="www.uobdii.html" target="_top"><h1>UOBD2 - China Auto Diagnostic Tool Center for
-                Workshop, Wholesale, DIY, Drop-ship</h1></a></div>
-    <div class="hd_sch">
-        <form name="formSearch" method="get" onsubmit="javascript:return CF_Search();" action="/search/">
-            <input name="q" type="text" id="q" class="kw" maxlength="50"
-                   onfocus="javascript:if (this.value == 'VVDI2 BMW FEM/BDC Authorization')  this.value = '';document.getElementById('q').className='kw_focus';"
-                   onblur="javascript:if (this.value == '')  this.value = 'VVDI2 BMW FEM/BDC Authorization';if (this.value == 'VVDI2 BMW FEM/BDC Authorization')  document.getElementById('q').className='kw';"
-                   value="VVDI2 BMW FEM/BDC Authorization">
-            <select name="DirID">
-                <option value="" style="color:#999;">all categories</option>
-                <option value="81">Original Brand Tool</option>
-                <option value="30">Car Diagnostic Tool</option>
-                <option value="35">Auto Key Programmer</option>
-                <option value="52">Heavy Duty Diagnostic</option>
-                <option value="33">ECU Chip Tuning</option>
-                <option value="82">Key Cutting &amp; Lock Pick Tool</option>
-                <option value="78">Oversea Warehouse</option>
-                <option value="32">Mileage Programmer</option>
-                <option value="37">Car Diagnostic Software</option>
-                <option value="50">Car Key Blanks</option>
-                <option value="49">Auto Locksmith Tool</option>
-                <option value="31">OBD2 Code Scanner</option>
-                <option value="55">Car Key Chips</option>
-                <option value="54">Packages &amp; Offers</option>
-                <option value="34">VAG Diagnostic Tool</option>
-                <option value="46">OBD2 Cable and Connector</option>
-                <option value="45">Airbag Reset Tool</option>
-                <option value="73">Original AUGOCOM Tools</option>
-                <option value="64">Hot Car Accessories</option>
-                <option value="77">Wholesale Dropship</option>
-                <option value="63">LED Parking Sensor and Monitor Display</option>
-                <option value="67">Auto Modification Accessories</option>
-                <option value="80">Original Launch X431 Tool</option>
-                <option value="83">Factory Expired Tool</option>
-            </select>
-            <input type="submit" value="" class="go" title="Search"/>
-        </form>
-    </div>
+    <div class="hd_logo"><a href="<?= $homeUrl ?>" target="_top"><h1></h1></a></div>
+    <?= Yii::$service->page->widget->render('topsearch',$this); ?>
     <div class="hd_cart">
         <a href="<?= Yii::$service->url->getUrl('checkout/cart') ?>" target="_top" rel="nofollow" id="hd_mycart">
             <span class="mycart-text">My Shopping Cart</span>
