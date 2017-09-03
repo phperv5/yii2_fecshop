@@ -75,18 +75,7 @@ use fecshop\app\appfront\helper\Format;
         <div class="float_right" style="margin-top:10px;"> -- OR --
             <a class="btn_near btn_mid" href="<?= Yii::$service->url->getUrl('payment/paypal/express/start');    ?>">Proceed to Checkout</a>
         </div>
-        <div class="float_right" style="margin-right:10px;">
 
-            <script type="text/javascript">
-                window.paypalCheckoutReady = function () {
-                    paypal.checkout.setup('sinpecal_api1.gmail.com', {
-                        button: 'myPPECbutton',
-                        environment: 'production'
-                    });
-                };
-            </script>
-            <script src="/api_ppec/js/checkout.js" async></script>
-        </div>
         <div class="blank10px"></div><div class="blank10px"></div><div class="blank10px"></div>
         <br />
         <p style="text-align:justify"><span style="color:#993300"><strong>Continue Shopping:</strong></span>&nbsp;Please click <strong>Continue Shopping</strong>&nbsp;if you have not finish your order. And your present order&nbsp;will not be cleared.<br />
