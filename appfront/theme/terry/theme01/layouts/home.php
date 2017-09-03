@@ -19,6 +19,7 @@ $jsOptions = [
 			'js/common.js',
 			'js/jquery.js',
 			'js/plugins/layer/layer.js',
+			'js/js.js',
 		],
 	],
 ];
