@@ -46,12 +46,12 @@ class Asset extends Service
                     if (isset($jsOption['js']) && is_array($jsOption['js']) && !empty($jsOption['js'])) {
                         foreach ($jsOption['js'] as $jsPath) {
                             foreach ($themeDir as $dir) {
-                                $dir = $dir.'/'.$this->defaultDir.'/';
-                                $jsAbsoluteDir = $dir.$jsPath;
+                                $dir = $dir . '/' . $this->defaultDir . '/';
+                                $jsAbsoluteDir = $dir . $jsPath;
                                 if (file_exists($jsAbsoluteDir)) {
                                     $assetArr[$dir]['jsOptions'][] = [
-                                        'js'        =>  $jsPath,
-                                        'options'    =>  $this->initOptions($jsOption['options']),
+                                        'js' => $jsPath,
+                                        'options' => $this->initOptions($jsOption['options']),
                                     ];
                                     break;
                                 }
@@ -66,12 +66,12 @@ class Asset extends Service
                     if (isset($cssOption['css']) && is_array($cssOption['css']) && !empty($cssOption['css'])) {
                         foreach ($cssOption['css'] as $cssPath) {
                             foreach ($themeDir as $dir) {
-                                $dir = $dir.'/'.$this->defaultDir.'/';
-                                $cssAbsoluteDir = $dir.$cssPath;
+                                $dir = $dir . '/' . $this->defaultDir . '/';
+                                $cssAbsoluteDir = $dir . $cssPath;
                                 if (file_exists($cssAbsoluteDir)) {
                                     $assetArr[$dir]['cssOptions'][] = [
-                                        'css'        =>  $cssPath,
-                                        'options'    =>  $this->initOptions($cssOption['options']),
+                                        'css' => $cssPath,
+                                        'options' => $this->initOptions($cssOption['options']),
                                     ];
                                     break;
                                 }
@@ -82,20 +82,20 @@ class Asset extends Service
             }
         }
         if (!empty($assetArr)) {
-            $jsV = '?v='.$this->jsVersion;
-            $cssV = '?v='.$this->cssVersion;
-            foreach ($assetArr as $fileDir=>$as) {
+            $jsV = '?v=' . $this->jsVersion;
+            $cssV = '?v=' . $this->cssVersion;
+            foreach ($assetArr as $fileDir => $as) {
                 $cssConfig = $as['cssOptions'];
                 $jsConfig = $as['jsOptions'];
                 $publishDir = $view->assetManager->publish($fileDir);
                 if (!empty($jsConfig) && is_array($jsConfig)) {
                     foreach ($jsConfig as $c) {
-                        $view->registerJsFile($this->jsCssDomain.$publishDir[1].'/'.$c['js'].$jsV, $c['options']);
+                        $view->registerJsFile($this->jsCssDomain . $publishDir[1] . '/' . $c['js'] . $jsV, $c['options']);
                     }
                 }
                 if (!empty($cssConfig) && is_array($cssConfig)) {
                     foreach ($cssConfig as $c) {
-                        $view->registerCssFile($this->jsCssDomain.$publishDir[1].'/'.$c['css'].$cssV, $c['options']);
+                        $view->registerCssFile($this->jsCssDomain . $publishDir[1] . '/' . $c['css'] . $cssV, $c['options']);
                     }
                 }
             }

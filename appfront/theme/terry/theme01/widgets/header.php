@@ -42,7 +42,7 @@
             <div class="hd_wr_f_shipto">
                 <div class="hd_wr_f_shipto_item" id="hd_country_curr_code"><a
                             href="javascript:CountryCurrencyChoose('Choose','');">Ship to <img
-                                src="images/ico_country/US.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;<span
+                                src="<?= Yii::$service->image->getImgUrl('images/ico_country/US.gif');   ?>" border="0" align="absmiddle"/>&nbsp;&nbsp;<span
                                 class="gray px11">/</span>&nbsp;&nbsp;<b>USD</b></a></div>
             </div>
         </div>
