@@ -27,21 +27,18 @@
 
                         <div class="fl w10px"></div>
                         <div class="fl w200px">
-                            <input class="input-text required-entry input_normal" maxlength="255" title="Last Name"
-                                   value="<?= $last_name ?>" name="address[last_name]" id="lastname" type="text">
+                            <input class="input-text required-entry input_normal" maxlength="255" title="Last Name" value="<?= $last_name ?>" name="address[last_name]" id="lastname" type="text">
                         </div>
                     </dd>
 
                     <dt><span class="red_star">*</span>Address Line1:</dt>
                     <dd>
-                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name"
-                               value="<?= $street1 ?>" name="address[street1]" id="lastname" type="text">
+                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name" value="<?= $street1 ?>" name="address[street1]" id="lastname" type="text">
                     </dd>
 
                     <dt>Address Line2:</dt>
                     <dd>
-                        <input class="input-text optional input_normal" maxlength="255" title="street2"
-                               value="<?= $street2 ?>" name="address[street2]" id="lastname" type="text">
+                        <input class="input-text optional input_normal" maxlength="255" title="street2" value="<?= $street2 ?>" name="address[street2]" id="lastname" type="text">
                     </dd>
 
                     <dt><span class="red_star">*</span>City:</dt>
@@ -69,14 +66,12 @@
                         <span class="red_star">*</span>ZIP/Postal Code:
                     </dt>
                     <dd>
-                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name"
-                               value="<?= $zip ?>" name="address[zip]" id="lastname" type="text">
+                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name" value="<?= $zip ?>" name="address[zip]" id="lastname" type="text">
                     </dd>
 
                     <dt><span class="red_star">*</span>Phone Number:</dt>
                     <dd>
-                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name"
-                               value="<?= $telephone ?>" name="address[telephone]" id="lastname" type="text">
+                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name" value="<?= $telephone ?>" name="address[telephone]" id="lastname" type="text">
                     </dd>
 
                     <!--                    <dt>Fax Number:</dt>-->
@@ -84,8 +79,7 @@
 
                     <dt>&nbsp;</dt>
                     <dd>
-                        <input name="address[is_default]" value="1" title="Save in address book" id="address:is_default"
-                               class="address_is_default checkbox" <?= $is_default_str; ?> type="checkbox"> Set it to my
+                        <input name="address[is_default]" value="1" title="Save in address book" id="address:is_default" class="address_is_default checkbox" <?= $is_default_str; ?> type="checkbox"> Set it to my
                         Default Address
                     </dd>
 
