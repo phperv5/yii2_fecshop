@@ -19,11 +19,10 @@
                     <legend>Your Shipping Address Book</legend>
                     <?php foreach ($coll as $one): ?>
                         <div class="blank5px"></div>
-                        <div class="fr"><a href="javascript:void(0);"
-                                           onclick="CheckAddressEdit(293173);return false;"><img
-                                        src="../images/ico/edit.gif" hspace="3" align="absmiddle" border="0"/>Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                    href="javascript:void(0);" onclick="CheckAddressDelete('293173');return false;"><img
-                                        src="../images/ico/del.gif" hspace="3" align="absmiddle" border="0"/>Delete</a>
+                        <div class="fr"><a href="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit',['address_id' => $one['address_id']]); ?>'">
+                                <img src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif');?>" hspace="3" align="absmiddle" border="0"/>Edit</a>&nbsp;&nbsp;&nbsp;
+                                 &nbsp;<a href="javascript:deleteAddress(<?= $one['address_id'] ?>)">
+                                <img src="<?= Yii::$service->image->getImgUrl('images/ico/del.gif');?>" hspace="3" align="absmiddle" border="0"/>Delete</a>
                         </div>
 
                         <b class="red_dark">Serial #1</b><br/>

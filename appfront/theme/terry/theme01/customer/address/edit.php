@@ -48,17 +48,16 @@
 
                     <dt><span class="red_star">*</span>Country / Region:</dt>
                     <dd>
-                        <select id="address:country" class="address_country validate-select input_normal" title="Country" name="address[country]">
-                            <?= $countrySelect; ?>
+                        <select id="address:country" class="address_country validate-select" title="Country" name="address[country]">
+                            <?= $countrySelect;  ?>
                         </select>
-                        <span id="txtID_addCountry" class="red_dark px11"></span>
                     </dd>
 
                     <dt><span class="red_star" id="is_must_or_not_addProvince" style="display:none">*</span>State/Province/Region:
                     </dt>
                     <dd>
                         <div class="input-box state_html">
-                            <?= $stateHtml; ?>
+                            <?= $stateHtml;  ?>
                         </div>
                     </dd>
 
