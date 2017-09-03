@@ -95,9 +95,7 @@
 
                     <div class="blank10px"></div>
                     <dt>&nbsp;</dt>
-                    <dd><input name="Submit" type="submit" class="btn_submit submitbutton" value="  Submit &amp; Save  "
-                               onclick="submit_address()"></dd>
-
+                    <dd><input name="Submit"  class="btn_submit submitbutton" value="  Submit &amp; Save  " onclick="submit_address()"></dd>
                 </dl>
 
             </form>
