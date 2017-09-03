@@ -52,19 +52,20 @@ class Index
         $this->_productCount = $productCollInfo['count'];
         //echo $this->_productCount;
         return [
-            'searchText'        => $this->_searchText,
-            'title'        => $this->_title,
-            'name'            => Yii::$service->store->getStoreAttrVal($this->_category['name'], 'name'),
-            'image'            => $this->_category['image'] ? Yii::$service->category->image->getUrl($this->_category['image']) : '',
-            'description'    => Yii::$service->store->getStoreAttrVal($this->_category['description'], 'description'),
-            'products'        => $products,
-            'query_item'    => $this->getQueryItem(),
-            'product_page'    => $this->getProductPage(),
-            'refine_by_info'=> $this->getRefineByInfo(),
-            'filter_info'    => $this->getFilterInfo(),
-            'filter_price'    => $this->getFilterPrice(),
+            'searchText' => $this->_searchText,
+            'title' => $this->_title,
+            'name' => Yii::$service->store->getStoreAttrVal($this->_category['name'], 'name'),
+            'image' => $this->_category['image'] ? Yii::$service->category->image->getUrl($this->_category['image']) : '',
+            'description' => Yii::$service->store->getStoreAttrVal($this->_category['description'], 'description'),
+            'products' => $products,
+            'query_item' => $this->getQueryItem(),
+            'product_page' => $this->getProductPage(),
+            'refine_by_info' => $this->getRefineByInfo(),
+            'filter_info' => $this->getFilterInfo(),
+            'filter_price' => $this->getFilterPrice(),
         ];
     }
+
     /**
      * 得到toolbar的分页部分
      */
@@ -75,16 +76,17 @@ class Index
         $pageNum = $this->getPageNum();
         //echo $productCount;
         $config = [
-            'class'        => 'fecshop\app\appfront\widgets\Page',
-            'view'        => 'widgets/page.php',
-            'pageNum'        => $pageNum,
-            'numPerPage'    => $productNumPerPage,
-            'countTotal'    => $productCount,
-            'page'            => $this->_page,
+            'class' => 'fecshop\app\appfront\widgets\Page',
+            'view' => 'widgets/page.php',
+            'pageNum' => $pageNum,
+            'numPerPage' => $productNumPerPage,
+            'countTotal' => $productCount,
+            'page' => $this->_page,
         ];
 
         return Yii::$service->page->widget->renderContent('category_product_page', $config);
     }
+
     /**
      * 得到toolbar的页面显示个数和排序部分
      */
@@ -101,20 +103,21 @@ class Index
                 //var_dump($url);
                 //exit;
                 $frontNumPerPage[] = [
-                    'value'    => $np,
-                    'url'        => $urlInfo['url'],
-                    'selected'    => $urlInfo['selected'],
+                    'value' => $np,
+                    'url' => $urlInfo['url'],
+                    'selected' => $urlInfo['selected'],
                 ];
             }
         }
 
         $data = [
             'frontNumPerPage' => $frontNumPerPage,
-        //	'frontSort' => $frontSort,
+            //	'frontSort' => $frontSort,
         ];
         //var_dump($data);
         return $data;
     }
+
     /**
      * 得到侧栏属性过滤属性
      */
@@ -126,6 +129,7 @@ class Index
 
         return $this->_filter_attr;
     }
+
     /**
      * 得到已经选择了的过滤属性，譬如对color属性，点击了blue，进行了选择，就会出现在这里
      * 方便用户通过点击的方式取消掉属性过滤
@@ -140,7 +144,7 @@ class Index
             $filter_attrs[] = 'price';
             //var_dump($filter_attrs);
             $currentUrl = Yii::$service->url->getCurrentUrl();
-            foreach ($get_arr as $k=>$v) {
+            foreach ($get_arr as $k => $v) {
                 $attr = Yii::$service->url->category->urlStrConvertAttrVal($k);
                 //echo $attr;
                 if (in_array($attr, $filter_attrs)) {
@@ -150,25 +154,26 @@ class Index
                     } else {
                         $refine_attr_str = Yii::$service->url->category->urlStrConvertAttrVal($v);
                     }
-                    $removeUrlParamStr = $k.'='.$v;
+                    $removeUrlParamStr = $k . '=' . $v;
                     $refine_attr_url = Yii::$service->url->removeUrlParamVal($currentUrl, $removeUrlParamStr);
                     $refineInfo[] = [
-                        'name' =>  $refine_attr_str,
-                        'url'  =>  $refine_attr_url,
+                        'name' => $refine_attr_str,
+                        'url' => $refine_attr_url,
                     ];
                 }
             }
         }
         if (!empty($refineInfo)) {
             $arr[] = [
-                'name'    => 'clear all',
-                'url'    => Yii::$service->url->getCurrentUrlNoParam().'?q='.Yii::$app->request->get('q'),
+                'name' => 'clear all',
+                'url' => Yii::$service->url->getCurrentUrlNoParam() . '?q=' . Yii::$app->request->get('q'),
             ];
             $refineInfo = array_merge($arr, $refineInfo);
         }
 
         return $refineInfo;
     }
+
     /**
      * 得到搜索页面进行过滤的属性
      */
@@ -184,6 +189,7 @@ class Index
 
         return $filter_info;
     }
+
     /**
      * 得到分类页面价格过滤部分
      */
@@ -202,6 +208,7 @@ class Index
 
         return $filter;
     }
+
     /**
      * 产品价格显示格式处理
      */
@@ -211,16 +218,16 @@ class Index
         $str = '';
         if ($f_price == '0' || $f_price) {
             $f_price = Yii::$service->product->price->formatPrice($f_price);
-            $str .= $f_price['symbol'].$f_price['value'].'---';
+            $str .= $f_price['symbol'] . $f_price['value'] . '---';
         }
         if ($l_price) {
             $l_price = Yii::$service->product->price->formatPrice($l_price);
-            $str .= $l_price['symbol'].$l_price['value'];
+            $str .= $l_price['symbol'] . $l_price['value'];
         }
 
         return $str;
     }
-    
+
     protected function getFilterArr($str)
     {
         $arr = [];
@@ -237,6 +244,7 @@ class Index
 
         return $arr;
     }
+
     /**
      * 得到排序数组，用于查询。
      */
@@ -274,6 +282,7 @@ class Index
             }
         }
     }
+
     /**
      * 得到每页显示的产品的个数。
      */
@@ -291,17 +300,18 @@ class Index
             } elseif (!$this->_numPerPageVal) {
                 if (isset($category_query_config['numPerPage']) && is_array($category_query_config['numPerPage'])) {
                     $numPerPageArr = $category_query_config['numPerPage'];
-                    if (in_array((int) $numPerPage, $numPerPageArr)) {
+                    if (in_array((int)$numPerPage, $numPerPageArr)) {
                         $this->_numPerPageVal = $numPerPage;
                     } else {
-                        throw new InvalidValueException('Incorrect numPerPage value:'.$numPerPage);
+                        throw new InvalidValueException('Incorrect numPerPage value:' . $numPerPage);
                     }
                 }
             }
         }
 
         return $this->_numPerPageVal;
-    } 
+    }
+
     /**
      * 得到第几页
      */
@@ -309,8 +319,9 @@ class Index
     {
         $numPerPage = Yii::$app->request->get($this->_page);
 
-        return $numPerPage ? (int) $numPerPage : 1;
+        return $numPerPage ? (int)$numPerPage : 1;
     }
+
     /**
      * 得到搜索的产品collection
      */
@@ -330,6 +341,7 @@ class Index
 
         return Yii::$service->search->getSearchProductColl($select, $where, $pageNum, $numPerPage, $product_search_max_count);
     }
+
     /**
      * 初始化where
      */
@@ -349,10 +361,10 @@ class Index
         $filter_price = Yii::$app->request->get($this->_filterPrice);
         list($f_price, $l_price) = explode('-', $filter_price);
         if ($f_price == '0' || $f_price) {
-            $where[$this->_filterPriceAttr]['$gte'] = (float) $f_price;
+            $where[$this->_filterPriceAttr]['$gte'] = (float)$f_price;
         }
         if ($l_price) {
-            $where[$this->_filterPriceAttr]['$lte'] = (float) $l_price;
+            $where[$this->_filterPriceAttr]['$lte'] = (float)$l_price;
         }
         //$where['category'] = $this->_primaryVal;
         //var_dump($where);exit;
@@ -363,6 +375,7 @@ class Index
 
         return $where;
     }
+
     /**
      * 初始化部分
      */
