@@ -64,7 +64,8 @@
             <input type="submit" value="" class="go" title="Search"/>
         </form>
     </div>
-    <div class="hd_cart"><a href="app/order.asp.html" target="_top" rel="nofollow"><span id="str_num_mycart">My Shopping Cart</span></a>
+    <div class="hd_cart"><a href="<?= Yii::$service->url->getUrl('checkout/cart') ?>" target="_top" rel="nofollow">
+            <span class="mycart-text" id="js_cart_items">My Shopping Cart</span>
     </div>
     <div class="hd_pop_kw"><a href="producttags/mb-bga-tool.html">MB BGA Tool</a><a
                 href="producttags/vvdi2.html">VVDI2</a><a href="producttags/2017-launch-x431.html">2017 Launch
