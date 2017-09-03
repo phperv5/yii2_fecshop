@@ -56,8 +56,8 @@ $(document).ready(function(){
 				$(".product_csrf").val(data.csrfVal);
 			}
 			if(data.cart_qty){
-				var str = data.cart_qty+' item';
-				$("#js_cart_items").html(str);
+                var str='<span id="str_num_mycart">Cart: <b class="yellow px16 verdana">'+data.cart_qty+'</b> <span class="no_bold px11">item</span></span>';
+				$("#hd_mycart").html(str);
 			}
 		},
 		error:function (XMLHttpRequest, textStatus, errorThrown){
