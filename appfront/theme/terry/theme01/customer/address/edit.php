@@ -46,16 +46,12 @@
 
                     <dt><span class="red_star">*</span>City:</dt>
                     <dd>
-                        <input name="addCity" id="addCity" type="text" size="35" maxlength="200" value=""
-                               class="input_normal" onfocus="InputCss(this,'focus');"
-                               onblur="CheckVerify_addCity(this,'txtID_addCity');"><span id="txtID_addCity"
-                                                                                         class="red_dark px11"></span>
+                        <input class="input-text required-entry input_normal" maxlength="255" title="Last Name" value="<?= $city ?>" name="address[city]" id="lastname" type="text">
                     </dd>
 
                     <dt><span class="red_star">*</span>Country / Region:</dt>
                     <dd>
-                        <select name="addCountry" id="addCountry" class="input_normal"
-                                onchange="CheckVerify_addCountry(this,'txtID_addCountry');">
+                        <select id="address:country" class="address_country validate-select input_normal" title="Country" name="address[country]">
                             <?= $countrySelect; ?>
                         </select>
                         <span id="txtID_addCountry" class="red_dark px11"></span>
