@@ -1169,3 +1169,24 @@ div#zoom_view2 { display: none; border: 1px solid #eee; position: absolute; curs
 .mj_menu_news_li3{padding:0px 25px; height:150px; float:right; border-left:solid 1px #cccccc; }
 .mj_menu_news_img3{float:left; margin-left:10px; text-align:left; color:#bb1721; line-height:30px; font-size:14px;}
 
+.cartqtydown {
+	background: rgba(0, 0, 0, 0) url("../images/jj.png") no-repeat scroll -4px -1px;
+	float: left;
+	height: 10px;
+	margin: 12px 4px 0 0;
+	width: 10px;
+}
+
+#shopping-cart-table .qty {
+	float: left;
+	padding: 0;
+	text-align: center;
+	width: 25px !important;
+}
+a.cartqtyup {
+	background: rgba(0, 0, 0, 0) url("../images/jj.png") no-repeat scroll -4px -25px;
+	float: left;
+	height: 10px;
+	margin: 12px 0 0 3px;
+	width: 10px;
+}

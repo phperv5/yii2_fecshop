@@ -3,21 +3,9 @@
     <div class="blank8px"></div>
 
     <div class="ms_f_m">
-        <div itemscope itemtype="http://schema.org/Product">
-            <meta itemprop="name" content="<?= $name; ?>" />
-            <meta itemprop="sku" content="HKSP283" />
-            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <meta itemprop="priceCurrency" content="USD" />
-                <meta itemprop="price" content="999.00" />
-                <meta itemprop="availability" itemtype="http://schema.org/ItemAvailability" content="http://schema.org/InStock"/>
-                <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>
-            </div>
-            <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                <meta itemprop="ratingValue" content="4.8" />
-                <meta itemprop="bestRating" content="5" />
-                <meta itemprop="reviewCount" content="55" />
-            </div>
-        </div>
+        <input type="hidden" class="product_view_id" value="<?= $_id ?>">
+        <input type="hidden" class="sku" value="<?= $sku; ?>"/>
+        <input type="hidden" class="product_csrf" name="" value=""/>
         <div class="pro_chief">
             <div class="pro_chf_photo">
                 <?php # 图片部分。
@@ -61,16 +49,22 @@
                     <div class="pro_b_item" id="id_pro_b_item_oQty">
                         <div class="pro_bitm_tit">Quantity:</div>
                         <div class="pro_bitm_cont">
-                            <input name="oQty" type="text" class="input" id="oQty" size="4" maxlength="6" onkeypress="event.returnValue=IsDigit();" value="1" onkeyup="ProQtySubTotal(this,'1','999.00','txtSingleProSubTotal','Subtotal: ');IsOrderNeedQty('Y','oQty');" /><span class="px11"></span>
+                            <input type="text" name="qty" class="qty" value="1"/><span class="px11"></span>
                             <span id="txtSingleProSubTotal" class="px12 verdana"></span>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div class="blank10px"></div>
                     <div class="exh_m_bri">Free Shipping Promotion for 2017 New & Hot sale Auto Key Programmer<br>Valid time: 10th to 20th August, Shopping Now!</div><div class="blank10px"></div>
-                    <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now" onclick="javascript:ShoppingCartAdd('51561','BuyItNow','','oSize','','oColor','Y','oQty');return false;" onmouseover="javascript:IsOrderNeedSize('','oSize');IsOrderNeedColor('','oColor');IsOrderNeedQty('Y','oQty');return false;" /></div>
-                    <div class="pro_bo_add_m"><input name="add_to_cart" type="button" class="btn_addtocart" value="" title="Add to Cart" onclick="javascript:ShoppingCartAdd('51561','Single','','oSize','','oColor','Y','oQty');return false;" onmouseover="javascript:IsOrderNeedSize('','oSize');IsOrderNeedColor('','oColor');IsOrderNeedQty('Y','oQty');return false;" /></div>
-                    <div class="pro_bo_add_r"><input name="add_to_favorites" type="button" class="btn_add_to_favorites" value="" onclick="javascript:AddToFavorites('51561','txt_r_addToFavorites');return false;" /><span id="txt_r_addToFavorites"></span></div>
+                    <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now"   /></div>
+                    <div class="pro_bo_add_m">
+                        <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value="" title="Add to Cart"/>
+                    </div>
+
+                    <div class="pro_bo_add_r">
+                        <input name="add_to_favorites" type="button" class="btn_add_to_favorites" id="divMyFavorite" url="<?= Yii::$service->url->getUrl('catalog/favoriteproduct/add', ['product_id' => $_id]); ?>" />
+                        <span id="txt_r_addToFavorites"></span>
+                    </div>
                     <div class="blank5px"></div>
                 </div>
                 <div class="blank10px"></div>
@@ -110,36 +104,7 @@
                 <div class="dashed5px"></div>
                 <div class="pro_ch_bf_g_plusone"><g:plusone></g:plusone>
                 </div>
-<!--                <div class="pro_ch_bf_share">-->
-<!--                    <div class="addthis_toolbox addthis_default_style ">-->
-<!--                        <a class="addthis_button_preferred_1"></a>-->
-<!--                        <a class="addthis_button_preferred_2"></a>-->
-<!--                        <a class="addthis_button_preferred_3"></a>-->
-<!--                        <a class="addthis_button_preferred_4"></a>-->
-<!--                        <a class="addthis_button_preferred_5"></a>-->
-<!--                        <a class="addthis_button_preferred_6"></a>-->
-<!--                        <a class="addthis_button_preferred_7"></a>-->
-<!--                        <a class="addthis_button_preferred_10"></a>-->
-<!--                        <a class="addthis_button_preferred_11"></a>-->
-<!--                        <a class="addthis_button_preferred_12"></a>-->
-<!--                        <a class="addthis_button_compact"></a>-->
-<!--                        <a class="addthis_counter addthis_bubble_style"></a>-->
-<!--                    </div>-->
-<!--                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4eb4e0b80c259670"></script>-->
-<!--                    <div class="blank5px"></div>-->
-<!--                    <div class="dashed5px"></div>-->
-<!--                    <div class="align_center"><img src="/images/ico/s4.gif" hspace="3" border="0" align="absmiddle" />Any Questions? <a href="/service/obdstar-x300-dp-vs-xtool-x100-pad-2-vs-ci600-plus-8777.html"><strong class="px13">Get Technical Support.</strong></a></div>-->
-<!--                    <div class="blank5px"></div>-->
-<!--                </div>-->
-                <form method="post" name="formOrderAdd" id="formOrderAdd" action="/app/order.asp">
-                    <input type="hidden" name="ProID" value="" />
-                    <input type="hidden" name="oSize" value="" />
-                    <input type="hidden" name="oColor" value="" />
-                    <input type="hidden" name="oQty" value="" />
-                    <input type="hidden" name="Action" value="" />
-                    <input type="hidden" name="AddMethod" id="AddMethod" value="AddItToCart" />
-                    <input type="submit" style="display:none" />
-                </form>
+            <!--分享-->
             </div>
         </div>
         <div class="blank10px"></div><div class="blank10px"></div>
