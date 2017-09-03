@@ -153,11 +153,11 @@ class Edit
         $city = isset($address['city']) ? $address['city'] : '';
         $zip = isset($address['zip']) ? $address['zip'] : '';
         $is_default = isset($address['is_default']) ? $address['is_default'] : '';
-        if (!$email) {
-            $error[] = ['email'];
-        } else {
-            $arr['email'] = $email;
-        }
+//        if (!$email) {
+//            $error[] = ['email'];
+//        } else {
+//            $arr['email'] = $email;
+//        }
         if (!$first_name) {
             $error[] = ['first_name'];
         } else {
