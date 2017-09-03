@@ -9,40 +9,16 @@
     <div class="main_left">
         <div class="col_t_x col_t_cate">
             <strong>OBD2 Categories</strong>
-            <h2 class=" fir"><a href="original-brand-tool.html">Original Brand Tool</a></h2>
-            <h2><a href="../car-diagnostic-tool/car-diagnostic-tool.html">Car Diagnostic Tool</a></h2>
-            <h2><a href="../auto-key-programmer/auto-key-programmer.html">Auto Key Programmer</a></h2>
-            <h2><a href="../heavy-duty-diagnostic/heavy-duty-diagnostic.html">Heavy Duty Diagnostic</a></h2>
-            <h2><a href="../ecu-chip-tuning/ecu-chip-tuning.html">ECU Chip Tuning</a></h2>
-            <h2><a href="../key-cutting-lock-pick-tool/key-cutting-lock-pick-tool.html">Key Cutting &amp; Lock Pick
-                    Tool</a></h2>
-            <h2><a href="../oversea-warehouse/oversea-warehouse.html">Oversea Warehouse</a></h2>
-            <h2><a href="../mileage-programmer/mileage-programmer.html">Mileage Programmer</a></h2>
-            <h2><a href="../car-diagnostic-software/car-diagnostic-software.html">Car Diagnostic Software</a></h2>
-            <h2><a href="../car-key-blanks/car-key-blanks.html">Car Key Blanks</a></h2>
-            <h2><a href="../auto-locksmith-tool/auto-locksmith-tool.html">Auto Locksmith Tool</a></h2>
-            <h2><a href="../obd2-code-scanner/obd2-code-scanner.html">OBD2 Code Scanner</a></h2>
-            <h2><a href="../car-key-chips/car-key-chips.html">Car Key Chips</a></h2>
-            <h2><a href="../packages-offers/packages-offers.html">Packages &amp; Offers</a></h2>
-            <h2><a href="../vag-diagnostic-tool/vag-diagnostic-tool.html">VAG Diagnostic Tool</a></h2>
-            <h2><a href="../obd2-cable-and-connector/obd2-cable-and-connector.html">OBD2 Cable and Connector</a></h2>
-            <h2><a href="../airbag-reset-tool/airbag-reset-tool.html">Airbag Reset Tool</a></h2>
-            <h2><a href="../original-augocom-tools/original-augocom-tools.html">Original AUGOCOM Tools</a></h2>
-            <h2><a href="../hot-car-accessories/hot-car-accessories.html">Hot Car Accessories</a></h2>
-            <h2><a href="../wholesale-dropship/wholesale-dropship.html">Wholesale Dropship</a></h2>
-            <h2><a href="../led-parking-sensor-and-monitor-display/led-parking-sensor-and-monitor-display.html">LED
-                    Parking Sensor and Monitor Display</a></h2>
-            <h2><a href="../auto-modification-accessories/auto-modification-accessories.html">Auto Modification
-                    Accessories</a></h2>
-            <h2><a href="../original-launch-x431-tool/original-launch-x431-tool.html">Original Launch X431 Tool</a></h2>
-            <h2><a href="../factory-expired-tool/factory-expired-tool.html">Factory Expired Tool</a></h2>
+            <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
+            <?php foreach($categories as $category): ?>
+            <h2 class=" fir"><a href="<?= $category['url'] ?>"><?= $category['name'] ?></a></h2>
+            <?php endforeach; ?>
             <div class="clear"></div>
         </div>
         <div class="col_d_b"></div>
         <div class="blank10px"></div>
         <!--categories end -->
-
-
+        
         <div class="col_t_x col_t_tag col_t_tag_feature">
             <h3>Browse by Feature</h3>
             <a href="../../producttags/mb-bga-tool.html">MB BGA Tool</a>
@@ -255,17 +231,11 @@
             <?php endif; ?>
         </div>
         <div class="page_nav">
-<!--            <form onsubmit="location.replace(&quot?ProDirURL=original%2Dbrand%2Dtool&ListPager=9276441,135,&quot+this.PageNumber.value);return false">-->
-                <div class="fr">
-                    <span>1</span> <a href="p2/p2.html">2</a> <a href="p3/p3.html">3</a> <a href="p4/p4.html">4</a>
-                    <a href="p5/p5.html">5</a> <a href="p6/p6.html">6</a> <a href="p7/p7.html">7</a>
-                    <a href="p2/p2.html" title="Next">Next &raquo;</a>
+            <?php if($pageToolBar): ?>
+                <div class="pageToolbar">
+                    <?= $pageToolBar ?>
                 </div>
-                <div class="fl">
-                    Total:135 items,&nbsp;20 items/p,&nbsp; Page:<b class=red>1</b>/7.
-                </div>
-                <div class=clear></div>
-<!--            </form>-->
+            <?php endif; ?>
         </div>
         <div class="clear"></div>
     </div>

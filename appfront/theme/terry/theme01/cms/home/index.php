@@ -6,7 +6,12 @@
     </script>
     <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>
 <div class="main_h">
-    <div class="main_h_left"><a href="wholesale/original-brand-tool/list.html" class="mhl_first">Original Brand Tool</a><a href="wholesale/car-diagnostic-tool/car-diagnostic-tool.html">Car Diagnostic Tool</a><a href="wholesale/auto-key-programmer/auto-key-programmer.html">Auto Key Programmer</a><a href="wholesale/heavy-duty-diagnostic/heavy-duty-diagnostic.html">Heavy Duty Diagnostic</a><a href="wholesale/ecu-chip-tuning/ecu-chip-tuning.html">ECU Chip Tuning</a><a href="wholesale/key-cutting-lock-pick-tool/key-cutting-lock-pick-tool.html">Key Cutting &amp; Lock Pick Tool</a><a href="wholesale/oversea-warehouse/oversea-warehouse.html">Oversea Warehouse</a><a href="wholesale/mileage-programmer/mileage-programmer.html">Mileage Programmer</a><a href="wholesale/car-diagnostic-software/car-diagnostic-software.html">Car Diagnostic Software</a><a href="wholesale/car-key-blanks/car-key-blanks.html">Car Key Blanks</a><a href="wholesale/auto-locksmith-tool/auto-locksmith-tool.html">Auto Locksmith Tool</a><a href="search/search.html" class="mhl_last">All Categories</a>
+    <div class="main_h_left">
+        <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
+        <?php foreach($categories as $category): ?>
+        <a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a>
+        <?php endforeach; ?>
+        <a href="search/search.html" class="mhl_last">All Categories</a>
     </div>
     <div class="main_h_banner"><link rel="stylesheet" type="text/css" href="plugins/owlcarousel/assets/owl.carousel.min.css" />
         <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
