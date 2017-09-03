@@ -120,7 +120,6 @@ class MongoSearch extends Service implements SearchInterface
                     $one_name = $one['name'];
                     $one_description = $one['description'];
                     $one_short_description = $one['short_description'];
-                    var_dump($one['category']);
                     if (!empty($this->searchLang) && is_array($this->searchLang)) {
                         foreach ($this->searchLang as $langCode => $mongoSearchLangName) {
                             $sModel::$_lang = $langCode;
@@ -129,7 +128,7 @@ class MongoSearch extends Service implements SearchInterface
                                 $searchModel = new $this->_searchModelName();
                             }
                             $one['name'] = Yii::$service->fecshoplang->getLangAttrVal($one_name, 'name', $langCode);
-                            $one['name'] = Yii::$service->fecshoplang->getLangAttrVal($one_name, 'name', $langCode);
+                            $one['category'] = $one['category'];
                             $one['description'] = Yii::$service->fecshoplang->getLangAttrVal($one_description, 'description', $langCode);
                             $one['short_description'] = Yii::$service->fecshoplang->getLangAttrVal($one_short_description, 'short_description', $langCode);
                             $one['sync_updated_at'] = time();
