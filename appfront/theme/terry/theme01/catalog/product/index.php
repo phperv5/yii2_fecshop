@@ -84,21 +84,23 @@
                 <div class="blank10px"></div><div class="dashed5px"></div>
                 <div class="line18em"><b class="green_dark">Related Download Files:</b><br />&nbsp;&nbsp;
                     <a href="/upload/pro/obdstar-x300dp-register-guide.pdf" target="_blank"><b>
-                            <img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-register-guide.pdf</b>
+                            <img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif');?>" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-register-guide.pdf</b>
                     </a>&nbsp;&nbsp;
                     <span class="px11 gray">(710.9K)</span></a><br />&nbsp;&nbsp;
                     <a href="/upload/pro/obdstar-x300-dp-user-manual.pdf" target="_blank"><b>
-                            <img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300-dp-user-manual.pdf</b></a>
+                            <img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif');?>" align="absmiddle" border="0" hspace="5" />obdstar-x300-dp-user-manual.pdf</b></a>
                     &nbsp;&nbsp;<span class="px11 gray">(6,727.1K)</span></a><br />&nbsp;&nbsp;
                     <a href="/upload/pro/obdstar-x300dp-upgrade-guide.pdf" target="_blank"><b>
-                            <img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-upgrade-guide.pdf</b></a>&nbsp;
+                            <img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif');?>" align="absmiddle" border="0" hspace="5" />obdstar-x300dp-upgrade-guide.pdf</b></a>&nbsp;
                     &nbsp;<span class="px11 gray">(262.5K)</span>
                     </a>
                 </div>
                 <div class="blank5px"></div>
                 <div class="dashed5px"></div>
                 <div class="pro_ch_bf_digg">
-                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');"><span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span></div>
+                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">
+                            <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>
+                    </div>
                 </div>
                 <div class="blank5px"></div>
                 <div class="dashed5px"></div>
@@ -163,7 +165,8 @@
             </div>
         </div>
     </div>
-        <div class="blank10px"></div><div class="fc_tags"><b class="px13">Product's Tags:</b>&nbsp;&nbsp; 			<a href="/producttags/original-obdstar.html"><strong>Original OBDSTAR</strong></a>&nbsp;&nbsp;
+        <div class="blank10px"></div><div class="fc_tags"><b class="px13">Product's Tags:</b>
+            <a href="/producttags/original-obdstar.html"><strong>Original OBDSTAR</strong></a>&nbsp;&nbsp;
             <a href="/producttags/ship-from-ca.html">Ship From CA</a>&nbsp;&nbsp;
             <a href="/producttags/free-shipping-key-tool.html"><strong>free shipping key tool</strong></a>&nbsp;&nbsp;
             <div class="clear"></div></div><div class="blank10px"></div>	<div class="blank10px"></div>
