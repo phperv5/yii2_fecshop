@@ -13,21 +13,15 @@
         </div>
         <div class="hd_wr_f_bar">
             <div class="hd_wr_f_my">
-                <div class="hd_wr_nav"><a href="<?= Yii::$service->url->getUrl('customer/account') ?>"
-                                          rel="nofollow"><?= Yii::$service->page->translate->__('My Account'); ?></a>
+                <div class="hd_wr_nav"><a href="<?= Yii::$service->url->getUrl('customer/order') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Account'); ?></a>
                     <ul>
                         <a href="<?= Yii::$service->url->getUrl('customer/order') ?>"
                            rel="nofollow"><?= Yii::$service->page->translate->__('My Orders'); ?><span
                                     id="myaccount_num_orders"></span></a>
                         <!--                        <a href="members/�action=inbox.html" rel="nofollow">My Tickets<span id="myaccount_num_orders"></span></a>-->
-                        <a href="<?= Yii::$service->url->getUrl('customer/productreview') ?>"
-                           rel="nofollow"><?= Yii::$service->page->translate->__('My Review'); ?><span
-                                    id="myaccount_num_orders"></span></a>
+                        <a href="<?= Yii::$service->url->getUrl('customer/productreview') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Review'); ?><span id="myaccount_num_orders"></span></a>
                         <!--                        <a href="members/�action=specialproducts.html" rel="nofollow">VIP Special Products<span id="myaccount_num_orders"></span></a>-->
-                        <a id="myaccount_myfavorites"
-                           href="<?= Yii::$service->url->getUrl('customer/productfavorite') ?>"
-                           rel="nofollow"><?= Yii::$service->page->translate->__('My Favorites'); ?><span
-                                    id="myaccount_num_orders"></span></a>
+                        <a id="myaccount_myfavorites" href="<?= Yii::$service->url->getUrl('customer/productfavorite') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Favorites'); ?><span id="myaccount_num_orders"></span></a>
                     </ul>
                 </div>
             </div>
@@ -40,10 +34,8 @@
                 </div>
             </div>
             <div class="hd_wr_f_shipto">
-                <div class="hd_wr_f_shipto_item" id="hd_country_curr_code"><a
-                            href="javascript:CountryCurrencyChoose('Choose','');">Ship to <img
-                                src="<?= Yii::$service->image->getImgUrl('images/ico_country/US.gif');   ?>" border="0" align="absmiddle"/>&nbsp;&nbsp;<span
-                                class="gray px11">/</span>&nbsp;&nbsp;<b>USD</b></a></div>
+                <div class="hd_wr_f_shipto_item" id="hd_country_curr_code">
+                    <a href="javascript:CountryCurrencyChoose('Choose','');">Ship to <img src="../../images/ico_country/US.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;<span class="gray px11">/</span>&nbsp;&nbsp;<b>USD</b></a></div>
             </div>
         </div>
     </div>
