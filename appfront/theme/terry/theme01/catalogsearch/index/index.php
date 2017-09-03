@@ -70,7 +70,7 @@
                     <div class="pro_list pro_list_feaured">
                         <div class="photo">
                             <a href="<?= $product['url'] ?>"
-                               title="【Ship from US No Tax】Launch X431 V 8inch Tablet Wifi/Bluetooth Full System Diagnostic Tool Two Years Free Update Online">
+                               title="<?= $product['name'] ?>">
                                 <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>"
                                      width="120" height="120" border="0" hspace="0" vspace="0" alt=""
                                      align="absmiddle"/></a>
