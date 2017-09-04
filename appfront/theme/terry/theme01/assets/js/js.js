@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	currentBaseUrl = $(".currentBaseUrl").val();
-	$(".currency_list ul li").click(function(){
+	$(".currency_list a").click(function(){
 		currency = $(this).attr("rel");
 		htmlobj=$.ajax({url:currentBaseUrl+"/cms/home/changecurrency?currency="+currency,async:false});
 		//alert(htmlobj.responseText);
