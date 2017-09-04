@@ -90,16 +90,22 @@
                     href="info/drop-ship-service/drop-ship-service.html">Drop-ship Service</a> <span>|</span> <a
                     href="info/return-policy/return-policy.html">Return Policy</a> <span>|</span> <a
                     href="info/privacy-policy/privacy-policy.html">Privacy Policy</a></div>
+        <div class="ft_menu"><a href="www.uobdii.html">Home</a> <span>|</span> <a
+                    href="producttags/latest-update-notice.html">Latest Update Notice</a> <span>|</span> <a
+                    href="info/news-notice/news-notice.html">News &amp; Notice</a> <span>|</span> <a
+                    href="info/contact/contact.html">Contact</a> <span>|</span> <a href="info/payment/payment.html">Payment</a>
+            <span>|</span> <a href="info/about-us/about-us.html">About us</a> <span>|</span> <a
+                    href="info/drop-ship-service/drop-ship-service.html">Drop-ship Service</a> <span>|</span> <a
+                    href="info/return-policy/return-policy.html">Return Policy</a> <span>|</span> <a
+                    href="info/privacy-policy/privacy-policy.html">Privacy Policy</a></div>
         <div class="blank10px"></div>
         <div class="align_center">
             <div class="blank5px"></div>
-            <img src="upload/advs/2015072171509025.png" width="570" height="31" border="0" hspace="0" vspace="0" alt=""
-                 align="absmiddle"/>
+            <?=  Yii::$service->cms->staticblock->getStoreContentByIdentify('copy_right_img','appfront') ?>
             <div class="blank5px"></div>
         </div>
-        <div class="ft_copyright">Copyright &copy;2017 &nbsp;China UOBD2 Auto Diagnostic Tool Co., Ltd. A Professional
-            OBD Manufacturer. All rights reserved.<br/>Address:LongGang District ShenZhen,China (P.C.:518112)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-Mail:<a
-                    href="mailto:Sales@UOBDII.com">Sales@UOBDII.com</a>
+        <div class="ft_copyright">
+            <?=  Yii::$service->cms->staticblock->getStoreContentByIdentify('copy_right','appfront') ?>
             <div class="clear"></div>
         </div>
         <div class="clear"></div>
