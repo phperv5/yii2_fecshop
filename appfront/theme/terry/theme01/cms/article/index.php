@@ -9,7 +9,7 @@
         <div class="blank10px"></div>
         <div class="support_m_l"><b class="px13 verdana">UOBD2 Shipment Policy</b>
             <div class="support_m_l_list_area">
-                <a href="/support/how-we-ship-the-item-to-you-4072.html">How we ship the item to you?</a>
+                <a href="<?=  Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?>"">How we ship the item to you?</a>
                 <a href="/support/where-we-ship-to-3225.html">Where we ship to?</a>
                 <a href="/support/how-fast-you-can-get-your-product-1130.html">How fast you can get your product?</a>
                 <a href="/support/how-about-your-delivery-cost-4166.html">How about your delivery cost?</a>
