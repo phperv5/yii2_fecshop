@@ -33,19 +33,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="hd_wr_f_shipto">
-
-                    <div class="hd_wr_nav">
+            <div class="hd_wr_f_help">
+            <div class="hd_wr_nav">
                         <a class="current_currency" style="color: #039;padding-left:10px"><b><?= $currency['code'] ?></b></a>
-                        <ul>
+                        <ul class="currency_list">
                             <?php foreach($currencys as $c):    ?>
                                 <a rel="<?= $c['code'] ?>"><?= $c['code'] ?></a>
                             <?php endforeach; ?>
                         </ul>
-                    </div><!--                    <a href="javascript:CountryCurrencyChoose('Choose','');">Ship to <img src="../../images/ico_country/US.gif" border="0" align="absmiddle"/>&nbsp;-->
-<!--                        &nbsp;<span class="gray px11">/</span>&nbsp;&nbsp;<b>--><?//= $currency['symbol'] ?><!--</label>--><?//= $currency['code'] ?><!--</b></a></div>-->
-
-                </div>
+            </div>
             </div>
         </div>
     </div>
