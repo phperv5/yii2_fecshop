@@ -44,13 +44,9 @@
             </div>
 
             <div style="width: 25%; float: left;">Join Our Community<br/>
-                <a href="http://www.facebook.com/uobd2com" rel="nofollow"><img alt="UOBD2 facebook"
-                                                                               src="upload/temp/images/facebook.png"
-                                                                               style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a><a
-                        href="https://twitter.com/myuobd2" rel="nofollow"><img alt="UOBD2 twitter"
-                                                                               src="upload/temp/images/twitter.png"
-                                                                               style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a><a
-                        href="https://plus.google.com/+uobd2net" rel="nofollow"><img alt="uobd2 google plus"
+                <a href="http://www.facebook.com/uobd2com" rel="nofollow"><img alt="UOBD2 facebook" src="upload/temp/images/facebook.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
+                <a href="https://twitter.com/myuobd2" rel="nofollow"><img alt="UOBD2 twitter" src="upload/temp/images/twitter.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
+                <a href="https://plus.google.com/+uobd2net" rel="nofollow"><img alt="uobd2 google plus"
                                                                                      src="upload/temp/images/google.png"
                                                                                      style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a><a
                         href="http://www.youtube.com/user/myuobd2" rel="nofollow"><img alt="uobd2 youtube"
@@ -69,10 +65,9 @@
                                                                                 style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
 
                 <div class="w230 px11 gray">Newsletter get Coupon:
-                    <form action="/app/nl.asp" method="post" target="_blank"><input name="nl_email" style="width:125px"
-                                                                                    type="text"
-                                                                                    value="Your Email Address"/><input
-                                name="" type="submit" value="GO"/><input name="action" type="hidden" value="add"/>
+                    <form action="/app/nl.asp" method="post" target="_blank">
+                        <input name="nl_email" style="width:125px" type="text"  value="Your Email Address"/>
+                        <input name="" type="submit" value="GO"/><input name="action" type="hidden" value="add"/>
                     </form>
                 </div>
             </div>
@@ -82,14 +77,6 @@
         <div class="clear"></div>
     </div>
     <div class="footer">
-        <div class="ft_menu"><a href="www.uobdii.html">Home</a> <span>|</span> <a
-                    href="producttags/latest-update-notice.html">Latest Update Notice</a> <span>|</span> <a
-                    href="info/news-notice/news-notice.html">News &amp; Notice</a> <span>|</span> <a
-                    href="info/contact/contact.html">Contact</a> <span>|</span> <a href="info/payment/payment.html">Payment</a>
-            <span>|</span> <a href="info/about-us/about-us.html">About us</a> <span>|</span> <a
-                    href="info/drop-ship-service/drop-ship-service.html">Drop-ship Service</a> <span>|</span> <a
-                    href="info/return-policy/return-policy.html">Return Policy</a> <span>|</span> <a
-                    href="info/privacy-policy/privacy-policy.html">Privacy Policy</a></div>
         <div class="ft_menu"><a href="www.uobdii.html">Home</a> <span>|</span> <a
                     href="producttags/latest-update-notice.html">Latest Update Notice</a> <span>|</span> <a
                     href="info/news-notice/news-notice.html">News &amp; Notice</a> <span>|</span> <a
