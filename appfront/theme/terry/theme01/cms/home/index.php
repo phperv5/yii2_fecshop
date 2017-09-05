@@ -13,8 +13,7 @@
         <?php endforeach; ?>
         <a href="search/search.html" class="mhl_last">All Categories</a>
     </div>
-    <div class="main_h_banner"><link rel="stylesheet" type="text/css" href="plugins/owlcarousel/assets/owl.carousel.min.css" />
-        <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <div class="main_h_banner">
         <ul class="owl-carousel" id="hm_ads_banner_a2">
             <li><a href="producttags/yh-bmw-fem.html"><img src="upload/advs/2017081083887417.jpg" border="0" alt="2017 Latest Yanhua BMW FEM Key Programmer Pre-Order"></a></li>
             <li><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html"><img src="upload/advs/2017081807662885.jpg" border="0" alt="CGDI Prog BMW MSV80 "></a></li>
