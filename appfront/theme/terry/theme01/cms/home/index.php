@@ -15,12 +15,19 @@
     </div>
     <div class="main_h_banner">
         <ul class="owl-carousel" id="hm_ads_banner_a2">
-            <li><a href="producttags/yh-bmw-fem.html"><img src="upload/advs/2017081083887417.jpg" border="0" alt="2017 Latest Yanhua BMW FEM Key Programmer Pre-Order"></a></li>
-            <li><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html"><img src="upload/advs/2017081807662885.jpg" border="0" alt="CGDI Prog BMW MSV80 "></a></li>
+            <li>
+                <a href="producttags/yh-bmw-fem.html">
+                    <img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');   ?>" border="0" alt="2017 Latest Yanhua BMW FEM Key Programmer Pre-Order">
+                </a>
+            </li>
+            <li><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html">
+                    <img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');   ?>" border="0" alt="CGDI Prog BMW MSV80 "></a>
+            </li>
         </ul>
         <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
         <script type="text/javascript">
             $(document).ready(function(){
+                alert(111)
                 var owl = $('#hm_ads_banner_a2');
                 owl.owlCarousel({
                     items:1,
