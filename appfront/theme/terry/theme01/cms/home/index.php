@@ -14,33 +14,20 @@
         <a href="search/search.html" class="mhl_last">All Categories</a>
     </div>
     <div class="main_h_banner">
-        <ul class="owl-carousel" id="hm_ads_banner_a2">
-            <li>
-                <a href="producttags/yh-bmw-fem.html">
-                    <img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');   ?>" border="0" alt="2017 Latest Yanhua BMW FEM Key Programmer Pre-Order">
-                </a>
-            </li>
-            <li><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html">
-                    <img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');   ?>" border="0" alt="CGDI Prog BMW MSV80 "></a>
-            </li>
-        </ul>
-        <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                alert(111)
-                var owl = $('#hm_ads_banner_a2');
-                owl.owlCarousel({
-                    items:1,
-                    loop:true,
-                    nav:false,
-                    dots:true,
-                    dotsContainer:$('#hm_bnr_dots'),
-                    dotClass:'hm_bnr_dot',
-                    autoplay:true,
-                    autoplayTimeout:3000
-                });
-            });
-        </script>
+
+                        <div id="owl-fecshop" class="owl-carousel">
+                            <div class="item">
+                                <a href="#"><img class="lazyOwl" src="<?= Yii::$service->image->getImgUrl('images/banner1.jgp');   ?>" alt="" /></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img class="lazyOwl" src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');   ?>" alt="" /></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img class="lazyOwl" src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');   ?>" alt="" /></a>
+                            </div>
+
+        </div>
+
     </div>
     <div class="clear"></div>
     <div class="blank15px"></div>
@@ -432,3 +419,43 @@
     </div>
     <div class="blank10px"></div><div class="blank10px"></div>
 </div>
+    <script>
+        <?php $this->beginBlock('owl_fecshop_slider') ?>
+        $(document).ready(function(){
+            $("#owl-fecshop").owlCarousel({
+                navigation : true,
+                slideSpeed : 300,
+                paginationSpeed : 400,
+                singleItem : true,
+                autoPlay:3000,
+                lazyLoad:true
+                // "singleItem:true" is a shortcut for:
+                // items : 1,
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+            });
+
+            $("#owl-best-seller").owlCarousel({
+                items : 4,
+                lazyLoad : true,
+                navigation : true,
+                scrollPerPage : true,
+                pagination:false,
+                itemsCustom : false,
+                slideSpeed : 900
+            });
+            $("#owl-featured").owlCarousel({
+                items : 4,
+                lazyLoad : true,
+                navigation : true,
+                scrollPerPage : true,
+                pagination:false,
+                itemsCustom : false,
+                slideSpeed : 900
+            });
+        });
+        <?php $this->endBlock(); ?>
+    </script>
+    <?php $this->registerJs($this->blocks['owl_fecshop_slider'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
