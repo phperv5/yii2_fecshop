@@ -32,6 +32,7 @@ $cssOptions = [
 		'css'	=>[
 			'css/style.css',
 			'css/style_h.css',
+			'js/plugins/owlcarousel/assets/owl.carousel.min.css',
 			'css/owl.carousel.css',
 		],
 	],

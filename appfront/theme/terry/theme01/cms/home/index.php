@@ -1,11 +1,10 @@
-﻿
-    <span id="hd_important_notice"></span>
-    <script type="text/javascript">
-        SiteHeader('Home');
-        EDMtracking();
-    </script>
-    <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>
-<div class="main_h">
+﻿ <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>
+ <div id="owl-fecshop" class="owl-carousel">
+     <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+     <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
+     <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+ </div>
+ <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
         <?php foreach($categories as $category): ?>
@@ -14,20 +13,11 @@
         <a href="search/search.html" class="mhl_last">All Categories</a>
     </div>
     <div class="main_h_banner">
-
-                        <div id="owl-fecshop" class="owl-carousel">
-                            <div class="item">
-                                <a href="#"><img class="lazyOwl" src="<?= Yii::$service->image->getImgUrl('images/banner1.jgp');   ?>" alt="" /></a>
-                            </div>
-                            <div class="item">
-                                <a href="#"><img class="lazyOwl" src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');   ?>" alt="" /></a>
-                            </div>
-                            <div class="item">
-                                <a href="#"><img class="lazyOwl" src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');   ?>" alt="" /></a>
-                            </div>
-
+        <div id="owl-fecshop" class="owl-carousel">
+            <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+            <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
+            <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
         </div>
-
     </div>
     <div class="clear"></div>
     <div class="blank15px"></div>
@@ -371,10 +361,6 @@
         <div class="clear"></div>
     </div>
     <div class="blank10px"></div>
-    <script type="text/javascript">
-        ProPeriodPriceReset('51561|57665|48455|5796|55632|57646|48426|55628|48457', 'ProPriDisp_h_dp_51561|ProPriDisp_h_dp_57665|ProPriDisp_h_dp_48455|ProPriDisp_h_dp_5796|ProPriDisp_h_dp_55632|ProPriDisp_h_dp_57646|ProPriDisp_h_dp_48426|ProPriDisp_h_dp_55628|ProPriDisp_h_dp_48457', 'HomeProViaDir');
-    </script>
-    <div class="clear"></div>
 </div>
 <div class="main_h">
     <div class="blank10px"></div><div class="blank10px"></div>
@@ -421,41 +407,9 @@
 </div>
     <script>
         <?php $this->beginBlock('owl_fecshop_slider') ?>
-        $(document).ready(function(){
-            $("#owl-fecshop").owlCarousel({
-                navigation : true,
-                slideSpeed : 300,
-                paginationSpeed : 400,
-                singleItem : true,
-                autoPlay:3000,
-                lazyLoad:true
-                // "singleItem:true" is a shortcut for:
-                // items : 1,
-                // itemsDesktop : false,
-                // itemsDesktopSmall : false,
-                // itemsTablet: false,
-                // itemsMobile : false
-            });
-
-            $("#owl-best-seller").owlCarousel({
-                items : 4,
-                lazyLoad : true,
-                navigation : true,
-                scrollPerPage : true,
-                pagination:false,
-                itemsCustom : false,
-                slideSpeed : 900
-            });
-            $("#owl-featured").owlCarousel({
-                items : 4,
-                lazyLoad : true,
-                navigation : true,
-                scrollPerPage : true,
-                pagination:false,
-                itemsCustom : false,
-                slideSpeed : 900
-            });
-        });
+        $(function(){
+            $('#owl-fecshop').owlCarousel();
+        })
         <?php $this->endBlock(); ?>
     </script>
     <?php $this->registerJs($this->blocks['owl_fecshop_slider'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
