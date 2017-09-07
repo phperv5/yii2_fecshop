@@ -1,4 +1,4 @@
-﻿ <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>
+﻿<!-- <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>-->
  <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
@@ -13,6 +13,7 @@
             <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
             <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
         </div>
+         <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
      </div>
     <div class="clear"></div>
     <div class="blank15px"></div>
@@ -402,7 +403,7 @@
 </div>
     <script>
         <?php $this->beginBlock('owl_fecshop_slider') ?>
-        <script type="text/javascript">
+
             $(document).ready(function(){
                 var owl = $('#hm_ads_banner_a2');
                 owl.owlCarousel({
@@ -416,7 +417,6 @@
                     autoplayTimeout:3000
                 });
             });
-    </script>
         <?php $this->endBlock(); ?>
     </script>
     <?php $this->registerJs($this->blocks['owl_fecshop_slider'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>

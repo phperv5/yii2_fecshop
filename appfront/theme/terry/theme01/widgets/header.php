@@ -28,7 +28,7 @@
             <div class="hd_wr_f_help">
                 <div class="hd_wr_nav"><a href="support/support.html">Help</a>
                     <ul>
-                        <a href="support/support.html">Help Center</a>
+                        <a href="<?= Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?>">Help Center</a>
                         <a href="support/msg_add.asp.html">Freed Back</a>
                     </ul>
                 </div>
