@@ -18,7 +18,6 @@ $jsOptions = [
 		'js'	=>[
 			'js/common.js',
 			'js/jquery.js',
-			'js/plugins/layer/layer.js',
 			'js/js.js',
 			'js/plugins/owlcarousel/owl.carousel.min.js',
 		],
@@ -33,7 +32,6 @@ $cssOptions = [
 			'css/style.css',
 			'css/style_h.css',
 			'js/plugins/owlcarousel/assets/owl.carousel.min.css',
-			'css/owl.carousel.css',
 		],
 	],
 ];
