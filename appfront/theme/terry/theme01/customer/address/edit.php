@@ -9,7 +9,7 @@
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red email"></b></a> - Edit Address Information</div><div class="blank5px"></div><h1>Edit Address Information</h1>
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red account-email"></b></a> - Edit Address Information</div><div class="blank5px"></div><h1>Edit Address Information</h1>
             <form class="addressedit" action="<?= Yii::$service->url->getUrl('customer/address/edit'); ?>" method="post" id="form-validate">
                 <input name="address[address_id]" value="<?= $address_id; ?>" type="hidden">
                 <dl>
