@@ -30,13 +30,15 @@
         <div class="clear"></div>
         <b class="px14">Welcome!</b><br/>
         <b class="px12">&nbsp;zewe&nbsp;jewew</b><br/>
-        User ID: 312043814@qq.com<br/>
+        User ID: <?= $email ?><br/>
         E-Mail: 312043814@qq.com<br/>
         Account Status:<b>Normal</b><br/>
 
         <div class="dashed5px"></div>
-        <div class="align_right"><a href="../members/?action=SignOut"><img src="../images/ico/logout.gif" hspace="5"
-                                                                           border="0" align="absmiddle"/>Sign out</a>&nbsp;&nbsp;
+        <div class="align_right">
+            <a href="<?= Yii::$service->url->getUrl('customer/account/logout') ?>">
+                <img src="<?= Yii::$service->image->getImgUrl('images/ico/logout.gif'); ?>" hspace="5" border="0" align="absmiddle"/>Sign out
+            </a>&nbsp;&nbsp;
         </div>
         <div class="clear"></div>
     </div>
@@ -46,9 +48,7 @@
 
     <div class="fun_column px11 gray">
         <b class="px14">Need help?</b><br/>
-        If you have questions or need help with your account, you may goto "<a href="../support"
-                                                                               target="_blank">Help</a>" or <a
-                href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
+        If you have questions or need help with your account, you may goto "<a href="../support" target="_blank">Help</a>" or <a href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
         <div class="clear"></div>
     </div>
 </div>

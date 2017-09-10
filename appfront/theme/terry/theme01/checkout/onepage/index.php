@@ -46,9 +46,7 @@
 
             <div class="p_order_step">
                 <input type="hidden" class="address_list" value=""/>
-                <div class="o_stp_s_off" id="m_os_shippingAddress"
-                     onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');"
-                     style="cursor:pointer">
+                <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
                     <span class="sn">2</span> &nbsp;Shipping Address
                 </div>
                 <div class="scene" id="ar_os_shippingAddress">
