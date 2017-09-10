@@ -28,12 +28,8 @@
 
     <div class="fun_column px11 gray word_wrap word_break">
         <div class="clear"></div>
-        <b class="px14">Welcome!</b><br/>
-        <b class="px12">&nbsp;zewe&nbsp;jewew</b><br/>
-        User ID: <?= $email ?><br/>
-        E-Mail: 312043814@qq.com<br/>
-        Account Status:<b>Normal</b><br/>
-
+<!-- 账户信息-->
+        <div class="email"></div>
         <div class="dashed5px"></div>
         <div class="align_right">
             <a href="<?= Yii::$service->url->getUrl('customer/account/logout') ?>">

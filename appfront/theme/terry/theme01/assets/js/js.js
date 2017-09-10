@@ -59,6 +59,9 @@ $(document).ready(function(){
                 var str='<span id="str_num_mycart">Cart: <b class="yellow px16 verdana">'+data.cart_qty+'</b> <span class="no_bold px11">item</span></span>';
 				$("#hd_mycart").html(str);
 			}
+			if(data.email){
+				var str = '<b class="px14">Welcome!</b><br/> <b class="px12">'+data.customer_name+'</b><br/>User ID: <span class="email">'+data.email+'</span><br/>E-Mail: <span class="email">'+data.email+'</span><br/Account Status:<b>Normal</b><br/>';
+			}
 		},
 		error:function (XMLHttpRequest, textStatus, errorThrown){
 		}
