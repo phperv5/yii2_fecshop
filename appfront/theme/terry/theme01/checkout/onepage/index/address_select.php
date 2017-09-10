@@ -13,7 +13,7 @@
 <?php  $state_html = $parentThis['state_html'];   ?>
 <?php  $cart_address = $parentThis['cart_address'];   ?>
 <div class="scene" id="ar_os_shippingAddress">
-    <div class="fr"><a href="javascript:void(0);" onclick="CheckAddressAdd();return false;"><strong><img src="../images/ico/edit.gif" hspace="3" border="0">Enter a New Address</strong></a></div>
+    <div class="fr"><a href="javascript:void(0);" onclick="CheckAddressAdd();return false;"><strong><img src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif');?>" hspace="3" border="0">Enter a New Address</strong></a></div>
     <strong class="verdana">Please Choose Your Shipping Address</strong>
     <div class="dashed5px"></div>
     <!--地址列表-->
