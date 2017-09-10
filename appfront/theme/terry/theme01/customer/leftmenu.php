@@ -28,8 +28,9 @@
 
     <div class="fun_column px11 gray word_wrap word_break">
         <div class="clear"></div>
-<!-- 账户信息-->
-        <div class="email"></div>
+        <!-- 账户信息-->
+        <div class="#email"></div>
+        <!-- 账户信息-->
         <div class="dashed5px"></div>
         <div class="align_right">
             <a href="<?= Yii::$service->url->getUrl('customer/account/logout') ?>">
