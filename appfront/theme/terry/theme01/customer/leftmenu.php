@@ -45,7 +45,7 @@
 
     <div class="fun_column px11 gray">
         <b class="px14">Need help?</b><br/>
-        If you have questions or need help with your account, you may goto "<a href="../support" target="_blank">Help</a>" or <a href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
+        If you have questions or need help with your account, you may goto "<a href="<?= Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?>" target="_blank">Help</a>" or <a href="../info/?dirid=8" target="_blank">contact us</a> to assist you.
         <div class="clear"></div>
     </div>
 </div>

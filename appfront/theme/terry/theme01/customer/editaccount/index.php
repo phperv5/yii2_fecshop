@@ -16,8 +16,8 @@
             <h1>Account Settings</h1>
             <div class="blank15px"></div>
             <fieldset>
-                <legend class="red_dark px13"><img src="../images/arrow/s03.gif" hspace="5" border="0"
-                                                   align="absmiddle"/> Change My Password
+                <legend class="red_dark px13">
+                    <img src="../images/arrow/s03.gif" hspace="5" border="0" align="absmiddle"/> Change My Password
                 </legend>
                 <form method="post" id="form-validate" autocomplete="off" action="<?= $actionUrl ?>">
                     <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
