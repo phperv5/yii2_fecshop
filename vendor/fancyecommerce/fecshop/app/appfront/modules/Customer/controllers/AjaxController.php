@@ -32,6 +32,7 @@ class AjaxController extends AppfrontController
             $customer_name = '';
             if (!Yii::$app->user->isGuest) {
                 $identity = Yii::$app->user->identity;
+                var_dump($identity);
                 $customer_name = $identity['firstname'].' '.$identity['lastname'];
                 $result_arr['customer_name'] = $customer_name;
                 $result_arr['favorite_product_count'] = $identity['favorite_product_count'] ? $identity['favorite_product_count'] : 0;
