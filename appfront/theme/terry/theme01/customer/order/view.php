@@ -12,7 +12,7 @@ use fecshop\app\appfront\helper\Format;
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - My Order Form: S/N.<b class="red">U2170826416375</b></div><div class="blank5px"></div>
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red email"></b></a> - My Order Form: S/N.<b class="red">U2170826416375</b></div><div class="blank5px"></div>
             <h1>My Order Form: S/N.<b class="red"><?=  $increment_id ?></b></h1>
             <div class="blank10px"></div>
             <div class="p_sub_a">Order Status</div>

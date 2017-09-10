@@ -9,7 +9,7 @@
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="../members/">My Account: <b class="red">312043814@qq.com</b></a> - My Orders List</div><div class="blank5px"></div><h1>My Orders List</h1>
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red email"></b></a> - My Orders List</div><div class="blank5px"></div><h1>My Orders List</h1>
 
             <div class="blank10px"></div>
 
