@@ -24,11 +24,12 @@ class Address extends Service
     protected $currentState;
     protected $_addressModelName = '\fecshop\models\mysqldb\customer\Address';
     protected $_addressModel;
-    
-    public function __construct(){
-        list($this->_addressModelName,$this->_addressModel) = \Yii::mapGet($this->_addressModelName);  
+
+    public function __construct()
+    {
+        list($this->_addressModelName, $this->_addressModel) = \Yii::mapGet($this->_addressModelName);
     }
-    
+
     protected function actionGetPrimaryKey()
     {
         return 'address_id';
@@ -49,6 +50,7 @@ class Address extends Service
             return new $this->_addressModelName();
         }
     }
+
     /**
      * @property $address_id | Int , address表的id
      * @property $customer_id | Int ， 用户id
@@ -59,8 +61,8 @@ class Address extends Service
     {
         $primaryKey = $this->getPrimaryKey();
         $one = $this->_addressModel->findOne([
-            $primaryKey    => $address_id,
-            'customer_id'    => $customer_id,
+            $primaryKey => $address_id,
+            'customer_id' => $customer_id,
         ]);
         if ($one[$primaryKey]) {
             return $one;
@@ -75,15 +77,15 @@ class Address extends Service
      *  通过过滤条件，得到coupon的集合。
      *  example filter:
      *  [
-     *  'numPerPage' 	=> 20,
-     *  'pageNum'		=> 1,
-     *  'orderBy'	=> ['_id' => SORT_DESC, 'sku' => SORT_ASC ],
-     *  'where'			=> [
+     *  'numPerPage'    => 20,
+     *  'pageNum'        => 1,
+     *  'orderBy'    => ['_id' => SORT_DESC, 'sku' => SORT_ASC ],
+     *  'where'            => [
      *      ['>','price',1],
      *      ['<=','price',10]
-     * 		['sku' => 'uk10001'],
-     * 	],
-     * 	'asArray' => true,
+     *        ['sku' => 'uk10001'],
+     *    ],
+     *    'asArray' => true,
      *  ]
      */
     protected function actionColl($filter = '')
@@ -91,13 +93,13 @@ class Address extends Service
         $query = $this->_addressModel->find();
         $query = Yii::$service->helper->ar->getCollByFilter($query, $filter);
         $coll = $query->all();
-        
+
         return [
             'coll' => $coll,
-            'count'=> $query->limit(null)->offset(null)->count(),
+            'count' => $query->limit(null)->offset(null)->count(),
         ];
     }
-    
+
     /**
      * @return Array
      * 得到当前用户的所有货运地址数组
@@ -110,10 +112,10 @@ class Address extends Service
             $customer_id = $identity['id'];
             if ($customer_id) {
                 $filter = [
-                    'numPerPage'    => 30,
-                    'pageNum'        => 1,
-                    'orderBy'        => ['updated_at' => SORT_DESC],
-                    'where'            => [
+                    'numPerPage' => 30,
+                    'pageNum' => 1,
+                    'orderBy' => ['updated_at' => SORT_DESC],
+                    'where' => [
                         ['customer_id' => $customer_id],
                     ],
                     'asArray' => true,
@@ -136,20 +138,20 @@ class Address extends Service
                         $state = $one['state'];
                         $zip = $one['zip'];
                         $country = Yii::$service->helper->country->getCountryNameByKey($one['country']);
-                        $str = $first_name.' '.$last_name.' '.$email.' '.
-                                $street1.' '.$street2.' '.$city.' '.$state.' '.$country.' '.
-                                $zip.' '.$telephone;
+                        $str = $first_name . ' ' . $last_name . ' ' . $email . ' ' .
+                            $street1 . ' ' . $street2 . ' ' . $city . ' ' . $state . ' ' . $country . ' ' .
+                            $zip . ' ' . $telephone;
                         if ($is_default == 1) {
                             $ii = 1;
                         }
                         $arr[$address_id] = [
                             'address' => $str,
-                            'is_default'=>$is_default,
+                            'is_default' => $is_default,
                         ];
                     }
                     if (!$ii) {
                         // 如果没有默认的地址，则取第一个当默认
-                        foreach ($arr as $k=>$v) {
+                        foreach ($arr as $k => $v) {
                             $arr[$k]['is_default'] = 1;
                             break;
                         }
@@ -163,7 +165,7 @@ class Address extends Service
 
     /**
      * @property $one|array , 保存的address数组
-     * @return int 返回保存的 address_id 的值。     
+     * @return int 返回保存的 address_id 的值。
      */
     protected function actionSave($one)
     {
@@ -173,7 +175,7 @@ class Address extends Service
         if ($primaryVal) {
             $model = $this->_addressModel->findOne($primaryVal);
             if (!$model) {
-                Yii::$service->helper->errors->add('address '.$this->getPrimaryKey().' is not exist');
+                Yii::$service->helper->errors->add('address ' . $this->getPrimaryKey() . ' is not exist');
 
                 return;
             }
@@ -182,14 +184,14 @@ class Address extends Service
             $model->created_at = time();
         }
         $model->updated_at = time();
-        $model      = Yii::$service->helper->ar->save($model, $one);
+        $model = Yii::$service->helper->ar->save($model, $one);
         $primaryVal = $model[$primaryKey];
         if ($one['is_default'] == 1) {
             $customer_id = $one['customer_id'];
             $this->_addressModel->updateAll(
-                ['is_default'=>2],  // $attributes
-                'customer_id = '.$customer_id.' and  '.$primaryKey.' != ' .$primaryVal      // $condition
-                //[':customer_id' => $customer_id]
+                ['is_default' => 2],  // $attributes
+                'customer_id = ' . $customer_id . ' and  ' . $primaryKey . ' != ' . $primaryVal      // $condition
+            //[':customer_id' => $customer_id]
             );
         }
 
@@ -257,21 +259,22 @@ class Address extends Service
         // 查看是否有默认地址？如果该用户存在记录，但是没有默认地址，
         // 则查找用户是否存在非默认地址，如果存在，则取一个设置为默认地址
         $addressOne = $this->_addressModel->find()->asArray()
-                    ->where(['customer_id' => $customer_id, 'is_default' => 1])
-                    ->one();
+            ->where(['customer_id' => $customer_id, 'is_default' => 1])
+            ->one();
         if (!$addressOne['address_id']) {
             $assOne = $this->_addressModel->find()
-                    ->where(['customer_id' => $customer_id])
-                    ->one();
+                ->where(['customer_id' => $customer_id])
+                ->one();
             if ($assOne['address_id']) {
                 $assOne->is_default = 1;
                 $assOne->updated_at = time();
                 $assOne->save();
             }
         }
-        
+
         return true;
     }
+
     /**
      * @property $customer_id | Int ,
      * @property $address_id | Int，address id

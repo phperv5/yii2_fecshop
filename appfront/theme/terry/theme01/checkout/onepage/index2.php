@@ -24,7 +24,6 @@
 							$addressView = [
 								'view'	=> $address_view_file,
 							];
-							//var_dump($address_list);
 							$addressParam = [
 								'cart_address_id' 	=> $cart_address_id,
 								'address_list'	  	=> $address_list,
