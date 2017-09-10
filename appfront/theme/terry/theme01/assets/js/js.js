@@ -60,7 +60,8 @@ $(document).ready(function(){
 				$("#hd_mycart").html(str);
 			}
 			if(data.email){
-				var str = '<b class="px14">Welcome!</b><br/> <b class="px12">'+data.customer_name+'</b><br/>User ID: <span class="email">'+data.email+'</span><br/>E-Mail: <span class="email">'+data.email+'</span><br/Account Status:<b>Normal</b><br/>';
+				alert(11)
+				var str = '<b class="px14">Welcome!</b><br/> <b class="px12">'+data.customer_name+'</b><br/>User ID: <span class="email">'+data.email+'</span><br/>E-Mail: <span class="email">'+data.email+'</span><br/>Account Status:<b>Normal</b><br/>';
                 $("#email").html(str);
 			}
 		},
