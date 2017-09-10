@@ -82,138 +82,21 @@
 
                     <div class="blank5px"></div>
                     <label for="PayPalECS">
-                        <input name="PaymentMethod" type="radio" id="PayPalECS" value="PayPalECS" checked="checked"
-                               onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);"/>
-
-                        <img src="/images/pay/PayPal_mark_60x38.gif" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;<b
-                                class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
+                        <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
+                        <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
                     </label>
 
                     <div class="blank5px"></div>
                     <div style="display:" class="pay_ex_a" id="area_pay_method_exp_1">
-                        <img align="right" alt="" border="0" hspace="5" src="/images/pay/pay_remark_paypal.gif"/>If you
+                        <img align="right" alt="" border="0" hspace="5" src="<?= Yii::$service->image->getImgUrl('images/pay/pay_remark_paypal.gif'); ?>"/>If you
                         have PayPal account, you can pay your order by your PayPal account.<br/>
                         If you don&#39;t have PayPal account, it doesn&#39;t matter. You firstly charge your Paypal with
                         you credit card or bank debit card , then also pay via PayPal.<br/>
                         Payment can be submitted in any currency.&nbsp;<br/>
                         Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
                         <div class="blank10px"></div>
-
-                        <form action="/api_ppec/paypal_ec_redirect.php" method="POST"
-                              id="form_jumpto_checkout_papal_ecs">
-                            <input type="hidden" name="PAYMENTREQUEST_0_INVNUM" value="U2170826416376">
-
-                            <input type="hidden" name="paymentType" value="Sale">
-
-
-                            <input type="hidden" name="CANCELURL"
-                                   value="http://www.UOBDII.com/app/order_checkout.asp?OrderSN=U2170826416376">
-
-                            <input type="hidden" name="currencyCodeType" value="USD"/>
-
-
-                            <input type="hidden" name="L_PAYMENTREQUEST_0_NAME0"
-                                   value="Newest+500GB+V2017%2E07+MB+SD+C4%2FC5+Software+HDD+For+DELL+D630+Support+WIN7%26amp%3BWIN10+System"/>
-                            <input type="hidden" name="L_PAYMENTREQUEST_0_NUMBER0" value="SS195-D7"/>
-                            <input type="hidden" name="L_PAYMENTREQUEST_0_AMT0" value="109.00"/>
-                            <input type="hidden" name="L_PAYMENTREQUEST_0_QTY0" value="1"/>
-                            <input type="hidden" name="L_PAYMENTREQUEST_0_DESC0" value="69820; 1; %2D; %2D; 275"/>
-
-
-                            <input type="hidden" name="PAYMENTREQUEST_0_ITEMAMT" value="109.00"/>
-                            <input type="hidden" name="PAYMENTREQUEST_0_SHIPPINGAMT" value="0.00">
-
-
-                            <input type="hidden" name="PAYMENTREQUEST_0_AMT" value="109.00">
-
-                            <input type="hidden" name="PAYMENTREQUEST_0_CUSTOM"
-                                   value="0|351041|0.0||0.0|0.00|0|275|http://www.UOBDII.com"/>
-
-
-                            <input type="hidden" name="myOrderProNum" value="0"/>
-
-                            <input type="hidden" name="LOGOIMG" value="http://www.UOBDII.com/images/logo.png">
-
-                            <input type="submit" style="display:none"/>
-                            <input name="" type="image" class="ipt_img" src="/images/pay/pp-checkout-logo-large.png"
-                                   alt="Check out with PayPal" id="myPPECbutton"/>
-
-
-                            <div style="float:right;" id="myContainer"></div>
-
-                        </form>
-
+                        <input name="" type="image" class="ipt_img" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
                     </div>
-                    <div class="dashed_line"></div>
-                    <div class="blank5px"></div>
-
-
-                    <div class="blank5px"></div>
-                    <label for="Western Union">
-                        <input name="PaymentMethod" type="radio" id="Western Union" value="Western Union"
-                               onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);"/>
-
-                        <img src="/images/pay/ico_western_union.gif" alt="Western Union" border="0" align="absmiddle"/>&nbsp;&nbsp;<b
-                                class="px13 verdana">Western Union</b>
-                    </label>
-
-
-                    <div class="blank5px"></div>
-                    <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_2">
-                        <p><strong>First Name: Donglian<br/>
-                                Last Name : Xu</strong><br/>
-                            <strong>City: SHENZHEN</strong><br/>
-                            <strong>Country:CHINA</strong><br/>
-                            <strong>Postal Code:518112</strong><br/>
-                            <strong>Mobile: +</strong><strong>0086-13995696053</strong><br/>
-                            <strong>Tel: +86-755-28704781</strong><br/>
-                            <strong>Fax:+86-755-28700303</strong></p>
-
-                        <p>Note: Please make sure leave the Order# in the remark section.<br/>
-                            After you make the payment, please remember to Sign In &quot;My Account&quot; on our site,
-                            and submit the Western Union Money Transfer Control Number (MTCN) on the page of &quot;Submit
-                            a Request Ticket&quot;. We will confirm your payment within 24 hours upon the receipt of the
-                            money.</p>
-
-                    </div>
-                    <div class="dashed_line"></div>
-                    <div class="blank5px"></div>
-
-
-                    <div class="blank5px"></div>
-                    <label for="Bank Transfer">
-                        <input name="PaymentMethod" type="radio" id="Bank Transfer" value="Bank Transfer"
-                               onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);"/>
-
-                        <img src="/images/pay/ico_hsbc.gif" alt="Bank Transfer" border="0" align="absmiddle"/>&nbsp;&nbsp;<b
-                                class="px13 verdana">Bank Transfer</b>
-                    </label>
-
-
-                    <div class="blank5px"></div>
-                    <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_3">
-                        <div><strong>Name of Corporation: Sinoy Electronic Technology HK Limited<br/>
-                                Account:168-308187-838<br/>
-                                Bank name:HSBC HongKong<br/>
-                                Swift Code:HSBCHKHH<br/>
-                                BANK number:004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;<br/>
-                                Bank Address:BASEMENT L/G &amp; U/G 673 NATHAN ROAD,MONG KOK,KOWLOON,HONGKONG</strong>
-                        </div>
-
-                        <p><strong>Sinoy Electronic Technology HK Limited</strong> is&nbsp;the designated bank and
-                            transfer the money to the designated account above. The money will arrive in our account in
-                            about 2-4business days.<br/>
-                            <strong>Note: Please make sure leave the Order# in the remark section.</strong><br/>
-                            After you make the payment, please remember to Sign In &quot;My Account&quot; on our site,
-                            and submit a notice about payment on the page of &quot;Submit a Request Ttcket&quot;. We
-                            will confirm your payment within 24 hours upon the receipt of the money.</p>
-
-                    </div>
-                    <div class="dashed_line"></div>
-                    <div class="blank5px"></div>
-
-
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
@@ -223,3 +106,194 @@
         <div class="exh_full_bottom"></div>
         <div class="clear"></div>
     </div>
+    <script>
+        <?php $this->beginBlock('placeOrder') ?>
+        $(document).ready(function(){
+            currentUrl = "<?= Yii::$service->url->getUrl('checkout/onepage') ?>"
+            //优惠券
+            $(".add_coupon_submit").click(function(){
+                coupon_code = $("#id_couponcode").val();
+                coupon_type = $(".couponType").val();
+                coupon_url = "";
+                $succ_coupon_type = 0;
+                if(coupon_type == 2){
+                    coupon_url = "<?=  Yii::$service->url->getUrl('checkout/cart/addcoupon'); ?>";
+                    $succ_coupon_type = 1;
+                }else if(coupon_type == 1){
+                    coupon_url = "<?=  Yii::$service->url->getUrl('checkout/cart/cancelcoupon'); ?>";
+                    $succ_coupon_type = 2;
+                }
+                //alert(coupon_type);
+                if(!coupon_code){
+                    //alert("coupon can not empty!");
+                }
+                //coupon_url = $("#discount-coupon-form").attr("action");
+                //alert(coupon_url);
+                $.ajax({
+                    async:true,
+                    timeout: 6000,
+                    dataType: 'json',
+                    type:'post',
+                    data: {"coupon_code":coupon_code},
+                    url:coupon_url,
+                    success:function(data, textStatus){
+                        if(data.status == 'success'){
+                            $(".couponType").val($succ_coupon_type);
+                            hml = $('.add_coupon_submit').html();
+                            if(hml == 'Add Coupon'){
+                                $('.add_coupon_submit').html('<?= Yii::$service->page->translate->__('Cancel Coupon');?>');
+                            }else{
+                                $('.add_coupon_submit').html('<?= Yii::$service->page->translate->__('Add Coupon');?>');
+                            }
+                            $(".coupon_add_log").html("");
+                            ajaxreflush();
+                        }else if(data.content == 'nologin'){
+                            $(".coupon_add_log").html("<?= Yii::$service->page->translate->__('you must login your account before you use coupon');?>");
+                        }else{
+                            $(".coupon_add_log").html(data.content);
+                        }
+                    },
+                    error:function (XMLHttpRequest, textStatus, errorThrown){}
+                });
+
+
+            });
+
+            // 对于非登录用户，可以填写密码，进行注册账户，这里进行信息的检查。
+            $("#id_create_account").click(function(){
+                if($(this).is(':checked')){
+                    email = $("input[name='billing[email]']").val();
+                    if(!email){
+                        $(this).prop('checked', false);
+                        $(".label_create_account").html(" <?= Yii::$service->page->translate->__('email address is empty, you must Fill in email');?>");
+                    }else{
+                        thischeckbox = this;
+                        if(!validateEmail(email)){
+                            $(this).prop('checked', false);
+                            $(".label_create_account").html(" <?= Yii::$service->page->translate->__('email address format is incorrect');?>");
+
+                        }else{
+                            // ajax  get if  email is register
+                            $.ajax({
+                                async:true,
+                                timeout: 6000,
+                                dataType: 'json',
+                                type:'get',
+                                data: {"email":email},
+                                url:"<?= Yii::$service->url->getUrl('customer/ajax/isregister'); ?>",
+                                success:function(data, textStatus){
+                                    if(data.registered == 2){
+                                        $(".label_create_account").html("");
+                                        $("#onestepcheckout-li-password").show();
+                                        $("#onestepcheckout-li-password input").addClass("required-entry");
+
+                                    }else{
+                                        $(thischeckbox).prop('checked', false);
+                                        $(".label_create_account").html(" <?= Yii::$service->page->translate->__('This email is registered , you must fill in another email');?>");
+                                    }
+                                },
+                                error:function (XMLHttpRequest, textStatus, errorThrown){}
+                            });
+                        }
+                    }
+                }else{
+                    $(".label_create_account").html("");
+                    $("#onestepcheckout-li-password").hide();
+                    $("#onestepcheckout-li-password input").removeClass("required-entry");
+                }
+            });
+            //###########################
+            //下单(这个部分未完成。)
+            $("#onestepcheckout-place-order").click(function(){
+                $(".validation-advice").remove();
+                i = 0;
+                j = 0;
+                address_list = $(".address_list").val();
+                // shipping
+                shipment_method = $(".onestepcheckout-shipping-method-block input[name='shipping_method']:checked").val();
+                //alert(shipment_method);
+                if(!shipment_method){
+                    $(".shipment-methods").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
+                    j = 1;
+                }
+                //alert(j);
+                //payment
+                payment_method = $("#checkout-payment-method-load input[name='payment_method']:checked").val();
+                //alert(shipment_method);
+                if(!payment_method){
+                    $(".checkout-payment-method-load").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
+                    j = 1;
+                }
+
+
+
+                if(address_list){
+                    if(!j){
+                        $(".onestepcheckout-place-order").addClass('visit');
+
+                        $("#onestepcheckout-form").submit();
+                    }
+                }else{
+                    //alert(11);
+                    //alert(j);
+                    $("#onestepcheckout-form .required-entry").each(function(){
+                        value = $(this).val();
+                        if(!value){
+                            //alert(this);
+                            //alert($(this).attr('name'));
+                            i++;
+                            $(this).after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
+                        }
+                    });
+                    //email  format validate
+                    user_email = $("#billing_address .validate-email").val();
+                    if(user_email && !validateEmail(user_email)){
+                        $("#billing_address .validate-email").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('email address format is incorrect');?></div>');
+                        i++;
+                    }
+                    // password 是否长度大于6，并且两个密码一致
+                    if($("#id_create_account").is(':checked')){
+
+                        new_user_pass = $(".customer_password").val();
+                        new_user_pass_cm = $(".customer_confirm_password").val();
+                        //alert(new_user_pass);
+                        //alert(new_user_pass.length);
+                        //alert(new_user_pass_cm);
+                        <?php
+                        $passwdMinLength = Yii::$service->customer->getRegisterPassMinLength();
+                        $passwdMaxLength = Yii::$service->customer->getRegisterPassMaxLength();
+                        ?>
+                        passwdMinLength = "<?= $passwdMinLength ?>";
+                        passwdMaxLength = "<?= $passwdMaxLength ?>";
+                        if(new_user_pass.length < passwdMinLength){
+                            $(".customer_password").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('Password length must be greater than or equal to {passwdMinLength}',['passwdMinLength' => $passwdMinLength]);?></div>');
+                            i++;
+                        }else if(new_user_pass.length > passwdMaxLength){
+                            $(".customer_password").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('Password length must be less than or equal to {passwdMaxLength}',['passwdMaxLength' => $passwdMaxLength]);?></div>');
+                            i++;
+                        }else if(new_user_pass != new_user_pass_cm){
+                            $(".customer_confirm_password").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('The passwords are inconsistent');?></div>');
+                            i++;
+                        }
+                    }
+
+                    //alert(222);
+                    if(!i && !j){
+                        //alert(333);
+                        $(".onestepcheckout-place-order").addClass('visit');
+                        $("#onestepcheckout-form").submit();
+                    }
+                }
+
+            });
+
+
+
+        });
+        //ajaxreflush();
+        <?php $this->endBlock(); ?>
+        <?php $this->registerJs($this->blocks['placeOrder'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
+
+    </script>
+
+
