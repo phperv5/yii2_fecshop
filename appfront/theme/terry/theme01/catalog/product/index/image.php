@@ -89,7 +89,7 @@ $(document).ready(function(){
 			$(".product-img-box .box-img .list-img img").each(function(){
 				i++;
 			});
-			maxright = 83*(i-4);
+			maxright = 1*(i-4);
 			nowright = $(".product-img-box .list-img").css("top");
 			nowright = parseFloat(nowright.replace("px",""));
 			abs_nowright = Math.abs(nowright);

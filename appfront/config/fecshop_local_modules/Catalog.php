@@ -86,9 +86,9 @@ return [
             //##############################
             // 产品页面图片的设置
             'productImgSize' => [
-                'small_img_width'  => 80,  // 底部小图的宽度
-                'small_img_height' => 110,  // 底部小图的高度
-                'middle_img_width' => 400,  // 主图的宽度
+                'small_img_width'  => 50,  // 底部小图的宽度
+                'small_img_height' => 50,  // 底部小图的高度
+                'middle_img_width' => 500,  // 主图的宽度
             ],
             'productImgMagnifier' => false, // 是否已放大镜的方式显示，如果否，则是内窥的方式查看
 

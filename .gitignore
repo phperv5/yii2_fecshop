@@ -3,3 +3,4 @@ appfront/config/fecshop_local_services/Store.php
 .idea/yii2_fecshop.iml
 .idea/modules.xml
 .idea/vcs.xml
+.idea/blade.xml

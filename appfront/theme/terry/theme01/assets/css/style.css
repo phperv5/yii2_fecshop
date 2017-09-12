@@ -685,7 +685,7 @@ dl.px660 dd { margin: 0px; padding: 5px 0px; float: left; width: 495px; }
 
 .pro_chief { clear:both; padding:0px; margin:0px; }
 	.pro_chief h1 { background: url(none); margin: 0px 0px 5px; padding: 10px 0px; clear: both; border-bottom: 1px dashed #CCC; color: #036; font-size: 18px; }
-	.pro_chf_photo { float: left; text-align: center; margin: 0px; width: 510px; padding: 0px; }
+	.pro_chf_photo { float: left;margin: 0px; width: 510px; padding: 0px; }
 		.pro_chf_photo_view { width: 510px; height: 510px; overflow: hidden; padding: 0px; margin: 0px; text-align: center; clear: both; background: url(../images/w/bg_photo.png) no-repeat 0px 0px; }
 		.pro_chf_photo_view a { width: 500px; height: 500px; line-height: 370px; margin: 0px; overflow: hidden; vertical-align: middle; background: #FFF; display: table-cell; *display:block; padding: 2px; border: 1px solid #E6E6E6; *font-size:437px; } /* font-size,for ie6,height*0.873*/
 		.pro_chf_photo_view a:hover { padding:2px 2px 0px; border-top: 1px solid #C00; border-right: 1px solid #C00; border-bottom: 3px solid #C00; border-left: 1px solid #C00; }
