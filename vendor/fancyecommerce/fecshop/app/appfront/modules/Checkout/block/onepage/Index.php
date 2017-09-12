@@ -42,6 +42,8 @@ class Index
         $this->initState();
         $shippings = $this->getShippings();
         $last_cart_info = $this->getCartInfo($this->_shipping_method, $this->_country, $this->_state);
+        $address_list = Yii::$service->customer->address->Coll()['coll'];
+        $address_select = $this->getDefaultAddress($address_list);
         return [
             'payments' => $this->getPayment(),
             'shippings' => $shippings,
@@ -51,11 +53,24 @@ class Index
             'address_view_file' => $this->_address_view_file,
             'cart_address' => $this->_address,
             'cart_address_id' => $this->_address_id,
-            'address_list' => Yii::$service->customer->address->Coll()['coll'],
+            'address_list' => $address_list,
+            'address_select' => $address_select,
             'country_select' => $this->_countrySelect,
-            //'state_select'			=> $this->_stateSelect,
             'state_html' => $this->_stateHtml,
         ];
+    }
+
+    /*
+     * 獲取默認地址
+     */
+    public function getDefaultAddress($address_list)
+    {
+        foreach ($address_list as $v) {
+            if ($v['is_default'] == 1) {
+                return $v;
+            }
+        }
+        return false;
     }
 
     /**

@@ -57,8 +57,8 @@
                         <?= Yii::$service->page->widget->render($priceView, $priceParam); ?>
 
 
-                    <div class="pro_pri_mpr" id="ProMultiCurrTrig"
-                         onmouseover="javascript:ProMultiPriceRef('ProMultiCurrRef', 'ProMultiCurrTrig');"></div>
+<!--                    <div class="pro_pri_mpr" id="ProMultiCurrTrig"-->
+<!--                         onmouseover="javascript:ProMultiPriceRef('ProMultiCurrRef', 'ProMultiCurrTrig');"></div>-->
                 </div>
                 <div class="pro_b_item" id="id_pro_b_item_oQty">
                     <div class="pro_bitm_tit">Quantity:</div>

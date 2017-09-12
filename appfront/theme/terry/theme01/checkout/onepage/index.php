@@ -49,7 +49,6 @@
                 <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
                     <span class="sn">2</span> &nbsp;Shipping Address
                 </div>
-                <div class="scene" id="ar_os_shippingAddress">
                     <?php # address 部门
                     //echo $address_view_file;
                     $addressView = [
@@ -59,6 +58,7 @@
                     $addressParam = [
                         'cart_address_id' => $cart_address_id,
                         'address_list' => $address_list,
+                        'address_select' => $address_select,
                         'customer_info' => $customer_info,
                         'country_select' => $country_select,
                         'state_html' => $state_html,
@@ -69,8 +69,6 @@
                     ?>
                     <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
                     <div class="clear"></div>
-                </div>
-
                 <div class="p_order_step">
                     <div class="o_stp_s_cur"><span class="sn_cur">3</span> &nbsp;Checkout and Payment Details</div>
                     <div class="scene">
@@ -84,8 +82,7 @@
 
                         <div class="blank5px"></div>
                         <div style="display:" class="pay_ex_a" id="area_pay_method_exp_1">
-                            <img align="right" alt="" border="0" hspace="5"
-                                 src="<?= Yii::$service->image->getImgUrl('images/pay/pay_remark_paypal.gif'); ?>"/>If
+                            <img align="right" alt="" border="0" hspace="5" src="<?= Yii::$service->image->getImgUrl('images/pay/pay_remark_paypal.gif'); ?>"/>If
                             you
                             have PayPal account, you can pay your order by your PayPal account.<br/>
                             If you don&#39;t have PayPal account, it doesn&#39;t matter. You firstly charge your Paypal
@@ -94,9 +91,7 @@
                             Payment can be submitted in any currency.&nbsp;<br/>
                             Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
                             <div class="blank10px"></div>
-                            <input name="" type="image" class="ipt_img onestepcheckout-button"
-                                   src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>"
-                                   alt="Check out with PayPal" id="onestepcheckout-place-order">
+                            <input name="" type="image" class="ipt_img onestepcheckout-button" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
                         </div>
                         <div class="clear"></div>
                     </div>
