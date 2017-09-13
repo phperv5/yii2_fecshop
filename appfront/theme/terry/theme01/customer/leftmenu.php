@@ -29,7 +29,7 @@
     <div class="fun_column px11 gray word_wrap word_break">
         <div class="clear"></div>
         <!-- 账户信息-->
-        <div class="email"></div>
+        <b class="px14">Welcome!</b><br/> <b class="px12"><?php echo Yii::$app->user->identity->firstname;?>&nbsp;&nbsp;<?php echo Yii::$app->user->identity->lastname;?></b><br/>User ID: <span class="email"><?php echo Yii::$app->user->identity->email;?></span><br/>E-Mail: <span class="email"><?php echo Yii::$app->user->identity->email;?></span><br/>Account Status:<b>Normal</b><br/>
         <!-- 账户信息-->
         <div class="dashed5px"></div>
         <div class="align_right">
