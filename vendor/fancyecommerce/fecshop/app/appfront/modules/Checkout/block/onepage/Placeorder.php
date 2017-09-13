@@ -35,7 +35,7 @@ class Placeorder
     public function getLastData()
     {
         $post = Yii::$app->request->post();
-        var_dump($post);die;
+//        var_dump($post);die;
         if (is_array($post) && !empty($post)) {
             /**
              * 对传递的数据，去除掉非法xss攻击部分内容（通过\Yii::$service->helper->htmlEncode()）.
