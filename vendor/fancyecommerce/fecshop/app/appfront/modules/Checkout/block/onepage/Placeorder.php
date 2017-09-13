@@ -35,7 +35,7 @@ class Placeorder
     public function getLastData()
     {
         $post = Yii::$app->request->post();
-
+        var_dump($post);die;
         if (is_array($post) && !empty($post)) {
             /**
              * 对传递的数据，去除掉非法xss攻击部分内容（通过\Yii::$service->helper->htmlEncode()）.
@@ -47,7 +47,6 @@ class Placeorder
                 // 如果游客用户勾选了注册账号，则注册，登录，并把地址写入到用户的address中
                 $gus_status = $this->guestCreateAndLoginAccount($post);
                 $save_address_status = $this->updateAddress($post);
-                var_dump(11);die;
                 if ($gus_status && $save_address_status) {
 
                     // 更新Cart信息
@@ -223,7 +222,6 @@ class Placeorder
                 $customer_id = Yii::$app->user->identity->id;
                 if (!$customer_id) {
                     Yii::$service->helper->errors->add('customer id is empty');
-
                     return false;
                 } else {
                     $address_one = Yii::$service->customer->address->getAddressByIdAndCustomerId($address_id, $customer_id);

@@ -5,6 +5,7 @@
     <div class="exh_full_top"></div>
     <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
         <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
+        <input type="hidden" id="s_method_flatrate_flatrate2" name="shipping_method" value="fast_shipping" class="validate-one-required-by-name">
         <div class="exh_full_main">
             <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>
             <div class="blank10px"></div>
@@ -41,7 +42,6 @@
 
 
             <div class="p_order_step">
-                <input type="hidden" class="address_list" value=""/>
                 <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
                     <span class="sn">2</span> &nbsp;Shipping Address
                 </div>
@@ -70,7 +70,7 @@
                     <div class="scene">
                         <div class="blank5px"></div>
                         <label for="PayPalECS">
-                            <input name="shipping_method" type="radio" id="PayPalECS" value="paypal_standard" checked="checked">
+                            <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" checked="checked">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>"
                                  alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
                             <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>

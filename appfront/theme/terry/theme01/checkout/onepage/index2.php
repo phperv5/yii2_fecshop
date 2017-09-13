@@ -77,8 +77,6 @@
 							<div class="clear"></div>
 							<div class="coupon_add_log"></div>
 						</div>
-						
-						
 					</div>
 
 					<div class="onestepcheckout-column-right">
