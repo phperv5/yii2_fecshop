@@ -15,25 +15,22 @@
 <?php $cart_address = $parentThis['cart_address']; ?>
 
 <!--地址列表-->
+<input type="hidden" name="address_id" class="address_id" value="<?= $address_select['address_id'] ?>">
 <?php if ($address_select): ?>
     <div class="scene px13 line15em" id="ar_os_shippingAddress">
-        <div class="float_right"><a href="javascript:void(0);" onclick="javascript:document.formOrderAddressChange.submit();return false;"><b class="px11">Change</b></a></div>
-        <form action="/app/order_address.asp" method="post" name="formOrderAddressChange">
-            <input type="hidden" name="addAction" value="editAddress">
-            <input type="hidden" name="OrderID" value="416376">
-        </form>
-
-        Receiver: 2323 2323<br>
-        2323<br>
-        2323<br>2323, 2323, Germany<br>
-        Post Code: 2323<br>
-        Phone: 2323<br>
-
-
+        <div class="float_right"><a href="javascript:void(0);" onclick="change"><b class="px11">Change</b></a></div>
+        Receiver: <?= $address_select['first_name'] ?>&nbsp;<?= $address_select['first_name'] ?><br>
+        <?= $address_select['street1'] ?><br>
+        <?php if($address_select['street2']): ?>
+            <?= $address_select['street2'] ?><br>
+        <?php endif;?>
+        <?= $address_select['city'] ?>, <?= $address_select['state'] ?>, <?= $address_select['country'] ?><br>
+        <?= $address_select['zip'] ?><br>
+        Phone: <?= $address_select['telephone'] ?><br>
         <div class="blank10px"></div>
     </div>
 <?php else: ?>
-<div class="scene" id="ar_os_shippingAddress">
+<div class="scene" id="shippingAddress_select">
     <div class="fr"><a href="javascript:void(0);" onclick="CheckAddressAdd();return false;"><strong><img src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif'); ?>" hspace="3" border="0">Entera New Address</strong></a></div>
     <strong class="verdana">Please Choose Your Shipping Address</strong>
     <div class="dashed5px"></div>
@@ -53,7 +50,9 @@
                     <div class="blank5px"></div>
                     <b class="blue"><?= $one['first_name'] ?>&nbsp;<?= $one['first_name'] ?></b><br>
                     <?= $one['street1'] ?><br>
+                    <?php if($one['street2']): ?>
                     <?= $one['street2'] ?><br>
+                    <?php endif;?>
                     <?= $one['city'] ?>, <?= $one['state'] ?>, <?= $one['country'] ?><br>
                     <?= $one['zip'] ?><br>
                     Phone: <?= $one['telephone'] ?><br>

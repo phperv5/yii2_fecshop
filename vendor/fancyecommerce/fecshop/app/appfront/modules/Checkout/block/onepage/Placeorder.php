@@ -35,7 +35,7 @@ class Placeorder
     public function getLastData()
     {
         $post = Yii::$app->request->post();
-        
+
         if (is_array($post) && !empty($post)) {
             /**
              * 对传递的数据，去除掉非法xss攻击部分内容（通过\Yii::$service->helper->htmlEncode()）.
@@ -43,12 +43,13 @@ class Placeorder
             $post = \Yii::$service->helper->htmlEncode($post);
             // 检查前台传递的数据的完整
             if ($this->checkOrderInfoAndInit($post)) {
-                
+
                 // 如果游客用户勾选了注册账号，则注册，登录，并把地址写入到用户的address中
                 $gus_status = $this->guestCreateAndLoginAccount($post);
                 $save_address_status = $this->updateAddress($post);
+                var_dump(11);die;
                 if ($gus_status && $save_address_status) {
-                    
+
                     // 更新Cart信息
                     //$this->updateCart();
                     // 设置checkout type
@@ -56,18 +57,18 @@ class Placeorder
                     $checkout_type = $serviceOrder::CHECKOUT_TYPE_STANDARD;
                     $serviceOrder->setCheckoutType($checkout_type);
                     // 将购物车数据，生成订单。
-                    
+
                     $innerTransaction = Yii::$app->db->beginTransaction();
                     try {
                         # 生成订单，扣除库存，但是，不清空购物车。
-                        $genarateStatus = Yii::$service->order->generateOrderByCart($this->_billing, $this->_shipping_method, $this->_payment_method,false);
+                        $genarateStatus = Yii::$service->order->generateOrderByCart($this->_billing, $this->_shipping_method, $this->_payment_method, false);
                         if ($genarateStatus) {
                             // 得到当前的订单信息
                             //$orderInfo = Yii::$service->order->getCurrentOrderInfo();
                             // 发送新订单邮件
                             //Yii::$service->email->order->sendCreateEmail($orderInfo);
                             // 得到支付跳转前的准备页面。
-                            
+
                             $startUrl = Yii::$service->payment->getStandardStartUrl();
                             $innerTransaction->commit();
                             Yii::$service->url->redirect($startUrl);
@@ -79,7 +80,7 @@ class Placeorder
                     } catch (Exception $e) {
                         $innerTransaction->rollBack();
                     }
-                    
+
                 }
             } else {
             }
@@ -114,12 +115,12 @@ class Placeorder
             $passMin = Yii::$service->customer->getRegisterPassMinLength();
             $passMax = Yii::$service->customer->getRegisterPassMaxLength();
             if (strlen($customer_password) < $passMin) {
-                Yii::$service->helper->errors->add('password must Greater than '.$passMin);
+                Yii::$service->helper->errors->add('password must Greater than ' . $passMin);
 
                 return false;
             }
             if (strlen($customer_password) > $passMax) {
-                Yii::$service->helper->errors->add('password must less than '.$passMax);
+                Yii::$service->helper->errors->add('password must less than ' . $passMax);
 
                 return false;
             }
@@ -131,8 +132,8 @@ class Placeorder
                 return false;
             } else {
                 Yii::$service->customer->Login([
-                    'email'        => $billing['email'],
-                    'password'    => $billing['customer_password'],
+                    'email' => $billing['email'],
+                    'password' => $billing['customer_password'],
                 ]);
             }
         }
@@ -156,20 +157,20 @@ class Placeorder
                 $identity = Yii::$app->user->identity;
                 $customer_id = $identity['id'];
                 $one = [
-                    'first_name'    => $billing['first_name'],
-                    'last_name'    => $billing['last_name'],
-                    'email'        => $billing['email'],
-                    'company'        => '',
-                    'telephone'    => $billing['telephone'],
-                    'fax'            => '',
-                    'street1'        => $billing['street1'],
-                    'street2'        => $billing['street2'],
-                    'city'            => $billing['city'],
-                    'state'        => $billing['state'],
-                    'zip'            => $billing['zip'],
-                    'country'        => $billing['country'],
-                    'customer_id'    => $customer_id,
-                    'is_default'    => 1,
+                    'first_name' => $billing['first_name'],
+                    'last_name' => $billing['last_name'],
+                    'email' => $billing['email'],
+                    'company' => '',
+                    'telephone' => $billing['telephone'],
+                    'fax' => '',
+                    'street1' => $billing['street1'],
+                    'street2' => $billing['street2'],
+                    'city' => $billing['city'],
+                    'state' => $billing['state'],
+                    'zip' => $billing['zip'],
+                    'country' => $billing['country'],
+                    'customer_id' => $customer_id,
+                    'is_default' => 1,
                 ];
                 $address_id = Yii::$service->customer->address->save($one);
                 $this->_address_id = $address_id;
@@ -236,7 +237,7 @@ class Placeorder
                             return false;
                         }
                         $arr['customer_id'] = $customer_id;
-                        foreach ($address_one as $k=>$v) {
+                        foreach ($address_one as $k => $v) {
                             $arr[$k] = $v;
                         }
                         $this->_billing = $arr;

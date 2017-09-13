@@ -12,12 +12,8 @@
             <div class="blank10px"></div>
             <span id="sRtnGetOrderFormStatus"></span>
             <div class="blank10px"></div>
-
-
             <div class="p_order_step">
-                <div class="o_stp_s_off" id="m_os_shippingcart"
-                     onclick="javascript:AreaShowHide('ar_os_shippingcart');OrderStepCSSswitch('m_os_shippingcart');"
-                     style="cursor:pointer"><span class="sn">1</span> &nbsp;Order Details
+                <div class="o_stp_s_off" id="m_os_shippingcart" onclick="javascript:AreaShowHide('ar_os_shippingcart');OrderStepCSSswitch('m_os_shippingcart');" style="cursor:pointer"><span class="sn">1</span> &nbsp;Order Details
                 </div>
                 <div class="scene_nopadding" id="ar_os_shippingcart" style="display:">
                     <table class="tab_comm">
@@ -74,7 +70,7 @@
                     <div class="scene">
                         <div class="blank5px"></div>
                         <label for="PayPalECS">
-                            <input name="PaymentMethod" type="radio" id="PayPalECS" value="PayPalECS" checked="checked">
+                            <input name="shipping_method" type="radio" id="PayPalECS" value="paypal_standard" checked="checked">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>"
                                  alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
                             <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
@@ -112,34 +108,17 @@
                 $(".validation-advice").remove();
                 i = 0;
                 j = 0;
-                address_list = $(".address_list").val();
+                address_id = $(".address_id").val();
                 // shipping
 
-                //alert(j);
                 //payment
-                payment_method = $("#checkout-payment-method-load input[name='payment_method']:checked").val();
+                payment_method = $("#PayPalECS").val();
+                alert(payment_method)
+                alert(address_id)
                 //alert(shipment_method);
                 if(!payment_method){
                     $(".checkout-payment-method-load").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
                     j = 1;
-                }
-
-
-
-                if(address_list){
-                    if(!j){
-                        $(".onestepcheckout-place-order").addClass('visit');
-
-                        $("#onestepcheckout-form").submit();
-                    }
-                }else{
-
-                    //alert(222);
-                    if(!i && !j){
-                        //alert(333);
-                        $(".onestepcheckout-place-order").addClass('visit');
-                        $("#onestepcheckout-form").submit();
-                    }
                 }
 
             });
