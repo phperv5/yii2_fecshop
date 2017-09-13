@@ -45,9 +45,10 @@ class Placeorder
             if ($this->checkOrderInfoAndInit($post)) {
 
                 // 如果游客用户勾选了注册账号，则注册，登录，并把地址写入到用户的address中
-                $gus_status = $this->guestCreateAndLoginAccount($post);
+                //$gus_status = $this->guestCreateAndLoginAccount($post);
                 $save_address_status = $this->updateAddress($post);
-                if ($gus_status && $save_address_status) {
+                //if ($gus_status && $save_address_status) {
+                if ($save_address_status) {
 
                     // 更新Cart信息
                     //$this->updateCart();
@@ -211,6 +212,7 @@ class Placeorder
     {
         $address_one = '';
         $address_id = isset($post['address_id']) ? $post['address_id'] : '';
+
         $billing = isset($post['billing']) ? $post['billing'] : '';
         if ($address_id) {
             $this->_address_id = $address_id;
