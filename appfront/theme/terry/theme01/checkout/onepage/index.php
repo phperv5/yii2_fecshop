@@ -4,7 +4,7 @@
     <div class="blank8px"></div>
     <div class="exh_full_top"></div>
     <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
-<!--        --><?//= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
+        <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
         <div class="exh_full_main">
             <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>
             <div class="blank10px"></div>
