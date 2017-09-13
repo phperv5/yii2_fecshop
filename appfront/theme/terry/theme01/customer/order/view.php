@@ -33,11 +33,7 @@ use fecshop\app\appfront\helper\Format;
             <div class="blank15px"></div>
             <div class="p_sub_a">Order Information</div>
             <div class="p_con_a">
-                <form name="formGotoCheckout" id="formGotoCheckout" method="post" action="../app/order_checkout.asp">
-                    <input type="hidden" name="OrderID" id="OrderID" value="416375" />
-                    <input type="submit" style="display:none" />
-                </form>
-                <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="javascript:document.getElementById('formGotoCheckout').submit();" /></div>
+                <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'" /></div>
                 <span class="px11">Order Serial Number: </span><b class="blue_dark"><?=  $increment_id ?></b><br />
                 <span class="px11">Order Date: </span><span class="px11 verdana"><?=  date('Y-m-d H:i:s',$created_at); ?></span><br />
                 <span class="px11">Order Total Sum: </span><b class="red px14"><?= $currency_symbol ?><?= Format::price($product['row_total']); ?></b>
@@ -88,7 +84,7 @@ use fecshop\app\appfront\helper\Format;
                 <b class="green_dark">Your Shipping Address:</b><br />
                 Receiver: <?=  $customer_firstname ?> <?=  $customer_lastname ?><br />
                 <?=  $customer_address_street1 ?><br />
-                <?=  $customer_address_street2 ?><br />
+                <?php if($customer_address_street2):?><?=  $customer_address_street2 ?><br /><?php endif;?>
                 <?=  $customer_address_city ?>,<?=  $customer_address_state_name ?>,<?=  $customer_address_country_name ?><br />
                 Post Code: 233223<br />
                 Phone: <?=  $customer_telephone ?><br />
