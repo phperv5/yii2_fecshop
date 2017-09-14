@@ -62,7 +62,7 @@
                 </div>
                 <div class="pos_addr_slt">
                     <br><br><br>
-                    <input type="button" class="btn_submit btn_mid choose_address" value="Ship to this address" address_id="<?= $address_id ?>"></div>
+                    <input type="button" class="btn_submit btn_mid choose_address" value="Ship to this address" address_id="<?= $one['address_id'] ?>"></div>
                 <div class="clear"></div>
             </div>
             <div class="dashed5px"></div>
