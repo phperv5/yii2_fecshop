@@ -110,7 +110,8 @@
 
             $('.choose_address').bind('click',function(){
                 $('#shippingAddress_select').hide();
-                $('.cur_address').empty().html($(".select_address").clone());
+                var str = $(this).parents('.pos_addr_slt').prev().find(".pos_addr_lt .select_address").clone();
+                $('.cur_address').empty().html(str);
                 var address_id = $(this).attr('address_id');
                 $('.address_id').val(address_id);
                 $('#ar_os_shippingAddress').show();
