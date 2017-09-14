@@ -86,7 +86,7 @@ use fecshop\app\appfront\helper\Format;
                 <?=  $customer_address_street1 ?><br />
                 <?php if($customer_address_street2):?><?=  $customer_address_street2 ?><br /><?php endif;?>
                 <?=  $customer_address_city ?>,<?=  $customer_address_state_name ?>,<?=  $customer_address_country_name ?><br />
-                Post Code: 233223<br />
+                Post Code: <?= $customer_address_zip ?><br />
                 Phone: <?=  $customer_telephone ?><br />
                 <div class="blank10px"></div>
             </div>

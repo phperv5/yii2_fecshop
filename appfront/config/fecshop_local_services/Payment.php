@@ -9,7 +9,7 @@ return [
     'payment' => [
         'childService' => [
             'alipay' => [
-                'devide'        => 'pc' ,  // 填写pc或者wap，pc代表pc机浏览器支付类型，wap代表手机浏览器支付类型 
+                'devide'        => 'pc' ,
             ],
         ],
     ],

@@ -49,7 +49,6 @@ class Product extends Service
         $customAttrGroup = $this->customAttrGroup;
         $arr = array_keys($customAttrGroup);
         $arr[] = $this->_defaultAttrGroup;
-
         return $arr;
     }
 

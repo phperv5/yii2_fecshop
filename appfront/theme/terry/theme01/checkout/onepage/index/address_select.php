@@ -16,21 +16,21 @@
 
 <!--地址列表-->
 <input type="hidden" name="address_id" class="address_id" value="<?= $address_select['address_id'] ?>">
-<?php if ($address_select): ?>
-    <div class="scene px13 line15em" id="ar_os_shippingAddress">
-        <div class="float_right"><a href="javascript:void(0);" onclick="change"><b class="px11">Change</b></a></div>
-        Receiver: <?= $address_select['first_name'] ?>&nbsp;<?= $address_select['first_name'] ?><br>
+
+    <div class="scene px13 line15em" id="ar_os_shippingAddress" <?php if (!$address_select): ?>style="display: none;"<?php endif;?>>
+        <div class="float_right"><a href="javascript:void(0);" class="change"><b class="px11">Change</b></a></div>
+        Receiver: <span class="cur_address"><?= $address_select['first_name'] ?>&nbsp;<?= $address_select['first_name'] ?><br>
         <?= $address_select['street1'] ?><br>
         <?php if($address_select['street2']): ?>
             <?= $address_select['street2'] ?><br>
         <?php endif;?>
         <?= $address_select['city'] ?>, <?= $address_select['state'] ?>, <?= $address_select['country'] ?><br>
         <?= $address_select['zip'] ?><br>
-        Phone: <?= $address_select['telephone'] ?><br>
+            Phone: <?= $address_select['telephone'] ?><br></span>
         <div class="blank10px"></div>
     </div>
-<?php else: ?>
-<div class="scene" id="shippingAddress_select">
+<!--地址列表-->
+<div class="scene" id="shippingAddress_select" <?php if ($address_select): ?>style="display: none;"<?php endif;?>>
     <div class="fr"><a href="javascript:void(0);" onclick="CheckAddressAdd();return false;"><strong><img src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif'); ?>" hspace="3" border="0">Entera New Address</strong></a></div>
     <strong class="verdana">Please Choose Your Shipping Address</strong>
     <div class="dashed5px"></div>
@@ -48,7 +48,8 @@
                 <div class="pos_addr_lt">
                     <strong class="red_dark">Shipping Address #<?php echo $n; ?></strong>
                     <div class="blank5px"></div>
-                    <b class="blue"><?= $one['first_name'] ?>&nbsp;<?= $one['first_name'] ?></b><br>
+                    <span class="select_address">
+                    <?= $one['first_name'] ?>&nbsp;<?= $one['first_name'] ?><br>
                     <?= $one['street1'] ?><br>
                     <?php if($one['street2']): ?>
                     <?= $one['street2'] ?><br>
@@ -56,26 +57,20 @@
                     <?= $one['city'] ?>, <?= $one['state'] ?>, <?= $one['country'] ?><br>
                     <?= $one['zip'] ?><br>
                     Phone: <?= $one['telephone'] ?><br>
+                    </span>
                     <div class="clear"></div>
                 </div>
                 <div class="pos_addr_slt">
-                    <a href="javascript:void(0);"><img
-                                src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif'); ?>" hspace="3"
-                                align="absmiddle" border="0">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="javascript:void(0);"><img
-                                src="<?= Yii::$service->image->getImgUrl('images/ico/del.gif'); ?>" hspace="3"
-                                align="absmiddle" border="0">Delete</a>
                     <br><br><br>
-                    <input type="button" class="btn_submit btn_mid" value="Ship to this address"
-                           onclick="AddressBookChoose('295224');"></div>
+                    <input type="button" class="btn_submit btn_mid choose_address" value="Ship to this address" address_id="<?= $address_id ?>"></div>
                 <div class="clear"></div>
             </div>
-
             <div class="dashed5px"></div>
 
         <?php endforeach; ?>
+        <?php endif; ?>
         <span class="px11">- If you confirmed payment online and your shipping address, the system will automatically redirect you.</span>
         </div>
     </div>
-    <?php endif; ?>
-    <?php endif; ?>
+
+

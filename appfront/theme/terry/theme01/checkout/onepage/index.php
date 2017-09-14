@@ -1,5 +1,5 @@
 <div class="main">
-    <div class="page_where_l"><a href="../">Home</a> - Check Out for Order:&nbsp;&nbsp;Serial No. U2170826416376</div>
+    <div class="page_where_l"><a href="../">Home</a> - Check Out for Order</div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="exh_full_top"></div>
@@ -7,7 +7,7 @@
         <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
         <input type="hidden" id="s_method_flatrate_flatrate2" name="shipping_method" value="fast_shipping" class="validate-one-required-by-name">
         <div class="exh_full_main">
-            <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>
+<!--            <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>-->
             <div class="blank10px"></div>
             <b class="red_dark px16">You placed an order on our site successfully! </b>
             <div class="blank10px"></div>
@@ -103,6 +103,22 @@
     <script>
         <?php $this->beginBlock('placeOrder') ?>
         $(document).ready(function () {
+            $('.change').click(function(){
+                $('#shippingAddress_select').show();
+                $('#ar_os_shippingAddress').hide();
+            })
+
+            $('.choose_address').bind('click',function(){
+                $('#shippingAddress_select').hide();
+                $('.cur_address').empty().html($(".select_address").clone());
+                var address_id = $(this).attr('address_id');
+                $('.address_id').val(address_id);
+                $('#ar_os_shippingAddress').show();
+                alert($('.address_id').val())
+            })
+
+
+
             currentUrl = "<?= Yii::$service->url->getUrl('checkout/onepage') ?>"
             //下单(这个部分未完成。)
             $("#onestepcheckout-place-order").click(function(){
