@@ -42,7 +42,6 @@ class Product extends Service
         $category_id = isset($filter['category_id']) ? $filter['category_id'] : '';
         if (!$category_id) {
             Yii::$service->helper->errors->add('category id is empty');
-
             return;
         } else {
             unset($filter['category_id']);

@@ -1,4 +1,5 @@
 ﻿<!-- <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>-->
+<?php var_dump($newArrivals);?>
  <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
@@ -45,7 +46,7 @@
         </div>
         <div class="main_h_fs_are">
             <div class="main_h_fs_item">
-                <div class="mhfsi_photo"><a href="wholesale/skp1000-tablet-auto-key-programmer.html" title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order"><img src="upload/pro/skp1000-tablet-auto-key-programmer-ad-1.3.jpg" width="280" height="280" border="0" hspace="0" vspace="0" alt="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order" align="absmiddle" /></a></div>
+                <div class="mhfsi_photo"><a href="<?= $newArrivals[0]['url'] ?>" title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order"><img src="upload/pro/skp1000-tablet-auto-key-programmer-ad-1.3.jpg" width="280" height="280" border="0" hspace="0" vspace="0" alt="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order" align="absmiddle" /></a></div>
                 <div class="mhfsi_bri">
                     <a href="wholesale/skp1000-tablet-auto-key-programmer.html" title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order">2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order</a>
                     <div class="blank10px"></div>
@@ -101,7 +102,7 @@
                 </div>
                 <div class="mhfai_photo"><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html" title="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1"><img src="upload/pro/cgdi-pro-bmw-msv80-key-programmer-180.1.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1" align="absmiddle" /></a></div>
             </div>
-            <?php var_dump($newArrivals);die;?>
+
             <div class="main_h_fa_item">
                 <div class="mhfai_bri">
                     <a href="wholesale/xhorse-vvdi-key-tool.html" title="Original V2.3.9 Xhorse VVDI Key Tool Remote Key Programmer Specially for America Cars Free Shipping by DHL">Original V2.3.9 Xhorse VVDI Key Tool Remote Key Pr...</a>
@@ -122,6 +123,7 @@
         </div>
         <div class="main_h_fs_are">
             <div class="main_h_fs_item">
+
                 <div class="mhfsi_photo"><a href="wholesale/firmware-ktag-v7.020-ecu-programming-tool.html" title="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping"><img src="upload/pro/firmware-ktag-v7.020-ecu-programming-tool-ad-1.3.jpg" width="280" height="280" border="0" hspace="0" vspace="0" alt="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping" align="absmiddle" /></a></div>
                 <div class="mhfsi_bri">
                     <a href="wholesale/firmware-ktag-v7.020-ecu-programming-tool.html" title="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping">2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping</a>

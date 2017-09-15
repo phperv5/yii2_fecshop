@@ -20,27 +20,30 @@ use Yii;
 class ProductMongodb implements ProductInterface
 {
     public $numPerPage = 20;
-    
-    
+
+
     protected $_productModelName = '\fecshop\models\mongodb\Product';
     protected $_productModel;
-    
-    public function __construct(){
-        list($this->_productModelName,$this->_productModel) = \Yii::mapGet($this->_productModelName);  
+
+    public function __construct()
+    {
+        list($this->_productModelName, $this->_productModel) = \Yii::mapGet($this->_productModelName);
     }
-    
+
     public function getPrimaryKey()
     {
         return '_id';
     }
+
     /**
      * 得到分类激活状态的值
      */
-    public function getEnableStatus(){
+    public function getEnableStatus()
+    {
         $model = $this->_productModel;
         return $model::STATUS_ENABLE;
     }
-    
+
     public function getByPrimaryKey($primaryKey)
     {
         if ($primaryKey) {
@@ -53,7 +56,7 @@ class ProductMongodb implements ProductInterface
     /**
      * @property $sku|array
      * @property $returnArr|bool 返回的数据是否是数组格式，如果设置为
-     *		false，则返回的是对象数据
+     *        false，则返回的是对象数据
      * @return array or Object
      *               通过sku 获取产品，一个产品
      */
@@ -77,7 +80,7 @@ class ProductMongodb implements ProductInterface
     /**
      * @property $spu|array
      * @property $returnArr|bool 返回的数据是否是数组格式，如果设置为
-     *		false，则返回的是对象数据
+     *        false，则返回的是对象数据
      * @return array or Object
      *               通过spu 获取产品数组
      */
@@ -95,8 +98,7 @@ class ProductMongodb implements ProductInterface
             }
         }
     }
-    
-    
+
 
     /*
      * example filter:
@@ -119,7 +121,7 @@ class ProductMongodb implements ProductInterface
 
         return [
             'coll' => $query->all(),
-            'count'=> $query->limit(null)->offset(null)->count(),
+            'count' => $query->limit(null)->offset(null)->count(),
         ];
     }
 
@@ -134,14 +136,14 @@ class ProductMongodb implements ProductInterface
         $cursor = $collection->find();
         $count = $collection->count();
         $arr = [];
-        foreach ($cursor as $k =>$v) {
-            $v['_id'] = (string) $v['_id'];
+        foreach ($cursor as $k => $v) {
+            $v['_id'] = (string)$v['_id'];
             $arr[$k] = $v;
         }
 
         return [
             'coll' => $arr,
-            'count'=> $count,
+            'count' => $count,
         ];
     }
 
@@ -226,7 +228,7 @@ class ProductMongodb implements ProductInterface
             }
             //var_dump($mongoIds);
             $query->where(['in', $this->getPrimaryKey(), $mongoIds]);
-            $query->andWhere(['category'=>$category_id]);
+            $query->andWhere(['category' => $category_id]);
             $data = $query->all();
             if (is_array($data) && !empty($data)) {
                 foreach ($data as $one) {
@@ -234,7 +236,7 @@ class ProductMongodb implements ProductInterface
                 }
             }
         }
-        
+
         return $id_arr;
     }
 
@@ -262,13 +264,13 @@ class ProductMongodb implements ProductInterface
         if (!$this->initSave($one)) {
             return;
         }
-        
+
         $currentDateTime = \fec\helpers\CDate::getCurrentDateTime();
         $primaryVal = isset($one[$this->getPrimaryKey()]) ? $one[$this->getPrimaryKey()] : '';
         if ($primaryVal) {
             $model = $this->_productModel->findOne($primaryVal);
             if (!$model) {
-                Yii::$service->helper->errors->add('Product '.$this->getPrimaryKey().' is not exist');
+                Yii::$service->helper->errors->add('Product ' . $this->getPrimaryKey() . ' is not exist');
 
                 return;
             }
@@ -305,18 +307,18 @@ class ProductMongodb implements ProductInterface
          * 计算出来产品的最终价格。
          */
         $one['final_price'] = Yii::$service->product->price->getFinalPrice($one['price'], $one['special_price'], $one['special_from'], $one['special_to']);
-        $one['score'] = (int) $one['score'];
+        $one['score'] = (int)$one['score'];
         unset($one['_id']);
         /**
          * 保存产品
          */
         $saveStatus = Yii::$service->helper->ar->save($model, $one);
-        
+
         /*
          * 自定义url部分
          */
         if ($originUrlKey) {
-            $originUrl = $originUrlKey.'?'.$this->getPrimaryKey() .'='. $primaryVal;
+            $originUrl = $originUrlKey . '?' . $this->getPrimaryKey() . '=' . $primaryVal;
             $originUrlKey = isset($one['url_key']) ? $one['url_key'] : '';
             $defaultLangTitle = Yii::$service->fecshoplang->getDefaultLangAttrVal($one['name'], 'name');
             $urlKey = Yii::$service->url->saveRewriteUrlKeyByStr($defaultLangTitle, $originUrl, $originUrlKey);
@@ -327,8 +329,8 @@ class ProductMongodb implements ProductInterface
         /**
          * 更新产品库存。
          */
-        
-        Yii::$service->product->stock->saveProductStock($product_id,$one);
+
+        Yii::$service->product->stock->saveProductStock($product_id, $one);
         /**
          * 更新产品信息到搜索表。
          */
@@ -356,20 +358,20 @@ class ProductMongodb implements ProductInterface
         }
         $defaultLangName = \Yii::$service->fecshoplang->getDefaultLangAttrName('name');
         if (!isset($one['name'][$defaultLangName]) || empty($one['name'][$defaultLangName])) {
-            Yii::$service->helper->errors->add(' name '.$defaultLangName.' 不能为空 ');
+            Yii::$service->helper->errors->add(' name ' . $defaultLangName . ' 不能为空 ');
 
             return false;
         }
         $defaultLangDes = \Yii::$service->fecshoplang->getDefaultLangAttrName('description');
         if (!isset($one['description'][$defaultLangDes]) || empty($one['description'][$defaultLangDes])) {
-            Yii::$service->helper->errors->add(' description '.$defaultLangDes.'不能为空 ');
+            Yii::$service->helper->errors->add(' description ' . $defaultLangDes . '不能为空 ');
 
             return false;
         }
         if (is_array($one['custom_option']) && !empty($one['custom_option'])) {
             $new_custom_option = [];
-            foreach ($one['custom_option'] as $k=>$v) {
-                $k = preg_replace('/[^A-Za-z0-9\-_]/', '', $k); 
+            foreach ($one['custom_option'] as $k => $v) {
+                $k = preg_replace('/[^A-Za-z0-9\-_]/', '', $k);
                 $new_custom_option[$k] = $v;
             }
             $one['custom_option'] = $new_custom_option;
@@ -401,7 +403,7 @@ class ProductMongodb implements ProductInterface
                     Yii::$service->search->removeByProductId($id);
                     Yii::$service->product->stock->removeProductStock($id);
                     $model->delete();
-                    
+
                     //$this->removeChildCate($id);
                 } else {
                     Yii::$service->helper->errors->add("Product Remove Errors:ID:$id is not exist.");
@@ -496,13 +498,12 @@ class ProductMongodb implements ProductInterface
      */
     public function getProducts($filter)
     {
-        $where = $filter['where'];
-        if (empty($where)) {
-            return [];
-        }
+        $where = !isset($filter['where']) || empty($filter['where']) ? $filter['where'] : '';
         $select = $filter['select'];
         $query = $this->_productModel->find()->asArray();
-        $query->where($where);
+        if ($where) {
+            $query->where($where);
+        }
         $query->andWhere(['status' => $this->getEnableStatus()]);
         if (is_array($select) && !empty($select)) {
             $query->select($select);
@@ -513,16 +514,16 @@ class ProductMongodb implements ProductInterface
 
     /**
      *[
-     *	'category_id' 	=> 1,
-     *	'pageNum'		=> 2,
-     *	'numPerPage'	=> 50,
-     *	'orderBy'		=> 'name',
-     *	'where'			=> [
-     *		['>','price',11],
-     *		['<','price',22],
-     *	],
-     *	'select'		=> ['xx','yy'],
-     *	'group'			=> '$spu',
+     *    'category_id'    => 1,
+     *    'pageNum'        => 2,
+     *    'numPerPage'    => 50,
+     *    'orderBy'        => 'name',
+     *    'where'            => [
+     *        ['>','price',11],
+     *        ['<','price',22],
+     *    ],
+     *    'select'        => ['xx','yy'],
+     *    'group'            => '$spu',
      * ]
      * 得到分类下的产品，在这里需要注意的是：
      * 1.同一个spu的产品，有很多sku，但是只显示score最高的产品，这个score可以通过脚本取订单的销量（最近一个月，或者
@@ -548,19 +549,19 @@ class ProductMongodb implements ProductInterface
         $project = [];
         foreach ($select as $column) {
             $project[$column] = 1;
-            $group[$column] = ['$first' => '$'.$column];
-            
+            $group[$column] = ['$first' => '$' . $column];
+
         }
         $group['product_id'] = ['$first' => '$product_id'];
         $langCode = Yii::$service->store->currentLangCode;
-        $name_lang  = Yii::$service->fecshoplang->getLangAttrName('name',$langCode);
+        $name_lang = Yii::$service->fecshoplang->getLangAttrName('name', $langCode);
         $project['name'] = [
             $name_lang => 1
         ];
         $project['product_id'] = '$_id';
         $pipelines = [
             [
-                '$match'    => $where,
+                '$match' => $where,
             ],
             [
                 '$sort' => [
@@ -568,16 +569,16 @@ class ProductMongodb implements ProductInterface
                 ],
             ],
             [
-                '$project'    => $project,
+                '$project' => $project,
             ],
             [
-                '$group'    => $group,
+                '$group' => $group,
             ],
             [
-                '$sort'    => $orderBy,
+                '$sort' => $orderBy,
             ],
             [
-                '$limit'    => Yii::$service->product->categoryAggregateMaxCount,
+                '$limit' => Yii::$service->product->categoryAggregateMaxCount,
             ],
         ];
         $product_data = $this->_productModel->getCollection()->aggregate($pipelines);
@@ -602,22 +603,22 @@ class ProductMongodb implements ProductInterface
         if (empty($where)) {
             return [];
         }
-        $group['_id'] = '$'.$filter_attr;
-        $group['count'] = ['$sum'=> 1];
+        $group['_id'] = '$' . $filter_attr;
+        $group['count'] = ['$sum' => 1];
         $project = [$filter_attr => 1];
         $pipelines = [
             [
-                '$match'    => $where,
+                '$match' => $where,
             ],
             [
-                '$project'    => $project,
+                '$project' => $project,
             ],
             [
-                '$group'    => $group,
+                '$group' => $group,
             ],
             [
-                '$limit'    => Yii::$service->product->categoryAggregateMaxCount,
-            ], 
+                '$limit' => Yii::$service->product->categoryAggregateMaxCount,
+            ],
         ];
         $filter_data = $this->_productModel->getCollection()->aggregate($pipelines);
 
@@ -625,7 +626,7 @@ class ProductMongodb implements ProductInterface
     }
 
     /**
-     * @property $spu | String 
+     * @property $spu | String
      * @property $avag_rate | Int ，平均评星
      * @property $count | Int ，评论次数
      * @property $lang_code | String ，语言简码
@@ -644,13 +645,13 @@ class ProductMongodb implements ProductInterface
             $review_count_lang = Yii::$service->fecshoplang->getLangAttrName($attrName, $lang_code);
             foreach ($data as $one) {
                 $one['reviw_rate_star_average'] = $avag_rate;
-                $one['review_count']            = $count;
-                $a                              = $one['reviw_rate_star_average_lang'];
-                $a[$review_star_lang]           = $avag_lang_rate;
-                $b                              = $one['review_count_lang'];
-                $b[$review_count_lang]          = $lang_count;
+                $one['review_count'] = $count;
+                $a = $one['reviw_rate_star_average_lang'];
+                $a[$review_star_lang] = $avag_lang_rate;
+                $b = $one['review_count_lang'];
+                $b[$review_count_lang] = $lang_count;
                 $one['reviw_rate_star_average_lang'] = $a;
-                $one['review_count_lang']       = $b;
+                $one['review_count_lang'] = $b;
                 $one->save();
             }
         }
