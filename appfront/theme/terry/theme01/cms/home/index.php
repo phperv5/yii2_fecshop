@@ -5,13 +5,13 @@
         <?php foreach($categories as $category): ?>
         <a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a>
         <?php endforeach; ?>
-        <a href="search/search.html" class="mhl_last">All Categories</a>
+<!--        <a href="search/search.html" class="mhl_last">All Categories</a>-->
     </div>
      <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
-            <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
-            <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
-            <a class="item"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
         </div>
          <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
      </div>
@@ -19,21 +19,21 @@
     <div class="blank15px"></div>
     <div class="hm_box_jmp_left">
         <ul>
-            <li><a href="wholesale/brand-xhorse/brand-xhorse.html"><img src="upload/advs/2017011802685309.jpg" border="0" alt="Brand Xhorse"></a></li>
-            <li><a href="wholesale/brand-launch-x431/brand-launch-x431.html"><img src="upload/advs/2017011802730456.jpg" border="0" alt="Brand Launch X431"></a></li>
-            <li><a href="wholesale/brand-obdstar/brand-obdstar.html"><img src="upload/advs/2017011802749706.jpg" border="0" alt="Brand obdstar "></a></li>
-            <li><a href="wholesale/brand-xtool/brand-xtool.html"><img src="upload/advs/2017011802768676.jpg" border="0" alt="Brand Xtool"></a></li>
-            <li><a href="wholesale/brand-xtuner/brand-xtuner.html"><img src="upload/advs/2017011802785508.jpg" border="0" alt="Brand Xtuner"></a></li>
-            <li><a href="wholesale/brand-autel/brand-autel.html"><img src="upload/advs/2017011802803183.jpg" border="0" alt="Brand Autel"></a></li>
-            <li><a href="wholesale/brand-foxwell/brand-foxwell.html"><img src="upload/advs/2017011802818939.jpg" border="0" alt="Brand Foxwell"></a></li>
-            <li><a href="wholesale/brand-lishi/brand-lishi.html"><img src="upload/advs/2017011802840124.jpg" border="0" alt="Brand Lishi"></a></li>
+            <li><a href="wholesale/brand-xhorse/brand-xhorse.html"><img src="http://www.uobdii.com/upload/advs/2017011802685309.jpg" border="0" alt="Brand Xhorse"></a></li>
+            <li><a href="wholesale/brand-launch-x431/brand-launch-x431.html"><img src="http://www.uobdii.com/upload/advs/2017011802730456.jpg" border="0" alt="Brand Launch X431"></a></li>
+            <li><a href="wholesale/brand-obdstar/brand-obdstar.html"><img src="http://www.uobdii.com/upload/advs/2017011802749706.jpg" border="0" alt="Brand obdstar "></a></li>
+            <li><a href="wholesale/brand-xtool/brand-xtool.html"><img src="http://www.uobdii.com/upload/advs/2017011802768676.jpg" border="0" alt="Brand Xtool"></a></li>
+            <li><a href="wholesale/brand-xtuner/brand-xtuner.html"><img src="http://www.uobdii.com/upload/advs/2017011802785508.jpg" border="0" alt="Brand Xtuner"></a></li>
+            <li><a href="wholesale/brand-autel/brand-autel.html"><img src="http://www.uobdii.com/upload/advs/2017011802803183.jpg" border="0" alt="Brand Autel"></a></li>
+            <li><a href="wholesale/brand-foxwell/brand-foxwell.html"><img src="http://www.uobdii.com/upload/advs/2017011802818939.jpg" border="0" alt="Brand Foxwell"></a></li>
+            <li><a href="wholesale/brand-lishi/brand-lishi.html"><img src="http://www.uobdii.com/upload/advs/2017011802840124.jpg" border="0" alt="Brand Lishi"></a></li>
         </ul>
     </div>
     <div class="hm_box_jmp_right">
         <ul>
-            <li><a href="producttags/fcar-f3-g.html"><img src="upload/advs/2017081501679468.jpg" border="0" alt="Fcar F3-G (F3-W + F3-D) Fcar Scanner"></a></li>
-            <li><a href="wholesale/vpecker-e4-multi-functional-tablet-diagnostic-tool.html"><img src="upload/advs/2017081786055905.jpg" border="0" alt="VPECKER E4 Multi Functional Tablet Diagnostic Tool"></a></li>
-            <li><a href="wholesale/vxdiag-vcx-nano-pro-gm-ford-mazda-vm.html"><img src="upload/advs/2017073074269977.jpg" border="0" alt="VXDIAG VCX NANO PRO For GM Ford Mazda 3 in 1"></a></li>
+            <li><a href="producttags/fcar-f3-g.html"><img src="http://www.uobdii.com/upload/advs/2017081501679468.jpg" border="0" alt="Fcar F3-G (F3-W + F3-D) Fcar Scanner"></a></li>
+            <li><a href="wholesale/vpecker-e4-multi-functional-tablet-diagnostic-tool.html"><img src="http://www.uobdii.com/upload/advs/2017081786055905.jpg" border="0" alt="VPECKER E4 Multi Functional Tablet Diagnostic Tool"></a></li>
+            <li><a href="wholesale/vxdiag-vcx-nano-pro-gm-ford-mazda-vm.html"><img src="http://www.uobdii.com/upload/advs/2017073074269977.jpg" border="0" alt="VXDIAG VCX NANO PRO For GM Ford Mazda 3 in 1"></a></li>
         </ul>
     </div>
     <div class="clear"></div>
@@ -101,6 +101,7 @@
                 </div>
                 <div class="mhfai_photo"><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html" title="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1"><img src="upload/pro/cgdi-pro-bmw-msv80-key-programmer-180.1.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1" align="absmiddle" /></a></div>
             </div>
+            <?php var_dump($newArrivals);die;?>
             <div class="main_h_fa_item">
                 <div class="mhfai_bri">
                     <a href="wholesale/xhorse-vvdi-key-tool.html" title="Original V2.3.9 Xhorse VVDI Key Tool Remote Key Programmer Specially for America Cars Free Shipping by DHL">Original V2.3.9 Xhorse VVDI Key Tool Remote Key Pr...</a>

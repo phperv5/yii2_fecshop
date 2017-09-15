@@ -441,7 +441,7 @@ class Index
             'where' => $this->_where,
             'select' => $select,
         ];
-        //var_dump($filter);exit;
+//        var_dump($filter);exit;
         return Yii::$service->category->product->getFrontList($filter);
     }
 

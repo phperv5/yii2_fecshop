@@ -16,7 +16,7 @@ class Index
         // change current layout File.
         //Yii::$service->page->theme->layoutFile = 'home.php';
         return [
-           // 'bestFeaturedProducts' => $this->getFeaturedProduct(),
+            // 'bestFeaturedProducts' => $this->getFeaturedProduct(),
             'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
             'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
             'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
@@ -25,6 +25,7 @@ class Index
             'bestSellerProducts6' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
             'bestSellerProducts7' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
             'bestSellerProducts8' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'newArrivals' => $this->getNewArrivals(),
         ];
     }
 
@@ -35,7 +36,7 @@ class Index
         return $this->getProductBySkus($featured_skus);
     }
 
-    public function getBestSellerProducts($category_id = '')
+    public function getBestSellerProducts($category_id = null, $numPerPage = 10)
     {
         $filter['select'] = [
             'sku', 'spu', 'name', 'image',
@@ -46,7 +47,26 @@ class Index
         if ($category_id) {
             $filter['where'] = ['category' => $category_id];
         }
-        $filter['orderBy'] = ['score' => 1];
+        $filter['orderBy'] = ['score' => -1];
+        $filter['numPerPage'] = $numPerPage;
+        $products = Yii::$service->product->getProducts($filter);
+        $products = Yii::$service->category->product->convertToCategoryInfo($products);
+        return $products;
+    }
+
+    /*
+     * new New Arrivals
+     */
+    public function getNewArrivals($numPerPage = 4)
+    {
+        $filter['select'] = [
+            'sku', 'spu', 'name', 'image',
+            'price', 'special_price',
+            'special_from', 'special_to',
+            'url_key', 'score',
+        ];
+        $filter['orderBy'] = ['created_at' => -1];
+        $filter['numPerPage'] = $numPerPage;
         $products = Yii::$service->product->getProducts($filter);
         $products = Yii::$service->category->product->convertToCategoryInfo($products);
         return $products;
