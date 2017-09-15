@@ -16,8 +16,15 @@ class Index
         // change current layout File.
         //Yii::$service->page->theme->layoutFile = 'home.php';
         return [
-            'bestFeaturedProducts'     => $this->getFeaturedProduct(),
-            'bestSellerProducts'    => $this->getBestSellerProducts(),
+           // 'bestFeaturedProducts' => $this->getFeaturedProduct(),
+            'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts4' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts5' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts6' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts7' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts8' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
         ];
     }
 
@@ -28,12 +35,23 @@ class Index
         return $this->getProductBySkus($featured_skus);
     }
 
-    public function getBestSellerProducts()
+    public function getBestSellerProducts($category_id = '')
     {
-        $bestSellSkus = Yii::$app->controller->module->params['homeBestSellerSku'];
-        //var_dump(Yii::$app->controller->module->params['homeBestSellerSku']);
-        return $this->getProductBySkus($bestSellSkus);
+        $filter['select'] = [
+            'sku', 'spu', 'name', 'image',
+            'price', 'special_price',
+            'special_from', 'special_to',
+            'url_key', 'score',
+        ];
+        if ($category_id) {
+            $filter['where'] = ['category' => $category_id];
+        }
+        $filter['orderBy'] = ['score' => 1];
+        $products = Yii::$service->product->getProducts($filter);
+        $products = Yii::$service->category->product->convertToCategoryInfo($products);
+        return $products;
     }
+
 
     public function getProductBySkus($skus)
     {

@@ -221,7 +221,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts1;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -239,7 +239,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts2;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -257,7 +257,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts3;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -275,7 +275,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts4;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -293,7 +293,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts5;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -311,7 +311,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts6;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -329,7 +329,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts7;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',
@@ -347,7 +347,7 @@
     </div>
     <div class="hm_box">
         <?php
-        $parentThis['products'] = $bestSellerProducts;
+        $parentThis['products'] = $bestSellerProducts8;
         $parentThis['name'] = 'best-seller';
         $config = [
             'view'  		=> 'cms/home/index/product.php',

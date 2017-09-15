@@ -96,7 +96,7 @@ return [
             //#     Review部分设置		 ##
             //##############################
             'review' => [
-                'add_captcha'                    => true,  // 增加review页面是否开启验证码验证。
+                'add_captcha'                    => false,  // 增加review页面是否开启验证码验证。
                 'productPageReviewCount'         => 20,    // 在产品页面显示的review的个数。
                 'reviewPageReviewCount'          => 40,    // 在review列表页面，显示的review的个数
                 'addReviewOnlyLogin'             => true,   // 只有登录用户才有资格进行评论。

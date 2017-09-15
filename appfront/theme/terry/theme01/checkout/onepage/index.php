@@ -116,7 +116,7 @@
                 $('.address_id').val(address_id);
                 $('#ar_os_shippingAddress').show();
             })
-            
+
             currentUrl = "<?= Yii::$service->url->getUrl('checkout/onepage') ?>"
             //下单(这个部分未完成。)
             $("#onestepcheckout-place-order").click(function(){
