@@ -1,5 +1,4 @@
 ﻿<!-- <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>-->
-<?php var_dump($newArrivals);?>
  <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
@@ -40,164 +39,16 @@
     <div class="clear"></div>
 </div>
 <div class="main">
-    <div class="main_h_flashsale">
-        <div class="main_h_fs_title"><span class="red">New Arrivals</span><span class="gray">  &amp; </span><span class="green">Flash Sale</span>
-            <div class="fr"><span class="px12 arial no_bold"><a href="producttags/new-arrivals.html" class="gray">View More</a></span></div>
-        </div>
-        <div class="main_h_fs_are">
-            <div class="main_h_fs_item">
-                <div class="mhfsi_photo"><a href="<?= $newArrivals[0]['url'] ?>" title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order"><img src="upload/pro/skp1000-tablet-auto-key-programmer-ad-1.3.jpg" width="280" height="280" border="0" hspace="0" vspace="0" alt="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order" align="absmiddle" /></a></div>
-                <div class="mhfsi_bri">
-                    <a href="wholesale/skp1000-tablet-auto-key-programmer.html" title="2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order">2017 New SKP1000 Tablet Auto Key Programmer With Special functions for All Locksmiths Perfectly Replace CI600 Plus and SKP900 Pre-Order</a>
-                    <div class="blank10px"></div>
-                    <div id="ProPriDisp_h_n_70844"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$479.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;407.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;373.62</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$613.12</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;53,169</span>
-                        <span class="pro_pri_off_s" name="cc_v_USD" style="display:">4% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_EUR" style="display:none;">4% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_GBP" style="display:none;">4% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_AUD" style="display:none;">4% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_JPY" style="display:none;">4% off</span>
-                    </div>
-                    <div class="pro_g_r4_prate">
-                        <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                        <div class="rate_star_w75_tx">(<a href="reviews/pro"70844" target="_blank">8</a>)</div>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="main_h_fs_are">
-            <div class="main_h_fa_item">
-                <div class="mhfai_bri">
-                    <a href="wholesale/yanhua-bmw-fem-key-programmer.html" title="2017 Latest Yanhua BMW FEM/BDC Key Programmer Pre-Order">2017 Latest Yanhua BMW FEM/BDC Key Programmer Pre-...</a>
-                    <div class="blank10px"></div>
-                    <div id="ProPriDisp_h_n_71861"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$679.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;577.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;529.62</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$869.12</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;75,369</span>
-                    </div>
-                    <div class="blank10px"></div>
-                    <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
-                </div>
-                <div class="mhfai_photo"><a href="wholesale/yanhua-bmw-fem-key-programmer.html" title="2017 Latest Yanhua BMW FEM/BDC Key Programmer Pre-Order"><img src="upload/pro/yanhua-bmw-fem-key-programmer-180.1.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="2017 Latest Yanhua BMW FEM/BDC Key Programmer Pre-Order" align="absmiddle" /></a></div>
-            </div>
-            <div class="main_h_fa_item">
-                <div class="mhfai_bri">
-                    <a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html" title="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1">2017 New CGDI Prog BMW MSV80 Auto key programmer +...</a>
-                    <div class="blank10px"></div>
-                    <div id="ProPriDisp_h_n_70841"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$499.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;424.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;389.22</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$638.72</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;55,389</span>
-                    </div>
-                    <div class="blank10px"></div>
-                    <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro70841.html" target="_blank">5</a>)</div>
-                </div>
-                <div class="mhfai_photo"><a href="wholesale/cgdi-pro-bmw-msv80-key-programmer.html" title="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1"><img src="upload/pro/cgdi-pro-bmw-msv80-key-programmer-180.1.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="2017 New CGDI Prog BMW MSV80 Auto key programmer + Diagnosis tool+ IMMO Security 3 in 1" align="absmiddle" /></a></div>
-            </div>
+<!--    new arrivals-->
+    <?php
+    $parentThis['products'] = $newArrivals;
+    $parentThis['name'] = 'New Arrivals';
+    $config = [
+        'view'  		=> 'cms/home/index/newArrivals.php',
+    ];
+    echo Yii::$service->page->widget->renderContent('category_newArrivals_price',$config,$parentThis);
+    ?>
 
-            <div class="main_h_fa_item">
-                <div class="mhfai_bri">
-                    <a href="wholesale/xhorse-vvdi-key-tool.html" title="Original V2.3.9 Xhorse VVDI Key Tool Remote Key Programmer Specially for America Cars Free Shipping by DHL">Original V2.3.9 Xhorse VVDI Key Tool Remote Key Pr...</a>
-                    <div class="blank10px"></div>
-                    <div id="ProPriDisp_h_n_51580"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$269.99</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;229.49</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;210.59</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$345.59</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;29,969</span>
-                    </div>
-                    <div class="blank10px"></div>
-                    <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro51580.html" target="_blank">15</a>)</div>
-                </div>
-                <div class="mhfai_photo"><a href="wholesale/xhorse-vvdi-key-tool.html" title="Original V2.3.9 Xhorse VVDI Key Tool Remote Key Programmer Specially for America Cars Free Shipping by DHL"><img src="upload/pro/xhorse-vvdi-key-tool-p-180.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="Original V2.3.9 Xhorse VVDI Key Tool Remote Key Programmer Specially for America Cars Free Shipping by DHL" align="absmiddle" /></a></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="main_h_fs_are">
-            <div class="main_h_fs_item">
-
-                <div class="mhfsi_photo"><a href="wholesale/firmware-ktag-v7.020-ecu-programming-tool.html" title="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping"><img src="upload/pro/firmware-ktag-v7.020-ecu-programming-tool-ad-1.3.jpg" width="280" height="280" border="0" hspace="0" vspace="0" alt="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping" align="absmiddle" /></a></div>
-                <div class="mhfsi_bri">
-                    <a href="wholesale/firmware-ktag-v7.020-ecu-programming-tool.html" title="2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping">2017 Latest V2.23 KTAG ECU Programming Tool Firmware V7.020 KTAG Master Version with Unlimited Token Free Shipping</a>
-                    <div class="blank10px"></div>
-                    <div id="ProPriDisp_h_n_65788"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$199.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;169.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;155.22</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$254.72</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;22,089</span>
-                        <span class="pro_pri_off_s" name="cc_v_USD" style="display:">43% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_EUR" style="display:none;">43% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_GBP" style="display:none;">43% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_AUD" style="display:none;">43% off</span>
-                        <span class="pro_pri_off_s" name="cc_v_JPY" style="display:none;">43% off</span>
-                    </div>
-                    <div class="pro_g_r4_prate">
-                        <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                        <div class="rate_star_w75_tx">(<a href="reviews/pro"65788" target="_blank">13</a>)</div>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="main_h_fs_b">
-            <div class="main_h_fa_item">
-                <div class="mhfai_b_bri">
-                    <a href="wholesale/fcar-fvci-passthru-J2534-vci-tool.html" title="Original Fcar FVCI Passthru J2534 VCI Diagnosis, Reflash And Programming Tool Works Same As Autel MaxiSys Pro MS908P Pre-order" class="px11">Original Fcar FVCI Passthru J2534 VCI Diagnosis, R...</a>
-                    <div class="blank5px"></div>
-                    <div id="ProPriDisp_h_n_73879"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$1,500.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;1,275.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;1,170.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$1,920.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;166,500</span>
-                    </div>
-                    <div class="blank10px"></div>
-                </div>
-                <div class="mhfai_photo"><a href="wholesale/fcar-fvci-passthru-J2534-vci-tool.html" title="Original Fcar FVCI Passthru J2534 VCI Diagnosis, Reflash And Programming Tool Works Same As Autel MaxiSys Pro MS908P Pre-order"><img src="upload/pro/fcar-fvci-passthru-j2534-vci-tool-180.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="Original Fcar FVCI Passthru J2534 VCI Diagnosis, Reflash And Programming Tool Works Same As Autel MaxiSys Pro MS908P Pre-order" align="absmiddle" /></a></div>
-            </div>
-            <div class="main_h_fa_item">
-                <div class="mhfai_b_bri">
-                    <a href="wholesale/vas6154-vag-diagnostic-tool.html" title="2017 New WIFI VAS6154 ODIS 4.13 VAG Diagnostic Tool for VW Audi Skoda Free Shipping" class="px11">2017 New WIFI VAS6154 ODIS 4.13 VAG Diagnostic Too...</a>
-                    <div class="blank5px"></div>
-                    <div id="ProPriDisp_h_n_72866"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$119.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;101.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;92.82</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$152.32</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;13,209</span>
-                    </div>
-                    <div class="blank10px"></div>
-                    <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro72866.html" target="_blank">8</a>)</div>
-                </div>
-                <div class="mhfai_photo"><a href="wholesale/vas6154-vag-diagnostic-tool.html" title="2017 New WIFI VAS6154 ODIS 4.13 VAG Diagnostic Tool for VW Audi Skoda Free Shipping"><img src="upload/pro/vas6154-vag-diagnostic-tool-180.2.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="2017 New WIFI VAS6154 ODIS 4.13 VAG Diagnostic Tool for VW Audi Skoda Free Shipping" align="absmiddle" /></a></div>
-            </div>
-            <div class="main_h_fa_item">
-                <div class="mhfai_b_bri">
-                    <a href="wholesale/newest-kess-v2-obd2-manager-tuning-kit.html" title="2017 Newest V2.23 KESS V2 V5.017 Manager ECU Tuning Kit Master Version No Token Limitation for Both Car and Trucks" class="px11">2017 Newest V2.23 KESS V2 V5.017 Manager ECU Tunin...</a>
-                    <div class="blank5px"></div>
-                    <div id="ProPriDisp_h_n_68811"><span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">$199.00</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_EUR" style="display:none;">&euro;169.15</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_GBP" style="display:none;">&pound;155.22</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_AUD" style="display:none;">AU$254.72</span>
-                        <span class="pro_pri_curr_vip_s" name="cc_v_JPY" style="display:none;">&yen;22,089</span>
-                    </div>
-                    <div class="blank10px"></div>
-                    <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro68811.html" target="_blank">4</a>)</div>
-                </div>
-                <div class="mhfai_photo"><a href="wholesale/newest-kess-v2-obd2-manager-tuning-kit.html" title="2017 Newest V2.23 KESS V2 V5.017 Manager ECU Tuning Kit Master Version No Token Limitation for Both Car and Trucks"><img src="upload/pro/newest-kess-v2-obd2-manager-tuning-kit-180.2.jpg" width="120" height="120" border="0" hspace="0" vspace="0" alt="2017 Newest V2.23 KESS V2 V5.017 Manager ECU Tuning Kit Master Version No Token Limitation for Both Car and Trucks" align="absmiddle" /></a></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-    </div>
     <div class="blank10px"></div>
     <div class="hm_box hm_box_dir_tf hm_box_dir_tf_1">
         <div class="hmb_title"><h2><a href="wholesale/original-brand-tool/list.html">O2121riginal Brand Tool<span class="iconfont icon-right"></span></a></h2></div>
