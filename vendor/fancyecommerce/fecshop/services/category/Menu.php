@@ -97,6 +97,7 @@ class Menu extends Service
             'status' => $model::STATUS_ENABLE,
             'is_brand' => 1,
         ])->all();
+        var_dump($data);
         if (is_array($data) && !empty($data)) {
             foreach ($data as &$category) {
                 $category = [
