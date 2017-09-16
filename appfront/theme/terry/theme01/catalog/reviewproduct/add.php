@@ -14,7 +14,6 @@
                 <div class="brief">
 
                     <h2><span class="specialoffer"></span><a href="<?= $url  ?>"><?= $product_name ?></a></h2>
-                    <?= $product_name ?>
                     <div class="blank10px"></div>
 <!--                    <span class="px11">Item No.--><?//= $sku ?><!--</span>-->
                     <div class="clear"></div>
@@ -37,13 +36,14 @@
         <a name="WriteReview"></a>
         <div class="blank15px"></div>
         <div class="blank15px"></div>
-        <div class="blank15px"></div>
-
+        <?= Yii::$service->page->widget->render('flashmessage'); ?>
         <a name="na_write_rev"></a>
         <div class="fc_col_b">
             <span class="fc_tit">Write a Review</span>
             <form action="" method="post" name="form_rev_add">
                 <?= \fec\helpers\CRequest::getCsrfInputHtml();  ?>
+                <input name="editForm[product_spu]" value="<?= $spu ?>" id="product_spu" type="hidden">
+                <input name="editForm[product_id]" value="<?= $product_id ?>" id="product_id" type="hidden">
                 <dl class="px900">
                     <dt><span class="red">*</span> Rating:</dt>
                     <dd>
