@@ -49,6 +49,7 @@ class Product extends ActiveRecord
             'spu',
             'sku',
             'weight',
+            'package',
             'score',
             'status',
             'qty',
