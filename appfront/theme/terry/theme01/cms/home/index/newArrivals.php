@@ -137,7 +137,7 @@
     </div>
     <div class="main_h_fs_b">
         <div class="main_h_fa_item">
-            <div class="mhfai_bri">
+            <div class="mhfai_b_bri">
                 <a href="<?= $products[5]['url'] ?>" title="<?= $products[5]['name'] ?>"><?= $products[5]['name'] ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
@@ -162,7 +162,7 @@
             </div>
         </div>
         <div class="main_h_fa_item">
-            <div class="mhfai_bri">
+            <div class="mhfai_b_bri">
                 <a href="<?= $products[6]['url'] ?>" title="<?= $products[6]['name'] ?>"><?= $products[6]['name'] ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
@@ -187,7 +187,7 @@
             </div>
         </div>
         <div class="main_h_fa_item">
-            <div class="mhfai_bri">
+            <div class="mhfai_b_bri">
                 <a href="<?= $products[7]['url'] ?>" title="<?= $products[7]['name'] ?>"><?= $products[7]['name'] ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
