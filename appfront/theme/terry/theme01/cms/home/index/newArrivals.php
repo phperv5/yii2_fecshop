@@ -6,7 +6,7 @@
     <div class="main_h_fs_are">
         <div class="main_h_fs_item">
             <div class="mhfsi_photo"><a href="<?= $products[0]['url'] ?>" title="<?= $products[0]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[0]['image'],[280,280],false) ?>" width="280" height="280" border="0" hspace="0" vspace="0" alt="<?= $products[0]['name'] ?>" align="absmiddle" /></a>
+                    <img src="<?= Yii::$service->product->image->getResize($products[0]['image'],[280,280],false) ?>" width="280" height="280" border="0" hspace="0" vspace="0" alt="<?= $products[0]['name'] ?>" align="absmiddle" /></a>
             </div>
             <div class="mhfsi_bri">
                 <a href="<?= $products[0]['url'] ?>" title="<?= $products[0]['name'] ?>"><?= $products[0]['name'] ?></a>
@@ -52,7 +52,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[1]['url'] ?>" title="<?= $products[1]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[1]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[1]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[1]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[1]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
@@ -77,7 +77,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[1]['url'] ?>" title="<?= $products[2]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[2]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[2]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[2]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[2]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
@@ -102,7 +102,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[3]['url'] ?>" title="<?= $products[3]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[3]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[3]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[3]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[3]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
@@ -111,7 +111,7 @@
     <div class="main_h_fs_are">
         <div class="main_h_fs_item">
             <div class="mhfsi_photo"><a href="<?= $products[4]['url'] ?>" title="<?= $products[4]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[4]['image'],[280,280],false) ?>" width="280" height="280" border="0" hspace="0" vspace="0" alt="<?= $products[4]['name'] ?>" align="absmiddle" /></a>
+                    <img src="<?= Yii::$service->product->image->getResize($products[4]['image'],[280,280],false) ?>" width="280" height="280" border="0" hspace="0" vspace="0" alt="<?= $products[4]['name'] ?>" align="absmiddle" /></a>
             </div>
             <div class="mhfsi_bri">
                 <a href="<?= $products[4]['url'] ?>" title="<?= $products[4]['name'] ?>"><?= $products[4]['name'] ?></a>
@@ -157,7 +157,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[5]['url'] ?>" title="<?= $products[5]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[1]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[5]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[1]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[5]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
@@ -182,7 +182,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[1]['url'] ?>" title="<?= $products[6]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[6]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[6]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[6]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[6]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
@@ -207,7 +207,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[7]['url'] ?>" title="<?= $products[7]['name'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product[7]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[7]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[7]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[7]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
