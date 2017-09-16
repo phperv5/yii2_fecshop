@@ -990,7 +990,7 @@ input.btn_signin_h28{ background:url(../images/bg/btn_signin_h28.png) no-repeat 
 .rate_star span.star_casing {width:20px;height:20px;float:left;cursor:pointer;}
 .rate_star span.star_casing_on {width:20px;height:20px;float:left;cursor:pointer;background:url(../images/ico/star_m.gif) no-repeat left 0px;}
 
-.point {background: url(../images/ico/star_s_g.gif) repeat-x left 3px;margin:0px auto;width:80px; height:18px;}
+.point {background: url(../images/ico/star_s_g.gif) repeat-x left 3px;margin:0px auto;width:80px; height:18px;display: inline-block;}
 .point span {background: url(../images/ico/star_s_r.gif) repeat-x left 3px;margin:0px;text-indent:-9999px; display:block; height:18px;}
 .point span.star0 {width: 0px;}
 .point span.star0_5 {width: 7px;}

@@ -1,7 +1,8 @@
+<?php //var_dump(get_defined_vars());?>
 <div class="main">
     <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> -
         [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand
-            Tool</a> - OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL
+            Tool</a> - <?= $name;?>
     </div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
@@ -9,7 +10,6 @@
     <div class="ms_f_m">
         <input type="hidden" class="product_view_id" value="<?= $_id ?>">
         <input type="hidden" class="sku" value="<?= $sku; ?>"/>
-        <input type="hidden" class="product_csrf" name="" value=""/>
         <div class="pro_chief">
             <div class="pro_chf_photo">
                 <?php # 图片部分。
@@ -29,21 +29,19 @@
                 <div class="blank5px"></div>
                 <div class="pro_chf_bri_itemno">Item No.<?= $sku; ?>
                     <div class="blank5px"></div>
-                    <span class="gray verdana no_bold">Manufacturer: <a
-                                href="/wholesale/brand-obdstar/">OBDSTAR</a></span>
+<!--                    <span class="gray verdana no_bold">Manufacturer: <a href="/wholesale/brand-obdstar/">OBDSTAR</a></span>-->
                     <span id="num_pro_sold_51561"></span>
                 </div>
                 <div class="pro_ch_bf_rate" id="pro_rate_51561">
                     <div class="pro_ch_bf_rate_bg">
-                        <div class="pro_ch_bf_rate_vw" style="width:144px;"></div>
+                        <div class="pro_ch_bf_rate_vw" style="width:<?= $reviw_rate_star_average/5*150 ?>px;"></div>
                     </div>
-                    <div class="pro_ch_bf_rate_tx">4.8 stars, <a href="/reviews/pro51561" target="_blank">55
-                            reviews.</a></div>
+                    <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a href="/reviews/pro51561" target="_blank"><?= $review_count ?> reviews.</a></div>
                 </div>
                 <div class="blank15px"></div>
                 <div class="pro_bo_m">
                     <div class="pro_bo_stock_pra">
-                        <div class="p_bo_instock">In Stock</div>
+<!--                        <div class="p_bo_instock">In Stock</div>-->
                     </div>
                     <div class="">
                         <?php # 价格部分
@@ -69,9 +67,9 @@
                     <div class="clear"></div>
                 </div>
                 <div class="blank10px"></div>
-                <div class="exh_m_bri">Free Shipping Promotion for 2017 New & Hot sale Auto Key Programmer<br>Valid
-                    time: 10th to 20th August, Shopping Now!
-                </div>
+<!--                <div class="exh_m_bri">Free Shipping Promotion for 2017 New & Hot sale Auto Key Programmer<br>Valid-->
+<!--                    time: 10th to 20th August, Shopping Now!-->
+<!--                </div>-->
                 <div class="blank10px"></div>
                 <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now"/></div>
                 <div class="pro_bo_add_m">
@@ -163,19 +161,7 @@
                 </table>
                 <br/>
             <?php endif; ?>
-
             <?= $description; ?>
-
-            <div class="img-section">
-                <?php if (is_array($image_detail)): ?>
-                    <?php foreach ($image_detail as $image_detail_one): ?>
-                        <br/>
-                        <img class="js_lazy" src="<?= Yii::$service->image->getImgUrl('images/lazyload.gif'); ?>"
-                             data-original="<?= Yii::$service->product->image->getUrl($image_detail_one['image']); ?>"/>
-
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
         </div>
         <div class="text-reviews" id="text-reviews" style="">
             <?php # review部分。

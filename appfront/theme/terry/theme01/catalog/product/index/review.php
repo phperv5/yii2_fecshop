@@ -20,7 +20,9 @@
 					<?php foreach($coll as $one):  ?>
 					<li>
 						<div class="review_description_left">
-							<a href="#" class="review_star review_star_<?= $one['rate_star'] ?>" onclick="javascript:return false;"></a>
+                            <span class="point">
+                                        <span class="star<?= $one['rate_star'] ?>"></span>
+                                    </span>
 							<p><?= Yii::$service->page->translate->__('By'); ?> <?= $one['name'] ?></p>
 							<span><?= $one['review_date'] ? date('Y-m-d H:i:s',$one['review_date']) : '' ?></span>
 						</div>

@@ -24,13 +24,15 @@
                         <div style="padding-left:20px">
                             <div class="rbc_cold">
 								<span>
-									<span class="average_rating"><?= Yii::$service->page->translate->__('Average rating :');?></span>
-<!--									<span class="review_star star--><?//= $reviw_rate_star_average ?><!--" style="font-weight:bold;" itemprop="average"></span>-->
-                                    <strong class="point"><span class="star<?= $reviw_rate_star_average ?>"></span></strong>
-									<a rel="nofollow" href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/lists',['spu'=>$spu,'_id'=>$_id]); ?>">
+									<span class="average_rating" style="float:left;padding-top: 2px;"><?= Yii::$service->page->translate->__('Average rating :');?></span>
+                                    <span class="point" style="float:left;">
+                                        <span class="star<?= $reviw_rate_star_average ?>"></span>
+                                    </span>
+									<a style="float:left;padding-top: 2px;" rel="nofollow" href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/lists',['spu'=>$spu,'_id'=>$_id]); ?>">
 										(<span itemprop="count"><?= $review_count ?> <?= Yii::$service->page->translate->__('reviews');?></span>)
 									</a>
 								</span>
+                                <div class="clear"></div>
                             </div>
                             <a href="<?= $url ?>"  class="submitbutton">
                                 <span><span> <?= Yii::$service->page->translate->__('Add To Cart');?></span></span>
@@ -66,8 +68,9 @@
 							<?php foreach($coll as $one):  ?>
 							<li>
 								<div class="review_description_left">
-<!--									<a href="#" class="review_star review_star_--><?//= $one['rate_star'] ?><!--" onclick="javascript:return false;"></a>-->
-                                    <strong class="point" style="overflow: hidden;"><span class="star<?= $one['rate_star'] ?>"></span></strong>
+                                    <span class="point">
+                                        <span class="star<?= $one['rate_star'] ?>"></span>
+                                    </span>
 									<p><?= Yii::$service->page->translate->__('By');?> <?= $one['name'] ?></p>
 									<span><?= $one['review_date'] ? date('Y-m-d H:i:s',$one['review_date']) : '' ?></span>
 								</div>
