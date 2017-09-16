@@ -7,7 +7,6 @@
  * @license http://www.fecshop.com/license/
  */
 ?>
-
 <?php  if(is_array($parentThis['products']) && !empty($parentThis['products'])): ?>
     <?php foreach($parentThis['products'] as $item=>$product): ?>
 <div class="hm_pro_grid <?php if($item>=5):?> hm_pro_gr_col_2 <?php  endif;  ?>?>">
@@ -25,7 +24,7 @@
                         echo Yii::$service->page->widget->renderContent('category_newArrivals_price',$config);
                         ?>
                     </div>
-                    <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:72px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro51561.html" target="_blank">55</a>)</div></div></div>
+<!--                    <div class="hm_progrd_rate"><div class="pro_g_r4_prate"><div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:72px;"></div></div></div><div class="rate_star_w75_tx">(<a href="reviews/pro51561.html" target="_blank">55</a>)</div></div></div>-->
                 </div>
 </div>
     <?php  endforeach;  ?>

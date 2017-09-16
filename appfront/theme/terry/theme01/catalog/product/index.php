@@ -71,7 +71,8 @@
 <!--                    time: 10th to 20th August, Shopping Now!-->
 <!--                </div>-->
                 <div class="blank10px"></div>
-                <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now"/></div>
+                <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now"
+                                                 onclick="location.href='<?= Yii::$service->url->getUrl('payment/paypal/express/start'); ?>'"/></div>
                 <div class="pro_bo_add_m">
                     <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value="" title="Add to Cart"/>
                 </div>

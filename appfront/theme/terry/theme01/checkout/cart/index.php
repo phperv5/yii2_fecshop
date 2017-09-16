@@ -92,8 +92,7 @@ use fecshop\app\appfront\helper\Format;
             </form>
             <div class="blank10px"></div>
             <div class="fl" style="margin-top:10px;">
-                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping"
-                       onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">
+<!--                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">-->
             </div>
             <div class="float_right" style="margin-top:10px;">
                 -- OR -- <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid"
