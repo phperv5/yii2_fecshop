@@ -97,7 +97,6 @@ class Menu extends Service
             'status' => $model::STATUS_ENABLE,
             'is_brand' => 1,
         ])->all();
-        var_dump($data);
         if (is_array($data) && !empty($data)) {
             foreach ($data as &$category) {
                 $category = [
@@ -105,6 +104,36 @@ class Menu extends Service
                     'name' => Yii::$service->store->getStoreAttrVal($category['name'], 'name'),
                     'menu_custom' => Yii::$service->store->getStoreAttrVal($category['menu_custom'], 'menu_custom'),
                     'url' => Yii::$service->url->getUrl($category['url_key']),
+                ];
+            }
+            return $data;
+        }
+        return '';
+    }
+
+    protected function actionGetBrand($parentId = '0')
+    {
+        $model = $this->_categoryModel;
+        $arr = [];
+        if (!$parentId) {
+            $parentId = $this->rootCategoryId;
+        }
+        $data = $this->_categoryModel->find()->asArray()->select([
+            '_id', 'parent_id', 'name', 'url_key', 'menu_custom','thumbnail_image','image',
+        ])->where([
+            'parent_id' => $parentId,
+            'status' => $model::STATUS_ENABLE,
+            'is_brand' => 2,
+        ])->all();
+        if (is_array($data) && !empty($data)) {
+            foreach ($data as &$category) {
+                $category = [
+                    '_id' => (string)$category['_id'],
+                    'name' => Yii::$service->store->getStoreAttrVal($category['name'], 'name'),
+                    'menu_custom' => Yii::$service->store->getStoreAttrVal($category['menu_custom'], 'menu_custom'),
+                    'url' => Yii::$service->url->getUrl($category['url_key']),
+                    'thumbnail_image' => $category['thumbnail_image'],
+                    'image' => $category['image'],
                 ];
             }
             return $data;
