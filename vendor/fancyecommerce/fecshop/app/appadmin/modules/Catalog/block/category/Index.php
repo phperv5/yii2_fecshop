@@ -238,7 +238,19 @@ class Index extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterf
                 ],
                 'require' => 1,
             ],
-
+            [
+                'label'=>'是否是品牌',
+                'name'=>'is_brand',
+                'display'=>[
+                    'type' => 'select',
+                    'data' => [
+                        1    => '否',
+                        2    => '是',
+                    ],
+                ],
+                'require' => 1,
+                'default' => 1,
+            ],
             [
                 'label'=>'分类状态',
                 'name'=>'status',

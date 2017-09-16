@@ -95,6 +95,7 @@ class Menu extends Service
         ])->where([
             'parent_id' => $parentId,
             'status' => $model::STATUS_ENABLE,
+            'is_brand' => 1,
         ])->all();
         if (is_array($data) && !empty($data)) {
             foreach ($data as &$category) {
