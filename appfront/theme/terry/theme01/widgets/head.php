@@ -14,6 +14,7 @@
 <meta name="robots" content="INDEX,FOLLOW" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <?php $parentThis->head() ?>
-<!--<script type="text/javascript" id="018544a2c4" src="http://115.28.80.138:200/script.php?id=018544a2c4"></script>-->
-<!--<script type="text/javascript" id="018544a2c4" src="ls.uobdii.org/script.php?id=85db553d33449400ad49117cfd638a08"></script>-->
-<script type="text/javascript" id="85db553d33449400ad49117cfd638a08" src="http://ls.uobdii.org/script.php?id=85db553d33449400ad49117cfd638a08"></script>
+<!-- livezilla.net PLACE SOMEWHERE IN BODY -->
+<script type="text/javascript" id="9ee63f4528e2de7c8be9cb46235930ec" src="http://115.28.80.138:200/script.php?id=9ee63f4528e2de7c8be9cb46235930ec"></script>
+<!-- livezilla.net PLACE SOMEWHERE IN BODY -->
+<!--<script type="text/javascript" id="85db553d33449400ad49117cfd638a08" src="http://ls.uobdii.org/script.php?id=85db553d33449400ad49117cfd638a08"></script>-->
