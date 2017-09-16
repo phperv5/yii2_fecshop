@@ -6,7 +6,7 @@
                 <?php $categories = Yii::$service->category->menu->getBrand();?>
                 <?php foreach($categories as $category): ?>
                 <a href="<?= $category['url'] ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($product['image'], [120, 40], false) ?>" width="120" height="40" border="0" hspace="0" vspace="0" alt="<?= $category['name'] ?>" align="absmiddle"/>
+                    <img src="<?= Yii::$service->product->image->getResize($category['image'], [120, 40], false) ?>" width="120" height="40" border="0" hspace="0" vspace="0" alt="<?= $category['name'] ?>" align="absmiddle"/>
                 </a>
                 <?php endforeach; ?>
                 <div class="clear"></div>
