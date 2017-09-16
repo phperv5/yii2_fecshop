@@ -161,6 +161,16 @@ class Attr
                 'require' => 0,
             ],
             [
+                'label'=>'package',
+                'name'=>'package',
+                'display'=>[
+                    'type' => 'inputString',
+                    'lang' => false,
+
+                ],
+                'require' => 0,
+            ],
+            [
                 'label'=>'分值',
                 'name'=>'score',
                 'display'=>[

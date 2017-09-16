@@ -1,4 +1,4 @@
-<?php //var_dump(get_defined_vars());?>
+<?php $weight;?>
 <div class="main">
     <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> -
         [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand
@@ -93,35 +93,19 @@
                                 href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span
                                     class="px10">See details &raquo;</span></a></span></dd>
                 <dt class="w100px">Weight:</dt>
-                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>
+<!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
+                <dd class="w420px"><?= $weight;?>KG</dd>
                 <dt class="w100px">Package:</dt>
-                <dd class="w420px">39cm*30cm*12cm<span class="gray_dark">( Inch:15.35*11.81*4.72 )</span>
+                <dd class="w420px"><?= $package;?></span>
                 </dd>
                 <dt class="w100px">Returns:</dt>
-                <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.<a
-                            href="/support/return-policy-4174.html" target="_blank"><span class="px11 verdana">Read details »</span></a>
+                <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.
+                    <a href="/support/return-policy-4174.html" target="_blank"><span class="px11 verdana">Read details »</span></a>
                 </dd>
             </dl>
             <div class="blank10px"></div>
             <div class="dashed5px"></div>
-            <div class="line18em"><b class="green_dark">Related Download Files:</b><br/>&nbsp;&nbsp;
-                <a href="/upload/pro/obdstar-x300dp-register-guide.pdf" target="_blank"><b>
-                        <img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif'); ?>" align="absmiddle"
-                             border="0" hspace="5"/>obdstar-x300dp-register-guide.pdf</b>
-                </a>&nbsp;&nbsp;
-                <span class="px11 gray">(710.9K)</span></a><br/>&nbsp;&nbsp;
-                <a href="/upload/pro/obdstar-x300-dp-user-manual.pdf" target="_blank"><b>
-                        <img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif'); ?>" align="absmiddle"
-                             border="0" hspace="5"/>obdstar-x300-dp-user-manual.pdf</b></a>
-                &nbsp;&nbsp;<span class="px11 gray">(6,727.1K)</span></a><br/>&nbsp;&nbsp;
-                <a href="/upload/pro/obdstar-x300dp-upgrade-guide.pdf" target="_blank"><b>
-                        <img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif'); ?>" align="absmiddle"
-                             border="0" hspace="5"/>obdstar-x300dp-upgrade-guide.pdf</b></a>&nbsp;
-                &nbsp;<span class="px11 gray">(262.5K)</span>
-                </a>
-            </div>
             <div class="blank5px"></div>
-            <div class="dashed5px"></div>
             <div class="pro_ch_bf_digg">
                 <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">
                         <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>
@@ -186,22 +170,20 @@
     </div>
 </div>
 <div class="blank10px"></div>
-<div class="fc_tags"><b class="px13">Product's Tags:</b>
-    <a href="/producttags/original-obdstar.html"><strong>Original OBDSTAR</strong></a>&nbsp;&nbsp;
-    <a href="/producttags/ship-from-ca.html">Ship From CA</a>&nbsp;&nbsp;
-    <a href="/producttags/free-shipping-key-tool.html"><strong>free shipping key tool</strong></a>&nbsp;&nbsp;
-    <div class="clear"></div>
-</div>
-<div class="blank10px"></div>
-<div class="blank10px"></div>
-<div class="page_prev_next">
-    <div class="prev">Previous: <a href="/wholesale/squ-of68-universal-car-emulator.html">SQU OF68 Universal Car
-            Emulator Mini Parts Big Works</a></div>
-    <div class="next">Next: <a href="/wholesale/xhorse-vvdi-mb-bga-tool-benz-infrared-adapter.html">Xhorse VVDI MB BGA
-            TOOL BENZ Infrared Adapter</a></div>
-</div>
-<div class="goto_top"><a href="javascript:void(0);" rel="nofollow"
-                         onclick="GotoScrollTop(1, 'WebPageTop', 40, '', '', ''); return false;">Go to TOP</a></div>
+<!--<div class="fc_tags"><b class="px13">Product's Tags:</b>-->
+<!--    <a href="/producttags/original-obdstar.html"><strong>Original OBDSTAR</strong></a>&nbsp;&nbsp;-->
+<!--    <a href="/producttags/ship-from-ca.html">Ship From CA</a>&nbsp;&nbsp;-->
+<!--    <a href="/producttags/free-shipping-key-tool.html"><strong>free shipping key tool</strong></a>&nbsp;&nbsp;-->
+<!--    <div class="clear"></div>-->
+<!--</div>-->
+<!--<div class="blank10px"></div>-->
+<!--<div class="blank10px"></div>-->
+<!--<div class="page_prev_next">-->
+<!--    <div class="prev">Previous: <a href="/wholesale/squ-of68-universal-car-emulator.html">SQU OF68 Universal Car-->
+<!--            Emulator Mini Parts Big Works</a></div>-->
+<!--    <div class="next">Next: <a href="/wholesale/xhorse-vvdi-mb-bga-tool-benz-infrared-adapter.html">Xhorse VVDI MB BGA-->
+<!--            TOOL BENZ Infrared Adapter</a></div>-->
+<!--</div>-->
 <div class="clear"></div>
 </div>
 <div class="main_bottom"></div>

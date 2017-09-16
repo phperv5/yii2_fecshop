@@ -70,6 +70,7 @@ class Index
             'image_detail'              => $this->_image_detail,
             'sku'                       => $this->_product['sku'],
             'spu'                       => $this->_product['spu'],
+            'weight'                       => $this->_product['weight'],
             'attr_group'                => $this->_product['attr_group'],
             'review_count'              => $review_count,
             'reviw_rate_star_average'   => $reviw_rate_star_average,
