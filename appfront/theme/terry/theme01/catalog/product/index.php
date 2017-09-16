@@ -36,7 +36,7 @@
                     <div class="pro_ch_bf_rate_bg">
                         <div class="pro_ch_bf_rate_vw" style="width:<?= $reviw_rate_star_average/5*150 ?>px;"></div>
                     </div>
-                    <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a href="/reviews/pro51561" target="_blank"><?= $review_count ?> reviews.</a></div>
+                    <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/lists',['spu'=>$spu,'_id'=>$_id]); ?>" target="_blank"><?= $review_count ?> reviews.</a></div>
                 </div>
                 <div class="blank15px"></div>
                 <div class="pro_bo_m">
@@ -188,6 +188,7 @@
 </div>
 <div class="main_bottom"></div>
 </div>
+
 <script>
     // add to cart js
     <?php $this->beginBlock('add_to_cart') ?>
