@@ -24,6 +24,22 @@ class Review extends ActiveRecord
     const ACTIVE_STATUS = 1;
     // 审核拒绝的状态
     const REFUSE_STATUS = 2;
+
+    public function getActiveStatus()
+    {
+        return self::ACTIVE_STATUS;
+    }
+
+    public function getNoActiveStatus()
+    {
+        return self::NOACTIVE_STATUS;
+    }
+
+    public function getRefuseStatus()
+    {
+        return self::REFUSE_STATUS;
+    }
+
     /**
      * mongodb collection 的名字，相当于mysql的table name
      */
@@ -37,6 +53,7 @@ class Review extends ActiveRecord
     {
         self::$_customAttrs = $attrs;
     }
+
     /**
      * mongodb是没有表结构的，因此不能像mysql那样取出来表结构的字段作为model的属性
      * 因此，需要自己定义model的属性，下面的方法就是这个作用
@@ -70,6 +87,7 @@ class Review extends ActiveRecord
 
         return $origin;
     }
+
     /**
      * 给model对应的表创建索引的方法
      * 在indexs数组中填写索引，如果有多个索引，可以填写多行
@@ -79,8 +97,8 @@ class Review extends ActiveRecord
     public static function create_index()
     {
         $indexs = [
-            ['product_spu'        => -1],
-            ['product_sku'        => -1],
+            ['product_spu' => -1],
+            ['product_sku' => -1],
             ['product_id' => -1],
             ['user_id' => -1],
 
