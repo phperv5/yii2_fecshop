@@ -30,11 +30,9 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
-
         </fieldset>
 
         <a name="WriteReview"></a>
-        <div class="blank15px"></div>
         <div class="blank15px"></div>
         <?= Yii::$service->page->widget->render('flashmessage'); ?>
         <a name="na_write_rev"></a>
