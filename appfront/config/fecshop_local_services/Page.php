@@ -120,6 +120,15 @@ return [
                     'flashmessage' => [
                         'view'  => 'widgets/flashmessage.php',
                     ],
+                    'menu_sub' => [
+                        'class' => 'fecshop\app\appfront\widgets\Menu_sub',
+                        // 根据多模板的优先级，依次去模板找查找该文件，直到找到这个文件。
+                        'view'  => 'widgets/menu_sub.php',
+                        'cache' => [
+                            'enable'    => false,
+                            //'timeout' 	=> 4500,
+                        ],
+                    ],
                 ],
             ],
 

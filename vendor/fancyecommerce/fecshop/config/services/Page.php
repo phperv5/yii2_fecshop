@@ -146,6 +146,7 @@ return [
                     'flashmessage' => [
                         'view'  => 'widgets/flashmessage.php',
                     ],
+
                 ]
                 */
             ],
