@@ -1201,3 +1201,14 @@ a.cartqtyup {
 	font-size: 0.8em;
 	padding: 8px 30px;
 }
+
+.validation-advice {
+    clear: both;
+    color: #f00;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 3px 0 0;
+    min-height: 13px;
+    padding-left: 17px;
+	
+}
