@@ -119,6 +119,9 @@
             </div>
         </div>
         <!--分享-->
+            <div class="pro_ch_bf_share">
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0776ba615dc47"></script>
+            </div>
     </div>
 </div>
 <div class="blank10px"></div>
