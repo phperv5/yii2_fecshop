@@ -22,10 +22,10 @@ class Register
     {
         $firstname = isset($param['firstname']) ? $param['firstname'] : '';
         $lastname = isset($param['lastname']) ? $param['lastname'] : '';
+        $is_subscribed = isset($param['is_subscribed']) ? $param['is_subscribed'] : '';
         $email = isset($param['email']) ? $param['email'] : '';
         $registerParam = \Yii::$app->getModule('customer')->params['register'];
         $registerPageCaptcha = isset($registerParam['registerPageCaptcha']) ? $registerParam['registerPageCaptcha'] : false;
-
         return [
             'firstname'        => $firstname,
             'lastname'        => $lastname,
@@ -36,6 +36,7 @@ class Register
             'minPassLength' => Yii::$service->customer->getRegisterPassMinLength(),
             'maxPassLength' => Yii::$service->customer->getRegisterPassMaxLength(),
             'registerPageCaptcha' => $registerPageCaptcha,
+            'country' => Yii::$service->helper->country->getAllCountryArray(),
         ];
     }
 
