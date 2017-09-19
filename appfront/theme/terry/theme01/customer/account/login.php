@@ -1,6 +1,6 @@
 <div class="main container one-column">
     <?= Yii::$service->page->widget->render('flashmessage'); ?>
-    <div class="page_where_l"><a href='../www.uobdii.html'>Home</a> - Member Sign In</div>
+    <div class="page_where_l"><a href='/'>Home</a> - Member Sign In</div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="mn_full">
