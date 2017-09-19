@@ -14,8 +14,8 @@ return [
         ],
         'childService' => [
             'mongoSearch' => [
-                'searchIndexConfig'  => [ //设置用于全文搜索的产品属性以及权重，权重高的属性，排名靠前。
-                    'name'        => 10,    // 产品name作为full search text的属性，权重为10
+                'searchIndexConfig' => [ //设置用于全文搜索的产品属性以及权重，权重高的属性，排名靠前。
+                    'name' => 10,    // 产品name作为full search text的属性，权重为10
                     'description' => 5,   // 产品description作为full search text的属性，权重为5
                 ],
                 // more: https://docs.mongodb.com/manual/reference/text-search-languages/#text-search-languages
@@ -27,7 +27,7 @@ return [
                  * 这种方式您会感觉很繁琐，但是必须要这样做，这是mongodb在搜索方面的对语言设置方式。
                  * 
                  */
-                'searchLang'  => [
+                'searchLang' => [
                     'en' => 'english',
                     'fr' => 'french',
                     'de' => 'german',
@@ -36,13 +36,14 @@ return [
                     'pt' => 'portuguese',
                 ],
             ],
-              //  'xunSearch'  => [
-              //    'fuzzy'         => true,  // 是否开启模糊查询
-              //  'synonyms'      => true, //是否开启同义词翻译
-              //  'searchLang'    => [
-              //      'zh' => 'chinese',
-              //  ],
-             // ],
+            'xunSearch' => [
+                'enableService' => false,
+                'fuzzy' => true,  // 是否开启模糊查询
+                'synonyms' => true, //是否开启同义词翻译
+                'searchLang' => [
+                    'zh' => 'chinese',
+                ],
+            ],
 
         ],
     ],
