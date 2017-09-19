@@ -40,20 +40,21 @@ class CustomerRegister extends Customer
             ['firstname', 'filter', 'filter' => 'trim'],
             ['lastname', 'filter', 'filter' => 'trim'],
             ['is_subscribed', 'validateIsSubscribed'],
-        //    ['email', 'required'],
-        //    ['email', 'email'],
-        //    ['email', 'string', 'max' => 255],
-        //	['email', 'validateEmail'],
-        //	['code', 'string', 'min' => 5, 'max' => 5],
+            ['email', 'required'],
+            ['country', 'filter', 'filter' => 'trim'],
+            //    ['email', 'email'],
+            //    ['email', 'string', 'max' => 255],
+            //	['email', 'validateEmail'],
+            //	['code', 'string', 'min' => 5, 'max' => 5],
 
-        //	['role', 'required'],
+            //	['role', 'required'],
 
-        //	['person', 'required'],
+            //	['person', 'required'],
 
-        //    ['email', 'unique', 'targetClass' => '\fecadmin\models\AdminUser', 'message' => 'This email address has already been taken.'],
+            ['email', 'unique', 'targetClass' => '\fecadmin\models\AdminUser', 'message' => 'This email address has already been taken.'],
 
-        //	['password', 'required'],
-         //   ['password', 'string', 'min' => 6],
+            //	['password', 'required'],
+            //   ['password', 'string', 'min' => 6],
 
         ];
 
@@ -76,7 +77,7 @@ class CustomerRegister extends Customer
     {
         if ($this->id) {
             $one = Customer::find()
-                ->where(' id != :id AND email = :email ', [':id'=>$this->id, ':email'=>$this->email])
+                ->where(' id != :id AND email = :email ', [':id' => $this->id, ':email' => $this->email])
                 ->one();
             if ($one['id']) {
                 $this->addError($attribute, 'this email is exist!');

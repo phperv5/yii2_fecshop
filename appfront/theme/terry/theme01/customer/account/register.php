@@ -7,11 +7,11 @@
 
         <div class="blank10px"></div>
         <span class="px11 gray"><span class="red_star px10">*</span> means required fields </span>
-        <div class="float_right px13">New Customer? <a href="<?= Yii::$service->url->getUrl("customer/account/register");  ?>" class="btn_blue"><span class="white">Sign In</span></a></div>
+        <div class="float_right px13">New Customer? <a href="<?= Yii::$service->url->getUrl("customer/account/login");  ?>" class="btn_blue"><span class="white">Sign In</span></a></div>
         <div class="blank10px"></div>
 
         <form action="<?= Yii::$service->url->getUrl('customer/account/register'); ?>" method="post" id="form-validate">
-
+            <?= \fec\helpers\CRequest::getCsrfInputHtml();  ?>
             <div id="u_reg_email" class="rowfull">
                 <div class="rowf_per25tr"><span class="red_star">*</span><b>E-mail Address:</b></div>
                 <div class="rowf_per70">
