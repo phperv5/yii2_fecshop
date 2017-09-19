@@ -7,7 +7,7 @@
         <h1>Sign into your account</h1>
         <div class="blank10px"></div>
         <div class="blank10px"></div>
-        <div class="float_right px13">New Customer? <a href="" class="btn_blue"><span class="white">Register Free</span></a></div>
+        <div class="float_right px13">New Customer? <a href="<?= Yii::$service->url->getUrl("customer/account/register");  ?>" class="btn_blue"><span class="white">Register Free</span></a></div>
         <div class="blank10px"></div>
         <div class="blank10px"></div>
 

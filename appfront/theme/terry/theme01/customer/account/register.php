@@ -7,7 +7,7 @@
 
         <div class="blank10px"></div>
         <span class="px11 gray"><span class="red_star px10">*</span> means required fields </span>
-        <div class="float_right px13">New Customer? <a href="signin.asp�sSignReturnURL=.html" class="btn_blue"><span class="white">Sign In</span></a></div>
+        <div class="float_right px13">New Customer? <a href="<?= Yii::$service->url->getUrl("customer/account/register");  ?>" class="btn_blue"><span class="white">Sign In</span></a></div>
         <div class="blank10px"></div>
 
         <form action="<?= Yii::$service->url->getUrl('customer/account/register'); ?>" method="post" id="form-validate">
