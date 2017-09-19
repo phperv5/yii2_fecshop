@@ -29,21 +29,21 @@ return [
                  */
                 'searchLang' => [
                     'en' => 'english',
-                    'fr' => 'french',
-                    'de' => 'german',
-                    'es' => 'spanish',
-                    'ru' => 'russian',
-                    'pt' => 'portuguese',
+                    //'fr' => 'french',
+                    //'de' => 'german',
+                    //'es' => 'spanish',
+                    //'ru' => 'russian',
+                    //'pt' => 'portuguese',
                 ],
             ],
-            'xunSearch' => [
-                'enableService' => false,
-                'fuzzy' => true,  // 是否开启模糊查询
-                'synonyms' => true, //是否开启同义词翻译
-                'searchLang' => [
-                    'zh' => 'chinese',
-                ],
-            ],
+//            'xunSearch' => [
+//                'enableService' => false,
+//                'fuzzy' => true,  // 是否开启模糊查询
+//                'synonyms' => true, //是否开启同义词翻译
+//                'searchLang' => [
+//                    'zh' => 'chinese',
+//                ],
+//            ],
 
         ],
     ],
