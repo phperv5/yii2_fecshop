@@ -225,6 +225,7 @@
             } else {
                 url = $(this).attr('url');
                 $(this).addClass('act');
+
                 window.location.href = url;
             }
         });

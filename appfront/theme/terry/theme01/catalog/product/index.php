@@ -200,16 +200,7 @@
     $(document).ready(function () {
         $(".addProductToCart").click(function () {
             i = 1;
-            $(".product_custom_options .pg .rg ul.required").each(function () {
-                val = $(this).find("li.current a.current").attr("value");
-                if (!val) {
-                    $(this).parent().parent().css("border", "1px dashed #cc0000").css('padding-left', '10px').css("margin-left", "-10px");
-                    i = 0;
-                } else {
-                    $(this).parent().parent().css("border", "none").css('padding-left', '0px').css("margin-left", "0px");
 
-                }
-            });
             if (i) {
                 custom_option = new Object();
                 $(".product_custom_options .pg .rg ul").each(function () {
@@ -265,7 +256,7 @@
         // product favorite
         $("#divMyFavorite").click(function () {
             if ($(this).hasClass('act')) {
-                alert("<?= Yii::$service->page->translate->__('You already favorite this product'); ?>");
+                $('.txt_r_addToFavorites').empty().html('<span class="px11 red">Added it successfully.</span>');
             } else {
                 url = $(this).attr('url');
                 $(this).addClass('act');
