@@ -3,11 +3,11 @@
 return [
     'components' => [
         'db' => [
-            'class'    => 'yii\db\Connection',
-            'dsn'      => '',
+            'class' => 'yii\db\Connection',
+            'dsn' => '',
             'username' => '',
             'password' => '',
-            'charset'  => '',
+            'charset' => '',
         ],
         'mongodb' => [
             'class' => 'yii\mongodb\Connection',
@@ -19,7 +19,7 @@ return [
             //'dsn' => 'mongodb://10.10.10.252:10001/erp,mongodb://10.10.10.252:10002/erp,mongodb://10.10.10.252:10004/erp?replicaSet=terry&readPreference=primaryPreferred',
         ],
         'mailer' => [
-            'class'    => 'yii\swiftmailer\Mailer',
+            'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
@@ -28,10 +28,10 @@ return [
         ],
 
         'redis' => [
-            'class'    => 'yii\redis\Connection',
+            'class' => 'yii\redis\Connection',
             'hostname' => '',
-            'port'     => ,
-            'password'  => '',
+            'port' => '',
+            'password' => '',
 
         ],
     ],
