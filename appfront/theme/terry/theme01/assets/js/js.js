@@ -45,8 +45,7 @@ $(document).ready(function(){
 				$(".login-text").html(str);
 			}
 			if(data.favorite){
-				$(".myFavorite_nohove").addClass("act");
-				$(".myFavorite_nohove a").addClass("act");
+                $('#txt_r_addToFavorites').empty().html('<span class="px11 red">Added it successfully.</span>');
 			}
 			if(data.favorite_product_count){
 				$("#js_favour_num").html(data.favorite_product_count);

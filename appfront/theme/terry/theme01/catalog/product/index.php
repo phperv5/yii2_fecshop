@@ -256,7 +256,7 @@
         // product favorite
         $("#divMyFavorite").click(function () {
             if ($(this).hasClass('act')) {
-                $('.txt_r_addToFavorites').empty().html('<span class="px11 red">Added it successfully.</span>');
+                $('#txt_r_addToFavorites').empty().html('<span class="px11 red">Added it successfully.</span>');
             } else {
                 url = $(this).attr('url');
                 $(this).addClass('act');
