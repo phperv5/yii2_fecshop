@@ -8,9 +8,8 @@
 return [
     'image' => [
         'class' => 'fecshop\services\Image',
-        /*
         'imageFloder' => 'media/upload',
-        'maxUploadMSize' => 2,  // MB
+        'maxUploadMSize' => 8,  // MB
         'allowImgType' => [
             'image/jpeg',
             'image/gif',
@@ -18,7 +17,5 @@ return [
             'image/jpg',
             'image/pjpeg',
         ],
-        */
-
     ],
 ];
