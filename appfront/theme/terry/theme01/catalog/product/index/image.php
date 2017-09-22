@@ -131,4 +131,5 @@ $(document).ready(function(){
 .owl-theme .owl-controls{display:none}
 .owl-theme:hover .owl-controls .owl-buttons div.owl-next{right:-5px}
 .owl-theme:hover .owl-controls .owl-buttons div.owl-prev{left:-5px}
+.list-img a{text-decoration:none;}
 </style>
