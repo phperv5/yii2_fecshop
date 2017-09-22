@@ -40,7 +40,7 @@ class Service extends Object
         if (isset($this->_callFuncLog[$originMethod])) {
             $method = $this->_callFuncLog[$originMethod];
         } else {
-            $method = 'action'.ucfirst($originMethod);
+            $method = 'action' . ucfirst($originMethod);
             $this->_callFuncLog[$originMethod] = $method;
         }
         if (method_exists($this, $method)) {
@@ -50,7 +50,7 @@ class Service extends Object
 
             return $return;
         } else {
-            throw new InvalidCallException('fecshop service method is not exit.  '.get_class($this)."::$method");
+            throw new InvalidCallException('fecshop service method is not exit.  ' . get_class($this) . "::$method");
         }
     }
 
@@ -65,7 +65,7 @@ class Service extends Object
                 $service = $childService[$childServiceName];
                 $this->_childService[$childServiceName] = Yii::createObject($service);
             } else {
-                throw new InvalidConfigException('Child Service ['.$childServiceName.'] is not find in '.get_called_class().', you must config it! ');
+                throw new InvalidConfigException('Child Service [' . $childServiceName . '] is not find in ' . get_called_class() . ', you must config it! ');
             }
         }
 
@@ -117,18 +117,18 @@ class Service extends Object
             }
             $serviceLogUid = Yii::$service->helper->log->getLogUid();
             $log_info = [
-                'service_uid'                => $serviceLogUid,
-                'current_url'                => Yii::$service->url->getCurrentUrl(),
-                'home_url'                    => Yii::$service->url->homeUrl(),
-                'service_file'                => get_class($this),
-                'service_method'            => $originMethod,
-                'service_method_argument'    => $arguments,
-                'begin_microtime'            => $begin_microtime,
-                'end_microtime'            => $endCallTime,
-                'used_time'                => $used_time,
+                'service_uid' => $serviceLogUid,
+                'current_url' => Yii::$service->url->getCurrentUrl(),
+                'home_url' => Yii::$service->url->homeUrl(),
+                'service_file' => get_class($this),
+                'service_method' => $originMethod,
+                'service_method_argument' => $arguments,
+                'begin_microtime' => $begin_microtime,
+                'end_microtime' => $endCallTime,
+                'used_time' => $used_time,
 
-                'process_date_time'        => date('Y-m-d H:i:s'),
-                'log_trace'                    => $logTrace,
+                'process_date_time' => date('Y-m-d H:i:s'),
+                'log_trace' => $logTrace,
             ];
 
             //Yii::$service->helper->log->fetchServiceLog($log_info);
@@ -164,7 +164,7 @@ class Service extends Object
             $file = $e['file'];
             $line = $e['line'];
             if ($file && !in_array($function, $funcNotContainArr)) {
-                $arr[] = $file.'('.$line.'),'.$class.'::'.$function.'()';
+                $arr[] = $file . '(' . $line . '),' . $class . '::' . $function . '()';
                 $i++;
                 if ($i === 1) {
                     $last_invoke_class = $class;
