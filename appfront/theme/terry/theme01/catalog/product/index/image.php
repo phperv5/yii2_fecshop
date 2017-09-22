@@ -52,7 +52,7 @@ $middle_img_width = $media_size['middle_img_width'];
 		?>
 					</div>
 				</div>
-				<a href="javascript:;" class="next_images"></a>
+<!--				<a href="javascript:;" class="next_images"></a>-->
 				<div class="clear"></div>
 			</div>
 		</div>
