@@ -233,7 +233,7 @@ input.btn_h_reg:hover { background:url(../images/btn/btn.gif) no-repeat 0px -623
 
 
 /* header */
-.hd_wrapper { margin: 0px; padding: 0px 0px 5px; clear: both; background: url(../images/w/bg_x_trans_t.png) repeat-x 0px 0px; height: 35px; position: fixed; left: 0px; top: 0px; width: 100%; z-index: 99999; }
+.hd_wrapper { margin: 0px; padding: 0px 0px 5px; clear: both; background: url(../images/w/bg_x_trans_t.png) repeat-x 0px 0px; height: 35px; position: fixed; left: 0px; top: 0px; width: 100%; z-index: 99; }
 	.hd_wrap_fun { margin: 0px auto; padding: 0px; clear: both; height: 35px; width: 1200px; line-height: 35px; }
 	@media screen and (max-device-width: 1200px){	.hd_wrap_fun { width: 960px; }}
 		.hd_wr_f_nav { float: left; display: inline; width: auto; }
