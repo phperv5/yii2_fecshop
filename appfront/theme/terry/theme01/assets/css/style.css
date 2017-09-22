@@ -1083,8 +1083,8 @@ div#zoom_view2 { display: none; border: 1px solid #eee; position: absolute; curs
 
 
 .pro_pri_tit_sale { margin: 0px; padding: 5px 7px 0px 0px; float: left; width: 120px; text-align: right; clear: left; display: inline; }
-.pro_pri_curr_sale { margin: 0px; padding: 5px 0px 0px; float: left; display: inline; text-decoration: line-through; color: #F00; }
-	.pro_pri_curr_sale strong { color: #333; font-weight: normal; }
+.pro_pri_curr_sale { margin: 0px; padding-left: 5px; float: left; display: inline; text-decoration: line-through; color: #F00; }
+.pro_pri_curr_sale strong { color: #333; font-weight: normal; }
 .pro_pri_tit_vip { margin: 0px; padding: 12px 7px 0px 0px; float: left; width: 120px; text-align: right; clear: left; display: inline; font-size: 1.25em; font-weight: bold; }
 .pro_pri_curr_vip { margin: 0px; padding: 5px 0px 0px; float: left; display: inline; color: #F60; font-weight: bold; font-size: 2em; }
 	.pro_pri_mpr { background: url(../images/arrow/s07.gif) no-repeat center bottom; float: left; height: 27px; width: 27px; margin: 0px 0px 0px 5px; cursor: pointer; }
