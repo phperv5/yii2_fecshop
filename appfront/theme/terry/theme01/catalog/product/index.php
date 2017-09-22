@@ -1,4 +1,4 @@
-<?php var_dump(get_defined_vars());?>
+<?php //var_dump(get_defined_vars());?>
 <div class="main">
     <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> -
         [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand
