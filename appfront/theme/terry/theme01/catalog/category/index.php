@@ -1,9 +1,6 @@
 <div class="main">
     <div class="page_where_l">
-<!--        <a href="../../www.uobdii.html" rel="nofollow">Home</a> - <a href="../wholesale.html"-->
-<!--                                                                     rel="nofollow">Products</a> --->
-<!--        <a href="original-brand-tool.html">Original Brand Tool</a></div>-->
-    <?= Yii::$service->page->widget->render('breadcrumbs',$this); ?>
+        <a href="/" rel="nofollow">Home</a> - <a href="../wholesale.html" rel="nofollow">Products</a> -<a href="original-brand-tool.html">Original Brand Tool</a></div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="main_left">

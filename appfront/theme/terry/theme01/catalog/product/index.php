@@ -1,10 +1,9 @@
-<?php $weight;?>
+<?php var_dump(get_defined_vars());?>
 <div class="main">
-<!--    <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> --->
-<!--        [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand-->
-<!--            Tool</a> - --><?//= $name;?>
-<!--    </div>-->
-    <?= Yii::$service->page->widget->render('breadcrumbs',$this); ?>
+    <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> -
+        [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand
+            Tool</a> - <?= $name;?>
+    </div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
 
