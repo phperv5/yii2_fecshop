@@ -156,14 +156,14 @@
                 <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
             </div>
             <div class="mhfai_photo">
-                <a href="<?= $products[5]['url'] ?>" title="<?= $products[5]['name'] ?>">
+                <a href="<?= $products[5]['url'] ?>" title="<?= substr($products[5]['name'],0,30) ?>">
                     <img src="<?= Yii::$service->product->image->getResize($products[1]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[5]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
         <div class="main_h_fa_item">
             <div class="mhfai_b_bri">
-                <a href="<?= $products[6]['url'] ?>" title="<?= $products[6]['name'] ?>"><?= $products[6]['name'] ?></a>
+                <a href="<?= $products[6]['url'] ?>" title="<?= substr($products[6]['name'],0,30) ?>"><?= $products[6]['name'] ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
                     <?php
@@ -188,7 +188,7 @@
         </div>
         <div class="main_h_fa_item">
             <div class="mhfai_b_bri">
-                <a href="<?= $products[7]['url'] ?>" title="<?= $products[7]['name'] ?>"><?= $products[7]['name'] ?></a>
+                <a href="<?= $products[7]['url'] ?>" title="<?= $products[7]['name'] ?>"><?= substr($products[7]['name'],0,30) ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
                     <?php
