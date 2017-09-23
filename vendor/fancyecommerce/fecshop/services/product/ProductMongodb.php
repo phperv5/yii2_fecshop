@@ -508,8 +508,10 @@ class ProductMongodb implements ProductInterface
         if (is_array($select) && !empty($select)) {
             $query->select($select);
         }
-
-        return $query->limit(1)->all();
+        if(isset($filter['limit'])){
+            $query->limit($filter['limit']);
+        }
+        return $query->all();
     }
 
     /**
