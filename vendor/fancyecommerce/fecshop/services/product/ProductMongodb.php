@@ -509,7 +509,7 @@ class ProductMongodb implements ProductInterface
             $query->select($select);
         }
 
-        return $query->all();
+        return $query->limit(1)->all();
     }
 
     /**
