@@ -316,6 +316,7 @@ function thissubmit(thiss){
 						
 							//响应文件添加成功事件
 							$("#inputfile").change(function(){
+
 								//创建FormData对象
 								var thisindex = 0;
 								jQuery(".productimg tbody tr").each(function(){
