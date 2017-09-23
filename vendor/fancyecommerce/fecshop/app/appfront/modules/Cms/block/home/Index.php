@@ -34,7 +34,7 @@ class Index
         return $this->getProductBySkus($featured_skus);
     }
 
-    public function getBestSellerProducts($category_id = null, $numPerPage = 10)
+    public function getBestSellerProducts($category_id = null, $limit = 10)
     {
         $filter['select'] = [
             'sku', 'spu', 'name', 'image',
@@ -44,7 +44,7 @@ class Index
         ];
         $filter['where'] = ['category' => $category_id];
         $filter['orderBy'] = ['score' => -1];
-        $filter['numPerPage'] = $numPerPage;
+        $filter['limit'] = $limit;
         $products = Yii::$service->product->getProducts($filter);
         $products = Yii::$service->category->product->convertToCategoryInfo($products);
         return $products;
@@ -53,7 +53,7 @@ class Index
     /*
      * new New Arrivals
      */
-    public function getNewArrivals($numPerPage = 8)
+    public function getNewArrivals($limit = 8)
     {
         $filter['select'] = [
             'sku', 'spu', 'name', 'image',
@@ -63,7 +63,7 @@ class Index
         ];
 
         $filter['orderBy'] = ['score' => -1];
-        $filter['numPerPage'] = $numPerPage;
+        $filter['limit'] = $limit;
         $products = Yii::$service->product->getProducts($filter);
         $products = Yii::$service->category->product->convertToCategoryInfo($products);
         return $products;
