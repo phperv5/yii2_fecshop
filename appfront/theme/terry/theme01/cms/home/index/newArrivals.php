@@ -157,7 +157,7 @@
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[5]['url'] ?>" title="<?= substr($products[5]['name'],0,30) ?>">
-                    <img src="<?= Yii::$service->product->image->getResize($products[1]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[5]['name'] ?>" align="absmiddle" />
+                    <img src="<?= Yii::$service->product->image->getResize($products[5]['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $products[5]['name'] ?>" align="absmiddle" />
                 </a>
             </div>
         </div>
