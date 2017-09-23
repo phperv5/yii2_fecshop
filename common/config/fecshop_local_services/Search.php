@@ -29,11 +29,11 @@ return [
                  */
                 'searchLang' => [
                     'en' => 'english',
-                    //'fr' => 'french',
-                    //'de' => 'german',
-                    //'es' => 'spanish',
-                    //'ru' => 'russian',
-                    //'pt' => 'portuguese',
+                    'fr' => 'french',
+                    'de' => 'german',
+                    'es' => 'spanish',
+                    'ru' => 'russian',
+                    'pt' => 'portuguese',
                 ],
             ],
 //            'xunSearch' => [
