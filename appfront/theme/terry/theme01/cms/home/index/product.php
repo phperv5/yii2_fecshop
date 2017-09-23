@@ -11,7 +11,7 @@
     <?php foreach($parentThis['products'] as $item=>$product): ?>
 <div class="hm_pro_grid <?php if($item>=5):?> hm_pro_gr_col_2 <?php  endif;  ?>?>">
                 <div class="hm_pro_gr_item <?php if(!$item || $item==5):?>hm_pro_gr_item_noad_left<?php  endif;  ?>">
-                    <div class="hm_progrd_photo"><a href="<?= $product['url'] ?>"><img src="<?= Yii::$service->product->image->getResize($product['image'],[285,434],false) ?>" width="180" height="180" border="0" hspace="0" vspace="0" alt="<?= $product['name'] ?>" align="absmiddle" /></a></div>
+                    <div class="hm_progrd_photo"><a href="<?= $product['url'] ?>"><img src="<?= Yii::$service->product->image->getResize($product['image'],[200,200],false) ?>" width="180" height="180" border="0" hspace="0" vspace="0" alt="<?= $product['name'] ?>" align="absmiddle" /></a></div>
                     <div class="hm_progrd_name"><a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>"><?= $product['name'] ?></a></div>
                     <div class="hm_progrd_price" id="ProPriDisp_h_dp_51561">
                         <?php
