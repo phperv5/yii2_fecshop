@@ -32,15 +32,15 @@ return [
                 ],
                 */
             ],
-            'xunSearch'  => [
-                'class'        => 'fecshop\services\search\XunSearch',
-                'enableService' => false,
-                'fuzzy' => true,  # 是否开启模糊查询
-                'synonyms' => true, #是否开启同义词翻译
-                'searchLang'    => [
-                    'zh' => 'chinese',
-                ],
-            ],
+//            'xunSearch'  => [
+//                'class'        => 'fecshop\services\search\XunSearch',
+//                'enableService' => false,
+//                'fuzzy' => true,  # 是否开启模糊查询
+//                'synonyms' => true, #是否开启同义词翻译
+//                'searchLang'    => [
+//                    'zh' => 'chinese',
+//                ],
+//            ],
         ],
     ],
 ];
