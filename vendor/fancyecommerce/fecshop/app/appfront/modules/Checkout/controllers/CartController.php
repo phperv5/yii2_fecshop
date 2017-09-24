@@ -222,8 +222,23 @@ class CartController extends AppfrontController
      */
     public function actionUpdateshipping()
     {
-        $shipping_country = Yii::$app->request->post('shipping_country');
-        Yii::$service->cart->updateShipMethod('21');
+        $shipping_method = Yii::$app->request->post('shipping_method');
+        $status = Yii::$service->cart->updateShipMethod($shipping_method);
+        echo json_encode([
+            'status' => $status ? 'success' : 'fail',
+        ]);
     }
 
+    /*
+     * zhuang
+     * shipping country
+     */
+    public function actionUpdateShippingCountry()
+    {
+        $shipping_country = Yii::$app->request->post('shipping_country');
+        $status = Yii::$service->cart->updateShipMethod($shipping_country);
+        echo json_encode([
+            'status' => $status ? 'success' : 'fail',
+        ]);
+    }
 }

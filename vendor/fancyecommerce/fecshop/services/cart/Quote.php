@@ -271,7 +271,27 @@ class Quote extends Service
                 return true;
             }
         }
+        return false;
+    }
 
+    /*
+     * 更新发货国家
+     * zhuang
+     */
+    public function actionUpdateShippingCountry($shipping_method)
+    {
+        $cart_id = Yii::$service->cart->quote->getCartId();
+        if ($cart_id) {
+            $one = $this->_cartModel->find()->where([
+                'cart_id' => $cart_id,
+            ])->one();
+            if ($one['cart_id']) {
+                $one['shipping_method'] = $shipping_method;
+                $one->save();
+                // 重新计算购物车的数量
+                return true;
+            }
+        }
         return false;
     }
 
