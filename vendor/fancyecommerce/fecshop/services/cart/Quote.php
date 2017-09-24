@@ -278,7 +278,7 @@ class Quote extends Service
      * 更新发货国家
      * zhuang
      */
-    public function actionUpdateShippingCountry($shipping_method)
+    public function actionUpdateShippingCountry($shipping_country)
     {
         $cart_id = Yii::$service->cart->quote->getCartId();
         if ($cart_id) {
@@ -286,7 +286,7 @@ class Quote extends Service
                 'cart_id' => $cart_id,
             ])->one();
             if ($one['cart_id']) {
-                $one['shipping_method'] = $shipping_method;
+                $one['shipping_country'] = $shipping_country;
                 $one->save();
                 // 重新计算购物车的数量
                 return true;
