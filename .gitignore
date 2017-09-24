@@ -4,3 +4,5 @@ appfront/config/fecshop_local_services/Store.php
 .idea/modules.xml
 .idea/vcs.xml
 .idea/blade.xml
+.idea/deployment.xml
+.idea/webServers.xml
