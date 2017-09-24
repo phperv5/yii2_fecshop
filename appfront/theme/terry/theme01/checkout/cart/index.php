@@ -273,7 +273,7 @@ use fecshop\app\appfront\helper\Format;
                 dataType: 'json',
                 type: 'post',
                 data: {"shipping_country": shipping_country},
-                url: "<?= Yii::$service->url->getUrl('checkout/cart/updateshipping') ?>",
+                url: "<?= Yii::$service->url->getUrl('checkout/cart/updateshippingmethod') ?>",
                 success: function (data, textStatus) {
                     if (data.status == 'success') {
                         window.location.href = currentUrl;

@@ -233,7 +233,7 @@ class CartController extends AppfrontController
      * zhuang
      * shipping country
      */
-    public function actionUpdateShipMethod()
+    public function actionUpdateshippingmethod()
     {
         $shipping_method = Yii::$app->request->post('shipping_method');
         $status = Yii::$service->cart->updateShipMethod($shipping_method);
