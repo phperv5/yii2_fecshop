@@ -62,7 +62,7 @@ use fecshop\app\appfront\helper\Format;
                             <select name="shipping_country" id="oShipCountry" class="input">
                                 <option value="">please select your country or region</option>
                                 <?php foreach ($country as $code => $c) { ?>
-                                    <option value="<?= $code; ?>" <?php if($cart_info['shipping_country'] == $code) echo 'selected';?>><?= $c; ?></option>
+                                    <option value="<?= $code; ?>" <?php if ($cart_info['shipping_country'] == $code) echo 'selected'; ?>><?= $c; ?></option>
                                 <?php } ?>
                             </select>
                             </span>
@@ -70,9 +70,9 @@ use fecshop\app\appfront\helper\Format;
                             <span>
                                 <select name="shipping_method" id="oShipMethod" class="input">
                                           <option value="">select shipping method</option>
-                                   <?php foreach ($allShipMethod as $k => $v) { ?>
-                                          <option value="<?= $k; ?>" <?php if($cart_info['shipping_method'] == $k) echo 'selected';?>><?= $v['name'] ?></option>
-                                   <?php } ?>
+                                    <?php foreach ($allShipMethod as $k => $v) { ?>
+                                        <option value="<?= $k; ?>" <?php if ($cart_info['shipping_method'] == $k) echo 'selected'; ?>><?= $v['name'] ?></option>
+                                    <?php } ?>
                                 </select>
                             </span>
                         </td>
@@ -83,9 +83,12 @@ use fecshop\app\appfront\helper\Format;
                             <b>Items Total: <span
                                         class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></b>&nbsp;&nbsp;&nbsp;
                             <b>
-                                <span class="green">Shipping Cost:<?= $currency_info['symbol']; ?>
-                                    <span class="shipping_cost"><?= Format::price($cart_info['shipping_cost']); ?></span>
+                                <?php if (empty($cart_info['shipping_cost'])) { ?>
+                                    <span class="green">Free Shipping</span>
                                 </span>
+                                <?php } else { ?>
+                                    <b>Shipping Cost:<span class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
+                                <?php } ?>
                             </b>
                             <br/>
                             <b class="red px16">Total
