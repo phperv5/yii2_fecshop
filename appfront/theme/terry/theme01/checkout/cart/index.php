@@ -57,13 +57,12 @@ use fecshop\app\appfront\helper\Format;
                     <?php endforeach; ?>
                     <tr class="tr_info" id="trShipToCountryChoose">
                         <td colspan="5" class="align_right px11">
-
                             <span id="v_h_country_select" style="">
                             Ship my order(s) to:
                             <select name="shipping_country" id="oShipCountry" class="input">
                                 <option value="">please select your country or region</option>
                                 <?php foreach ($country as $code => $c) { ?>
-                                    <option value="<?= $code; ?>"><?= $c; ?></option>
+                                    <option value="<?= $code; ?>" <?php if($cart_info['shipping_country'] == $code) echo 'selected';?>><?= $c; ?></option>
                                 <?php } ?>
                             </select>
                             </span>
@@ -72,7 +71,7 @@ use fecshop\app\appfront\helper\Format;
                                 <select name="shipping_method" id="oShipMethod" class="input">
                                           <option value="">select shipping method</option>
                                    <?php foreach ($allShipMethod as $k => $v) { ?>
-                                          <option value="<?= $k; ?>"><?= $v['name'] ?></option>
+                                          <option value="<?= $k; ?>" <?php if($cart_info['shipping_method'] == $k) echo 'selected';?>><?= $v['name'] ?></option>
                                    <?php } ?>
                                 </select>
                             </span>

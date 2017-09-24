@@ -287,9 +287,8 @@ class Quote extends Service
             ])->one();
             if ($one['cart_id']) {
                 $one['shipping_country'] = $shipping_country;
-                $one->save();
-                // 重新计算购物车的数量
-                return true;
+                $res = $one->save();
+                return $res;
             }
         }
         return false;
@@ -384,9 +383,13 @@ class Quote extends Service
             //var_dump($cart);
             //echo "########".$cart['shipping_method'];
             $coupon_code = $cart['coupon_code'];
+            if (!$country) {
+                $country = $cart['shipping_country'];
+            }
             if (!$shipping_method) {
                 $shipping_method = $cart['shipping_method'];
             }
+
             $cart_product_info = Yii::$service->cart->quoteItem->getCartProductInfo();
             if (is_array($cart_product_info)) {
                 $product_weight = $cart_product_info['product_weight'];
@@ -415,6 +418,7 @@ class Quote extends Service
                         'items_count' => $cart['items_count'],    // 购物车中的产品总数
                         'coupon_code' => $coupon_code,            // coupon卷码
                         'shipping_method' => $shipping_method,
+                        'shipping_country' => $country,
                         'payment_method' => $cart['payment_method'],
                         'grand_total' => $curr_grand_total,       // 当前货币总金额
                         'shipping_cost' => $currShippingCost,       // 当前货币，运费
