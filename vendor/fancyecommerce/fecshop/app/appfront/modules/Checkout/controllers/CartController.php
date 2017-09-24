@@ -223,42 +223,7 @@ class CartController extends AppfrontController
     public function actionUpdateshipping()
     {
         $shipping_country = Yii::$app->request->post('shipping_country');
-        $arr = $this->getShippings($shipping_country);
-        echo json_encode([
-            'status' => 'success',
-            'data' => ['shipping_cost' => $arr],
-        ]);
+        Yii::$service->cart->updateShipMethod('21');
     }
 
-    /*
-     * zhuang
-     */
-    public function getShippings($country, $state = null, $custom_shipping_method = '')
-    {
-        $region = $state ? $state : '*';
-        $cartProductInfo = Yii::$service->cart->quoteItem->getCartProductInfo();
-        $product_weight = $cartProductInfo['product_weight'];
-        // 传递当前的货运方式，这个需要从cart中选取，
-        // 如果cart中没有shipping_method，那么该值为空
-        //var_dump($this->_cart_info);
-        $current_shipping_method = 'hk_air_post';
-        $shippingArr = $this->getShippingArr($product_weight, $current_shipping_method, $country, $region);
-        return $shippingArr;
-    }
-
-    /**
-     * @property $weight | Float , 总量
-     * @property $shipping_method | String  $shipping_method key
-     * @property $country | String  国家
-     * @return array ， 通过上面的三个参数，得到各个运费方式对应的运费等信息。
-     * zhuang
-     */
-    public function getShippingArr($weight, $current_shipping_method, $country, $region = '*')
-    {
-//        var_dump(func_get_args());
-        $allshipping = Yii::$service->shipping->getShippingMethod();
-        if (!isset($allshipping[$current_shipping_method])) return false;
-        $cost = Yii::$service->shipping->getShippingCost($current_shipping_method, $weight, $country, $region);
-        return $cost;
-    }
 }

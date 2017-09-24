@@ -57,7 +57,7 @@ class Index
     public function getCartInfo()
     {
         $cart_info = Yii::$service->cart->getCartInfo();
-
+        var_dump($cart_info);
         if (isset($cart_info['products']) && is_array($cart_info['products'])) {
             foreach ($cart_info['products'] as $k=>$product_one) {
                 // 设置名字，得到当前store的语言名字。
