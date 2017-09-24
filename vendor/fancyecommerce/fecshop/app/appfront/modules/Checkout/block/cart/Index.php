@@ -21,10 +21,12 @@ class Index
     {
         $this->initHead();
         $currency_info = Yii::$service->page->currency->getCurrencyInfo();
-
         return [
             'cart_info' => $this->getCartInfo(),
             'currency_info' => $currency_info,
+            //zhuang edit
+            'country' => Yii::$service->helper->country->getAllCountryArray(),
+            'allShipMethod' => Yii::$service->shipping->getShippingMethod(),
         ];
     }
 

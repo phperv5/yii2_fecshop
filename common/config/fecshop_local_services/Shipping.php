@@ -12,16 +12,31 @@ return [
         // Shipping的运费，是表格的形式录入，shippingCsvDir是存放运费表格的文件路径。
         'shippingCsvDir' => '@common/config/shipping',
         'shippingConfig' => [
-            'free_shipping'=> [  // 免运费
-                'label'=> 'Free shipping( 7-20 work days)',
-                'name' => 'HKBRAM',
-                'cost' => 0,
+            'hk_air_post'=> [  // 免运费
+                'label'=> 'HK Air Post',
+                'name' => 'HK Air Post',
+                'cost' => 'csv',
             ],
-            'fast_shipping'=> [
-                'label'=> 'Fast Shipping( 5-10 work days)',
-                'name' => 'HKDHL',
+            'e_package'=> [
+                'label'=> 'E-package',
+                'name' => 'E-package',
                 'cost' => 'csv', // 请将文件名字的命名写入 fast_shipping.csv
 
+            ],
+            'dhl'=> [
+                'label'=> 'DHL',
+                'name' => 'DHL',
+                'cost' => 'csv', // 请将文件名字的命名写入 fast_shipping.csv
+            ],
+            'fedex'=> [
+                'label'=> 'Fedex',
+                'name' => 'Fedex',
+                'cost' => 'csv', // 请将文件名字的命名写入 fast_shipping.csv
+            ],
+            'tnt'=> [
+                'label'=> 'TNT',
+                'name' => 'TNT',
+                'cost' => 'csv', // 请将文件名字的命名写入 fast_shipping.csv
             ],
         ],
         // 该值必须在上面的配置 $shippingConfig中存在，如果不存在，则返回为空。
