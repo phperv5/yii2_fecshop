@@ -80,11 +80,13 @@ use fecshop\app\appfront\helper\Format;
 
                     <tr class="tr_info">
                         <td colspan="5" class="align_right verdana line18em">
-                            <b>Items Total: <span class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></b>&nbsp;&nbsp;&nbsp;
+                            <b>Items Total: <span
+                                        class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></b>&nbsp;&nbsp;&nbsp;
                             <b>
                                 <?php var_dump($cart_info['shipping_cost']);?>
                                 <?php if (empty($cart_info['shipping_cost'])) { ?>
                                     <span class="green">Free Shipping</span>
+                                </span>
                                 <?php } else { ?>
                                     <b>Shipping Cost:<span class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
                                 <?php } ?>
