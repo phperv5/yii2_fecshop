@@ -138,7 +138,7 @@
     <div class="main_h_fs_b">
         <div class="main_h_fa_item">
             <div class="mhfai_b_bri">
-                <a href="<?= $products[5]['url'] ?>" title="<?= $products[5]['name'] ?>"><?= $products[5]['name'] ?></a>
+                <a href="<?= $products[5]['url'] ?>" title="<?= $products[5]['name'] ?>"><?= substr($products[5]['name'],0,30) ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
                     <?php
@@ -163,7 +163,7 @@
         </div>
         <div class="main_h_fa_item">
             <div class="mhfai_b_bri">
-                <a href="<?= $products[6]['url'] ?>" title="<?= substr($products[6]['name'],0,30) ?>"><?= $products[6]['name'] ?></a>
+                <a href="<?= $products[6]['url'] ?>" title="<?= $products[6]['name'] ?>"><?= substr($products[6]['name'],0,30) ?></a>
                 <div class="blank10px"></div>
                 <div id="ProPriDisp_h_n_71861">
                     <?php
