@@ -41,8 +41,11 @@ use fecshop\app\appfront\helper\Format;
             &nbsp;&nbsp;&nbsp;<b>Discount:<span class="red_dark">
                     <?php if($cart_info['coupon_cost']) echo '-';?><?=  $currency_info['symbol'];  ?><?= Format::price($cart_info['coupon_cost']); ?>
                 </span></b>
-            &nbsp;&nbsp;&nbsp;
-            <b><span class="green">Free Shipping<?=  $currency_info['symbol'];  ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
+            <?php if (empty($cart_info['shipping_cost'])) { ?>
+                <span class="green">Free Shipping</span>
+            <?php } else { ?>
+                <b>Shipping Cost:<span class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
+            <?php } ?>
             <br>
             <b class="red px16">Total Sum:<?=  $currency_info['symbol'];  ?><?= Format::price($cart_info['grand_total']) ?></b>
             <div class="blank10px"></div>
