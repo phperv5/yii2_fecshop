@@ -264,7 +264,7 @@ use fecshop\app\appfront\helper\Format;
             });
         });
 
-        //修改发货方式
+        //修改发货国家
         $('#oShipCountry').change(function () {
             var shipping_country = $(this).val();
             jQuery.ajax({
@@ -276,8 +276,30 @@ use fecshop\app\appfront\helper\Format;
                 url: "<?= Yii::$service->url->getUrl('checkout/cart/updateshipping') ?>",
                 success: function (data, textStatus) {
                     if (data.status == 'success') {
-                        var cost = data.data.shipping_cost.currCost
-                        $('.shipping_cost').html(cost);
+                        window.location.href = currentUrl;
+                    } else if (data.content == 'nologin') {
+                        window.location.href = "<?=  Yii::$service->url->getUrl('customer/account/login'); ?>";
+                    } else {
+                        $(".coupon_add_log").html(data.content);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                }
+            });
+        })
+        //修改发货方式
+        $('#oShipMethod').change(function () {
+            var oShipMethod = $(this).val();
+            jQuery.ajax({
+                async: true,
+                timeout: 6000,
+                dataType: 'json',
+                type: 'post',
+                data: {"shipping_method": oShipMethod},
+                url: "<?= Yii::$service->url->getUrl('checkout/cart/updateShipMethod') ?>",
+                success: function (data, textStatus) {
+                    if (data.status == 'success') {
+                        window.location.href = currentUrl;
                     } else if (data.content == 'nologin') {
                         window.location.href = "<?=  Yii::$service->url->getUrl('customer/account/login'); ?>";
                     } else {
