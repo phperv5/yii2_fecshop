@@ -1,4 +1,3 @@
-<?php echo 1;die;?>
 <div class="main">
     <div class="page_where_l">
         <a href="../../www.uobdii.html" rel="nofollow">Home</a> - <a href="../wholesale.html"
