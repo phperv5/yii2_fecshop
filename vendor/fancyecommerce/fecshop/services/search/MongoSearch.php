@@ -132,7 +132,6 @@ class MongoSearch extends Service implements SearchInterface
                             $one['description'] = Yii::$service->fecshoplang->getLangAttrVal($one_description, 'description', $langCode);
                             $one['short_description'] = Yii::$service->fecshoplang->getLangAttrVal($one_short_description, 'short_description', $langCode);
                             $one['sync_updated_at'] = time();
-                            unset($one['_id']);
                             Yii::$service->helper->ar->save($searchModel, $one);
                             if ($errors = Yii::$service->helper->errors->get()) {
                                 // 报错。
