@@ -224,9 +224,7 @@ class MongoSearch extends Service implements SearchInterface
         ];
 //        var_dump($filter);exit;
         $collection = $this->fullTearchText($filter);
-        var_dump($collection);exit;
         $collection['coll'] = Yii::$service->category->product->convertToCategoryInfo($collection['coll']);
-
         return $collection;
     }
 
