@@ -69,11 +69,9 @@
                 <?php foreach ($products as $product): ?>
                     <div class="pro_list pro_list_feaured">
                         <div class="photo">
-                            <a href="<?= $product['url'] ?>"
-                               title="<?= $product['name'] ?>">
-<!--                                <img src="--><?//= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?><!--" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/></a>-->
-                                <img src="" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/></a>
-
+                            <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>">
+                                <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/>
+                            </a>
                         </div>
                         <div class="brief">
                             <h2>
@@ -98,19 +96,7 @@
                             <?= $product['short_description']; ?>
                             <div class="blank5px"></div>
 
-                            <div class="pro_sch_tags">
-                                <b>Tags: </b>
-                                <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39;
-                                    Tablet
-                                    PC</a>,
-                                <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,
-                                <a href="../../producttags/launch.html">Launch</a>,
-                                <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,
-                                <a href="../../producttags/ship-from-us.html">Ship from US</a>,
-                                <a href="../../producttags/ship-from-uk.html">Ship from UK</a>
-                            </div>
                             <div class="clear"></div>
-
                         </div>
                         <?php
                         $config = [
