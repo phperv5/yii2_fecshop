@@ -71,9 +71,9 @@
                         <div class="photo">
                             <a href="<?= $product['url'] ?>"
                                title="<?= $product['name'] ?>">
-                                <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>"
-                                     width="120" height="120" border="0" hspace="0" vspace="0" alt=""
-                                     align="absmiddle"/></a>
+<!--                                <img src="--><?//= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?><!--" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/></a>-->
+                                <img src="" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/></a>
+
                         </div>
                         <div class="brief">
                             <h2>
