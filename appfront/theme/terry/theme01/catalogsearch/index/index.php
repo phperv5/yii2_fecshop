@@ -1,8 +1,7 @@
 <div class="main">
     <div class="page_where_l">
-        <a href="/" rel="nofollow">Home</a> - <a href="../wholesale.html"
-                                                                     rel="nofollow">Products</a> -
-        <a href="original-brand-tool.html">Original Brand Tool</a></div>
+        <a href="/" rel="nofollow">Home</a>
+    </div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
 
@@ -33,15 +32,6 @@
         </div>
         <div class="col_d_b"></div>
         <div class="blank10px"></div>
-
-
-        <div id="WishProFavorites"></div>
-        <div id="WishProVisitedList"></div>
-        <script type="text/javascript">
-            MyWishPro("List", "MyFavorites", "WishProFavorites");
-            MyWishPro("List", "VisitedList", "WishProVisitedList");
-        </script>
-
 
         <div class="col_d_t">Popular Search</div>
         <div class="col_m_tag">
@@ -82,7 +72,7 @@
                             </h2>
                             <div class="clear"></div>
                             <span class="px11">Item No.<?= $product['sku']; ?></span>&nbsp;&nbsp;&nbsp;
-                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;
+<!--                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;-->
                             <div class="fr w150px">
                                 <div class="rate_star_w100">
                                     <div class="rate_star_w100_bg">
