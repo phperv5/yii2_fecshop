@@ -35,10 +35,7 @@
 
         <div id="WishProFavorites"></div>
         <div id="WishProVisitedList"></div>
-        <script type="text/javascript">
-            MyWishPro("List", "MyFavorites", "WishProFavorites");
-            MyWishPro("List", "VisitedList", "WishProVisitedList");
-        </script>
+
 
 
         <div class="col_d_t">Popular Search</div>
@@ -166,7 +163,6 @@
 <!--                <div class="blank5px"></div>-->
 <!--            </div>-->
             <div class="blank10px"></div>
-
             <?php if (is_array($products) && !empty($products)): ?>
                 <?php foreach ($products as $product): ?>
                     <div class="pro_list pro_list_feaured" url='<?= $product['url'] ?>'>
@@ -228,13 +224,7 @@
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
-        </div>
-        <div class="page_nav">
-            <?php if ($pageToolBar): ?>
-                <div class="pageToolbar">
-                    <?= $pageToolBar ?>
-                </div>
-            <?php endif; ?>
+            <?= $product_page; ?>
         </div>
         <div class="clear"></div>
     </div>
