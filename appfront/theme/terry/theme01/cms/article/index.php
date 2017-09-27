@@ -60,7 +60,7 @@
                 <a href="<?=  Yii::$service->url->getUrl('purchase-processing') ?>">Purchase processing in UOBDII.com</a>
             </div>
             <div class="blank5px"></div>
-            <br /><br /><br /><a href="msg_add.asp"><img src="/images/btn/submit_a_ticket.gif" alt="Submit a Ticket" border="0" /></a></div>
+        </div>
         <div class="support_m_c"></div>
         <div class="support_m_r"><div class="line15em">
                 <b class="px18 georgia"><?= $title ?></b>
