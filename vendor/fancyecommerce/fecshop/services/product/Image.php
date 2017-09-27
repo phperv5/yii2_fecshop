@@ -125,11 +125,12 @@ class Image extends Service
             $waterImgPath = $this->getDir('/'.$this->waterImg);
         }
         list($newPath, $newUrl) = $this->getProductNewPath($imageVal, $imgResize, $waterImgPath);
-        if (!file_exists($newPath)) {
-            \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
+        if($newPath && $newUrl){
+            if (!file_exists($newPath)) {
+                \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
+            }
+            return $newUrl;
         }
-
-        return $newUrl;
     }
     /**
      * @property $imageVal | String ，图片相对路径字符串。

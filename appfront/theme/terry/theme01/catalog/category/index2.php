@@ -22,7 +22,6 @@
                 <?= $description ?>
             </div>
             <div class="panelBar">
-                <?php //var_dump($products);die; ?>
                 <?php if (is_array($products) && !empty($products)): ?>
                     <?php
                     $parentThis = [
