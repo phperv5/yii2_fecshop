@@ -1,6 +1,7 @@
 
 <div class="main">
-    <div class="page_where_l"><a href="/">Home</a> - <a href="/support/">Help</a> - <a href="/support/?DirID=1">F.A.Q (Frequently Asked Questions)</a> - <a href="/support/?DirID=1&SubDirID=2">UOBD2 Shipment Policy</a></div><div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
+    <div class="page_where_l"><a href="/">Home</a> - <?= $title ?></div>
+    <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
 
     <div class="exh_full_top"></div>
