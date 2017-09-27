@@ -156,18 +156,17 @@ class Image extends Service
             $width = $imgResize;
             $height = '0';
         }
-
         $imageArr = explode('/', $imageVal);
+        unset($imageArr[0]);
         $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
         foreach ($imageArr as $igf) {
-            if ($igf && !strstr($igf, '.')) {
+            if (!strstr($igf, '.')) {
                 $dirArr[] = $igf;
             }
         }
         \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
         $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
         $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
-
         return [$newPath, $newUrl];
     }
 }
