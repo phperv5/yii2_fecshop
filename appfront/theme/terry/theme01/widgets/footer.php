@@ -70,8 +70,6 @@
     </div>
     <div class="footer">
         <div class="ft_menu"><a href="/">Home</a> <span>|</span>
-<!--            <a href="--><?//=  Yii::$service->url->getUrl('Latest Update Notice') ?><!--">Latest Update Notice</a> <span>|</span> -->
-<!--            <a href="--><?//=  Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?><!--">News &amp; Notice</a>-->
             <span>|</span> <a href="<?=  Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?>">Contact</a> <span>|</span>
             <a href="<?=  Yii::$service->url->getUrl('payment') ?>">Payment</a>
             <span>|</span> <a href="<?=  Yii::$service->url->getUrl('about-us') ?>">About us</a> <span>|</span> <a
