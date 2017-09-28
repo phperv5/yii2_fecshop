@@ -9,4 +9,5 @@ appfront/config/fecshop_local_services/Store.php
 appfront/config/fecshop_local_services/Image.php
 appfront/config/fecshop_local_services/Email.php
 common/config/main-local.php
+
 appfront/config/fecshop_local_modules/Catalog.php
