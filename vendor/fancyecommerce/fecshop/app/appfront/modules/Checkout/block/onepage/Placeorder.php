@@ -65,7 +65,7 @@ class Placeorder
                         if ($genarateStatus) {
                             //清除购物车
                             Yii::$service->cart->clearCartProductAndCoupon();
-                            
+
                             // 得到当前的订单信息
                             //$orderInfo = Yii::$service->order->getCurrentOrderInfo();
                             // 发送新订单邮件
