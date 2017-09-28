@@ -236,8 +236,6 @@
                     url: addToCartUrl,
                     success: function (data, textStatus) {
                         if (data.status == 'success') {
-                            items_count = data.items_count;
-                            $("#js_cart_items").html(items_count);
                             window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";
                         } else {
                             content = data.content;

@@ -40,6 +40,7 @@ $cssOptions = [
 		'css'	=>[
 			'css/style.css',
 			'css/ie.css',
+//            'css/bootstrap.min.css',
 			'onestepcheckout/onestepcheckout.css',
 		],
 	],

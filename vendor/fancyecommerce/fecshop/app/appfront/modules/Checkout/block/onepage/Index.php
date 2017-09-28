@@ -61,7 +61,7 @@ class Index
     }
 
     /*
-     * 獲取默認地址
+     * zhuang edit 獲取默認地址
      */
     public function getDefaultAddress($address_list)
     {

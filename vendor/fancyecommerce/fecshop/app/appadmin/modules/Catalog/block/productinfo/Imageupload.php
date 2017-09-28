@@ -26,7 +26,6 @@ class Imageupload
         }
         $index = 0;        //$_FILES 以文件name为数组下标，不适用foreach($_FILES as $index=>$file)
         $post = Yii::$app->request->post();
-        var_dump($post);
         if ($post['thisindex']) {
             $rel_index = $post['thisindex'];
         } else {

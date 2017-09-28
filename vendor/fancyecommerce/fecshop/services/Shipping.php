@@ -42,6 +42,7 @@ class Shipping extends Service
      */
     protected function actionIfIsCorrect($shipping_method)
     {
+        var_dump($shipping_method);
         $allmethod = $this->shippingConfig;
         if (isset($allmethod[$shipping_method]) && !empty($allmethod[$shipping_method])) {
             return true;
@@ -190,6 +191,7 @@ class Shipping extends Service
         //$shippingCsvDir = '@common/config/shipping';
         $commonDir = Yii::getAlias($this->shippingCsvDir);
         $csv = $commonDir.'/'.$shipping_method.'.csv';
+        if(!file_exists($csv)) return false;
         $fp = fopen($csv, 'r');
         $shippingArr = [];
         $i = 0;

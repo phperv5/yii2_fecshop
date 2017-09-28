@@ -132,7 +132,6 @@ class MongoSearch extends Service implements SearchInterface
                             $one['description'] = Yii::$service->fecshoplang->getLangAttrVal($one_description, 'description', $langCode);
                             $one['short_description'] = Yii::$service->fecshoplang->getLangAttrVal($one_short_description, 'short_description', $langCode);
                             $one['sync_updated_at'] = time();
-                            unset($one['_id']);
                             Yii::$service->helper->ar->save($searchModel, $one);
                             if ($errors = Yii::$service->helper->errors->get()) {
                                 // 报错。
@@ -213,7 +212,7 @@ class MongoSearch extends Service implements SearchInterface
      * ]
      * 得到搜索的产品列表.
      */
-    protected function actionGetSearchProductColl($select, $where, $pageNum, $numPerPage, $product_search_max_count)
+    public function actionGetSearchProductColl($select, $where, $pageNum, $numPerPage, $product_search_max_count)
     {
         $filter = [
             'pageNum' => $pageNum,
@@ -222,10 +221,9 @@ class MongoSearch extends Service implements SearchInterface
             'product_search_max_count' => $product_search_max_count,
             'select' => $select,
         ];
-        //var_dump($filter);exit;
+//        var_dump($filter);exit;
         $collection = $this->fullTearchText($filter);
         $collection['coll'] = Yii::$service->category->product->convertToCategoryInfo($collection['coll']);
-
         return $collection;
     }
 

@@ -427,7 +427,7 @@ class Index
      */
     protected function getCategoryProductColl()
     {
-        $select = ['sku', 'spu', 'name', 'image', 'price', 'special_price', 'special_from', 'special_to', 'url_key', 'score',];
+        $select = ['sku', 'spu', 'name', 'image', 'price', 'special_price', 'special_from', 'special_to', 'url_key', 'score','short_description'];
         $category_query = Yii::$app->getModule('catalog')->params['category_query'];
         if (is_array($category_query['sort'])) {
             foreach ($category_query['sort'] as $sort_item) {

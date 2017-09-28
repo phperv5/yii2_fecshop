@@ -203,4 +203,20 @@ class Cart extends Service
     protected function actionAddItemsByPendingOrder($order_id)
     {
     }
+
+    /*
+     * 更新发货方式
+     */
+    protected function actionUpdateShipMethod($shipping_method)
+    {
+        return Yii::$service->cart->quote->updateShipMethod($shipping_method);
+    }
+
+    /*
+     * 更新发货国家
+     */
+    protected function actionUpdateShippingCountry($shipping_country)
+    {
+        return Yii::$service->cart->quote->updateShippingCountry($shipping_country);
+    }
 }

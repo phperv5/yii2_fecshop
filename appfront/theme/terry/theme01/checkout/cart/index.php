@@ -57,13 +57,27 @@ use fecshop\app\appfront\helper\Format;
                     <?php endforeach; ?>
                     <tr class="tr_info" id="trShipToCountryChoose">
                         <td colspan="5" class="align_right px11">
-
-                            <span class="px12">Ship to: <b class="blue px12">China</b>.</span>
-                            <span id="v_h_country_slt_txt" style="display:">Not right? <a href="javascirpt:void(0);"
-                                                                                          onclick="VH_Country_Select('show','CN'); return false;">Click here to change.</a> (for estimate shipping cost.)</span>
-                            <span id="v_h_country_select" style="display:none"></span>
-
-                            <input name="o_ship_country" id="o_ship_country" type="hidden" value="CN"/>
+                            <span id="v_h_country_select" style="">
+                            Ship my order(s) to:
+                            <select name="shipping_country" id="oShipCountry" class="input">
+                                <option value="">please select your country or region</option>
+                                <?php foreach ($country as $code => $c) { ?>
+                                    <option value="<?= $code; ?>" <?php if ($cart_info['shipping_country'] == $code) echo 'selected'; ?>><?= $c; ?></option>
+                                <?php } ?>
+                            </select>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="tr_info">
+                        <td colspan="5" class="align_right px11">
+                            <span>
+                                <select name="shipping_method" id="oShipMethod" class="input">
+                                          <option value="">select shipping method</option>
+                                    <?php foreach ($allShipMethod as $k => $v) { ?>
+                                        <option value="<?= $k; ?>" <?php if ($cart_info['shipping_method'] == $k) echo 'selected'; ?>><?= $v['name'] ?></option>
+                                    <?php } ?>
+                                </select>
+                            </span>
                         </td>
                     </tr>
 
@@ -71,7 +85,14 @@ use fecshop\app\appfront\helper\Format;
                         <td colspan="5" class="align_right verdana line18em">
                             <b>Items Total: <span
                                         class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></b>&nbsp;&nbsp;&nbsp;
-                            <b><span class="green">Shipping Cost:<?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
+                            <b>
+                                <?php if (empty($cart_info['shipping_cost'])) { ?>
+                                    <span class="green">Free Shipping</span>
+                                </span>
+                                <?php } else { ?>
+                                    <b>Shipping Cost:<span class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
+                                <?php } ?>
+                            </b>
                             <br/>
                             <b class="red px16">Total
                                 Sum:<?= $currency_info['symbol']; ?><?= Format::price($cart_info['grand_total']) ?></b>
@@ -92,7 +113,7 @@ use fecshop\app\appfront\helper\Format;
             </form>
             <div class="blank10px"></div>
             <div class="fl" style="margin-top:10px;">
-<!--                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">-->
+                <!--                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">-->
             </div>
             <div class="float_right" style="margin-top:10px;">
                 -- OR -- <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid"
@@ -246,11 +267,54 @@ use fecshop\app\appfront\helper\Format;
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                 }
             });
-
-
         });
 
-
+        //修改发货国家
+        $('#oShipCountry').change(function () {
+            var shipping_country = $(this).val();
+            jQuery.ajax({
+                async: true,
+                timeout: 6000,
+                dataType: 'json',
+                type: 'post',
+                data: {"shipping_country": shipping_country},
+                url: "<?= Yii::$service->url->getUrl('checkout/cart/updateshipping') ?>",
+                success: function (data, textStatus) {
+                    if (data.status == 'success') {
+                        window.location.href = currentUrl;
+                    } else if (data.content == 'nologin') {
+                        window.location.href = "<?=  Yii::$service->url->getUrl('customer/account/login'); ?>";
+                    } else {
+                        $(".coupon_add_log").html(data.content);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                }
+            });
+        })
+        //修改发货方式
+        $('#oShipMethod').change(function () {
+            var oShipMethod = $(this).val();
+            jQuery.ajax({
+                async: true,
+                timeout: 6000,
+                dataType: 'json',
+                type: 'post',
+                data: {"shipping_method": oShipMethod},
+                url: "<?= Yii::$service->url->getUrl('checkout/cart/updateshippingmethod') ?>",
+                success: function (data, textStatus) {
+                    if (data.status == 'success') {
+                        window.location.href = currentUrl;
+                    } else if (data.content == 'nologin') {
+                        window.location.href = "<?=  Yii::$service->url->getUrl('customer/account/login'); ?>";
+                    } else {
+                        $(".coupon_add_log").html(data.content);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                }
+            });
+        })
     });
 
     <?php $this->endBlock(); ?>

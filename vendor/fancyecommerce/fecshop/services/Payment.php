@@ -204,7 +204,7 @@ class Payment extends Service
             }
         }
     }
-    
+
     /**
      * @property $payment_method | String 支付方式。
      * @return 返回进行数据交互的express的api地址。
@@ -223,7 +223,7 @@ class Payment extends Service
             }
         }
     }
-    
+
     /**
      * @property $url | String url的字符串
      * @return string 根据传递的字符串格式，得到相应的url
@@ -304,6 +304,7 @@ class Payment extends Service
             }
         }
     }
+
     /**
      * @property $payment_method | String 支付方式。
      * @return 返回进行数据交互的express的api地址。
@@ -322,6 +323,7 @@ class Payment extends Service
             }
         }
     }
+
     /**
      * @property $payment_method | String 支付方式。
      * @return 返回进行数据交互的express的account。
@@ -416,8 +418,8 @@ class Payment extends Service
             }
         }
     }
-    
-    
+
+
     /**
      * @property $payment_method | String 支付方式。
      * @return 返回进行数据交互的express的signature。
@@ -475,11 +477,9 @@ class Payment extends Service
             }
         }
     }
-    
-    
-    
-    
-     /**
+
+
+    /**
      * @property $payment_method | String 支付方式。
      * @return 返回进行数据交互的express的signature。
      */

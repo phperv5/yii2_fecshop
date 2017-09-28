@@ -40,14 +40,12 @@
                     <td class="align_left">
                         <?php
                         $config = [
-                        'class' 		=> 'fecshop\app\appfront\modules\Catalog\block\category\Price',
-                        'view'  		=> 'catalog/category/price.php',
-                        'price' 		=> $one['price'],
-                        'special_price' => $one['special_price'],
-                        'special_from' 	=> $one['special_from'],
-                        'special_to' 	=> $one['special_to'],
+                            'class' 		=> 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                            'view'  		=> 'cms/home/index/price.php',
+                            'price' 		=> $one['price'],
+                            'special_price' => $one['special_price'],
                         ];
-                        echo Yii::$service->page->widget->renderContent('category_product_price',$config);
+                        echo Yii::$service->page->widget->renderContent('category_newArrivals_price',$config);
                         ?>
                     </td>
                     <td class="align_left px11">

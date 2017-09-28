@@ -1,8 +1,7 @@
 <div class="main">
     <div class="page_where_l">
-        <a href="../../www.uobdii.html" rel="nofollow">Home</a> - <a href="../wholesale.html"
-                                                                     rel="nofollow">Products</a> -
-        <a href="original-brand-tool.html">Original Brand Tool</a></div>
+        <a href="/" rel="nofollow">Home</a>
+    </div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
 
@@ -34,15 +33,6 @@
         <div class="col_d_b"></div>
         <div class="blank10px"></div>
 
-
-        <div id="WishProFavorites"></div>
-        <div id="WishProVisitedList"></div>
-        <script type="text/javascript">
-            MyWishPro("List", "MyFavorites", "WishProFavorites");
-            MyWishPro("List", "VisitedList", "WishProVisitedList");
-        </script>
-
-
         <div class="col_d_t">Popular Search</div>
         <div class="col_m_tag">
             <a href="../../producttags/autel-maxisys.html"><strong>Autel MaxiSYS</strong></a>&nbsp;&nbsp;
@@ -69,11 +59,9 @@
                 <?php foreach ($products as $product): ?>
                     <div class="pro_list pro_list_feaured">
                         <div class="photo">
-                            <a href="<?= $product['url'] ?>"
-                               title="<?= $product['name'] ?>">
-                                <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>"
-                                     width="120" height="120" border="0" hspace="0" vspace="0" alt=""
-                                     align="absmiddle"/></a>
+                            <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>">
+                                <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/>
+                            </a>
                         </div>
                         <div class="brief">
                             <h2>
@@ -84,7 +72,7 @@
                             </h2>
                             <div class="clear"></div>
                             <span class="px11">Item No.<?= $product['sku']; ?></span>&nbsp;&nbsp;&nbsp;
-                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;
+<!--                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;-->
                             <div class="fr w150px">
                                 <div class="rate_star_w100">
                                     <div class="rate_star_w100_bg">
@@ -98,19 +86,7 @@
                             <?= $product['short_description']; ?>
                             <div class="blank5px"></div>
 
-                            <div class="pro_sch_tags">
-                                <b>Tags: </b>
-                                <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39;
-                                    Tablet
-                                    PC</a>,
-                                <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,
-                                <a href="../../producttags/launch.html">Launch</a>,
-                                <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,
-                                <a href="../../producttags/ship-from-us.html">Ship from US</a>,
-                                <a href="../../producttags/ship-from-uk.html">Ship from UK</a>
-                            </div>
                             <div class="clear"></div>
-
                         </div>
                         <?php
                         $config = [

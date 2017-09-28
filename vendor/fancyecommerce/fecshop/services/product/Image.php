@@ -125,11 +125,12 @@ class Image extends Service
             $waterImgPath = $this->getDir('/'.$this->waterImg);
         }
         list($newPath, $newUrl) = $this->getProductNewPath($imageVal, $imgResize, $waterImgPath);
-        if (!file_exists($newPath)) {
-            \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
+        if($newPath && $newUrl){
+            if (!file_exists($newPath)) {
+                \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
+            }
+            return $newUrl;
         }
-
-        return $newUrl;
     }
     /**
      * @property $imageVal | String ，图片相对路径字符串。
@@ -155,18 +156,17 @@ class Image extends Service
             $width = $imgResize;
             $height = '0';
         }
-
         $imageArr = explode('/', $imageVal);
+        unset($imageArr[0]);
         $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
         foreach ($imageArr as $igf) {
-            if ($igf && !strstr($igf, '.')) {
+            if (!strstr($igf, '.')) {
                 $dirArr[] = $igf;
             }
         }
         \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
         $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
         $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
-
         return [$newPath, $newUrl];
     }
 }

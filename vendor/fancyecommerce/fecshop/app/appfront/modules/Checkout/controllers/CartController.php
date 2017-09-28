@@ -39,7 +39,7 @@ class CartController extends AppfrontController
         //$custom_option  = \Yii::$service->helper->htmlEncode($custom_option);
         $product_id = \Yii::$service->helper->htmlEncode($product_id);
         $qty = \Yii::$service->helper->htmlEncode($qty);
-        $qty = abs(ceil((int) $qty));
+        $qty = abs(ceil((int)$qty));
         if ($qty && $product_id) {
             if ($custom_option) {
                 $custom_option_sku = json_decode($custom_option, true);
@@ -49,7 +49,7 @@ class CartController extends AppfrontController
             }
             $item = [
                 'product_id' => $product_id,
-                'qty'        =>  $qty,
+                'qty' => $qty,
                 'custom_option_sku' => $custom_option_sku,
             ];
             $innerTransaction = Yii::$app->db->beginTransaction();
@@ -66,7 +66,7 @@ class CartController extends AppfrontController
                     $errors = Yii::$service->helper->errors->get(',');
                     echo json_encode([
                         'status' => 'fail',
-                        'content'=> $errors,
+                        'content' => $errors,
                         //'items_count' => Yii::$service->cart->quote->getCartItemCount(),
                     ]);
                     $innerTransaction->rollBack();
@@ -89,7 +89,7 @@ class CartController extends AppfrontController
             Yii::$service->customer->setLoginSuccessRedirectUrl($cartUrl);
             echo json_encode([
                 'status' => 'fail',
-                'content'=> 'nologin',
+                'content' => 'nologin',
             ]);
             exit;
         }
@@ -111,20 +111,20 @@ class CartController extends AppfrontController
                 $error_str = implode(',', $error_arr);
                 echo json_encode([
                     'status' => 'fail',
-                    'content'=> $error_str,
+                    'content' => $error_str,
                 ]);
                 exit;
             } else {
                 echo json_encode([
                     'status' => 'success',
-                    'content'=> 'add coupon success',
+                    'content' => 'add coupon success',
                 ]);
                 exit;
             }
         } else {
             echo json_encode([
                 'status' => 'fail',
-                'content'=> 'coupon is empty',
+                'content' => 'coupon is empty',
             ]);
             exit;
         }
@@ -141,7 +141,7 @@ class CartController extends AppfrontController
             Yii::$service->customer->setLoginSuccessRedirectUrl($cartUrl);
             echo json_encode([
                 'status' => 'fail',
-                'content'=> 'nologin',
+                'content' => 'nologin',
             ]);
             exit;
         }
@@ -153,7 +153,7 @@ class CartController extends AppfrontController
                 if (!$cancelStatus) {
                     echo json_encode([
                         'status' => 'fail',
-                        'content'=> 'coupon is not exist;',
+                        'content' => 'coupon is not exist;',
                     ]);
                     $innerTransaction->rollBack();
                     exit;
@@ -163,14 +163,14 @@ class CartController extends AppfrontController
                     $error_str = implode(',', $error_arr);
                     echo json_encode([
                         'status' => 'fail',
-                        'content'=> $error_str,
+                        'content' => $error_str,
                     ]);
                     $innerTransaction->rollBack();
                     exit;
                 } else {
                     echo json_encode([
                         'status' => 'success',
-                        'content'=> 'cacle coupon success',
+                        'content' => 'cacle coupon success',
                     ]);
                     $innerTransaction->commit();
                     exit;
@@ -181,7 +181,7 @@ class CartController extends AppfrontController
         } else {
             echo json_encode([
                 'status' => 'fail',
-                'content'=> 'coupon is empty',
+                'content' => 'coupon is empty',
             ]);
             exit;
         }
@@ -214,5 +214,31 @@ class CartController extends AppfrontController
         } catch (Exception $e) {
             $innerTransaction->rollBack();
         }
+    }
+
+    /*
+     * zhuang
+     * shipping
+     */
+    public function actionUpdateshipping()
+    {
+        $shipping_country = Yii::$app->request->post('shipping_country');
+        $status = Yii::$service->cart->updateShippingCountry($shipping_country);
+        echo json_encode([
+            'status' => $status ? 'success' : 'fail',
+        ]);
+    }
+
+    /*
+     * zhuang
+     * shipping country
+     */
+    public function actionUpdateshippingmethod()
+    {
+        $shipping_method = Yii::$app->request->post('shipping_method');
+        $status = Yii::$service->cart->updateShipMethod($shipping_method);
+        echo json_encode([
+            'status' => $status ? 'success' : 'fail',
+        ]);
     }
 }
