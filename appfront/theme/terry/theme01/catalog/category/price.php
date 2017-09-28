@@ -14,5 +14,5 @@
     <div class="dashed_line"></div>
     <div class="blank5px"></div>
     <div class="blank5px"></div>
-    <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart"/>
+    <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:ShoppingCartAdd();return false;"/>
 </div>

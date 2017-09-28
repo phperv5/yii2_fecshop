@@ -675,7 +675,7 @@ return [
                     'Software'      => [
                         'dbtype'    => 'String',
                         'label'     => 'Software',
-                        'name'      => 'color',
+                        'name'      => 'software',
                         'showAsImg' => true, // 通过图片的方式展示属性。
                         'require'   => 1,  // 1代表是必填选项，0代表选填
                         'display'   => [
