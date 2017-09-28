@@ -54,12 +54,16 @@
             <span class="mycart-text">My Shopping Cart</span>
         </a>
     </div>
-    <div class="hd_pop_kw"><a href="producttags/mb-bga-tool.html">MB BGA Tool</a><a
-                href="producttags/vvdi2.html">VVDI2</a><a href="producttags/2017-launch-x431.html">2017 Launch
-            X431</a><a href="producttags/xtruck-usb-link.html">XTruck USB Link</a><a
-                href="producttags/vxdiag-vcx-nano.html">VXDIAG VCX NANO</a><a href="producttags/volvo-vcads.html">Volvo
-            VCADS</a><a href="producttags/xtuner.html">XTUNER</a><a href="producttags/launch-x431-v.html">Launch X431
-            V</a><a href="search/�q=X100 Pad.html">X100 Pad</a><a href="search/�q=CBAY Handy Baby.html">CBAY Handy
-            Baby</a></div>
+    <div class="hd_pop_kw"><a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=MB BGA Tool');?>">MB BGA Tool</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=VVDI2');?>">VVDI2</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=2017 Launch X431');?>">2017 Launch X431</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=XTruck USB Link');?>">XTruck USB Link</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=VXDIAG VCX NANO');?>">VXDIAG VCX NANO</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Volvo VCADS');?>">Volvo VCADS</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=XTUNER');?>">XTUNER</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Launch X431 V');?>">Launch X431 V</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=X100 Pad');?>">X100 Pad</a>
+        <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=CBAY Handy Baby');?>">CBAY Handy Baby</a>
+    </div>
     <div class="clear">
     </div>
