@@ -66,7 +66,10 @@ use fecshop\app\appfront\helper\Format;
                                 <?php } ?>
                             </select>
                             </span>
-                            <br>
+                        </td>
+                    </tr>
+                    <tr class="tr_info">
+                        <td colspan="5" class="align_right px11">
                             <span>
                                 <select name="shipping_method" id="oShipMethod" class="input">
                                           <option value="">select shipping method</option>
