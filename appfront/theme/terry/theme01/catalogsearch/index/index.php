@@ -85,7 +85,6 @@
                             <div class="blank10px"></div>
                             <?= $product['short_description']; ?>
                             <div class="blank5px"></div>
-
                             <div class="clear"></div>
                         </div>
                         <div class="order_fun px11">
@@ -103,7 +102,7 @@
                             <div class="dashed_line"></div>
                             <div class="blank5px"></div>
                             <div class="blank5px"></div>
-                            <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;"/>
+                            <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['product_id'] ?>');return false;"/>
                         </div>
                         <div class="clear"></div>
                     </div>
