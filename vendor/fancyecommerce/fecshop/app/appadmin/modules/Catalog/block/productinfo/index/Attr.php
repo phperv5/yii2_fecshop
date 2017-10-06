@@ -347,7 +347,7 @@ class Attr
                     'type' => 'textarea',
                     'lang' => true,
                     'rows'    => 14,
-                    'cols'    => 100,
+                    'cols'    => 50,
                 ],
                 'require' => 0,
             ],
@@ -359,9 +359,39 @@ class Attr
                     'type' => 'textarea',
                     'lang' => true,
                     'rows'    => 14,
-                    'cols'    => 100,
+                    'cols'    => 300,
                 ],
                 'require' => 1,
+            ],
+            [
+                'label'=>'Video',
+                'name'=>'video',
+                'display'=>[
+                    'type' => 'textarea',
+                    'lang' => true,
+                    'rows'    => 14,
+                    'cols'    => 100,
+                ],
+            ],
+            [
+                'label'=>'Tech Support',
+                'name'=>'tech_support',
+                'display'=>[
+                    'type' => 'textarea',
+                    'lang' => true,
+                    'rows'    => 14,
+                    'cols'    => 100,
+                ],
+            ],
+            [
+                'label'=>'After-sales Service',
+                'name'=>'payment',
+                'display'=>[
+                    'type' => 'textarea',
+                    'lang' => true,
+                    'rows'    => 14,
+                    'cols'    => 100,
+                ],
             ],
         ];
     }

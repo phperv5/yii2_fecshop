@@ -7,9 +7,6 @@
  * @license http://www.fecshop.com/license/
  */
 ?>
-<div class="scroll_left">
-	<a href=""><?= Yii::$service->page->translate->__('Payment Methods:'); ?></a>
-</div>
 <p><?= Yii::$service->page->translate->__('FECSHOP.com accepts PayPal, Credit Card, Western Union and Wire Transfer as secure payment methods:'); ?></p>
 
 <p><?= Yii::$service->page->translate->__('Global:'); ?></p>

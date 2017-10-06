@@ -83,11 +83,14 @@ class Index
                 'middle_img_width'      => $productImgSize['middle_img_width'],
             ],
             'productImgMagnifier'       => $productImgMagnifier,
-            'options'                   => $this->getSameSpuInfo(),
-            'custom_option'             => $this->_product['custom_option'],
-            'description'               => Yii::$service->store->getStoreAttrVal($this->_product['description'], 'description'),
-            '_id'                       => $this->_product['_id'],
-            'buy_also_buy'              => $this->getProductBySkus($skus),
+            'options'                     => $this->getSameSpuInfo(),
+            'custom_option'              => $this->_product['custom_option'],
+            'description'                => Yii::$service->store->getStoreAttrVal($this->_product['description'], 'description'),
+            '_id'                         => $this->_product['_id'],
+            'buy_also_buy'               => $this->getProductBySkus($skus),
+            'video'                       => Yii::$service->store->getStoreAttrVal($this->_product['video'], 'video'),
+            'tech_support'                       => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
+            'payment'                       => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
         ];
     }
     public function getGroupAttrArr($groupAttr){
