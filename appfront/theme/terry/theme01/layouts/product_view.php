@@ -21,6 +21,7 @@ $jsOptions = [
 			'elevatezoom/jquery.elevatezoom.js',
 			'fancybox/jquery.fancybox.pack.js',
 			'js/js.js',
+			'js/common.js',
 		],
 	],
 ];
