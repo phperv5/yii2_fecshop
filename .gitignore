@@ -10,3 +10,4 @@ common/config/fecshop_local_services/Image.php
 common/config/fecshop_local_services/Email.php
 common/config/main-local.php
 appfront/config/fecshop_local_modules/Catalog.php
+common/config/fecshop_local_services/Payment.php
