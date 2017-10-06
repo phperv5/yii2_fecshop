@@ -174,7 +174,7 @@
                 <li id="p_ab_mn_1" class="current" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,1,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>Product Details</span></li>
                 <li id="p_ab_mn_2" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,2,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>Video</span></li>
                 <li id="p_ab_mn_3" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,3,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', ''); ProTechService(8777,'p_ab_vw_xy_3');"><span>Tech Support</span></li>
-                <li id="p_ab_mn_4" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,4,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', ''); PaginationAjax('p_ab_vw_xy_4','/ajax/pro_rev_list.asp','ProID=51561','begin');"><span>Reviews<b id="num_pro_review_51561" class="red_dark"></b></span></li>
+                <li id="p_ab_mn_4" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,4,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>Reviews<b id="num_pro_review_51561" class="red_dark"></b></span></li>
                 <li><span><a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/add',['spu'=>$spu,'_id'=>$_id]); ?>">Write a Comment</a></span></li>
 <!--                <li onclick="GotoScrollTop('1', 'na_pro_releated', 100, '', '', '');"><span>Related Products</span></li>-->
                 <li id="p_ab_mn_5" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,5,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>After-sales Service</span></li>
@@ -189,10 +189,12 @@
         <div id="p_ab_vw_2" style="display:none">
             video
         </div>
-        <div id="p_ab_vw_3" style="display:none"><a name="Service"></a><div class="blank60px"></div><div id="p_ab_vw_xy_3"><div class="loading_img"></div></div></div>
+        <div id="p_ab_vw_3" style="display:none"><a name="Service"></a><div class="blank60px"></div>
+            <div id="p_ab_vw_xy_3">
+
+            </div>
+        </div>
         <div id="p_ab_vw_4" style="display:none">
-            <a name="Reviews"></a>
-            <div class="blank30px"></div>
             <div id="p_ab_vw_xy_4">
                 <?php # review部分。
                 $reviewView = [

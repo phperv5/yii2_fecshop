@@ -1,17 +1,8 @@
 <?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
+
 ?>
 <div class="product-Reviews">
-	<div id="pic_list_2" class="scroll_horizontal">
-		<div class="scroll_left">
-			<a href=""><?= Yii::$service->page->translate->__('Product Review'); ?></a>
-		</div>
+	<div id="pic_list_2" class="">
 		<div class="clear"></div>
 		<div class="box">
 			<div class="product-Reviews_top">
@@ -50,7 +41,7 @@
 			</div>
 			<div class="clear"></div>
 			<a class="submitbutton" href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/add',['spu'=>$spu,'_id'=>$_id]); ?>" >
-				<?= Yii::$service->page->translate->__('Add Review'); ?>
+				<?= Yii::$service->page->translate->__('Write a Comment'); ?>
 			</a>
 			<div class="clear"></div>
 			<div class="view_all_review">
