@@ -64,7 +64,7 @@ class Placeorder
                         $genarateStatus = Yii::$service->order->generateOrderByCart($this->_billing, $this->_shipping_method, $this->_payment_method, false);
                         if ($genarateStatus) {
                             //清除购物车
-                            Yii::$service->cart->clearCartProductAndCoupon();
+                           // Yii::$service->cart->clearCartProductAndCoupon();
 
                             // 得到当前的订单信息
                             //$orderInfo = Yii::$service->order->getCurrentOrderInfo();

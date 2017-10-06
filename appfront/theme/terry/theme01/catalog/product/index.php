@@ -92,7 +92,7 @@
                     <!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
                     <dd class="w420px"><?= $weight;?>KG</dd>
                     <dt class="w100px">Package:</dt>
-                    <dd class="w420px"><?= $package;?></span>
+                    <dd class="w420px"><?= $package;?><?php if($package) echo $package;else echo 'none';?></span>
                     </dd>
                     <dt class="w100px">Returns:</dt>
                     <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.
@@ -102,13 +102,15 @@
                 <div class="blank10px"></div>
                 <div class="dashed5px"></div>
                 <div class="blank5px"></div>
-                <div class="pro_ch_bf_digg">
-                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">
-                            <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>
-                    </div>
-                </div>
+<!--                <div class="pro_ch_bf_digg">-->
+<!--                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">-->
+<!--                            <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="blank5px"></div>-->
+<!--                <div class="dashed5px"></div>-->
+                <div class="line18em"><b class="green_dark">Related Download Files:</b><br>&nbsp;&nbsp;<a href="/upload/pro/xtuner-x500-user-manual.pdf" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5">xtuner-x500-user-manual.pdf</b></a>&nbsp;&nbsp;<span class="px11 gray">(2,709.8K)</span></div>
                 <div class="blank5px"></div>
-                <div class="dashed5px"></div>
                 <div class="pro_ch_bf_g_plusone">
                     <g:plusone></g:plusone>
                 </div>
@@ -358,7 +360,7 @@
     });
     <?php $this->endBlock(); ?>
     <?php $this->registerJs($this->blocks['add_to_cart'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
-    
+
 </script>
 
 
