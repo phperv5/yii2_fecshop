@@ -12,19 +12,19 @@ return [
         'appbase'    => [
             'appfront' => [
                 'basedir'    => '@appimage/appfront',
-                'basedomain' => 'http://img.normankeys.com',
+                'basedomain' => 'http://img.51openheart.cn',
             ],
             'apphtml5' => [
                 'basedir'    => '@appimage/apphtml5',
-                'basedomain' => 'http://img.normankeys.com',
+                'basedomain' => 'http://img.51openheart.cn',
             ],
             'appadmin' => [
             	'basedir' => '@appimage/appadmin',
-                'basedomain' => 'http://img.normankeys.com',
+                'basedomain' => 'http://img.51openheart.cn',
             ],
             'common' => [
                 'basedir'    => '@appimage/common',
-                'basedomain' => 'http://img.normankeys.com',
+                'basedomain' => 'http://img.51openheart.cn',
             ],
         ],
     ],

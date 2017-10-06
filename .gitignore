@@ -6,7 +6,7 @@ appfront/config/fecshop_local_services/Store.php
 .idea/blade.xml
 .idea/deployment.xml
 .idea/webServers.xml
-appfront/config/fecshop_local_services/Image.php
-appfront/config/fecshop_local_services/Email.php
+common/config/fecshop_local_services/Image.php
+common/config/fecshop_local_services/Email.php
 common/config/main-local.php
 appfront/config/fecshop_local_modules/Catalog.php
