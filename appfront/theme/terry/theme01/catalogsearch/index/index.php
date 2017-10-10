@@ -107,18 +107,12 @@
                         <div class="clear"></div>
                     </div>
                 <?php endforeach; ?>
+                <?= $product_page; ?>
             <?php else: ?>
                 <div class="fl">
                     Search results for<span class="red">'<?= $searchText ?>'</span> returns no results
                 </div>
 
-            <?php endif; ?>
-        </div>
-        <div class="page_nav">
-            <?php if ($pageToolBar): ?>
-                <div class="pageToolbar">
-                    <?= $pageToolBar ?>
-                </div>
             <?php endif; ?>
         </div>
         <div class="clear"></div>
