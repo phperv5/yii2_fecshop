@@ -156,17 +156,51 @@ class Image extends Service
             $width = $imgResize;
             $height = '0';
         }
+
         $imageArr = explode('/', $imageVal);
-        unset($imageArr[0]);
         $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
         foreach ($imageArr as $igf) {
-            if (!strstr($igf, '.')) {
+            if ($igf && !strstr($igf, '.')) {
                 $dirArr[] = $igf;
             }
         }
-        \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
-        $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
-        $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
-        return [$newPath, $newUrl];
+        $createDir = \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
+        if($createDir){
+            $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
+            $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
+            return [$newPath, $newUrl];
+        }else{
+            return [];
+        }
     }
+//    protected function getProductNewPath($imageVal, $imgResize, $waterImgPath)
+//    {
+//        if (!$this->_md5WaterImgPath) {
+//            if (!$waterImgPath) {
+//                $waterImgPath = 'defaultWaterPath';
+//            }
+//            //echo $waterImgPath;exit;
+//            $this->_md5WaterImgPath = md5($waterImgPath);
+//        }
+//
+//        $baseDir = '/cache/'.$this->_md5WaterImgPath;
+//        if (is_array($imgResize)) {
+//            list($width, $height) = $imgResize;
+//        } else {
+//            $width = $imgResize;
+//            $height = '0';
+//        }
+//        $imageArr = explode('/', $imageVal);
+//        unset($imageArr[0]);
+//        $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
+//        foreach ($imageArr as $igf) {
+//            if (!strstr($igf, '.')) {
+//                $dirArr[] = $igf;
+//            }
+//        }
+//        \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
+//        $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
+//        $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
+//        return [$newPath, $newUrl];
+//    }
 }
