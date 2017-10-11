@@ -428,7 +428,7 @@ function thissubmit(thiss){
 						jQuery(document).on("click",".add_custom_option",function(){
 							i = 0;
 							$str = '<tr>';
-							general_sku = '';
+							general_sku = $('.custom_option_sku').val();
 							$(".custom_option_attr").each(function(){
 								attr = $(this).attr("atr");
 								val = $(this).val();
@@ -437,12 +437,6 @@ function thissubmit(thiss){
 									alert("select can not empty");
 								}
 								$str += '<td rel="'+attr+'">'+val+'</td>';
-								val = val.replace(" ", "*")
-								if(!general_sku){
-									general_sku = val;
-								}else{
-									general_sku += "-"+val;
-								}
 							});
 							custom_option_sku = general_sku;
 							custom_option_sku = custom_option_sku.toLowerCase();   
@@ -462,8 +456,8 @@ function thissubmit(thiss){
 							chosened_img_src = $(".chosened_img img").attr('src');
 							chosened_img_rel = $(".chosened_img img").attr('rel');
 							if(!chosened_img_src || !chosened_img_rel){
-								i = 1;
-								alert("you must chose a image");
+//								i = 1;
+//								alert("you must chose a image");
 							}
 							$str += '<td rel="image"><img style="width:30px;" rel="'+chosened_img_rel+'" src="'+chosened_img_src+'"/></td>';
 							$str += '<td><a title="删除"  href="javascript:void(0)" class="btnDel deleteCustomList">删除</a></td>'
