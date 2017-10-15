@@ -42,7 +42,6 @@ class Shipping extends Service
      */
     protected function actionIfIsCorrect($shipping_method)
     {
-        var_dump($shipping_method);
         $allmethod = $this->shippingConfig;
         if (isset($allmethod[$shipping_method]) && !empty($allmethod[$shipping_method])) {
             return true;
