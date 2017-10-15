@@ -116,7 +116,7 @@ class Shipping extends Service
             foreach ($priceData as $data) {
                 $csv_weight = (float) $data[0];
                 $csv_price  = (float) $data[1];
-                if ($weight >= $csv_weight) {
+                if ($weight > $csv_weight) {
                     $prev_weight = $csv_weight;
                     $prev_price  = $csv_price;
                     continue;
