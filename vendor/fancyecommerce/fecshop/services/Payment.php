@@ -55,7 +55,6 @@ class Payment extends Service
         if (!$payment_method) {
             $payment_method = $this->getPaymentMethod();
         }
-        echo $payment_method;die;
         if ($payment_method) {
             $paymentConfig = $this->paymentConfig;
             if (isset($paymentConfig['standard'][$payment_method]['start_url'])) {
