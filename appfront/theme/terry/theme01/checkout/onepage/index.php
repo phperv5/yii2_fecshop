@@ -86,7 +86,7 @@
                             with
                             you credit card or bank debit card , then also pay via PayPal.<br/>
                             Payment can be submitted in any currency.&nbsp;<br/>
-                            Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
+                            Our PayPal account is: <b style="font-size: 18px;">carkeyunlock_api1.gmail.com</b>
                             <div class="blank10px"></div>
                             <input name="" type="image" class="ipt_img onestepcheckout-button" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
                         </div>
