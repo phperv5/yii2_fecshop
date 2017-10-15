@@ -25,10 +25,11 @@ class Edit
     public function initAddress()
     {
         $address = Yii::$app->request->post('address');
+        $redirect_url = Yii::$app->request->get('redirect_url');
         $isSave = 0;
         if (is_array($address) && !empty($address)) {
             $address = \Yii::$service->helper->htmlEncode($address);
-            $this->save($address);
+            $this->save($address,$redirect_url);
             $isSave = 1;
         }
         if (!$isSave) {
@@ -136,7 +137,7 @@ class Edit
         exit;
     }
 
-    public function save($address)
+    public function save($address,$redirect_url)
     {
         $arr = [];
         $email = isset($address['email']) ? $address['email'] : '';
@@ -220,7 +221,10 @@ class Edit
         $identity = Yii::$app->user->identity;
         $arr['customer_id'] = $identity['id'];
         Yii::$service->customer->address->save($arr);
-
+        if($redirect_url){
+            header('Location:'.$redirect_url);
+            exit();
+        }
         return Yii::$service->url->redirectByUrlKey('customer/address');
     }
 }
