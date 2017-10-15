@@ -155,7 +155,7 @@ class Placeorder
             $address_id = $post['address_id'];
 
             if (!$address_id) {
-                Yii::$service->helper->errors->add('new customer address save fail');
+                Yii::$service->helper->errors->add('please add your shipping address.');
                 return false;
             }
             return Yii::$service->cart->updateLoginCart($this->_address_id, $this->_shipping_method, $this->_payment_method);
