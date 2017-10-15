@@ -11,8 +11,7 @@ use fecshop\app\appfront\helper\Format;
         <h1>Shopping Cart</h1>
         <div class="blank10px"></div>
         <?php if (!empty($cart_info['products'])) { ?>
-            <form action="order.asp" method="post" name="formAddOrder">
-                <table class="tab_comm" id="#shopping-cart-table">
+            <table class="tab_comm" id="#shopping-cart-table">
                     <tr class="tr_head">
                         <td width="120">&nbsp;</td>
                         <td>Product Name</td>
@@ -41,14 +40,14 @@ use fecshop\app\appfront\helper\Format;
                             </td>
                             <td><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_price']); ?></td>
                             <td>
-                                <a href="javascript:void(0)" class="cartqtydown changeitemqty"
-                                   rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></a>
-                                <input name="cart[qty]" size="4" title="Qty" class="input-text qty input"
-                                       rel="<?= $product_one['item_id']; ?>" maxlength="12"
-                                       value="<?= $product_one['qty']; ?>">
-                                <a href="javascript:void(0)" class="cartqtyup changeitemqty"
-                                   rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></a>
-                                <div class="clear"></div>
+                                <div class="amount-wrapper">
+                                    <div class="item-amount">
+                                        <a href="javascript:void(0)" id="cartqtydown" class="J_Minus minus" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">-</a>
+                                        <input type="text" rel="<?= $product_one['item_id']; ?>" value="<?= $product_one['qty']; ?>" class="text text-amount J_ItemAmount"  maxlength="12" autocomplete="off" style="width: 39px;  height: 15px;  line-height: 15px;  border: 1px solid #aaa;  color: #343434;  text-align: center;  padding: 4px 0;  background-color: #fff;float: left">
+                                        <a href="javascript:void(0)" id="cartqtyup" class="J_Plus plus" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"  style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">+</a>
+                                    </div>
+                                    <div class="amount-msg J_AmountMsg"></div>
+                                </div>
                             </td>
                             <td>
                                 <b><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_row_price']); ?></b>
@@ -110,21 +109,14 @@ use fecshop\app\appfront\helper\Format;
                         </td>
                     </tr>
                 </table>
-            </form>
             <div class="blank10px"></div>
             <div class="fl" style="margin-top:10px;">
                 <!--                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">-->
             </div>
             <div class="float_right" style="margin-top:10px;">
-                -- OR -- <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid"
+                <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid"
                                 value="Proceed to Checkout"
                                 onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'">
-            </div>
-            <div class="float_right" style="margin-right:10px;">
-                <input name="" type="image" class="ipt_img"
-                       src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>"
-                       alt="Check out with PayPal" id="myPPECbutton"
-                       onclick="location.href='<?= Yii::$service->url->getUrl('payment/paypal/express/start'); ?>'">
             </div>
 
             <div class="blank10px"></div>
@@ -160,7 +152,7 @@ use fecshop\app\appfront\helper\Format;
     $(document).ready(function () {
         currentUrl = "<?= Yii::$service->url->getUrl('checkout/cart') ?>"
         updateCartInfoUrl = "<?= Yii::$service->url->getUrl('checkout/cart/updateinfo') ?>"
-        $(".cartqtydown").click(function () {
+        $("#cartqtydown").click(function () {
             $item_id = $(this).attr("rel");
             num = $(this).attr("num");
             if (num > 1) {
@@ -186,7 +178,7 @@ use fecshop\app\appfront\helper\Format;
             }
         });
 
-        $(".cartqtyup").click(function () {
+        $("#cartqtyup").click(function () {
             $item_id = $(this).attr("rel");
             $data = {
                 item_id: $item_id,

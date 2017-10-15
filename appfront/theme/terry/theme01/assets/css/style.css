@@ -20,7 +20,7 @@ fieldset.third legend { font-size: 14px; color: #e86900; }
 h1 { font: bold 18px Arial; margin: 0px; padding: 0px; clear: both; }
 
 select { padding: 0.2em; border: 1px solid #999; font-size: 1.1em; }
-input { background: #FFFFFF; font-size: 1.2em; padding: 0.3em 0.5em; color: #000; border-top: 1px solid #999; border-right: 1px solid #999; border-bottom: 1px solid #999; border-left: 3px solid #999; }
+input { background: #FFFFFF; font-size: 1.2em; padding: 0.3em 0.5em; color: #000; border-top: 1px solid #999; border-right: 1px solid #999; border-bottom: 1px solid #999; border-left: 1px solid #999; }
 input:hover { background: #FFFFEC; border-color: #069; }
 	input.input_radio, input.input_radio:hover, input.input_checkbox, input.input_checkbox:hover  { border-style: none; }
 	input.initval { color: #999; }
@@ -1214,4 +1214,43 @@ a.cartqtyup {
     min-height: 13px;
 
 
+}
+
+.tr_info .item-content .item-amount {
+	height: 25px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.tr_info .item-content .item-amount .minus, .item-content .item-amount .no-minus {
+	border-right-color: transparent;
+	left: 0;
+}
+
+.tr_info .item-content .item-amount a {
+	display: block;
+	height: 23px;
+	width: 17px;
+	border: 1px solid #e5e5e5;
+	background: #f0f0f0;
+	text-align: center;
+	line-height: 23px;
+	color: #444;
+	position: absolute;
+	top: 0;
+}
+
+.tr_info .item-content .item-amount a, .item-content .text-amount {
+	float: left;
+}
+
+.tr_info .item-content .text-amount {
+	width: 39px;  height: 15px;  line-height: 15px;  border: 1px solid #aaa;  color: #343434;  text-align: center;  padding: 4px 0;  background-color: #fff;  background-position: -75px -375px;
+	left: 18px;
+	top: 0;
+}
+
+.tr_info .item-content .item-amount a, .item-content .text-amount {
+	float: left;
 }

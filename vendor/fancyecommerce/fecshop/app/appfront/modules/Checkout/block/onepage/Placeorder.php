@@ -47,7 +47,6 @@ class Placeorder
                 // 如果游客用户勾选了注册账号，则注册，登录，并把地址写入到用户的address中
                 //$gus_status = $this->guestCreateAndLoginAccount($post);
                 $save_address_status = $this->updateAddress($post);
-                //if ($gus_status && $save_address_status) {
                 if ($save_address_status) {
 
                     // 更新Cart信息
@@ -64,7 +63,7 @@ class Placeorder
                         $genarateStatus = Yii::$service->order->generateOrderByCart($this->_billing, $this->_shipping_method, $this->_payment_method, false);
                         if ($genarateStatus) {
                             //清除购物车
-                           // Yii::$service->cart->clearCartProductAndCoupon();
+                            // Yii::$service->cart->clearCartProductAndCoupon();
 
                             // 得到当前的订单信息
                             //$orderInfo = Yii::$service->order->getCurrentOrderInfo();
@@ -153,37 +152,12 @@ class Placeorder
     public function updateAddress($post)
     {
         if (!Yii::$app->user->isGuest) {
-            $billing = $post['billing'];
             $address_id = $post['address_id'];
+
             if (!$address_id) {
-                $identity = Yii::$app->user->identity;
-                $customer_id = $identity['id'];
-                $one = [
-                    'first_name' => $billing['first_name'],
-                    'last_name' => $billing['last_name'],
-                    'email' => $billing['email'],
-                    'company' => '',
-                    'telephone' => $billing['telephone'],
-                    'fax' => '',
-                    'street1' => $billing['street1'],
-                    'street2' => $billing['street2'],
-                    'city' => $billing['city'],
-                    'state' => $billing['state'],
-                    'zip' => $billing['zip'],
-                    'country' => $billing['country'],
-                    'customer_id' => $customer_id,
-                    'is_default' => 1,
-                ];
-                $address_id = Yii::$service->customer->address->save($one);
-                $this->_address_id = $address_id;
-                if (!$address_id) {
-                    Yii::$service->helper->errors->add('new customer address save fail');
-
-                    return false;
-                }
-                //echo "$address_id,$this->_shipping_method,$this->_payment_method";
+                Yii::$service->helper->errors->add('please add your shipping address.');
+                return false;
             }
-
             return Yii::$service->cart->updateLoginCart($this->_address_id, $this->_shipping_method, $this->_payment_method);
         } else {
             return Yii::$service->cart->updateGuestCart($this->_billing, $this->_shipping_method, $this->_payment_method);

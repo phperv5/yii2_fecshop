@@ -5,7 +5,6 @@
     <div class="exh_full_top"></div>
     <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
         <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
-        <?php //var_dump(get_defined_vars());?>
         <input type="hidden" id="s_method_flatrate_flatrate2" name="shipping_method" value="<?= $cart_info['shipping_method'] ?>" class="validate-one-required-by-name">
         <div class="exh_full_main">
 <!--            <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>-->
@@ -67,7 +66,7 @@
                     <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
                     <div class="clear"></div>
                 <div class="p_order_step">
-                    <div class="o_stp_s_cur"><span class="sn_cur">3</span> &nbsp;Checkout and Payment Details</div>
+                    <div class="o_stp_s_off"><span class="sn">3</span> &nbsp;Checkout and Payment Details</div>
                     <div class="scene">
                         <div class="blank5px"></div>
                         <label for="PayPalECS">
@@ -86,7 +85,7 @@
                             with
                             you credit card or bank debit card , then also pay via PayPal.<br/>
                             Payment can be submitted in any currency.&nbsp;<br/>
-                            Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
+                            Our PayPal account is: <b style="font-size: 18px;">carkeyunlock_api1.gmail.com</b>
                             <div class="blank10px"></div>
                             <input name="" type="image" class="ipt_img onestepcheckout-button" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
                         </div>
