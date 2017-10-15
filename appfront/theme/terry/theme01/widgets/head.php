@@ -15,4 +15,4 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <?php $parentThis->head() ?>
 <!-- livezilla.net PLACE SOMEWHERE IN BODY -->
-<script type="text/javascript" id="536c62c6110c23a2aefab97a38b0f043" src="http://115.28.80.138:200/script.php?id=536c62c6110c23a2aefab97a38b0f043"></script>
+<script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=51638795"></script>

@@ -125,6 +125,7 @@ class Image extends Service
             $waterImgPath = $this->getDir('/'.$this->waterImg);
         }
         list($newPath, $newUrl) = $this->getProductNewPath($imageVal, $imgResize, $waterImgPath);
+
         if($newPath && $newUrl){
             if (!file_exists($newPath)) {
                 \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
@@ -139,40 +140,6 @@ class Image extends Service
      * @property $waterImgPath | String ， 水印图片的路径
      * 获取按照自定义尺寸获取的产品图片的文件绝对路径和完整url
      */
-    protected function getProductNewPath($imageVal, $imgResize, $waterImgPath)
-    {
-        if (!$this->_md5WaterImgPath) {
-            if (!$waterImgPath) {
-                $waterImgPath = 'defaultWaterPath';
-            }
-            //echo $waterImgPath;exit;
-            $this->_md5WaterImgPath = md5($waterImgPath);
-        }
-
-        $baseDir = '/cache/'.$this->_md5WaterImgPath;
-        if (is_array($imgResize)) {
-            list($width, $height) = $imgResize;
-        } else {
-            $width = $imgResize;
-            $height = '0';
-        }
-
-        $imageArr = explode('/', $imageVal);
-        $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
-        foreach ($imageArr as $igf) {
-            if ($igf && !strstr($igf, '.')) {
-                $dirArr[] = $igf;
-            }
-        }
-        $createDir = \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
-        if($createDir){
-            $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
-            $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
-            return [$newPath, $newUrl];
-        }else{
-            return [];
-        }
-    }
 //    protected function getProductNewPath($imageVal, $imgResize, $waterImgPath)
 //    {
 //        if (!$this->_md5WaterImgPath) {
@@ -190,17 +157,51 @@ class Image extends Service
 //            $width = $imgResize;
 //            $height = '0';
 //        }
+//
 //        $imageArr = explode('/', $imageVal);
-//        unset($imageArr[0]);
 //        $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
 //        foreach ($imageArr as $igf) {
-//            if (!strstr($igf, '.')) {
+//            if ($igf && !strstr($igf, '.')) {
 //                $dirArr[] = $igf;
 //            }
 //        }
-//        \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
-//        $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
-//        $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
-//        return [$newPath, $newUrl];
+//        $createDir = \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
+//        if($createDir){
+//            $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
+//            $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
+//            return [$newPath, $newUrl];
+//        }else{
+//            return [];
+//        }
 //    }
+    protected function getProductNewPath($imageVal, $imgResize, $waterImgPath)
+    {
+        if (!$this->_md5WaterImgPath) {
+            if (!$waterImgPath) {
+                $waterImgPath = 'defaultWaterPath';
+            }
+            //echo $waterImgPath;exit;
+            $this->_md5WaterImgPath = md5($waterImgPath);
+        }
+
+        $baseDir = '/cache/'.$this->_md5WaterImgPath;
+        if (is_array($imgResize)) {
+            list($width, $height) = $imgResize;
+        } else {
+            $width = $imgResize;
+            $height = '0';
+        }
+        $imageArr = explode('/', $imageVal);
+        unset($imageArr[0]);
+        $dirArr = ['cache', $this->_md5WaterImgPath, $width, $height];
+        foreach ($imageArr as $igf) {
+            if (!strstr($igf, '.')) {
+                $dirArr[] = $igf;
+            }
+        }
+        \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
+        $newPath = $this->getBaseDir().$baseDir .'/'.$width.'/'.$height.$imageVal;
+        $newUrl = $this->getBaseUrl().$baseDir .'/'.$width.'/'.$height.$imageVal;
+        return [$newPath, $newUrl];
+    }
 }
