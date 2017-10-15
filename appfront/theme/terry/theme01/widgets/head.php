@@ -14,8 +14,6 @@
 <meta name="robots" content="INDEX,FOLLOW" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <?php $parentThis->head() ?>
-<<<<<<< HEAD
 <!-- livezilla.net PLACE SOMEWHERE IN BODY -->
 <script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=51638795"></script>
-=======
->>>>>>> a05545a2ac20c64522c167c64cc344a27c858281
+
