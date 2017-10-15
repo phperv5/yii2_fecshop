@@ -34,9 +34,8 @@
 <!--地址列表-->
 <div class="scene" id="shippingAddress_select" <?php if ($address_select): ?>style="display: none;"<?php endif; ?>>
     <div class="fr"><a href="javascript:void(0);"
-                       onclick="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit') ?>'"><strong><img
-                        src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif'); ?>" hspace="3" border="0">Entera
-                New Address</strong></a></div>
+                       onclick="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit?redirect_url='.Yii::$service->url->getUrl('checkout/onepage')) ?>'"><strong><img
+                        src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif'); ?>" hspace="3" border="0">Enter a New Address</strong></a></div>
     <strong class="verdana">Please Choose Your Shipping Address</strong>
     <div class="dashed5px"></div>
     <?php if (is_array($address_list) && !empty($address_list)): ?>
