@@ -40,15 +40,6 @@ use fecshop\app\appfront\helper\Format;
                             </td>
                             <td><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_price']); ?></td>
                             <td>
-                                <a href="javascript:void(0)" class="cartqtydown changeitemqty"
-                                   rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></a>
-                                <input name="cart[qty]" size="4" title="Qty" class="input-text qty input"
-                                       rel="<?= $product_one['item_id']; ?>" maxlength="12"
-                                       value="<?= $product_one['qty']; ?>">
-                                <a href="javascript:void(0)" class="cartqtyup changeitemqty"
-                                   rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></a>
-                                <div class="clear"></div>
-
                                 <div class="amount-wrapper">
                                     <div class="item-amount">
                                         <a href="javascript:void(0)" id="cartqtydown" class="J_Minus minus" num="<?= $product_one['qty']; ?>" style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">-</a>
