@@ -115,11 +115,7 @@ use fecshop\app\appfront\helper\Format;
             <div class="fl" style="margin-top:10px;">
                 <!--                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='http://www.uobdii.com/members/orderList.asp';return false;">-->
             </div>
-<!--            <div class="float_right" style="margin-top:10px;">-->
-<!--                -- OR -- <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid"-->
-<!--                                value="Proceed to Checkout"-->
-<!--                                onclick="location.href='--><?//= Yii::$service->url->getUrl('checkout/onepage'); ?>//'">
-//            </div>
+
             <div class="float_right" style="margin-right:10px;">
                 <input name="" type="image" class="ipt_img"
                        src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>"
