@@ -46,8 +46,8 @@ class Placeorder
 
                 // 如果游客用户勾选了注册账号，则注册，登录，并把地址写入到用户的address中
                 //$gus_status = $this->guestCreateAndLoginAccount($post);
-                $save_address_status = $this->updateAddress($post);
-                //if ($gus_status && $save_address_status) {
+                //$save_address_status = $this->updateAddress($post);
+                $save_address_status = 0;
                 if ($save_address_status) {
 
                     // 更新Cart信息
@@ -64,7 +64,7 @@ class Placeorder
                         $genarateStatus = Yii::$service->order->generateOrderByCart($this->_billing, $this->_shipping_method, $this->_payment_method, false);
                         if ($genarateStatus) {
                             //清除购物车
-                           // Yii::$service->cart->clearCartProductAndCoupon();
+                            // Yii::$service->cart->clearCartProductAndCoupon();
 
                             // 得到当前的订单信息
                             //$orderInfo = Yii::$service->order->getCurrentOrderInfo();
