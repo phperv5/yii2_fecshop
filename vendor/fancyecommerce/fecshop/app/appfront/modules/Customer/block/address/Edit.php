@@ -217,7 +217,7 @@ class Edit
         if (isset($address['address_id'])) {
             $arr['address_id'] = $address['address_id'];
         }
-        //var_dump($address);exit;
+
         $identity = Yii::$app->user->identity;
         $arr['customer_id'] = $identity['id'];
         Yii::$service->customer->address->save($arr);
