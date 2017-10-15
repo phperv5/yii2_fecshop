@@ -67,7 +67,7 @@
                     <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
                     <div class="clear"></div>
                 <div class="p_order_step">
-                    <div class="o_stp_s_cur"><span class="sn_cur">3</span> &nbsp;Checkout and Payment Details</div>
+                    <div class="o_stp_s_off"><span class="sn">3</span> &nbsp;Checkout and Payment Details</div>
                     <div class="scene">
                         <div class="blank5px"></div>
                         <label for="PayPalECS">
