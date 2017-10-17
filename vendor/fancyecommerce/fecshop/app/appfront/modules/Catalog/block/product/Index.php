@@ -89,8 +89,9 @@ class Index
             '_id'                         => $this->_product['_id'],
             'buy_also_buy'               => $this->getProductBySkus($skus),
             'video'                       => Yii::$service->store->getStoreAttrVal($this->_product['video'], 'video'),
-            'tech_support'                       => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
-            'payment'                       => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
+            'tech_support'               => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
+            'payment'                     => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
+            'related_download_files'    => Yii::$service->store->getStoreAttrVal($this->_product['related_download_files'], 'related_download_files'),
         ];
     }
     public function getGroupAttrArr($groupAttr){

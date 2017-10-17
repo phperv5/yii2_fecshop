@@ -109,7 +109,11 @@
 <!--                </div>-->
 <!--                <div class="blank5px"></div>-->
 <!--                <div class="dashed5px"></div>-->
-                <div class="line18em"><b class="green_dark">Related Download Files:</b><br>&nbsp;&nbsp;<a href="/upload/pro/xtuner-x500-user-manual.pdf" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5">xtuner-x500-user-manual.pdf</b></a>&nbsp;&nbsp;<span class="px11 gray">(2,709.8K)</span></div>
+                <?php if($related_download_files): ?>
+                <div class="line18em"><b class="green_dark">Related Download Files:</b>&nbsp;
+                    <div style="padding-left:10px;overflow: hidden"> <?= $related_download_files;?></div>
+                </div>
+                <?php  endif;?>
                 <div class="blank5px"></div>
                 <div class="pro_ch_bf_g_plusone">
                     <g:plusone></g:plusone>

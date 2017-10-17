@@ -95,7 +95,9 @@ class Product extends ActiveRecord
             'see_also_see_sku',        // 看了的还看了什么
             'tech_support',        // tech_support
             'video',        // video
-            'payment',        // video
+            'payment',        // payment
+            'related_download_files',
+
 
         ];
         if (is_array(self::$_customProductAttrs) && !empty(self::$_customProductAttrs)) {
