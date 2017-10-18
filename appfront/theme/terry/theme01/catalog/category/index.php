@@ -182,7 +182,7 @@
                             </h2>
                             <div class="clear"></div>
                             <span class="px11">Item No.<?= $product['sku']; ?></span>&nbsp;&nbsp;&nbsp;
-                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;
+<!--                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;-->
                             <div class="fr w150px">
                                 <div class="rate_star_w100">
                                     <div class="rate_star_w100_bg">

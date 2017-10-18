@@ -370,7 +370,7 @@ class Attr
                     'rows'    => 14,
                     'cols'    => 30,
                 ],
-                'require' => 1,
+                'require' => 0,
             ],
             [
                 'label'=>'Video',
