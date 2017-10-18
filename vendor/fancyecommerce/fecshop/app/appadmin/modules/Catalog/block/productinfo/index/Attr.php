@@ -158,7 +158,7 @@ class Attr
                     'lang' => false,
 
                 ],
-                'require' => 0,
+                'require' => 1,
             ],
             [
                 'label'=>'package',
