@@ -42,9 +42,9 @@ use fecshop\app\appfront\helper\Format;
                             <td>
                                 <div class="amount-wrapper">
                                     <div class="item-amount">
-                                        <a href="javascript:void(0)" id="cartqtydown" class="J_Minus minus" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">-</a>
+                                        <a href="javascript:void(0)"  class="J_Minus minus cartdown" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">-</a>
                                         <input type="text" rel="<?= $product_one['item_id']; ?>" value="<?= $product_one['qty']; ?>" class="text text-amount J_ItemAmount"  maxlength="12" autocomplete="off" style="width: 39px;  height: 15px;  line-height: 15px;  border: 1px solid #aaa;  color: #343434;  text-align: center;  padding: 4px 0;  background-color: #fff;float: left">
-                                        <a href="javascript:void(0)" id="cartqtyup" class="J_Plus plus" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"  style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">+</a>
+                                        <a href="javascript:void(0)"  class="J_Plus plus cartup" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"  style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">+</a>
                                     </div>
                                     <div class="amount-msg J_AmountMsg"></div>
                                 </div>
@@ -152,7 +152,7 @@ use fecshop\app\appfront\helper\Format;
     $(document).ready(function () {
         currentUrl = "<?= Yii::$service->url->getUrl('checkout/cart') ?>"
         updateCartInfoUrl = "<?= Yii::$service->url->getUrl('checkout/cart/updateinfo') ?>"
-        $("#cartqtydown").click(function () {
+        $(".cartdown").click(function () {
             $item_id = $(this).attr("rel");
             num = $(this).attr("num");
             if (num > 1) {
@@ -178,7 +178,7 @@ use fecshop\app\appfront\helper\Format;
             }
         });
 
-        $("#cartqtyup").click(function () {
+        $(".cartup").click(function () {
             $item_id = $(this).attr("rel");
             $data = {
                 item_id: $item_id,

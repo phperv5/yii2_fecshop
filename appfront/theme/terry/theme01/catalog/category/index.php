@@ -195,17 +195,6 @@
                             <div class="blank10px"></div>
                             <?= $product['short_description']; ?>
                             <div class="blank5px"></div>
-
-                            <!--                    <div class="pro_sch_tags">-->
-                            <!--                        <b>Tags: </b>-->
-                            <!--                        <a href="../../producttags/launch-x431-v-8-tablet-pc.html">LaunchX431 V 8&#39;&#39; Tablet-->
-                            <!--                            PC</a>,-->
-                            <!--                        <a href="../../producttags/launch-x431-v.html">Launch X431V</a>,-->
-                            <!--                        <a href="../../producttags/launch.html">Launch</a>,-->
-                            <!--                        <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>,-->
-                            <!--                        <a href="../../producttags/ship-from-us.html">Ship from US</a>,-->
-                            <!--                        <a href="../../producttags/ship-from-uk.html">Ship from UK</a>-->
-                            <!--                    </div>-->
                             <div class="clear"></div>
 
                         </div>
