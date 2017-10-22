@@ -43,7 +43,7 @@ class Index
         $shippings = $this->getShippings();
         $last_cart_info = $this->getCartInfo($this->_shipping_method, $this->_country, $this->_state);
 
-        $customer_id = $Yii::$app->user->identity['id'];
+        $customer_id = Yii::$app->user->identity['id'];
         $filter = [
                     'numPerPage' => 50,
                     'pageNum' => 1,
