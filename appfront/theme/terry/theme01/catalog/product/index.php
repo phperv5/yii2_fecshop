@@ -92,7 +92,7 @@
                     <!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
                     <dd class="w420px"><?= $weight;?>KG</dd>
                     <dt class="w100px">Package:</dt>
-                    <dd class="w420px"><?= $package;?><?php if($package) echo $package;else echo 'none';?></span>
+                    <dd class="w420px"><?php if($package) echo $package;else echo 'none';?></span>
                     </dd>
                     <dt class="w100px">Returns:</dt>
                     <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.
