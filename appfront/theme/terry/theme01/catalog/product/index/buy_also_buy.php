@@ -18,10 +18,10 @@
             <div class="brief_fs_suit">
                 <div class="title"><a href="<?= $product['url'] ?>" target="_blank" title="<?= $product['name'] ?>"><?= $product['name'] ?></a></div>
                 <b class="px11 gray">(Item No.<?= $product['sku'] ?>)</b><br>
-                X300 P with the immobiliser ke.g. Odometer adjustment, EEPROM/PIC and OBDII.<br>Its design is fully based on industrial standard, for example, it is designed with bilateral keyboards which make it easy to operate, besides its appearance is processed by special material and reaches to the shockproof level.&nbsp;&nbsp;&nbsp;&nbsp;
+                <?= $product['short_description']; ?>
                 <a href="<?= $product['url'] ?>" target="_blank"><span>More Details »</span></a>
                 <div class="blank10px"></div>
-                　<img src="/images/ico/freeshipping.gif" border="0" align="absmiddle" alt="Free Shipping">
+                <!-- 　<img src="/images/ico/freeshipping.gif" border="0" align="absmiddle" alt="Free Shipping"> -->
                 <div class="clear"></div>
             </div>
             <div class="order_fun_suit">

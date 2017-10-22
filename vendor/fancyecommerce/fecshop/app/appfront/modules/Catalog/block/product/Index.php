@@ -63,6 +63,7 @@ class Index
         $this->filterProductImg($this->_product['image']);
         $groupAttr = Yii::$service->product->getGroupAttr($this->_product['attr_group']);
         $groupAttrArr = $this->getGroupAttrArr($groupAttr);
+        var_dump($this->_product);
         return [
             'groupAttrArr'              => $groupAttrArr,
             'name'                      => Yii::$service->store->getStoreAttrVal($this->_product['name'], 'name'),
@@ -70,8 +71,8 @@ class Index
             'image_detail'              => $this->_image_detail,
             'sku'                       => $this->_product['sku'],
             'spu'                       => $this->_product['spu'],
-            'weight'                       => $this->_product['weight'],
-            'package'                       => $this->_product['package'],
+            'weight'                    => $this->_product['weight'],
+            'package'                   => $this->_product['package'],
             'attr_group'                => $this->_product['attr_group'],
             'review_count'              => $review_count,
             'reviw_rate_star_average'   => $reviw_rate_star_average,
