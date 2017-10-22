@@ -63,8 +63,6 @@ class Index
         $this->filterProductImg($this->_product['image']);
         $groupAttr = Yii::$service->product->getGroupAttr($this->_product['attr_group']);
         $groupAttrArr = $this->getGroupAttrArr($groupAttr);
-        $relation_sku = array_map('trim',explode(',',trim($this->_product['relation_sku'])));
-        var_dump($relation_sku);
         return [
             'groupAttrArr'              => $groupAttrArr,
             'name'                      => Yii::$service->store->getStoreAttrVal($this->_product['name'], 'name'),
@@ -89,7 +87,7 @@ class Index
             'custom_option'              => $this->_product['custom_option'],
             'description'                => Yii::$service->store->getStoreAttrVal($this->_product['description'], 'description'),
             '_id'                         => $this->_product['_id'],
-            'buy_also_buy'               => $this->getProductBySkus($relation_sku),
+            'buy_also_buy'               => $this->getProductBySkus($this->_product['relation_sku']),
             'video'                       => Yii::$service->store->getStoreAttrVal($this->_product['video'], 'video'),
             'tech_support'               => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
             'payment'                     => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
@@ -473,10 +471,10 @@ class Index
             Yii::$service->page->breadcrumbs->active = false;
         }
     }
-    // 买了的人还买了什么，通过产品字段取出来sku，然后查询得到。
+    // 通过relate产品字段取出来sku，然后查询得到。
     protected function getProductBySkus($skus)
     {
-        $buy_also_buy_sku = $this->_product['buy_also_buy_sku'];
+        $buy_also_buy_sku = $this->_product['relation_sku'];
         if ($buy_also_buy_sku) {
             $skus = explode(',', $buy_also_buy_sku);
             if (is_array($skus) && !empty($skus)) {
