@@ -12,6 +12,7 @@
     <fieldset class="sec">
         <legend><b class="px14 red_dark">Buy more related tools and Save more!</b></legend>
         <?php foreach($parentThis['products'] as $product): ?>
+        <?php var_dump($product);?>
         <div class="pro_list">
             <div class="photo"><div class="special"><img src="<?= Yii::$service->image->getImgUrl('images/lazyload1.gif','appfront') ; ?>" align="absmiddle" alt="Featured"></div>
                 <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>"><img src="<?= Yii::$service->product->image->getResize($product['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $product['name'] ?>" align="absmiddle"></a></div>
@@ -25,15 +26,19 @@
                 <div class="clear"></div>
             </div>
             <div class="order_fun_suit">
-                <?php if(isset($product['special_price']['value'])):  ?>
-                <span class="pro_pri_tit_sale_s">Latest price:</span><span class="pro_pri_curr_sale_s" name="cc_v_USD" style="display:"><strong><?= $product['price']['symbol']  ?><?= $product['price']['value'] ?></strong></span>
-                <span class="pro_pri_tit_vip_m">Buy It Now:</span><span class="pro_pri_curr_vip_m" name="cc_v_USD" style="display:"><?= $product['price']['symbol']  ?><?= $product['special_price']['value'] ?></span>
-            <?php else:  ?>
-            <span class="pro_pri_tit_vip_m">Buy It Now:</span><span class="pro_pri_curr_vip_m" name="cc_v_USD" style="display:"><?= $product['price']['symbol']  ?><?= $product['price']['value'] ?></span>
-            <?php endif; ?>
+                            <?php
+                            $config = [
+                                'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                                'view' => 'catalog/category/price.php',
+                                'price' => $product['price'],
+                                'special_price' => $product['special_price'],
+                                'special_from' => $product['special_from'],
+                                'special_to' => $product['special_to'],
+                            ];
+                            echo Yii::$service->page->widget->renderContent('category_product_price', $config);
+                            ?>
                 <div class="blank10px"></div><span class="pro_b_item" id="id_pro_b_item_oQty_suit_48455"><b>Quantity: </b><input name="oQty_suit_48455" type="text" class="input" id="oQty_suit_48455" size="4" maxlength="6" onkeypress="event.returnValue=IsDigit();" value="1" onkeyup="ProQtySubTotal(this,'1','439.00','txt_single_subtotal_suit_48455');IsOrderNeedQty('Y','oQty_suit_48455');"><span class="px12"></span>　<b><span id="alert_o_need_oQty_suit_48455" class="alert"></span></b>　</span><span id="txt_single_subtotal_suit_48455" class="txt_subt_m"></span>
                 <div class="blank5px"></div>
-                <!-- <a href="javascript:void(0);" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;" title="Add to Cart"><img src="images/btn/add_to_cart_suit.gif" alt="Add to Cart" border="0" align="absmiddle"></a> -->
                 <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;"/>
                 <div class="clear"></div></div>
             <div class="clear"></div>
