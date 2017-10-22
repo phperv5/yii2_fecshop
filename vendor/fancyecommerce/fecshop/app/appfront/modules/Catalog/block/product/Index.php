@@ -474,15 +474,15 @@ class Index
     // 通过relate产品字段取出来sku，然后查询得到。
     protected function getProductBySkus($skus)
     {
-        $buy_also_buy_sku = $this->_product['relation_sku'];
-        if ($buy_also_buy_sku) {
-            $skus = explode(',', $buy_also_buy_sku);
+        $relation_sku = $this->_product['relation_sku'];
+        if ($relation_sku) {
+            $skus = explode(',', $relation_sku);
             if (is_array($skus) && !empty($skus)) {
                 $filter['select'] = [
                     'sku', 'spu', 'name', 'image',
                     'price', 'special_price',
                     'special_from', 'special_to',
-                    'url_key', 'score',
+                    'url_key', 'score','short_description',
                 ];
                 $filter['where'] = ['in', 'sku', $skus];
                 $products = Yii::$service->product->getProducts($filter);
