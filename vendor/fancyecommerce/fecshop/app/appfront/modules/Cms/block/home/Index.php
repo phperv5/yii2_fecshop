@@ -42,7 +42,7 @@ class Index
             'special_from', 'special_to',
             'url_key', 'score',
         ];
-        $filter['where'] = ['category' => $category_id];
+       // $filter['where'] = ['category' => $category_id];
         $filter['orderBy'] = ['score' => -1];
         $filter['limit'] = $limit;
         $products = Yii::$service->product->getProducts($filter);

@@ -32,7 +32,9 @@
             <span class="pro_pri_tit_vip_m">Buy It Now:</span><span class="pro_pri_curr_vip_m" name="cc_v_USD" style="display:"><?= $product['price']['symbol']  ?><?= $product['price']['value'] ?></span>
             <?php endif; ?>
                 <div class="blank10px"></div><span class="pro_b_item" id="id_pro_b_item_oQty_suit_48455"><b>Quantity: </b><input name="oQty_suit_48455" type="text" class="input" id="oQty_suit_48455" size="4" maxlength="6" onkeypress="event.returnValue=IsDigit();" value="1" onkeyup="ProQtySubTotal(this,'1','439.00','txt_single_subtotal_suit_48455');IsOrderNeedQty('Y','oQty_suit_48455');"><span class="px12"></span>　<b><span id="alert_o_need_oQty_suit_48455" class="alert"></span></b>　</span><span id="txt_single_subtotal_suit_48455" class="txt_subt_m"></span>
-                <div class="blank5px"></div><a href="javascript:void(0);" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;" title="Add to Cart"><img src="images/btn/add_to_cart_suit.gif" alt="Add to Cart" border="0" align="absmiddle"></a>
+                <div class="blank5px"></div>
+                <!-- <a href="javascript:void(0);" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;" title="Add to Cart"><img src="images/btn/add_to_cart_suit.gif" alt="Add to Cart" border="0" align="absmiddle"></a> -->
+                <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;"/>
                 <div class="clear"></div></div>
             <div class="clear"></div>
         </div>
