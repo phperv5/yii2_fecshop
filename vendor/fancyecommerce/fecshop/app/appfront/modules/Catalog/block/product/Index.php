@@ -64,6 +64,7 @@ class Index
         $groupAttr = Yii::$service->product->getGroupAttr($this->_product['attr_group']);
         $groupAttrArr = $this->getGroupAttrArr($groupAttr);
         $relation_sku = array_map('trim',explode(',',trim($this->_product['relation_sku'])));
+        var_dump($relation_sku);
         return [
             'groupAttrArr'              => $groupAttrArr,
             'name'                      => Yii::$service->store->getStoreAttrVal($this->_product['name'], 'name'),
