@@ -485,9 +485,7 @@ class Index
                     'url_key', 'score','short_description',
                 ];
                 $filter['where'] = ['in', 'sku', $skus];
-                
                 $products = Yii::$service->product->getProducts($filter);
-                var_dump($filter);
                 $products = Yii::$service->category->product->convertToCategoryInfo($products);
 
                 return $products;
