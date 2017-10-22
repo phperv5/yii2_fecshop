@@ -14,7 +14,7 @@
         <?php foreach($parentThis['products'] as $product): ?>
         <div class="pro_list">
             <div class="photo"><div class="special"><img src="<?= Yii::$service->image->getImgUrl('images/lazyload1.gif','appfront') ; ?>" align="absmiddle" alt="Featured"></div>
-                <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>"><img src="<?= Yii::$service->product->image->getResize($product['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="【Ship from US No Tax】OBDSTAR X300 PRO3 X-300 Key Master with Immobiliser + Odometer Adjustment +EEPROM/PIC+OBDII" align="absmiddle"></a></div>
+                <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>"><img src="<?= Yii::$service->product->image->getResize($product['image'],[120,120],false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="<?= $product['name'] ?>" align="absmiddle"></a></div>
             <div class="brief_fs_suit">
                 <div class="title"><a href="<?= $product['url'] ?>" target="_blank" title="<?= $product['name'] ?>"><?= $product['name'] ?></a></div>
                 <b class="px11 gray">(Item No.<?= $product['sku'] ?>)</b><br>
@@ -32,7 +32,7 @@
             <span class="pro_pri_tit_vip_m">Buy It Now:</span><span class="pro_pri_curr_vip_m" name="cc_v_USD" style="display:"><?= $product['price']['symbol']  ?><?= $product['price']['value'] ?></span>
             <?php endif; ?>
                 <div class="blank10px"></div><span class="pro_b_item" id="id_pro_b_item_oQty_suit_48455"><b>Quantity: </b><input name="oQty_suit_48455" type="text" class="input" id="oQty_suit_48455" size="4" maxlength="6" onkeypress="event.returnValue=IsDigit();" value="1" onkeyup="ProQtySubTotal(this,'1','439.00','txt_single_subtotal_suit_48455');IsOrderNeedQty('Y','oQty_suit_48455');"><span class="px12"></span>　<b><span id="alert_o_need_oQty_suit_48455" class="alert"></span></b>　</span><span id="txt_single_subtotal_suit_48455" class="txt_subt_m"></span>
-                <div class="blank5px"></div><a href="javascript:void(0);" onclick="javascript:ShoppingCartAdd('48455','Single','N','oSize_suit_48455','N','oColor_suit_48455','Y','oQty_suit_48455');return false;" title="Add to Cart"><img src="/images/btn/add_to_cart_suit.gif" alt="Add to Cart" border="0" align="absmiddle"></a>
+                <div class="blank5px"></div><a href="javascript:void(0);" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;" title="Add to Cart"><img src="images/btn/add_to_cart_suit.gif" alt="Add to Cart" border="0" align="absmiddle"></a>
                 <div class="clear"></div></div>
             <div class="clear"></div>
         </div>
