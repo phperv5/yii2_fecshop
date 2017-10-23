@@ -10,8 +10,7 @@
      <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
             <a class="item" href="<?= Yii::$service->url->getUrl('skp1000-tablet-multifunction-key-programmer-support-immobilizer-mileage-adjustment-epb-etc'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
-            <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
-            <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('2017-cgdi-prog-bmw-msv80-auto-key-programmer-diagnosis-tool-immo-security-3-in-1-come-with-bmw-femedc-function'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
         </div>
          <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
      </div>
