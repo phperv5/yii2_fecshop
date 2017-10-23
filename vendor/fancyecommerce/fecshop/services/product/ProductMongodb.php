@@ -511,6 +511,9 @@ class ProductMongodb implements ProductInterface
         if(isset($filter['limit'])){
             $query->limit($filter['limit']);
         }
+        if(isset($filter['offset'])){
+            $query->offset($filter['offset']);
+        }
         return $query->all();
     }
 
