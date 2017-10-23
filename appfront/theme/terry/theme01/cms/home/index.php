@@ -1,5 +1,4 @@
 ﻿<!-- <div class="align_center"><a href="producttags/free-shipping-key-tool.html" title="2017 New & Hot sale Auto Key Programmer" target="_blank"><img src="upload/advs/2017080912762334.jpg" width="1200" height="100" border="0" hspace="0" vspace="0" alt="2017 New & Hot sale Auto Key Programmer" align="absmiddle" /></a></div></div>-->
-<?php var_dump() ?>
 <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
@@ -10,7 +9,7 @@
     </div>
      <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
-            <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('skp1000-tablet-multifunction-key-programmer-support-immobilizer-mileage-adjustment-epb-etc'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
             <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
             <a class="item" href="<?= Yii::$service->url->getUrl('2432'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
         </div>
@@ -20,14 +19,14 @@
     <div class="blank15px"></div>
     <div class="hm_box_jmp_left">
         <ul>
-            <li><a href="wholesale/brand-xhorse/brand-xhorse.html"><img src="http://www.uobdii.com/upload/advs/2017011802685309.jpg" border="0" alt="Brand Xhorse"></a></li>
-            <li><a href="wholesale/brand-launch-x431/brand-launch-x431.html"><img src="http://www.uobdii.com/upload/advs/2017011802730456.jpg" border="0" alt="Brand Launch X431"></a></li>
-            <li><a href="wholesale/brand-obdstar/brand-obdstar.html"><img src="http://www.uobdii.com/upload/advs/2017011802749706.jpg" border="0" alt="Brand obdstar "></a></li>
-            <li><a href="wholesale/brand-xtool/brand-xtool.html"><img src="http://www.uobdii.com/upload/advs/2017011802768676.jpg" border="0" alt="Brand Xtool"></a></li>
-            <li><a href="wholesale/brand-xtuner/brand-xtuner.html"><img src="http://www.uobdii.com/upload/advs/2017011802785508.jpg" border="0" alt="Brand Xtuner"></a></li>
-            <li><a href="wholesale/brand-autel/brand-autel.html"><img src="http://www.uobdii.com/upload/advs/2017011802803183.jpg" border="0" alt="Brand Autel"></a></li>
-            <li><a href="wholesale/brand-foxwell/brand-foxwell.html"><img src="http://www.uobdii.com/upload/advs/2017011802818939.jpg" border="0" alt="Brand Foxwell"></a></li>
-            <li><a href="wholesale/brand-lishi/brand-lishi.html"><img src="http://www.uobdii.com/upload/advs/2017011802840124.jpg" border="0" alt="Brand Lishi"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('xhorse'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802685309.jpg" border="0" alt="Brand Xhorse"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('launch'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802730456.jpg" border="0" alt="Brand Launch X431"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('obdstar'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802749706.jpg" border="0" alt="Brand obdstar "></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('xtool'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802768676.jpg" border="0" alt="Brand Xtool"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('xtuner'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802785508.jpg" border="0" alt="Brand Xtuner"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('autel'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802803183.jpg" border="0" alt="Brand Autel"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('foxwell'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802818939.jpg" border="0" alt="Brand Foxwell"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('lishi'); ?>"><img src="http://www.uobdii.com/upload/advs/2017011802840124.jpg" border="0" alt="Brand Lishi"></a></li>
         </ul>
     </div>
     <div class="hm_box_jmp_right">
