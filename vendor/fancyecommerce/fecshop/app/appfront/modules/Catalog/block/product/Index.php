@@ -70,8 +70,8 @@ class Index
             'image_detail'              => $this->_image_detail,
             'sku'                       => $this->_product['sku'],
             'spu'                       => $this->_product['spu'],
-            'weight'                       => $this->_product['weight'],
-            'package'                       => $this->_product['package'],
+            'weight'                    => $this->_product['weight'],
+            'package'                   => $this->_product['package'],
             'attr_group'                => $this->_product['attr_group'],
             'review_count'              => $review_count,
             'reviw_rate_star_average'   => $reviw_rate_star_average,
@@ -87,7 +87,7 @@ class Index
             'custom_option'              => $this->_product['custom_option'],
             'description'                => Yii::$service->store->getStoreAttrVal($this->_product['description'], 'description'),
             '_id'                         => $this->_product['_id'],
-            'buy_also_buy'               => $this->getProductBySkus($skus),
+            'buy_also_buy'               => $this->getProductBySkus($this->_product['relation_sku']),
             'video'                       => Yii::$service->store->getStoreAttrVal($this->_product['video'], 'video'),
             'tech_support'               => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
             'payment'                     => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
@@ -471,22 +471,21 @@ class Index
             Yii::$service->page->breadcrumbs->active = false;
         }
     }
-    // 买了的人还买了什么，通过产品字段取出来sku，然后查询得到。
+    // 通过relate产品字段取出来sku，然后查询得到。
     protected function getProductBySkus($skus)
     {
-        $buy_also_buy_sku = $this->_product['buy_also_buy_sku'];
-        if ($buy_also_buy_sku) {
-            $skus = explode(',', $buy_also_buy_sku);
+        $relation_sku = $this->_product['relation_sku'];
+        if ($relation_sku) {
+            $skus = explode(',', $relation_sku);
             if (is_array($skus) && !empty($skus)) {
                 $filter['select'] = [
                     'sku', 'spu', 'name', 'image',
                     'price', 'special_price',
                     'special_from', 'special_to',
-                    'url_key', 'score',
+                    'url_key', 'score','short_description',
                 ];
                 $filter['where'] = ['in', 'sku', $skus];
                 $products = Yii::$service->product->getProducts($filter);
-                //var_dump($products);
                 $products = Yii::$service->category->product->convertToCategoryInfo($products);
 
                 return $products;

@@ -498,7 +498,7 @@ class ProductMongodb implements ProductInterface
      */
     public function getProducts($filter)
     {
-        $where = !isset($filter['where']) || empty($filter['where']) ? $filter['where'] : '';
+        $where = isset($filter['where']) && !empty($filter['where']) ? $filter['where'] : '';
         $select = $filter['select'];
         $query = $this->_productModel->find()->asArray();
         if ($where) {
