@@ -494,9 +494,9 @@ class Index
                 $products = Yii::$service->product->getProducts($filter);
                 $products = Yii::$service->category->product->convertToCategoryInfo($products);
             }
-        } else {
-            $filter['category'] = $category_id;
-            Yii::$service->product->getRelateProduct($filter, $limit);
+        } elseif (!empty($category_id)) {
+            $filter['where'] =['in','category',$category_id];
+            $products = Yii::$service->product->getRelateProduct($filter, $limit);
         }
         return $products;
     }

@@ -464,7 +464,8 @@ class Product extends Service
      */
     protected function actionGetRelateProduct($filter, $limit = 4)
     {
-        $count = $this->_product->collCount($filter);
+        $where['where'] =  $filter['where'];
+        $count = $this->_product->collCount();
         $offset = mt_rand(0, $count - 1);
         $filter['limit'] = $limit;
         $filter['offset'] = $offset;
