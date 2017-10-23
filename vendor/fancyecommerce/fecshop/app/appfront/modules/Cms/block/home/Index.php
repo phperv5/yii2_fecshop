@@ -17,10 +17,10 @@ class Index
         //Yii::$service->page->theme->layoutFile = 'home.php';
         return [
             'newArrivals' => $this->getNewArrivals(),
-            'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-            'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-            'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-            'bestSellerProducts4' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['12001', '11005', '11001', 'AVDI', '21001', '19001', 'VVDI2', '22001', '20002', '20006', '11004']),
+            'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82',['19006','21002','23001','23002','16001']),
+            'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82',['14001','14015','14029','14028','CK0002','T300','19008','CK0007','14031']),
+            'bestSellerProducts4' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82',['23004','12051','23005','18 in 1','ELS']),
             'bestSellerProducts5' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
             'bestSellerProducts6' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
             'bestSellerProducts7' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
@@ -34,7 +34,7 @@ class Index
         return $this->getProductBySkus($featured_skus);
     }
 
-    public function getBestSellerProducts($category_id = null, $limit = 10)
+    public function getBestSellerProducts($category_id = null, $skus = null, $limit = 10)
     {
         $filter['select'] = [
             'sku', 'spu', 'name', 'image',
@@ -43,6 +43,9 @@ class Index
             'url_key', 'score',
         ];
         $filter['where'] = ['category' => $category_id];
+        if ($skus) {
+            $filter['where'] = ['in', 'sku', $skus];
+        }
         $filter['orderBy'] = ['score' => -1];
         $filter['limit'] = $limit;
         $products = Yii::$service->product->getProducts($filter);
