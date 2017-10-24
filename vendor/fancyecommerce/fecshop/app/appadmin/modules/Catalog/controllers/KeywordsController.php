@@ -15,7 +15,7 @@ use fecshop\app\appadmin\modules\Catalog\CatalogController;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class ProductsearchController extends CatalogController
+class KeywordsController extends CatalogController
 {
     public function actionIndex()
     {

@@ -7,7 +7,7 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\appadmin\modules\Catalog\block\productsearch;
+namespace fecshop\app\appadmin\modules\Catalog\block\keywords;
 
 use fec\helpers\CUrl;
 use fecshop\app\appadmin\interfaces\base\AppadminbaseBlockInterface;
@@ -36,7 +36,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         /*
          * service component, data provider
          */
-        $this->_service = Yii::$service->url->rewrite;
+        $this->_service = Yii::$service->url->keywords;
         parent::init();
     }
 
@@ -57,12 +57,12 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         $toolBar = $this->getToolBar($this->_param['numCount'], $this->_param['pageNum'], $this->_param['numPerPage']);
 
         return [
-            'pagerForm'        => $pagerForm,
-            'searchBar'        => $searchBar,
-            'editBar'        => $editBar,
-            'thead'        => $thead,
-            'tbody'        => $tbody,
-            'toolBar'    => $toolBar,
+            'pagerForm' => $pagerForm,
+            'searchBar' => $searchBar,
+            'editBar' => $editBar,
+            'thead' => $thead,
+            'tbody' => $tbody,
+            'toolBar' => $toolBar,
         ];
     }
 
@@ -74,16 +74,16 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         $data = [
 
             [    // 字符串类型
-                'type'=>'inputtext',
-                'title'=>'原始url',
-                'name'=>'origin_url',
-                'columns_type' =>'string',
+                'type' => 'inputtext',
+                'title' => '原始url',
+                'name' => 'origin_url',
+                'columns_type' => 'string',
             ],
             [    // 字符串类型
-                'type'=>'inputtext',
-                'title'=>'自定义url',
-                'name'=>'custom_url_key',
-                'columns_type' =>'string',
+                'type' => 'inputtext',
+                'title' => '自定义url',
+                'name' => 'custom_url_key',
+                'columns_type' => 'string',
             ],
 
         ];
@@ -98,31 +98,31 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     {
         $table_th_bar = [
             [
-                'orderField'    => $this->_primaryKey,
-                'label'            => 'ID',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => $this->_primaryKey,
+                'label' => 'ID',
+                'width' => '50',
+                'align' => 'center',
 
             ],
             [
-                'orderField'    => 'type',
-                'label'            => '类型',
-                'width'            => '50',
-                'align'        => 'left',
+                'orderField' => 'type',
+                'label' => '类型',
+                'width' => '50',
+                'align' => 'left',
 
             ],
             [
-                'orderField'    => 'custom_url_key',
-                'label'            => '自定义URL',
-                'width'            => '110',
-                'align'        => 'left',
+                'orderField' => 'custom_url_key',
+                'label' => '自定义URL',
+                'width' => '110',
+                'align' => 'left',
             ],
             [
-                'orderField'    => 'origin_url',
-                'label'            => '原始URL',
-                'width'            => '110',
-                'align'        => 'left',
-                ],
+                'orderField' => 'origin_url',
+                'label' => '原始URL',
+                'width' => '110',
+                'align' => 'left',
+            ],
 
         ];
 
@@ -135,7 +135,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getTableTbodyHtml($data)
     {
         $fileds = $this->getTableFieldArr();
-        $str .= '';
+        $str = '';
         $csrfString = \fec\helpers\CRequest::getCsrfString();
         $user_ids = [];
         foreach ($data as $one) {
@@ -143,15 +143,15 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         }
         $users = Yii::$service->adminUser->getIdAndNameArrByIds($user_ids);
         foreach ($data as $one) {
-            $str .= '<tr target="sid_user" rel="'.$one[$this->_primaryKey].'">';
-            $str .= '<td><input name="'.$this->_primaryKey.'s" value="'.$one[$this->_primaryKey].'" type="checkbox"></td>';
+            $str .= '<tr target="sid_user" rel="' . $one[$this->_primaryKey] . '">';
+            $str .= '<td><input name="' . $this->_primaryKey . 's" value="' . $one[$this->_primaryKey] . '" type="checkbox"></td>';
             foreach ($fileds as $field) {
                 $orderField = $field['orderField'];
                 $display = $field['display'];
                 $val = $one[$orderField];
                 if ($orderField == 'created_user_id') {
                     $val = isset($users[$val]) ? $users[$val] : $val;
-                    $str .= '<td>'.$val.'</td>';
+                    $str .= '<td>' . $val . '</td>';
                     continue;
                 }
                 if ($val) {
@@ -161,7 +161,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                     }
                     if (isset($field['convert']) && !empty($field['convert'])) {
                         $convert = $field['convert'];
-                        foreach ($convert as $origin =>$to) {
+                        foreach ($convert as $origin => $to) {
                             if (strstr($origin, 'mongodate')) {
                                 if (isset($val->sec)) {
                                     $timestramp = $val->sec;
@@ -193,7 +193,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                                 if ($to == 'img') {
                                     $t_width = isset($field['img_width']) ? $field['img_width'] : '100';
                                     $t_height = isset($field['img_height']) ? $field['img_height'] : '100';
-                                    $val = '<img style="width:'.$t_width.'px;height:'.$t_height.'px" src="'.$val.'" />';
+                                    $val = '<img style="width:' . $t_width . 'px;height:' . $t_height . 'px" src="' . $val . '" />';
                                 }
                             }
                         }
@@ -205,7 +205,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                         $val = Yii::$service->fecshoplang->getDefaultLangAttrVal($val, $orderField);
                     }
                 }
-                $str .= '<td>'.$val.'</td>';
+                $str .= '<td>' . $val . '</td>';
             }
 
             $str .= '</tr>';
@@ -225,14 +225,14 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
             }
         }
         $str = '<thead><tr>';
-        $str .= '<th width="22"><input type="checkbox" group="'.$this->_primaryKey.'s" class="checkboxCtrl"></th>';
+        $str .= '<th width="22"><input type="checkbox" group="' . $this->_primaryKey . 's" class="checkboxCtrl"></th>';
         foreach ($table_th_bar as $b) {
             $width = $b['width'];
             $label = $b['label'];
             $orderField = $b['orderField'];
             $class = isset($b['class']) ? $b['class'] : '';
-            $align = isset($b['align']) ? 'align="'.$b['align'].'"' : '';
-            $str .= '<th width="'.$width.'" '.$align.' orderField="'.$orderField.'" class="'.$class.'">'.$label.'</th>';
+            $align = isset($b['align']) ? 'align="' . $b['align'] . '"' : '';
+            $str .= '<th width="' . $width . '" ' . $align . ' orderField="' . $orderField . '" class="' . $class . '">' . $label . '</th>';
         }
         //$str .= '<th width="80" >编辑</th>';
         $str .= '</tr></thead>';
