@@ -25,6 +25,9 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     public function init()
     {
+        $this->_editUrl = CUrl::getUrl('catalog/productreview/manageredit');
+        $this->_deleteUrl = CUrl::getUrl('catalog/productreview/managerdelete'); //delete data url
+
         $this->_service = Yii::$service->product->keywords;
         parent::init();
     }
@@ -60,22 +63,13 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getSearchArr()
     {
         $data = [
-
             [    // 字符串类型
                 'type' => 'inputtext',
-                'title' => '原始url',
-                'name' => 'origin_url',
+                'title' => '搜索关键字',
+                'name' => 'keywords',
                 'columns_type' => 'string',
             ],
-            [    // 字符串类型
-                'type' => 'inputtext',
-                'title' => '自定义url',
-                'name' => 'custom_url_key',
-                'columns_type' => 'string',
-            ],
-
         ];
-
         return $data;
     }
 
@@ -93,6 +87,12 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 
             ],
             [
+                'orderField' => 'keywords',
+                'label' => 'keywords',
+                'width' => '110',
+                'align' => 'left',
+            ],
+            [
                 'orderField' => 'type',
                 'label' => '类型',
                 'width' => '50',
@@ -100,16 +100,18 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 
             ],
             [
-                'orderField' => 'custom_url_key',
-                'label' => '自定义URL',
-                'width' => '110',
-                'align' => 'left',
+                'orderField'    => 'created_at',
+                'label'            => '创建时间',
+                'width'            => '110',
+                'align'        => 'center',
+                'convert'        => ['int' => 'datetime'],
             ],
             [
-                'orderField' => 'origin_url',
-                'label' => '原始URL',
-                'width' => '110',
-                'align' => 'left',
+                'orderField'    => 'updated_at',
+                'label'            => '更新时间',
+                'width'            => '110',
+                'align'        => 'center',
+                'convert'        => ['int' => 'datetime'],
             ],
 
         ];
