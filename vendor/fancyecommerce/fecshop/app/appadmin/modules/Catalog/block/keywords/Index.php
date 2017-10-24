@@ -36,7 +36,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         /*
          * service component, data provider
          */
-        $this->_service = Yii::$service->url->keywords;
+        $this->_service = Yii::$service->product->keywords;
         parent::init();
     }
 
