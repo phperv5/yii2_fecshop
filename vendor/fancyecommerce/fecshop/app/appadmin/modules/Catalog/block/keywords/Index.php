@@ -25,24 +25,12 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     public function init()
     {
-        /*
-         * edit data url
-         */
-        $this->_editUrl = CUrl::getUrl('catalog/urlrewrite/manageredit');
-        /*
-         * delete data url
-         */
-        $this->_deleteUrl = CUrl::getUrl('catalog/urlrewrite/managerdelete');
-        /*
-         * service component, data provider
-         */
         $this->_service = Yii::$service->product->keywords;
         parent::init();
     }
 
     public function getLastData()
     {
-
         // hidden section ,that storage page info
         $pagerForm = $this->getPagerForm();
         // search section

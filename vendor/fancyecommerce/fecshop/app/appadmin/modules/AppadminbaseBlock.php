@@ -511,7 +511,7 @@ class AppadminbaseBlock extends Object
     public function getTableTbodyHtml($data)
     {
         $fileds = $this->getTableFieldArr();
-        $str .= '';
+        $str = '';
         $csrfString = \fec\helpers\CRequest::getCsrfString();
         foreach ($data as $one) {
             $str .= '<tr target="sid_user" rel="'.$one[$this->_primaryKey].'">';
