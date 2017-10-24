@@ -19,6 +19,8 @@ class ProductsearchController extends CatalogController
 {
     public function actionIndex()
     {
-        echo '未开发';
+        $data = $this->getBlock()->getLastData();
+
+        return $this->render($this->action->id, $data);
     }
 }

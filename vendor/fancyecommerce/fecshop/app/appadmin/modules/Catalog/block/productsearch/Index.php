@@ -7,7 +7,7 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\appadmin\modules\Catalog\block\urlrewrite;
+namespace fecshop\app\appadmin\modules\Catalog\block\productsearch;
 
 use fec\helpers\CUrl;
 use fecshop\app\appadmin\interfaces\base\AppadminbaseBlockInterface;
@@ -135,7 +135,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getTableTbodyHtml($data)
     {
         $fileds = $this->getTableFieldArr();
-        $str = '';
+        $str .= '';
         $csrfString = \fec\helpers\CRequest::getCsrfString();
         $user_ids = [];
         foreach ($data as $one) {
