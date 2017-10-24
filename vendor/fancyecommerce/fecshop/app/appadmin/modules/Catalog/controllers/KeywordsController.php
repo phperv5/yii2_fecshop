@@ -23,4 +23,14 @@ class KeywordsController extends CatalogController
 
         return $this->render($this->action->id, $data);
     }
+
+    public function actionManagereditsave()
+    {
+        $data = $this->getBlock('manageredit')->save();
+    }
+
+    public function actionManagerdelete()
+    {
+        $this->getBlock('manageredit')->delete();
+    }
 }
