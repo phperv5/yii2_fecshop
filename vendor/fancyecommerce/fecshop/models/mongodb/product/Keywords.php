@@ -49,9 +49,7 @@ class Keywords extends ActiveRecord
     public static function create_index()
     {
         $indexs = [
-            ['user_id'        => -1],
-            ['product_id'        => -1],
-
+            ['keywords'        => -1],
         ];
 
         $options = ['background' => true];

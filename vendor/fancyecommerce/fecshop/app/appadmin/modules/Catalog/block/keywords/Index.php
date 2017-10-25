@@ -27,7 +27,6 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     {
         $this->_editUrl = CUrl::getUrl('catalog/keywords/manageredit');
         $this->_deleteUrl = CUrl::getUrl('catalog/keywords/managerdelete'); //delete data url
-        $this->_deleteUrl = CUrl::getUrl('catalog/keywords/managerdelete'); //delete data url
 
         $this->_service = Yii::$service->product->keywords;
         parent::init();
@@ -79,6 +78,8 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     public function getTableFieldArr()
     {
+        $keywords = Yii::$service->product->keywords->getKeywordsList(2);
+        var_dump($keywords);
         $table_th_bar = [
             [
                 'orderField' => $this->_primaryKey,
@@ -98,6 +99,11 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'label' => '类型',
                 'width' => '50',
                 'align' => 'left',
+                'display' => [
+                    1    => 'search keywords',
+                    2    => 'Popular Search',
+                    3    => 'Browse by Feature',
+                ],
 
             ],
             [

@@ -26,7 +26,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function init()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/productreview/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
         parent::init();
     }
 
@@ -44,89 +44,29 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function setService()
     {
-        $this->_service = Yii::$service->product->review;
+        $this->_service = Yii::$service->product->keywords;
     }
 
     public function getEditArr()
     {
-        $activeStatus = Yii::$service->product->review->activeStatus();
-        $refuseStatus = Yii::$service->product->review->refuseStatus();
-        $noActiveStatus = Yii::$service->product->review->noActiveStatus();
-
         return [
             [
-                'label'=>'Spu',
-                'name'=>'product_spu',
+                'label'=>'keywords',
+                'name'=>'keywords',
                 'display'=>[
                     'type' => 'inputString',
                 ],
                 'require' => 1,
             ],
-
             [
-                'label'=>'产品ID',
-                'name'=>'product_id',
-                'display'=>[
-                    'type' => 'inputString',
-                ],
-                'require' => 1,
-            ],
-
-            [
-                'label'=>'评星',
-                'name'=>'rate_star',
+                'label'=>'关键字type(类型)',
+                'name'=>'type',
                 'display'=>[
                     'type' => 'select',
                     'data' => [
-                        1    => '1星',
-                        2    => '2星',
-                        3    => '3星',
-                        4    => '4星',
-                        5    => '5星',
-                    ],
-                ],
-                'require' => 1,
-                'default' => 4,
-            ],
-
-            [
-                'label'=>'评论人姓名',
-                'name'=>'name',
-                'display'=>[
-                    'type' => 'inputString',
-                ],
-                'require' => 0,
-            ],
-
-            [
-                'label'=>'评论标题',
-                'name'=>'summary',
-                'display'=>[
-                    'type' => 'inputString',
-                ],
-                'require' => 0,
-            ],
-
-            [
-                'label'=>'评论内容',
-                'name'=>'review_content',
-                'display'=>[
-                    'type' => 'textarea',
-                    'rows'    => 14,
-                    'cols'    => 110,
-                ],
-                'require' => 0,
-            ],
-
-            [
-                'label'=>'审核状态',
-                'name'=>'status',
-                'display'=>[
-                    'type' => 'select',
-                    'data' => [
-                        $noActiveStatus => '未审核',
-                        $activeStatus    => '审核通过',
-                        $refuseStatus    => '审核拒绝',
+                        1    => 'search keywords',
+                        2    => 'Popular Search',
+                        3    => 'Browse by Feature',
                     ],
                 ],
                 'require' => 1,
@@ -146,12 +86,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
          * you must convert string datetime to time , use strtotime function.
          */
-        $identity = Yii::$app->user->identity;
-        $audit_user_id = $identity['id'];
-        $this->_param['audit_user'] = $audit_user_id;
-        $this->_param['audit_date'] = time();
-
-        //$this->_param['review_date'] = strtotime($this->_param['review_date']);
         $this->_service->save($this->_param);
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
@@ -195,55 +129,4 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         }
     }
 
-    public function audit()
-    {
-        $ids = '';
-        if ($id = CRequest::param($this->_primaryKey)) {
-            $ids = $id;
-        } elseif ($ids = CRequest::param($this->_primaryKey.'s')) {
-            $ids = explode(',', $ids);
-        }
-        $this->_service->auditReviewByIds($ids);
-
-        $errors = Yii::$service->helper->errors->get();
-        if (!$errors) {
-            echo  json_encode([
-                'statusCode'=>'200',
-                'message'=>'批量审核评论通过 - 成功',
-            ]);
-            exit;
-        } else {
-            echo  json_encode([
-                'statusCode'=>'300',
-                'message'=>$errors,
-            ]);
-            exit;
-        }
-    }
-
-    public function auditRejected()
-    {
-        $ids = '';
-        if ($id = CRequest::param($this->_primaryKey)) {
-            $ids = $id;
-        } elseif ($ids = CRequest::param($this->_primaryKey.'s')) {
-            $ids = explode(',', $ids);
-        }
-        $this->_service->auditRejectedReviewByIds($ids);
-
-        $errors = Yii::$service->helper->errors->get();
-        if (!$errors) {
-            echo  json_encode([
-                'statusCode'=>'200',
-                'message'=>'批量审核评论拒绝 - 成功',
-            ]);
-            exit;
-        } else {
-            echo  json_encode([
-                'statusCode'=>'300',
-                'message'=>$errors,
-            ]);
-            exit;
-        }
-    }
 }
