@@ -78,8 +78,6 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     public function getTableFieldArr()
     {
-        $keywords = Yii::$service->product->keywords->getKeywordsList(2);
-        var_dump($keywords);
         $table_th_bar = [
             [
                 'orderField' => $this->_primaryKey,
