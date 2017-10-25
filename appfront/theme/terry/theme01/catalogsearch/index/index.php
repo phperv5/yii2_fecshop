@@ -20,14 +20,12 @@
 
         <div class="col_t_x col_t_tag col_t_tag_feature">
             <h3>Browse by Feature</h3>
-            <a href="../../producttags/mb-bga-tool.html">MB BGA Tool</a>
-            <a href="../../producttags/vvdi2.html">VVDI2</a>
-            <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>
-            <a href="../../producttags/xtruck-usb-link.html">XTruck USB Link</a>
-            <a href="../../producttags/vxdiag-vcx-nano.html">VXDIAG VCX NANO</a>
-            <a href="../../producttags/volvo-vcads.html">Volvo VCADS</a>
-            <a href="../../producttags/xtuner.html">XTUNER</a>
-            <a href="../../producttags/launch-x431-v.html">Launch X431 V</a>
+            <?php
+            $keywords = Yii::$service->product->keywords->getKeywordsList(3);
+            foreach ($keywords as $v):
+                ?>
+                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
+            <?php endforeach; ?>
             <div class="clear"></div>
         </div>
         <div class="col_d_b"></div>
@@ -35,12 +33,12 @@
 
         <div class="col_d_t">Popular Search</div>
         <div class="col_m_tag">
-            <a href="../../producttags/autel-maxisys.html"><strong>Autel MaxiSYS</strong></a>&nbsp;&nbsp;
-            <a href="../../producttags/launch-x431-v.html">Launch X431 V</a>&nbsp;&nbsp;
-            <a href="../../producttags/autel-maxidiag-elite.html"><strong>Autel MaxiDiag Elite</strong></a>&nbsp;&nbsp;
-            <a href="../../producttags/original-obdstar.html">Original OBDSTAR</a>&nbsp;&nbsp;
-            <a href="../../producttags/vxdiag-vcx-nano.html"><strong>VXDIAG VCX NANO</strong></a>&nbsp;&nbsp;
-            <a href="../../producttags/launch-creader.html">Launch Creader</a>&nbsp;&nbsp;
+            <?php
+            $keywords = Yii::$service->product->keywords->getKeywordsList(2);
+            foreach ($keywords as $v):
+                ?>
+                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
+            <?php endforeach; ?>
 
             <div class="clear"></div>
         </div>
