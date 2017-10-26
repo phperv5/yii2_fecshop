@@ -9,8 +9,10 @@
     </div>
      <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
-            <a class="item" href="<?= Yii::$service->url->getUrl('skp1000-tablet-multifunction-key-programmer-support-immobilizer-mileage-adjustment-epb-etc'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner1.jpg');  ?>" alt=""></a>
-            <a class="item" href="<?= Yii::$service->url->getUrl('2017-cgdi-prog-bmw-msv80-auto-key-programmer-diagnosis-tool-immo-security-3-in-1-come-with-bmw-femedc-function'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/banner2.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=CGDI&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market1.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Language+Handy+Baby&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market2.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('2017-newest-lonsdor-k518ise-key-programmer-with-odometer-adjustment-for-all-makes'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market3.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('original-mk3-car-keyremote-unlocking-tool-with-online-update'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market4.jpg');  ?>" alt=""></a>
         </div>
          <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
      </div>
