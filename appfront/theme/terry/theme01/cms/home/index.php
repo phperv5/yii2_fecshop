@@ -9,10 +9,10 @@
     </div>
      <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
-            <a class="item" href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=CGDI&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market1.jpg');  ?>" alt=""></a>
-            <a class="item" href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Language+Handy+Baby&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market2.jpg');  ?>" alt=""></a>
-            <a class="item" href="<?= Yii::$service->url->getUrl('2017-newest-lonsdor-k518ise-key-programmer-with-odometer-adjustment-for-all-makes'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market3.jpg');  ?>" alt=""></a>
-            <a class="item" href="<?= Yii::$service->url->getUrl('original-mk3-car-keyremote-unlocking-tool-with-online-update'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/market4.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('original-mk3-car-keyremote-unlocking-tool-with-online-update'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/1.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Language+Handy+Baby&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/2.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('2017-newest-lonsdor-k518ise-key-programmer-with-odometer-adjustment-for-all-makes'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/3.jpg');  ?>" alt=""></a>
+            <a class="item" href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=CGDI&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/4.jpg');  ?>" alt=""></a>
         </div>
          <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
      </div>
