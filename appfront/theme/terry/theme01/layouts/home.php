@@ -53,7 +53,7 @@ $cssOptions = [
 	</header>
 	
 	<div class="main-container">
-		<?= $content; ?>
+		<?= trim($content); ?>
 	</div>
 	<div class="footer-container">
 		<?= Yii::$service->page->widget->render('footer',$this); ?>
