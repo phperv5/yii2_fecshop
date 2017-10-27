@@ -32,9 +32,9 @@
     </div>
     <div class="hm_box_jmp_right">
         <ul>
-            <li><a href="producttags/fcar-f3-g.html"><img src="http://www.uobdii.com/upload/advs/2017081501679468.jpg" border="0" alt="Fcar F3-G (F3-W + F3-D) Fcar Scanner"></a></li>
-            <li><a href="wholesale/vpecker-e4-multi-functional-tablet-diagnostic-tool.html"><img src="http://www.uobdii.com/upload/advs/2017081786055905.jpg" border="0" alt="VPECKER E4 Multi Functional Tablet Diagnostic Tool"></a></li>
-            <li><a href="wholesale/vxdiag-vcx-nano-pro-gm-ford-mazda-vm.html"><img src="http://www.uobdii.com/upload/advs/2017073074269977.jpg" border="0" alt="VXDIAG VCX NANO PRO For GM Ford Mazda 3 in 1"></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('4-buttons-bga-315mhz-for-mercedes-benz'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/A.jpg');  ?>" border="0" alt=""></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Remote+for+Toyota&DirID='); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/B.jpg');  ?>" border="0" alt=""></a></li>
+            <li><a href="<?= Yii::$service->url->getUrl('31-buttons-remote-key-313.8mhz-fcc-idkr55wk49308-for-honda-pilot-accord-2008-2013'); ?>"><img src="<?= Yii::$service->image->getImgUrl('images/market/C.jpg');  ?>" border="0" alt=""></a></li>
         </ul>
     </div>
     <div class="clear"></div>
