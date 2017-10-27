@@ -1,4 +1,5 @@
-﻿<div class="main_h">
+
+<div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
         <?php foreach($categories as $category): ?>
