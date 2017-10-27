@@ -166,7 +166,6 @@
         <div class="clear">&nbsp;</div>
     </div>
     <div class="blank10px"></div><div class="blank10px"></div> -->
-</div>
     <script>
         <?php $this->beginBlock('owl_fecshop_slider') ?>
 
