@@ -52,9 +52,9 @@ $cssOptions = [
 		<?= Yii::$service->page->widget->render('menu',$this); ?>
 	</header>
 	
-	<div class="main-container">
-		<?= trim($content); ?>
-	</div>
+<!--	<div class="main-container">-->
+		<?= $content; ?>
+<!--	</div>-->
 	<div class="footer-container">
 		<?= Yii::$service->page->widget->render('footer',$this); ?>
 	</div>
