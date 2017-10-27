@@ -212,8 +212,7 @@
                             <div class="dashed_line"></div>
                             <div class="blank5px"></div>
                             <div class="blank5px"></div>
-                            <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart"
-                                   onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;"/>
+                            <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;"/>
                         </div>
                         <div class="clear"></div>
                     </div>
