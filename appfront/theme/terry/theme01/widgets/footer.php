@@ -38,30 +38,7 @@
             </div>
 
             <div style="width: 25%; float: left;">Join Our Community<br/>
-                <a href="<?=  Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?>" rel="nofollow">
-                    <img alt="UOBD2 facebook" src="upload/temp/images/facebook.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
-                <a href="https://twitter.com/myuobd2" rel="nofollow">
-                    <img alt="UOBD2 twitter" src="upload/temp/images/twitter.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
-                <a href="https://plus.google.com/+uobd2net" rel="nofollow">
-                    <img alt="uobd2 google plus" src="upload/temp/images/google.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/>
-                </a>
-                <a href="http://www.youtube.com/user/myuobd2" rel="nofollow">
-                    <img alt="uobd2 youtube" src="upload/temp/images/youtube.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/>
-                </a><br/>
-                <a href="https://www.linkedin.com/in/uobd2net" rel="nofollow"><img alt="UOBD2 Linkedin" src="upload/temp/images/linkedin.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
-                <a href="http://blog.uobdii.com/" rel="nofollow">
-                    <img alt="UOBD2 blog" src="upload/temp/images/blogger.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/>
-                </a><a href="xml/rss_pro.xml" rel="nofollow"><img alt="UOBD2 RSS" src="upload/temp/images/rss.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/></a>
-                <a href="https://pinterest.com/uobd2/" rel="nofollow">
-                    <img alt="uobd2 Pinterest" src="upload/temp/images/pinterest.png" style="border-image:none; border:0px currentColor; height:32px; width:32px"/>
-                </a>
-
-                <div class="w230 px11 gray">Newsletter get Coupon:
-                    <form action="/app/nl.asp" method="post" target="_blank">
-                        <input name="nl_email" style="width:125px" type="text"  value="Your Email Address"/>
-                        <input name="" type="submit" value="GO"/><input name="action" type="hidden" value="add"/>
-                    </form>
-                </div>
+                <?=  Yii::$service->cms->staticblock->getStoreContentByIdentify('join_our_community','appfront') ?>
             </div>
 
             <div class="clear">&nbsp;</div>
