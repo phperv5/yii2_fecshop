@@ -145,18 +145,7 @@
                 <li id="p_ab_mn_3" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,3,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', ''); ProTechService(8777,'p_ab_vw_xy_3');"><span>Tech Support</span></li>
                 <?php endif; ?>
                 <li id="p_ab_mn_4" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,4,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
-                    <span>
-                        Reviews
-                        <?php # review部分。
-                        $reviewView = [
-                            'class' => 'fecshop\app\appfront\modules\Catalog\block\product\Review',
-                            'view' => 'catalog/product/index/review.php',
-                            'product_id' => $_id,
-                            'spu' => $spu,
-                        ];
-                        ?>
-                        <?= Yii::$service->page->widget->render($reviewView, $reviewParam); ?>
-                    </span>
+                    <span>Reviews<b id="num_pro_review_51561" class="red_dark"></b></span>
                 </li>
                 <li><span><a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/add',['spu'=>$spu,'_id'=>$_id]); ?>">Write a Comment</a></span></li>
 <!--                <li onclick="GotoScrollTop('1', 'na_pro_releated', 100, '', '', '');"><span>Related Products</span></li>-->
