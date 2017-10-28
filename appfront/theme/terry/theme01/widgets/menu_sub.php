@@ -12,7 +12,7 @@
     </div>
 
     <div class="hd_menu_brands">
-        <div class="hd_wr_nav"><a rel="nofollow"><b>Brands</b></a>
+        <div class="hd_wr_nav"><a href="javascript:void(0);" rel="nofollow"><b>Brands</b></a>
             <ul class="hdbrands">
                 <?php $categories = Yii::$service->category->menu->getBrand();?>
                 <?php foreach($categories as $category): ?>
