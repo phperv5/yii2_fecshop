@@ -122,51 +122,8 @@
         <div class="clear"></div>
     </div>
     <div class="blank10px"></div>
-    <div class="blank10px"></div>
 
 </div>
-<!-- <div class="main_h">
-    <div class="blank10px"></div><div class="blank10px"></div>
-    <div class="blank10px">&nbsp;</div>
-
-    <div style="background: rgb(250, 250, 250); margin: 0px; padding: 20px; clear: both; border-top-color: rgb(230, 230, 230); border-bottom-color: rgb(220, 220, 220); border-top-width: 2px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;">
-        <div style="font: 23px/60px georgia, Verdana; height: 60px; text-align: center; color: rgb(242, 109, 0); font-size-adjust: none; font-stretch: normal;">Why Shop at UOBDII.com?</div>
-
-        <div style="background: rgb(250, 250, 250); height: 5px; overflow: hidden; clear: both;">&nbsp;</div>
-
-        <div style="margin: 0px 60px; height: 0px; clear: both; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted;">&nbsp;</div>
-
-        <div style="margin: 0px; clear: both;">
-            <div style="margin: 0px; padding: 10px 0px 0px 10px; width: 45%; float: left;"><strong>A Vast Selection of OBDII Tools</strong><br />
-                Everyday, hundreds of customers search and browse UOBDII.com, to meet their diverse and demanding needs. UOBDII has&nbsp;developed a vast collections of OBDII tools, including: OBDII / OBD2 scanner, OBDII cable and connector, car and truck diagnostic tool, ECU programmer, car key programmer, auto locksmith tool, mileage programmer, auto electronics, and more on auto repair and maintenance tools.<br />
-                <br />
-                <strong>Top Quality OBDII OBD2 EOBD Tools</strong><br />
-                Only after fully tested and quality control procedures, the obd2 tools can ship to customers, ensuring each and every item purchased meets quality standards. UOBDII only offer workable obd2 diagnostic products, ensuring every customer a pleasant shopping experience and win a long lasting good reputation overseas.<br />
-                &nbsp;<br />
-                <strong>Reasonable Price Direct from Factory</strong><br />
-                As a China-based famous brand, UOBDII&nbsp;mainly supply OBDII tools for many years, we develope a long lasting connection with factories, distributors and warehouses in China and our obd2 products price is reasonable and competitive. UOBDII&nbsp;is constantly working to cut our customers cost as much as we can.<br />
-                <br />
-                <strong>Safe and Secured Payment</strong><br />
-                UOBDII.com is available with the most trustable and safest payment options: &nbsp; PayPal,&nbsp;Western Union and bank transfer. We are always doing our best to take our customers a safe and easy shopping experience.<br />
-                <br />
-                &nbsp;</div>
-
-            <div style="margin: 0px; padding: 10px 0px 0px; width: 45%; float: right;"><strong>Friendly &amp; Effective Customer Service</strong><br />
-                UOBDII&nbsp;customers are free to contact us by any of these contact options: live chat, Email, Skype&nbsp;and yahoo messenger. And UOBDII customer service will quick response to customers&rsquo; inquiries and any problems; always friendly and pleasant chat with our customers; prompt and effective communication with them. Be happy and confident shop and save with UOBDII.<br />
-                &nbsp;<br />
-                <strong>Professional &amp; Unlimited Technical Support</strong><br />
-                UOBDII.com qualified engineers have been offering and will always offer our customers professional and unlimited technical support including: providing shopping tips in selecting a workable and easy-to-use tool; produce video tutorial; remote assistance; open download &amp; technical support column; share obd2 software driver, manual, operation guide, vehicle list, package list, etc.<br />
-                <br />
-                <strong>Fast Delivery Around the World</strong><br />
-                UOBDII.com always have enough stock and have a long lasting tire with globally trusted express companies, such as: DHL, UPS, EMS, FedEx, TNT, Singapore post. UOBDII promises to ship the packages as soon as possible and in a good packaging. UOBDII ships to many countries around the world.<br />
-                <br />
-                <strong>UOBDII not Refuse Improve and Perfect</strong><br />
-                Why UOBDII is not 5-star Company, but 4.6 star company? It is concerned about our vision; our vision is to pursuit unlimited perfect, we aim to work out to make our customers have a happy and satisfying shopping experience at UOBDII.com. UOBDII welcome your reviews and suggestions, it will become our start point to improve.</div>
-        </div>
-
-        <div class="clear">&nbsp;</div>
-    </div>
-    <div class="blank10px"></div><div class="blank10px"></div> -->
     <script>
         <?php $this->beginBlock('owl_fecshop_slider') ?>
 
