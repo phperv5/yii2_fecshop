@@ -37,7 +37,7 @@
             <b class="px13 verdana">Coupon Code</b>
             <div class="support_m_l_list_area">
                 <a href="<?=  Yii::$service->url->getUrl('how-to-get-coupon-code') ?>">How to get coupon code</a>
-                <a href="<?=  Yii::$service->url->getUrl('how-to-use-coupon-code') ?>">How to Use Coupon Code</a>
+<!--                <a href="--><?//=  Yii::$service->url->getUrl('how-to-use-coupon-code') ?><!--">How to Use Coupon Code</a>-->
             </div>
             <div class="blank5px"></div>
             <b class="px13 verdana">About my account</b>
@@ -58,7 +58,7 @@
             <b class="px13 verdana">Newbie Guide</b>
             <div class="support_m_l_list_area">
                 <a href="<?=  Yii::$service->url->getUrl('frequently-asked-questions-about-purchase-and-check-out') ?>">Frequently Asked Questions About Purchase and Check Out</a>
-                <a href="<?=  Yii::$service->url->getUrl('purchase-processing') ?>">Purchase processing in UOBDII.com</a>
+                <a href="<?=  Yii::$service->url->getUrl('purchase-processing') ?>">Purchase processing</a>
             </div>
             <div class="blank5px"></div>
         </div>
