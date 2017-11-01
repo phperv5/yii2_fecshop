@@ -37,7 +37,6 @@
             <b class="px13 verdana">Coupon Code</b>
             <div class="support_m_l_list_area">
                 <a href="<?=  Yii::$service->url->getUrl('how-to-get-coupon-code') ?>">How to get coupon code</a>
-<!--                <a href="--><?//=  Yii::$service->url->getUrl('how-to-use-coupon-code') ?><!--">How to Use Coupon Code</a>-->
             </div>
             <div class="blank5px"></div>
             <b class="px13 verdana">About my account</b>
