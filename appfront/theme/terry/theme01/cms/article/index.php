@@ -46,7 +46,7 @@
             <div class="blank5px"></div>
             <b class="px13 verdana">Tips to Use </b>
             <div class="support_m_l_list_area">
-                <a href="<?=  Yii::$service->url->getUrl('where-we-ship-to') ?>">Tips to Use UOBDII.com</a>
+                <a href="<?=  Yii::$service->url->getUrl('where-we-ship-to') ?>">Tips to Use</a>
             </div>
             <div class="blank5px"></div>
             <b class="px13 verdana">Customs Clearance</b>
