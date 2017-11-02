@@ -59,7 +59,7 @@ class ProductinfoController extends CatalogController
 
     public function actionBatchimport()
     {
-        $data = $this->getBlock()->getLastData();
+        $data = $this->getBlock('batchimport')->getLastData();
 
         return $this->render($this->action->id, $data);
     }
