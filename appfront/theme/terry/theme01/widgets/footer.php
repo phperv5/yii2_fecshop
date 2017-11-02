@@ -43,9 +43,7 @@
             <span>|</span> <a href="<?=  Yii::$service->url->getUrl('contact-us') ?>">Help & Contact us</a> <span>|</span>
             <a href="<?=  Yii::$service->url->getUrl('payment') ?>">Payment</a>
             <span>|</span> <a href="<?=  Yii::$service->url->getUrl('about-us') ?>">About us</a> <span>|</span> <a
-                    href="<?=  Yii::$service->url->getUrl('drop-ship-service') ?>">Drop-ship Service</a> <span>|</span> <a
-                    href="<?=  Yii::$service->url->getUrl('return-policy') ?>">Return Policy</a> <span>|</span> <a
-                    href="<?=  Yii::$service->url->getUrl('privacy-policy') ?>">Privacy Policy</a></div>
+                    href="<?=  Yii::$service->url->getUrl('return-policy') ?>">Return & Refund Policy</a> <span>|</span> <a
         <div class="blank10px"></div>
         <div class="align_center">
             <div class="blank5px"></div>
