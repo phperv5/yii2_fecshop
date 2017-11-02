@@ -39,11 +39,12 @@
         <div class="clear"></div>
     </div>
     <div class="footer">
-        <div class="ft_menu"><a href="/">Home</a>
+        <div class="ft_menu">
+            <a href="/">Home</a>
             <span>|</span> <a href="<?=  Yii::$service->url->getUrl('contact-us') ?>">Help & Contact us</a> <span>|</span>
             <a href="<?=  Yii::$service->url->getUrl('payment') ?>">Payment</a>
-            <span>|</span> <a href="<?=  Yii::$service->url->getUrl('about-us') ?>">About us</a> <span>|</span> <a
-                    href="<?=  Yii::$service->url->getUrl('return-policy') ?>">Return & Refund Policy</a> <span>|</span> <a
+            <span>|</span> <a href="<?=  Yii::$service->url->getUrl('about-us') ?>">About us</a> <span>|</span>
+            <a href="<?=  Yii::$service->url->getUrl('return-policy') ?>">Return & Refund Policy</a> <span>
         <div class="blank10px"></div>
         <div class="align_center">
             <div class="blank5px"></div>
