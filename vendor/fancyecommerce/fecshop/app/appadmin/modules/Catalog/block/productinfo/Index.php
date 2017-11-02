@@ -30,7 +30,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     protected $_productHelperName = '\fecshop\app\appadmin\modules\Catalog\helper\Product';
     protected $_productHelper;
-    
+
     /**
      * init param function ,execute in construct.
      */
@@ -39,8 +39,8 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         /**
          * 通过Yii::mapGet() 得到重写后的class类名以及对象。Yii::mapGet是在文件@fecshop\yii\Yii.php中
          */
-        list($this->_productHelperName,$this->_productHelper) = Yii::mapGet($this->_productHelperName);  
-        
+        list($this->_productHelperName, $this->_productHelper) = Yii::mapGet($this->_productHelperName);
+
         /*
          * edit data url
          */
@@ -49,7 +49,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
          * delete data url
          */
         $this->_deleteUrl = CUrl::getUrl('catalog/productinfo/managerdelete');
-        $this->_copyUrl = CUrl::getUrl('catalog/productinfo/manageredit', ['operate'=>'copy']);
+        $this->_copyUrl = CUrl::getUrl('catalog/productinfo/manageredit', ['operate' => 'copy']);
         /*
          * service component, data provider
          */
@@ -73,14 +73,16 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         $tbody = $this->getTableTbody();
         // paging section
         $toolBar = $this->getToolBar($this->_param['numCount'], $this->_param['pageNum'], $this->_param['numPerPage']);
+        //批量导入
+        $batchImportBar = $this->getBatchImportBar();
 
         return [
-            'pagerForm'        => $pagerForm,
-            'searchBar'        => $searchBar,
-            'editBar'        => $editBar,
-            'thead'        => $thead,
-            'tbody'        => $tbody,
-            'toolBar'    => $toolBar,
+            'pagerForm' => $pagerForm,
+            'searchBar' => $searchBar,
+            'editBar' => $editBar,
+            'thead' => $thead,
+            'tbody' => $tbody,
+            'toolBar' => $toolBar,
         ];
     }
 
@@ -91,54 +93,54 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     {
         $data = [
             [    // selecit的Int 类型
-                'type'=>'select',
-                'title'=>'状态',
-                'name'=>'status',
-                'columns_type' =>'int',  // int使用标准匹配， string使用模糊查询
-                'value'=> $this->_productHelper->getStatusArr(),
+                'type' => 'select',
+                'title' => '状态',
+                'name' => 'status',
+                'columns_type' => 'int',  // int使用标准匹配， string使用模糊查询
+                'value' => $this->_productHelper->getStatusArr(),
             ],
             [    // selecit的Int 类型
-                'type'=>'select',
-                'title'=>'库存状态',
-                'name'=>'is_in_stock',
-                'columns_type' =>'int',  // int使用标准匹配， string使用模糊查询
-                'value'=> $this->_productHelper->getInStockArr(),
+                'type' => 'select',
+                'title' => '库存状态',
+                'name' => 'is_in_stock',
+                'columns_type' => 'int',  // int使用标准匹配， string使用模糊查询
+                'value' => $this->_productHelper->getInStockArr(),
             ],
             [    // 字符串类型
-                'type'            =>'inputtext',
-                'title'            =>'产品名称',
-                'name'            =>'name',
-                'columns_type'    =>'string',
-                'lang'            => true,
+                'type' => 'inputtext',
+                'title' => '产品名称',
+                'name' => 'name',
+                'columns_type' => 'string',
+                'lang' => true,
             ],
             [    // 字符串类型
-                'type'=>'inputtext',
-                'title'=>'Spu',
-                'name'=>'spu',
-                'columns_type' =>'string',
+                'type' => 'inputtext',
+                'title' => 'Spu',
+                'name' => 'spu',
+                'columns_type' => 'string',
             ],
             [    // 字符串类型
-                'type'=>'inputtext',
-                'title'=>'Sku',
-                'name'=>'sku',
-                'columns_type' =>'string',
+                'type' => 'inputtext',
+                'title' => 'Sku',
+                'name' => 'sku',
+                'columns_type' => 'string',
             ],
             [    // 时间区间类型搜索
-                'type'=>'inputdatefilter',
-                'name'=> 'updated_at',
-                'columns_type' =>'int',
-                'value'=>[
-                    'gte'=>'更新时间开始',
-                    'lt' =>'更新时间结束',
+                'type' => 'inputdatefilter',
+                'name' => 'updated_at',
+                'columns_type' => 'int',
+                'value' => [
+                    'gte' => '更新时间开始',
+                    'lt' => '更新时间结束',
                 ],
             ],
             [    // 时间区间类型搜索
-                'type'=>'inputfilter',
-                'name'=> 'qty',
-                'columns_type' =>'int',
-                'value'=>[
-                    'gte'=>'库存开始',
-                    'lt' =>'库存结束',
+                'type' => 'inputfilter',
+                'name' => 'qty',
+                'columns_type' => 'int',
+                'value' => [
+                    'gte' => '库存开始',
+                    'lt' => '库存结束',
                 ],
             ],
         ];
@@ -153,100 +155,100 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     {
         $table_th_bar = [
             [
-                'orderField'    => $this->_primaryKey,
-                'label'            => 'ID',
-                'width'            => '90',
-                'align'        => 'center',
+                'orderField' => $this->_primaryKey,
+                'label' => 'ID',
+                'width' => '90',
+                'align' => 'center',
 
             ],
             [
-                'orderField'    => 'image_main',
-                'label'            => '图片',
-                'width'            => '50',
-                'align'        => 'left',
-                'lang'            => true,
+                'orderField' => 'image_main',
+                'label' => '图片',
+                'width' => '50',
+                'align' => 'left',
+                'lang' => true,
             ],
             [
-                'orderField'    => 'name',
-                'label'            => '标题',
-                'width'            => '250',
-                'align'        => 'left',
-                'lang'            => true,
+                'orderField' => 'name',
+                'label' => '标题',
+                'width' => '250',
+                'align' => 'left',
+                'lang' => true,
             ],
             [
-                'orderField'    => 'spu',
-                'width'            => '120',
-                'align'        => 'center',
+                'orderField' => 'spu',
+                'width' => '120',
+                'align' => 'center',
 
             ],
             [
-                'orderField'    => 'sku',
-                'width'            => '150',
-                'align'        => 'center',
+                'orderField' => 'sku',
+                'width' => '150',
+                'align' => 'center',
             ],
 
             [
-                'orderField'    => 'qty',
-                'label'            => '库存数',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => 'qty',
+                'label' => '库存数',
+                'width' => '50',
+                'align' => 'center',
             ],
 
             [
-                'orderField'    => 'weight',
-                'label'            => '重量',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => 'weight',
+                'label' => '重量',
+                'width' => '50',
+                'align' => 'center',
             ],
 
             [
-                'orderField'    => 'status',
-                'label'            => '状态',
-                'width'            => '50',
-                'align'        => 'center',
-                'display'        => $this->_productHelper->getStatusArr(),
+                'orderField' => 'status',
+                'label' => '状态',
+                'width' => '50',
+                'align' => 'center',
+                'display' => $this->_productHelper->getStatusArr(),
             ],
 
             [
-                'orderField'    => 'cost_price',
-                'label'            => '成本价',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => 'cost_price',
+                'label' => '成本价',
+                'width' => '50',
+                'align' => 'center',
             ],
 
             [
-                'orderField'    => 'price',
-                'label'            => '销售价',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => 'price',
+                'label' => '销售价',
+                'width' => '50',
+                'align' => 'center',
             ],
 
             [
-                'orderField'    => 'special_price',
-                'label'            => '特价',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => 'special_price',
+                'label' => '特价',
+                'width' => '50',
+                'align' => 'center',
             ],
 
             [
-                'orderField'    => 'created_user_id',
-                'label'            => '创建人',
-                'width'            => '50',
-                'align'        => 'center',
+                'orderField' => 'created_user_id',
+                'label' => '创建人',
+                'width' => '50',
+                'align' => 'center',
             ],
             [
-                'orderField'    => 'created_at',
-                'label'            => '创建时间',
-                'width'            => '80',
-                'align'        => 'center',
-                'convert'        => ['int' => 'datetime'],
+                'orderField' => 'created_at',
+                'label' => '创建时间',
+                'width' => '80',
+                'align' => 'center',
+                'convert' => ['int' => 'datetime'],
             ],
             [
-                'orderField'    => 'updated_at',
-                'label'            => '更新时间',
-                'width'            => '80',
-                'align'        => 'center',
-                'convert'        => ['int' => 'datetime'],
+                'orderField' => 'updated_at',
+                'label' => '更新时间',
+                'width' => '80',
+                'align' => 'center',
+                'convert' => ['int' => 'datetime'],
             ],
 
         ];
@@ -270,11 +272,11 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         }
         //var_dump($product_ids);
         $users = Yii::$service->adminUser->getIdAndNameArrByIds($user_ids);
-        $qtys  = Yii::$service->product->stock->getQtyByProductIds($product_ids);
+        $qtys = Yii::$service->product->stock->getQtyByProductIds($product_ids);
 
         foreach ($data as $one) {
-            $str .= '<tr target="sid_user" rel="'.$one[$this->_primaryKey].'">';
-            $str .= '<td><input name="'.$this->_primaryKey.'s" value="'.$one[$this->_primaryKey].'" type="checkbox"></td>';
+            $str .= '<tr target="sid_user" rel="' . $one[$this->_primaryKey] . '">';
+            $str .= '<td><input name="' . $this->_primaryKey . 's" value="' . $one[$this->_primaryKey] . '" type="checkbox"></td>';
             $p_id = (string)$one[$this->_primaryKey];
             foreach ($fileds as $field) {
                 $orderField = $field['orderField'];
@@ -284,17 +286,17 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 if ($orderField == 'created_user_id') {
                     $val = isset($users[$val]) ? $users[$val] : $val;
                     $display_title = $val;
-                    $str .= '<td><span title="'.$display_title.'">'.$val.'</span></td>';
+                    $str .= '<td><span title="' . $display_title . '">' . $val . '</span></td>';
                     continue;
-                }else if($orderField == 'qty'){
+                } else if ($orderField == 'qty') {
                     $val = $qtys[$p_id];
                     $display_title = $val;
-                    $str .= '<td><span title="'.$display_title.'">'.$val.'</span></td>';
+                    $str .= '<td><span title="' . $display_title . '">' . $val . '</span></td>';
                     continue;
                 }
                 if ($orderField == $this->_primaryKey) {
                     $display_title = $val;
-                    $str .= '<td><span style="width:60px;display:block;word-break:break-all;" title="'.$display_title.'">'.$val.'</span></td>';
+                    $str .= '<td><span style="width:60px;display:block;word-break:break-all;" title="' . $display_title . '">' . $val . '</span></td>';
                     continue;
                 }
 
@@ -303,7 +305,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                         $val = $one['image']['main']['image'];
                     }
                     $imgUrl = Yii::$service->product->image->getUrl($val);
-                    $str .= '<td><span title="'.$imgUrl.'"><img style="width:100px;height:100px;" src="'.$imgUrl.'" /></span></td>';
+                    $str .= '<td><span title="' . $imgUrl . '"><img style="width:100px;height:100px;" src="' . $imgUrl . '" /></span></td>';
                     continue;
                 }
                 if ($val) {
@@ -315,7 +317,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                     }
                     if (isset($field['convert']) && !empty($field['convert'])) {
                         $convert = $field['convert'];
-                        foreach ($convert as $origin =>$to) {
+                        foreach ($convert as $origin => $to) {
                             if (strstr($origin, 'mongodate')) {
                                 if (isset($val->sec)) {
                                     $timestramp = $val->sec;
@@ -351,7 +353,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                                     $t_width = isset($field['img_width']) ? $field['img_width'] : '100';
                                     $t_height = isset($field['img_height']) ? $field['img_height'] : '100';
                                     $display_title = $val;
-                                    $val = '<img style="width:'.$t_width.'px;height:'.$t_height.'px" src="'.$val.'" />';
+                                    $val = '<img style="width:' . $t_width . 'px;height:' . $t_height . 'px" src="' . $val . '" />';
                                 }
                             }
                         }
@@ -362,17 +364,24 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                         $display_title = $val;
                     }
                 }
-                $str .= '<td><span title="'.$display_title.'">'.$val.'</span></td>';
+                $str .= '<td><span title="' . $display_title . '">' . $val . '</span></td>';
             }
             $str .= '<td>
-						<a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="'.$this->_editUrl.'?'.$this->_primaryKey.'='.$one[$this->_primaryKey].'" >编辑</a>
-						<a title="删除" target="ajaxTodo" href="'.$this->_deleteUrl.'?'.$csrfString.'&'.$this->_primaryKey.'='.$one[$this->_primaryKey].'" class="btnDel">删除</a>
+						<a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="' . $this->_editUrl . '?' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" >编辑</a>
+						<a title="删除" target="ajaxTodo" href="' . $this->_deleteUrl . '?' . $csrfString . '&' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" class="btnDel">删除</a>
 						<br/>
-						<a title="复制" target="dialog" class="button" mask="true" drawable="true" width="1000" height="580" href="'.$this->_copyUrl.'&'.$this->_primaryKey.'='.$one[$this->_primaryKey].'" ><span>复制</span></a>
+						<a title="复制" target="dialog" class="button" mask="true" drawable="true" width="1000" height="580" href="' . $this->_copyUrl . '&' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" ><span>复制</span></a>
 					</td>';
             $str .= '</tr>';
         }
-
         return $str;
     }
+
+    public function getBatchImportBar()
+    {
+        return '<ul class="toolBar">
+					<li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="'.$this->_primaryKey.'s" postType="string" href="'.$this->_batchImportUrl.'" class="delete"><span>批量导入</span></a></li>
+				</ul>';
+    }
+
 }
