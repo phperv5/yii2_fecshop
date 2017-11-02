@@ -380,7 +380,9 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 
     public function getBatchImportBar()
     {
-        return '<div><a title="确实要删除这些记录吗?" target="selectedTodo" rel="'.$this->_primaryKey.'s" postType="string" href="'.$this->_batchImportUrl.'" class="delete"><span>批量导入</span></a></div>';
+        return '<ul class="toolBar">
+					<li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="'.$this->_primaryKey.'s" postType="string" href="'.$this->_batchImportUrl.'" class="delete"><span>批量导入</span></a></li>
+				</ul>';
     }
 
 }
