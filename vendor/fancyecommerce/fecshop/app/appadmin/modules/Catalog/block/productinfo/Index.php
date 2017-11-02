@@ -23,7 +23,8 @@ use Yii;
 class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 {
     protected $_copyUrl;
-    
+    protected $_batchImportUrl;
+
     /**
      * 为了可以使用rewriteMap，use 引入的文件统一采用下面的方式，通过Yii::mapGet()得到className和Object
      */
