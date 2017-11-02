@@ -22,6 +22,8 @@ use Yii;
  */
 class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
+    protected $_attrBlockName = '\fecshop\app\appadmin\modules\Catalog\block\productinfo\index\Attr';
+    
     public function init()
     {
         /**
