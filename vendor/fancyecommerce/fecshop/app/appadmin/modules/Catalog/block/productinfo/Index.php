@@ -258,7 +258,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getTableTbodyHtml($data)
     {
         $fileds = $this->getTableFieldArr();
-        $str .= '';
+        $str = '';
         $csrfString = \fec\helpers\CRequest::getCsrfString();
         $user_ids = [];
         $product_ids = [];
@@ -269,7 +269,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         //var_dump($product_ids);
         $users = Yii::$service->adminUser->getIdAndNameArrByIds($user_ids);
         $qtys  = Yii::$service->product->stock->getQtyByProductIds($product_ids);
-        //var_dump($qtys );
+
         foreach ($data as $one) {
             $str .= '<tr target="sid_user" rel="'.$one[$this->_primaryKey].'">';
             $str .= '<td><input name="'.$this->_primaryKey.'s" value="'.$one[$this->_primaryKey].'" type="checkbox"></td>';
@@ -356,8 +356,6 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                     }
 
                     if (isset($field['lang']) && !empty($field['lang'])) {
-                        //var_dump($val);
-                        //var_dump($orderField);
                         $val = Yii::$service->fecshoplang->getDefaultLangAttrVal($val, $orderField);
                         $display_title = $val;
                     }

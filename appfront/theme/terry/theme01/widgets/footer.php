@@ -7,8 +7,6 @@
                             Options </a></li>
                     <li><a href="<?=  Yii::$service->url->getUrl('how-about-your-delivery-cost') ?>" rel="nofollow" target="_blank">Delivery
                             Cost </a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('how-about-track-your-package') ?>" rel="nofollow" target="_blank">Tracking
-                            Your Items </a></li>
                     <li><a href="<?=  Yii::$service->url->getUrl('customs-clearance-import-duty') ?>" rel="nofollow">Customs &amp; Import Tax</a></li>
                     <li><a href="<?=  Yii::$service->url->getUrl('payment') ?>" rel="nofollow">Payment</a></li>
                 </ul>
@@ -17,12 +15,10 @@
             <div style="width: 25%; float: left;"><strong>Return Information</strong>
 
                 <ul>
-                    <li><a href="<?=  Yii::$service->url->getUrl('return-policy') ?>" rel="nofollow" target="_blank">Return Policy</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('products-warranty') ?>" rel="nofollow" target="_blank">ProductsWarranty</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('refund-policy') ?>" rel="nofollow" target="_blank">Refund Policy</a></li>
+                    <li><a href="<?=  Yii::$service->url->getUrl('return-policy') ?>" rel="nofollow" target="_blank">Return & Refund Policy</a></li>
+                    <li><a href="<?=  Yii::$service->url->getUrl('products-warranty') ?>" rel="nofollow" target="_blank">Products Warranty</a></li>
                     <li><a href="<?=  Yii::$service->url->getUrl('privacy-policy') ?>" rel="nofollow">Privacy Policy</a></li>
                     <li><a href="<?=  Yii::$service->url->getUrl('after-sale-service') ?>" rel="nofollow">After-sale service</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('help') ?>" rel="nofollow">Help</a></li>
                 </ul>
             </div>
 
@@ -30,10 +26,7 @@
 
                 <ul>
                     <li><a href="<?=  Yii::$service->url->getUrl('about-us') ?>" rel="nofollow">About us</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('contact-us') ?>" rel="nofollow" target="_blank">Contact us</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('forget-your-account-password') ?>" rel="nofollow" target="_blank">Forget your account password</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('wholesale-dropship') ?>" rel="nofollow" target="_blank">Wholesale Dropship</a></li>
-                    <li><a href="<?=  Yii::$service->url->getUrl('tips') ?>" rel="nofollow" target="_blank">Tips to use</a></li>
+                    <li><a href="<?=  Yii::$service->url->getUrl('contact-us') ?>" rel="nofollow" target="_blank">Help & Contact us</a></li>
                 </ul>
             </div>
 
@@ -47,7 +40,7 @@
     </div>
     <div class="footer">
         <div class="ft_menu"><a href="/">Home</a>
-            <span>|</span> <a href="<?=  Yii::$service->url->getUrl('how-we-ship-the-item-to-you') ?>">Contact</a> <span>|</span>
+            <span>|</span> <a href="<?=  Yii::$service->url->getUrl('contact-us') ?>">Help & Contact us</a> <span>|</span>
             <a href="<?=  Yii::$service->url->getUrl('payment') ?>">Payment</a>
             <span>|</span> <a href="<?=  Yii::$service->url->getUrl('about-us') ?>">About us</a> <span>|</span> <a
                     href="<?=  Yii::$service->url->getUrl('drop-ship-service') ?>">Drop-ship Service</a> <span>|</span> <a
