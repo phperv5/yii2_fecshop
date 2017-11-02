@@ -57,7 +57,7 @@ class ProductinfoController extends CatalogController
         $data = $this->getBlock('manageredit')->delete();
     }
 
-    public function actionBatchImport()
+    public function actionBatchimport()
     {
         $data = $this->getBlock()->getLastData();
 

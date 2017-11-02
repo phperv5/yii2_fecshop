@@ -20,7 +20,7 @@ use Yii;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class batchImport extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
+class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public function init()
     {
