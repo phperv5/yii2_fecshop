@@ -23,7 +23,7 @@ use Yii;
 class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     protected $_attrBlockName = '\fecshop\app\appadmin\modules\Catalog\block\productinfo\index\Attr';
-    
+
     public function init()
     {
         /**
@@ -31,7 +31,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          */
         $this->_attrBlockName = Yii::mapGetName($this->_attrBlockName);
 
-        $this->_saveUrl = CUrl::getUrl('catalog/productinfo/managereditsave');
+        //$this->_saveUrl = CUrl::getUrl('catalog/productinfo/managereditsave');
         parent::init();
 
 
