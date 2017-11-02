@@ -43,6 +43,12 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $this->_service = Yii::$service->product;
     }
 
+    public function getLastData()
+    {
+        return [
+        ];
+    }
+
     /**
      * save article data,  get rewrite url and save to article url key.
      */
@@ -72,6 +78,9 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             exit;
         }
     }
+
+
+
 
 
     public function getEditArr()
