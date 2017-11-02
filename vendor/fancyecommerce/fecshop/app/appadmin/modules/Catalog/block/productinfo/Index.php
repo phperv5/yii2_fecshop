@@ -80,6 +80,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
             'pagerForm' => $pagerForm,
             'searchBar' => $searchBar,
             'editBar' => $editBar,
+            'batchImportBar'=>$batchImportBar,
             'thead' => $thead,
             'tbody' => $tbody,
             'toolBar' => $toolBar,
