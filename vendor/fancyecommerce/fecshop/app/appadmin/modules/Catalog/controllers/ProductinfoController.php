@@ -56,4 +56,12 @@ class ProductinfoController extends CatalogController
     {
         $data = $this->getBlock('manageredit')->delete();
     }
+
+    //批量导入
+    public function actionManagerBatchImportSave()
+    {
+        $data = $this->getBlock('batchimport')->save();
+
+        return $this->render($this->action->id, $data);
+    }
 }
