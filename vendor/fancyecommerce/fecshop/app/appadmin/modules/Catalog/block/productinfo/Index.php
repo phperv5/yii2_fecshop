@@ -52,6 +52,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
         /*
          * service component, data provider
          */
+        $this->batchImportUrl = CUrl::getUrl('catalog/productinfo/batchImport');
         $this->_service = Yii::$service->product;
         parent::init();
     }
