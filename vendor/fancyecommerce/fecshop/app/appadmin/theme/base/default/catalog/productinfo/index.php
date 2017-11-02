@@ -32,6 +32,7 @@ use fec\helpers\CRequest;
 <div class="pageContent">
 	<div class="panelBar">
 		<?= $editBar;  ?>
+        <div><a title="" target="selectedTodo" rel="'.$this->_primaryKey.'s" postType="string" href="'.$this->batchImportUrl.'" class="delete"><span>批量导入</span></a></div>
 	</div>
 	<div class="panelBar">
 		<?= $toolBar; ?>
