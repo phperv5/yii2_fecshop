@@ -65,7 +65,7 @@ class ProductinfoController extends CatalogController
     }
 
     //批量导入保存
-    public function actionBatchImportSave()
+    public function actionBatchimportsave()
     {
         $data = $this->getBlock('batchimport')->save();
 

@@ -13,3 +13,4 @@ appfront/config/fecshop_local_modules/Catalog.php
 common/config/fecshop_local_services/Payment.php
 common/config/fecshop_local_services/Payment_old.php
 dump.rdb
+.idea/jsLinters/jscs.xml

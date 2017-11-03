@@ -23,7 +23,7 @@ use Yii;
 class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     protected $_attrBlockName = '\fecshop\app\appadmin\modules\Catalog\block\productinfo\index\Attr';
-
+    private $_saveUrl;
     public function init()
     {
         /**
@@ -31,7 +31,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          */
         $this->_attrBlockName = Yii::mapGetName($this->_attrBlockName);
 
-        //$this->_saveUrl = CUrl::getUrl('catalog/productinfo/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/productinfo/batchimportsave');
         parent::init();
 
 
@@ -54,12 +54,13 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
      */
     public function save()
     {
-        $this->initParamType();
+//        $this->initParamType();
         /*
          * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
          * you must convert string datetime to time , use strtotime function.
          */
-        // var_dump()
+        $request_param = CRequest::param();
+        var_dump($request_param);die;
 
         $this->_service->save($this->_param, 'catalog/product/index');
 
