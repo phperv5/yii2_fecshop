@@ -478,7 +478,7 @@ class Index
     }
 
     // 通过relate产品字段取出来sku，然后查询得到。
-    protected function getProductBySkus($skus, $category_id, $limit = 4)
+    protected function getProductBySkus($skus, $category_id, $limit = 3)
     {
         $relation_sku = $this->_product['relation_sku'];
         $filter['select'] = [
