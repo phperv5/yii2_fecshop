@@ -1262,7 +1262,7 @@ a.cartqtyup {
     overflow: hidden;
     position: absolute;
     visibility: hidden;
-    opacity: .5;
-    filter: alpha(opacity=50);
+    opacity: .8;
+    filter: alpha(opacity=80);
     z-index: 99999999;
 }
