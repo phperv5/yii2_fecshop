@@ -93,7 +93,7 @@
                     </dd>
                     <dt class="w100px">Returns:</dt>
                     <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.
-                        <a href="/support/return-policy-4174.html" target="_blank"><span class="px11 verdana">Read details »</span></a>
+                        <!--<a href="/support/return-policy-4174.html" target="_blank"><span class="px11 verdana">Read details »</span></a>-->
                     </dd>
                 </dl>
                 <div class="blank10px"></div>
@@ -246,7 +246,7 @@
                     url: addToCartUrl,
                     success: function (data, textStatus) {
                         if (data.status == 'success') {
-                            window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";
+                           // window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";
                         } else {
                             content = data.content;
                             $(".addProductToCart").removeClass("dataUp");
