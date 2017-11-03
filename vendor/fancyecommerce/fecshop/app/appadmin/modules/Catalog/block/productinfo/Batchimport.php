@@ -98,6 +98,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function productFileHandler($filename)
     {
         $productInfo = file_get_contents($filename);
+        var_dump(file_exists($filename));die;
         var_dump($productInfo);die;
         $this->_service->save($this->_param, 'catalog/product/index');
 
