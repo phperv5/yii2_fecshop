@@ -62,8 +62,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          * you must convert string datetime to time , use strtotime function.
          */
         $request_param = CRequest::param();
-        var_dump($request_param);
-        var_dump($_FILES);
+        var_dump($_SERVER);
         die;
 
         $this->_service->save($this->_param, 'catalog/product/index');
