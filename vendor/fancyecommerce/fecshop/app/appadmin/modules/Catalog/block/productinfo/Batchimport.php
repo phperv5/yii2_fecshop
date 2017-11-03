@@ -63,8 +63,8 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          */
         $request_param = CRequest::param();
         $root_path = '../../';
-        require $root_path.'src/UploadFile.php';
-        $file_path = $root_path.'uploads/';
+        require $root_path . 'src/UploadFile.php';
+        $file_path = $root_path . 'uploads/';
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
         $fileInfo = '';
@@ -75,10 +75,8 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             // 上传成功 获取上传文件信息
             $fileInfo = $upload->getUploadFileInfo();
         }
-        var_dump($fileInfo);die;
-        $this->_service->save($this->_param, 'catalog/product/index');
-
-        $errors = Yii::$service->helper->errors->get();
+        $filename = $fileInfo['savepath'] . $fileInfo['savename'];
+        $errors = $this->productFileHandler($filename);
         if (!$errors) {
             echo json_encode([
                 'statusCode' => '200',
@@ -92,6 +90,18 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             ]);
             exit;
         }
+    }
+
+    /*
+     * 信息导入处理
+     */
+    public function productFileHandler($filename)
+    {
+        $productInfo = file_get_contents($filename);
+        var_dump($productInfo);die;
+        $this->_service->save($this->_param, 'catalog/product/index');
+
+        $errors = Yii::$service->helper->errors->get();
     }
 
 
