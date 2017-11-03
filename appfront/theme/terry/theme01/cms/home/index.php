@@ -5,7 +5,6 @@
         <?php foreach($categories as $category): ?>
         <a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a>
         <?php endforeach; ?>
-<!--        <a href="search/search.html" class="mhl_last">All Categories</a>-->
     </div>
      <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
@@ -70,7 +69,7 @@
     <div class="blank10px"></div>
     <div class="blank10px"></div>
     <div class="hm_box hm_box_dir_tf hm_box_dir_tf_2">
-        <div class="hmb_title"><h2><a href="wholesale/car-diagnostic-tool/car-diagnostic-tool.html">Car Diagnostic Tool<span class="iconfont icon-right"></span></a></h2></div>
+        <div class="hmb_title"><h2><a href="">Car Diagnostic Tool<span class="iconfont icon-right"></span></a></h2></div>
         <div class="clear"></div>
     </div>
     <div class="hm_box">
@@ -87,7 +86,7 @@
     <div class="blank10px"></div>
     <div class="blank10px"></div>
     <div class="hm_box hm_box_dir_tf hm_box_dir_tf_3">
-        <div class="hmb_title"><h2><a href="wholesale/auto-key-programmer/auto-key-programmer.html">Auto Key Programmer<span class="iconfont icon-right"></span></a></h2></div>
+        <div class="hmb_title"><h2><a href="">Auto Key Programmer<span class="iconfont icon-right"></span></a></h2></div>
         <!--关键字待开发-->
         <!--        <div class="hmb_more hmb_mor_tag"><a href="producttags/vvdi2.html">VVDI2</a> &nbsp; <a href="producttags/mb-bga-tool.html">MB BGA Tool</a> &nbsp; <a href="producttags/keydiy-remote-maker.html">KEYDIY Remote Maker</a> &nbsp; <a href="producttags/bmw-key-programmer.html">BMW Key Programmer</a> &nbsp; <a href="producttags/mercedes-key-programmer.html">Mercedes Key Programmer</a> &nbsp; <a href="producttags/toyota-g-chip-copier.html">Toyota G Chip Copier</a></div>-->
         <div class="clear"></div>
@@ -106,7 +105,7 @@
     <div class="blank10px"></div>
     <div class="blank10px"></div>
     <div class="hm_box hm_box_dir_tf hm_box_dir_tf_4">
-        <div class="hmb_title"><h2><a href="wholesale/ecu-chip-tuning/ecu-chip-tuning.html">ECU Chip Tuning<span class="iconfont icon-right"></span></a></h2></div>
+        <div class="hmb_title"><h2><a href="">ECU Chip Tuning<span class="iconfont icon-right"></span></a></h2></div>
 <!--        <div class="hmb_more hmb_mor_tag"><a href="producttags/ktag-master-tuning.html">Ktag Master Tuning</a> &nbsp; <a href="producttags/fgtech-galletto.html">FGTech Galletto</a> &nbsp; <a href="producttags/kess-v2.html">Kess V2</a> &nbsp; <a href="producttags/xprog-m.html">XPROG-M</a> &nbsp; <a href="producttags/upa-usb-programmer.html">UPA USB Programmer</a> &nbsp; <a href="producttags/motorola-programmer.html">Motorola Programmer</a> &nbsp; <a href="producttags/wellon-programmer.html">Wellon Programmer</a> &nbsp; <a href="producttags/mpps-chip-tuning.html">MPPS Chip Tuning</a> &nbsp; <a href="producttags/nitrodata-chip-tuning.html">NitroData Chip Tuning</a> &nbsp; <a href="producttags/socket-adapter.html">Socket Adapter</a></div>-->
         <div class="clear"></div>
     </div>
