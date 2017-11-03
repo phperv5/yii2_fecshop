@@ -63,6 +63,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          */
         $request_param = CRequest::param();
         var_dump($request_param);
+        var_dump($_FILES);
         die;
 
         $this->_service->save($this->_param, 'catalog/product/index');
