@@ -51,7 +51,7 @@
 
     <div class="blank10px"></div>
     <div class="hm_box hm_box_dir_tf hm_box_dir_tf_1">
-        <div class="hmb_title"><h2><a href="wholesale/original-brand-tool/list.html">Original Brand Tool<span class="iconfont icon-right"></span></a></h2></div>
+        <div class="hmb_title"><h2><a href="">Original Brand Tool<span class="iconfont icon-right"></span></a></h2></div>
 <!--        <div class="hmb_more hmb_mor_tag"><a href="producttags/autel-maxisys.html">Autel MaxiSYS</a> &nbsp; <a href="producttags/launch-x431-v.html">Launch X431 V</a> &nbsp; <a href="producttags/autel-maxidiag-elite.html">Autel MaxiDiag Elite</a> &nbsp; <a href="producttags/original-obdstar.html">Original OBDSTAR</a> &nbsp; <a href="producttags/vxdiag-vcx-nano.html">VXDIAG VCX NANO</a> &nbsp; <a href="producttags/launch-creader.html">Launch Creader</a></div>-->
         <div class="clear"></div>
     </div>
