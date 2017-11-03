@@ -1,3 +1,6 @@
+<?php
+
+?>
 <div class="main">
     <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> - [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand Tool</a> - OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL</div><div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
@@ -48,10 +51,6 @@
                         ];
                         ?>
                         <?= Yii::$service->page->widget->render($priceView, $priceParam); ?>
-
-
-                        <!--                    <div class="pro_pri_mpr" id="ProMultiCurrTrig"-->
-                        <!--                         onmouseover="javascript:ProMultiPriceRef('ProMultiCurrRef', 'ProMultiCurrTrig');"></div>-->
                     </div>
                     <div class="pro_b_item" id="id_pro_b_item_oQty">
                         <div class="pro_bitm_tit">Quantity:</div>
@@ -63,9 +62,11 @@
                     </div>
                     <div class="blank10px"></div>
                     <div class="blank10px"></div>
-                    <div class="pro_bo_add_l"><input name="btn_buyitnow" type="button" class="btn_buyitnow" value="" title="Buy It Now"
-                                                     onclick="location.href='<?= Yii::$service->url->getUrl('payment/paypal/express/start'); ?>'"/></div>
+                    <div class="pro_bo_add_l">
+                        <input name="btn_buyitnow" type="button" class="btn_buyitnow goProductToCart" value="" title="Buy It Now"/>
+                    </div>
                     <div class="pro_bo_add_m">
+                        <div id="flyItem" class="fly_item"><img src="<?= Yii::$service->product->image->getResize($image_thumbnails['main']['image'], [40, 40], false) ?>" width="40" height="40"></div>
                         <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value="" title="Add to Cart"/>
                     </div>
 
@@ -82,9 +83,7 @@
                     <dt class="w100px">Shipping:</dt>
                     <dd class="w420px">
                         <strong class="px14 green_dark">Free Shipping</strong>Express Shipping Service&nbsp;<br/>
-                        <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a
-                                    href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span
-                                        class="px10">See details &raquo;</span></a></span></dd>
+                        <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span class="px10">See details &raquo;</span></a></span></dd>
                     <dt class="w100px">Weight:</dt>
                     <!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
                     <dd class="w420px"><?= $weight;?>KG</dd>
@@ -246,7 +245,33 @@
                     url: addToCartUrl,
                     success: function (data, textStatus) {
                         if (data.status == 'success') {
-                           // window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";
+				items_count = data.items_count;
+				//eleShopCart:到达的目的地#str_num_mycart
+				var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector("#str_num_mycart");
+				var myParabola = funParabola(eleFlyElement, eleShopCart, {
+					speed: 400, //抛物线速度
+					curvature: 0.0008, //控制抛物线弧度
+					complete: function() {
+						eleFlyElement.style.visibility = "hidden";
+						$("#str_num_mycart").find(".verdana").html(items_count);
+					}
+				});
+							if (eleFlyElement && eleShopCart) {
+								[].slice.call(document.getElementsByClassName("addProductToCart")).forEach(function(button) {
+
+										// 滚动大小
+										var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+										scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+										eleFlyElement.style.left = event.clientX + scrollLeft + "px";
+										eleFlyElement.style.top = event.clientY + scrollTop + "px";
+										eleFlyElement.style.visibility = "visible";
+										// 需要重定位
+										myParabola.position().move();
+									//});
+								});
+							}
+                                
+
                         } else {
                             content = data.content;
                             $(".addProductToCart").removeClass("dataUp");
@@ -260,7 +285,58 @@
 
             }
         });
+        $(".goProductToCart").click(function () {
+            i = 1;
 
+            if (i) {
+                custom_option = new Object();
+                $(".product_custom_options .pg .rg ul").each(function () {
+                    $m = $(this).find("li.current a.current");
+                    attr = $m.attr("attr");
+                    value = $m.attr("value");
+                    custom_option[attr] = value;
+                });
+                custom_option_json = JSON.stringify(custom_option);
+                //alert(custom_option_json);
+                sku = $(".sku").val();
+                qty = $(".qty").val();
+                qty = qty ? qty : 1;
+                csrfName = $(".product_csrf").attr("name");
+                csrfVal = $(".product_csrf").val();
+
+                $(".product_custom_options").val(custom_option_json);
+                $(this).addClass("dataUp");
+                // ajax 提交数据
+
+                addToCartUrl = "<?= Yii::$service->url->getUrl('checkout/cart/add'); ?>";
+                $data = {};
+                $data['custom_option'] = custom_option_json;
+                $data['product_id'] = "<?= $_id ?>";
+                $data['qty'] = qty;
+                $data[csrfName] = csrfVal;
+                jQuery.ajax({
+                    async: true,
+                    timeout: 6000,
+                    dataType: 'json',
+                    type: 'post',
+                    data: $data,
+                    url: addToCartUrl,
+                    success: function (data, textStatus) {
+                        if (data.status == 'success') {
+                            window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";                       
+                        } else {
+                            content = data.content;
+                            $(".addProductToCart").removeClass("dataUp");
+                            alert(content);
+                        }
+
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                });
+
+            }
+        });
         // product favorite
         $("#divMyFavorite").click(function () {
             if ($(this).hasClass('act')) {
