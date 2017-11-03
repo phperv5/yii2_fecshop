@@ -31,7 +31,7 @@ use fecadmin\models\AdminRole;
 						<?= $editBar; ?>
                         <div id="addpicContainer">
 
-                            <input type="file" multiple="multiple" id="inputfile"/>
+                            <input type="file" name="file" multiple="multiple" id="inputfile"/>
 
                         </div>
 					</div>
