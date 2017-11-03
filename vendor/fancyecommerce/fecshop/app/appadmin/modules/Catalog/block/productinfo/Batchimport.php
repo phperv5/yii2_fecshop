@@ -62,9 +62,20 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          * you must convert string datetime to time , use strtotime function.
          */
         $request_param = CRequest::param();
-        var_dump($_SERVER);
-        die;
-
+        $root_path = '../../';
+        require $root_path.'src/UploadFile.php';
+        $file_path = $root_path.'uploads/';
+        $upload = new \UploadFile();
+        $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
+        $fileInfo = '';
+        if (!$upload->upload()) {
+            // 上传错误提示错误信息
+            exit(json_encode(['res' => 1, 'msg' => $upload->getErrorMsg()]));
+        } else {
+            // 上传成功 获取上传文件信息
+            $fileInfo = $upload->getUploadFileInfo();
+        }
+        var_dump($fileInfo);die;
         $this->_service->save($this->_param, 'catalog/product/index');
 
         $errors = Yii::$service->helper->errors->get();
