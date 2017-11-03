@@ -89,7 +89,7 @@
                 <div class="rowf_per70">
                     <button type="button" id="js_registBtn" class="redBtn btn_submit btn_big"><?= Yii::$service->page->translate->__('Submit'); ?></button>
                     <div class="blank10px"></div>
-                    <span class="gray_dark">Click "Submit &amp; Continue" button, which means you have read and agree to <a href="http://www.uobdii.com/info/Privacy-Policy" target="_blank"><b>Privacy Policy of UOBDII.com</b></a>.</span>
+                   
                 </div>
                 <div class="clear"></div>
             </div>
@@ -99,7 +99,7 @@
     <div class="clear"></div>
 </div>
 <?php
-$requiredValidate 			= Yii::$service->page->translate->__('This is a required field.');
+$requiredValidate 		= Yii::$service->page->translate->__('This is a required field.');
 $emailFormatValidate 		= Yii::$service->page->translate->__('Please enter a valid email address. For example johndoe@domain.com.');
 $firstNameLenghtValidate 	= Yii::$service->page->translate->__('first name length must between');
 $lastNameLenghtValidate 	= Yii::$service->page->translate->__('last name length must between');
