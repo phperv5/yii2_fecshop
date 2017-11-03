@@ -24,6 +24,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 {
     protected $_attrBlockName = '\fecshop\app\appadmin\modules\Catalog\block\productinfo\index\Attr';
     private $_saveUrl;
+
     public function init()
     {
         /**
@@ -46,6 +47,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function getLastData()
     {
         return [
+            'saveUrl' => $this->_saveUrl,
         ];
     }
 
@@ -60,28 +62,26 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          * you must convert string datetime to time , use strtotime function.
          */
         $request_param = CRequest::param();
-        var_dump($request_param);die;
+        var_dump($request_param);
+        die;
 
         $this->_service->save($this->_param, 'catalog/product/index');
 
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
-            echo  json_encode([
-                'statusCode'=>'200',
-                'message'=>'save success',
+            echo json_encode([
+                'statusCode' => '200',
+                'message' => 'save success',
             ]);
             exit;
         } else {
-            echo  json_encode([
-                'statusCode'=>'300',
-                'message'=>$errors,
+            echo json_encode([
+                'statusCode' => '300',
+                'message' => $errors,
             ]);
             exit;
         }
     }
-
-
-
 
 
     public function getEditArr()
