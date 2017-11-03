@@ -249,8 +249,8 @@
 				//eleShopCart:到达的目的地#str_num_mycart
 				var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector("#str_num_mycart");
 				var myParabola = funParabola(eleFlyElement, eleShopCart, {
-					speed: 400, //抛物线速度
-					curvature: 0.0008, //控制抛物线弧度
+					speed: 300, //抛物线速度
+					curvature: 0.001, //控制抛物线弧度
 					complete: function() {
 						eleFlyElement.style.visibility = "hidden";
 						$("#str_num_mycart").find(".verdana").html(items_count);
