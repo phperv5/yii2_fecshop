@@ -97,7 +97,6 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
      */
     public function productFileHandler($filename)
     {
-
         $fd = fopen($filename, "r");
         $products = [];
         while (!feof($fd)) {
