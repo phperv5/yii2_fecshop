@@ -34,8 +34,8 @@ use fecadmin\models\AdminRole;
                             <!-- position: absolute;left: 10px;top: 5px;只针对本用例将input隐至图片底下。-->
                             <!-- height:0;width:0;z-index: -1;是为了隐藏input，因为Chrome下不能使用display:none，否则无法添加文件 -->
                             <!-- onclick="getElementById('inputfile').click()" 点击图片时则点击添加文件按钮 -->
-                            <button style="" onclick="getElementById('inputfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>Browse Files</span></span></span></button>
-
+                            <button style="" onclick="getElementById('inputfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>upload file</span></span></span></button>
+                            <br><br><div><a href="http://img.normankeys.com/product.csv" target="_blank" style="color: red">模板下载 product.csv</a></div>
                             <input type="file" multiple="multiple" id="inputfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
                             <span class="loading"></span>
 

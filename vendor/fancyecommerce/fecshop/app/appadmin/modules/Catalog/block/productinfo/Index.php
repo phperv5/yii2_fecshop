@@ -380,9 +380,10 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 
     public function getBatchImportBar()
     {
-        return '<ul class="toolBar">
+        return '<div class="panelBar"><ul class="toolBar">
 					<li><a class="add"   href="'.$this->_batchImportUrl.'"  target="dialog" height="580" width="1000" drawable="true" mask="true"><span>批量导入</span></a></li>
-				</ul>';
+				</ul></div>';
+
     }
 
 }

@@ -67,7 +67,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $file_path = $root_path . 'uploads/';
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
-        $fileInfo = '';
+
         if (!$upload->upload()) {
             // 上传错误提示错误信息
             exit(json_encode(['res' => 1, 'msg' => $upload->getErrorMsg()]));
@@ -75,7 +75,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             // 上传成功 获取上传文件信息
             $fileInfo = $upload->getUploadFileInfo();
         }
-        $filename = $fileInfo['savepath'] . $fileInfo['savename'];
+        $filename = $fileInfo[0]['savepath'] . $fileInfo[0]['savename'];
         $errors = $this->productFileHandler($filename);
         if (!$errors) {
             echo json_encode([
@@ -97,11 +97,39 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
      */
     public function productFileHandler($filename)
     {
-        $productInfo = file_get_contents($filename);
-        var_dump($productInfo);die;
-        $this->_service->save($this->_param, 'catalog/product/index');
 
-        $errors = Yii::$service->helper->errors->get();
+        $fd = fopen($filename, "r");
+        $products = [];
+        while (!feof($fd)) {
+            $data = fgetcsv($fd);
+            $t = array_filter($data);
+            if (!empty($t)) {
+                $products[] = $data;
+            }
+        }
+        fclose($fd);
+        $product = [];
+        foreach ($products as $key => $value) {
+            if ($key == 0) continue;
+            $product['name']['name_en'] = $value[0];
+            $product['spu'] = $value[1];
+            $product['sku'] = $value[2];
+            $product['weight'] = $value[3];
+            $product['package'] = $value[4];
+            $product['qty'] = $value[5];
+            $product['cost_price'] = $value[6];
+            $product['special_price'] = $value[7];
+            $product['short_description']['short_description_en'] = $value[8];
+            $product['meta_title']['meta_title_en'] = $value[8];
+            $product['meta_keywords']['meta_keywords_en'] = $value[8];
+            $product['meta_description']['meta_description_en'] = $value[8];
+            $product['description']['description_en'] = $value[9];
+            $product['tech_support']['tech_support_en'] = $value[10];
+            $product['video']['video_en'] = $value[11];
+            $error = $this->_service->apiSave($product);
+        }
+
+        return $error;
     }
 
 
