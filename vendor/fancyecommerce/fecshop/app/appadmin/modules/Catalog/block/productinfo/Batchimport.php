@@ -103,31 +103,37 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             $data = fgetcsv($fd);
             $t = array_filter($data);
             if (!empty($t)) {
-                $products[] = $data;
+                $products[] = array_map('trim',$data);
             }
         }
         fclose($fd);
-        $product = [];
+        if(file_exists($filename))unlink($filename);
+
         foreach ($products as $key => $value) {
             if ($key == 0) continue;
+            $product = [];
             $product['name']['name_en'] = $value[0];
             $product['spu'] = $value[1];
             $product['sku'] = $value[2];
             $product['weight'] = $value[3];
             $product['package'] = $value[4];
-            $product['qty'] = $value[5];
-            $product['cost_price'] = $value[6];
-            $product['special_price'] = $value[7];
-            $product['short_description']['short_description_en'] = $value[8];
-            $product['meta_title']['meta_title_en'] = $value[8];
-            $product['meta_keywords']['meta_keywords_en'] = $value[8];
-            $product['meta_description']['meta_description_en'] = $value[8];
-            $product['description']['description_en'] = $value[9];
-            $product['tech_support']['tech_support_en'] = $value[10];
-            $product['video']['video_en'] = $value[11];
+            $product['qty'] = (float)$value[5];
+            $product['price'] = (float)$value[6];
+            if($value[7]){
+                $product['special_price'] = (float)$value[7];
+            }
+            $product['short_description']['short_description_en'] = $value[9];
+            $product['meta_title']['meta_title_en'] = $value[9];
+            $product['meta_keywords']['meta_keywords_en'] = $value[9];
+            $product['meta_description']['meta_description_en'] = $value[9];
+            $product['description']['description_en'] = $value[10];
+            $product['tech_support']['tech_support_en'] = $value[11];
+            $product['video']['video_en'] = $value[12];
+            $product['is_in_stock'] = 1;
+            $product['created_at'] = time();
+
             $error = $this->_service->apiSave($product);
         }
-
         return $error;
     }
 
