@@ -22,6 +22,7 @@ $jsOptions = [
 			'fancybox/jquery.fancybox.pack.js',
 			'js/js.js',
 			'js/common.js',
+                        'js/parabola.js',
 		],
 	],
 ];
