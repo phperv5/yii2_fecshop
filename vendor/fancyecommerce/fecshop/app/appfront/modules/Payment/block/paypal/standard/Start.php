@@ -29,7 +29,6 @@ class Start
         if (strtolower($SetExpressCheckoutReturn['ACK']) == 'success') {
             $token = $SetExpressCheckoutReturn['TOKEN'];
             $increment_id = Yii::$service->order->getSessionIncrementId();
-            echo $increment_id;die;
             # 将token写入到订单中
             Yii::$service->order->updateTokenByIncrementId($increment_id,$token);
             $redirectUrl = Yii::$service->payment->paypal->getSetStandardCheckoutUrl($token);

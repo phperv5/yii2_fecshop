@@ -573,7 +573,6 @@ class Order extends Service
      */
     protected function actionSetSessionIncrementId($increment_id)
     {
-        var_dump(Yii::$service->session);die;
         Yii::$service->session->set(self::CURRENT_ORDER_INCREAMENT_ID, $increment_id);
     }
 
@@ -608,7 +607,7 @@ class Order extends Service
     /**
      * @property $order_id | Int
      * @return $increment_id | Int
-     *                       通过 order_id 生成订单号。
+     * 通过 order_id 生成订单号。
      */
     protected function generateIncrementIdByOrderId($order_id)
     {
@@ -705,5 +704,19 @@ class Order extends Service
                 $one->save();
             }
         }
+    }
+
+    protected function actionUpdateOrderInfo($increment_id,$payment_method)
+    {
+        if ($increment_id) {
+            $order = $this->getByIncrementId($increment_id);
+            if ($order) {
+                $order->payment_method    = $payment_method;
+                $order->updated_at      = time();
+                $order->save();
+                return true;
+            }
+        }
+        return false;
     }
 }

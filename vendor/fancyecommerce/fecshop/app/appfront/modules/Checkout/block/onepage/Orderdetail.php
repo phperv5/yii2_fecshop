@@ -72,7 +72,7 @@ class Orderdetail
 
         return [];
     }
-    
+
     /*
      * 订单提交支付
      */
@@ -80,7 +80,6 @@ class Orderdetail
     public function paySave()
     {
         $post = Yii::$app->request->post();
-//        var_dump($post);die;
         if (is_array($post) && !empty($post)) {
             /**
              * 对传递的数据，去除掉非法xss攻击部分内容（通过\Yii::$service->helper->htmlEncode()）.
@@ -88,16 +87,12 @@ class Orderdetail
             $post = \Yii::$service->helper->htmlEncode($post);
             // 检查前台传递的数据的完整
             if ($this->checkOrderInfoAndInit($post)) {
-
-                    // 设置checkout type
-                    $serviceOrder = Yii::$service->order;
-                    $checkout_type = $serviceOrder::CHECKOUT_TYPE_STANDARD;
-                    $serviceOrder->setCheckoutType($checkout_type);
-                    // 将购物车数据，生成订单。
-                    if($this->_payment_method == 'paypal_standard'){
-                      $startUrl = Yii::$service->payment->getStandardStartUrl();
-                       Yii::$service->url->redirect($startUrl);
-                    }
+                // 将购物车数据，生成订单。
+                if ($this->_payment_method == 'paypal_standard') {
+                    Yii::$service->order->setSessionIncrementId();
+                    $startUrl = Yii::$service->payment->getStandardStartUrl();
+                    Yii::$service->url->redirect($startUrl);
+                }
             } else {
             }
         }
@@ -105,11 +100,11 @@ class Orderdetail
 
         return false;
     }
-    
+
     public function checkOrderInfoAndInit($post)
     {
         $payment_method = isset($post['payment_method']) ? $post['payment_method'] : '';
-        
+
         // 验证支付方式
         if (!$payment_method) {
             Yii::$service->helper->errors->add('payment method can not empty');
@@ -122,7 +117,7 @@ class Orderdetail
                 return false;
             }
         }
-        $this->_shipping_method = $shipping_method;
+
         $this->_payment_method = $payment_method;
         Yii::$service->payment->setPaymentMethod($this->_payment_method);
 
