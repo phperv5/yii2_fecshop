@@ -177,28 +177,9 @@ use fecshop\app\appfront\helper\Format;
     <script>
         <?php $this->beginBlock('placeOrder') ?>
         $(document).ready(function () {
-            $('.change').click(function(){
-                $('#shippingAddress_select').show();
-                $('#ar_os_shippingAddress').hide();
-            })
 
-            $('.choose_address').bind('click',function(){
-                $('#shippingAddress_select').hide();
-                var str = $(this).parents('.address-data').find(".select_address").clone();
-                $('.cur_address').empty().html(str);
-                var address_id = $(this).attr('address_id');
-                $('.address_id').val(address_id);
-                $('#ar_os_shippingAddress').show();
-            })
-
-            currentUrl = "<?= Yii::$service->url->getUrl('checkout/onepage') ?>"
             //下单(这个部分未完成。)
             $("#onestepcheckout-place-order").click(function(){
-                $(".validation-advice").remove();
-                i = 0;
-                j = 0;
-                address_id = $(".address_id").val();
-                // shipping
 
                 //payment
                 payment_method = $("[name='payment_method'] checked").val();
@@ -206,7 +187,6 @@ use fecshop\app\appfront\helper\Format;
                 //alert(shipment_method);
                 if(!payment_method){
                     $(".checkout-payment-method-load").after('<div style=""  class="validation-advice"><?= Yii::$service->page->translate->__('This is a required field.');?></div>');
-                    j = 1;
                 }
 
             });

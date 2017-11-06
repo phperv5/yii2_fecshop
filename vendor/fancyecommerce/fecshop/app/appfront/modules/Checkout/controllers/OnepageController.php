@@ -20,11 +20,6 @@ class OnepageController extends AppfrontController
 {
     public $enableCsrfValidation = true;
 
-    //public function init(){
-    //	Yii::$service->page->theme->layoutFile = 'one_step_checkout.php';
-
-    //}
-
     public function actionIndex()
     {
         $guestOrder = Yii::$app->controller->module->params['guestOrder'];
@@ -67,5 +62,13 @@ class OnepageController extends AppfrontController
     {
         $data = $this->getBlock('orderdetail')->getLastData();
         return $this->render($this->action->id, $data);
+    }
+    
+    /*
+     * 订单付款
+     */
+    public function actionOrderpay()
+    {
+        $data = $this->getBlock('orderdetail')->paySave();
     }
 }
