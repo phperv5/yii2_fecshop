@@ -6,9 +6,9 @@ use fecshop\app\appfront\helper\Format;
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="exh_full_top"></div>
-    <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
+    <form action="<?= Yii::$service->url->getUrl('checkout/onepage/orderpay'); ?>" method="post" id="onestepcheckout-form">
         <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
-        <input type="hidden" id="s_method_flatrate_flatrate2" name="shipping_method" value="<?= $cart_info['shipping_method'] ?>" class="validate-one-required-by-name">
+        <input type="hidden" id="s_method_flatrate_flatrate2" name="order_id" value="<?= $cart_info['order_id'] ?>" class="validate-one-required-by-name">
         <div class="exh_full_main">
             <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No.<?= $cart_info['increment_id'] ?></span></h1>
             <div class="blank10px"></div>
