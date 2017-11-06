@@ -108,21 +108,8 @@ class Orderdetail
     
     public function checkOrderInfoAndInit($post)
     {
-
-        $shipping_method = isset($post['shipping_method']) ? $post['shipping_method'] : '';
         $payment_method = isset($post['payment_method']) ? $post['payment_method'] : '';
-        // 验证货运方式
-        if (!$shipping_method) {
-            Yii::$service->helper->errors->add('shipping method can not empty');
-
-            return false;
-        } else {
-            if (!Yii::$service->shipping->ifIsCorrect($shipping_method)) {
-                Yii::$service->helper->errors->add('shipping method is not correct');
-
-                return false;
-            }
-        }
+        
         // 验证支付方式
         if (!$payment_method) {
             Yii::$service->helper->errors->add('payment method can not empty');
