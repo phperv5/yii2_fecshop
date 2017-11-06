@@ -573,7 +573,7 @@ class Order extends Service
      */
     protected function actionSetSessionIncrementId($increment_id)
     {
-        var_dump(Yii::$service->session);
+        var_dump(Yii::$service->session);die;
         Yii::$service->session->set(self::CURRENT_ORDER_INCREAMENT_ID, $increment_id);
     }
 
