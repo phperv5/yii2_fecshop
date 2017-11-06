@@ -12,7 +12,7 @@ use fecshop\app\appfront\helper\Format;
     <div class="main_scene">
         <div class="exh_top"></div>
         <div class="exh_main">
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red account-email"></b></a> - My Order Form: S/N.<b class="red">U2170826416375</b></div><div class="blank5px"></div>
+            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red account-email"></b></a> - My Order Form: S/N.<b class="red"><?=  $increment_id ?></b></div><div class="blank5px"></div>
             <h1>My Order Form: S/N.<b class="red"><?=  $increment_id ?></b></h1>
             <div class="blank10px"></div>
             <div class="p_sub_a">Order Status</div>
@@ -33,7 +33,7 @@ use fecshop\app\appfront\helper\Format;
             <div class="blank15px"></div>
             <div class="p_sub_a">Order Information</div>
             <div class="p_con_a">
-                <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'" /></div>
+                <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage/orderdetail?order_id='.$order_id); ?>'" /></div>
                 <span class="px11">Order Serial Number: </span><b class="blue_dark"><?=  $increment_id ?></b><br />
                 <span class="px11">Order Date: </span><span class="px11 verdana"><?=  date('Y-m-d H:i:s',$created_at); ?></span><br />
                 <span class="px11">Order Total Sum: </span><b class="red px14"><?= $currency_symbol ?><?= Format::price($grand_total); ?></b>
