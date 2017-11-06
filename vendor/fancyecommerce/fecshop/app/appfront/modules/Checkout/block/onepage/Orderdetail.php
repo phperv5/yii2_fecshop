@@ -38,7 +38,6 @@ class Orderdetail
         //获取
         $request_param = CRequest::param();
         $order_id = $request_param['order_id'];
-        $order_id = '1';
         //订单详细
         $orderDetail = $this->getCustomerOrderInfo($order_id);
 
