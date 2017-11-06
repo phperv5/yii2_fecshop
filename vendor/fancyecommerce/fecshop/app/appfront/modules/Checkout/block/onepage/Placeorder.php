@@ -88,6 +88,7 @@ class Placeorder
                 //paypal支付跳转
                 if($this->_payment_method == 'paypal_standard'){
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
+                    echo $startUrl;die;
                     Yii::$service->url->redirect($startUrl);
                 }
                 return true;
