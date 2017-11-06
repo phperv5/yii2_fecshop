@@ -712,7 +712,7 @@ class Order extends Service
             $order = $this->getByIncrementId($increment_id);
             if ($order) {
                 $order->payment_method    = $payment_method;
-                $order->updated_at      = time();
+                $order->updated_at        = time();
                 $order->save();
                 return true;
             }
