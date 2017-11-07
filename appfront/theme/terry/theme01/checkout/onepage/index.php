@@ -70,6 +70,7 @@
                         <label for="PayPalECS">
                             <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" checked="checked">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
+                            <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
                         </label>
 
                         <div class="blank5px"></div>
