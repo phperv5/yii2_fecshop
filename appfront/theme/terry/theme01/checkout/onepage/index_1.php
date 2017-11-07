@@ -59,6 +59,8 @@
                         'country_select' => $country_select,
                         'state_html' => $state_html,
                         'cart_address' => $cart_address,
+                        //'payments' => $payments,
+                        //'current_payment_mothod' => $current_payment_mothod,
                     ];
                     ?>
                     <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
@@ -70,68 +72,22 @@
                         <label for="PayPalECS">
                             <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" checked="checked">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
+                            <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
                         </label>
 
                         <div class="blank5px"></div>
-                        <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_1">
-                            <img align="right" alt="" border="0" hspace="5" src="/images/pay/pay_remark_paypal.gif">If you have PayPal account, you can pay your order by your PayPal account.<br>
-                            If you don't have PayPal account, it doesn't matter. You firstly charge your Paypal with you credit card or bank debit card , then also pay via PayPal.<br>
-                            Payment can be submitted in any currency.&nbsp;<br>
-                            Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
+                        <div style="display:" class="pay_ex_a" id="area_pay_method_exp_1">
+                            <img align="right" alt="" border="0" hspace="5" src="<?= Yii::$service->image->getImgUrl('images/pay/pay_remark_paypal.gif'); ?>"/>If
+                            you
+                            have PayPal account, you can pay your order by your PayPal account.<br/>
+                            If you don&#39;t have PayPal account, it doesn&#39;t matter. You firstly charge your Paypal
+                            with
+                            you credit card or bank debit card , then also pay via PayPal.<br/>
+                            Payment can be submitted in any currency.&nbsp;<br/>
+                            Our PayPal account is: <b style="font-size: 18px;">carkeyunlock@gmail.com</b>
                             <div class="blank10px"></div>
-
+                            <input name="" type="image" class="ipt_img onestepcheckout-button" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
                         </div>
-                        <div class="dashed_line"></div>
-                        <div class="blank5px"></div>
-                        <div class="blank5px"></div>
-                        <label for="Western Union">
-                            <input name="PaymentMethod" type="radio" id="Western Union" value="Western Union" checked="checked" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
-                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
-                        </label>
-
-                        <div class="blank5px"></div>
-                        <div style="" class="pay_ex_a" id="area_pay_method_exp_2">
-                            <p><strong>First Name: Feihong<br>
-                                    Last Name : Zhong</strong><br>
-                                <strong>City: SHENZHEN</strong><br>
-                                <strong>Country:CHINA</strong><br>
-                                <strong>Postal Code:518112</strong><br>
-                                <strong>Mobile: +</strong><strong>0086-13995696053</strong><br>
-                                <strong>Tel: +86-755-28704781</strong><br>
-                                <strong>Fax:+86-755-28700303</strong></p>
-
-                            <p>
-                                Note: Please make sure leave the Order# in the remark section.<br>
-                                After you make the payment, please remember to Sign In "My Account" on our site, and submit the Western Union Money Transfer Control Number (MTCN) on the page of "Submit a Request Ticket". We will confirm your payment within 24 hours upon the receipt of the money.
-                            </p>
-
-                        </div>
-                        <div class="dashed_line"></div>
-                        <div class="blank5px"></div>
-
-
-                        <div class="blank5px"></div>
-                        <label for="MoneyGram">
-                            <input name="PaymentMethod" type="radio" id="MoneyGram" value="MoneyGram" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);">
-                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/MoneyGram.png'); ?>" alt="MoneyGram" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">MoneyGram</b>
-                        </label>
-
-                        <div class="blank5px"></div>
-                        <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_3">
-                            <div><strong>Name of Corporation: Sinoy Electronic Technology HK Limited<br>
-                                    Account:168-308187-838<br>
-                                    Bank name:HSBC HongKong<br>
-                                    Swift Code:HSBCHKHH<br>
-                                    BANK number:004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
-                                    Bank Address:BASEMENT L/G &amp; U/G 673 NATHAN ROAD,MONG KOK,KOWLOON,HONGKONG</strong></div>
-
-                            <p><strong>Sinoy Electronic Technology HK Limited</strong> is&nbsp;the designated bank and transfer the money to the designated account above. The money will arrive in our account in about 2-4business days.<br>
-                                <strong>Note: Please make sure leave the Order# in the remark section.</strong><br>
-                                After you make the payment, please remember to Sign In "My Account" on our site, and submit a notice about payment on the page of "Submit a Request Ttcket". We will confirm your payment within 24 hours upon the receipt of the money.</p>
-
-                        </div>
-                        <div class="dashed_line"></div>
-                        <div class="blank5px"></div>
                         <div class="clear"></div>
                     </div>
                     <?= Yii::$service->page->widget->render('flashmessage'); ?>
