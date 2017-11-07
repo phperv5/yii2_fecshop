@@ -92,18 +92,19 @@
                         </label>
                         <div class="blank5px"></div>
                         <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_2">
-                            <p><strong>First Name: Feihong<br>
-                                    Last Name : Zhong</strong><br>
+                            <p>
+                                <strong>First Name: PING<br>Last Name : Zhong</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
                                 <strong>Country:CHINA</strong><br>
                                 <strong>Postal Code:518112</strong><br>
                                 <strong>Mobile: +</strong><strong>0086-13995696053</strong><br>
                                 <strong>Tel: +86-755-28704781</strong><br>
-                                <strong>Fax:+86-755-28700303</strong></p>
-
+                                <strong>Fax:+86-755-28700303</strong>
+                            </p>
                             <p>
-                                Note: Please make sure leave the Order# in the remark section.<br>
-                                After you make the payment, please remember to Sign In "My Account" on our site, and submit the Western Union Money Transfer Control Number (MTCN) on the page of "Submit a Request Ticket". We will confirm your payment within 24 hours upon the receipt of the money.
+                                Note: for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
+                                When you pay it, send the billing full information to company email box <b style="font-size: 18px;">carkeyunlock@gmail.com</b>
+                                We will check it soon, and arrange your order as soon as possible.
                             </p>
 
                         </div>
@@ -117,16 +118,16 @@
                         </label>
                         <div class="blank5px"></div>
                         <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_3">
-                            <div><strong>Name of Corporation: Sinoy Electronic Technology HK Limited<br>
-                                    Account:168-308187-838<br>
-                                    Bank name:HSBC HongKong<br>
-                                    Swift Code:HSBCHKHH<br>
-                                    BANK number:004&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
-                                    Bank Address:BASEMENT L/G &amp; U/G 673 NATHAN ROAD,MONG KOK,KOWLOON,HONGKONG</strong></div>
-
-                            <p><strong>Sinoy Electronic Technology HK Limited</strong> is&nbsp;the designated bank and transfer the money to the designated account above. The money will arrive in our account in about 2-4business days.<br>
-                                <strong>Note: Please make sure leave the Order# in the remark section.</strong><br>
-                                After you make the payment, please remember to Sign In "My Account" on our site, and submit a notice about payment on the page of "Submit a Request Ttcket". We will confirm your payment within 24 hours upon the receipt of the money.</p>
+                            <div>
+                                <strong>First Name: PING<br>Last Name : YANG</strong><br>
+                                <strong>City: SHENZHEN</strong><br>
+                                <strong>Country:CHINA</strong><br>
+                                <strong>Postal Code:518109</strong><br>
+                                <strong>Tel: +86- 18617061230</strong><br>
+                            </div>
+                            <p>Note:for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
+                                When you pay it, send the billing full information to company email box carkeyunlock@gmail.com
+                                We will check it soon, and arrange your order as soon as possible.</p>
 
                         </div>
                         <div class="dashed_line"></div>
