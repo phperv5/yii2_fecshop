@@ -89,7 +89,6 @@
                         <label for="Western Union">
                             <input name="payment_method" type="radio" id="Western Union" value="WesternUnion"  onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/ico_western_union.gif'); ?>"   alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
-                            <input name="" type="submit" value="submit" class="ipt_img onestepcheckout-button" id="onestepcheckout-place-order">
                         </label>
                         <div class="blank5px"></div>
                         <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_2">
@@ -107,7 +106,7 @@
                                 When you pay it, send the billing full information to company email box <b style="font-size: 18px;">carkeyunlock@gmail.com</b>
                                 We will check it soon, and arrange your order as soon as possible.
                             </p>
-
+                            <input name="submit" type="image" value="Submit"  alt="" id="onestepcheckout-place-order">
                         </div>
                         <div class="dashed_line"></div>
                         <div class="blank5px"></div>
@@ -128,8 +127,9 @@
                             </div>
                             <p>Note:for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
                                 When you pay it, send the billing full information to company email box carkeyunlock@gmail.com
-                                We will check it soon, and arrange your order as soon as possible.</p>
-
+                                We will check it soon, and arrange your order as soon as possible.
+                            </p>
+                            <input name="submit" type="image" value="Submit"  alt="" id="onestepcheckout-place-order">
                         </div>
                         <div class="dashed_line"></div>
                         <div class="blank5px"></div>
