@@ -86,7 +86,7 @@
                         <div class="blank5px"></div>
                         <label for="Western Union">
                             <input name="PaymentMethod" type="radio" id="Western Union" value="Western Union" checked="checked" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
-                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
+                            <img src="<?= Yii::$service->image->getImgUrl('ico_western_union.gif'); ?>"   alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
                         </label>
 
                         <div class="blank5px"></div>
@@ -113,7 +113,7 @@
                         <div class="blank5px"></div>
                         <label for="MoneyGram">
                             <input name="PaymentMethod" type="radio" id="MoneyGram" value="MoneyGram" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);">
-                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/MoneyGram.png'); ?>" alt="MoneyGram" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">MoneyGram</b>
+                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/MoneyGram.png'); ?>" style="width: 60px;" alt="MoneyGram" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">MoneyGram</b>
                         </label>
 
                         <div class="blank5px"></div>
