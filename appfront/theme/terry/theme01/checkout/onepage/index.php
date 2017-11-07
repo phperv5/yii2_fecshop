@@ -70,7 +70,7 @@
                         <label for="PayPalECS">
                             <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
-                            <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
+                            <b class="px13 verdana">PayPal Express Checkout<span class=gray>the safer, easier way to pay.</span></b>
                         </label>
 
                         <div class="blank5px"></div>
@@ -170,7 +170,7 @@
                 // shipping
 
                 //payment
-                payment_method = $("#PayPalECS").val();
+                payment_method = $("[name='payment_method'] checked").val();
 
                 //alert(shipment_method);
                 if(!payment_method){

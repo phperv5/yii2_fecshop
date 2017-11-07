@@ -86,7 +86,7 @@ class Placeorder
                 // 得到支付跳转前的准备页面。
                 $innerTransaction->commit();
                 //paypal支付跳转
-                if($this->_shipping_method == 'paypal_standard'){
+                if($this->_payment_method == 'paypal_standard'){
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
                     Yii::$service->url->redirect($startUrl);
                 }
