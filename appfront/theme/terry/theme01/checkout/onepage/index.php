@@ -89,6 +89,7 @@
                         <label for="Western Union">
                             <input name="payment_method" type="radio" id="Western Union" value="Western Union"  onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/ico_western_union.gif'); ?>"   alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
+                            <input name="" type="submit" value="submit" class="ipt_img onestepcheckout-button" id="onestepcheckout-place-order">
                         </label>
                         <div class="blank5px"></div>
                         <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_2">
