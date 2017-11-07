@@ -68,7 +68,7 @@
                     <div class="scene">
                         <div class="blank5px"></div>
                         <label for="PayPalECS">
-                            <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" checked="checked" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);">
+                            <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
                             <b class="px13 verdana">PayPal Express Checkout　　<span class=gray>the safer, easier way to pay.</span></b>
                         </label>
@@ -80,7 +80,7 @@
                             Payment can be submitted in any currency.&nbsp;<br>
                             Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
                             <div class="blank10px"></div>
-
+                            <input name="" type="image" class="ipt_img onestepcheckout-button" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
                         </div>
                         <div class="dashed_line"></div>
                         <div class="blank5px"></div>
