@@ -63,7 +63,7 @@ class OnepageController extends AppfrontController
     /*
      * 订单显示
      */
-    public function actionOrdercheckout()
+    public function actionOrderdetail()
     {
         $data = $this->getBlock()->getLastData();
         return $this->render($this->action->id, $data);
