@@ -31,7 +31,7 @@ class Ordercheckout
 
     public function getLastData()
     {
-        echo 111;die;
+        echo 111;
     }
 
     /*
