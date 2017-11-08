@@ -50,6 +50,11 @@ class Orderdetail
         $order_id = '1';
         //订单详细
         $orderDetail = $this->getCustomerOrderInfo($order_id);
+
+        $address_select = [
+            ''
+        ];
+
         return [
             'payments' => '',
             'shippings' => '',

@@ -72,8 +72,103 @@ use fecshop\app\appfront\helper\Format;
                 </div>
                 <div class="clear"></div>
             </div>
+            <div class="p_order_step">
+                <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
+                    <span class="sn">2</span> &nbsp;Shipping Address
+                </div>
+                <div class="scene px13 line15em" id="ar_os_shippingAddress"
+                    <div class="float_right"><a href="javascript:void(0);" class="change"><b class="px11">Change</b></a></div>
+                       Receiver: <span class="cur_address"><?= $cart_info['customer_firstname'] ?>&nbsp;<?= $cart_info['customer_lastname'] ?>
+                        <br>
+                        <?= $cart_info['customer_address_street1'] ?><br>
+                        <?php if ($cart_info['customer_address_street2']): ?>
+                            <?= $cart_info['customer_address_street2'] ?><br>
+                        <?php endif; ?>
+                        <?= $cart_info['customer_address_city'] ?>, <?= $cart_info['customer_address_state'] ?>, <?= $cart_info['customer_address_country'] ?><br>
+                        <?= $cart_info['customer_address_zip'] ?><br>
+                         Phone: <?= $cart_info['customer_telephone'] ?><br></span>
+                    <div class="blank10px"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="p_order_step">
+                    <div class="o_stp_s_off"><span class="sn">3</span> &nbsp;Checkout and Payment Details</div>
+                    <div class="scene">
+                        <div class="blank5px"></div>
+                        <label for="PayPalECS">
+                            <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);">
+                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
+                            <b class="px13 verdana">PayPal Express Checkout<span class=gray>the safer, easier way to pay.</span></b>
+                        </label>
 
+                        <div class="blank5px"></div>
+                        <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_1">
+                            <img align="right" alt="" border="0" hspace="5" src="<?= Yii::$service->image->getImgUrl('images/pay/pay_remark_paypal.gif'); ?>">If you have PayPal account, you can pay your order by your PayPal account.<br>
+                            If you don't have PayPal account, it doesn't matter. You firstly charge your Paypal with you credit card or bank debit card , then also pay via PayPal.<br>
+                            Payment can be submitted in any currency.&nbsp;<br>
+                            Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
+                            <div class="blank10px"></div>
+                            <input name="" type="image" class="ipt_img onestepcheckout-button" src="<?= Yii::$service->image->getImgUrl('images/pay/pp-checkout-logo-large.png'); ?>" alt="Check out with PayPal" id="onestepcheckout-place-order">
+                        </div>
+                        <div class="dashed_line"></div>
+                        <div class="blank5px"></div>
+                        <div class="blank5px"></div>
 
+                        <label for="Western Union">
+                            <input name="payment_method" type="radio" id="Western Union" value="WesternUnion"  onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
+                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/ico_western_union.gif'); ?>"   alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
+                        </label>
+                        <div class="blank5px"></div>
+                        <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_2">
+                            <p>
+                                <strong>First Name: PING<br>Last Name : Zhong</strong><br>
+                                <strong>City: SHENZHEN</strong><br>
+                                <strong>Country:CHINA</strong><br>
+                                <strong>Postal Code:518112</strong><br>
+                                <strong>Mobile: +</strong><strong>0086-13995696053</strong><br>
+                                <strong>Tel: +86-755-28704781</strong><br>
+                                <strong>Fax:+86-755-28700303</strong>
+                            </p>
+                            <p>
+                                Note: for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
+                                When you pay it, send the billing full information to company email box <b style="font-size: 18px;">carkeyunlock@gmail.com</b>
+                                We will check it soon, and arrange your order as soon as possible.
+                            </p>
+                            <input name="submit" type="submit" value="Submit"  alt="" id="onestepcheckout-place-order">
+                        </div>
+                        <div class="dashed_line"></div>
+                        <div class="blank5px"></div>
+                        <div class="blank5px"></div>
+
+                        <label for="MoneyGram">
+                            <input name="payment_method" type="radio" id="MoneyGram" value="MoneyGram" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);">
+                            <img src="<?= Yii::$service->image->getImgUrl('images/pay/MoneyGram.jpg'); ?>" style="width: 96px;" alt="MoneyGram" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">MoneyGram</b>
+                        </label>
+                        <div class="blank5px"></div>
+                        <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_3">
+                            <div>
+                                <strong>First Name: PING<br>Last Name : YANG</strong><br>
+                                <strong>City: SHENZHEN</strong><br>
+                                <strong>Country:CHINA</strong><br>
+                                <strong>Postal Code:518109</strong><br>
+                                <strong>Tel: +86- 18617061230</strong><br>
+                            </div>
+                            <p>Note:for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
+                                When you pay it, send the billing full information to company email box carkeyunlock@gmail.com
+                                We will check it soon, and arrange your order as soon as possible.
+                            </p>
+                            <input name="submit" type="submit" value="Submit"  alt="" id="onestepcheckout-place-order">
+                        </div>
+                        <div class="dashed_line"></div>
+                        <div class="blank5px"></div>
+                        <div class="clear"></div>
+                    </div>
+                    <?= Yii::$service->page->widget->render('flashmessage'); ?>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+            <div class="exh_full_bottom"></div>
+            <div class="clear"></div>
         </div>
     </form>
     <script>
