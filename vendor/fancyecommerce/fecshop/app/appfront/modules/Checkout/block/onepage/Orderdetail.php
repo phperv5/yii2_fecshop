@@ -89,10 +89,11 @@ class Orderdetail
             // 检查前台传递的数据的完整
             if ($this->checkOrderInfoAndInit($post)) {
                 // 将购物车数据，生成订单。
+                Yii::$service->order->setSessionIncrementId($this->_orderInfo['increment_id']);
+                Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'],$this->_payment_method);
                 if ($this->_payment_method == 'paypal_standard') {
-                    Yii::$service->order->setSessionIncrementId($this->_orderInfo['increment_id']);
-                    Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'],$this->_payment_method);
-                    $startUrl = Yii::$service->payment->getStandardStartUrl();
+                    $startUrl = Yii::$service->payment->getStandardStartUrl($this->_payment_method);
+//                    echo $startUrl;die;
                     Yii::$service->url->redirect($startUrl);
                 }
             } else {
@@ -113,6 +114,7 @@ class Orderdetail
             return false;
         }
         $orderInfo = $this->getCustomerOrderInfo($order_id);
+
         if(!$orderInfo){
             Yii::$service->helper->errors->add('order is error');
 
