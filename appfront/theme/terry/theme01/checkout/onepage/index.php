@@ -39,8 +39,6 @@
                 </div>
                 <div class="clear"></div>
             </div>
-
-
             <div class="p_order_step">
                 <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
                     <span class="sn">2</span> &nbsp;Shipping Address
@@ -63,7 +61,8 @@
                     ?>
                     <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
                     <div class="clear"></div>
-                <div class="p_order_step">
+            </div>
+            <div class="p_order_step">
                     <div class="o_stp_s_off"><span class="sn">3</span> &nbsp;Checkout and Payment Details</div>
                     <div class="scene">
                         <div class="blank5px"></div>
@@ -138,8 +137,6 @@
                     <?= Yii::$service->page->widget->render('flashmessage'); ?>
                     <div class="clear"></div>
                 </div>
-
-            </div>
             <div class="exh_full_bottom"></div>
             <div class="clear"></div>
         </div>

@@ -76,7 +76,7 @@ use fecshop\app\appfront\helper\Format;
                 <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
                     <span class="sn">2</span> &nbsp;Shipping Address
                 </div>
-                <div class="scene px13 line15em" id="ar_os_shippingAddress"
+                <div class="scene px13 line15em" id="ar_os_shippingAddress">
                     <div class="float_right"><a href="javascript:void(0);" class="change"><b class="px11">Change</b></a></div>
                        Receiver: <span class="cur_address"><?= $cart_info['customer_firstname'] ?>&nbsp;<?= $cart_info['customer_lastname'] ?>
                         <br>
@@ -90,7 +90,9 @@ use fecshop\app\appfront\helper\Format;
                     <div class="blank10px"></div>
                 </div>
                 <div class="clear"></div>
-                <div class="p_order_step">
+
+            </div>
+            <div class="p_order_step">
                     <div class="o_stp_s_off"><span class="sn">3</span> &nbsp;Checkout and Payment Details</div>
                     <div class="scene">
                         <div class="blank5px"></div>
@@ -166,7 +168,6 @@ use fecshop\app\appfront\helper\Format;
                     <div class="clear"></div>
                 </div>
 
-            </div>
             <div class="exh_full_bottom"></div>
             <div class="clear"></div>
         </div>
