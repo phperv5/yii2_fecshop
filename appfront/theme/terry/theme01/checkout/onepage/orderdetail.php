@@ -28,9 +28,7 @@ use fecshop\app\appfront\helper\Format;
                             <td width="100">Qty.</td>
                             <td width="100">Subtotal</td>
                         </tr>
-                        <?php  $cart_info = $parentThis['cart_info']; var_dump($cart_info);?>
-                        <?php  $currency_info = $parentThis['currency_info'];   ?>
-                        <?php  if(is_array( $cart_info) && !empty( $cart_info)): ?>
+                        <?php  if(is_array($cart_info) && !empty($cart_info)): ?>
                             <?php  $products = $cart_info['products'];?>
                             <?php foreach($products as $product): ?>
                                 <tr class="tr_info">
