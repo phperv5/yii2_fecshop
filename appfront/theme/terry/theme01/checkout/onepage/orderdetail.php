@@ -77,7 +77,6 @@ use fecshop\app\appfront\helper\Format;
                     <span class="sn">2</span> &nbsp;Shipping Address
                 </div>
                 <div class="scene px13 line15em" id="ar_os_shippingAddress">
-                    <div class="float_right"><a href="javascript:void(0);" class="change"><b class="px11">Change</b></a></div>
                        Receiver: <span class="cur_address"><?= $cart_info['customer_firstname'] ?>&nbsp;<?= $cart_info['customer_lastname'] ?>
                         <br>
                         <?= $cart_info['customer_address_street1'] ?><br>
@@ -97,13 +96,13 @@ use fecshop\app\appfront\helper\Format;
                     <div class="scene">
                         <div class="blank5px"></div>
                         <label for="PayPalECS">
-                            <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);">
+                            <input name="payment_method" type="radio" id="PayPalECS" value="paypal_standard" <?php if($cart_info['payment_method'] == 'paypal_standard'):?> checked  <?php endif;?> onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/PayPal_mark_60x38.gif'); ?>" alt="PayPalECS" border="0" align="absmiddle"/>&nbsp;&nbsp;
                             <b class="px13 verdana">PayPal Express Checkout<span class=gray>the safer, easier way to pay.</span></b>
                         </label>
 
                         <div class="blank5px"></div>
-                        <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_1">
+                        <div <?php if($cart_info['payment_method'] == 'paypal_standard'): ?> style="display: none;" <?php endif;?> class="pay_ex_a" id="area_pay_method_exp_1">
                             <img align="right" alt="" border="0" hspace="5" src="<?= Yii::$service->image->getImgUrl('images/pay/pay_remark_paypal.gif'); ?>">If you have PayPal account, you can pay your order by your PayPal account.<br>
                             If you don't have PayPal account, it doesn't matter. You firstly charge your Paypal with you credit card or bank debit card , then also pay via PayPal.<br>
                             Payment can be submitted in any currency.&nbsp;<br>
@@ -116,11 +115,11 @@ use fecshop\app\appfront\helper\Format;
                         <div class="blank5px"></div>
 
                         <label for="Western Union">
-                            <input name="payment_method" type="radio" id="Western Union" value="WesternUnion"  onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
+                            <input name="payment_method" type="radio" id="Western Union" value="WesternUnion" <?php if($cart_info['payment_method'] == 'WesternUnion'): ?> checked <?php endif;?>  onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/ico_western_union.gif'); ?>"   alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">Western Union</b>
                         </label>
                         <div class="blank5px"></div>
-                        <div style="display: none;" class="pay_ex_a" id="area_pay_method_exp_2">
+                        <div <?php if($cart_info['payment_method'] == 'WesternUnion'): ?> style="display: none;" <?php endif;?> class="pay_ex_a" id="area_pay_method_exp_2">
                             <p>
                                 <strong>First Name: PING<br>Last Name : Zhong</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
@@ -142,11 +141,11 @@ use fecshop\app\appfront\helper\Format;
                         <div class="blank5px"></div>
 
                         <label for="MoneyGram">
-                            <input name="payment_method" type="radio" id="MoneyGram" value="MoneyGram" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);">
+                            <input name="payment_method" type="radio" id="MoneyGram" value="MoneyGram"  <?php if($cart_info['payment_method'] == 'MoneyGram'): ?> checked <?php endif;?> onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);">
                             <img src="<?= Yii::$service->image->getImgUrl('images/pay/MoneyGram.jpg'); ?>" style="width: 96px;" alt="MoneyGram" border="0" align="absmiddle">&nbsp;&nbsp;<b class="px13 verdana">MoneyGram</b>
                         </label>
                         <div class="blank5px"></div>
-                        <div style="display:none" class="pay_ex_a" id="area_pay_method_exp_3">
+                        <div <?php if($cart_info['payment_method'] == 'MoneyGram'): ?> style="display: none;" <?php endif;?> class="pay_ex_a" id="area_pay_method_exp_3">
                             <div>
                                 <strong>First Name: PING<br>Last Name : YANG</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
