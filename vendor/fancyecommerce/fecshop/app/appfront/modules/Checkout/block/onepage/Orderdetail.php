@@ -9,6 +9,7 @@
 
 namespace fecshop\app\appfront\modules\checkout\block\onepage;
 
+
 use Yii;
 
 /**
@@ -31,16 +32,34 @@ class Orderdetail
 
     public function getLastData()
     {
+        $customer_id = Yii::$app->user->identity['id'];
+        $filter = [
+            'numPerPage' => 50,
+            'pageNum' => 1,
+            'orderBy' => ['updated_at' => SORT_DESC],
+            'where' => [
+                ['customer_id' => $customer_id],
+            ],
+            'asArray' => true,
+        ];
+        $address_list = Yii::$service->customer->address->Coll($filter)['coll'];
+
+        //获取
+        $request_param = CRequest::param();
+        $order_id = $request_param['order_id'];
+        $order_id = '1';
+        //订单详细
+        $orderDetail = $this->getCustomerOrderInfo($order_id);
         return [
             'payments' => '',
             'shippings' => '',
-            'current_payment_method' =>'',
-            'cart_info' => '',
+            'current_payment_method' => '',
+            'cart_info' => $orderDetail['products'],
             'currency_info' => '',
             'address_view_file' => '',
             'cart_address' => '',
             'cart_address_id' => '',
-            'address_list' => '',
+            'address_list' => $address_list,
             'address_select' => '',
             'country_select' => '',
             'state_html' => '',
