@@ -31,7 +31,20 @@ class Orderdetail
 
     public function getLastData()
     {
-        echo 111;
+        return [
+            'payments' => '',
+            'shippings' => '',
+            'current_payment_method' =>'',
+            'cart_info' => '',
+            'currency_info' => '',
+            'address_view_file' => '',
+            'cart_address' => '',
+            'cart_address_id' => '',
+            'address_list' => '',
+            'address_select' => '',
+            'country_select' => '',
+            'state_html' => '',
+        ];
     }
 
     /*
