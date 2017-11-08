@@ -54,7 +54,7 @@ class Orderdetail
             'payments' => '',
             'shippings' => '',
             'current_payment_method' => '',
-            'cart_info' => $orderDetail['products'],
+            'cart_info' => $orderDetail,
             'currency_info' => '',
             'address_view_file' => '',
             'cart_address' => '',
