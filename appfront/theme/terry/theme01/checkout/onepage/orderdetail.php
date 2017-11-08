@@ -73,8 +73,13 @@ use fecshop\app\appfront\helper\Format;
                 <div class="clear"></div>
             </div>
             <div class="p_order_step">
+                <div class="o_stp_s_on" id="m_os_paymentMethod" onclick="javascript:AreaShowHide('ar_os_paymentMethod');OrderStepCSSswitch('m_os_paymentMethod');" style="cursor:pointer"><span class="sn">2</span> &nbsp;You Choosed Payment Method</div>
+                <div class="scene" id="ar_os_paymentMethod" style=""><b><?= $cart_info['payment_method'] ?></b></div>
+                <div class="clear"></div>
+            </div>
+            <div class="p_order_step">
                 <div class="o_stp_s_off" id="m_os_shippingAddress" onclick="javascript:AreaShowHide('ar_os_shippingAddress');OrderStepCSSswitch('m_os_shippingAddress');" style="cursor:pointer">
-                    <span class="sn">2</span> &nbsp;Shipping Address
+                    <span class="sn">3</span> &nbsp;Shipping Address
                 </div>
                 <div class="scene px13 line15em" id="ar_os_shippingAddress">
                        Receiver: <span class="cur_address"><?= $cart_info['customer_firstname'] ?>&nbsp;<?= $cart_info['customer_lastname'] ?>
