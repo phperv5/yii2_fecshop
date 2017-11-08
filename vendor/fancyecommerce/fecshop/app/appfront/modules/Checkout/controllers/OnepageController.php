@@ -65,7 +65,7 @@ class OnepageController extends AppfrontController
      */
     public function actionOrderdetail()
     {
-        $data = $this->getBlock()->getLastData();
+        $data = $this->getBlock('orderdetail')->getLastData();
         return $this->render($this->action->id, $data);
     }
 }
