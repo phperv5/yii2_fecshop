@@ -9,7 +9,7 @@
 
 namespace fecshop\app\appfront\modules\checkout\block\onepage;
 
-
+use fec\helpers\CRequest;
 use Yii;
 
 /**
