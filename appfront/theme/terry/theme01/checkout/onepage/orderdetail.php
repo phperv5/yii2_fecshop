@@ -65,7 +65,7 @@ use fecshop\app\appfront\helper\Format;
                                     <br>
                                     <b class="red px16">Total Sum:<?=  $currency_info['symbol'];  ?><?= Format::price($cart_info['grand_total']) ?></b>
                                     <div class="blank10px"></div>
-                                    <span class="px12">Ship to: <b class="blue px12"><?= $cart_info['shipping_country'] ?></b>.</span>
+                                    <span class="px12">Ship to: <b class="blue px12"><?= $cart_info['customer_address_country'] ?></b>.</span>
                             </tr>
                         <?php endif; ?>
                     </table>
