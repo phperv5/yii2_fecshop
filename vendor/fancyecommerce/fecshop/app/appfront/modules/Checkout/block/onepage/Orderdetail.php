@@ -66,6 +66,22 @@ class Orderdetail
         ];
     }
 
+    public function getCustomerOrderInfo($order_id)
+    {
+        if ($order_id) {
+            $order_info = Yii::$service->order->getOrderInfoById($order_id);
+            if (isset($order_info['customer_id']) && !empty($order_info['customer_id'])) {
+                $identity = Yii::$app->user->identity;
+                $customer_id = $identity->id;
+                if ($order_info['customer_id'] == $customer_id) {
+                    return $order_info;
+                }
+            }
+        }
+
+        return [];
+    }
+
     /*
      * zhuang edit 獲取默認地址
      */
