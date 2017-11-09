@@ -12,8 +12,6 @@ use fecshop\app\appfront\helper\Format;
         <div class="exh_full_main">
             <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No.<?= $cart_info['increment_id'] ?></span></h1>
             <div class="blank10px"></div>
-            <b class="red_dark px16">You placed an order on our site successfully! </b>
-            <div class="blank10px"></div>
             <span id="sRtnGetOrderFormStatus"></span>
             <div class="blank10px"></div>
             <div class="p_order_step">
@@ -73,7 +71,7 @@ use fecshop\app\appfront\helper\Format;
                 <div class="clear"></div>
             </div>
             <div class="p_order_step">
-                <div class="o_stp_s_on" id="m_os_paymentMethod" onclick="javascript:AreaShowHide('ar_os_paymentMethod');OrderStepCSSswitch('m_os_paymentMethod');" style="cursor:pointer"><span class="sn">2</span> &nbsp;You Choosed Payment Method</div>
+                <div class="o_stp_s_off" id="m_os_paymentMethod" onclick="javascript:AreaShowHide('ar_os_paymentMethod');OrderStepCSSswitch('m_os_paymentMethod');" style="cursor:pointer"><span class="sn">2</span> &nbsp;You Choosed Payment Method</div>
                 <div class="scene" id="ar_os_paymentMethod" style=""><b><?= $cart_info['payment_method'] ?></b></div>
                 <div class="clear"></div>
             </div>

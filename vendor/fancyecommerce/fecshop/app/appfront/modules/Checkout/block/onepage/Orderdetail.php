@@ -23,23 +23,14 @@ class Orderdetail
 
     public function getLastData()
     {
-        $customer_id = Yii::$app->user->identity['id'];
-        $filter = [
-            'numPerPage' => 50,
-            'pageNum' => 1,
-            'orderBy' => ['updated_at' => SORT_DESC],
-            'where' => [
-                ['customer_id' => $customer_id],
-            ],
-            'asArray' => true,
-        ];
-        $address_list = Yii::$service->customer->address->Coll($filter)['coll'];
-
         //获取
         $request_param = CRequest::param();
         $order_id = $request_param['order_id'];
         //订单详细
         $orderDetail = $this->getCustomerOrderInfo($order_id);
+        if (!$orderDetail) {
+            die('data error!');
+        }
 
         return [
             'payments' => '',
@@ -50,9 +41,6 @@ class Orderdetail
             'address_view_file' => '',
             'cart_address' => '',
             'cart_address_id' => '',
-            'address_list' => $address_list,
-            'address_select' => '',
-            'country_select' => '',
             'state_html' => '',
         ];
     }
@@ -92,7 +80,6 @@ class Orderdetail
                 Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'],$this->_payment_method);
                 if ($this->_payment_method == 'paypal_standard') {
                     $startUrl = Yii::$service->payment->getStandardStartUrl($this->_payment_method);
-//                    echo $startUrl;die;
                     Yii::$service->url->redirect($startUrl);
                 }
             } else {
@@ -107,14 +94,18 @@ class Orderdetail
     {
         $payment_method = isset($post['payment_method']) ? $post['payment_method'] : '';
         $order_id = isset($post['order_id']) ? $post['order_id'] : '';
-        if(!$order_id){
+        if (!$order_id) {
             Yii::$service->helper->errors->add('order is error');
 
             return false;
         }
         $orderInfo = $this->getCustomerOrderInfo($order_id);
+<<<<<<< HEAD
 
         if(!$orderInfo){
+=======
+        if (!$orderInfo) {
+>>>>>>> 1aab239b573c58a4bd2416bd7c48c6c1048ddab6
             Yii::$service->helper->errors->add('order is error');
 
             return false;
