@@ -101,12 +101,8 @@ class Orderdetail
             return false;
         }
         $orderInfo = $this->getCustomerOrderInfo($order_id);
-<<<<<<< HEAD
 
-        if(!$orderInfo){
-=======
         if (!$orderInfo) {
->>>>>>> 1aab239b573c58a4bd2416bd7c48c6c1048ddab6
             Yii::$service->helper->errors->add('order is error');
 
             return false;
