@@ -82,7 +82,7 @@
                 <dl>
                     <dt class="w100px">Shipping:</dt>
                     <dd class="w420px">
-                        <strong class="px14 green_dark">Free Shipping</strong>Express Shipping Service&nbsp;<br/>
+                        Express Shipping Service&nbsp;<br/>
                         <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span class="px10">See details &raquo;</span></a></span></dd>
                     <dt class="w100px">Weight:</dt>
                     <!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
