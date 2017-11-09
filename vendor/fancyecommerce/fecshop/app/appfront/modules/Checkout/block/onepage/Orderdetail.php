@@ -31,17 +31,7 @@ class Orderdetail
         if (!$orderDetail) {
             die('data error!');
         }
-        $customer_id = Yii::$app->user->identity['id'];
-        $filter = [
-            'numPerPage' => 50,
-            'pageNum' => 1,
-            'orderBy' => ['updated_at' => SORT_DESC],
-            'where' => [
-                ['customer_id' => $customer_id],
-            ],
-            'asArray' => true,
-        ];
-        $address_list = Yii::$service->customer->address->Coll($filter)['coll'];
+
         return [
             'payments' => '',
             'shippings' => '',
@@ -51,9 +41,6 @@ class Orderdetail
             'address_view_file' => '',
             'cart_address' => '',
             'cart_address_id' => '',
-            'address_list' => $address_list,
-            'address_select' => '',
-            'country_select' => '',
             'state_html' => '',
         ];
     }
