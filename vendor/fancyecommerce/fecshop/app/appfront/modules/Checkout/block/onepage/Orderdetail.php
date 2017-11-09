@@ -23,6 +23,14 @@ class Orderdetail
 
     public function getLastData()
     {
+        //获取
+        $request_param = CRequest::param();
+        $order_id = $request_param['order_id'];
+        //订单详细
+        $orderDetail = $this->getCustomerOrderInfo($order_id);
+        if (!$orderDetail) {
+            die('data error!');
+        }
         $customer_id = Yii::$app->user->identity['id'];
         $filter = [
             'numPerPage' => 50,
@@ -34,13 +42,6 @@ class Orderdetail
             'asArray' => true,
         ];
         $address_list = Yii::$service->customer->address->Coll($filter)['coll'];
-
-        //获取
-        $request_param = CRequest::param();
-        $order_id = $request_param['order_id'];
-        //订单详细
-        $orderDetail = $this->getCustomerOrderInfo($order_id);
-
         return [
             'payments' => '',
             'shippings' => '',
@@ -90,7 +91,7 @@ class Orderdetail
                 // 将购物车数据，生成订单。
                 if ($this->_payment_method == 'paypal_standard') {
                     Yii::$service->order->setSessionIncrementId($this->_orderInfo['increment_id']);
-                    Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'],$this->_payment_method);
+                    Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'], $this->_payment_method);
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
                     Yii::$service->url->redirect($startUrl);
                 }
@@ -106,13 +107,13 @@ class Orderdetail
     {
         $payment_method = isset($post['payment_method']) ? $post['payment_method'] : '';
         $order_id = isset($post['order_id']) ? $post['order_id'] : '';
-        if(!$order_id){
+        if (!$order_id) {
             Yii::$service->helper->errors->add('order is error');
 
             return false;
         }
         $orderInfo = $this->getCustomerOrderInfo($order_id);
-        if(!$orderInfo){
+        if (!$orderInfo) {
             Yii::$service->helper->errors->add('order is error');
 
             return false;
