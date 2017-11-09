@@ -28,6 +28,7 @@ class Orderdetail
         $order_id = $request_param['order_id'];
         //订单详细
         $orderDetail = $this->getCustomerOrderInfo($order_id);
+
         if (!$orderDetail) {
             die('data error!');
         }
