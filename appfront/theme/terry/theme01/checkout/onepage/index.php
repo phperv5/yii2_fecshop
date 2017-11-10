@@ -9,8 +9,6 @@
         <div class="exh_full_main">
 <!--            <h1>Check Out for Order:&nbsp;&nbsp;<span class="px14 black">Serial No. U2170826416376</span></h1>-->
             <div class="blank10px"></div>
-            <b class="red_dark px16">You placed an order on our site successfully! </b>
-            <div class="blank10px"></div>
             <span id="sRtnGetOrderFormStatus"></span>
             <div class="blank10px"></div>
             <div class="p_order_step">
