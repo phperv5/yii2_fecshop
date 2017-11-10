@@ -69,7 +69,6 @@ class Orderdetail
     public function paySave()
     {
         $post = Yii::$app->request->post();
-        var_dump($post);
         if (is_array($post) && !empty($post)) {
             /**
              * 对传递的数据，去除掉非法xss攻击部分内容（通过\Yii::$service->helper->htmlEncode()）.
@@ -82,8 +81,7 @@ class Orderdetail
                 if ($this->_payment_method == 'paypal_standard') {
                     Yii::$service->order->setSessionIncrementId($this->_orderInfo['increment_id']);
                     Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'], $this->_payment_method);
-                    $startUrl = Yii::$service->payment->getStandardStartUrl();
-                    var_dump($startUrl);
+                    $startUrl = Yii::$service->payment->getStandardStartUrl($this->_payment_method);
                     Yii::$service->url->redirect($startUrl);
                 }
             } else {
