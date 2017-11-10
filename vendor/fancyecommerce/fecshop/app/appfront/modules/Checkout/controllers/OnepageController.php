@@ -22,8 +22,7 @@ class OnepageController extends AppfrontController
 
     public function actionIndex()
     {
-        $guestOrder = Yii::$app->controller->module->params['guestOrder'];
-        if (!$guestOrder && Yii::$app->user->isGuest) {
+        if (Yii::$app->user->isGuest) {
             $checkoutOrderUrl = Yii::$service->url->getUrl('checkout/onepage/index');
             Yii::$service->customer->setLoginSuccessRedirectUrl($checkoutOrderUrl);
             return Yii::$service->url->redirectByUrlKey('customer/account/login');

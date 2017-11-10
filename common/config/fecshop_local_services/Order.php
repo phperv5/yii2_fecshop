@@ -9,7 +9,7 @@
  */
 return [
     'order' => [
-        'increment_id'        => date("Ymd").'00000000', // 订单的格式。
+        'increment_id'        => date("Ymd").'0000000', // 订单的格式。
         'requiredAddressAttr' => [ // 必填的订单字段。
             'first_name',
             'last_name',
