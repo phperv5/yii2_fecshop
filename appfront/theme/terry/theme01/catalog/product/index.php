@@ -2,7 +2,11 @@
 
 ?>
 <div class="main">
-    <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> - [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand Tool</a> - OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL</div><div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
+    <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> -
+        [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand
+            Tool</a> - OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL
+    </div>
+    <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
 
     <div class="ms_f_m">
@@ -32,9 +36,11 @@
                 </div>
                 <div class="pro_ch_bf_rate" id="pro_rate_51561">
                     <div class="pro_ch_bf_rate_bg">
-                        <div class="pro_ch_bf_rate_vw" style="width:<?= $reviw_rate_star_average/5*150 ?>px;"></div>
+                        <div class="pro_ch_bf_rate_vw" style="width:<?= $reviw_rate_star_average / 5 * 150 ?>px;"></div>
                     </div>
-                    <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/lists',['spu'=>$spu,'_id'=>$_id]); ?>" target="_blank"><?= $review_count ?> reviews.</a></div>
+                    <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a
+                                href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/lists', ['spu' => $spu, '_id' => $_id]); ?>"
+                                target="_blank"><?= $review_count ?> reviews.</a></div>
                 </div>
                 <div class="blank15px"></div>
                 <div class="pro_bo_m">
@@ -63,11 +69,15 @@
                     <div class="blank10px"></div>
                     <div class="blank10px"></div>
                     <div class="pro_bo_add_l">
-                        <input name="btn_buyitnow" type="button" class="btn_buyitnow goProductToCart" value="" title="Buy It Now"/>
+                        <input name="btn_buyitnow" type="button" class="btn_buyitnow goProductToCart" value=""
+                               title="Buy It Now"/>
                     </div>
                     <div class="pro_bo_add_m">
-                        <div id="flyItem" class="fly_item"><img src="<?= Yii::$service->product->image->getResize($image_thumbnails['main']['image'], [40, 40], false) ?>" width="40" height="40"></div>
-                        <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value="" title="Add to Cart"/>
+                        <div id="flyItem" class="fly_item"><img
+                                    src="<?= Yii::$service->product->image->getResize($image_thumbnails['main']['image'], [40, 40], false) ?>"
+                                    width="40" height="40"></div>
+                        <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value=""
+                               title="Add to Cart"/>
                     </div>
 
                     <div class="pro_bo_add_r">
@@ -83,12 +93,14 @@
                     <dt class="w100px">Shipping:</dt>
                     <dd class="w420px">
                         Express Shipping Service&nbsp;<br/>
-                        <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span class="px10">See details &raquo;</span></a></span></dd>
+                        <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a
+                                    href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span
+                                        class="px10">See details &raquo;</span></a></span></dd>
                     <dt class="w100px">Weight:</dt>
                     <!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
-                    <dd class="w420px"><?= $weight;?>KG</dd>
+                    <dd class="w420px"><?= $weight; ?>KG</dd>
                     <dt class="w100px">Package:</dt>
-                    <dd class="w420px"><?php if($package) echo $package;else echo 'none';?></span>
+                    <dd class="w420px"><?php if ($package) echo $package; else echo 'none'; ?></span>
                     </dd>
                     <dt class="w100px">Returns:</dt>
                     <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.
@@ -98,69 +110,84 @@
                 <div class="blank10px"></div>
                 <div class="dashed5px"></div>
                 <div class="blank5px"></div>
-<!--                <div class="pro_ch_bf_digg">-->
-<!--                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">-->
-<!--                            <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="blank5px"></div>-->
-<!--                <div class="dashed5px"></div>-->
-                <?php if($related_download_files): ?>
-                <div class="line18em"><b class="green_dark">Related Download Files:</b>&nbsp;
-                    <div style="padding-left:10px;overflow: hidden"> <?= $related_download_files;?></div>
-                </div>
-                <?php  endif;?>
+                <!--                <div class="pro_ch_bf_digg">-->
+                <!--                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">-->
+                <!--                            <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="blank5px"></div>-->
+                <!--                <div class="dashed5px"></div>-->
+                <?php if ($related_download_files): ?>
+                    <div class="line18em"><b class="green_dark">Related Download Files:</b>&nbsp;
+                        <div style="padding-left:10px;overflow: hidden"> <?= $related_download_files; ?></div>
+                    </div>
+                <?php endif; ?>
                 <div class="blank5px"></div>
                 <div class="pro_ch_bf_g_plusone">
                     <g:plusone></g:plusone>
                 </div>
                 <!--分享-->
                 <div class="pro_ch_bf_share">
-                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0776ba615dc47"></script>
+                    <script type="text/javascript"
+                            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0776ba615dc47"></script>
                     <div class="addthis_inline_share_toolbox"></div>
                 </div>
             </div>
         </div>
-        <div class="blank10px"></div><div class="blank10px"></div>
-                <?php # tier price 部分。
-                $buyAlsoBuyView = [
-                    'view' => 'catalog/product/index/buy_also_buy.php'
-                ];
-                $buyAlsoBuyParam = [
-                    'products' => $buy_also_buy,
-                ];
+        <div class="blank10px"></div>
+        <div class="blank10px"></div>
+        <?php # tier price 部分。
+        $buyAlsoBuyView = [
+            'view' => 'catalog/product/index/buy_also_buy.php'
+        ];
+        $buyAlsoBuyParam = [
+            'products' => $buy_also_buy,
+        ];
 
-                ?>
-                <?= Yii::$service->page->widget->render($buyAlsoBuyView, $buyAlsoBuyParam); ?>
+        ?>
+        <?= Yii::$service->page->widget->render($buyAlsoBuyView, $buyAlsoBuyParam); ?>
         <a name="Specifications"></a>
         <div class="blank10px" id="pro_ctab_star"></div>
         <div class="pro_ctab">
             <ul>
-                <li id="p_ab_mn_1" class="current" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,1,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>Product Details</span></li>
-                <?php if(!empty($video)):?>
-                <li id="p_ab_mn_2" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,2,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>Video</span></li>
+                <li id="p_ab_mn_1" class="current"
+                    onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,1,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
+                    <span>Product Details</span></li>
+                <?php if (!empty($video)): ?>
+                    <li id="p_ab_mn_2"
+                        onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,2,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
+                        <span>Video</span></li>
                 <?php endif; ?>
-                <?php if(!empty($tech_support)):?>
-                <li id="p_ab_mn_3" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,3,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', ''); ProTechService(8777,'p_ab_vw_xy_3');"><span>Tech Support</span></li>
+                <?php if (!empty($tech_support)): ?>
+                    <li id="p_ab_mn_3"
+                        onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,3,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', ''); ProTechService(8777,'p_ab_vw_xy_3');">
+                        <span>Tech Support</span></li>
                 <?php endif; ?>
-                <li id="p_ab_mn_4" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,4,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
+                <li id="p_ab_mn_4"
+                    onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,4,'current','');  GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
                     <span>Reviews<b id="num_pro_review_51561" class="red_dark"></b></span>
                 </li>
-                <li><span><a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/add',['spu'=>$spu,'_id'=>$_id]); ?>">Write a Comment</a></span></li>
-<!--                <li onclick="GotoScrollTop('1', 'na_pro_releated', 100, '', '', '');"><span>Related Products</span></li>-->
-                <li id="p_ab_mn_5" onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,5,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');"><span>After-sales Service</span></li>
-            </ul><div class="clear"></div>
+                <li>
+                    <span><a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/add', ['spu' => $spu, '_id' => $_id]); ?>">Write a Comment</a></span>
+                </li>
+                <!--                <li onclick="GotoScrollTop('1', 'na_pro_releated', 100, '', '', '');"><span>Related Products</span></li>-->
+                <li id="p_ab_mn_5"
+                    onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,5,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
+                    <span>After-sales Service</span></li>
+            </ul>
+            <div class="clear"></div>
         </div>
         <div id="p_ab_vw_1" style="display:">
             <div class="blank5px"></div>
             <div class="exh_m_cont">
                 <?= $description; ?>
- 	        </div>
+            </div>
         </div>
         <div id="p_ab_vw_2" style="display:none">
             <?= $video; ?>
         </div>
-        <div id="p_ab_vw_3" style="display:none"><a name="Service"></a><div class="blank60px"></div>
+        <div id="p_ab_vw_3" style="display:none"><a name="Service"></a>
+            <div class="blank60px"></div>
             <div id="p_ab_vw_xy_3">
                 <?= $tech_support; ?>
             </div>
@@ -176,17 +203,18 @@
                 ];
                 ?>
                 <?= Yii::$service->page->widget->render($reviewView, $reviewParam); ?>
-            </div></div>
+            </div>
+        </div>
         <div id="p_ab_vw_5" style="display:none">
             <a name="AftersalesService"></a>
             <div class="blank60px"></div>
             <?php # payment部分。
-            if(empty($payment)) {
+            if (empty($payment)) {
                 $paymentView = [
                     'view' => 'catalog/product/index/payment.php',
                 ];
                 echo Yii::$service->page->widget->render($paymentView);
-            }else{
+            } else {
                 echo $payment;
             }
             ?>
@@ -245,32 +273,31 @@
                     url: addToCartUrl,
                     success: function (data, textStatus) {
                         if (data.status == 'success') {
-				items_count = data.items_count;
-				//eleShopCart:到达的目的地#str_num_mycart
-				var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector("#str_num_mycart");
-				var myParabola = funParabola(eleFlyElement, eleShopCart, {
-					speed: 300, //抛物线速度
-					curvature: 0.001, //控制抛物线弧度
-					complete: function() {
-						eleFlyElement.style.visibility = "hidden";
-						$("#str_num_mycart").find(".verdana").html(items_count);
-					}
-				});
-							if (eleFlyElement && eleShopCart) {
-								[].slice.call(document.getElementsByClassName("addProductToCart")).forEach(function(button) {
+                            items_count = data.items_count;
+                            //eleShopCart:到达的目的地#str_num_mycart
+                            var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector("#str_num_mycart");
+                            var myParabola = funParabola(eleFlyElement, eleShopCart, {
+                                speed: 300, //抛物线速度
+                                curvature: 0.001, //控制抛物线弧度
+                                complete: function () {
+                                    eleFlyElement.style.visibility = "hidden";
+                                    $("#str_num_mycart").find(".verdana").html(items_count);
+                                }
+                            });
+                            if (eleFlyElement && eleShopCart) {
+                                [].slice.call(document.getElementsByClassName("addProductToCart")).forEach(function (button) {
+                                    // 滚动大小
+                                    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+                                        scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+                                    eleFlyElement.style.left = event.clientX + scrollLeft + "px";
+                                    eleFlyElement.style.top = event.clientY + scrollTop + "px";
+                                    eleFlyElement.style.visibility = "visible";
+                                    // 需要重定位
+                                    myParabola.position().move();
+                                    //});
+                                });
+                            }
 
-										// 滚动大小
-										var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
-										scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
-										eleFlyElement.style.left = event.clientX + scrollLeft + "px";
-										eleFlyElement.style.top = event.clientY + scrollTop + "px";
-										eleFlyElement.style.visibility = "visible";
-										// 需要重定位
-										myParabola.position().move();
-									//});
-								});
-							}
-                                
 
                         } else {
                             content = data.content;
@@ -323,7 +350,7 @@
                     url: addToCartUrl,
                     success: function (data, textStatus) {
                         if (data.status == 'success') {
-                            window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";                       
+                            window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";
                         } else {
                             content = data.content;
                             $(".addProductToCart").removeClass("dataUp");
