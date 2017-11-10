@@ -28,9 +28,9 @@ return [
         // 订单状态配置
         'payment_status_pending'                 => 'Unpaid',        // 未付款
         'payment_status_processing'              => 'Paid',    // 已付款
-        'payment_status_canceled'                => 'canceled',        // 已取消
-        'payment_status_complete'                => 'complete',        // 已完成
-        'payment_status_holded'                  => 'holded',        // hold
+        'payment_status_canceled'                => 'Canceled',        // 已取消
+        'payment_status_complete'                => 'Complete',        // 已完成
+        'payment_status_holded'                  => 'Holded',        // hold
         'payment_status_suspected_fraud'         => 'Shipped', //已发货
 
     ],
