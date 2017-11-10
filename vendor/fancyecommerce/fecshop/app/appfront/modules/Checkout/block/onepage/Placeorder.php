@@ -81,7 +81,6 @@ class Placeorder
                 Yii::$service->cart->clearCartProductAndCoupon();
                 // 得到当前的订单信息
                 $orderInfo = Yii::$service->order->getCurrentOrderInfo();
-                var_dump($orderInfo);die;
                 // 发送新订单邮件
                 //Yii::$service->email->order->sendCreateEmail($orderInfo);
                 // 得到支付跳转前的准备页面。
@@ -91,7 +90,7 @@ class Placeorder
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
                     Yii::$service->url->redirect($startUrl);
                 } else {
-                    return Yii::$service->url->redirectByUrlKey('checkout/onepage/orderdetail?order_id=');
+                    return Yii::$service->url->redirectByUrlKey('checkout/onepage/orderdetail?order_id='.$orderInfo['order_id']);
                 }
                 return true;
             } else {
