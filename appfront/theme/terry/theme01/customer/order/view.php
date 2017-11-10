@@ -33,7 +33,9 @@ use fecshop\app\appfront\helper\Format;
             <div class="blank15px"></div>
             <div class="p_sub_a">Order Information</div>
             <div class="p_con_a">
+                <?php if($order_info['order_status'] == 'pending'):?>
                 <div class="fr"><br /><input type="button" class="btn_submit btn_big" value="Pay for this Order" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage/orderdetail?order_id='.$order_id); ?>'" /></div>
+                <?php endif;?>
                 <span class="px11">Order Serial Number: </span><b class="blue_dark"><?=  $increment_id ?></b><br />
                 <span class="px11">Order Date: </span><span class="px11 verdana"><?=  date('Y-m-d H:i:s',$created_at); ?></span><br />
                 <span class="px11">Order Total Sum: </span><b class="red px14"><?= $currency_symbol ?><?= Format::price($grand_total); ?></b>
