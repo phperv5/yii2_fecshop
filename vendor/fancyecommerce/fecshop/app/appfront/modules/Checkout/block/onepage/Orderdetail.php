@@ -76,13 +76,14 @@ class Orderdetail
              */
             $post = \Yii::$service->helper->htmlEncode($post);
             // 检查前台传递的数据的完整
+            echo 2;
             if ($this->checkOrderInfoAndInit($post)) {
                 // 将购物车数据，生成订单。
                 if ($this->_payment_method == 'paypal_standard') {
                     Yii::$service->order->setSessionIncrementId($this->_orderInfo['increment_id']);
                     Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'], $this->_payment_method);
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
-                    echo $startUrl;
+                    var_dump($startUrl);
                     Yii::$service->url->redirect($startUrl);
                 }
             } else {
