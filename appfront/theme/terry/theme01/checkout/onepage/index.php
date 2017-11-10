@@ -103,7 +103,7 @@
                                 When you pay it, send the billing full information to company email box <b style="font-size: 18px;">carkeyunlock@gmail.com</b>
                                 We will check it soon, and arrange your order as soon as possible.
                             </p>
-                            <input name="submit" type="submit" value="Submit"  alt="" id="onestepcheckout-place-order">
+                            <input name="submit" type="submit" value="Submit"  alt="" id="onestepcheckout-place-order" style="cursor: pointer;">
                         </div>
                         <div class="dashed_line"></div>
                         <div class="blank5px"></div>
@@ -126,7 +126,7 @@
                                 When you pay it, send the billing full information to company email box carkeyunlock@gmail.com
                                 We will check it soon, and arrange your order as soon as possible.
                             </p>
-                            <input name="submit" type="submit" value="Submit"  alt="" id="onestepcheckout-place-order">
+                            <input name="submit" type="submit" value="Submit"  alt="" id="onestepcheckout-place-order" style="cursor: pointer;">
                         </div>
                         <div class="dashed_line"></div>
                         <div class="blank5px"></div>
