@@ -43,13 +43,6 @@ return [
             ],
             // 在账户中心左侧栏显示的菜单。
             'leftMenu'  => [
-                'View My Orders'             => 'customer/order',
-               // 'Account Dashboard'     => 'customer/account',
-                'Account Information'   => 'customer/editaccount',
-                'Manage Address Book'          => 'customer/address',
-                "My Products' Reviews"    => 'customer/productreview',
-                'My Favorite'           => 'customer/productfavorite',
-
             ],
 
             'contacts'    => [
