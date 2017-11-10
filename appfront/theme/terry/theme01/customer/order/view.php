@@ -91,21 +91,21 @@ use fecshop\app\appfront\helper\Format;
                 <div class="blank10px"></div>
             </div>
             <div class="blank15px"></div>
-            <div class="p_sub_a">Order Comments</div>
-            <div class="p_con_a">
-                <div class="blank10px"></div>
-                <div class="p_sub_a"><span class="red_dark"><img src="../images/ico/edit.gif" border="0" align="absmiddle" hspace="5" />Post a New Comment</span></div>
-                <div class="p_con_a">
-                    <form action="order_comment_app.asp" method="post" name="formAddOrderComment" onsubmit="return OrderCommentAddSim();">
-                        <textarea name="CommentMessage" cols="120" rows="6" id="CommentMessage" class="input"></textarea><span class="alert" id="txtOrderCommentMessage"></span>
-                        <div class="blank5px"></div>
-                        <input type="submit" name="Submit5" value="Submit" class="btn_submit">
-                        <input name="OrderID" type="hidden" value="416375">
-                        <input type="hidden" name="UserID" value="351041">
-                    </form>
-                </div>
-                <div class="clear"></div>
-            </div>
+<!--            <div class="p_sub_a">Order Comments</div>-->
+<!--            <div class="p_con_a">-->
+<!--                <div class="blank10px"></div>-->
+<!--                <div class="p_sub_a"><span class="red_dark"><img src="../images/ico/edit.gif" border="0" align="absmiddle" hspace="5" />Post a New Comment</span></div>-->
+<!--                <div class="p_con_a">-->
+<!--                    <form action="order_comment_app.asp" method="post" name="formAddOrderComment" onsubmit="return OrderCommentAddSim();">-->
+<!--                        <textarea name="CommentMessage" cols="120" rows="6" id="CommentMessage" class="input"></textarea><span class="alert" id="txtOrderCommentMessage"></span>-->
+<!--                        <div class="blank5px"></div>-->
+<!--                        <input type="submit" name="Submit5" value="Submit" class="btn_submit">-->
+<!--                        <input name="OrderID" type="hidden" value="416375">-->
+<!--                        <input type="hidden" name="UserID" value="351041">-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--                <div class="clear"></div>-->
+<!--            </div>-->
             <div class="clear"></div>
         </div>
         <div class="exh_bottom"></div>
