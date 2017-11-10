@@ -76,9 +76,10 @@ class Placeorder
         try {
             # 生成订单，扣除库存，但是，不清空购物车。
             $genarateStatus = Yii::$service->order->generateOrderByCart($this->_billing, $this->_shipping_method, $this->_payment_method, false);
+            var_dump($genarateStatus);die;
             if ($genarateStatus) {
                 //清除购物车
-                 Yii::$service->cart->clearCartProductAndCoupon();
+                Yii::$service->cart->clearCartProductAndCoupon();
                 // 得到当前的订单信息
                 //$orderInfo = Yii::$service->order->getCurrentOrderInfo();
                 // 发送新订单邮件
@@ -86,9 +87,11 @@ class Placeorder
                 // 得到支付跳转前的准备页面。
                 $innerTransaction->commit();
                 //paypal支付跳转
-                if($this->_payment_method == 'paypal_standard'){
+                if ($this->_payment_method == 'paypal_standard') {
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
                     Yii::$service->url->redirect($startUrl);
+                } else {
+                    return Yii::$service->url->redirectByUrlKey('checkout/onepage/orderdetail?order_id=');
                 }
                 return true;
             } else {
