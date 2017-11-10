@@ -82,6 +82,7 @@ class Orderdetail
                     Yii::$service->order->setSessionIncrementId($this->_orderInfo['increment_id']);
                     Yii::$service->order->UpdateOrderInfo($this->_orderInfo['increment_id'], $this->_payment_method);
                     $startUrl = Yii::$service->payment->getStandardStartUrl();
+                    echo $startUrl;
                     Yii::$service->url->redirect($startUrl);
                 }
             } else {
