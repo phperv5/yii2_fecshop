@@ -93,8 +93,8 @@
                                 <strong>First Name: PING<br>Last Name : YANG</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
                                 <strong>Country:CHINA</strong><br>
-                                <strong>Postal Code:518109</strong><br>
-                                <strong>Tel: +86- 18617061230</strong><br>
+                                <strong>Postal Code:518000</strong><br>
+                                <strong>Tel: +8618565823526</strong><br>
                             </p>
                             <p>
                                 Note: for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
@@ -117,8 +117,8 @@
                                 <strong>First Name: PING<br>Last Name : YANG</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
                                 <strong>Country:CHINA</strong><br>
-                                <strong>Postal Code:518109</strong><br>
-                                <strong>Tel: +86- 18617061230</strong><br>
+                                <strong>Postal Code:518000</strong><br>
+                                <strong>Tel: +8618565823526</strong><br>
                             </div>
                             <p>Note:for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
                                 When you pay it, send the billing full information to company email box carkeyunlock@gmail.com

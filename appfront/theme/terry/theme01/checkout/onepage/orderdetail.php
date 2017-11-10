@@ -124,13 +124,11 @@ use fecshop\app\appfront\helper\Format;
                         <div class="blank5px"></div>
                         <div <?php if($cart_info['payment_method'] != 'WesternUnion'): ?> style="display: none;" <?php endif;?> class="pay_ex_a" id="area_pay_method_exp_2">
                             <p>
-                                <strong>First Name: PING<br>Last Name : Zhong</strong><br>
+                                <strong>First Name: PING<br>Last Name : YANG</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
                                 <strong>Country:CHINA</strong><br>
-                                <strong>Postal Code:518112</strong><br>
-                                <strong>Mobile: +</strong><strong>0086-13995696053</strong><br>
-                                <strong>Tel: +86-755-28704781</strong><br>
-                                <strong>Fax:+86-755-28700303</strong>
+                                <strong>Postal Code:518000</strong><br>
+                                <strong>Tel: +8618565823526</strong><br>
                             </p>
                             <p>
                                 Note: for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
@@ -152,8 +150,8 @@ use fecshop\app\appfront\helper\Format;
                                 <strong>First Name: PING<br>Last Name : YANG</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
                                 <strong>Country:CHINA</strong><br>
-                                <strong>Postal Code:518109</strong><br>
-                                <strong>Tel: +86- 18617061230</strong><br>
+                                <strong>Postal Code:518000</strong><br>
+                                <strong>Tel: +8618565823526</strong><br>
                             </div>
                             <p>Note:for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
                                 When you pay it, send the billing full information to company email box carkeyunlock@gmail.com
