@@ -79,6 +79,7 @@ class Imageupload
 
         if (!$upload->upload()) {
             // 上传错误提示错误信息
+            var_dump($upload->getErrorMsg());die;
             exit(json_encode(['res' => 1, 'msg' => $upload->getErrorMsg()]));
         } else {
             // 上传成功 获取上传文件信息
@@ -86,7 +87,6 @@ class Imageupload
         }
         $filename = $fileInfo[0]['savepath'] . $fileInfo[0]['savename'];
         $errors = $this->productFileHandler($filename);
-        var_dump($errors);die;
         if (!$errors) {
             echo json_encode([
                 'statusCode' => '200',
