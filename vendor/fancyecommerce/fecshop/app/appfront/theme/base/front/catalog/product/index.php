@@ -127,10 +127,6 @@
 				<div class="clear"></div>
 			</div>
 
-            <!-- 附件上传-->
-            <div>附件上传</div>
-
-			
 			<div>
 				<?php # tier price 部分。
 					$buyAlsoBuyView = [

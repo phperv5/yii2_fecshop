@@ -206,6 +206,7 @@ function thissubmit(thiss){
 						<li><a href="javascript:;"><span>Price信息</span></a></li>
 						<li><a href="javascript:;"><span>Meta信息</span></a></li>
 						<li><a href="javascript:;"><span>描述信息</span></a></li>
+						<li><a href="javascript:;"><span>附件上传</span></a></li>
 						<li><a href="javascript:;"><span>图片信息</span></a></li>
 						<li><a href="javascript:;"><span>分类信息</span></a></li>
 						<li><a href="javascript:;"><span>属性组信息</span></a></li>
@@ -291,6 +292,9 @@ function thissubmit(thiss){
 				<div >
 					<?= $descriptionInfo ?>
 				</div>
+                <div >
+                    附件上传
+                </div>
 				<div >
 					<input type="hidden" name="image_main" class="image_main"  />
 					<input type="hidden" name="image_gallery" class="image_gallery"  />
