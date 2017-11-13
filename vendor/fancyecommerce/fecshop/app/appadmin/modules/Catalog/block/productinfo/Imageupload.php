@@ -71,7 +71,6 @@ class Imageupload
      */
     public function attachmentupload()
     {
-        $request_param = CRequest::param();
         $root_path = '../../';
         require $root_path . 'src/UploadFile.php';
         $file_path = Yii::$service->product->image->imgUrl('attachment/');
