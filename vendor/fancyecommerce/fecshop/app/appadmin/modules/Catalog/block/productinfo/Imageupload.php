@@ -86,6 +86,7 @@ class Imageupload
         }
         $filename = $fileInfo[0]['savepath'] . $fileInfo[0]['savename'];
         $errors = $this->productFileHandler($filename);
+        var_dump($errors);die;
         if (!$errors) {
             echo json_encode([
                 'statusCode' => '200',
