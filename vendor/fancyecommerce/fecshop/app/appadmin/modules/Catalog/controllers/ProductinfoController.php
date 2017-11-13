@@ -71,4 +71,11 @@ class ProductinfoController extends CatalogController
 
         return $this->render($this->action->id, $data);
     }
+
+    //上传附件
+    // catalog
+    public function actionAttachmentupload()
+    {
+        $this->getBlock()->attachmentupload();
+    }
 }

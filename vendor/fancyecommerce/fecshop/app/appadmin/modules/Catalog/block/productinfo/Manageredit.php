@@ -80,6 +80,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             'descriptionInfo'   => $this->getDescriptionInfo(),
             'attrGroup'         => $this->_attr->getProductAttrGroupSelect(),
             'primaryInfo'       => $this->getCurrentProductPrimay(),
+            'attachment_html'  => $this->getAttachmentHtml(),
             'img_html'          => $this->getImgHtml(),
             'custom_option'     => $this->_one['custom_option'],
             'product_id'        => $this->_one[Yii::$service->product->getPrimaryKey()],
@@ -250,6 +251,34 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         }
 
         return '';
+    }
+    public function getAttachmentHtml()
+    {
+        if (isset($this->_one['attachment']) && !empty($this->_one['attachment'])) {
+            $image = $this->_one['image']['main'];
+        }
+
+        $str = '<div><table class="list productimg" width="100%" >
+				<thead>
+					<tr>
+						<td>文件名</td>
+                        <td>删除</td>
+					</tr>
+				</thead><tbody>';
+
+        if (isset($this->_one['attachment']) && !empty($this->_one['attachment'])) {
+            $i = 1;
+            foreach ($this->_one['attachment'] as $gallery) {
+                $str .= '<tr class="p_img" rel="'.$i.'" style="border-bottom:1px solid #ccc;">
+									<td style="width:120px;text-align:center;"><img  rel="'.$gallery.'" style="width:100px;height:100px;" src="'.Yii::$service->product->image->getUrl('attachment/'.$gallery).'"></td>
+									<td style="padding:0 0 0 20px;"><a class="delete_img btnDel" href="javascript:void(0)">删除</a></td>
+								</tr>';
+            }
+            $i++;
+        }
+
+        $str .= '</tbody></table></div>';
+        return $str;
     }
 
     public function getImgHtml()

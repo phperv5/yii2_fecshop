@@ -25,6 +25,8 @@ class UploadFile
     public $uploadReplace = false;
     //文件上传信息
     private $uploadFileInfo;
+    //是否换名
+    private $changeName = true;
 
     /**
      * 架构函数
@@ -239,7 +241,11 @@ class UploadFile
      */
     private function getSaveName($file)
     {
-        $saveName = md5(uniqid()) . '.' . $file['extension'];
+        if ($this->changeName) {
+            $saveName = md5(uniqid()) . '.' . $file['extension'];
+        } else {
+            $saveName = $file['name'];
+        }
         return $saveName;
     }
 
