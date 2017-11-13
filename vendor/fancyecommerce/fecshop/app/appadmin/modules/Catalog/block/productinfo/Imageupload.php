@@ -74,7 +74,7 @@ class Imageupload
         $root_path = '../../';
         require $root_path . 'src/UploadFile.php';
         $file_path = Yii::$service->image->getImgDir('attachment');
-        echo Yii::$service->image->getImgUrl('attachment');die;
+        echo $file_path;die;
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
 
