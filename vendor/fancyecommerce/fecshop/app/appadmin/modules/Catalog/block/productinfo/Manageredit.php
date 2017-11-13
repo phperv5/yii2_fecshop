@@ -258,7 +258,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             $image = $this->_one['image']['main'];
         }
 
-        $str = '<div><table class="list productimg" width="100%" >
+        $str = '<div><table class="list productattach" width="100%" >
 				<thead>
 					<tr>
 						<td>文件名</td>

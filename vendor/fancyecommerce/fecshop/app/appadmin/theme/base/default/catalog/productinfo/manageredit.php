@@ -348,7 +348,7 @@ use fecadmin\models\AdminRole;
 
                                 //创建FormData对象
                                 var thisindex = 0;
-                                jQuery(".productimg tbody tr").each(function () {
+                                jQuery(".productattach tbody tr").each(function () {
                                     rel = parseInt(jQuery(this).attr("rel"));
                                     //alert(rel);
                                     if (rel > thisindex) {
@@ -368,7 +368,7 @@ use fecadmin\models\AdminRole;
 
 
                                 $.ajax({
-                                    url: '<?= CUrl::getUrl('catalog/productinfo/imageupload')  ?>',
+                                    url: '<?= CUrl::getUrl('catalog/productinfo/attachmentupload')  ?>',
                                     type: 'POST',
                                     data: data,
                                     async: false,
@@ -385,9 +385,7 @@ use fecadmin\models\AdminRole;
                                         //else $("#feedback").children('img').eq(0).before(data.replace(/&lt;/g,'<').replace(/&gt;/g,'>'));
                                         //	alert(data.return_status);
                                         if (data.return_status == "success") {
-                                            //	alert("success");
-                                            jQuery(".productimg tbody ").append(data.img_str);
-                                            //alert(data.img_str);
+                                            jQuery(".productattach tbody ").append(data.img_str);
                                         }
                                         //$(".loading").hide();	//加载成功移除加载图片
                                     },
