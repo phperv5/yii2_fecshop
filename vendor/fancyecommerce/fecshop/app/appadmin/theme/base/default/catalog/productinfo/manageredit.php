@@ -332,7 +332,7 @@ use fecadmin\models\AdminRole;
                     <?= $descriptionInfo ?>
                 </div>
                 <div>
-                    <button style="" onclick="getElementById('inputfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>附件上传</span></span></span></button>
+                    <button style="" onclick="getElementById('attachfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>附件上传</span></span></span></button>
                     <input type="file" multiple="multiple" id="attachfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
                     <script>
                         jQuery(document).ready(function () {
