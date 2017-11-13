@@ -73,13 +73,13 @@ class Imageupload
     {
         $root_path = '../../';
         require $root_path . 'src/UploadFile.php';
-        $file_path = Yii::$service->image->getImgUrl('attachment/');
+        $file_path = Yii::$service->image->getImgUrl('attachment');
+        echo Yii::$service->image->getImgUrl('attachment');die;
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
 
         if (!$upload->upload()) {
             // 上传错误提示错误信息
-            var_dump($upload->getErrorMsg());die;
             exit(json_encode(['res' => 1, 'msg' => $upload->getErrorMsg()]));
         } else {
             // 上传成功 获取上传文件信息
