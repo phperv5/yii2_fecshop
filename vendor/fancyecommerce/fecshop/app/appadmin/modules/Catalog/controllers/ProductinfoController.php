@@ -76,6 +76,6 @@ class ProductinfoController extends CatalogController
     // catalog
     public function actionAttachmentupload()
     {
-        $this->getBlock()->attachmentupload();
+        $this->getBlock('imageupload')->attachmentupload();
     }
 }
