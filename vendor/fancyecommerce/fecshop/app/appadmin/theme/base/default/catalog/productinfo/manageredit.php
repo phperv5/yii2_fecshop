@@ -333,7 +333,7 @@ use fecadmin\models\AdminRole;
                 </div>
                 <div>
                     <button style="" onclick="getElementById('inputfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>附件上传</span></span></span></button>
-                    <input type="file" multiple="multiple" id="inputfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
+                    <input type="file" multiple="multiple" id="attachfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
                     <script>
                         jQuery(document).ready(function () {
                             jQuery("body").on('click', ".delete_img", function () {
@@ -344,7 +344,7 @@ use fecadmin\models\AdminRole;
                             //});
 
                             //响应文件添加成功事件
-                            $("#inputfile").change(function () {
+                            $("#attachfile").change(function () {
 
                                 //创建FormData对象
                                 var thisindex = 0;
