@@ -126,7 +126,10 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-			
+
+            <!-- 附件上传-->
+            <div>附件上传</div>
+
 			
 			<div>
 				<?php # tier price 部分。
@@ -193,15 +196,8 @@
 							
 						?>
 						<?= Yii::$service->page->widget->render($paymentView); ?>
-					
-					
-						
 					</div>  
-					<!--					
-					<div class="text-wholesale" style="width:100%;height:500px;background:yellow;text-align:center;">
-						
-					</div>  
-					-->
+
 				</div> 
 			</div>
 		</div>
