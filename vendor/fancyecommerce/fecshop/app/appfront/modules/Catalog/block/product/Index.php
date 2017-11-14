@@ -64,10 +64,11 @@ class Index
         $groupAttr = Yii::$service->product->getGroupAttr($this->_product['attr_group']);
         $groupAttrArr = $this->getGroupAttrArr($groupAttr);
         //附件处理
+        $this->_product['attach'] = [];
         if (!empty($this->_product['attachment'])) {
             foreach ($this->_product['attachment'] as $k => $v) {
-                $this->_product['attachment'][$k]['name'] = $v;
-                $this->_product['attachment'][$k]['path'] = Yii::$service->image->getImgUrl('attachment/'.$v);
+                $this->_product['attach'][$k]['name'] = $v;
+                $this->_product['attach'][$k]['path'] = Yii::$service->image->getImgUrl('attachment/'.$v);
             }
         }
         var_dump($this->_product['attachment']);
@@ -100,7 +101,7 @@ class Index
             'tech_support' => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
             'payment' => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
             'related_download_files' => Yii::$service->store->getStoreAttrVal($this->_product['related_download_files'], 'related_download_files'),
-            'attachment' => $this->_product['attachment'],
+            'attachment' => $this->_product['attach'],
         ];
     }
 
