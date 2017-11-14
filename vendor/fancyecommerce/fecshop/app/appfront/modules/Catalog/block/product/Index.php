@@ -71,7 +71,7 @@ class Index
                 $this->_product['attach'][$k]['path'] = Yii::$service->image->getImgUrl('attachment/'.$v);
             }
         }
-        var_dump($this->_product['attachment']);
+        var_dump($this->_product['attach']);
         return [
             'groupAttrArr' => $groupAttrArr,
             'name' => Yii::$service->store->getStoreAttrVal($this->_product['name'], 'name'),
