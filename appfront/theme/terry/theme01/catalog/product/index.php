@@ -117,9 +117,11 @@
                 <!--                </div>-->
                 <!--                <div class="blank5px"></div>-->
                 <!--                <div class="dashed5px"></div>-->
-                <?php if ($related_download_files): ?>
+                <?php if (!empty($attachment)): ?>
                     <div class="line18em"><b class="green_dark">Related Download Files:</b>&nbsp;
-                        <div style="padding-left:10px;overflow: hidden"> <?= $related_download_files; ?></div>
+                        <?php foreach($attachment as $attach):?>
+                        <div style="padding-left:10px;overflow: hidden"> <?= $attach ?></div>
+                        <?php endforeach;?>
                     </div>
                 <?php endif; ?>
                 <div class="blank5px"></div>

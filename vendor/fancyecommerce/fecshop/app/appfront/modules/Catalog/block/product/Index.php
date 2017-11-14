@@ -63,6 +63,12 @@ class Index
         $this->filterProductImg($this->_product['image']);
         $groupAttr = Yii::$service->product->getGroupAttr($this->_product['attr_group']);
         $groupAttrArr = $this->getGroupAttrArr($groupAttr);
+        //附件处理
+        if (!empty($this->_product['attachment'])) {
+            foreach ($this->_product['attachment'] as $k => $v) {
+                $this->_product['attachment'][$k] = Yii::$service->image->getImgUrl('attachment/'.$v);
+            }
+        }
         return [
             'groupAttrArr' => $groupAttrArr,
             'name' => Yii::$service->store->getStoreAttrVal($this->_product['name'], 'name'),
@@ -92,6 +98,7 @@ class Index
             'tech_support' => Yii::$service->store->getStoreAttrVal($this->_product['tech_support'], 'tech_support'),
             'payment' => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
             'related_download_files' => Yii::$service->store->getStoreAttrVal($this->_product['related_download_files'], 'related_download_files'),
+            'attachment' => $this->_product['attachment'],
         ];
     }
 
@@ -495,7 +502,7 @@ class Index
                 $products = Yii::$service->category->product->convertToCategoryInfo($products);
             }
         } elseif (!empty($category_id)) {
-            $filter['where'] =['in','category',$category_id];
+            $filter['where'] = ['in', 'category', $category_id];
             $products = Yii::$service->product->getRelateProduct($filter, $limit);
         }
         return $products;
