@@ -26,7 +26,7 @@ class UploadFile
     //文件上传信息
     private $uploadFileInfo;
     //是否换名
-    private $changeName = true;
+    public $changeName = true;
 
     /**
      * 架构函数

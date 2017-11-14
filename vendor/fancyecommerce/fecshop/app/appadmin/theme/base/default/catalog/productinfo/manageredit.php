@@ -360,7 +360,7 @@ use fecadmin\models\AdminRole;
                                 data.append('thisindex', thisindex);
 
                                 //为FormData对象添加数据
-                                $.each($('#inputfile')[0].files, function (i, file) {
+                                $.each($('#attachfile')[0].files, function (i, file) {
                                     data.append('upload_file' + i, file);
                                 });
                                 //$(".loading").show();	//显示加载图片
