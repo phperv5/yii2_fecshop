@@ -334,6 +334,7 @@ use fecadmin\models\AdminRole;
                 <div>
                     <button style="" onclick="getElementById('attachfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>附件上传</span></span></span></button>
                     <input type="file" multiple="multiple" id="attachfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
+                    <?= $attachment_html ?>
                     <script>
                         jQuery(document).ready(function () {
                             jQuery("body").on('click', ".delete_img", function () {

@@ -254,10 +254,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     }
     public function getAttachmentHtml()
     {
-        if (isset($this->_one['attachment']) && !empty($this->_one['attachment'])) {
-            $image = $this->_one['image']['main'];
-        }
-
         $str = '<div><table class="list productattach" width="100%" >
 				<thead>
 					<tr>
