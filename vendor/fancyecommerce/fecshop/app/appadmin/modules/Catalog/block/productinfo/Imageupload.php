@@ -79,7 +79,7 @@ class Imageupload
         $upload->changeName = false;
         if (!$upload->upload()) {
             // 上传错误提示错误信息
-            exit(json_encode(['res' => 1, 'msg' => $upload->getErrorMsg()]));
+            exit(json_encode(['return_status' => 'failure', 'msg' => $upload->getErrorMsg()]));
         } else {
             // 上传成功 获取上传文件信息
             $fileInfo = $upload->getUploadFileInfo();

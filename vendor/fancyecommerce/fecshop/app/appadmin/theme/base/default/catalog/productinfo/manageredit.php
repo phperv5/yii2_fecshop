@@ -395,8 +395,9 @@ use fecadmin\models\AdminRole;
                                         //	alert(data.return_status);
                                         if (data.return_status == "success") {
                                             jQuery(".productattach tbody ").append(data.img_str);
+                                        }else{
+                                            alert(data.msg);
                                         }
-                                        //$(".loading").hide();	//加载成功移除加载图片
                                     },
                                     error: function () {
                                         alert('上传出错');
