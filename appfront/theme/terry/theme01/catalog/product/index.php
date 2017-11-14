@@ -119,9 +119,11 @@
                 <!--                <div class="dashed5px"></div>-->
                 <?php if (!empty($attachment)): ?>
                     <div class="line18em"><b class="green_dark">Related Download Files:</b>&nbsp;
+                        <div style="padding-left:10px;overflow: hidden">
                         <?php foreach($attachment as $attach):?>
-                        <div style="padding-left:10px;overflow: hidden"> <?= $attach ?></div>
+                            <br>&nbsp;&nbsp;<a href="<?= $attach['path'] ?>" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5"><?= $attach['name'] ?></b></a>&nbsp;&nbsp;
                         <?php endforeach;?>
+                        </div>
                     </div>
                 <?php endif; ?>
                 <div class="blank5px"></div>

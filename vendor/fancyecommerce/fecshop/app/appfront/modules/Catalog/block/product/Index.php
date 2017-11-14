@@ -66,7 +66,8 @@ class Index
         //附件处理
         if (!empty($this->_product['attachment'])) {
             foreach ($this->_product['attachment'] as $k => $v) {
-                $this->_product['attachment'][$k] = Yii::$service->image->getImgUrl('attachment/'.$v);
+                $this->_product['attachment'][$k]['name'] = $v;
+                $this->_product['attachment'][$k]['path'] = Yii::$service->image->getImgUrl('attachment/'.$v);
             }
         }
         return [
