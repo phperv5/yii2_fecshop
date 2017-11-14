@@ -123,6 +123,13 @@
                         <?php endforeach;?>
                         </div>
                     </div>
+                    <div class="line18em"><b class="green_dark">Related Download Files:</b>
+                        <?php foreach($attachment as $attach):?>
+                        <br>&nbsp;&nbsp;<a href="<?= $attach['path'];?>" target="_blank"><b><img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif') ?>" align="absmiddle" border="0" hspace="5"><?= $attach['name'];?></b></a>
+                        </div>
+                    <?php endforeach;?>
+                    <div class="blank5px"></div>
+                    <div class="dashed5px"></div>
                 <?php endif; ?>
                 <div class="blank5px"></div>
                 <div class="pro_ch_bf_g_plusone">
