@@ -612,7 +612,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          * 附件
          */
         $attachment = json_decode(CRequest::param('attachment'),true);
-        var_dump($attachment);die;
+        $this->_param['attachment'] = $attachment;
     }
 
     // 批量删除
