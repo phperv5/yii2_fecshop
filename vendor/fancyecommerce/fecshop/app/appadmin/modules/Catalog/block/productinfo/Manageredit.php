@@ -442,6 +442,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     protected function initParamType()
     {
+        var_dump($_POST);
         $request_param = CRequest::param();
         $this->_param = $request_param[$this->_editFormData];
         $this->_param['attr_group'] = CRequest::param('attr_group');
