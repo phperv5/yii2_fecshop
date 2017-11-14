@@ -605,6 +605,13 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         }
         $tier_price_arr = \fec\helpers\CFunc::array_sort($tier_price_arr, 'qty', 'asc');
         $this->_param['tier_price'] = $tier_price_arr;
+
+
+        /*
+         * zhuang
+         * 附件
+         */
+
     }
 
     // 批量删除

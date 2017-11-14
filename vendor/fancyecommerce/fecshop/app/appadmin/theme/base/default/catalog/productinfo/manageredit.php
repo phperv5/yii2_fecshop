@@ -224,7 +224,14 @@ use fecadmin\models\AdminRole;
         });
         //alert(tier_price_str);
         jQuery(".tier_price_input").val(tier_price_str);
-        //alert($(".tier_price_input").val());
+
+        //附件
+        var attachment  = [];
+        $('.productattach .p_img').each(function () {
+            var _v = $(this).attr('rel');
+            attachment.push(_v);
+        });
+        $("[name='attachment']").val(JSON.stringify(attachment));
         return validateCallback(thiss, dialogAjaxDoneCloseAndReflush);
     }
 </script>
@@ -332,9 +339,10 @@ use fecadmin\models\AdminRole;
                     <?= $descriptionInfo ?>
                 </div>
                 <div>
+                    <input type="hidden" name="attachment"/>
+                    <?= $attachment_html ?>
                     <button style="" onclick="getElementById('attachfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>附件上传</span></span></span></button>
                     <input type="file" multiple="multiple" id="attachfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
-                    <?= $attachment_html ?>
                     <script>
                         jQuery(document).ready(function () {
                             jQuery("body").on('click', ".delete_img", function () {
