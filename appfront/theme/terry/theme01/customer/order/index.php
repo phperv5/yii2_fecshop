@@ -23,7 +23,6 @@
                     <td>Shipping Number</td>
                     <td>Delivery Remark</td>
                     <td>Order State</td>
-                    <td>Last update</td>
                 </tr>
                 <?php  if(is_array($order_list) && !empty($order_list)):  ?>
                     <?php foreach($order_list as $order):
@@ -39,7 +38,6 @@
                     <td class="px11 gray"><?= $order['shipping_number'] ?></td>
                     <td class="px11 gray"><?= $order['delivery_remark'] ?></td>
                     <td><font color=#333><?= Yii::$service->page->translate->__($order['order_status']); ?></font></td>
-                    <td class="px11 gray"><?= date('Y-m-d H:i:s',$order['updated_at']) ?></td>
                 </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>
