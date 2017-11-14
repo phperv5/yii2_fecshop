@@ -17,8 +17,12 @@
                 <tr class="tr_head">
                     <td>Order No.</td>
                     <td>Total Sum</td>
-                    <td>Date</td>
-                    <td>Status(Last)</td>
+                    <td>Payment Type</td>
+                    <td>Order Date</td>
+                    <td>Shipped Method</td>
+                    <td>Shipping Number</td>
+                    <td>Delivery Remark</td>
+                    <td>Order State</td>
                     <td>Last update</td>
                 </tr>
                 <?php  if(is_array($order_list) && !empty($order_list)):  ?>
@@ -29,7 +33,11 @@
                 <tr class="tr_info">
                     <td class="px13 verdana"><a href="<?=  Yii::$service->url->getUrl('customer/order/view',['order_id' => $order['order_id']]);?>"><b><?= $order['increment_id'] ?></b></a></td>
                     <td><?= $symbol ?><?= $order['grand_total'] ?></td>
+                    <td><?= $order['payment_method'] ?></td>
                     <td class="px11 gray"><?= date('Y-m-d H:i:s',$order['created_at']) ?></td>
+                    <td class="px11 gray"><?= $order['shipped_method'] ?></td>
+                    <td class="px11 gray"><?= $order['shipping_number'] ?></td>
+                    <td class="px11 gray"><?= $order['delivery_remark'] ?></td>
                     <td><font color=#333><?= Yii::$service->page->translate->__($order['order_status']); ?></font></td>
                     <td class="px11 gray"><?= date('Y-m-d H:i:s',$order['updated_at']) ?></td>
                 </tr>
