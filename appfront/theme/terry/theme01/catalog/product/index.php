@@ -2,9 +2,7 @@
 
 ?>
 <div class="main">
-    <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> -
-        [<a href="/wholesale/brand-obdstar/">OBDSTAR</a>] - <a href="/wholesale/original-brand-tool/">Original Brand
-            Tool</a> - OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL
+    <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> - <?= $name; ?>
     </div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
@@ -121,7 +119,7 @@
                     <div class="line18em"><b class="green_dark">Related Download Files:</b>&nbsp;
                         <div style="padding-left:10px;overflow: hidden">
                         <?php foreach($attachment as $attach):?>
-                            <br>&nbsp;&nbsp;<a href="<?= $attach['path'] ?>" target="_blank"><b><img src="/images/ico/download.gif" align="absmiddle" border="0" hspace="5"><?= $attach['name'] ?></b></a>&nbsp;&nbsp;
+                            <a href="<?= $attach['path'] ?>" target="_blank"><b><img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif') ?>" align="absmiddle" border="0" hspace="5"><?= $attach['name'] ?></b></a><br>&nbsp;&nbsp;
                         <?php endforeach;?>
                         </div>
                     </div>
@@ -132,8 +130,7 @@
                 </div>
                 <!--分享-->
                 <div class="pro_ch_bf_share">
-                    <script type="text/javascript"
-                            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0776ba615dc47"></script>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0776ba615dc47"></script>
                     <div class="addthis_inline_share_toolbox"></div>
                 </div>
             </div>
