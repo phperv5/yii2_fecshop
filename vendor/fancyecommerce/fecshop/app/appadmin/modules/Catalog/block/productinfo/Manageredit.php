@@ -442,7 +442,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     protected function initParamType()
     {
-        var_dump($_POST);
         $request_param = CRequest::param();
         $this->_param = $request_param[$this->_editFormData];
         $this->_param['attr_group'] = CRequest::param('attr_group');
@@ -612,7 +611,8 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
          * zhuang
          * 附件
          */
-
+        $attachment = json_decode(CRequest::param('attachment'),true);
+        var_dump($attachment);die;
     }
 
     // 批量删除
