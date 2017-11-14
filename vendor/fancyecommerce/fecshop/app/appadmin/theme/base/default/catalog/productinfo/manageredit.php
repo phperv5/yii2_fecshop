@@ -345,7 +345,7 @@ use fecadmin\models\AdminRole;
                     <input type="file" multiple="multiple" id="attachfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
                     <script>
                         jQuery(document).ready(function () {
-                            jQuery("body").on('click', ".delete_img", function () {
+                            jQuery("body").on('click', ".attachment_delete_img", function () {
                                 jQuery(this).parent().parent().remove();
                             });
                             //jQuery(".delete_img").click(function(){
