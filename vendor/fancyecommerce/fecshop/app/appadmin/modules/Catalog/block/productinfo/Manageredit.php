@@ -265,8 +265,8 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         if (isset($this->_one['attachment']) && !empty($this->_one['attachment'])) {
             $i = 1;
             foreach ($this->_one['attachment'] as $gallery) {
-                $str .= '<tr class="p_img" rel="'.$i.'" data="'.$gallery.'" style="border-bottom:1px solid #ccc;">
-									<td style="width:120px;text-align:center;"><img  rel="'.$gallery.'" style="width:100px;height:100px;" src="'.Yii::$service->product->image->getUrl('attachment/'.$gallery).'"></td>
+                $str .= '</tr><tr class="p_img" rel="'.$i.'" data="'.$gallery.'"  style="border-bottom:1px solid #ccc;">
+									<td style="width:120px;text-align:center;"><a href="'.Yii::$service->image->getImgUrl('attachment/'.$gallery).'">'.$gallery.'</a> </td>
 									<td style="padding:0 0 0 20px;"><a class="delete_img btnDel" href="javascript:void(0)">删除</a></td>
 								</tr>';
             }
