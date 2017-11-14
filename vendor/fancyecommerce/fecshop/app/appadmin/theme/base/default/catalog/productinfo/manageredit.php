@@ -228,7 +228,7 @@ use fecadmin\models\AdminRole;
         //附件
         var attachment  = [];
         $('.productattach .p_img').each(function () {
-            var _v = $(this).attr('rel');
+            var _v = $(this).attr('data');
             attachment.push(_v);
         });
         $("[name='attachment']").val(JSON.stringify(attachment));
