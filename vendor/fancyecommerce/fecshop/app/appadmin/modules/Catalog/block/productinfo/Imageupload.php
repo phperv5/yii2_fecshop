@@ -71,13 +71,12 @@ class Imageupload
      */
     public function attachmentupload()
     {
-        var_dump($_FILES);die;
         $root_path = '../../';
         require $root_path . 'src/UploadFile.php';
         $file_path = Yii::$service->image->getImgDir('attachment');
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
-
+        $upload->changeName = false;
         if (!$upload->upload()) {
             // 上传错误提示错误信息
             exit(json_encode(['res' => 1, 'msg' => $upload->getErrorMsg()]));
@@ -85,7 +84,15 @@ class Imageupload
             // 上传成功 获取上传文件信息
             $fileInfo = $upload->getUploadFileInfo();
         }
-        $filename = $fileInfo[0]['savepath'] . $fileInfo[0]['savename'];
-
+        $fileInfo = $fileInfo[0];
+        $filename = $fileInfo['savepath'] . $fileInfo['savename'];
+        $str = '<tr class="p_img"  style="border-bottom:1px solid #ccc;">
+									<td style="width:120px;text-align:center;"><a href="'.$filename.'">'.$fileInfo['savename'].'</a> </td>
+									<td style="padding:0 0 0 20px;"><a class="delete_img btnDel" href="javascript:void(0)">删除</a></td>
+								</tr>';
+        echo json_encode([
+            'return_status' => 'success',
+            'img_str' => $str,
+        ]);
     }
 }
