@@ -73,7 +73,6 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getSearchArr()
     {
         $data = [
-
             [    // 字符串类型
                 'type' => 'inputtext',
                 'title' => '订单号',
@@ -92,11 +91,12 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'name' => 'customer_firstname',
                 'columns_type' => 'string',
             ],
-            [    // 字符串类型
-                'type' => 'inputtext',
-                'title' => 'lastname',
-                'name' => 'customer_lastname',
-                'columns_type' => 'string',
+            [    // selecit的Int 类型
+                'type' => 'select',
+                'title' => '订单状态',
+                'name' => 'order_status',
+                'columns_type' => 'int',  // int使用标准匹配， string使用模糊查询
+                'value' =>  Yii::$service->order->getStatusArr(),
             ],
             [    // 时间区间类型搜索
                 'type' => 'inputdatefilter',
