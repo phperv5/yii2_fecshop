@@ -80,6 +80,24 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'name'=>'increment_id',
                 'columns_type' =>'string',
             ],
+            [    // 字符串类型
+                'type'=>'inputtext',
+                'title'=>'Email',
+                'name'=>'customer_email',
+                'columns_type' =>'string',
+            ],
+            [    // 字符串类型
+                'type'=>'inputtext',
+                'title'=>'firstname',
+                'name'=>'customer_firstname',
+                'columns_type' =>'string',
+            ],
+            [    // 字符串类型
+                'type'=>'inputtext',
+                'title'=>'lastname',
+                'name'=>'customer_lastname',
+                'columns_type' =>'string',
+            ],
             [    // 时间区间类型搜索
                 'type'=>'inputdatefilter',
                 'name'=> 'created_at',
