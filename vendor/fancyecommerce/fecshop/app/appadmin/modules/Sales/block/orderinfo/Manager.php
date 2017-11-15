@@ -95,7 +95,7 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'type' => 'select',
                 'title' => '订单状态',
                 'name' => 'order_status',
-                'columns_type' => 'int',  // int使用标准匹配， string使用模糊查询
+                'columns_type' => 'string',  // int使用标准匹配， string使用模糊查询
                 'value' =>  Yii::$service->order->getStatusArr(),
             ],
             [    // 时间区间类型搜索
