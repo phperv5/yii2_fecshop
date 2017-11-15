@@ -118,13 +118,13 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getTableFieldArr()
     {
         $table_th_bar = [
-            [
-                'orderField' => $this->_primaryKey,
-                'label' => 'ID',
-                'width' => '50',
-                'align' => 'center',
-
-            ],
+//            [
+//                'orderField' => $this->_primaryKey,
+//                'label' => 'ID',
+//                'width' => '50',
+//                'align' => 'center',
+//
+//            ],
             [
                 'orderField' => 'increment_id',
                 'label' => '订单号',
@@ -143,8 +143,15 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
             ],
 
             [
-                'orderField' => ['customer_firstname', 'customer_lastname'],
-                'label' => '订单状态',
+                'orderField' => 'customer_firstname',
+                'label' => 'first name',
+                'width' => '50',
+                'align' => 'left',
+                //'lang'			=> true,
+            ],
+            [
+                'orderField' => 'customer_lastname',
+                'label' => 'last name',
                 'width' => '50',
                 'align' => 'left',
                 //'lang'			=> true,
