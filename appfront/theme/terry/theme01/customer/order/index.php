@@ -14,10 +14,10 @@
             <div class="blank10px"></div>
             <div style="padding-bottom: 10px;">
             <select name="state" onchange="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}">
-                <option value="profile.asp?action=goods&amp;state=" selected="">--Select Enquiry Option--</option>
-                <option value="profile.asp?action=goods&amp;state=">All Orders</option>
+                <option value="order" selected="">--Select Enquiry Option--</option>
+                <option value="order">All Orders</option>
                 <?php foreach ($order_status_arr as $v):?>
-                <option value="order?order_status=".<?= $v ?>><?= $v ?></option>
+                <option value="order?order_status=<?= $v ?>"><?= $v ?></option>
                 <?php endforeach;?>
             </select>
             </div>
