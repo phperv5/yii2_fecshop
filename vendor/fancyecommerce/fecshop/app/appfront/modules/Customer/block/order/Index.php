@@ -35,7 +35,7 @@ class Index
         }
         $this->pageNum = (int)Yii::$app->request->get('p');
         $this->pageNum = ($this->pageNum >= 1) ? $this->pageNum : 1;
-        $this->orderBy = ['created_at' => SORT_DESC];
+        $this->orderBy = ['order_id' => SORT_DESC];
         $this->order_status = Yii::$app->request->get('order_status');
     }
 
@@ -45,9 +45,9 @@ class Index
         $return_arr = [];
         if ($this->customer_id) {
             $where['customer_id'] = $this->customer_id;
-            if ($this->order_status) {
-               // $where['order_status'] = $this->order_status; //订单状态
-            }
+//            if ($this->order_status) {
+//               $where['order_status'] = $this->order_status; //订单状态
+//            }
             $where['order_status'] = $this->customer_id;
             $filter = [
                 'numPerPage' => $this->numPerPage,
