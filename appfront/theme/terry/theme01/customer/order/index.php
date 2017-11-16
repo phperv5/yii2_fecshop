@@ -17,7 +17,7 @@
                 <option value="profile.asp?action=goods&amp;state=" selected="">--Select Enquiry Option--</option>
                 <option value="profile.asp?action=goods&amp;state=">All Orders</option>
                 <?php foreach ($order_status_arr as $v):?>
-                <option value="profile.asp?action=goods&amp;state=1"><?= $v ?></option>
+                <option value="order?order_status=".<?= $v ?>><?= $v ?></option>
                 <?php endforeach;?>
             </select>
             </div>
