@@ -46,7 +46,7 @@ class Index
         if ($this->customer_id) {
             $where['customer_id'] = $this->customer_id;
             if ($this->order_status) {
-                $where['order_status'] = $this->order_status; //订单状态
+               // $where['order_status'] = $this->order_status; //订单状态
             }
             $where['order_status'] = $this->customer_id;
             $filter = [
