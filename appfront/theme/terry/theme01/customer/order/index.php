@@ -42,9 +42,9 @@
                     <td><?= $symbol ?><?= $order['grand_total'] ?></td>
                     <td><?= $order['payment_method'] ?></td>
                     <td class="px11 gray"><?= date('Y-m-d H:i:s',$order['created_at']) ?></td>
-                    <td class="px11 gray"><?php if($order['shipping_method']) echo $order['shipping_method'];else '-'; ?></td>
-                    <td class="px11 gray"><?php if($order['shipping_number']) echo $order['shipping_number'];else '-'; ?></td>
-                    <td class="px11 gray"><?php if($order['delivery_remark']) echo $order['delivery_remark'];else '-'; ?></td>
+                    <td class="px11 gray"><?php if($order['shipping_method']) echo $order['shipping_method'];else echo '-'; ?></td>
+                    <td class="px11 gray"><?php if($order['shipping_number']) echo $order['shipping_number'];else echo '-'; ?></td>
+                    <td class="px11 gray"><?php if($order['delivery_remark']) echo $order['delivery_remark'];else echo '-'; ?></td>
                     <td><font color=#333><?= Yii::$service->page->translate->__($order['order_status']); ?></font></td>
                 </tr>
                 <?php endforeach; ?>
