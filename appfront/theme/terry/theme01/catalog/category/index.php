@@ -1,7 +1,7 @@
 <div class="main">
     <div class="page_where_l">
-        <a href="/" rel="nofollow">Home</a> - <a href="../wholesale.html" rel="nofollow">Products</a> -<a
-                href="original-brand-tool.html">Original Brand Tool</a></div>
+        <a href="/" rel="nofollow">Home</a> - <a href="/" rel="nofollow">Products</a> -<a
+                href="/">Original Brand Tool</a></div>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="main_left">
@@ -23,7 +23,7 @@
             $keywords = Yii::$service->product->keywords->getKeywordsList(3);
             foreach ($keywords as $v):
                 ?>
-                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
+                <a href="<?php if(isset($v['url']) && !empty($v['url'])) echo $v['url'];else echo  Yii::$service->url->getUrl('catalogsearch/index?q='.$v['keywords']);?>"><?= $v['keywords']; ?></a>
             <?php endforeach; ?>
             <div class="clear"></div>
         </div>
@@ -40,8 +40,8 @@
             <?php
             $keywords = Yii::$service->product->keywords->getKeywordsList(2);
             foreach ($keywords as $v):
-                ?>
-                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
+            ?>
+                <a href="<?php if(isset($v['url']) && !empty($v['url'])) echo $v['url'];else echo  Yii::$service->url->getUrl('catalogsearch/index?q='.$v['keywords']);?>"><?= $v['keywords']; ?></a>
             <?php endforeach; ?>
 
             <div class="clear"></div>

@@ -57,7 +57,7 @@
             $keywords = Yii::$service->product->keywords->getKeywordsList(1);
             foreach($keywords as $v):
         ?>
-          <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q='.$v['keywords']);?>"><?= $v['keywords'];?></a>
+          <a href="<?php if(isset($v['url']) && !empty($v['url'])) echo $v['url'];else echo  Yii::$service->url->getUrl('catalogsearch/index?q='.$v['keywords']);?>"><?= $v['keywords'];?></a>
         <?php endforeach;?>
     </div>
     <div class="clear">
