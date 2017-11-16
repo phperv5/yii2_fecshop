@@ -16,10 +16,9 @@
             <select name="state" onchange="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}">
                 <option value="profile.asp?action=goods&amp;state=" selected="">--Select Enquiry Option--</option>
                 <option value="profile.asp?action=goods&amp;state=">All Orders</option>
-                <option value="profile.asp?action=goods&amp;state=1">UNPAID</option>
-                <option value="profile.asp?action=goods&amp;state=2">PAID</option>
-                <option value="profile.asp?action=goods&amp;state=3">SHIPPED</option>
-                <option value="profile.asp?action=goods&amp;state=4">COMPLETED</option>
+                <?php foreach ($order_status_arr as $v):?>
+                <option value="profile.asp?action=goods&amp;state=1"><?= $v ?></option>
+                <?php endforeach;?>
             </select>
             </div>
             <table class="tab_comm">
