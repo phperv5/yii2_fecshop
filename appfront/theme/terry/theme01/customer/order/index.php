@@ -34,7 +34,7 @@
                     <td><?= $symbol ?><?= $order['grand_total'] ?></td>
                     <td><?= $order['payment_method'] ?></td>
                     <td class="px11 gray"><?= date('Y-m-d H:i:s',$order['created_at']) ?></td>
-                    <td class="px11 gray"><?= $order['shipped_method'] ?></td>
+                    <td class="px11 gray"><?= $order['shipping_method'] ?></td>
                     <td class="px11 gray"><?= $order['shipping_number'] ?></td>
                     <td class="px11 gray"><?= $order['delivery_remark'] ?></td>
                     <td><font color=#333><?= Yii::$service->page->translate->__($order['order_status']); ?></font></td>
