@@ -314,8 +314,7 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
             }
             $str .= '<td>
 						<a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="' . $this->_editUrl . '?' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" >编辑</a>
-						<!-- <a title="删除" target="ajaxTodo" href="' . $this->_deleteUrl . '?' . $csrfString . '&' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" class="btnDel">删除</a>
-						-->
+						<a title="发送邮件" target="dialog" class="btn" mask="true" drawable="true" width="1000" height="580" href="'.CUrl::getUrl('sales/orderinfo/track?order_id=').$one['order_id'].'" >发送邮件</a>
 					</td>';
             $str .= '</tr>';
         }

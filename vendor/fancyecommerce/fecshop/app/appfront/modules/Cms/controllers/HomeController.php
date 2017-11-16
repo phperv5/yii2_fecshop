@@ -15,6 +15,14 @@ class HomeController extends AppfrontController
     // 网站信息管理
     public function actionIndex()
     {
+        $sendInfo = [
+            'to'=>'312043814@qq.com',
+            'subject'=>'312043814@qq.com',
+            'htmlBody'=>'312043814@qq.com',
+            'senderName'=>'312043814@qq.com',
+        ];
+        Yii::$service->email->send($sendInfo);
+        die;
         $data = $this->getBlock()->getLastData();
         return $this->render($this->action->id, $data);
     }
