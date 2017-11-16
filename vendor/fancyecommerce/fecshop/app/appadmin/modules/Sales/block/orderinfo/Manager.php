@@ -96,7 +96,7 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'title' => '订单状态',
                 'name' => 'order_status',
                 'columns_type' => 'string',  // int使用标准匹配， string使用模糊查询
-                'value' =>  Yii::$service->order->getStatusArr(),
+                'value' => Yii::$service->order->getStatusArr(),
             ],
             [    // 时间区间类型搜索
                 'type' => 'inputdatefilter',
@@ -312,11 +312,13 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 }
                 $str .= '<td>' . $val . '</td>';
             }
-            $str .= '<td>
-						<a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="' . $this->_editUrl . '?' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" >编辑</a>
-						<a title="发送邮件" target="dialog" class="btn" mask="true" drawable="true" width="1000" height="580" href="'.CUrl::getUrl('sales/orderinfo/track?order_id=').$one['order_id'].'" >发送邮件</a>
-					</td>';
-            $str .= '</tr>';
+            $str .= '<td><a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="' . $this->_editUrl . '?' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" >编辑</a>';
+
+            if ($one['order_status'] == Yii::$service->order->payment_status_processing) {
+                $str .= '<a title="发货" target="dialog" class="button" mask="true" drawable="true" width="1000" height="580" href="' . CUrl::getUrl('sales/orderinfo/track?order_id=') . $one['order_id'] . '" >发货</a>';
+            }
+
+            $str .= '</td></tr>';
         }
 
         return $str;
