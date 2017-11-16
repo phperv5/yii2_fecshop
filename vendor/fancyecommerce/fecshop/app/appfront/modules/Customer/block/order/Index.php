@@ -22,7 +22,7 @@ class Index
     protected $orderBy;
     protected $customer_id;
     protected $_page = 'p';
-    protected $order_status = null;
+   // protected $order_status = null;
 
     /**
      * 初始化类变量.
@@ -36,7 +36,7 @@ class Index
         $this->pageNum = (int)Yii::$app->request->get('p');
         $this->pageNum = ($this->pageNum >= 1) ? $this->pageNum : 1;
         $this->orderBy = ['created_at' => SORT_DESC];
-        $this->order_status = 1;
+        //$this->order_status = 1;
     }
 
     public function getLastData()
