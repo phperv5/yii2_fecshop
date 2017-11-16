@@ -214,8 +214,15 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
             ],
 
             [
-                'orderField' => 'customer_address_country',
-                'label' => '国家',
+                'orderField' => 'shipping_number',
+                'label' => 'shipping_number',
+                'width' => '30',
+                'align' => 'left',
+                //'lang'			=> true,
+            ],
+            [
+                'orderField' => 'delivery_remark',
+                'label' => 'delivery_remark',
                 'width' => '50',
                 'align' => 'left',
                 //'lang'			=> true,
