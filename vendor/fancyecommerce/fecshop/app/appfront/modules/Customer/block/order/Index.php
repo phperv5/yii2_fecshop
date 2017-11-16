@@ -55,7 +55,7 @@ class Index
                 'where' => $where,
                 'asArray' => true,
             ];
-            var_dump($filter);die;
+            var_dump($filter);
             $customer_order_list = Yii::$service->order->coll($filter);
             $return_arr['order_list'] = $customer_order_list['coll'];
             $count = $customer_order_list['count'];
