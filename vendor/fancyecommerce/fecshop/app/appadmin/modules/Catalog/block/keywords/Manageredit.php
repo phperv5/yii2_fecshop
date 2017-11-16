@@ -59,6 +59,14 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
                 'require' => 1,
             ],
             [
+                'label'=>'url',
+                'name'=>'url',
+                'display'=>[
+                    'type' => 'inputString',
+                ],
+                'require' => 1,
+            ],
+            [
                 'label'=>'关键字type(类型)',
                 'name'=>'type',
                 'display'=>[
