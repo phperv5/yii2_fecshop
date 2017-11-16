@@ -12,7 +12,14 @@
             <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="<?= $homeUrl ?>">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red account-email"></b></a> - My Orders List</div><div class="blank5px"></div><h1>My Orders List</h1>
 
             <div class="blank10px"></div>
-
+            <select name="state" onchange="var jmpURL=this.options[this.selectedIndex].value ; if(jmpURL!='') {window.location=jmpURL;} else {this.selectedIndex=0 ;}">
+                <option value="profile.asp?action=goods&amp;state=" selected="">--Select Enquiry Option--</option>
+                <option value="profile.asp?action=goods&amp;state=">All Orders</option>
+                <option value="profile.asp?action=goods&amp;state=1">UNPAID</option>
+                <option value="profile.asp?action=goods&amp;state=2">PAID</option>
+                <option value="profile.asp?action=goods&amp;state=3">SHIPPED</option>
+                <option value="profile.asp?action=goods&amp;state=4">COMPLETED</option>
+            </select>
             <table class="tab_comm">
                 <tr class="tr_head">
                     <td>Order No.</td>
