@@ -315,7 +315,7 @@ class Manager extends AppadminbaseBlock implements AppadminbaseBlockInterface
             $str .= '<td><a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="' . $this->_editUrl . '?' . $this->_primaryKey . '=' . $one[$this->_primaryKey] . '" >编辑</a>';
 
             if ($one['order_status'] == Yii::$service->order->payment_status_processing) {
-                $str .= '<a title="发货" target="dialog" class="buttonActive" mask="true" drawable="true" width="1000" height="580" href="' . CUrl::getUrl('sales/orderinfo/track?order_id=') . $one['order_id'] . '" >发货</a>';
+                $str .= '<a title="发货" target="dialog" class="buttonActive" mask="true" drawable="true" width="1000" height="580" href="' . CUrl::getUrl('sales/orderinfo/track?order_id=') . $one['order_id'] . '" ><span>发货</span></a>';
             }
 
             $str .= '</td></tr>';
