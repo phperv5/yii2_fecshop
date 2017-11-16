@@ -22,7 +22,7 @@ class Index
     protected $orderBy;
     protected $customer_id;
     protected $_page = 'p';
-   // protected $order_status = null;
+    protected $order_status = null;
 
     /**
      * 初始化类变量.
@@ -35,25 +35,24 @@ class Index
         }
         $this->pageNum = (int)Yii::$app->request->get('p');
         $this->pageNum = ($this->pageNum >= 1) ? $this->pageNum : 1;
-        $this->orderBy = ['created_at' => SORT_DESC];
-        //$this->order_status = 1;
+        $this->orderBy = ['order_id' => SORT_DESC];
+        $this->order_status = Yii::$app->request->get('order_status');
     }
 
     public function getLastData()
     {
         $this->initParam();
         $return_arr = [];
+        $where['customer_id'] = $this->customer_id;
+        if ($this->order_status) {
+            $where['order_status'] = $this->order_status;
+        }
         if ($this->customer_id) {
-            $where['customer_id'] = $this->customer_id;
-//            if ($this->order_status) {
-//               $where['order_status'] = $this->order_status; //订单状态
-//            }
-            $where['order_status'] = $this->customer_id;
             $filter = [
                 'numPerPage' => $this->numPerPage,
                 'pageNum' => $this->pageNum,
                 'orderBy' => $this->orderBy,
-                'where' => $where,
+                'where' => [$where],
                 'asArray' => true,
             ];
 
@@ -62,7 +61,6 @@ class Index
             $count = $customer_order_list['count'];
             $pageToolBar = $this->getProductPage($count);
             $return_arr['pageToolBar'] = $pageToolBar;
-
             $return_arr['order_status_arr'] = Yii::$service->order->getStatusArr();
         }
 
