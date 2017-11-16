@@ -32,8 +32,9 @@ class Keywords extends ActiveRecord
     {
         $origin = [
             '_id',
-            'keywords',    // 产品id 字符串
-            'type',
+            'keywords',       // 产品id 字符串
+            'url',            // 链接地址
+            'type',           // 关键字类型
             'created_at',    // 创建时间 int
             'updated_at',    // 更新时间 int
         ];
