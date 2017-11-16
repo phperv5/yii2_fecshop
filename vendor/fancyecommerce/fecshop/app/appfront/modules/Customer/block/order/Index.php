@@ -21,8 +21,8 @@ class Index
     protected $pageNum;
     protected $orderBy;
     protected $customer_id;
-    protected $order_status;
     protected $_page = 'p';
+    protected $order_status = null;
 
     /**
      * 初始化类变量.
@@ -35,7 +35,7 @@ class Index
         }
         $this->pageNum = (int)Yii::$app->request->get('p');
         $this->pageNum = ($this->pageNum >= 1) ? $this->pageNum : 1;
-        $this->orderBy = ['order_id' => SORT_DESC];
+        $this->orderBy = ['created_at' => SORT_DESC];
         $this->order_status = Yii::$app->request->get('order_status');
     }
 
@@ -48,6 +48,7 @@ class Index
             if ($this->order_status) {
                 $where['order_status'] = $this->order_status; //订单状态
             }
+            $where['order_status'] = $this->customer_id;
             $filter = [
                 'numPerPage' => $this->numPerPage,
                 'pageNum' => $this->pageNum,
@@ -55,7 +56,7 @@ class Index
                 'where' => $where,
                 'asArray' => true,
             ];
-            var_dump($filter);
+
             $customer_order_list = Yii::$service->order->coll($filter);
             $return_arr['order_list'] = $customer_order_list['coll'];
             $count = $customer_order_list['count'];
