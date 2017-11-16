@@ -62,6 +62,7 @@ class Index
             $pageToolBar = $this->getProductPage($count);
             $return_arr['pageToolBar'] = $pageToolBar;
             $return_arr['order_status_arr'] = Yii::$service->order->getStatusArr();
+            $return_arr['order_status'] = $this->order_status;
         }
 
         return $return_arr;

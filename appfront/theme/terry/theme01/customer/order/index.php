@@ -17,7 +17,7 @@
                 <option value="order" selected="">--Select Enquiry Option--</option>
                 <option value="order">All Orders</option>
                 <?php foreach ($order_status_arr as $v):?>
-                <option value="order?order_status=<?= $v ?>"><?= $v ?></option>
+                <option value="order?order_status=<?= $v ?>" <?php if($order_status==$v) echo 'selected';?>><?= $v ?></option>
                 <?php endforeach;?>
             </select>
             </div>
