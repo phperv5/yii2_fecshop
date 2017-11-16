@@ -37,50 +37,6 @@ class Keywords extends Service
     }
 
 
-    /**
-     * @property $review_data | Array
-     *
-     * 增加评论 前台增加评论调用的函数。
-     */
-    protected function actionAddReview($review_data)
-    {
-        //$this->initReviewAttr($review_data);
-        $model = new $this->_reviewModelName();
-        if (isset($review_data[$this->getPrimaryKey()])) {
-            unset($review_data[$this->getPrimaryKey()]);
-        }
-        $model = $this->_reviewModel;
-        $review_data['status'] = $model::NOACTIVE_STATUS;
-
-        $review_data['store'] = Yii::$service->store->currentStore;
-        $review_data['lang_code'] = Yii::$service->store->currentLangCode;
-        $review_data['review_date'] = time();
-        if (!Yii::$app->user->isGuest) {
-            $identity = Yii::$app->user->identity;
-            $user_id = $identity['id'];
-            $review_data['user_id'] = $user_id;
-        }
-
-        $review_data['ip'] = \fec\helpers\CFunc::get_real_ip();
-        $saveStatus = Yii::$service->helper->ar->save($model, $review_data);
-
-        return true;
-    }
-
-    /**
-     * @property $review_data | Array
-     * 保存评论
-     */
-    protected function actionUpdateReview($review_data)
-    {
-        //$this->initReviewAttr($review_data);
-        $model = $this->_reviewModel->findOne([$this->getPrimaryKey() => $review_data[$this->getPrimaryKey()]]);
-        unset($review_data[$this->getPrimaryKey()]);
-        $saveStatus = Yii::$service->helper->ar->save($model, $review_data);
-
-        return true;
-    }
-
     /*
      * example filter:
      * [
@@ -181,6 +137,42 @@ class Keywords extends Service
         $keywordsColl = $this->list($filter);
         $keywords = $keywordsColl['coll'];
         return $keywords;
+    }
+
+    //删除
+    public function remove($ids)
+    {
+        if (empty($ids)) {
+            Yii::$service->helper->errors->add('remove id is empty');
+
+            return false;
+        }
+        if (is_array($ids)) {
+            foreach ($ids as $id) {
+                $model = $this->_reviewModel->findOne($id);
+                if (isset($model[$this->getPrimaryKey()]) && !empty($model[$this->getPrimaryKey()])) {
+
+                    $model->delete();
+                } else {
+                    Yii::$service->helper->errors->add("keywords Remove Errors:ID:$id is not exist.");
+
+                    return false;
+                }
+            }
+        } else {
+            $id = $ids;
+            $model = $this->_reviewModel->findOne($id);
+            if (isset($model[$this->getPrimaryKey()]) && !empty($model[$this->getPrimaryKey()])) {
+
+                $model->delete();
+            } else {
+                Yii::$service->helper->errors->add("keywords Remove Errors:ID:$id is not exist.");
+
+                return false;
+            }
+        }
+
+        return true;
     }
 
 

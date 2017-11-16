@@ -84,7 +84,6 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'label' => 'ID',
                 'width' => '50',
                 'align' => 'center',
-
             ],
             [
                 'orderField' => 'keywords',
@@ -108,7 +107,6 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                     2    => 'Popular Search',
                     3    => 'Browse by Feature',
                 ],
-
             ],
             [
                 'orderField'    => 'created_at',
