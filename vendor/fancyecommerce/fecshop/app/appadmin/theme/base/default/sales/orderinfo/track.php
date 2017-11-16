@@ -79,11 +79,5 @@ use fecshop\app\appfront\helper\Format;
         </div>
     </form>
 </div>
-<script>
-    $(function () {
-        var shipping_number = $('#shipping_number').val();
-        var delivery_remark = $('#delivery_remark').val();
-        if()
-    })
-</script>
+
 
