@@ -35,7 +35,7 @@ class Index
         }
         $this->pageNum = (int)Yii::$app->request->get('p');
         $this->pageNum = ($this->pageNum >= 1) ? $this->pageNum : 1;
-        $this->orderBy = ['order_id' => SORT_DESC];
+        $this->orderBy = ['created_at' => SORT_DESC];
         $this->order_status = 1;
     }
 
