@@ -33,19 +33,18 @@ use fecadmin\models\AdminRole;
     <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate"
           onsubmit="return validateCallback(this, dialogAjaxDoneCloseAndReflush);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
-        <div layouth="56" class="pageFormContent" style="height: 485px; overflow: auto;">
+        <div layouth="56" class="" style="height: 485px; overflow: auto;">
 
             <fieldset id="fieldset_table_qbe">
                 <legend style="color:#cc0000">编辑信息</legend>
                 <div>
-
-                    <p class="edit_p">
+                    <div class="edit_p">
                         <label>To：</label>
-                        <input type="text" value="32323" size="30" name="editFormData[to]" class="">
-                    </p>
+                        <input type="text" value="" size="30" name="editFormData[to]" class="">
+                    </div>
                     <div class="edit_p">
                         <span>Subject：</span>
-                        <input type="text" value="2323" style="width: 300px;" name="editFormData[subject]" class="">
+                        <input type="text" value="" style="width: 300px;" name="editFormData[subject]" class="">
                     </div>
                     <div class="edit_p">
                         <span>Body：</span>
