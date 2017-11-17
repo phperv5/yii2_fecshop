@@ -356,7 +356,7 @@ class Attr
                 'display'=>[
                     'type' => 'textarea',
                     'lang' => true,
-                    'rows'    => 100,
+                    'rows'    => 300,
                     'cols'    => 300,
                 ],
                 'require' => 1,
