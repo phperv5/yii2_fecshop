@@ -356,21 +356,10 @@ class Attr
                 'display'=>[
                     'type' => 'textarea',
                     'lang' => true,
-                    'rows'    => 14,
+                    'rows'    => 100,
                     'cols'    => 300,
                 ],
                 'require' => 1,
-            ],
-            [
-                'label'=>'Related Download Files',
-                'name'=>'related_download_files',
-                'display'=>[
-                    'type' => 'textarea',
-                    'lang' => true,
-                    'rows'    => 14,
-                    'cols'    => 30,
-                ],
-                'require' => 0,
             ],
             [
                 'label'=>'Video',
