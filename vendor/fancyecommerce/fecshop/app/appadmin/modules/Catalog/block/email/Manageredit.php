@@ -34,39 +34,39 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function getLastData()
     {
         return [
-            'editBar'    => $this->getEditBar(),
-            'saveUrl'    => $this->_saveUrl,
+            'editBar' => $this->getEditBar(),
+            'saveUrl' => $this->_saveUrl,
         ];
     }
 
     public function setService()
     {
-
+        $this->_service = Yii::$service->product->keywords;
     }
 
     public function getEditArr()
     {
         return [
             [
-                'label'=>'收件人',
-                'name'=>'to',
-                'display'=>[
+                'label' => '收件人',
+                'name' => 'to',
+                'display' => [
                     'type' => 'inputString',
                 ],
                 'require' => 1,
             ],
             [
-                'label'=>'主题',
-                'name'=>'subject',
+                'label' => '主题',
+                'name' => 'subject',
                 'width' => '200',
-                'display'=>[
+                'display' => [
                     'type' => 'inputString',
                 ],
             ],
             [
-                'label'=>'正文',
-                'name'=>'type',
-                'display'=>[
+                'label' => '正文',
+                'name' => 'type',
+                'display' => [
                     'type' => 'textarea',
                 ],
                 'require' => 1,
