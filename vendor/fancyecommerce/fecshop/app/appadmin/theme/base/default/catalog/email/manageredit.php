@@ -33,31 +33,28 @@ use fecadmin\models\AdminRole;
     <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate"
           onsubmit="return validateCallback(this, dialogAjaxDoneCloseAndReflush);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
-        <div layouth="56" class="" style="height: 240px; overflow: auto;">
-            <fieldset id="">
+        <div layouth="56" class="pageFormContent" style="height: 485px; overflow: auto;">
+
+            <fieldset id="fieldset_table_qbe">
                 <legend style="color:#cc0000">编辑信息</legend>
                 <div>
+
                     <p class="edit_p">
                         <label>To：</label>
-                        <span><input type="text" id="shipping_number" name="editForm[to]" value="" style="width: 300px;" class="required"/></span>
+                        <input type="text" value="32323" size="30" name="editFormData[to]" class="textInput">
                     </p>
-                </div>
-                <div>
                     <p class="edit_p">
-                    <label>Subject：</label>
-                    <span><input type="text" id="subject" name="editForm[subject]" value="" style="width: 300px;" class=""/></span>
+                        <label>Subject：</label>
+                        <input type="text" value="2323" size="30" name="editFormData[subject]" class="textInput">
                     </p>
-                </div>
-                <div>
                     <p class="edit_p">
-                    <label>Body：</label>
-                    <span><textarea name="body" class="required"></textarea> </span>
+                        <label>Body：</label>
+                        <input type="text" value="2323" size="30" name="editFormData[body]" class="textInput">
                     </p>
                 </div>
             </fieldset>
 
         </div>
-
         <div class="formBar">
             <ul>
                 <!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
