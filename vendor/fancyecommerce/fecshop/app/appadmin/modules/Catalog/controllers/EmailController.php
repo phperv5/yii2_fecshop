@@ -36,8 +36,4 @@ class EmailController extends CatalogController
         $data = $this->getBlock('manageredit')->save();
     }
 
-    public function actionManagerdelete()
-    {
-        $this->getBlock('manageredit')->delete();
-    }
 }
