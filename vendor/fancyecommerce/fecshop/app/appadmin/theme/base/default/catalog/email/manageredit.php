@@ -34,7 +34,7 @@ use fecadmin\models\AdminRole;
           onsubmit="return validateCallback(this, dialogAjaxDoneCloseAndReflush);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
         <div layouth="56" class="pageFormContent" style="height: 240px; overflow: auto;">
-            <fieldset id="fieldset_table_qbe">
+            <fieldset id="">
                 <legend style="color:#cc0000">编辑信息</legend>
                 <div>
                     <p class="edit_p">
