@@ -20,60 +20,24 @@ use Yii;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
+class Manageredit
 {
     public $_saveUrl;
 
-    public function init()
+    public function __construct()
     {
         $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
-        parent::init();
+
     }
 
     // 传递给前端的数据 显示编辑form
     public function getLastData()
     {
         return [
-            'editBar' => $this->getEditBar(),
             'saveUrl' => $this->_saveUrl,
         ];
     }
 
-    public function setService()
-    {
-        $this->_service = Yii::$service->product->keywords;
-    }
-
-    public function getEditArr()
-    {
-        return [
-            [
-                'label' => '收件人',
-                'name' => 'to',
-                'display' => [
-                    'type' => 'inputString',
-                ],
-                'require' => 1,
-            ],
-            [
-                'label' => '主题',
-                'name' => 'subject',
-                'width' => '200',
-                'display' => [
-                    'type' => 'inputString',
-                ],
-            ],
-            [
-                'label' => '正文',
-                'name' => 'type',
-                'display' => [
-                    'type' => 'textarea',
-                ],
-                'require' => 1,
-            ],
-
-        ];
-    }
 
     /**
      * save article data,  get rewrite url and save to article url key.
