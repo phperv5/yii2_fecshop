@@ -41,11 +41,11 @@ use fecadmin\models\AdminRole;
 
                     <p class="edit_p">
                         <label>To：</label>
-                        <input type="text" value="32323" size="30" name="editFormData[to]" class="textInput">
+                        <input type="text" value="32323" size="30" name="editFormData[to]" class="">
                     </p>
                     <div class="edit_p">
                         <span>Subject：</span>
-                        <input type="text" value="2323" style="width: 300px;" name="editFormData[subject]" class="textInput">
+                        <input type="text" value="2323" style="width: 300px;" name="editFormData[subject]" class="">
                     </div>
                     <div class="edit_p">
                         <span>Body：</span>
