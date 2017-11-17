@@ -27,7 +27,7 @@ class Manageredit
 
     public function __construct()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/email/managereditsave');
         $this->_to = Yii::$app->request->get('to');
     }
 
