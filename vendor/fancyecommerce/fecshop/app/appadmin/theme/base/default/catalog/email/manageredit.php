@@ -31,7 +31,7 @@ use fecadmin\models\AdminRole;
 
 <div class="pageContent">
     <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate"
-          onsubmit="return validateCallback(this, dialogAjaxDoneCloseAndReflush);">
+          onsubmit="return validateCallback(this);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
         <div layouth="56" class="" style="height: 485px; overflow: auto;">
 
@@ -40,7 +40,7 @@ use fecadmin\models\AdminRole;
                 <div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">To：</label>
-                        <input type="text" value="" size="30" name="editFormData[to]" class="">
+                        <input type="text" value="<?= $to ?>" size="30" name="editFormData[to]" class="required">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Subject：</label>
