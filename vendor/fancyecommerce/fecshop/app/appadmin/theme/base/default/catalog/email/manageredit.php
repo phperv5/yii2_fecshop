@@ -43,12 +43,12 @@ use fecadmin\models\AdminRole;
                         <label>To：</label>
                         <input type="text" value="32323" size="30" name="editFormData[to]" class="textInput">
                     </p>
-                    <p class="edit_p">
-                        <label>Subject：</label>
-                        <input type="text" value="2323" size="30" name="editFormData[subject]" class="textInput">
-                    </p>
                     <div class="edit_p">
-                        <label>Body：</label>
+                        <span>Subject：</span>
+                        <input type="text" value="2323" style="width: 300px;" name="editFormData[subject]" class="textInput">
+                    </div>
+                    <div class="edit_p">
+                        <span>Body：</span>
                         <textarea class="editor" name="body" style="width: 80%;height: 500px"></textarea>
                     </div>
                 </div>
