@@ -40,15 +40,15 @@ use fecadmin\models\AdminRole;
                 <div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">To：</label>
-                        <input type="text" value="<?= $to ?>" size="30" name="editFormData[to]" class="required">
+                        <input type="text" value="<?= $to ?>" size="30" name="editForm[to]" class="required">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Subject：</label>
-                        <input type="text" value="" style="width: 300px;" name="editFormData[subject]" class="">
+                        <input type="text" value="" style="width: 300px;" name="editForm[subject]" class="">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Body：</label>
-                        <textarea class="editor" name="htmlBody" style="width: 80%;height: 500px"></textarea>
+                        <textarea class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px"></textarea>
                     </div>
                 </div>
             </fieldset>
