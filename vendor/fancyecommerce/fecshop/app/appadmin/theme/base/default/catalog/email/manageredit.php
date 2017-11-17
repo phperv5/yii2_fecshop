@@ -43,12 +43,16 @@ use fecadmin\models\AdminRole;
                     </p>
                 </div>
                 <div>
+                    <p class="edit_p">
                     <label>Subject：</label>
                     <span><input type="text" id="subject" name="editForm[subject]" value="" style="width: 300px;" class=""/></span>
+                    </p>
                 </div>
                 <div>
+                    <p class="edit_p">
                     <label>Body：</label>
                     <span><textarea name="body" class="required"></textarea> </span>
+                    </p>
                 </div>
             </fieldset>
 
