@@ -30,7 +30,7 @@ use fecadmin\models\AdminRole;
 						<?= $editBar; ?>
 					</div>
 				</fieldset>
-            
+
 		</div>
 	
 		<div class="formBar">

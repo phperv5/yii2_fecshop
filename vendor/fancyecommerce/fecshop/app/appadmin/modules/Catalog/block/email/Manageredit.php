@@ -20,13 +20,14 @@ use Yii;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Manageredit
+class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public $_saveUrl;
 
-    public function __construct()
+    public function init()
     {
         $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
+        parent::init();
     }
 
     // 传递给前端的数据 显示编辑form
@@ -38,6 +39,10 @@ class Manageredit
         ];
     }
 
+    public function setService()
+    {
+
+    }
 
     public function getEditArr()
     {
@@ -78,7 +83,4 @@ class Manageredit
         $request_param = CRequest::param();
         var_dump($request_param);
     }
-
-
-
 }
