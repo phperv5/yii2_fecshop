@@ -30,11 +30,7 @@ use fecadmin\models\AdminRole;
 						<?= $editBar; ?>
 					</div>
 				</fieldset>
-
-				<?= $lang_attr ?>
-
-				<?= $textareas ?>
-
+            
 		</div>
 	
 		<div class="formBar">
