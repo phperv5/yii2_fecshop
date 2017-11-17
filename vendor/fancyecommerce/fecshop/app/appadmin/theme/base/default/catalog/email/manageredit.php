@@ -39,17 +39,17 @@ use fecadmin\models\AdminRole;
                 <div>
                     <p class="edit_p">
                         <label>To：</label>
-                        <span><input type="text" id="shipping_number" name="editForm[to]" value="" style="width: 200px;"/></span>
+                        <span><input type="text" id="shipping_number" name="editForm[to]" value="" style="width: 300px;" class="textInput required"/></span>
                     </p>
                 </div>
             </fieldset>
             <div>
                 <label>Subject：</label>
-                <span><input type="text" id="subject" name="editForm[subject]" value="" style="width: 200px;"/></span>
+                <span><input type="text" id="subject" name="editForm[subject]" value="" style="width: 300px;" class="textInput"/></span>
             </div>
             <div>
                 <label>Body：</label>
-                <span><textarea name="body"></textarea> </span>
+                <span><textarea name="body" class="textInput required"></textarea> </span>
             </div>
 
         </div>
