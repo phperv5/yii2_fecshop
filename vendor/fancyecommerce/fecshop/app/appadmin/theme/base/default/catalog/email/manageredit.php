@@ -49,7 +49,7 @@ use fecadmin\models\AdminRole;
                     </p>
                     <p class="edit_p">
                         <label>Body：</label>
-                        <input type="text" value="2323" size="30" name="editFormData[body]" class="textInput">
+                        <textarea class="editor" name="body"></textarea>
                     </p>
                 </div>
             </fieldset>
