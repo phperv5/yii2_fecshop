@@ -23,11 +23,12 @@ use Yii;
 class Manageredit
 {
     public $_saveUrl;
+    public $_to;
 
     public function __construct()
     {
         $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
-
+        $this->_to = Yii::$app->request->get('to');
     }
 
     // 传递给前端的数据 显示编辑form
@@ -35,6 +36,7 @@ class Manageredit
     {
         return [
             'saveUrl' => $this->_saveUrl,
+            'to' => $this->_to,
         ];
     }
 
@@ -44,7 +46,21 @@ class Manageredit
      */
     public function save()
     {
-        $request_param = CRequest::param();
-        var_dump($request_param);
+        try {
+            $editForm = Yii::$app->request->post('editForm');
+            $to = $editForm['to'];
+            $subject = $editForm['subject'];
+            $htmlBody = $editForm['htmlBody'];
+            $sendInfo = compact('to', 'subject', 'htmlBody');
+
+            Yii::$service->email->send($sendInfo);
+        } catch (\Exception $e) {
+
+        }
+        echo json_encode([
+            'statusCode' => '200',
+            'message' => 'save success',
+        ]);
+        exit;
     }
 }

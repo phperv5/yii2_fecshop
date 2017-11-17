@@ -38,17 +38,17 @@ use fecadmin\models\AdminRole;
             <fieldset id="fieldset_table_qbe">
                 <legend style="color:#cc0000">编辑信息</legend>
                 <div>
-                    <div class="edit_p">
+                    <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">To：</label>
                         <input type="text" value="" size="30" name="editFormData[to]" class="">
                     </div>
-                    <div class="edit_p">
+                    <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Subject：</label>
                         <input type="text" value="" style="width: 300px;" name="editFormData[subject]" class="">
                     </div>
-                    <div class="edit_p">
+                    <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Body：</label>
-                        <textarea class="editor" name="body" style="width: 80%;height: 500px"></textarea>
+                        <textarea class="editor" name="htmlBody" style="width: 80%;height: 500px"></textarea>
                     </div>
                 </div>
             </fieldset>
