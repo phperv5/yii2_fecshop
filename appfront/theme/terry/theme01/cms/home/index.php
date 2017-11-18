@@ -147,6 +147,14 @@
                     autoplay:true,
                     autoplayTimeout:3000
                 });
+                $(".mhl_first_main").hover(
+                    function () {
+                        $('.hd_wr_nav_main').show();
+                    },
+                    function () {
+                        $('.hd_wr_nav_main').hide();
+                    }
+                );
             });
         <?php $this->endBlock(); ?>
     </script>

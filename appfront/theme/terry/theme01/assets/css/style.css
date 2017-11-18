@@ -1211,6 +1211,7 @@ input.btn_h_reg:hover {
     top: 0px;
     left: 100%;
     position: absolute;
+    display: none;
 }
 
 .main_h_left a.mhl_first_main{
@@ -1242,7 +1243,6 @@ input.btn_h_reg:hover {
 .hd_wr_nav_main ul {
     list-style: none;
     width: 160px;
-    display: none;
     background: #FFFFFF;
     margin: 0px;
     padding: 0px;
@@ -1257,9 +1257,7 @@ input.btn_h_reg:hover {
     border-left-color: #CCC;
 }
 
-.hd_wr_nav_main:hover ul {
-    display: block;
-}
+
 
 .hd_wr_nav_main:hover ul a {
     display: block;
@@ -1269,9 +1267,7 @@ input.btn_h_reg:hover {
     border-left-style: none;
 }
 
-.hd_wr_nav_main ul a:hover {
-    background: #FFC url(../images/w/bg_x.png) no-repeat 7px -203px;
-}
+
 
 .hd_wr_nav_main ul.hdcate {
     width: 520px;
