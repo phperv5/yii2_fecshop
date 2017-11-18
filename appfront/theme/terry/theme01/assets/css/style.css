@@ -1206,7 +1206,8 @@ input.btn_h_reg:hover {
     width: 500px;
     margin: 0px;
     padding: 0px;
-    z-index: 9999;
+    z-index: 1;
+    top: 0px;
     position: absolute;
 }
 
@@ -1217,6 +1218,7 @@ input.btn_h_reg:hover {
     position: relative;
     left:0;
     top:0;
+    z-index: 1000;
 }
 
 .left_proclass_menu {
