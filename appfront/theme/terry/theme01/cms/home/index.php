@@ -283,6 +283,14 @@
                 $('.hd_wr_nav_main').hide();
             }
         );
+        $("left_proclass_menu").bind({
+            mouseover: function () {
+                $(this).find('.hd_wr_nav_main').show();
+            },
+            mouseout: function () {
+                $('.hd_wr_nav_main').hide();
+            }
+        });
     });
     <?php $this->endBlock(); ?>
 </script>
