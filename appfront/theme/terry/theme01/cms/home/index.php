@@ -3,7 +3,7 @@
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
         <?php foreach($categories as $category): ?>
-            <div class="hd_wr_nav"><a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a></a>
+            <div class="hd_wr_nav_main"><a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a></a>
                 <ul class="hdcate">
                     <?php foreach($categories as $category): ?>
                         <a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a>
