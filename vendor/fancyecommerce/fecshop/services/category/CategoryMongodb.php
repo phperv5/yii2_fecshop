@@ -334,7 +334,7 @@ class CategoryMongodb implements CategoryInterface
         return $data;
     }
 
-    protected function getOneLevelCateChild($category)
+    public function getOneLevelCateChild($category)
     {
         //'_id' 		=> $currentId,
         //'name' 		=> $currentName,
