@@ -1603,7 +1603,7 @@ a.hd_menu_nv_gohome:hover {
     background: #FFF;
 }
 
-.main_h_left a.mhl_first_main {
+.main_h_left a {
     background: url(../images/w/bg_x.png) no-repeat 220px -153px;
     display: block;
     margin: 0px;
