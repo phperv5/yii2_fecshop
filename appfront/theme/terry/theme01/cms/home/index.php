@@ -4,40 +4,45 @@
         <?php foreach ($categories as $category): ?>
             <div class="left_proclass_menu">
                 <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
-                <div class="hd_wr_nav_main">
-                    <div class="category-con">
-                        <div class="content-con j_categoryContent">
-                            <div class="pannel-con j_CategoryMenuPannel">
-                                <?php foreach ($categories as $category): ?>
+                <?php $cates = Yii::$service->category->getTreeArr($category['_id']);
+                if (isset($cates) && !empty($cates)):?>
+
+                    <div class="hd_wr_nav_main">
+                        <div class="category-con">
+                            <div class="content-con j_categoryContent">
+                                <div class="pannel-con j_CategoryMenuPannel">
                                     <div class="pannel-1">
                                         <div class="hot-word-con" data-spm="subpannel2016028">
                                             <?php
-                                            $cates = Yii::$service->category->getTreeArr($category['_id']);
+
                                             foreach ($cates as $cate):
                                                 ?>
                                                 <div class="hot-word-line">
 
                                                     <div class="line-title">
-                                                        <div class="title-text"><a href="<?= $cate['url'] ?>" target="_blank"><?= $cate['name'] ?></a></div>
+                                                        <div class="title-text"><a href="<?= $cate['url'] ?>"
+                                                                                   target="_blank"><?= $cate['name'] ?></a>
+                                                        </div>
                                                         <!--                                                    <i class=""></i>-->
                                                     </div>
                                                     <?php if (isset($cate['child']) && !empty($cate['child'])): ?>
                                                         <div class="line-con">
                                                             <?php foreach ($cates as $c): ?>
-                                                                <a class="hot-word  highlight" href="<?= $c['url'] ?>" target="_blank"><?= $c['name'] ?></a>
+                                                                <a class="hot-word  highlight" href="<?= $c['url'] ?>"
+                                                                   target="_blank"><?= $c['name'] ?></a>
                                                             <?php endforeach; ?>
                                                             <div class="seprate clearfix"></div>
                                                         </div>
                                                     <?php endif; ?>
                                                 </div>
-                                            <?php endforeach;?>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
-                                <?php endforeach; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php endif; ?>
             </div>
         <?php endforeach; ?>
     </div>
