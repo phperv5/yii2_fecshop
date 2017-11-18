@@ -276,11 +276,11 @@
             autoplayTimeout: 3000
         });
 
-        
-        $(".left_proclass_menu").on('mouseover',function(){
-            $(this).find('.hd_wr_nav_main').show();
+
+        $(".mhl_first_main").live('mouseover',function(){
+            $(this).next().show();
         })
-        $(".left_proclass_menu").on('mouseout',function(){
+        $(".mhl_first_main").live('mouseout',function(){
             $('.hd_wr_nav_main').hide();
         })
     });
