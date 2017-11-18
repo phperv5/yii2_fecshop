@@ -15,7 +15,7 @@
                                             <div class="hot-word-line">
                                                 <div class="line-title">
                                                     <div class="title-text">当季流行</div>
-                                                    <i class="fp-iconfont"></i>
+<!--                                                    <i class=""></i>-->
                                                 </div>
                                                 <div class="line-con">
                                                     <a class="hot-word  highlight "
@@ -276,14 +276,13 @@
             autoplayTimeout: 3000
         });
 
-        $(".left_proclass_menu").bind({
-            mouseover: function () {
-                $(this).find('.hd_wr_nav_main').show();
-            },
-            mouseout: function () {
-                $('.hd_wr_nav_main').hide();
-            }
-        });
+        
+        $(".left_proclass_menu").on('mouseover',function(){
+            $(this).find('.hd_wr_nav_main').show();
+        })
+        $(".left_proclass_menu").on('mouseout',function(){
+            $('.hd_wr_nav_main').hide();
+        })
     });
     <?php $this->endBlock(); ?>
 </script>
