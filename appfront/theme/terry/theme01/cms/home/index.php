@@ -275,15 +275,8 @@
             autoplay: true,
             autoplayTimeout: 3000
         });
-        $(".left_proclass_menu").hover(
-            function () {
-                $(this).find('.hd_wr_nav_main').show();
-            },
-            function () {
-                $('.hd_wr_nav_main').hide();
-            }
-        );
-        $("left_proclass_menu").bind({
+
+        $(".left_proclass_menu").bind({
             mouseover: function () {
                 $(this).find('.hd_wr_nav_main').show();
             },
