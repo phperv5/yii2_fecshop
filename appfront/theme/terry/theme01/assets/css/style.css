@@ -1201,13 +1201,18 @@ input.btn_h_reg:hover {
     box-shadow: none;
 }
 
-/*32*/
+/*float*/
 .hd_wr_nav_main {
     width: 100%;
     margin: 0px;
     padding: 0px;
     z-index: 9999;
     position: absolute;
+}
+
+.hd_wr_nav_float {
+    overflow: hidden;
+    width: 100%;
 }
 
 .hd_wr_nav_main a {
@@ -1285,7 +1290,6 @@ input.btn_h_reg:hover {
     background: #FFF url(none);
     box-shadow: none;
 }
-
 
 .header {
     margin: 0px auto;
