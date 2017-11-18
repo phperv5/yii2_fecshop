@@ -2,104 +2,44 @@
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
         <?php foreach ($categories as $category): ?>
-            <div class="left_proclass_menu">
-                <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
-                <div class="hd_wr_nav_main">
-                    <div class="category-con">
-                        <div class="content-con j_categoryContent">
-                            <div class="pannel-con j_CategoryMenuPannel">
-                                <?php foreach ($categories as $category): ?>
-                                    <div class="pannel-1">
-                                        <div class="hot-word-con" data-spm="subpannel2016028">
-                                            <?php Yii::$service->category->menu->getAllParentCate($category['_id']);?>
-                                            <div class="hot-word-line">
-                                                <div class="line-title">
-                                                    <div class="title-text">当季流行</div>
-<!--                                                    <i class=""></i>-->
-                                                </div>
-                                                <div class="line-con">
-                                                    <a class="hot-word  highlight "
-                                                       href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.274807175YHYiK&amp;q=%C7%EF&amp;pos=3&amp;cat=53636001&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=23&amp;scm=1003.2.201603151.OTHER_1509507600408_721325&amp;industryCatId=53636001#J_crumbs">秋冬新品</a>
-                                                    <div class="seprate clearfix"></div>
-                                                </div>
+        <div class="left_proclass_menu">
+            <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
+            <div class="hd_wr_nav_main">
+                <div class="category-con">
+                    <div class="content-con j_categoryContent">
+                        <div class="pannel-con j_CategoryMenuPannel">
+                            <?php foreach ($categories as $category): ?>
+                            <div class="pannel-1">
+                                <div class="hot-word-con" data-spm="subpannel2016028">
+                                    <?php
+                                    $cates = Yii::$service->category->getTreeArr($category['_id']);
+                                    foreach ($cates as $cate):
+                                    ?>
+                                    <div class="hot-word-line">
 
-                                            </div>
-
-                                            <div class="hot-word-line">
-                                                <div class="line-title">
-                                                    <div class="title-text">男士外套</div>
-                                                    <i class="fp-iconfont"></i>
-                                                </div>
-                                                <div class="line-con">
-
-
-                                                    <a class="hot-word  highlight "
-                                                       href="https://list.tmall.com/search_product.htm?q=%BC%D0%BF%CB&amp;pos=1&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1511563384974_708738#J_crumbs">夹克</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%B5%A5%CE%F7&amp;pos=2&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1510587054248_708738#J_crumbs">单西</a>
-
-
-                                                    <a class="hot-word  highlight "
-                                                       href="https://list.tmall.com/search_product.htm?q=%B0%F4%C7%F2%B7%FE&amp;pos=3&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509630369875_708738#J_crumbs">棒球服</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%C3%DE%D2%C2&amp;pos=4&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509168846494_708738#J_crumbs">棉衣</a>
-
-
-                                                    <a class="hot-word  highlight "
-                                                       href="https://list.tmall.com/search_product.htm?q=%B4%F3%D2%C2&amp;pos=5&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1512287864435_708738#J_crumbs">毛呢大衣</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%B7%E7%D2%C2&amp;pos=6&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509151795703_708738#J_crumbs">风衣</a>
-
-
-                                                    <a class="hot-word  highlight "
-                                                       href="https://list.tmall.com/search_product.htm?q=%CE%F7%B7%FE%CC%D7%D7%B0&amp;pos=7&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1508739217864_708738#J_crumbs">西服套装</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%D3%F0%C8%DE%B7%FE&amp;pos=8&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1508500528625_708738#J_crumbs">羽绒服</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%C6%A4%D2%C2&amp;pos=9&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509522897408_708738#J_crumbs">皮衣</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%D4%CB%B6%AF%B7%FE&amp;pos=10&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1510542876926_708738#J_crumbs">运动服</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%B9%A4%D7%B0%CD%E2%CC%D7&amp;pos=11&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509120731877_708738#J_crumbs">工装外套</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%D5%EB%D6%AF%BF%AA%C9%C0&amp;pos=12&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1512126418171_708738#J_crumbs">针织开衫</a>
-
-
-                                                    <a class="hot-word "
-                                                       href="https://list.tmall.com/search_product.htm?q=%C2%ED%BC%D7&amp;pos=13&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1512492405755_708738#J_crumbs">马甲</a>
-
-
-                                                    <div class="seprate clearfix"></div>
-
-                                                </div>
-
-                                            </div>
-
+                                        <div class="line-title">
+                                            <div class="title-text"><a href="<?= $cate['url'] ?>" target="_blank"><?= $cate['name'] ?></a></div>
+                                            <!--                                                    <i class=""></i>-->
                                         </div>
+                                        <?php if (isset($cate['child']) && !empty($cate['child'])): ?>
+                                            <div class="line-con">
+                                                <?php foreach ($cates as $c): ?>
+                                                    <a class="hot-word  highlight" href="<?= $c['url'] ?>" target="_blank"><?= $c['name'] ?></a>
+                                                <?php endforeach; ?>
+                                                <div class="seprate clearfix"></div>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
-                                <?php endforeach; ?>
+                                    <?php endforeach;?>
+                                </div>
                             </div>
+                        <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
     </div>
     <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
@@ -277,10 +217,10 @@
         });
 
 
-        $(".left_proclass_menu").bind('mouseover',function(){
+        $(".left_proclass_menu").bind('mouseover', function () {
             $(this).find('.hd_wr_nav_main').show();
         })
-        $(".left_proclass_menu").bind('mouseout',function(){
+        $(".left_proclass_menu").bind('mouseout', function () {
             $('.hd_wr_nav_main').hide();
         })
     });

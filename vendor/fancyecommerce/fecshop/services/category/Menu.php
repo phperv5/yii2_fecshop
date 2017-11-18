@@ -141,14 +141,4 @@ class Menu extends Service
         return '';
     }
 
-    /*
-     * 获取所有子分类
-     */
-    protected function actionGetAllParentCate($parent_id)
-    {
-        $cates = $this->_categoryModel->getAllParentCate($parent_id);
-        var_dump($cates);
-        return $cates;
-    }
-
 }
