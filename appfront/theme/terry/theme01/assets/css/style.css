@@ -1228,6 +1228,7 @@ input.btn_h_reg:hover {
     position: relative;
     top: 0px;
     left: 0px;
+    z-index: 9999;
 }
 
 .hd_wr_nav_main ul {

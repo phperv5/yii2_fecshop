@@ -6,7 +6,6 @@
                 <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
                 <?php $cates = Yii::$service->category->getTreeArr($category['_id']);
                 if (isset($cates) && !empty($cates)):?>
-
                     <div class="hd_wr_nav_main">
                         <div class="category-con">
                             <div class="content-con j_categoryContent">
