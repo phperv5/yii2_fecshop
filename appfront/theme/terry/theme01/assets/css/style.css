@@ -1231,14 +1231,6 @@ input.btn_h_reg:hover {
 }
 
 
-.hd_wr_nav_main a {
-    display: block;
-    padding: 0px 15px;
-    line-height: inherit;
-    cursor: pointer;
-    hd_wrappertext-decoration: none;
-    border-left: 1px solid #e8e8e8;
-}
 
 .hd_wr_nav_main ul {
     list-style: none;
@@ -1251,32 +1243,9 @@ input.btn_h_reg:hover {
     border: 1px solid #CCC;
 }
 
-.hd_wr_nav_main:hover a {
-    background: #fff url(../images/w/bg_x.png) no-repeat right -100px;
-    box-shadow: 3px 0px 3px #E1E1E1;
-    border-left-color: #CCC;
-}
-
-
-
-.hd_wr_nav_main:hover ul a {
-    display: block;
-    margin: 0px;
-    padding: 5px 5px 5px 20px;
-    background: url(../images/w/bg_x.png) no-repeat 7px -153px;
-    border-left-style: none;
-}
-
-
 
 .hd_wr_nav_main ul.hdcate {
     width: 520px;
-}
-
-.hd_wr_nav_main ul.hdcate a {
-    width: 230px;
-    display: inline-block;
-    box-shadow: none;
 }
 
 .hd_wr_nav_main ul.hdbrands {
