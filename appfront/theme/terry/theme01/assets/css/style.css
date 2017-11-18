@@ -1203,7 +1203,7 @@ input.btn_h_reg:hover {
 
 /*32*/
 .hd_wr_nav_main {
-    width: auto;
+    width: 100%;
     margin: 0px;
     padding: 0px;
     z-index: 9999;
