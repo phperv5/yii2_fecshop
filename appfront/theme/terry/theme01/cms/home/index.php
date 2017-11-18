@@ -149,7 +149,7 @@
                 });
                 $(".mhl_first_main").hover(
                     function () {
-                        $('.hd_wr_nav_main').show();
+                        $(this).next().show();
                     },
                     function () {
                         $('.hd_wr_nav_main').hide();
