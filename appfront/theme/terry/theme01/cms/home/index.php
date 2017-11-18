@@ -5,8 +5,12 @@
             <div class="left_proclass_menu">
                 <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
                 <div class="hd_wr_nav_main">
-                    <ul class="hdcate">
+<!--                    <ul class="hdcate">-->
+                    <div class="content-con j_categoryContent">
+                    <div class="pannel-con j_CategoryMenuPannel">
+
                         <?php foreach ($categories as $category): ?>
+
                             <div class="pannel-1">
                                 <div class="hot-word-con" data-spm="subpannel2016028">
 
@@ -91,7 +95,9 @@
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    </ul>
+                    </div>
+                    </div>
+<!--                    </ul>-->
                 </div>
             </div>
         <?php endforeach; ?>
