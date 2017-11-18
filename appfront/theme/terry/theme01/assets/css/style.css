@@ -1219,11 +1219,12 @@ input.btn_h_reg:hover {
     top:0;
 }
 
-.hd_wr_nav_float {
-    overflow: hidden;
-    width: 100%;
+.left_proclass_menu {
     position: relative;
+    top: 0px;
+    left: 0px;
 }
+
 
 .hd_wr_nav_main a {
     display: block;
