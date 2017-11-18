@@ -1207,6 +1207,7 @@ input.btn_h_reg:hover {
     margin: 0px;
     padding: 0px;
     z-index: 9999;
+    position: absolute;
 }
 
 .hd_wr_nav_float {
