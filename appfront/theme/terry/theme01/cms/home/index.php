@@ -7,64 +7,205 @@
                 <div class="hd_wr_nav_main">
                     <ul class="hdcate">
                         <?php foreach ($categories as $category): ?>
-                            <table id="gh-sbc">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <h3 class="gh-sbc-parent"><a title=""
-                                                                     href="https://www.ebay.com/global/collectibles-art"
-                                                                     _sp="m570.l3410">Collectibles &amp; art<i
-                                                        class="gh-sbc-h3i gh-sprRetina"></i></a></h3>
-                                        <ul>
-                                            <li><a class="scnd" href="https://www.ebay.com/global/collectibles"
-                                                   _sp="m570.l3638">Collectibles</a></li>
-                                            <li><a class="scnd" href="https://www.ebay.com/global/antiques"
-                                                   _sp="m570.l3636">Antiques</a></li>
-                                            <li><a class="scnd" href="https://www.ebay.com/global/sports-memorabilia"
-                                                   _sp="m570.l3639">Sports memorabilia</a></li>
-                                            <li><a class="scnd" href="https://www.ebay.com/global/art" _sp="m570.l3218">Art</a>
-                                            </li>
-                                        </ul>
-                                        <h3 class="gh-sbc-parent"><a
-                                                    title="Your shopping destination for the best selection and value in electronics and accessories"
-                                                    href="https://www.ebay.com/global/electronics" _sp="m570.l3413">Electronics<i
-                                                        class="gh-sbc-h3i gh-sprRetina"></i></a></h3>
-                                        <ul>
-                                            <li><a class="scnd"
-                                                   href="https://www.ebay.com/global/electronics/computers-networking"
-                                                   _sp="m570.l3653">Computers &amp; tablets</a></li>
-                                            <li><a class="scnd"
-                                                   href="https://www.ebay.com/global/electronics/camera-photo"
-                                                   _sp="m570.l3654">Cameras &amp; photo</a></li>
-                                            <li><a class="scnd"
-                                                   href="https://www.ebay.com/global/electronics/tv-video-audio"
-                                                   _sp="m570.l3655">TV, audio &amp; surveillance</a></li>
-                                            <li><a class="scnd"
-                                                   href="https://www.ebay.com/global/electronics/cell-phone-pda"
-                                                   _sp="m570.l3652">Cell phones &amp; accessories</a></li>
-                                        </ul>
-                                        <h3 class="gh-sbc-parent"><a
-                                                    title="Your new destination for Clothing, Shoes &amp; Accessories on eBay"
-                                                    href="https://www.ebay.com/global/fashion"
-                                                    _sp="m570.l3409">Fashion<i class="gh-sbc-h3i gh-sprRetina"></i></a>
-                                        </h3>
-                                        <ul>
-                                            <li><a class="scnd"
-                                                   href="https://www.ebay.com/global/fashion/womens-clothing"
-                                                   _sp="m570.l3632">Women</a></li>
-                                            <li><a class="scnd" href="https://www.ebay.com/global/fashion/mens-clothing"
-                                                   _sp="m570.l3633">Men</a></li>
-                                            <li><a class="scnd"
-                                                   href="https://www.ebay.com/global/fashion/jewelry-watches"
-                                                   _sp="m570.l3634">Jewelry &amp; watches</a></li>
-                                            <li><a class="scnd" href="https://www.ebay.com/global/fashion/shoes"
-                                                   _sp="m570.l3635">Shoes</a></li>
-                                        </ul>
-                                    </td>
+                            <div class="pannel-1">
+                                <div class="hot-word-con" data-spm="subpannel2016028">
 
-                                </tr>
-                                </tbody>
-                            </table>
+                                    <div class="hot-word-line">
+                                        <div class="line-title">
+                                            <div class="title-text">当季流行</div>
+                                            <i class="fp-iconfont"></i>
+                                        </div>
+                                        <div class="line-con">
+
+
+
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.274807175YHYiK&amp;q=%C7%EF&amp;pos=3&amp;cat=53636001&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=23&amp;scm=1003.2.201603151.OTHER_1509507600408_721325&amp;industryCatId=53636001#J_crumbs">秋冬新品</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.1000721.3.Ymh4L4&amp;pos=4&amp;cat=53446004&amp;style=g&amp;from=sn_1_cat&amp;acm=201603151.1003.2.721325&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1510135227529_721325&amp;industryCatId=50025174#J_crumbs">商场同款</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%D3%F0%C8%DE%B7%FE&amp;pos=5&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1511202610942_721325#J_crumbs">时尚羽绒</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%BC%D0%BF%CB&amp;pos=6&amp;cat=50025174&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1510094716834_721325#J_crumbs">修身夹克</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%CE%C0%D2%C2&amp;pos=7&amp;cat=50025174&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1509472067272_721325#J_crumbs">潮流卫衣</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%C5%A3%D7%D0%B3%C4%C9%C0&amp;pos=8&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1508604640716_721325#J_crumbs">牛仔衬衫</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%C3%DE%B7%FE&amp;pos=9&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1509897207274_721325#J_crumbs">保暖棉服</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%D5%EB%D6%AF%C9%C0&amp;pos=10&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1509757720517_721325#J_crumbs">温暖的针织衫</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%D0%DE%C9%ED%CE%F7%B7%FE&amp;pos=11&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1509861750707_721325#J_crumbs">修身西服</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%B7%E7%D2%C2&amp;pos=12&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1511288909774_721325#J_crumbs">秋冬风衣</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%CA%F8%BD%C5%BF%E3&amp;pos=13&amp;cat=50025174&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1508952674248_721325#J_crumbs">束脚裤</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?spm=875.7931836/B.subpannel2016028.39.atqIwN&amp;q=9%B7%D6%BF%E3&amp;pos=14&amp;cat=50025174&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1512359396470_721325#J_crumbs">九分裤</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%C6%C6%B6%B4%C5%A3%D7%D0%BF%E3&amp;pos=15&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603151.OTHER_1511681499029_721325#J_crumbs">破洞牛仔裤</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%C5%DC%B2%BD%D0%AC&amp;spm=a220m.1000858.a2227oh.d100&amp;pos=16&amp;from=.list.pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1512047432013_721325">跑步鞋</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.1000721.1.DoCnVK&amp;q=%D0%DD%CF%D0%D4%CB%B6%AF%D0%AC&amp;pos=17&amp;cat=50020909&amp;style=g&amp;from=sn_1_cat-qp&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;scm=1003.2.201603151.OTHER_1510856085296_721325&amp;smAreaId=330100#J_crumbs">休闲鞋</a>
+
+
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%C0%BA%C7%F2%D0%AC&amp;spm=a221t.1710954.a2227oh.d100&amp;pos=19&amp;vmarket=&amp;from=sports..pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1510202655368_721325">篮球鞋</a>
+
+
+
+
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%D7%D4%D0%D0%B3%B5&amp;spm=875.7931836%2FB.a2227oh.d100&amp;pos=22&amp;vmarket=&amp;from=mallfp..pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1510919733440_721325">自行车</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.1000721.2.eYS6RC&amp;q=%C6%BD%BA%E2%B3%B5&amp;pos=23&amp;cat=54180014&amp;style=g&amp;from=sn_1_cat-qp&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;scm=1003.2.201603151.OTHER_1508522549697_721325&amp;smAreaId=330100#J_crumbs">平衡车</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.1000721.6.WEE3Am&amp;q=%B7%AB%B2%BC%D0%AC&amp;pos=24&amp;cat=50020909&amp;style=g&amp;from=sn_1_cat-qp&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;scm=1003.2.201603151.OTHER_1508832065059_721325&amp;smAreaId=330100#J_crumbs">帆布鞋</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%D4%CB%B6%AF%CC%D7%D7%B0&amp;pos=25&amp;cat=50020894&amp;style=g&amp;from=sn_1_cat-qp&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;scm=1003.2.201603151.OTHER_1512453903447_721325#J_crumbs">运动套装</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?spm=a220m.1000858.1000721.1.2d4e4a0dUfqkzr&amp;q=%D4%CB%B6%AF%CE%C0%D2%C2&amp;pos=26&amp;cat=50020894&amp;style=g&amp;from=sn_1_cat-qp&amp;acm=201603151.1003.2.721325&amp;sort=s&amp;scm=1003.2.201603151.OTHER_1512660171728_721325&amp;smAreaId=330100#J_crumbs">运动卫衣</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%D3%E3%B8%CD&amp;spm=a220m.1000858.a2227oh.d100&amp;pos=27&amp;from=.list.pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1512664541626_721325">鱼竿</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%B3%E5%B7%E6%D2%C2&amp;spm=a220m.1000858.a2227oh.d100&amp;pos=28&amp;from=.list.pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1511862774799_721325">冲锋衣</a>
+
+
+
+
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%C5%DC%B2%BD%BB%FA&amp;spm=a220m.1000858.a2227oh.d100&amp;pos=31&amp;from=.list.pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1510713252147_721325">跑步机</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%B5%E7%B6%AF%B3%B5&amp;spm=a220m.1000858.a2227oh.d100&amp;pos=32&amp;from=.list.pc_1_searchbutton&amp;acm=201603151.1003.2.721325&amp;type=p&amp;scm=1003.2.201603151.OTHER_1510022307190_721325">电动车</a>
+
+
+
+                                            <div class="seprate clearfix"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="hot-word-line">
+                                        <div class="line-title">
+                                            <div class="title-text">男士外套</div>
+                                            <i class="fp-iconfont"></i>
+                                        </div>
+                                        <div class="line-con">
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%BC%D0%BF%CB&amp;pos=1&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1511563384974_708738#J_crumbs">夹克</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%B5%A5%CE%F7&amp;pos=2&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1510587054248_708738#J_crumbs">单西</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%B0%F4%C7%F2%B7%FE&amp;pos=3&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509630369875_708738#J_crumbs">棒球服</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%C3%DE%D2%C2&amp;pos=4&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509168846494_708738#J_crumbs">棉衣</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%B4%F3%D2%C2&amp;pos=5&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1512287864435_708738#J_crumbs">毛呢大衣</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%B7%E7%D2%C2&amp;pos=6&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509151795703_708738#J_crumbs">风衣</a>
+
+
+
+                                            <a class="hot-word  highlight " href="https://list.tmall.com/search_product.htm?q=%CE%F7%B7%FE%CC%D7%D7%B0&amp;pos=7&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1508739217864_708738#J_crumbs">西服套装</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%D3%F0%C8%DE%B7%FE&amp;pos=8&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1508500528625_708738#J_crumbs">羽绒服</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%C6%A4%D2%C2&amp;pos=9&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509522897408_708738#J_crumbs">皮衣</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%D4%CB%B6%AF%B7%FE&amp;pos=10&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1510542876926_708738#J_crumbs">运动服</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%B9%A4%D7%B0%CD%E2%CC%D7&amp;pos=11&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1509120731877_708738#J_crumbs">工装外套</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%D5%EB%D6%AF%BF%AA%C9%C0&amp;pos=12&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1512126418171_708738#J_crumbs">针织开衫</a>
+
+
+
+                                            <a class="hot-word " href="https://list.tmall.com/search_product.htm?q=%C2%ED%BC%D7&amp;pos=13&amp;cat=50025174&amp;active=1&amp;style=g&amp;from=sn_1_rightnav&amp;acm=201603072.1003.2.708738&amp;sort=s&amp;search_condition=7&amp;scm=1003.2.201603072.OTHER_1512492405755_708738#J_crumbs">马甲</a>
+
+
+
+                                            <div class="seprate clearfix"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
                         <?php endforeach; ?>
                     </ul>
                 </div>
