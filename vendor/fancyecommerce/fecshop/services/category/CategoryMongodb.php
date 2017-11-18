@@ -408,7 +408,7 @@ class CategoryMongodb implements CategoryInterface
         return $data;
     }
 
-    protected function getChildCate($category_id)
+    public function getChildCate($category_id)
     {
         //echo $category_id;
         $data = $this->_categoryModel->find()->asArray()->where([
