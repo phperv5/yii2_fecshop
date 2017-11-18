@@ -1223,6 +1223,9 @@ input.btn_h_reg:hover {
     cursor: pointer;
     hd_wrappertext-decoration: none;
     border-left: 1px solid #e8e8e8;
+    position: relative;
+    left:0;
+    top:0;
 }
 
 .hd_wr_nav_main ul {
