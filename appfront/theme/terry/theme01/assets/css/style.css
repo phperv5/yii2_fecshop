@@ -1204,6 +1204,7 @@ input.btn_h_reg:hover {
 /*float*/
 .hd_wr_nav_main {
     width: 500px;
+    height: 300px;
     margin: 0px;
     padding: 0px;
     z-index: 1;
