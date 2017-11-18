@@ -1637,7 +1637,7 @@ a.hd_menu_nv_gohome:hover {
     background: #FFF;
 }
 
-.main_h_left a {
+.main_h_left a.mhl_first_main {
     background: url(../images/w/bg_x.png) no-repeat 220px -153px;
     display: block;
     margin: 0px;
@@ -1649,7 +1649,7 @@ a.hd_menu_nv_gohome:hover {
     color: #333;
 }
 
-.main_h_left a:hover {
+.main_h_left a.mhl_first_main:hover {
     font-weight: bold;
     color: #C00;
     text-decoration: none;
