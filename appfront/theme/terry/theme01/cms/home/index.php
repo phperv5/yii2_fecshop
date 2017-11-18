@@ -5,7 +5,8 @@
             <div class="left_proclass_menu">
                 <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
                 <div class="hd_wr_nav_main">
-<!--                    <ul class="hdcate">-->
+                    <ul class="hdcate">
+                    <div class="category-con">
                     <div class="content-con j_categoryContent">
                     <div class="pannel-con j_CategoryMenuPannel">
 
@@ -97,7 +98,8 @@
                         <?php endforeach; ?>
                     </div>
                     </div>
-<!--                    </ul>-->
+                    </div>
+                    </ul>
                 </div>
             </div>
         <?php endforeach; ?>
