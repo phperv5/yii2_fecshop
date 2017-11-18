@@ -1,44 +1,27 @@
+
 <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
         <?php foreach ($categories as $category): ?>
             <div class="left_proclass_menu">
                 <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
-                <?php $cates = Yii::$service->category->getTreeArr($category['_id']);
-                if (isset($cates) && !empty($cates)):?>
+                <?php $cates = Yii::$service->category->getChildCate($category['_id']); ?>
+                <?php if (isset($cates) && !empty($cates)):?>
                     <div class="hd_wr_nav_main">
-                        <div class="category-con">
-                            <div class="content-con j_categoryContent">
-                                <div class="pannel-con j_CategoryMenuPannel">
-                                    <div class="pannel-1">
-                                        <div class="hot-word-con" data-spm="subpannel2016028">
-                                            <?php
-
-                                            foreach ($cates as $cate):
-                                                ?>
-                                                <div class="hot-word-line">
-
-                                                    <div class="line-title">
-                                                        <div class="title-text"><a href="<?= $cate['url'] ?>"
-                                                                                   target="_blank"><?= $cate['name'] ?></a>
-                                                        </div>
-                                                        <!--                                                    <i class=""></i>-->
-                                                    </div>
-                                                    <?php if (isset($cate['child']) && !empty($cate['child'])): ?>
-                                                        <div class="line-con">
-                                                            <?php foreach ($cates as $c): ?>
-                                                                <a class="hot-word  highlight" href="<?= $c['url'] ?>"
-                                                                   target="_blank"><?= $c['name'] ?></a>
-                                                            <?php endforeach; ?>
-                                                            <div class="seprate clearfix"></div>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                </div>
-                                            <?php endforeach; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div style="width: 600px;background-color: #fff;border: none;box-shadow: 3px 3px 3px #E1E1E1;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <?php foreach ($cates as $k=>$c): ?>
+                                    <?php if($k % 3 == 0): ?>
+                                        <tr>
+                                    <?php endif; ?>
+                                    <td><a href="<?= $c['url_key'];?>" target="_blank"><?= $c['name']['name_en'];?></a></td>
+                                    <?php if($k % 3 == 0): ?>
+                                        </tr>
+                                    <?php endif; ?>
+                                <?php endforeach;?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 <?php endif; ?>
