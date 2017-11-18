@@ -15,7 +15,7 @@
                                             <div class="hot-word-line">
                                                 <div class="line-title">
                                                     <div class="title-text">当季流行</div>
-                                                    <i class="fp-iconfont"></i>
+                                                    <i class="fp-iconfont"></i>
                                                 </div>
                                                 <div class="line-con">
                                                     <a class="hot-word  highlight "

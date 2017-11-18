@@ -6395,14 +6395,8 @@ a.cartqtyup {
 
 /*tmall*/
 
-.w950 {
-    width: 950px
-}
-
-.col-main {
-    float: left;
-    width: 100%;
-    min-height: 1px
+.fp-iconfont {
+    font-family: fpIconFont!important;
 }
 
 .col-extra, .col-sub {
@@ -6431,35 +6425,6 @@ a.cartqtyup {
     font-style: normal
 }
 
-#site-nav .sn-container, #site-nav a:link, #site-nav a:visited {
-    color: #999
-}
-
-#site-nav .menu-bd, #site-nav a:active, #site-nav a:hover {
-    color: #FF0036
-}
-
-#site-nav a.sn-msg-title:link, #site-nav a.sn-msg-title:visited {
-    color: #fff
-}
-
-#site-nav .hover a.menu-hd, #site-nav .mui-global-iconfont, #site-nav .sn-login-info a:hover .sn-msg-num, #site-nav .sn-login-info a:hover .sn-point-value, #site-nav .sn-menu:hover a.menu-hd, #site-nav a.sn-cart-link:hover .mc-count {
-    color: #FF0036
-}
-
-#site-nav {
-    width: auto;
-    height: 26px;
-    position: relative !important;
-    background: #f2f2f2;
-    z-index: 99999;
-    -webkit-transform: translate3d(0, 0, 0);
-    border-bottom: 1px solid #e5e5e5
-}
-
-#site-nav .sn-container, #site-nav .sn-login-info, #sn-bd {
-    position: relative
-}
 
 #sn-bd {
     width: 990px;
