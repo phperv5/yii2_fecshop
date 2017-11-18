@@ -11,7 +11,7 @@
                                 <?php foreach ($categories as $category): ?>
                                     <div class="pannel-1">
                                         <div class="hot-word-con" data-spm="subpannel2016028">
-                                            <?php Yii::$service->category->menu->getChildCate($category['_id']);?>
+                                            <?php Yii::$service->category->menu->getAllParentCate($category['_id']);?>
                                             <div class="hot-word-line">
                                                 <div class="line-title">
                                                     <div class="title-text">当季流行</div>
