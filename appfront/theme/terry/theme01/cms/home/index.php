@@ -147,9 +147,9 @@
                     autoplay:true,
                     autoplayTimeout:3000
                 });
-                $(".mhl_first_main").hover(
+                $(".left_proclass_menu").hover(
                     function () {
-                        $(this).next().show();
+                        $(this).find('.hd_wr_nav_main').show();
                     },
                     function () {
                         $('.hd_wr_nav_main').hide();
