@@ -360,7 +360,7 @@ class CategoryMongodb implements CategoryInterface
         return $data;
     }
 
-    protected function getAllParentCate($allParent)
+    public function getAllParentCate($allParent)
     {
         //var_dump($allParent);exit;
         $d = $allParent;

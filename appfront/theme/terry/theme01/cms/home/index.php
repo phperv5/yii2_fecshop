@@ -11,7 +11,7 @@
                                 <?php foreach ($categories as $category): ?>
                                     <div class="pannel-1">
                                         <div class="hot-word-con" data-spm="subpannel2016028">
-
+                                            <?php Yii::$service->category->menu->getChildCate($category['_id']);?>
                                             <div class="hot-word-line">
                                                 <div class="line-title">
                                                     <div class="title-text">当季流行</div>
@@ -277,10 +277,10 @@
         });
 
 
-        $(".mhl_first_main").live('mouseover',function(){
+        $(".mhl_first_main").bind('mouseover',function(){
             $(this).next().show();
         })
-        $(".mhl_first_main").live('mouseout',function(){
+        $(".mhl_first_main").bind('mouseout',function(){
             $('.hd_wr_nav_main').hide();
         })
     });
