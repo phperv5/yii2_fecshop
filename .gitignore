@@ -21,3 +21,4 @@ appfront/web/index.php
 .idea/workspace.xml___jb_tmp___
 common/config/fecshop_local_services/Payment_new.php
 appfront/web/
+vendor/fancyecommerce/fecshop/shell/backup.sh

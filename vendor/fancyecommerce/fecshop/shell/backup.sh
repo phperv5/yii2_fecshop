@@ -1,6 +1,8 @@
 #!/bin/sh
 
 ls_date=`date +%Y%m%d`
-echo ls_date;
+
+mongodump -h 127.0.0.1 -d fecshop -o /root/fechsop.$ls_date
+echo "finish";
 
 
