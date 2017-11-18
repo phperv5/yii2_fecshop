@@ -1210,6 +1210,15 @@ input.btn_h_reg:hover {
     position: absolute;
 }
 
+.hd_wr_nav_main a.mhl_first_main{
+    padding-top: 5px;
+    border-top-style: none;
+    background-position: 220px -150px;
+    position: relative;
+    left:0;
+    top:0;
+}
+
 .hd_wr_nav_float {
     overflow: hidden;
     width: 100%;
@@ -1223,9 +1232,6 @@ input.btn_h_reg:hover {
     cursor: pointer;
     hd_wrappertext-decoration: none;
     border-left: 1px solid #e8e8e8;
-    position: relative;
-    left:0;
-    top:0;
 }
 
 .hd_wr_nav_main ul {
