@@ -9433,11 +9433,9 @@ body {
 }
 
 .category-con .content-con .pannel-con {
-    display: none;
     height: 500px;
     width: 852px;
     left: 200px;
-    position: absolute;
     background-color: #fff
 }
 
