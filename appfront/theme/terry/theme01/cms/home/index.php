@@ -1,8 +1,30 @@
 <div class="main_h">
     <div class="main_h_left">
-        <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
-        <?php foreach($categories as $category): ?>
-        <a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a>
+        <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
+        <?php foreach ($categories as $category): ?>
+            <div class="left_proclass_menu">
+                <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
+                <?php $cates = Yii::$service->category->getChildCate($category['_id']); ?>
+                <?php if (isset($cates) && !empty($cates)):?>
+                    <div class="hd_wr_nav_main">
+                        <div style="width: 600px;background-color: #fff;border: none;box-shadow: 3px 3px 3px #E1E1E1;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <?php foreach ($cates as $k=>$c): ?>
+                                    <?php if($k % 3 == 0): ?>
+                                        <tr>
+                                    <?php endif; ?>
+                                    <td><a href="<?= $c['url_key'];?>" target="_blank"><?= $c['name']['name_en'];?></a></td>
+                                    <?php if($k % 3 == 0): ?>
+                                        </tr>
+                                    <?php endif; ?>
+                                <?php endforeach;?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
         <?php endforeach; ?>
     </div>
     <div class="main_h_banner">

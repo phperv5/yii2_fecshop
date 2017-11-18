@@ -1228,6 +1228,7 @@ input.btn_h_reg:hover {
     position: relative;
     top: 0px;
     left: 0px;
+    z-index: 9999;
 }
 
 .hd_wr_nav_main ul {
@@ -1642,6 +1643,7 @@ a.hd_menu_nv_gohome:hover {
     height: 360px;
     width: 960px;
     position: relative;
+    z-index: 2;
 }
 
 .main_h_banner ul, .main_h_banner ul li {
@@ -1650,30 +1652,7 @@ a.hd_menu_nv_gohome:hover {
     list-style: none;
 }
 
-.hm_bnr_ndots {
-    padding: 0px 30px;
-    bottom: 20px;
-    position: absolute;
-    right: 0px;
-    z-index: 1000;
-}
 
-.hm_bnr_ndots .hm_bnr_dot {
-    background: rgb(255, 255, 255);
-    margin: 0px 3px;
-    border-radius: 50px;
-    width: 10px;
-    height: 10px;
-    text-align: center;
-    color: rgb(255, 102, 0);
-    font-size: 16px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.hm_bnr_ndots .active {
-    background: rgb(170, 0, 0);
-}
 
 .main_h_a7 {
     margin: -360px 0px 0px;
