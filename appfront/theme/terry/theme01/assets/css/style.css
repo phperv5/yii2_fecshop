@@ -1209,6 +1209,7 @@ input.btn_h_reg:hover {
     padding: 0px;
     z-index: 1;
     top: 0px;
+    left: 100%;
     position: absolute;
 }
 
