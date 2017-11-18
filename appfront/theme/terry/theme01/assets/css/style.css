@@ -1125,12 +1125,6 @@ input.btn_h_reg:hover {
     background: url(../images/w/bg_x.png) no-repeat right -50px;
 }
 
-.hd_wr_nav_main {
-    width: auto;
-    margin: 0px;
-    padding: 0px;
-}
-
 .hd_wr_nav a {
     display: block;
     padding: 0px 15px;
@@ -1206,6 +1200,90 @@ input.btn_h_reg:hover {
     background: #FFF url(none);
     box-shadow: none;
 }
+
+/*32*/
+.hd_wr_nav_main {
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hd_wr_nav_main a {
+    display: block;
+    padding: 0px 15px;
+    line-height: inherit;
+    cursor: pointer;
+    hd_wrappertext-decoration: none;
+    border-left: 1px solid #e8e8e8;
+}
+
+.hd_wr_nav_main ul {
+    list-style: none;
+    width: auto;
+    width: 160px;
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.5em;
+    box-shadow: 3px 3px 3px #E1E1E1;
+    z-index: 100000;
+    border: 1px solid #CCC;
+}
+
+.hd_wr_nav_main:hover a {
+    background: #fff url(../images/w/bg_x.png) no-repeat right -100px;
+    box-shadow: 3px 0px 3px #E1E1E1;
+    border-left-color: #CCC;
+}
+
+.hd_wr_nav_main:hover ul {
+    display: block;
+}
+
+.hd_wr_nav_main:hover ul a {
+    display: block;
+    margin: 0px;
+    padding: 5px 5px 5px 20px;
+    background: url(../images/w/bg_x.png) no-repeat 7px -153px;
+    border-left-style: none;
+}
+
+.hd_wr_nav_main ul a:hover {
+    background: #FFC url(../images/w/bg_x.png) no-repeat 7px -203px;
+}
+
+.hd_wr_nav_main ul.hdcate {
+    width: 520px;
+}
+
+.hd_wr_nav_main ul.hdcate a {
+    width: 230px;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.hd_wr_nav_main ul.hdbrands {
+    width: 272px;
+    border: 1px solid #CCC;
+    padding: 0px;
+}
+
+.hd_wr_nav_main ul.hdbrands a {
+    width: 120px;
+    display: inline-block;
+    margin: 0px;
+    padding: 8px;
+    float: left;
+    height: 40px;
+    border-style: none;
+    background: #FFF url(none);
+    box-shadow: none;
+}
+
 
 .header {
     margin: 0px auto;
