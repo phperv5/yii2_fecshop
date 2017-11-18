@@ -1222,8 +1222,8 @@ input.btn_h_reg:hover {
     width: auto;
     width: 160px;
     display: none;
-    position: relative;
-    left: 0px;
+    position: absolute;
+    left: 100%;
     top: 0px;
     background: #FFFFFF;
     margin: 0px;
