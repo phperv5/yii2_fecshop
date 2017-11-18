@@ -277,10 +277,10 @@
         });
 
 
-        $(".mhl_first_main").bind('mouseover',function(){
-            $(this).next().show();
+        $(".left_proclass_menu").bind('mouseover',function(){
+            $(this).find('.hd_wr_nav_main').show();
         })
-        $(".mhl_first_main").bind('mouseout',function(){
+        $(".left_proclass_menu").bind('mouseout',function(){
             $('.hd_wr_nav_main').hide();
         })
     });
