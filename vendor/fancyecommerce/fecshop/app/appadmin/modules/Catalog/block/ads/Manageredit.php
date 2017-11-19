@@ -7,7 +7,7 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\appadmin\modules\Catalog\block\keywords;
+namespace fecshop\app\appadmin\modules\Catalog\block\ads;
 
 use fec\helpers\CRequest;
 use fec\helpers\CUrl;
