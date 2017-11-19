@@ -49,7 +49,6 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 
         return [
             'pagerForm' => $pagerForm,
-            'searchBar' => $searchBar,
             'editBar' => $editBar,
             'thead' => $thead,
             'tbody' => $tbody,
@@ -62,14 +61,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     public function getSearchArr()
     {
-        $data = [
-            [    // 字符串类型
-                'type' => 'inputtext',
-                'title' => '搜索关键字',
-                'name' => 'title',
-                'columns_type' => 'string',
-            ],
-        ];
+        $data = [];
         return $data;
     }
 
@@ -96,6 +88,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'label' => 'banner',
                 'width' => '110',
                 'align' => 'left',
+                'convert'        => ['string' => 'img'],
             ],
             [
                 'orderField' => 'sort_order',

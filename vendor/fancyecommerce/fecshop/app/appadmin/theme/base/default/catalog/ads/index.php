@@ -16,14 +16,7 @@ use fec\helpers\CRequest;
 	<?=  CRequest::getCsrfInputHtml();  ?>
 	<?=  $pagerForm;  ?>
 </form>
-<div class="pageHeader">
-	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="<?= \fec\helpers\CUrl::getCurrentUrl();  ?>" method="post">
-		<?php echo CRequest::getCsrfInputHtml();  ?>
-		<div class="searchBar">
-			<?php  echo $searchBar; ?>
-		</div>
-	</form>
-</div>
+
 <div class="pageContent">
 	<div class="panelBar">
 		<?= $editBar;  ?>
