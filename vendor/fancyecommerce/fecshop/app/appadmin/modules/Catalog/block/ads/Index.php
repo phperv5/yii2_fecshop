@@ -103,14 +103,12 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'orderField'    => 'created_at',
                 'label'            => '创建时间',
                 'width'            => '110',
-                'align'        => 'center',
                 'convert'        => ['int' => 'datetime'],
             ],
             [
                 'orderField'    => 'updated_at',
                 'label'            => '更新时间',
                 'width'            => '110',
-                'align'        => 'center',
                 'convert'        => ['int' => 'datetime'],
             ],
 
