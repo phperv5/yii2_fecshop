@@ -34,7 +34,7 @@
                foreach($ads as $v):
             ?>
             <a class="item" target="_blank" href="<?= $v['url'] ?>">
-                <img src="<?= $v['banner'] ?>" alt=""></a>
+                <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>" style="width: 960px;height:360px;"></a>
             <?php endforeach;?>
         </div>
         <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
