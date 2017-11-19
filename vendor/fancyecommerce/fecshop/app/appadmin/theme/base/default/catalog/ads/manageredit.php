@@ -94,6 +94,7 @@ use fec\helpers\CUrl;
                                     if (data.return_status == "success") {
                                         var str = '<img src="'+data.img_url+'" style="width: 100px;"/>'
                                         jQuery(".productattach tbody ").empty().append(str);
+                                        $('[name="editFormData[banner]"]').val(data.img_url);
                                     } else {
                                         alert(data.msg);
                                     }
