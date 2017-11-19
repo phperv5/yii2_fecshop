@@ -20,6 +20,7 @@ use fec\helpers\CRequest;
 <style>
     .grid .gridTbody td div{
         height: 100px;
+        line-height: 100px;
     }
 </style>
 <div class="pageContent">
