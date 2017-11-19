@@ -31,4 +31,9 @@ class AdsController extends CatalogController
         return $this->render($this->action->id, $data);
     }
 
+    public function actionManagereditsave()
+    {
+        $data = $this->getBlock('manageredit')->save();
+    }
+
 }

@@ -86,7 +86,7 @@ class Ads extends Service
         if ($primaryVal) {
             $model = $this->_reviewModel->findOne($primaryVal);
             if (!$model) {
-                Yii::$service->helper->errors->add('keywordsModel ' . $this->getPrimaryKey() . ' is not exist');
+                Yii::$service->helper->errors->add('adsModel ' . $this->getPrimaryKey() . ' is not exist');
 
                 return;
             }
@@ -154,7 +154,7 @@ class Ads extends Service
 
                     $model->delete();
                 } else {
-                    Yii::$service->helper->errors->add("keywords Remove Errors:ID:$id is not exist.");
+                    Yii::$service->helper->errors->add("ads Remove Errors:ID:$id is not exist.");
 
                     return false;
                 }
@@ -166,7 +166,7 @@ class Ads extends Service
 
                 $model->delete();
             } else {
-                Yii::$service->helper->errors->add("keywords Remove Errors:ID:$id is not exist.");
+                Yii::$service->helper->errors->add("ads Remove Errors:ID:$id is not exist.");
 
                 return false;
             }
