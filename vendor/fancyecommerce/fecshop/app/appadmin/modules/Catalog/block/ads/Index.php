@@ -25,8 +25,8 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
      */
     public function init()
     {
-        $this->_editUrl = CUrl::getUrl('catalog/keywords/manageredit');
-        $this->_deleteUrl = CUrl::getUrl('catalog/keywords/managerdelete'); //delete data url
+        $this->_editUrl = CUrl::getUrl('catalog/ads/manageredit');
+        $this->_deleteUrl = CUrl::getUrl('catalog/ads/managerdelete'); //delete data url
 
         $this->_service = Yii::$service->product->ads;
         parent::init();
