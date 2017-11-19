@@ -24,5 +24,11 @@ class AdsController extends CatalogController
         return $this->render($this->action->id, $data);
     }
 
+    public function actionManageredit()
+    {
+        $data = $this->getBlock()->getLastData();
+
+        return $this->render($this->action->id, $data);
+    }
 
 }

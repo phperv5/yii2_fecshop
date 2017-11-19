@@ -26,7 +26,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function init()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/ads/managereditsave');
         parent::init();
     }
 
@@ -44,15 +44,15 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function setService()
     {
-        $this->_service = Yii::$service->product->keywords;
+        $this->_service = Yii::$service->product->ads;
     }
 
     public function getEditArr()
     {
         return [
             [
-                'label'=>'keywords',
-                'name'=>'keywords',
+                'label'=>'title',
+                'name'=>'title',
                 'display'=>[
                     'type' => 'inputString',
                 ],
@@ -65,19 +65,22 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
                 'display'=>[
                     'type' => 'inputString',
                 ],
+                'require' => 1,
             ],
             [
-                'label'=>'关键字type(类型)',
-                'name'=>'type',
+                'label'=>'banner图',
+                'name'=>'banner',
                 'display'=>[
-                    'type' => 'select',
-                    'data' => [
-                        1    => 'search keywords',
-                        2    => 'Popular Search',
-                        3    => 'Browse by Feature',
-                    ],
+                    'type' => 'inputString',
                 ],
                 'require' => 1,
+            ],
+            [
+                'label'=>'sort_order',
+                'name'=>'sort_order',
+                'display'=>[
+                    'type' => 'inputString',
+                ],
             ],
 
         ];
