@@ -52,6 +52,9 @@ return [
             'keywords' => [
                 'class' => 'fecshop\services\product\Keywords',
             ],
+            'ads' => [
+                'class' => 'fecshop\services\product\Ads',
+            ],
             /* #暂时没用
 
             'coll' => [
