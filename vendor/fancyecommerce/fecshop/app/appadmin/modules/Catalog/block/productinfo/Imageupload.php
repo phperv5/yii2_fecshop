@@ -62,6 +62,7 @@ class Imageupload
         echo json_encode([
             'return_status' => 'success',
             'img_str' => $img_str,
+            'img_url' =>$imgUrl,
         ]);
     }
 
