@@ -12,11 +12,7 @@ use fec\helpers\CRequest;
  * @since 1.0
  */
 ?>
-<style>
-    .grid .gridTbody td div{
-        height: 100px;
-    }
-</style>
+
 <form id="pagerForm" method="post" action="<?= \fec\helpers\CUrl::getCurrentUrl();  ?>">
 	<?=  CRequest::getCsrfInputHtml();  ?>
 	<?=  $pagerForm;  ?>

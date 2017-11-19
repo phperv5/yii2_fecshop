@@ -12,11 +12,16 @@ use fec\helpers\CRequest;
  * @since 1.0
  */
 ?>
+
 <form id="pagerForm" method="post" action="<?= \fec\helpers\CUrl::getCurrentUrl();  ?>">
 	<?=  CRequest::getCsrfInputHtml();  ?>
 	<?=  $pagerForm;  ?>
 </form>
-
+<style>
+    .grid .gridTbody td div{
+        height: 100px;
+    }
+</style>
 <div class="pageContent">
 	<div class="panelBar">
 		<?= $editBar;  ?>
