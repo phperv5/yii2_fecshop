@@ -92,7 +92,8 @@ use fec\helpers\CUrl;
                                     //else $("#feedback").children('img').eq(0).before(data.replace(/&lt;/g,'<').replace(/&gt;/g,'>'));
                                     //	alert(data.return_status);
                                     if (data.return_status == "success") {
-                                        jQuery(".productattach tbody ").empty().append(data.img_str);
+                                        var str = '<img src="'+data.imag_url+'" style="width: 100px;"/>'
+                                        jQuery(".productattach tbody ").empty().append(str);
                                     } else {
                                         alert(data.msg);
                                     }

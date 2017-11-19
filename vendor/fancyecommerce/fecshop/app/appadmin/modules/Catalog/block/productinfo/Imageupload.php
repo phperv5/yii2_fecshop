@@ -92,6 +92,7 @@ class Imageupload
         echo json_encode([
             'return_status' => 'success',
             'img_str' => $str,
+            'imag_url'=>Yii::$service->image->getImgUrl('attachment/'.$fileInfo['savename']),
         ]);
     }
 }
