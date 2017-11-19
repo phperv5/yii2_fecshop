@@ -75,7 +75,7 @@ use fec\helpers\CUrl;
 
 
                             $.ajax({
-                                url: '<?= CUrl::getUrl('catalog/productinfo/upload')  ?>',
+                                url: '<?= CUrl::getUrl('catalog/productinfo/imageupload')  ?>',
                                 type: 'POST',
                                 data: data,
                                 async: false,
