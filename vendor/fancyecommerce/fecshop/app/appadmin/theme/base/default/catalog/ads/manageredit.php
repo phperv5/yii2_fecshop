@@ -93,6 +93,7 @@ use fec\helpers\CUrl;
                                     //	alert(data.return_status);
                                     if (data.return_status == "success") {
                                         var str = '<img src="'+data.imag_url+'" style="width: 100px;"/>'
+                                        alert(str)
                                         jQuery(".productattach tbody ").empty().append(str);
                                     } else {
                                         alert(data.msg);
