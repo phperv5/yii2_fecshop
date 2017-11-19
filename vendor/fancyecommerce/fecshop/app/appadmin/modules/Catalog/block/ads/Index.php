@@ -80,7 +80,8 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
             [
                 'orderField' => 'title',
                 'label' => 'title',
-                'width' => '110',
+                'width' => '100',
+                'height' => '100',
                 'align' => 'left',
             ],
             [
