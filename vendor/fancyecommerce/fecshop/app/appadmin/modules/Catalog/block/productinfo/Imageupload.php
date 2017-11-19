@@ -59,6 +59,8 @@ class Imageupload
             }
             $index++;
         }
+        var_dump($_FILES);
+        var_dump($imgUrl);die;
         echo json_encode([
             'return_status' => 'success',
             'img_str' => $img_str,
