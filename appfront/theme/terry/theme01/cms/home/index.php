@@ -29,9 +29,13 @@
     </div>
     <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
-            <a class="item" href="<?= Yii::$service->url->getUrl('original-mk3-car-keyremote-unlocking-tool-with-online-update'); ?>">
-                <img src="<?= Yii::$service->image->getImgUrl('images/market/1.jpg'); ?>" alt=""></a>
-
+            <?php
+               $ads = Yii::$service->product->ads->getAdList();
+               foreach($ads as $v):
+            ?>
+            <a class="item" target="_blank" href="<?= $v['url'] ?>">
+                <img src="<?= $v['banner'] ?>" alt=""></a>
+            <?php endforeach;?>
         </div>
         <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
     </div>
