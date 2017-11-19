@@ -72,14 +72,15 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     {
         $table_th_bar = [
             [
-                'orderField' => $this->_primaryKey,
-                'label' => 'ID',
-                'width' => '50',
-                'align' => 'center',
-            ],
-            [
                 'orderField' => 'title',
                 'label' => 'title',
+                'width' => '100',
+                'height' => '100',
+                'align' => 'left',
+            ],
+            [
+                'orderField' => 'url',
+                'label' => 'url',
                 'width' => '100',
                 'height' => '100',
                 'align' => 'left',
