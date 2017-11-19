@@ -66,7 +66,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
             [    // 字符串类型
                 'type' => 'inputtext',
                 'title' => '搜索关键字',
-                'name' => 'keywords',
+                'name' => 'title',
                 'columns_type' => 'string',
             ],
         ];

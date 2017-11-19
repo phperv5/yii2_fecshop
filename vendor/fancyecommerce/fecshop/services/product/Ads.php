@@ -19,7 +19,7 @@ use yii\base\InvalidValueException;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Keywords extends Service
+class Ads extends Service
 {
     public $filterByLang;
     protected $_reviewModelName = '\fecshop\models\mongodb\product\Ads';
