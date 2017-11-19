@@ -35,7 +35,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     {
         return [
             'editBar'    => $this->getEditBar(),
-            'review'    => $this->_one,
             'textareas'    => $this->_textareas,
             'lang_attr'    => $this->_lang_attr,
             'saveUrl'    => $this->_saveUrl,

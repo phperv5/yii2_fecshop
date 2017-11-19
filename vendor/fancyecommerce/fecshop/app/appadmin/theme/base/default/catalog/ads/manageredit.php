@@ -30,11 +30,75 @@ use fecadmin\models\AdminRole;
 						<?= $editBar; ?>
 					</div>
 				</fieldset>
+            <div>
 
-				<?= $lang_attr ?>
+                <button style="" onclick="getElementById('attachfile').click()" class="scalable" type="button" title="Duplicate" id=""><span><span><span>附件上传</span></span></span></button>
+                <input type="file" multiple="multiple" id="attachfile" style="height:0;width:0;z-index: -1; position: absolute;left: 10px;top: 5px;"/>
+                <script>
+                    jQuery(document).ready(function () {
+                        jQuery("body").on('click', ".attachment_delete_img", function () {
+                            jQuery(this).parent().parent().remove();
+                        });
+                        //jQuery(".delete_img").click(function(){
+                        //	jQuery
+                        //});
 
-				<?= $textareas ?>
+                        //响应文件添加成功事件
+                        $("#attachfile").change(function () {
 
+                            //创建FormData对象
+                            var thisindex = 0;
+                            jQuery(".productattach tbody tr").each(function () {
+                                rel = parseInt(jQuery(this).attr("rel"));
+                                //alert(rel);
+                                if (rel > thisindex) {
+                                    thisindex = rel;
+                                }
+                            });
+                            //alert(thisindex);
+                            var data = new FormData();
+                            data.append('thisindex', thisindex);
+
+                            //为FormData对象添加数据
+                            $.each($('#attachfile')[0].files, function (i, file) {
+                                data.append('upload_file' + i, file);
+                            });
+                            //$(".loading").show();	//显示加载图片
+                            //发送数据
+
+
+                            $.ajax({
+                                url: '<?= CUrl::getUrl('catalog/productinfo/attachmentupload')  ?>',
+                                type: 'POST',
+                                data: data,
+                                async: false,
+                                dataType: 'json',
+                                timeout: 80000,
+                                cache: false,
+                                contentType: false,		//不可缺参数
+                                processData: false,		//不可缺参数
+                                success: function (data, textStatus) {
+                                    //data = $(data).html();
+                                    //第一个feedback数据直接append，其他的用before第1个（ .eq(0).before() ）放至最前面。
+                                    //data.replace(/&lt;/g,'<').replace(/&gt;/g,'>') 转换html标签，否则图片无法显示。
+                                    //if($("#feedback").children('img').length == 0) $("#feedback").append(data.replace(/&lt;/g,'<').replace(/&gt;/g,'>'));
+                                    //else $("#feedback").children('img').eq(0).before(data.replace(/&lt;/g,'<').replace(/&gt;/g,'>'));
+                                    //	alert(data.return_status);
+                                    if (data.return_status == "success") {
+                                        jQuery(".productattach tbody ").append(data.img_str);
+                                    }else{
+                                        alert(data.msg);
+                                    }
+                                },
+                                error: function () {
+                                    alert('上传出错');
+                                    //$(".loading").hide();	//加载失败移除加载图片
+                                }
+                            });
+                        });
+                    });
+                </script>
+            </div>
 		</div>
 	
 		<div class="formBar">
