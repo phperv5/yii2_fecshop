@@ -7,7 +7,7 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\appadmin\modules\Catalog\block\email;
+namespace fecshop\app\appadmin\modules\Catalog\block\config;
 
 use fec\helpers\CRequest;
 use fec\helpers\CUrl;
@@ -29,7 +29,7 @@ class Manageredit
     {
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
         //$this->_type = Yii::$app->request->get('type');
-        $this->_type = 'contact_us';
+        $this->_type = 'about_us';
     }
 
     // 传递给前端的数据 显示编辑form
