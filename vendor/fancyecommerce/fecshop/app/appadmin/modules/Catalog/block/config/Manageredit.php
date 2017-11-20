@@ -28,7 +28,8 @@ class Manageredit
     public function __construct()
     {
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
-        $this->_to = Yii::$app->request->get('to');
+        //$this->_type = Yii::$app->request->get('type');
+        $this->_type = 'contact_us';
     }
 
     // 传递给前端的数据 显示编辑form
@@ -36,10 +37,9 @@ class Manageredit
     {
         return [
             'saveUrl' => $this->_saveUrl,
-            'to' => $this->_to,
+            'type' => $this->_type,
         ];
     }
-
 
 
     /**
@@ -47,21 +47,28 @@ class Manageredit
      */
     public function save()
     {
-        try {
-            $editForm = Yii::$app->request->post('editForm');
-            $to = $editForm['to'];
-            $subject = $editForm['subject'];
-            $htmlBody = $editForm['htmlBody'];
-            $sendInfo = compact('to', 'subject', 'htmlBody');
-
-            Yii::$service->email->send($sendInfo);
-        } catch (\Exception $e) {
-
+        $request_param = CRequest::param();
+        $_param = $request_param[$this->_editFormData];
+        $this->_param['type'] = $_param['type'];
+        $this->_param['content'] = $_param;
+        /**
+         * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
+         * you must convert string datetime to time , use strtotime function.
+         */
+        $this->_service->save($this->_param);
+        $errors = Yii::$service->helper->errors->get();
+        if (!$errors) {
+            echo  json_encode([
+                'statusCode'=>'200',
+                'message'=>'save success',
+            ]);
+            exit;
+        } else {
+            echo  json_encode([
+                'statusCode'=>'300',
+                'message'=>$errors,
+            ]);
+            exit;
         }
-        echo json_encode([
-            'statusCode' => '200',
-            'message' => 'save success',
-        ]);
-        exit;
     }
 }

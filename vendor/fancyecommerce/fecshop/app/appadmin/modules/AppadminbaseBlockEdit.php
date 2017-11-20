@@ -177,7 +177,7 @@ EOF;
 EOF;
             } elseif ($display_type == 'textarea') {
                 $rows = isset($display['rows']) ? $display['rows'] : 100;
-                $cols = isset($display['cols']) ? $display['cols'] : 200;
+                $cols = isset($display['cols']) ? $display['cols'] : 110;
                 $isLang = isset($display['lang']) ? $display['lang'] : false;
                 $uploadImgUrl = 'upimgurl="'.CUrl::getUrl('cms/staticblock/imageupload').'" upimgext="jpg,jpeg,gif,png"';
                 $uploadFlashUrl = 'upflashurl="'.CUrl::getUrl('cms/staticblock/flashupload').'" upflashext="swf"';
@@ -201,7 +201,7 @@ EOF;
 								<legend style="color:#cc0000">'.$label.'['.$lang.']：</legend>
 								<div>
 									<div class="unit">
-										<textarea '.$uploadImgUrl.' '.$uploadFlashUrl.'  '.$uploadLinkUrl.'  '.$uploadMediaUrl.'  class="editor '.$inputStringLangRequire.'"  style="width:'.$rows.';height:'.$cols.';" name="'.$this->_editFormData.'['.$name.']['.$langAttrName.']" >'.$value[$langAttrName].'</textarea>
+										<textarea '.$uploadImgUrl.' '.$uploadFlashUrl.'  '.$uploadLinkUrl.'  '.$uploadMediaUrl.'  class="editor '.$inputStringLangRequire.'"  rows="'.$rows.'" cols="'.$cols.'" name="'.$this->_editFormData.'['.$name.']['.$langAttrName.']" >'.$value[$langAttrName].'</textarea>
 									</div>
 								</div>
 							</fieldset>

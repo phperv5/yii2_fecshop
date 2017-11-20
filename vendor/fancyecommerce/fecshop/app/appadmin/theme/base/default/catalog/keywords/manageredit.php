@@ -22,7 +22,7 @@ use fecadmin\models\AdminRole;
 
 <div class="pageContent"> 
 	<form  method="post" action="<?= $saveUrl ?>" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDoneCloseAndReflush);">
-		<?php echo CRequest::getCsrfInputHtml();  ?>	
+		<?php echo CRequest::getCsrfInputHtml();  ?>
 		<div layouth="56" class="pageFormContent" style="height: 240px; overflow: auto;">
 				<fieldset id="fieldset_table_qbe">
 					<legend style="color:#cc0000">编辑信息</legend>

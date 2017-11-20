@@ -30,17 +30,17 @@ use fecadmin\models\AdminRole;
 </style>
 
 <div class="pageContent">
-    <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate"
-          onsubmit="return validateCallback(this);">
+    <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate" onsubmit="return validateCallback(this);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
+        <input type="hidden" name="editForm[type]" value="<?= $type ?>">
         <div layouth="56" class="" style="height: 485px; overflow: auto;">
 
             <fieldset id="fieldset_table_qbe">
                 <legend style="color:#cc0000">编辑信息</legend>
                 <div>
                     <div class="edit_p" style="padding-bottom: 10px;">
-                        <label style="width: 50px;display: inline-block">To：</label>
-                        <input type="text" value="<?= $to ?>" size="30" name="editForm['']" class="required">
+                        <label style="width: 50px;display: inline-block">telphone：</label>
+                        <input type="text" value="<?= $to ?>" size="30" name="editForm[telphone]" class="required">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Subject：</label>
