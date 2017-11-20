@@ -40,15 +40,15 @@ use fecadmin\models\AdminRole;
                 <div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">telphone：</label>
-                        <input type="text" value="<?= $to ?>" size="30" name="editForm[telphone]" class="required">
+                        <input type="text" value="<?= $to ?>" size="30" name="editFormData[telphone]" class="required">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">email：</label>
-                        <input type="text" value="" style="width: 300px;" name="editForm[email]" class="">
+                        <input type="text" value="" style="width: 300px;" name="editFormData[email]" class="">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">信息模型：</label>
-                        <textarea class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px"></textarea>
+                        <textarea class="editor" name="editFormData[htmlBody]" style="width: 80%;height: 500px"></textarea>
                     </div>
                 </div>
             </fieldset>

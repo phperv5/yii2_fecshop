@@ -20,7 +20,7 @@ use Yii;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Manageredit
+class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public $_saveUrl;
     public $_to;
@@ -43,7 +43,7 @@ class Manageredit
     
     public function setService()
     {
-        $this->_service = Yii::$service->product->keywords;
+        $this->_service = Yii::$service->product->config;
     }
 
 
@@ -53,7 +53,7 @@ class Manageredit
     public function save()
     {
         $request_param = CRequest::param();
-        $_param = $request_param[$this->_editForm];
+        $_param = $request_param[$this->_editFormData];
         $this->_param['type'] = $_param['type'];
         $this->_param['content'] = $_param;
         var_dump($_param);DIE;
