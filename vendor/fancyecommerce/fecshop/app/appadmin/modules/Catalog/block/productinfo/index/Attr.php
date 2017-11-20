@@ -353,7 +353,7 @@ class Attr
                 'label'=>'产品描述概述',
                 'name'=>'main_description',
                 'display'=>[
-                    'type' => 'inputString',
+                    'type' => 'textarea',
                     'lang' => true,
                 ],
                 'require' => 0,
