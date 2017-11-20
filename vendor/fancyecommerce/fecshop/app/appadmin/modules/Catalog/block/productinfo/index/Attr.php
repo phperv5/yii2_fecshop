@@ -350,17 +350,6 @@ class Attr
                 'require' => 0,
             ],
             [
-                'label'=>'产品描述概述',
-                'name'=>'main_description',
-                'display'=>[
-                    'type' => 'textarea',
-                    'lang' => true,
-                    'rows'    => 10,
-                    'cols'    => 100,
-                ],
-                'require' => 0,
-            ],
-            [
                 'label'=>'产品描述（<b>必填</b>）',
                 'name'=>'description',
                 'display'=>[
@@ -370,6 +359,17 @@ class Attr
                     'cols'    => 300,
                 ],
                 'require' => 1,
+            ],
+            [
+                'label'=>'产品描述概述',
+                'name'=>'main_description',
+                'display'=>[
+                    'type' => 'textarea',
+                    'lang' => true,
+                    'rows'    => 10,
+                    'cols'    => 100,
+                ],
+                'require' => 0,
             ],
             [
                 'label'=>'Video',
