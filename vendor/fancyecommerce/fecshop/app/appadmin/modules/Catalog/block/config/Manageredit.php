@@ -23,23 +23,22 @@ use Yii;
 class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public $_saveUrl;
-    public $_type;
 
     public function __construct()
     {
         parent::init();
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
-        //$this->_type = Yii::$app->request->get('type');
-        $this->_type = $this->_param['type'];
+
     }
 
     // 传递给前端的数据 显示编辑form
     public function getLastData()
     {
         return [
-            'saveUrl' => $this->_saveUrl,
-            'type' => $this->_type,
-            'one'  =>$this->_one,
+            'editBar'    => $this->getEditBar(),
+            'textareas'    => $this->_textareas,
+            'lang_attr'    => $this->_lang_attr,
+            'saveUrl'    => $this->_saveUrl,
         ];
     }
     
