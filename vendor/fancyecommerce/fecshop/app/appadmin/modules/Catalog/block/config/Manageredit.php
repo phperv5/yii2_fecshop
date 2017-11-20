@@ -35,47 +35,11 @@ class Manageredit
     public function getLastData()
     {
         return [
-            'editBar' => $this->getEditBar(),
             'saveUrl' => $this->_saveUrl,
             'to' => $this->_to,
         ];
     }
 
-    public function getEditArr()
-    {
-        return [
-            [
-                'label' => 'keywords',
-                'name' => 'keywords',
-                'display' => [
-                    'type' => 'inputString',
-                ],
-                'require' => 1,
-            ],
-            [
-                'label' => 'url',
-                'name' => 'url',
-                'width' => '200',
-                'display' => [
-                    'type' => 'inputString',
-                ],
-            ],
-            [
-                'label' => '关键字type(类型)',
-                'name' => 'type',
-                'display' => [
-                    'type' => 'select',
-                    'data' => [
-                        1 => 'search keywords',
-                        2 => 'Popular Search',
-                        3 => 'Browse by Feature',
-                    ],
-                ],
-                'require' => 1,
-            ],
-
-        ];
-    }
 
 
     /**

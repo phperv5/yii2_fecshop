@@ -201,7 +201,7 @@ EOF;
 								<legend style="color:#cc0000">'.$label.'['.$lang.']：</legend>
 								<div>
 									<div class="unit">
-										<textarea '.$uploadImgUrl.' '.$uploadFlashUrl.'  '.$uploadLinkUrl.'  '.$uploadMediaUrl.'  class="editor '.$inputStringLangRequire.'"  rows="'.$rows.'" cols="'.$cols.'" name="'.$this->_editFormData.'['.$name.']['.$langAttrName.']" >'.$value[$langAttrName].'</textarea>
+										<textarea '.$uploadImgUrl.' '.$uploadFlashUrl.'  '.$uploadLinkUrl.'  '.$uploadMediaUrl.'  class="editor '.$inputStringLangRequire.'"  style="width:'.$rows.';height:'.$cols.';" name="'.$this->_editFormData.'['.$name.']['.$langAttrName.']" >'.$value[$langAttrName].'</textarea>
 									</div>
 								</div>
 							</fieldset>
