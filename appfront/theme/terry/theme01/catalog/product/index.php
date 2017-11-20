@@ -95,26 +95,18 @@
                                     href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span
                                         class="px10">See details &raquo;</span></a></span></dd>
                     <dt class="w100px">Weight:</dt>
-                    <!--                <dd class="w420px">3.5KG<span class="gray_dark">( 7.72LB )</span></dd>-->
                     <dd class="w420px"><?= $weight; ?>KG</dd>
                     <dt class="w100px">Package:</dt>
                     <dd class="w420px"><?php if ($package) echo $package; else echo 'none'; ?></span>
                     </dd>
                     <dt class="w100px">Returns:</dt>
                     <dd class="w420px">Return for refund within 7 days,buyer pays return shipping.
-                        <!--<a href="/support/return-policy-4174.html" target="_blank"><span class="px11 verdana">Read details »</span></a>-->
                     </dd>
                 </dl>
                 <div class="blank10px"></div>
                 <div class="dashed5px"></div>
                 <div class="blank5px"></div>
-                <!--                <div class="pro_ch_bf_digg">-->
-                <!--                    <div class="pro_digg_180x35"><a href="javascript:ProDiggIt('51561','sv_pro_digg_51561');">-->
-                <!--                            <span id="num_pro_digg_51561"></span></a><span id="sv_pro_digg_51561" class="alert"></span>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="blank5px"></div>-->
-                <!--                <div class="dashed5px"></div>-->
+
                 <?php if (!empty($attachment)): ?>
                     <div class="line18em"><b class="green_dark">Related Download Files:</b>
                         <?php foreach($attachment as $attach):?>
@@ -171,7 +163,6 @@
                 <li>
                     <span><a href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/add', ['spu' => $spu, '_id' => $_id]); ?>">Write a Comment</a></span>
                 </li>
-                <!--                <li onclick="GotoScrollTop('1', 'na_pro_releated', 100, '', '', '');"><span>Related Products</span></li>-->
                 <li id="p_ab_mn_5"
                     onclick="AreaMultiMenuShowHide('p_ab_mn_','p_ab_vw_',5,5,'current',''); GotoScrollTop('1', 'pro_ctab_star', 100, '', '', '');">
                     <span>After-sales Service</span></li>
@@ -180,7 +171,9 @@
         </div>
         <div id="p_ab_vw_1" style="display:">
             <div class="blank5px"></div>
+            <div class="exh_m_bri">Top 3 reasons to get CGDI Prog MB:<br>1.Support fastest Benz Car key add: collection time 1'50s,&nbsp;password calculation time 40s, 99% get password for one time calculator, it is the fastest key programming tool to calculate the password at present.<br>2.Support MB all key lost:&nbsp;support models including 211,209,204,207,212,166,246,197,172,164 +, 216<br>3.CGDI Prog MB can calculate the password twice free each day.</div>
             <div class="exh_m_cont">
+
                 <?= $description; ?>
             </div>
         </div>
