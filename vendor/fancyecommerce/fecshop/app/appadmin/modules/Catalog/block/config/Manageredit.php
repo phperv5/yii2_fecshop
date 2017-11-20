@@ -28,7 +28,8 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     {
         parent::init();
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
-
+        $id = '5a12ef69625a9c068920d72b';
+        $this->_one = $this->_service->getByPrimaryKey($id);
     }
 
     // 传递给前端的数据 显示编辑form
