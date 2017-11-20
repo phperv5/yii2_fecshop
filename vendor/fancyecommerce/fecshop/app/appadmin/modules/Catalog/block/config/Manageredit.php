@@ -61,7 +61,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $request_param = CRequest::param();
         $_param = $request_param['editFormData'];
         $this->_param['type'] = $_param['type'];
-        $this->_param['content'] = $_param;
+        $this->_param['content']['type'] = $_param['type'];
 
         /**
          * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
