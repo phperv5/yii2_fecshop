@@ -50,7 +50,32 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function getEditArr()
     {
         return [
-           
+            [
+                'label'=>'telphone',
+                'name'=>'telphone',
+                'display'=>[
+                    'type' => 'inputString',
+                ],
+                'require' => 1,
+            ],
+            [
+                'label'=>'email',
+                'name'=>'email',
+                'width' => '200',
+                'display'=>[
+                    'type' => 'inputString',
+                ],
+            ],
+           [
+                'label'=>'content',
+                'name'=>'content',
+                'display'=>[
+                    'type' => 'textarea',
+                    'rows'    => 14,
+                    'cols'    => 110,
+                ],
+                'require' => 0,
+            ],
         ];
     }
 
