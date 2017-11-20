@@ -32,7 +32,7 @@ use fecadmin\models\AdminRole;
 <div class="pageContent">
     <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate" onsubmit="return validateCallback(this);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
-        <input type="hidden" name="editForm[type]" value="<?= $type ?>">
+        <input type="hidden" name="editFormData[type]" value="<?= $type ?>">
         <div layouth="56" class="" style="height: 485px; overflow: auto;">
 
             <fieldset id="fieldset_table_qbe">
