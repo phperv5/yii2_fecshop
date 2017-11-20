@@ -53,7 +53,7 @@ class Manageredit
     public function save()
     {
         $request_param = CRequest::param();
-        $_param = $request_param[$this->_editFormData];
+        $_param = $request_param[$this->_editForm];
         $this->_param['type'] = $_param['type'];
         $this->_param['content'] = $_param;
         var_dump($this->_param);DIE;
