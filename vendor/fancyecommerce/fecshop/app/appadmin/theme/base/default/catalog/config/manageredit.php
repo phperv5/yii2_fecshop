@@ -32,7 +32,7 @@ use fecadmin\models\AdminRole;
 <div class="pageContent">
     <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate" onsubmit="return validateCallback(this);">
         <?php echo CRequest::getCsrfInputHtml(); ?>
-        <input type="hidden" name="editFormData[type]" value="<?= $type ?>">
+        <input type="hidden"  value="<?= $one['_id'] ?>" size="30" name="editFormData['_id']" class="textInput ">
         <div layouth="56" class="" style="height: 485px; overflow: auto;">
 
             <fieldset id="fieldset_table_qbe">
@@ -40,15 +40,15 @@ use fecadmin\models\AdminRole;
                 <div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">telphone：</label>
-                        <input type="text" value="<?= $to ?>" size="30" name="editFormData[telphone]" class="required">
+                        <input type="text" value="<?= $one['content']['telphone'] ?>" size="30" name="editFormData[telphone]" class="required">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">email：</label>
-                        <input type="text" value="" style="width: 300px;" name="editFormData[email]" class="">
+                        <input type="text" value="<?= $one['content']['email'] ?>" style="width: 300px;" name="editFormData[email]" class="">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">信息模型：</label>
-                        <textarea class="editor" name="editFormData[htmlBody]" style="width: 80%;height: 500px"></textarea>
+                        <textarea class="editor" name="editFormData[htmlBody]" style="width: 80%;height: 500px"><?= $one['content']['htmlBody'] ?></textarea>
                     </div>
                 </div>
             </fieldset>

@@ -27,10 +27,10 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function __construct()
     {
+        parent::init();
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
         //$this->_type = Yii::$app->request->get('type');
-        $this->_type = 'about_us';
-        parent::init();
+        $this->_type = $this->_param['type'];
     }
 
     // 传递给前端的数据 显示编辑form
@@ -39,6 +39,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         return [
             'saveUrl' => $this->_saveUrl,
             'type' => $this->_type,
+            'one'  =>$this->_one,
         ];
     }
     
