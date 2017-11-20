@@ -62,8 +62,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $_param = $request_param['editFormData'];
         $this->_param['type'] = $_param['type'];
         $this->_param['content'] = $_param;
-        var_dump($request_param);
-        var_dump($this->_param);die;
+
         /**
          * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
          * you must convert string datetime to time , use strtotime function.
