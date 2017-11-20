@@ -55,6 +55,9 @@ return [
             'ads' => [
                 'class' => 'fecshop\services\product\Ads',
             ],
+             'config' => [
+                'class' => 'fecshop\services\product\Config',
+            ],
             /* #暂时没用
 
             'coll' => [
