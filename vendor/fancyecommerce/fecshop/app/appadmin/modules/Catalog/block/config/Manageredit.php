@@ -40,6 +40,11 @@ class Manageredit
             'type' => $this->_type,
         ];
     }
+    
+    public function setService()
+    {
+        $this->_service = Yii::$service->product->keywords;
+    }
 
 
     /**

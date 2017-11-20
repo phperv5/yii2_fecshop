@@ -43,11 +43,11 @@ use fecadmin\models\AdminRole;
                         <input type="text" value="<?= $to ?>" size="30" name="editForm[telphone]" class="required">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
-                        <label style="width: 50px;display: inline-block">Subject：</label>
-                        <input type="text" value="" style="width: 300px;" name="editForm[subject]" class="">
+                        <label style="width: 50px;display: inline-block">email：</label>
+                        <input type="text" value="" style="width: 300px;" name="editForm[email]" class="">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
-                        <label style="width: 50px;display: inline-block">Body：</label>
+                        <label style="width: 50px;display: inline-block">信息模型：</label>
                         <textarea class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px"></textarea>
                     </div>
                 </div>
