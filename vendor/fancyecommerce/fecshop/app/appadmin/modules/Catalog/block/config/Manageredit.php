@@ -23,7 +23,7 @@ use Yii;
 class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public $_saveUrl;
-    public $_to;
+    public $_type;
 
     public function __construct()
     {
