@@ -176,8 +176,8 @@ EOF;
 						</p>
 EOF;
             } elseif ($display_type == 'textarea') {
-                $rows = isset($display['rows']) ? $display['rows'] : 15;
-                $cols = isset($display['cols']) ? $display['cols'] : 110;
+                $rows = isset($display['rows']) ? $display['rows'] : 100;
+                $cols = isset($display['cols']) ? $display['cols'] : 200;
                 $isLang = isset($display['lang']) ? $display['lang'] : false;
                 $uploadImgUrl = 'upimgurl="'.CUrl::getUrl('cms/staticblock/imageupload').'" upimgext="jpg,jpeg,gif,png"';
                 $uploadFlashUrl = 'upflashurl="'.CUrl::getUrl('cms/staticblock/flashupload').'" upflashext="swf"';
