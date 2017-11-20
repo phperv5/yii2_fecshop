@@ -46,6 +46,12 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $this->_service = Yii::$service->product->config;
     }
 
+    public function getEditArr()
+    {
+        return [
+           
+        ];
+    }
 
     /**
      * save article data,  get rewrite url and save to article url key.
