@@ -102,6 +102,7 @@ class Index
             'payment' => Yii::$service->store->getStoreAttrVal($this->_product['payment'], 'payment'),
             'related_download_files' => Yii::$service->store->getStoreAttrVal($this->_product['related_download_files'], 'related_download_files'),
             'attachment' => $attach,
+            'main_description' => Yii::$service->store->getStoreAttrVal($this->_product['main_description'], 'main_description'),
         ];
     }
 

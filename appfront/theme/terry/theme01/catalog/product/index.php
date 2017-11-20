@@ -171,9 +171,13 @@
         </div>
         <div id="p_ab_vw_1" style="display:">
             <div class="blank5px"></div>
-            <div class="exh_m_bri">Top 3 reasons to get CGDI Prog MB:<br>1.Support fastest Benz Car key add: collection time 1'50s,&nbsp;password calculation time 40s, 99% get password for one time calculator, it is the fastest key programming tool to calculate the password at present.<br>2.Support MB all key lost:&nbsp;support models including 211,209,204,207,212,166,246,197,172,164 +, 216<br>3.CGDI Prog MB can calculate the password twice free each day.</div>
-            <div class="exh_m_cont">
+            <?php if($main_description):?>
+            <div class="exh_m_bri">
+                <?= $main_description; ?>
+            </div>
+            <?php endif;?>
 
+            <div class="exh_m_cont">
                 <?= $description; ?>
             </div>
         </div>

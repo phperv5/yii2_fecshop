@@ -98,6 +98,7 @@ class Product extends ActiveRecord
             'payment',              // payment
             'related_download_files',
             'attachment',          // 附件
+            'main_description',   // 简述
         ];
         if (is_array(self::$_customProductAttrs) && !empty(self::$_customProductAttrs)) {
             $origin = array_merge($origin, self::$_customProductAttrs);

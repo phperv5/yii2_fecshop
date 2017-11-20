@@ -349,7 +349,15 @@ class Attr
                 ],
                 'require' => 0,
             ],
-
+            [
+                'label'=>'产品描述概述',
+                'name'=>'main_description',
+                'display'=>[
+                    'type' => 'inputString',
+                    'lang' => true,
+                ],
+                'require' => 0,
+            ],
             [
                 'label'=>'产品描述（<b>必填</b>）',
                 'name'=>'description',
