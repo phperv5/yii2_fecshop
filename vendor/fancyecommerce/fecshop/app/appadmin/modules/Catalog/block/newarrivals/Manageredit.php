@@ -7,7 +7,7 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\appadmin\modules\Catalog\block\newarrivals;
+namespace fecshop\app\appadmin\modules\Catalog\block\keywords;
 
 use fec\helpers\CRequest;
 use fec\helpers\CUrl;
@@ -26,7 +26,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function init()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/newarrivals/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
         parent::init();
     }
 
@@ -66,7 +66,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
                     'type' => 'inputString',
                 ],
             ],
-
         ];
     }
 
@@ -76,8 +75,11 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function save()
     {
         $request_param = CRequest::param();
-        $this->_param = array_map('trim', $request_param[$this->_editFormData]);
-
+        $this->_param = $request_param[$this->_editFormData];
+        /**
+         * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
+         * you must convert string datetime to time , use strtotime function.
+         */
         $this->_service->save($this->_param);
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
