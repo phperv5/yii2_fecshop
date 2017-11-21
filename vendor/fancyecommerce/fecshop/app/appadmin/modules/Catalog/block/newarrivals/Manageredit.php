@@ -20,7 +20,7 @@ use Yii;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockInterface
+class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public $_saveUrl;
 
