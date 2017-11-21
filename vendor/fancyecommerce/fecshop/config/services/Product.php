@@ -58,7 +58,7 @@ return [
             'config' => [
                 'class' => 'fecshop\services\product\Config',
             ],
-            'newarrival' => [
+            'newarrivals' => [
                 'class' => 'fecshop\services\product\Newarrivals',
             ],
             /* #暂时没用
