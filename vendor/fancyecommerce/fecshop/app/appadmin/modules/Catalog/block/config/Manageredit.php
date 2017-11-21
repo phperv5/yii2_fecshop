@@ -61,6 +61,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     {
         $request_param = CRequest::param();
         $param = $request_param[$this->_editFormData];
+        $this->_param['_id'] = $param['_id'];
         $this->_param['type'] = $param['type'];
         $this->_param['content'] = $param;
         $this->_service->save($this->_param);
