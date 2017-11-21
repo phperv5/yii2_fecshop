@@ -20,7 +20,7 @@ use Yii;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Manageredit
+class Manageredit extends AppadminbaseBlock implements AppadminbaseBlockInterface
 {
     public $_saveUrl;
 
@@ -51,33 +51,20 @@ class Manageredit
     {
         return [
             [
-                'label'=>'keywords',
-                'name'=>'keywords',
+                'label'=>'sku',
+                'name'=>'sku',
                 'display'=>[
                     'type' => 'inputString',
                 ],
                 'require' => 1,
             ],
             [
-                'label'=>'url',
-                'name'=>'url',
+                'label'=>'sort_order',
+                'name'=>'sort_order',
                 'width' => '200',
                 'display'=>[
                     'type' => 'inputString',
                 ],
-            ],
-            [
-                'label'=>'关键字type(类型)',
-                'name'=>'type',
-                'display'=>[
-                    'type' => 'select',
-                    'data' => [
-                        1    => 'search keywords',
-                        2    => 'Popular Search',
-                        3    => 'Browse by Feature',
-                    ],
-                ],
-                'require' => 1,
             ],
 
         ];
