@@ -31,7 +31,7 @@ use fecadmin\models\AdminRole;
 
 <div class="pageContent">
     <form method="post" action="<?= $saveUrl ?>" class="pageForm required-validate" onsubmit="return validateCallback(this);">
-        <input type="hidden" value="about_us" size="30" name="editFormData[type]">
+        <input type="hidden" value="<?= $type ?>" size="30" name="editFormData[type]">
         <?php echo CRequest::getCsrfInputHtml(); ?>
         <div layouth="56" class="" style="height: 485px; overflow: auto;">
 

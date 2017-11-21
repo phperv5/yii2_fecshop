@@ -29,16 +29,17 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     {
         parent::init();
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
-        $this->_type = Yii::$app->request->get('type');
-        $this->_one = $this->_service->getOne($this->_type);
     }
 
     // 传递给前端的数据 显示编辑form
-    public function getLastData()
+    public function getLastData($type)
     {
+        $this->_type = $type;
+        $this->_one = $this->_service->getOne($this->_type);
         return [
             'one' => $this->_one,
             'saveUrl' => $this->_saveUrl,
+            'type' => $this->_type,
         ];
     }
 

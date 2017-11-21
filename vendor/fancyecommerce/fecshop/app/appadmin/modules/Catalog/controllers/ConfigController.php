@@ -26,7 +26,8 @@ class ConfigController extends CatalogController
 
     public function actionManageredit()
     {
-        $data = $this->getBlock()->getLastData();
+        $type = 'about_us';
+        $data = $this->getBlock()->getLastData($type);
 
         return $this->render($this->action->id, $data);
     }
