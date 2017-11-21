@@ -179,6 +179,9 @@
 
             <div class="exh_m_cont">
                 <?= $description; ?>
+                <div class="about-us">
+                    <?php if (isset($about_us['content']['body'])) echo $about_us['content']['body'];?>
+                </div>
             </div>
         </div>
         <div id="p_ab_vw_2" style="display:none">
