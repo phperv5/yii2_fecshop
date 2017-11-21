@@ -19,10 +19,10 @@ use yii\base\InvalidValueException;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Newarrival extends Service
+class Newarrivals extends Service
 {
     public $filterByLang;
-    protected $_reviewModelName = '\fecshop\models\mongodb\product\Newarrival';
+    protected $_reviewModelName = '\fecshop\models\mongodb\product\Newarrivals';
     protected $_reviewModel;
 
     public function __construct()

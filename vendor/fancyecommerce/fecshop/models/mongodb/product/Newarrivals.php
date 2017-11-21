@@ -15,14 +15,14 @@ use yii\mongodb\ActiveRecord;
  * @author Terry Zhao <2358269014@qq.com>
  * @since 1.0
  */
-class Newarrival extends ActiveRecord
+class Newarrivals extends ActiveRecord
 {
     /**
      * mongodb collection 的名字，相当于mysql的table name
      */
     public static function collectionName()
     {
-        return 'newarrival';
+        return 'newarrivals';
     }
     /**
      * mongodb是没有表结构的，因此不能像mysql那样取出来表结构的字段作为model的属性

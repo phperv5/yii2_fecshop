@@ -59,7 +59,7 @@ return [
                 'class' => 'fecshop\services\product\Config',
             ],
             'newarrival' => [
-                'class' => 'fecshop\services\product\Newarrival',
+                'class' => 'fecshop\services\product\Newarrivals',
             ],
             /* #暂时没用
 
