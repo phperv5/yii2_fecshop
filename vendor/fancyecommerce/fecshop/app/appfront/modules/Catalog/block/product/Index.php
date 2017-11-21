@@ -103,7 +103,7 @@ class Index
             'related_download_files' => Yii::$service->store->getStoreAttrVal($this->_product['related_download_files'], 'related_download_files'),
             'attachment' => $attach,
             'main_description' => Yii::$service->store->getStoreAttrVal($this->_product['main_description'], 'main_description'),
-            'about_us' => $this->_service->getOne('about_us'),
+            'about_us' => Yii::$service->product->config->getOne('about_us'),
         ];
     }
 
