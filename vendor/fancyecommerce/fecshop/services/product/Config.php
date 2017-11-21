@@ -134,9 +134,9 @@ class Config extends Service
                 ['type' => (string)$type],
             ]
         ];
-        $keywordsColl = $this->list($filter);
-        $keywords = $keywordsColl['coll'];
-        return $keywords;
+        $coll = $this->list($filter);
+        $result = isset($coll['coll'][0])?$coll['coll'][0]:'';
+        return $result;
     }
 
     //删除
