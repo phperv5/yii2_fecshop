@@ -32,8 +32,7 @@ class Config extends ActiveRecord
     {
         $origin = [
             '_id',
-             'telphone',
-             'email',
+             'type',
              'content',        // 关键字类型
              'created_at',    // 创建时间 int
              'updated_at',    // 更新时间 int

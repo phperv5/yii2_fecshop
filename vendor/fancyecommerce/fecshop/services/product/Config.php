@@ -126,10 +126,10 @@ class Config extends Service
     }
 
 
-    public function actionGetKeywordsList($type, $numPerPage = 10)
+    public function actionGetOne($type)
     {
         $filter = [
-            'numPerPage' => $numPerPage,
+            'numPerPage' => 1,
             'where' => [
                 ['type' => (string)$type],
             ]

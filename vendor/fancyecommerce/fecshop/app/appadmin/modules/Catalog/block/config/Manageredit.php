@@ -23,26 +23,25 @@ use Yii;
 class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterface
 {
     public $_saveUrl;
+    public $_type;
 
     public function __construct()
     {
         parent::init();
         $this->_saveUrl = CUrl::getUrl('catalog/config/managereditsave');
-        $id = '5a12ef69625a9c068920d72b';
-        $this->_one = $this->_service->getByPrimaryKey($id);
+        $this->_type = Yii::$app->request->get('type');
+        $this->_one = $this->_service->getOne($this->_type);
     }
 
     // 传递给前端的数据 显示编辑form
     public function getLastData()
     {
         return [
-            'editBar'    => $this->getEditBar(),
-            'textareas'    => $this->_textareas,
-            'lang_attr'    => $this->_lang_attr,
-            'saveUrl'    => $this->_saveUrl,
+            'one' => $this->_one,
+            'saveUrl' => $this->_saveUrl,
         ];
     }
-    
+
     public function setService()
     {
         $this->_service = Yii::$service->product->config;
@@ -51,32 +50,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function getEditArr()
     {
         return [
-            [
-                'label'=>'telphone',
-                'name'=>'telphone',
-                'display'=>[
-                    'type' => 'inputString',
-                ],
-                'require' => 1,
-            ],
-            [
-                'label'=>'email',
-                'name'=>'email',
-                'width' => '200',
-                'display'=>[
-                    'type' => 'inputString',
-                ],
-            ],
-           [
-                'label'=>'content',
-                'name'=>'content',
-                'display'=>[
-                    'type' => 'textarea',
-                    'rows'    => 14,
-                    'cols'    => 110,
-                ],
-                'require' => 0,
-            ],
         ];
     }
 
@@ -86,24 +59,21 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function save()
     {
         $request_param = CRequest::param();
-        $this->_param = $request_param[$this->_editFormData];
-
-        /**
-         * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
-         * you must convert string datetime to time , use strtotime function.
-         */
+        $param = $request_param[$this->_editFormData];
+        $this->_param['type'] = $param['type'];
+        $this->_param['content'] = $param;
         $this->_service->save($this->_param);
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
-            echo  json_encode([
-                'statusCode'=>'200',
-                'message'=>'save success',
+            echo json_encode([
+                'statusCode' => '200',
+                'message' => 'save success',
             ]);
             exit;
         } else {
-            echo  json_encode([
-                'statusCode'=>'300',
-                'message'=>$errors,
+            echo json_encode([
+                'statusCode' => '300',
+                'message' => $errors,
             ]);
             exit;
         }
