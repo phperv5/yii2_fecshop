@@ -55,8 +55,11 @@ return [
             'ads' => [
                 'class' => 'fecshop\services\product\Ads',
             ],
-             'config' => [
+            'config' => [
                 'class' => 'fecshop\services\product\Config',
+            ],
+            'newarrival' => [
+                'class' => 'fecshop\services\product\Newarrival',
             ],
             /* #暂时没用
 

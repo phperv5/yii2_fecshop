@@ -26,7 +26,7 @@ class Manageredit
 
     public function init()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/newarrival/managereditsave');
         parent::init();
     }
 
@@ -89,11 +89,8 @@ class Manageredit
     public function save()
     {
         $request_param = CRequest::param();
-        $this->_param = $request_param[$this->_editFormData];
-        /**
-         * if attribute is date or date time , db storage format is int ,by frontend pass param is int ,
-         * you must convert string datetime to time , use strtotime function.
-         */
+        $this->_param = array_map('trim', $request_param[$this->_editFormData]);
+
         $this->_service->save($this->_param);
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
