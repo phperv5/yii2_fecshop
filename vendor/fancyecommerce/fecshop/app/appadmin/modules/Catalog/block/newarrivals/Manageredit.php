@@ -7,7 +7,7 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\appadmin\modules\Catalog\block\keywords;
+namespace fecshop\app\appadmin\modules\Catalog\block\newarrivals;
 
 use fec\helpers\CRequest;
 use fec\helpers\CUrl;
@@ -26,7 +26,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function init()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/keywords/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/newarrivals/managereditsave');
         parent::init();
     }
 
