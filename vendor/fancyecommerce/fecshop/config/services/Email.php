@@ -75,7 +75,7 @@ return [
                 'emailTheme' => [
                     // 注册账户发送的邮件的模板配置
                     'register' => [
-                        'enable' => true,
+                        'enable' => false,
                         // 邮件内容的动态数据提供部分
                         'widget'        => 'fecshop\services\email\widgets\customer\account\register\Body',
                         // 邮件内容的view部分
