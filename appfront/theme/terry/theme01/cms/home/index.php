@@ -1,6 +1,4 @@
-<?php
-use fec\helpers\CUrl;
-?>
+
 <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
@@ -211,12 +209,13 @@ use fec\helpers\CUrl;
         })
 
         $.ajax({
-            url: '<?= CUrl::getUrl('cms/home/sidebar')  ?>',
-            type: 'POST',
+            url: '/cms/home/sidebar',
+            type: 'get',
             async: true,
             dataType: 'html',
 
             success: function (data, textStatus) {
+                alert(1111)
                 $("body").append(data);
             },
         });
