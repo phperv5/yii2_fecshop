@@ -13,8 +13,9 @@ class Index
     public function getLastData()
     {
         $this->initHead();
+        $newArrivals = Yii::$service->product->newarrivals->getList();
         return [
-            'newArrivals' => $this->getNewArrivals(['19001','14026','11005','19005','19008','20004','19004','19003',]),
+            'newArrivals' => $this->getNewArrivals($newArrivals),
             'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14008','12001', '11005', '11001', 'AVDI', '21001', '19001', 'VVDI2', '22001', '20002', '20006', '11004']),
             'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['19006', '21002', '23001', '23002', '16001']),
             'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14027','CK0014','14001', '14015', '14029', '14028', 'CK0002', 'T300', '19009', 'CK0007', '14031']),

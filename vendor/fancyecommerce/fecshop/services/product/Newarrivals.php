@@ -126,17 +126,21 @@ class Newarrivals extends Service
     }
 
 
-    public function actionGetKeywordsList($type, $numPerPage = 10)
+    public function actionGetList($type = '', $numPerPage = 50)
     {
         $filter = [
             'numPerPage' => $numPerPage,
-            'where' => [
-                ['type' => (string)$type],
-            ]
+            'orderBy' => ['sort_order' => SORT_ASC],
         ];
         $keywordsColl = $this->list($filter);
-        $keywords = $keywordsColl['coll'];
-        return $keywords;
+        $result = $keywordsColl['coll'];
+        $arrivals = [];
+        if ($result) {
+            foreach ($result as $v) {
+                $arrivals[] = $v['sku'];
+            }
+        }
+        return $arrivals;
     }
 
     //删除
