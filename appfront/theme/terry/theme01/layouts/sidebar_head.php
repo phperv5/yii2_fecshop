@@ -35,6 +35,8 @@ $cssOptions = [
 ?>
 <?php $this->beginPage() ?>
 
+<?= Yii::$service->page->widget->render('head',$this); ?>
+
 <?php $this->beginBody() ?>
 
 
