@@ -182,6 +182,7 @@
     <div class="blank10px"></div>
 
 </div>
+<script type="text/javascript" src="<?= Yii::$service->url->getUrl('home/siderbar'); ?>"></script>
 <script>
     <?php $this->beginBlock('owl_fecshop_slider') ?>
 
@@ -198,13 +199,13 @@
             autoplayTimeout: 3000
         });
 
-
         $(".left_proclass_menu").bind('mouseover', function () {
             $(this).find('.hd_wr_nav_main').show();
         })
         $(".left_proclass_menu").bind('mouseout', function () {
             $('.hd_wr_nav_main').hide();
         })
+
     });
     <?php $this->endBlock(); ?>
 </script>
