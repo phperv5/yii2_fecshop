@@ -186,7 +186,7 @@ use fec\helpers\CUrl;
     <div class="blank10px"></div>
 
 </div>
-<script type="text/javascript" src="<?= Yii::$service->url->getUrl('cms/home/sidebar'); ?>"></script>
+
 <script>
     <?php $this->beginBlock('owl_fecshop_slider') ?>
 
@@ -217,7 +217,7 @@ use fec\helpers\CUrl;
             dataType: 'html',
 
             success: function (data, textStatus) {
-                jQuery("body").append(data);
+                $("body").append(data);
             },
         });
 
