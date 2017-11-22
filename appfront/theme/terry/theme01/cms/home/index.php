@@ -213,7 +213,6 @@ use fec\helpers\CUrl;
         $.ajax({
             url: '<?= CUrl::getUrl('cms/home/sidebar')  ?>',
             type: 'POST',
-            data: data,
             async: true,
             dataType: 'html',
 
