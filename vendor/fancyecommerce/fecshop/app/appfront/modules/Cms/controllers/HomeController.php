@@ -67,7 +67,7 @@ class HomeController extends AppfrontController
      */
     public function actionSidebar()
     {
-     //   echo 111
+        Yii::$service->page->theme->layoutFile = 'sidebar_head.php';
         $data = $this->getBlock('sidebar')->getLastData();
         return $this->render($this->action->id, $data);
     }
