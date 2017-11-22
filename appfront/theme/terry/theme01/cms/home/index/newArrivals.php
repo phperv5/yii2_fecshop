@@ -24,7 +24,7 @@
                 </div>
                 <div class="pro_g_r4_prate">
                     <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro"70844" target="_blank">8</a>)</div>
+                    <div class="rate_star_w75_tx">(<a href="javascript:void(0);">8</a>)</div>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="blank10px"></div>
                 <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
+                <div class="rate_star_w75_tx">(<a href="javascript:void(0);">3</a>)</div>
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[1]['url'] ?>" title="<?= $products[1]['name'] ?>">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="blank10px"></div>
                 <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
+                <div class="rate_star_w75_tx">(<a href="javascript:void(0);">3</a>)</div>
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[1]['url'] ?>" title="<?= $products[2]['name'] ?>">
@@ -98,7 +98,7 @@
                 </div>
                 <div class="blank10px"></div>
                 <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
+                <div class="rate_star_w75_tx">(<a href="javascript:void(0);">3</a>)</div>
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[3]['url'] ?>" title="<?= $products[3]['name'] ?>">
@@ -129,7 +129,7 @@
                 </div>
                 <div class="pro_g_r4_prate">
                     <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                    <div class="rate_star_w75_tx">(<a href="reviews/pro"70844" target="_blank">8</a>)</div>
+                    <div class="rate_star_w75_tx">(<a href="javascript:void(0);">8</a>)</div>
                 </div>
             </div>
         </div>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="blank10px"></div>
                 <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
+                <div class="rate_star_w75_tx">(<a href="javascript:void(0);">3</a>)</div>
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[5]['url'] ?>" title="<?= substr($products[5]['name'],0,30) ?>">
@@ -178,7 +178,7 @@
                 </div>
                 <div class="blank10px"></div>
                 <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
+                <div class="rate_star_w75_tx">(<a href="javascript:void(0);">3</a>)</div>
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[1]['url'] ?>" title="<?= $products[6]['name'] ?>">
@@ -203,7 +203,7 @@
                 </div>
                 <div class="blank10px"></div>
                 <div class="rate_star_w75"><div class="rate_star_w75_bg"><div class="rate_star_w75_vw" style="width:75px;"></div></div></div>
-                <div class="rate_star_w75_tx">(<a href="reviews/pro71861.html" target="_blank">3</a>)</div>
+                <div class="rate_star_w75_tx">(<a href="javascript:void(0);">3</a>)</div>
             </div>
             <div class="mhfai_photo">
                 <a href="<?= $products[7]['url'] ?>" title="<?= $products[7]['name'] ?>">
