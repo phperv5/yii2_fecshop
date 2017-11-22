@@ -20,10 +20,10 @@ class Index
             'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['19006', '21002', '23001', '23002', '16001']),
             'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14027','CK0014','14001', '14015', '14029', '14028', 'CK0002', 'T300', '19009', 'CK0007', '14031']),
             'bestSellerProducts4' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['25001','23001','23004', '12051', '23005', '18 in 1', 'ELS']),
-            'bestSellerProducts5' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-            'bestSellerProducts6' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-            'bestSellerProducts7' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-            'bestSellerProducts8' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+//            'bestSellerProducts5' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+//            'bestSellerProducts6' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+//            'bestSellerProducts7' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+//            'bestSellerProducts8' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
         ];
     }
 
