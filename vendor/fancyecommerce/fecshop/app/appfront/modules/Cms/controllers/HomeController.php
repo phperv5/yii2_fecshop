@@ -67,6 +67,7 @@ class HomeController extends AppfrontController
      */
     public function actionSidebar()
     {
+     //   echo 111
         $data = $this->getBlock('sidebar')->getLastData();
         return $this->render($this->action->id, $data);
     }
