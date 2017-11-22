@@ -182,7 +182,7 @@
     <div class="blank10px"></div>
 
 </div>
-<script type="text/javascript" src="<?= Yii::$service->url->getUrl('home/siderbar'); ?>"></script>
+<script type="text/javascript" src="<?= Yii::$service->url->getUrl('cms/home/siderbar'); ?>"></script>
 <script>
     <?php $this->beginBlock('owl_fecshop_slider') ?>
 
