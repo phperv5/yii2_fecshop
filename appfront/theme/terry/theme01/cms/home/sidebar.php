@@ -1,17 +1,4 @@
-<?php
-# css config
-$cssOptions = [
-    # css config 1.
-    [
-        'css' => [
-            'css/sidebar.css',
-        ],
-    ],
-];
 
-\Yii::$service->page->asset->cssOptions = $cssOptions;
-\Yii::$service->page->asset->register($this);
-?>
 <ul class="kefu_list clearfix">
 
     <li class="tel_list" style="list-style: none;"><a id="telList"></a>
