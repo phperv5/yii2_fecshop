@@ -215,7 +215,6 @@
             dataType: 'html',
 
             success: function (data, textStatus) {
-                alert(1111)
                 $("body").append(data);
             },
         });
