@@ -1,3 +1,6 @@
+<?php
+use fec\helpers\CUrl;
+?>
 <div class="main_h">
     <div class="main_h_left">
         <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
@@ -5,20 +8,21 @@
             <div class="left_proclass_menu">
                 <a href="<?= $category['url'] ?>" class="mhl_first_main"><?= $category['name'] ?></a>
                 <?php $cates = Yii::$service->category->getChildCate($category['_id']); ?>
-                <?php if (isset($cates) && !empty($cates)):?>
+                <?php if (isset($cates) && !empty($cates)): ?>
                     <div class="hd_wr_nav_main">
                         <div style="width: 600px;background-color: #fff;border: none;box-shadow: 3px 3px 3px #E1E1E1;">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
-                                <?php foreach ($cates as $k=>$c): ?>
-                                    <?php if($k % 3 == 0): ?>
+                                <?php foreach ($cates as $k => $c): ?>
+                                    <?php if ($k % 3 == 0): ?>
                                         <tr>
                                     <?php endif; ?>
-                                    <td><a href="<?= $c['url_key'];?>" target="_blank"><?= $c['name']['name_en'];?></a></td>
-                                    <?php if($k % 3 == 0): ?>
+                                    <td><a href="<?= $c['url_key']; ?>"
+                                           target="_blank"><?= $c['name']['name_en']; ?></a></td>
+                                    <?php if ($k % 3 == 0): ?>
                                         </tr>
                                     <?php endif; ?>
-                                <?php endforeach;?>
+                                <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -30,12 +34,12 @@
     <div class="main_h_banner">
         <div id="hm_ads_banner_a2" class="owl-carousel">
             <?php
-               $ads = Yii::$service->product->ads->getAdList();
-               foreach($ads as $v):
-            ?>
-            <a class="item" target="_blank" href="<?= $v['url'] ?>">
-                <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>" style="width: 960px;height:360px;"></a>
-            <?php endforeach;?>
+            $ads = Yii::$service->product->ads->getAdList();
+            foreach ($ads as $v):
+                ?>
+                <a class="item" target="_blank" href="<?= $v['url'] ?>">
+                    <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>" style="width: 960px;height:360px;"></a>
+            <?php endforeach; ?>
         </div>
         <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
     </div>
@@ -205,6 +209,18 @@
         $(".left_proclass_menu").bind('mouseout', function () {
             $('.hd_wr_nav_main').hide();
         })
+
+        $.ajax({
+            url: '<?= CUrl::getUrl('cms/home/sidebar')  ?>',
+            type: 'POST',
+            data: data,
+            async: true,
+            dataType: 'html',
+
+            success: function (data, textStatus) {
+                jQuery("body").append(data);
+            },
+        });
 
     });
     <?php $this->endBlock(); ?>
