@@ -61,36 +61,9 @@ return [
             'newarrivals' => [
                 'class' => 'fecshop\services\product\Newarrivals',
             ],
-            /* #暂时没用
-
-            'coll' => [
-                'class' => 'fecshop\services\product\Coll',
-                //'numPerPage' => 50,	# default
-                //'pageNum' => 1,		# default
-                //'orderBy' => ['_id' => SORT_DESC ],  # default
-                //'allowMaxPageNum' => 200, # default
+            'menu' => [
+                'class' => 'fecshop\services\product\Menu',  //菜单模块
             ],
-            'bestSell' => [
-                'class' => 'fecshop\services\product\BestSell',
-            ],
-            'viewLog' => [
-                'class' => 'fecshop\services\product\ViewLog',
-                'childService' => [
-                    'session' => [
-                        'class' => 'fecshop\services\product\viewLog\Session',
-                    ],
-                    'db'	=>[
-                        'class' => 'fecshop\services\product\viewLog\Db',
-                        //'table' => '',  # custom table, you must create this mysql table before you use it.
-                    ],
-                    'mongodb'	=>[
-                        'class' => 'fecshop\services\product\viewLog\Mongodb',
-                        'collection' => '',
-                    ],
-                ],
-
-            ],
-            */
         ],
     ],
 ];
