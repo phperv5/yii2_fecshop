@@ -12,7 +12,10 @@ class Sidebar
 {
     public function getLastData()
     {
-
+        $about_us = Yii::$service->product->config->getOne('about_us');
+        return [
+            'about_us' => $about_us['content'],
+        ];
     }
-    
+
 }
