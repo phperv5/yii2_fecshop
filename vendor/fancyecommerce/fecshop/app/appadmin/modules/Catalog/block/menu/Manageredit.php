@@ -65,6 +65,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
                 'display' => [
                     'type' => 'inputString',
                 ],
+                'require' => 1,
             ],
             [
                 'label' => 'sort_order',
@@ -74,15 +75,6 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
                     'type' => 'inputString',
                 ],
             ],
-            [
-                'label' => 'sort_order',
-                'name' => 'sort_order',
-                'width' => '200',
-                'display' => [
-                    'type' => 'inputString',
-                ],
-            ],
-
         ];
     }
 
