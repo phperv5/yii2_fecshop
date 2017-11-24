@@ -27,8 +27,9 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     {
         $this->_editUrl = CUrl::getUrl('catalog/newarrivals/manageredit');
         $this->_deleteUrl = CUrl::getUrl('catalog/newarrivals/managerdelete'); //delete data url
-
         $this->_service = Yii::$service->product->newarrivals;
+        $this->_param['orderField'] = 'sort_order';
+        $this->_param['orderDirection'] = 'ASC';
         parent::init();
     }
 
@@ -99,18 +100,18 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
             ],
 
             [
-                'orderField'    => 'created_at',
-                'label'            => '创建时间',
-                'width'            => '110',
-                'align'        => 'center',
-                'convert'        => ['int' => 'datetime'],
+                'orderField' => 'created_at',
+                'label' => '创建时间',
+                'width' => '110',
+                'align' => 'center',
+                'convert' => ['int' => 'datetime'],
             ],
             [
-                'orderField'    => 'updated_at',
-                'label'            => '更新时间',
-                'width'            => '110',
-                'align'        => 'center',
-                'convert'        => ['int' => 'datetime'],
+                'orderField' => 'updated_at',
+                'label' => '更新时间',
+                'width' => '110',
+                'align' => 'center',
+                'convert' => ['int' => 'datetime'],
             ],
 
         ];
