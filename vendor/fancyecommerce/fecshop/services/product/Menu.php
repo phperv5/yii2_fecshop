@@ -9,7 +9,6 @@
 
 namespace fecshop\services\product;
 
-//use fecshop\models\mongodb\product\Review as ReviewModel;
 use fecshop\services\Service;
 use Yii;
 use yii\base\InvalidValueException;
