@@ -80,27 +80,16 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'align' => 'center',
             ],
             [
-                'orderField' => 'keywords',
-                'label' => 'keywords',
+                'orderField' => 'name',
+                'label' => 'title',
                 'width' => '110',
                 'align' => 'left',
             ],
             [
-                'orderField' => 'url',
-                'label' => 'url',
+                'orderField' => 'sort_order',
+                'label' => 'sort_order',
                 'width' => '110',
                 'align' => 'left',
-            ],
-            [
-                'orderField' => 'type',
-                'label' => '类型',
-                'width' => '50',
-                'align' => 'left',
-                'display' => [
-                    1    => 'search keywords',
-                    2    => 'Popular Search',
-                    3    => 'Browse by Feature',
-                ],
             ],
             [
                 'orderField'    => 'created_at',
