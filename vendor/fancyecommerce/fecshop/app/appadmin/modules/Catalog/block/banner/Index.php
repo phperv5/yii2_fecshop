@@ -67,49 +67,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     public function getTableFieldArr()
     {
         $table_th_bar = [
-            [
-                'orderField' => 'title',
-                'label' => 'title',
-                'width' => '100',
-                'height' => '100',
-                'align' => 'left',
-            ],
-            [
-                'orderField' => 'url',
-                'label' => 'url',
-                'width' => '100',
-                'height' => '100',
-                'align' => 'left',
-            ],
-            [
-                'orderField' => 'banner',
-                'label' => 'banner',
-                'width' => '100',
-                'height' => '100',
-                'align' => 'left',
-                'convert'        => ['string' => 'img'],
-            ],
-            [
-                'orderField' => 'sort_order',
-                'label' => 'sort_order',
-                'width' => '110',
-                'align' => 'left',
-            ],
-            [
-                'orderField'    => 'created_at',
-                'label'            => '创建时间',
-                'width'            => '110',
-                'convert'        => ['int' => 'datetime'],
-            ],
-            [
-                'orderField'    => 'updated_at',
-                'label'            => '更新时间',
-                'width'            => '110',
-                'convert'        => ['int' => 'datetime'],
-            ],
-
         ];
-
         return $table_th_bar;
     }
 
