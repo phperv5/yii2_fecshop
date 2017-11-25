@@ -64,6 +64,9 @@ return [
             'menu' => [
                 'class' => 'fecshop\services\product\Menu',  //菜单模块
             ],
+            'banner' => [
+                'class' => 'fecshop\services\product\Banner',  //菜单模块
+            ],
         ],
     ],
 ];
