@@ -54,11 +54,68 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
     /**
      * config function ,return table columns config.
      */
+    /**
+     * config function ,return table columns config.
+     */
     public function getTableFieldArr()
     {
         $table_th_bar = [
+            [
+                'orderField' => $this->_primaryKey,
+                'label' => 'ID',
+                'width' => '50',
+                'align' => 'center',
+            ],
+            [
+                'orderField' => 'title',
+                'label' => 'title',
+                'width' => '110',
+                'align' => 'left',
+            ],
+            [
+                'orderField' => 'banner_url',
+                'label' => 'banner_url',
+                'width' => '110',
+                'align' => 'left',
+            ],
+            [
+                'orderField' => 'url',
+                'label' => 'url',
+                'width' => '110',
+                'align' => 'left',
+            ],
+            [
+                'orderField' => 'type',
+                'label' => '类型',
+                'width' => '50',
+                'align' => 'left',
+                'display' => [
+                    'middle_position'=>'中间区广告',
+                ],
+            ],
+            [
+                'orderField' => 'sort_order',
+                'label' => 'sort_order',
+                'width' => '110',
+                'align' => 'left',
+            ],
+            [
+                'orderField'    => 'created_at',
+                'label'            => '创建时间',
+                'width'            => '110',
+                'align'        => 'center',
+                'convert'        => ['int' => 'datetime'],
+            ],
+            [
+                'orderField'    => 'updated_at',
+                'label'            => '更新时间',
+                'width'            => '110',
+                'align'        => 'center',
+                'convert'        => ['int' => 'datetime'],
+            ],
+
         ];
+
         return $table_th_bar;
     }
-
 }
