@@ -67,13 +67,15 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
                 'require' => 1,
             ],
             [
-                'type' => 'select',
-                'title' => '类型',
-                'name' => 'type',
-                'columns_type' => 'string',  // int使用标准匹配， string使用模糊查询
-                'value' => [
-                    'middle_position'=>'中间区广告',
+                'label'=>'类型',
+                'name'=>'type',
+                'display'=>[
+                    'type' => 'select',
+                    'data' => [
+                        'middle_position'=>'中间区广告',
+                    ],
                 ],
+                'require' => 1,
             ],
             [
                 'label' => 'banner图',
