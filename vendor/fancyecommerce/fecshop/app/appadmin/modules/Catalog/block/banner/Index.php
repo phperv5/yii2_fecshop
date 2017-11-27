@@ -73,8 +73,8 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
                 'align' => 'left',
             ],
             [
-                'orderField' => 'banner图',
-                'label' => 'banner_url',
+                'orderField' => 'banner_url',
+                'label' => 'banner图',
                 'width' => '100',
                 'height' => '100',
                 'align' => 'left',
