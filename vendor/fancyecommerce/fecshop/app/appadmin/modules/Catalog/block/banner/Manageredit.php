@@ -77,7 +77,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             ],
             [
                 'label' => 'banner图',
-                'name' => 'banner',
+                'name' => 'banner_url',
                 'width' => 500,
                 'display' => [
                     'type' => 'inputString',

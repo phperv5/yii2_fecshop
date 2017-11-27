@@ -33,7 +33,10 @@ class Banner extends ActiveRecord
         $origin = [
             '_id',
              'type',
-             'content',        // 关键字类型
+             'title',
+             'url',
+             'banner_url',
+             'sort_order',
              'created_at',    // 创建时间 int
              'updated_at',    // 更新时间 int
         ];
