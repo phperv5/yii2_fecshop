@@ -146,7 +146,7 @@ class Banner extends Service
             'where' => [
                 ['type' => (string)$type],
             ],
-            'orderBy' => ['sort_order' => SORT_ASC],
+            'orderBy' => ['sort_order' => SORT_DESC],
         ];
         $keywordsColl = $this->list($filter);
         $keywords = $keywordsColl['coll'];
