@@ -34,10 +34,10 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     public function getLastData()
     {
         return [
-            'editBar'    => $this->getEditBar(),
-            'textareas'    => $this->_textareas,
-            'lang_attr'    => $this->_lang_attr,
-            'saveUrl'    => $this->_saveUrl,
+            'editBar' => $this->getEditBar(),
+            'textareas' => $this->_textareas,
+            'lang_attr' => $this->_lang_attr,
+            'saveUrl' => $this->_saveUrl,
         ];
     }
 
@@ -50,35 +50,44 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
     {
         return [
             [
-                'label'=>'title',
-                'name'=>'title',
-                'display'=>[
+                'label' => 'title',
+                'name' => 'title',
+                'display' => [
                     'type' => 'inputString',
                 ],
                 'require' => 1,
             ],
             [
-                'label'=>'url',
-                'name'=>'url',
+                'label' => 'url',
+                'name' => 'url',
                 'width' => 200,
-                'display'=>[
+                'display' => [
                     'type' => 'inputString',
                 ],
                 'require' => 1,
             ],
             [
-                'label'=>'banner图',
-                'name'=>'banner',
+                'type' => 'select',
+                'title' => '类型',
+                'name' => 'type',
+                'columns_type' => 'string',  // int使用标准匹配， string使用模糊查询
+                'value' => [
+                    'middle_position'=>'中间区广告',
+                ],
+            ],
+            [
+                'label' => 'banner图',
+                'name' => 'banner',
                 'width' => 500,
-                'display'=>[
+                'display' => [
                     'type' => 'inputString',
                 ],
                 'require' => 1,
             ],
             [
-                'label'=>'sort_order',
-                'name'=>'sort_order',
-                'display'=>[
+                'label' => 'sort_order',
+                'name' => 'sort_order',
+                'display' => [
                     'type' => 'inputString',
                 ],
             ],
@@ -100,15 +109,15 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $this->_service->save($this->_param);
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
-            echo  json_encode([
-                'statusCode'=>'200',
-                'message'=>'save success',
+            echo json_encode([
+                'statusCode' => '200',
+                'message' => 'save success',
             ]);
             exit;
         } else {
-            echo  json_encode([
-                'statusCode'=>'300',
-                'message'=>$errors,
+            echo json_encode([
+                'statusCode' => '300',
+                'message' => $errors,
             ]);
             exit;
         }
@@ -120,21 +129,21 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
         $ids = '';
         if ($id = CRequest::param($this->_primaryKey)) {
             $ids = $id;
-        } elseif ($ids = CRequest::param($this->_primaryKey.'s')) {
+        } elseif ($ids = CRequest::param($this->_primaryKey . 's')) {
             $ids = explode(',', $ids);
         }
         $this->_service->remove($ids);
         $errors = Yii::$service->helper->errors->get();
         if (!$errors) {
-            echo  json_encode([
-                'statusCode'=>'200',
-                'message'=>'remove data  success',
+            echo json_encode([
+                'statusCode' => '200',
+                'message' => 'remove data  success',
             ]);
             exit;
         } else {
-            echo  json_encode([
-                'statusCode'=>'300',
-                'message'=>$errors,
+            echo json_encode([
+                'statusCode' => '300',
+                'message' => $errors,
             ]);
             exit;
         }
