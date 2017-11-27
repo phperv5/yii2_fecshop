@@ -33,10 +33,8 @@
         <div id="hm_ads_banner_a2" class="owl-carousel">
             <?php
             $ads = Yii::$service->product->ads->getAdList();
-            foreach ($ads as $v):
-                ?>
-                <a class="item" target="_blank" href="<?= $v['url'] ?>">
-                    <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>" style="width: 960px;height:360px;"></a>
+            foreach ($ads as $v):?>
+                <a class="item" target="_blank" href="<?= $v['url'] ?>"><img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>" style="width: 960px;height:360px;"></a>
             <?php endforeach; ?>
         </div>
         <div class="hm_bnr_ndots" id="hm_bnr_dots"></div>
@@ -81,16 +79,14 @@
     </div>
     <div class="hm_box_jmp_right">
         <ul>
-            <li><a href="<?= Yii::$service->url->getUrl('4-buttons-bga-315mhz-for-mercedes-benz'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/market/A.jpg'); ?>" border="0" alt=""></a>
-            </li>
-            <li><a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=Remote+for+Toyota&DirID='); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/market/B.jpg'); ?>" border="0" alt=""></a>
-            </li>
+            <?php
+            $middle_banner = Yii::$service->product->banner->getList('middle_position',3);
+            foreach($middle_banner as $v):
+            ?>
             <li>
-                <a href="<?= Yii::$service->url->getUrl('31-buttons-remote-key-313.8mhz-fcc-idkr55wk49308-for-honda-pilot-accord-2008-2013'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/market/C.jpg'); ?>" border="0" alt=""></a>
+                <a href="<?= $v['url'] ?>"><img src="<?= $v['banner_url'] ?>" border="0" alt="<?= $v['title'] ?>"></a>
             </li>
+            <?php endforeach;?>
         </ul>
     </div>
     <div class="clear"></div>

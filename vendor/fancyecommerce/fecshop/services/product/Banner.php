@@ -139,6 +139,20 @@ class Banner extends Service
         return $result;
     }
 
+    public function actionGetList($type,$numPerPage = 10)
+    {
+        $filter = [
+            'numPerPage' => $numPerPage,
+            'where' => [
+                ['type' => (string)$type],
+            ],
+            'orderBy' => ['sort_order' => SORT_ASC],
+        ];
+        $keywordsColl = $this->list($filter);
+        $keywords = $keywordsColl['coll'];
+        return $keywords;
+    }
+
     //删除
     public function remove($ids)
     {
