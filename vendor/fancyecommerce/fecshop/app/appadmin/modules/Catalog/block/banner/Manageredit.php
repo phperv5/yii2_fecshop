@@ -26,7 +26,7 @@ class Manageredit extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
     public function init()
     {
-        $this->_saveUrl = CUrl::getUrl('catalog/ads/managereditsave');
+        $this->_saveUrl = CUrl::getUrl('catalog/banner/managereditsave');
         parent::init();
     }
 

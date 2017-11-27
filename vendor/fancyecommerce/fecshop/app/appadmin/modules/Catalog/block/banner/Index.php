@@ -1,12 +1,4 @@
 <?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-
 namespace fecshop\app\appadmin\modules\Catalog\block\banner;
 
 use fec\helpers\CUrl;
@@ -16,9 +8,7 @@ use Yii;
 
 class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 {
-    /**
-     * init param function ,execute in construct.
-     */
+
     public function init()
     {
         $this->_editUrl = CUrl::getUrl('catalog/banner/manageredit');
