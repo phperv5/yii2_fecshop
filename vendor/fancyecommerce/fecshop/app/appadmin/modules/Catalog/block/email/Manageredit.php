@@ -34,6 +34,7 @@ class Manageredit
     // 传递给前端的数据 显示编辑form
     public function getLastData()
     {
+        var_dump(Yii::$service->customer->getAllUserEmail());
         return [
             'saveUrl' => $this->_saveUrl,
             'to' => $this->_to,
@@ -47,6 +48,7 @@ class Manageredit
     public function save()
     {
         try {
+            
             $editForm = Yii::$app->request->post('editForm');
             $to = $editForm['to'];
             $subject = $editForm['subject'];

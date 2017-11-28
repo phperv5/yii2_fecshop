@@ -40,7 +40,7 @@ use fecadmin\models\AdminRole;
                 <div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">To：</label>
-                        <input type="text" value="<?= $to ?>" size="30" name="editForm[to]" class="required">
+                        <input type="text" value="<?= $to ?>" size="30" name="editForm[to]" >
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Subject：</label>
@@ -48,7 +48,7 @@ use fecadmin\models\AdminRole;
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Body：</label>
-                        <textarea class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px"></textarea>
+                        <textarea class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px" class="required" ></textarea>
                     </div>
                 </div>
             </fieldset>
