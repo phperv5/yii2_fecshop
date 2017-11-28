@@ -578,8 +578,14 @@ class Customer extends Service
     }
     
     
-    public function actiongetAllUserEmail()
+    public function actionGetAllUserEmail()
    {
-        return $this->_customerModel->find()->all();
-    }
+        $reuslt = $this->_customerModel->find()->all();
+        $emailArr = [];
+        foreach($reuslt as $v)
+        {
+            $emailArr[] = $v->email;
+        }
+        return $emailArr;
+   }
 }
