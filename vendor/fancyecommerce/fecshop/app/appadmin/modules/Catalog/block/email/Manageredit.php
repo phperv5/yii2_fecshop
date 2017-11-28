@@ -46,8 +46,9 @@ class Manageredit
      */
     public function save()
     {
+        set_time_limit(0);
         try {
-            
+           
             $editForm = Yii::$app->request->post('editForm');
             if($editForm['toall']){
                 $emailArr = Yii::$service->customer->getAllUserEmail();
