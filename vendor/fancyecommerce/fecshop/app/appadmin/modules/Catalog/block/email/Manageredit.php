@@ -34,7 +34,6 @@ class Manageredit
     // 传递给前端的数据 显示编辑form
     public function getLastData()
     {
-        var_dump(Yii::$service->customer->getAllUserEmail());
         return [
             'saveUrl' => $this->_saveUrl,
             'to' => $this->_to,
@@ -50,14 +49,29 @@ class Manageredit
         try {
             
             $editForm = Yii::$app->request->post('editForm');
-            $to = $editForm['to'];
-            $subject = $editForm['subject'];
-            $htmlBody = $editForm['htmlBody'];
-            $sendInfo = compact('to', 'subject', 'htmlBody');
+            if($editForm['toall']){
+                $emailArr = Yii::$service->customer->getAllUserEmail();
+                foreach($emailArr as $email){
+                    $to =$email;
+                   $subject = $editForm['subject'];
+                   $htmlBody = $editForm['htmlBody'];
+                     $sendInfo = compact('to', 'subject', 'htmlBody');
+                     Yii::$service->email->send($sendInfo);
+                }
+            }else{
+                   $to =$editForm['to'];
+                   $subject = $editForm['subject'];
+                   $htmlBody = $editForm['htmlBody'];
+                    $sendInfo = compact('to', 'subject', 'htmlBody');
+                     Yii::$service->email->send($sendInfo);
+            }
 
-            Yii::$service->email->send($sendInfo);
+
         } catch (\Exception $e) {
-
+           exit(json_encode([
+            'statusCode' => '400',
+            'message' => $e->getMessage(),
+        ]));
         }
         echo json_encode([
             'statusCode' => '200',

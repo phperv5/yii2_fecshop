@@ -41,6 +41,8 @@ use fecadmin\models\AdminRole;
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">To：</label>
                         <input type="text" value="<?= $to ?>" size="30" name="editForm[to]" >
+                        <label style="width: 50px;display: inline-block">群发：</label>
+                        <input type="checkbox" name="editForm[toall]">
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Subject：</label>
