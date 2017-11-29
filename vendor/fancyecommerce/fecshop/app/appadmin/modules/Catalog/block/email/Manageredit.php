@@ -9,11 +9,9 @@
 
 namespace fecshop\app\appadmin\modules\Catalog\block\email;
 
-use fec\helpers\CRequest;
 use fec\helpers\CUrl;
-use fecshop\app\appadmin\interfaces\base\AppadminbaseBlockEditInterface;
-use fecshop\app\appadmin\modules\AppadminbaseBlockEdit;
 use Yii;
+use fecshop\app\console\modules\Amqp\block\Push;
 
 /**
  * block cms\article.
@@ -57,8 +55,7 @@ class Manageredit
                     $subject = $editForm['subject'];
                     $htmlBody = $editForm['htmlBody'];
                     $sendInfo = compact('to', 'subject', 'htmlBody');
-                    sleep(20);
-                    Yii::$service->email->send($sendInfo);
+                    Yii::$app->queue->push(new Push($sendInfo));
                 }
             } else {
                 $to = $editForm['to'];
