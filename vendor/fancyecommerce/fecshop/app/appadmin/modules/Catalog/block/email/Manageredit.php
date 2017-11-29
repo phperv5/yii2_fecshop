@@ -51,11 +51,13 @@ class Manageredit
             $editForm = Yii::$app->request->post('editForm');
             if ($editForm['toall']) {
                 $emailArr = Yii::$service->customer->getAllUserEmail();
+//                var_dump($emailArr);die;
                 foreach ($emailArr as $email) {
                     $to = $email;
                     $subject = $editForm['subject'];
                     $htmlBody = $editForm['htmlBody'];
                     $sendInfo = compact('to', 'subject', 'htmlBody');
+                    sleep(20);
                     Yii::$service->email->send($sendInfo);
                 }
             } else {
