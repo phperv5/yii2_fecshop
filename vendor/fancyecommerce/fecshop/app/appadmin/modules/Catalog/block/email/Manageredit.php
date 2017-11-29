@@ -46,32 +46,32 @@ class Manageredit
      */
     public function save()
     {
+        set_time_limit(0);
         try {
-            
             $editForm = Yii::$app->request->post('editForm');
-            if($editForm['toall']){
+            if ($editForm['toall']) {
                 $emailArr = Yii::$service->customer->getAllUserEmail();
-                foreach($emailArr as $email){
-                    $to =$email;
-                   $subject = $editForm['subject'];
-                   $htmlBody = $editForm['htmlBody'];
-                     $sendInfo = compact('to', 'subject', 'htmlBody');
-                     Yii::$service->email->send($sendInfo);
-                }
-            }else{
-                   $to =$editForm['to'];
-                   $subject = $editForm['subject'];
-                   $htmlBody = $editForm['htmlBody'];
+                foreach ($emailArr as $email) {
+                    $to = $email;
+                    $subject = $editForm['subject'];
+                    $htmlBody = $editForm['htmlBody'];
                     $sendInfo = compact('to', 'subject', 'htmlBody');
-                     Yii::$service->email->send($sendInfo);
+                    Yii::$service->email->send($sendInfo);
+                }
+            } else {
+                $to = $editForm['to'];
+                $subject = $editForm['subject'];
+                $htmlBody = $editForm['htmlBody'];
+                $sendInfo = compact('to', 'subject', 'htmlBody');
+                Yii::$service->email->send($sendInfo);
             }
 
 
         } catch (\Exception $e) {
-           exit(json_encode([
-            'statusCode' => '400',
-            'message' => $e->getMessage(),
-        ]));
+            exit(json_encode([
+                'statusCode' => '400',
+                'message' => $e->getMessage(),
+            ]));
         }
         echo json_encode([
             'statusCode' => '200',
