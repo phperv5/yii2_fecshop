@@ -5,9 +5,10 @@ use yii\base\Object;
 
 class Push extends Object implements \yii\queue\Job
 {
-    public $name;
-    public $age;
-
+    public $email;
+    public $subject;
+    public $htmlBody;
+    
     /*
      * $d = 'name:'.$this->name.'####'.'age:'.$this->age;
      */
