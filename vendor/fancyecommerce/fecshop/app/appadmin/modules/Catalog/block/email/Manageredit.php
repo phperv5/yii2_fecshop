@@ -54,17 +54,16 @@ class Manageredit
         if ($editForm['toall']) {
             $emailArr = Yii::$service->customer->getAllUserEmail();
             foreach ($emailArr as $email) {
-                $to = $email;
                 $subject = $editForm['subject'];
                 $htmlBody = $editForm['htmlBody'];
-                $sendInfo = compact('to', 'subject', 'htmlBody');
+                $sendInfo = compact('email', 'subject', 'htmlBody');
                 Yii::$app->queue->delay(5)->push(new Push($sendInfo));
             }
         } else {
-            $to = $editForm['to'];
+            $email = $editForm['to'];
             $subject = $editForm['subject'];
             $htmlBody = $editForm['htmlBody'];
-            $sendInfo = compact('to', 'subject', 'htmlBody');
+            $sendInfo = compact('email', 'subject', 'htmlBody');
             Yii::$app->queue->delay(5)->push(new Push($sendInfo));
         }
         echo json_encode([
