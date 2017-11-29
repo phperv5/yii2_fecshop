@@ -44,32 +44,28 @@ class Manageredit
      */
     public function save()
     {
-        set_time_limit(0);
-        try {
-            $editForm = Yii::$app->request->post('editForm');
-            if ($editForm['toall']) {
-                $emailArr = Yii::$service->customer->getAllUserEmail();
-                foreach ($emailArr as $email) {
-                    $to = $email;
-                    $subject = $editForm['subject'];
-                    $htmlBody = $editForm['htmlBody'];
-                    $sendInfo = compact('to', 'subject', 'htmlBody');
-                    Yii::$app->queue->push(new Push($sendInfo));
-                }
-            } else {
-                $to = $editForm['to'];
+        $editForm = Yii::$app->request->post('editForm');
+        if (!$editForm['subject']) {
+            exit(json_encode(['statusCode' => '300', 'message' => 'subject不能为空']));
+        }
+        if (!$editForm['htmlBody']) {
+            exit(json_encode(['statusCode' => '300', 'message' => '邮件内容不能为空']));
+        }
+        if ($editForm['toall']) {
+            $emailArr = Yii::$service->customer->getAllUserEmail();
+            foreach ($emailArr as $email) {
+                $to = $email;
                 $subject = $editForm['subject'];
                 $htmlBody = $editForm['htmlBody'];
                 $sendInfo = compact('to', 'subject', 'htmlBody');
-                Yii::$app->queue->push(new Push($sendInfo));
+                Yii::$app->queue->delay(5)->push(new Push($sendInfo));
             }
-
-
-        } catch (\Exception $e) {
-            exit(json_encode([
-                'statusCode' => '400',
-                'message' => $e->getMessage(),
-            ]));
+        } else {
+            $to = $editForm['to'];
+            $subject = $editForm['subject'];
+            $htmlBody = $editForm['htmlBody'];
+            $sendInfo = compact('to', 'subject', 'htmlBody');
+            Yii::$app->queue->delay(5)->push(new Push($sendInfo));
         }
         echo json_encode([
             'statusCode' => '200',
