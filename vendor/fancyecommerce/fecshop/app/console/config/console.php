@@ -27,7 +27,6 @@ return [
     'components' => [
         'db' => [
             'class' => \yii\db\Connection::class,
-            // ...
         ],
         'queue' => [
             'class' => \yii\queue\db\Queue::class,
