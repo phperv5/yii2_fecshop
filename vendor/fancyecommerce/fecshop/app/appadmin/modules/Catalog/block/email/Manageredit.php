@@ -57,14 +57,14 @@ class Manageredit
                 $subject = $editForm['subject'];
                 $htmlBody = $editForm['htmlBody'];
                 $sendInfo = compact('email', 'subject', 'htmlBody');
-                Yii::$app->queue->delay(5)->push(new Push($sendInfo));
+                Yii::$app->queue->delay(2)->push(new Push($sendInfo));
             }
         } else {
             $email = $editForm['to'];
             $subject = $editForm['subject'];
             $htmlBody = $editForm['htmlBody'];
             $sendInfo = compact('email', 'subject', 'htmlBody');
-            Yii::$app->queue->delay(5)->push(new Push($sendInfo));
+            Yii::$app->queue->delay(2)->push(new Push($sendInfo));
         }
         echo json_encode([
             'statusCode' => '200',

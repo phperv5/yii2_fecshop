@@ -196,7 +196,7 @@ class AppadminbaseBlock extends Object
     public function getSearchBarChosenSelectHtml($name, $data, $title, $id = 1)
     {
         if (is_array($data) && !empty($data)) {
-            $html_chosen_select .= '<script type="text/javascript">
+            $html_chosen_select = '<script type="text/javascript">
 				var config = {
 				  \'.chosen-select'.$id.'\'           : {},
 				  \'.chosen-select'.$id.'-deselect\'  : {allow_single_deselect:true},
@@ -471,7 +471,6 @@ class AppadminbaseBlock extends Object
         foreach ($table_columns as $field) {
             $d = [
                 'orderField'    => $field['orderField'],
-            //	'label'			=> $this->_obj->getAttributeLabel($field['orderField'])	,
                 'width'            => $field['width'],
                 'align'        => $field['align'],
             ];
