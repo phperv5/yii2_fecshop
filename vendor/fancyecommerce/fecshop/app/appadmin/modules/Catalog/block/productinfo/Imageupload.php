@@ -87,7 +87,7 @@ class Imageupload
         }
         $fileInfo = $fileInfo[0];
         $str = '<tr class="p_img" data="'.$fileInfo['savename'].'"  style="border-bottom:1px solid #ccc;">
-									<td style="width:120px;text-align:center;"><a href="'.Yii::$service->image->getImgUrl('attachment/'.$fileInfo['savename']).'">'.$fileInfo['savename'].'</a> </td>
+									<td style="width:120px;text-align:center;"><a href="'.Yii::$service->image->getImgUrl('attachment/'.$fileInfo['savename']).'">'.$fileInfo['oldname'].'</a> </td>
 									<td style="padding:0 0 0 20px;"><a class="attachment_delete_img btnDel" href="javascript:void(0)">删除</a></td>
 								</tr>';
         echo json_encode([
