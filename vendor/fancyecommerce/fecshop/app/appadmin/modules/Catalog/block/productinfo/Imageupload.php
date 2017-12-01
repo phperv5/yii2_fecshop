@@ -77,7 +77,8 @@ class Imageupload
         $file_path = Yii::$service->image->getImgDir('attachment');
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
-        $upload->changeName = true;
+        $upload->changeName = false;
+        $upload->uploadReplace = true;
         if (!$upload->upload()) {
             // 上传错误提示错误信息
             exit(json_encode(['return_status' => 'failure', 'msg' => $upload->getErrorMsg()]));
