@@ -1,13 +1,4 @@
-<?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<div class="main container one-column">
+<div class="main">
 <?= Yii::$service->page->widget->render('flashmessage'); ?>
 <?php  if(!empty($identity)):  ?>
 	<div class="account-create">
@@ -21,14 +12,14 @@
 					<li>
 						<label for="email_address" class="required"><em>*</em><?= Yii::$service->page->translate->__('Email Address'); ?></label>
 						<div class="input-box">
-							<input name="editForm[email]" id="email_address" value="<?= $email ?>" title="Email Address" class="input-text validate-email required-entry" type="text">
+							<input name="editForm[email]" id="email_address" value="<?= $email ?>" title="Email Address" class="input_normal validate-email required-entry" type="text">
 						</div>
 					</li>
 					<li>
 						<div class="field">
 							<label for="password" class="required"><em>*</em><?= Yii::$service->page->translate->__('Password'); ?></label>
 							<div class="input-box">
-								<input name="editForm[password]" id="password" title="Password" class="input-text required-entry validate-password" type="password">
+								<input name="editForm[password]" id="password" title="Password" class="input_normal required-entry validate-password" type="password">
 							</div>
 						</div>
 					</li>
@@ -36,7 +27,7 @@
 						<div class="field">
 							<label for="confirmation" class="required"><em>*</em><?= Yii::$service->page->translate->__('Confirm Password'); ?></label>
 							<div class="input-box">
-								<input name="editForm[confirmation]" title="Confirm Password" id="confirmation" class="input-text required-entry validate-cpassword" type="password">
+								<input name="editForm[confirmation]" title="Confirm Password" id="confirmation" class="input_normal required-entry validate-cpassword" type="password">
 							</div>
 						</div>
 					</li>
