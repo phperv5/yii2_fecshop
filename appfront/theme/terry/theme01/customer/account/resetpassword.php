@@ -32,6 +32,23 @@
 						</div>
 					</li>
 				</ul>
+                <div class="lr_l">
+                    <dl class="w700px">
+                        <dt><span class="red_star">*</span>Your Email Adress:</dt>
+                        <dd><input name="editForm[email]" id="email_address" type="text" id="email_address" size="45" maxlength="40" class="input_normal validate-email required-entry" /></dd>
+
+                        <dt><span class="red_star">*</span>Password:</dt>
+                        <dd><input name="editForm[password]" id="password" type="password" id="password" size="45" maxlength="40" class="input_normal validate-password required-entry" /></dd>
+
+                        <dt><span class="red_star">*</span>Confirm Password:</dt>
+                        <dd><input name="editForm[confirmation]" type="text" id="password" size="45" maxlength="40" class="input_normal validate-cpassword required-entry" /></dd>
+
+                        <div class="blank10px"></div>
+                        <dt>&nbsp;</dt>
+                        <dd><input name="Submit" type="submit" class="btn_submit btn_mid" id="js_registBtn" value="  Confirm &amp; Submit  " /></dd>
+
+                    </dl>
+                </div>
 			</div>
 			
 			<?= \fec\helpers\CRequest::getCsrfInputHtml();  ?>
