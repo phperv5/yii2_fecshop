@@ -265,7 +265,7 @@
 .hm_box_jmp_right li {
     width: 300px;
     margin-left: 20px;
-    float: right;
+    float: left;
     list-style: none;
     position: relative;
 }
