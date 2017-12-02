@@ -1,71 +1,39 @@
 <div class="main">
     <?= Yii::$service->page->widget->render('flashmessage'); ?>
     <?php if (!empty($identity)): ?>
-    <div class="account-create">
-        <div class="page-title">
-            <h1><?= Yii::$service->page->translate->__('Forgot Password'); ?></h1>
+    <div class="exh_full_main">
+        <h1>Forget Password?</h1>
+        <div class="account-create">
+            <form action="<?= Yii::$service->url->getUrl('customer/account/resetpassword', ['resetToken' => $resetToken]); ?>"
+                  method="post" id="form-validate">
+                <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
+                <input type="hidden" name="editForm[resetToken]" value="<?= $resetToken ?>"/>
+                <h2 class="legend"><?= Yii::$service->page->translate->__('Select your new password'); ?></h2>
+                <div class="lr_l">
+                    <dl class="w700px">
+                        <dt><span class="red_star">*</span>Your Email Adress:</dt>
+                        <dd><input name="editForm[email]" id="email_address" type="text" id="email_address" size="45"
+                                   maxlength="40" class="input_normal validate-email required-entry"/></dd>
+
+                        <dt><span class="red_star">*</span>Password:</dt>
+                        <dd><input name="editForm[password]" id="password" type="password" id="password" size="45"
+                                   maxlength="40" class="input_normal validate-password required-entry"/></dd>
+
+                        <dt><span class="red_star">*</span>Confirm Password:</dt>
+                        <dd><input name="editForm[confirmation]" type="text" id="password" size="45" maxlength="40"
+                                   class="input_normal validate-cpassword required-entry"/></dd>
+
+                        <div class="blank10px"></div>
+                        <dt>&nbsp;</dt>
+                        <dd><input name="Submit" type="submit" class="btn_submit btn_mid" id="js_registBtn"
+                                   value="  Submit  "/></dd>
+
+                    </dl>
+                </div>
+
+            </form>
         </div>
-        <form action="<?= Yii::$service->url->getUrl('customer/account/resetpassword', ['resetToken' => $resetToken]); ?>" method="post" id="form-validate">
-            <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
-            <input type="hidden" name="editForm[resetToken]" value="<?= $resetToken ?>"/>
-            <h2 class="legend"><?= Yii::$service->page->translate->__('Select your new password'); ?></h2>
-            <ul class="form-list">
-                <li>
-                    <label for="email_address"
-                           class="required"><em>*</em><?= Yii::$service->page->translate->__('Email Address'); ?>
-                    </label>
-                    <div class="input-box">
-                        <input name="editForm[email]" id="email_address" value="<?= $email ?>" title="Email Address"
-                               class="input_normal validate-email required-entry" type="text">
-                    </div>
-                </li>
-                <li>
-                    <div class="field">
-                        <label for="password"
-                               class="required"><em>*</em><?= Yii::$service->page->translate->__('Password'); ?></label>
-                        <div class="input-box">
-                            <input name="editForm[password]" id="password" title="Password"
-                                   class="input_normal required-entry validate-password" type="password">
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="field">
-                        <label for="confirmation"
-                               class="required"><em>*</em><?= Yii::$service->page->translate->__('Confirm Password'); ?>
-                        </label>
-                        <div class="input-box">
-                            <input name="editForm[confirmation]" title="Confirm Password" id="confirmation"
-                                   class="input_normal required-entry validate-cpassword" type="password">
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div class="lr_l">
-                <dl class="w700px">
-                    <dt><span class="red_star">*</span>Your Email Adress:</dt>
-                    <dd><input name="editForm[email]" id="email_address" type="text" id="email_address" size="45"
-                               maxlength="40" class="input_normal validate-email required-entry"/></dd>
-
-                    <dt><span class="red_star">*</span>Password:</dt>
-                    <dd><input name="editForm[password]" id="password" type="password" id="password" size="45"
-                               maxlength="40" class="input_normal validate-password required-entry"/></dd>
-
-                    <dt><span class="red_star">*</span>Confirm Password:</dt>
-                    <dd><input name="editForm[confirmation]" type="text" id="password" size="45" maxlength="40"
-                               class="input_normal validate-cpassword required-entry"/></dd>
-
-                    <div class="blank10px"></div>
-                    <dt>&nbsp;</dt>
-                    <dd><input name="Submit" type="submit" class="btn_submit btn_mid" id="js_registBtn"
-                               value="  Submit  "/></dd>
-
-                </dl>
-            </div>
     </div>
-
-    <div class="clear"></div>
-    </form>
 </div>
 <?php
 $requiredValidate = Yii::$service->page->translate->__('This is a required field.');
