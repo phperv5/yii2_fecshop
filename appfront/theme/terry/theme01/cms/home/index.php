@@ -44,7 +44,7 @@
     <div class="hm_box_jmp_right">
         <ul>
             <?php
-            $middle_banner = Yii::$service->product->banner->getList('middle_position',3);
+            $middle_banner = Yii::$service->product->banner->getList('middle_position',4);
             foreach($middle_banner as $v):
             ?>
             <li>
