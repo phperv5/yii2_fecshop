@@ -242,6 +242,7 @@
 .hm_box_jmp_right {
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
     /*float: right;*/
     /*width: 960px;*/
 }
