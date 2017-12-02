@@ -35,7 +35,7 @@
             <div class="blank10px"></div>
             <div class="blank10px"></div>
             <input name="Submit2" type="button" class="btn_submit btn_mid" value="  Go Back  "
-                   onclick="javascript:window.location='http://www.uobdii.com/app/signin.asp';"/>
+                   onclick="javascript:window.location='<?= $forgotPasswordUrl ?>';"/>
             <div class="blank10px"></div>
             <div class="blank10px"></div>
 
