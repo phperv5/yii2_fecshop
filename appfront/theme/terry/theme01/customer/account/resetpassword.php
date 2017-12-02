@@ -2,13 +2,12 @@
     <?= Yii::$service->page->widget->render('flashmessage'); ?>
     <?php if (!empty($identity)): ?>
     <div class="exh_full_main">
-        <h1>Forget Password?</h1>
+        <h1><?= Yii::$service->page->translate->__('Select your new password'); ?></h1>
         <div class="account-create">
             <form action="<?= Yii::$service->url->getUrl('customer/account/resetpassword', ['resetToken' => $resetToken]); ?>"
                   method="post" id="form-validate">
                 <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
                 <input type="hidden" name="editForm[resetToken]" value="<?= $resetToken ?>"/>
-                <h2 class="legend"><?= Yii::$service->page->translate->__('Select your new password'); ?></h2>
                 <div class="lr_l">
                     <dl class="w700px">
                         <dt><span class="red_star">*</span>Your Email Adress:</dt>
@@ -16,17 +15,18 @@
                                    maxlength="40" class="input_normal validate-email required-entry"/></dd>
 
                         <dt><span class="red_star">*</span>Password:</dt>
-                        <dd><input name="editForm[password]" id="password" type="password" id="password" size="45"
+                        <dd><input name="editForm[password]" id="password" type="password"  size="45"
                                    maxlength="40" class="input_normal validate-password required-entry"/></dd>
 
                         <dt><span class="red_star">*</span>Confirm Password:</dt>
-                        <dd><input name="editForm[confirmation]" type="text" id="password" size="45" maxlength="40"
+                        <dd><input name="editForm[confirmation]" id="confirmation"  type="text" size="45" maxlength="40"
                                    class="input_normal validate-cpassword required-entry"/></dd>
 
                         <div class="blank10px"></div>
                         <dt>&nbsp;</dt>
-                        <dd><input name="Submit" type="submit" class="btn_submit btn_mid" id="js_registBtn"
-                                   value="  Submit  "/></dd>
+                        <dd>
+                            <input name="Submit" type="submit" class="btn_submit btn_mid" id="js_registBtn" value="  Submit  "/>
+                        </dd>
 
                     </dl>
                 </div>
