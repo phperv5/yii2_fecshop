@@ -19,13 +19,13 @@
                                    maxlength="40" class="input_normal validate-password required-entry"/></dd>
 
                         <dt><span class="red_star">*</span>Confirm Password:</dt>
-                        <dd><input name="editForm[confirmation]" id="confirmation"  type="text" size="45" maxlength="40"
+                        <dd><input name="editForm[confirmation]" id="confirmation"  type="password" size="45" maxlength="40"
                                    class="input_normal validate-cpassword required-entry"/></dd>
 
                         <div class="blank10px"></div>
                         <dt>&nbsp;</dt>
                         <dd>
-                            <input name="Submit" type="submit" class="btn_submit btn_mid" id="js_registBtn" value="  Submit  "/>
+                            <button type="button" class="btn_submit btn_mid" id="js_registBtn">Submit</button>
                         </dd>
 
                     </dl>
@@ -33,7 +33,11 @@
 
             </form>
         </div>
+        <br>
+        <br>
+        <br>
     </div>
+
 </div>
 <?php
 $requiredValidate = Yii::$service->page->translate->__('This is a required field.');
@@ -107,8 +111,6 @@ $passwordMatchValidate = Yii::$service->page->translate->__('Please make sure yo
                 }
             }
             if (validate) {
-                //	alert("validate success");
-                $(this).addClass("dataUp");
                 $("#form-validate").submit();
             }
         });
