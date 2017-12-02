@@ -263,8 +263,8 @@
 }
 
 .hm_box_jmp_right li {
-    width: 300px;
-    padding:0 5px;
+    width: 290px;
+    padding:0 9px 0 1px;
     float: left;
     list-style: none;
     position: relative;
