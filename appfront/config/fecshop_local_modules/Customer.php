@@ -38,7 +38,7 @@ return [
             ],
             'forgotPassword' => [
                 // 忘记密码页面的验证码是否开启
-                'forgotCaptcha' => true,
+                'forgotCaptcha' => false,
 
             ],
             // 在账户中心左侧栏显示的菜单。
