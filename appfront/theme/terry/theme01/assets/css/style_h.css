@@ -242,8 +242,8 @@
 .hm_box_jmp_right {
     margin: 0px;
     padding: 0px;
-    float: right;
-    width: 960px;
+    /*float: right;*/
+    /*width: 960px;*/
 }
 
 .hm_box_jmp_right ul, .hm_box_jmp_left ul {
