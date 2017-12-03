@@ -1,28 +1,17 @@
 <?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<?php
 $jsOptions = [
     # js config 1
     [
         'options' => [
             'position' => 'POS_END',
+            //	'condition'=> 'lt IE 9',
         ],
         'js' => [
-            'js/jquery-3.0.0.min.js',
-            'js/jquery.lazyload.min.js',
-            'js/owl.carousel.min.js',
-            'elevatezoom/jquery.elevatezoom.js',
-            'fancybox/jquery.fancybox.pack.js',
-            'js/js.js',
             'js/common.js',
-            'js/parabola.js',
+            'js/jquery.js',
+            'js/js.js',
+            'js/plugins/layer/layer.js',
+            'js/plugins/ResponsiveSlides/responsiveslides.min.js',
         ],
     ],
 ];
@@ -33,9 +22,8 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
-            'css/style_fecshop.css',
-            'css/owl.carousel.css',
-            'fancybox/jquery.fancybox.css',
+            'js/plugins/layer/skin/layer.css',
+            'js/plugins/ResponsiveSlides/responsiveslides.css',
         ],
     ],
 ];
@@ -54,10 +42,11 @@ $cssOptions = [
 <?php $this->beginBody() ?>
 <header id="header">
     <?= Yii::$service->page->widget->render('header', $this); ?>
+    <?= Yii::$service->page->widget->render('menu', $this); ?>
 </header>
 
 <div class="main-container">
-    <?= $content; ?>
+    <?= $content;?>
 </div>
 <div class="footer-container">
     <?= Yii::$service->page->widget->render('footer', $this); ?>
