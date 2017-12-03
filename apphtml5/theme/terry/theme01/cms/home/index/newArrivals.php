@@ -1,6 +1,6 @@
 
 <?php foreach($parentThis['products'] as $item=>$product): ?>
-<div class="pro_list">
+<div class="pro_grid_list">
 <div class="pro_grid">
     <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>">
         <div class="pro_gr_photo"><img src="<?= Yii::$service->product->image->getResize($product['image'],[120,120],false) ?>" width="120"
