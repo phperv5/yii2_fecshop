@@ -47,7 +47,6 @@ $cssOptions = [
 <?php $this->beginBody() ?>
 	<header id="header">
 		<?= Yii::$service->page->widget->render('header',$this); ?>
-		<?= Yii::$service->page->widget->render('menu_sub',$this); ?>
 	</header>
 	
 	<div class="main-container">
