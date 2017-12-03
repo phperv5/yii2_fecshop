@@ -41,46 +41,10 @@
     </div>
     <div class="clear"></div>
     <div class="blank15px"></div>
-    <div class="hm_box_jmp_left">
-        <ul>
-            <li><a href="<?= Yii::$service->url->getUrl('xhorse'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802685309.jpg'); ?>"
-                            border="0"
-                            alt="Brand Xhorse"></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('launch'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802730456.jpg'); ?>"
-                            border="0"
-                            alt="Brand Launch X431"></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('obdstar'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802749706.jpg'); ?>"
-                            border="0"
-                            alt="Brand obdstar "></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('xtool'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802768676.jpg'); ?>"
-                            border="0"
-                            alt="Brand Xtool"></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('xtuner'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802785508.jpg'); ?>"
-                            border="0"
-                            alt="Brand Xtuner"></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('autel'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802803183.jpg'); ?>"
-                            border="0"
-                            alt="Brand Autel"></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('foxwell'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802818939.jpg'); ?>"
-                            border="0"
-                            alt="Brand Foxwell"></a></li>
-            <li><a href="<?= Yii::$service->url->getUrl('lishi'); ?>"><img
-                            src="<?= Yii::$service->image->getImgUrl('images/advs/2017011802840124.jpg'); ?>"
-                            border="0"
-                            alt="Brand Lishi"></a></li>
-        </ul>
-    </div>
     <div class="hm_box_jmp_right">
         <ul>
             <?php
-            $middle_banner = Yii::$service->product->banner->getList('middle_position',3);
+            $middle_banner = Yii::$service->product->banner->getList('middle_position',4);
             foreach($middle_banner as $v):
             ?>
             <li>

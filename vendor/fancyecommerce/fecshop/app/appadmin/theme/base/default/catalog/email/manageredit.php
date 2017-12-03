@@ -1,19 +1,9 @@
 <?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
+
 use yii\helpers\Html;
 use fec\helpers\CRequest;
 use fecadmin\models\AdminRole;
-
-/**
- * @author Terry Zhao <2358269014@qq.com>
- * @since 1.0
- */
+use fec\helpers\CUrl;
 ?>
 <style>
     .checker {
@@ -50,7 +40,7 @@ use fecadmin\models\AdminRole;
                     </div>
                     <div class="edit_p" style="padding-bottom: 10px;">
                         <label style="width: 50px;display: inline-block">Body：</label>
-                        <textarea class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px" class="required" ></textarea>
+                        <textarea upimgurl="<?= CUrl::getUrl('cms/staticblock/imageupload');?>" upimgext="jpg,jpeg,gif,png" class="editor" name="editForm[htmlBody]" style="width: 80%;height: 500px" class="required" ></textarea>
                     </div>
                 </div>
             </fieldset>
@@ -58,7 +48,6 @@ use fecadmin\models\AdminRole;
         </div>
         <div class="formBar">
             <ul>
-                <!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
                 <li>
                     <div class="buttonActive">
                         <div class="buttonContent">

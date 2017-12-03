@@ -78,6 +78,7 @@ class Imageupload
         $upload = new \UploadFile();
         $upload->savePath = $file_path;// 设置附件上传目录   默认上传目录为 ./uploads/
         $upload->changeName = false;
+        $upload->uploadReplace = true;
         if (!$upload->upload()) {
             // 上传错误提示错误信息
             exit(json_encode(['return_status' => 'failure', 'msg' => $upload->getErrorMsg()]));
@@ -86,8 +87,8 @@ class Imageupload
             $fileInfo = $upload->getUploadFileInfo();
         }
         $fileInfo = $fileInfo[0];
-        $str = '<tr class="p_img" data="'.$fileInfo['savename'].'"  style="border-bottom:1px solid #ccc;">
-									<td style="width:120px;text-align:center;"><a href="'.Yii::$service->image->getImgUrl('attachment/'.$fileInfo['savename']).'">'.$fileInfo['savename'].'</a> </td>
+        $str = '<tr class="p_img" data="'.$fileInfo['name'].'"  style="border-bottom:1px solid #ccc;">
+									<td style="width:120px;text-align:center;"><a href="'.Yii::$service->image->getImgUrl('attachment/'.$fileInfo['savename']).'">'.$fileInfo['name'].'</a> </td>
 									<td style="padding:0 0 0 20px;"><a class="attachment_delete_img btnDel" href="javascript:void(0)">删除</a></td>
 								</tr>';
         echo json_encode([
