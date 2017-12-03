@@ -15,9 +15,10 @@ $jsOptions = [
 			'position' =>  'POS_END',
 		],
 		'js'	=>[
-			'js/jquery-3.0.0.min.js',
-			'js/jquery.lazyload.min.js',
-			'js/js.js',
+                         'js/jquery.js',
+                         'js/common.js',
+                         'js/pro.js',
+                         'js/plugins/layer/layer.js',
 		],
 	],
 ];
@@ -28,6 +29,7 @@ $cssOptions = [
 	[
 		'css'	=>[
 			'css/style.css',
+ 			'js/plugins/layer/skin/layer.css',               
 		],
 	],
 ];
