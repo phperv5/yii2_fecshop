@@ -22,19 +22,23 @@
     </div>
     <div class="clear"></div>
 </div>
+
 <div class="clear"></div>
+
+
 <div class="callbacks_container">
     <ul class="rslides callbacks callbacks1" id="slider4">
-       <?php
+            <?php
             $ads = Yii::$service->product->ads->getAdList();
             foreach ($ads as $v):?>
-           <li id="callbacks1_s0" class="">
+
+            <li id="callbacks1_s0" class="">
             <a href="<?= $v['url'] ?>">
-                <img src="<?= $v['banner'] ?>"alt="<?= $v['title'] ?>">
-                <p class="caption"><?= $v['title'] ?></p>
+                <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>">
             </a>
         </li>
-      <?php endforeach; ?>
+            <?php endforeach; ?>
+
 
     </ul>
     <a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#"
