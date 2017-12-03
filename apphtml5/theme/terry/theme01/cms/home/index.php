@@ -22,32 +22,20 @@
     </div>
     <div class="clear"></div>
 </div>
-
 <div class="clear"></div>
-
-
 <div class="callbacks_container">
     <ul class="rslides callbacks callbacks1" id="slider4">
-        <li id="callbacks1_s0" class=""
-            style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;">
-            <a href="/wholesale/lonsdor-k518ise-plus-ske-lt-smart-key-emulator.html"><img
-                    src="http://www.UOBDII.com/upload/advs/2017111683107417.jpg"
-                    alt="Lonsdor K518ISE Key Programmer Plus SKE-LT Smart Key Emulator">
-                <p class="caption">Lonsdor K518ISE Key Programmer Plus SKE-LT Smart Key Emulator</p></a></li>
-        <li id="callbacks1_s1"
-            style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out;"
-            class="callbacks1_on">
-            <a href="/wholesale/cgdi-prog-mb-benz-key-programmer.html"><img
-                    src="http://www.UOBDII.com/upload/advs/2017113004997942.jpg"
-                    alt="2017 CGDI Prog MB Benz Car Key Add Fastest Benz Key Programmer Support All Key Lost">
-                <p class="caption">2017 CGDI Prog MB Benz Car Key Add Fastest Benz Key Programmer Support All Key
-                    Lost</p></a></li>
-        <li id="callbacks1_s2"
-            style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;"
-            class="">
-            <a href="/producttags/vvdi-prog.html"><img src="http://www.UOBDII.com/upload/advs/2017110184731457.jpg"
-                                                       alt="VVDI Prog with New Adapter">
-                <p class="caption">VVDI Prog with New Adapter</p></a></li>
+       <?php
+            $ads = Yii::$service->product->ads->getAdList();
+            foreach ($ads as $v):?>
+           <li id="callbacks1_s0" class="">
+            <a href="<?= $v['url'] ?>">
+                <img src="<?= $v['banner'] ?>"alt="<?= $v['title'] ?>">
+                <p class="caption"><?= $v['title'] ?></p>
+            </a>
+        </li>
+      <?php endforeach; ?>
+
     </ul>
     <a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#"
                                                                          class="callbacks_nav callbacks1_nav next">Next</a>
