@@ -27,5 +27,5 @@
         </div>
     </a>
     <div class="clear"></div>
-</div
+</div>
  <?php  endforeach;  ?>
