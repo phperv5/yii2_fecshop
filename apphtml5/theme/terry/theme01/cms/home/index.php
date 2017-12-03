@@ -22,23 +22,10 @@
     </div>
     <div class="clear"></div>
 </div>
-<script type="text/javascript">
-    SiteHeader('Home');
-</script>
+
 <div class="clear"></div>
 
-<script type="text/javascript">
-    $(function () {
-        // Slideshow 4
-        $("#slider4").responsiveSlides({
-            auto: true,
-            pager: false,
-            nav: true,
-            speed: 500,
-            namespace: "callbacks"
-        });
-    });
-</script>
+
 <div class="callbacks_container">
     <ul class="rslides callbacks callbacks1" id="slider4">
         <li id="callbacks1_s0" class=""
@@ -460,3 +447,20 @@
     </div>
     <div class="clear"></div>
 </div>
+<script>
+    <?php $this->beginBlock('owl_fecshop_slider') ?>
+
+    $(function () {
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: true,
+            speed: 500,
+            namespace: "callbacks"
+        });
+    });
+
+    <?php $this->endBlock(); ?>
+</script>
+<?php $this->registerJs($this->blocks['owl_fecshop_slider'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
