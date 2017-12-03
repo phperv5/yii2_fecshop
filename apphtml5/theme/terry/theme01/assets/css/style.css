@@ -309,7 +309,7 @@ a:active { color:#C30; }
     .pro_chf table { max-width:100%; }
 .pro_cart_btn { margin: 0px; padding: 0px; clear: both; width: 100%; position: fixed; left: 0px; bottom: 0px; }
 
-.pro_grid { margin: 20px 5px 0px; padding: 10px 0px; float: left; width: 50%; background: #FFF; box-shadow: 3px 3px 3px #e6e6e6; border: 1px solid #e6e6e6; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.pro_grid { margin: 20px 0px; padding: 10px 0px; float: left; width: 50%; background: #FFF; box-shadow: 3px 3px 3px #e6e6e6; border: 1px solid #e6e6e6; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
     .pro_gr_photo { margin: 0px auto; padding: 10px; clear: both; text-align: center; }
     .pro_gr_name { padding: 5px 10px; margin: 0px; clear: both; height: 3.2em; overflow: hidden; font-size: 0.8em; }
     .pro_gr_pri_vew { margin: 0px; padding: 5px 10px; clear: both; }
