@@ -7,10 +7,7 @@
     <div class="main_left">
         <div class="col_t_x col_t_cate">
             <strong>Categories</strong>
-            <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
-            <?php foreach ($categories as $category): ?>
-                <h2 class=" fir"><a href="<?= $category['url'] ?>"><?= $category['name'] ?></a></h2>
-            <?php endforeach; ?>
+
             <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
             <?php foreach ($categories as $category): ?>
                 <div class="left_proclass_menu">
