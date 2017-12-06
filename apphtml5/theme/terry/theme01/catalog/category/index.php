@@ -16,13 +16,17 @@
         <span class="font_medium">No.<?= $product['sku']; ?></span>&nbsp;&nbsp;
         <b class="font_medium green">Free Shipping</b> <span class="iconfont icon-localshipping green"></span>
         <div class="blank5px"></div>
-        <span name="cc_v_USD" style="display:"><span class="pri_pg_vip">$529.00</span><span class="pri_pg_sale"><i>$579.00</i></span></span>
-        <span name="cc_v_EUR" style="display:none"><span class="pri_pg_vip">€449.65</span><span class="pri_pg_sale"><i>€492.15</i></span></span>
-        <span name="cc_v_GBP" style="display:none"><span class="pri_pg_vip">£412.62</span><span class="pri_pg_sale"><i>£451.62</i></span></span>
-        <span name="cc_v_AUD" style="display:none"><span class="pri_pg_vip">AU$677.12</span><span
-                class="pri_pg_sale"><i>AU$741.12</i></span></span>
-        <span name="cc_v_JPY" style="display:none"><span class="pri_pg_vip">¥58,719</span><span class="pri_pg_sale"><i>¥64,269</i></span></span>
-
+        <?php
+        $config = [
+            'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+            'view' => 'catalog/category/price.php',
+            'price' => $product['price'],
+            'special_price' => $product['special_price'],
+            'special_from' => $product['special_from'],
+            'special_to' => $product['special_to'],
+        ];
+        echo Yii::$service->page->widget->renderContent('category_product_price', $config);
+        ?>
         <div class="blank5px"></div>
         <a href="/reviews/pro71861">
             <div class="rate_star_w75">
