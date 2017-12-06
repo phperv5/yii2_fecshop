@@ -174,8 +174,8 @@
             <?php if($main_description):?>
             <div class="exh_m_bri">
                 <?= $main_description; ?>
-                <br/>
             </div>
+            <div class="blank5px"></div>
             <?php endif;?>
             <div class="exh_m_cont">
                 <?= $description; ?>
