@@ -1,0 +1,53 @@
+<h1>My Shipping Address Book</h1>
+<div class="blank15px"></div>
+<div class="align_right font_medium"><a href="addr_book.asp" class="btn_blue"><span class="white"><i class="iconfont icon-roundadd font_big no_bold"></i>&nbsp;Add New Shipping Address</span></a></div>
+<div class="blank15px"></div>
+<div class="mmbr_t"><span class="mmbrt_sn"><i class="iconfont icon-unfold"></i></span> Serial #1 &nbsp; <span class="green font_medium">Default Shipping Address</span></div>
+<div class="mmbr_c">
+    Receiver: &nbsp;2323&nbsp;2323<br>
+    2323<br>
+    2323<br>2323, 2323, Germany<br>
+    Post Code: 2323<br>Phone: 2323<br>
+    <div class="blank10px"></div>
+    <div class="align_center">
+        <a href="addr_book.asp?ShipAddrID=295224"><i class="iconfont icon-edit font_big"></i> Update</a> &nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0);" onclick="CheckAddressDelete('295224');return false;"><i class="iconfont icon-roundclose font_big"></i> Delete</a>
+    </div>
+    <div class="blank10px"></div>
+</div>
+
+<div class="mmbr_t"><span class="mmbrt_sn"><i class="iconfont icon-unfold"></i></span> Serial #2</div>
+<div class="mmbr_c">
+    Receiver: &nbsp;3333&nbsp;333<br>
+    333<br>
+    333<br>333, 333, France<br>
+    Post Code: 333<br>Phone: 333<br>
+    <div class="blank10px"></div>
+    <div class="align_center">
+        <a href="addr_book.asp?ShipAddrID=295226"><i class="iconfont icon-edit font_big"></i> Update</a> &nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0);" onclick="CheckAddressDelete('295226');return false;"><i class="iconfont icon-roundclose font_big"></i> Delete</a>
+    </div>
+    <div class="blank10px"></div>
+</div>
+<div class="mmbr_t"><span class="mmbrt_sn"><i class="iconfont icon-unfold"></i></span> Serial #3</div>
+<div class="mmbr_c">
+    Receiver: &nbsp;2323&nbsp;2121<br>
+    323<br>
+    2323, France<br>
+    Post Code: 2323<br>Phone: 2332<br>
+    <div class="blank10px"></div>
+    <div class="align_center">
+        <a href="addr_book.asp?ShipAddrID=295225"><i class="iconfont icon-edit font_big"></i> Update</a> &nbsp;&nbsp;&nbsp;
+        <a href="javascript:void(0);" onclick="CheckAddressDelete('295225');return false;"><i class="iconfont icon-roundclose font_big"></i> Delete</a>
+    </div>
+
+    <div class="blank10px"></div>
+</div>
+
+<form name="formAddressDelete" method="post" action="addr_book_app.asp">
+    <input type="hidden" name="ShipAddrID" value="">
+    <input name="act" type="hidden" value="del">
+    <input name="UserID_confirm" type="hidden" value="351041">
+</form>
+
+

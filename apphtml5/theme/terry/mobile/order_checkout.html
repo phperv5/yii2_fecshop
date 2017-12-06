@@ -1,0 +1,230 @@
+
+<h1>Check Out for Order: <span class="red_dark">U2171206446086</span></h1>
+
+
+
+<div class="ordt_step_c">
+    <b class="red_dark font_big">You placed an order on our site successfully! </b><br>
+
+    <div class="blank10px"></div>
+    <span id="sRtnGetOrderFormStatus"><b class="green">An email sent to <i>312043814@qq.com</i> successfully. Please check.</b></span>
+    <div class="blank10px"></div>
+
+
+    You choosed <b class="blue">PayPal</b> payment. <br><b>After <span id="id_span_jump_sec" class="red px13">3</span> seconds, the system will redirect to the secure PayPalECS site to finish your order.</b> If it doesn't work, please click the following corresponding button.<a href="javascript:countGoPay"></a>
+    <script type="text/javascript">
+        function countGoPay(secs){
+            document.getElementById("id_span_jump_sec").innerHTML = secs;
+            if(--secs>0) {
+                setTimeout("countGoPay("+secs+")",1000);
+            }
+            else {
+                document.getElementById("form_jumpto_checkout_papal_ecs").submit();;}
+        }
+        countGoPay(20);
+    </script>
+
+    <div class="blank10px"></div>
+</div>
+
+
+
+
+<div class="ordt_step_t">
+    <a href="javascript:void(0);" onclick="javascript:AreaShowHide('ord_OrderItems_details');"><span class="ordtsp_sn">1.</span> &nbsp; Order Details &nbsp; <i class="iconfont icon-unfold"></i></a>
+</div>
+
+<div id="ord_OrderItems_details" style="">
+
+
+
+    <div class="ordp_list">
+        <div class="ordp_photo">
+            <a href="/wholesale/scania-vci-vci2-sdp3-v232-software.html" title="2017 Newest Scania VCI &amp; VCI2 SDP3 V2.32 Software for Trucks/Buses Without USB Dongle"><img src="http://www.UOBDII.com/upload/pro/scania-vci-vci2-sdp3-v232-software-180.jpg" width="50" height="33" border="0" hspace="0" vspace="0" alt="2017 Newest Scania VCI &amp; VCI2 SDP3 V2.32 Software for Trucks/Buses Without USB Dongle" align="absmiddle"></a>
+        </div>
+        <div class="ordp_bri">
+            <a href="/wholesale/scania-vci-vci2-sdp3-v232-software.html">2017 Newest Scania VCI &amp; VCI2 SDP3 V2.32 Software for Trucks/Buses Without USB Dongle</a><br><span class="gray px12">Item No. SH58-S1</span>
+
+            <div class="blank10px"></div>
+
+            $89.99 &nbsp;&nbsp; Qty.:1 &nbsp;&nbsp; Subtotal:$89.99
+
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+
+    <div class="ordt_ar line18em font_bold" id="ord_total">
+
+
+        Items Total: <span class="red_dark">$89.99</span>
+
+
+        <br><span class="green">Free Shipping</span>
+
+
+        <div class="blank5px"></div>
+        <span class="red font_big" style="border-top:1px solid #CCCCCC; padding-top:5px; padding-left:20px;">
+Total Sum: $89.99
+</span>
+
+        <div class="clear"></div>
+    </div>
+
+
+</div>
+
+
+<div class="ordt_step_t">
+    <a href="javascript:void(0);" onclick="javascript:AreaShowHide('ord_PaymentMethod_details');"><span class="ordtsp_sn">2.</span> &nbsp; You Choosed Payment Method &nbsp; <i class="iconfont icon-unfold"></i></a>
+</div>
+<div class="ordt_step_c" id="ord_PaymentMethod_details" style="">
+    <b>PayPalECS</b>
+    <div class="blank10px"></div>
+</div>
+
+
+<div class="ordt_step_t">
+    <a href="javascript:void(0);" onclick="javascript:AreaShowHide('ord_ShippingAddress_details');"><span class="ordtsp_sn">3.</span> &nbsp; Shipping Address &nbsp; <i class="iconfont icon-unfold"></i></a>
+</div>
+<div class="ordt_step_c" id="ord_ShippingAddress_details" style="display:none;">
+
+
+
+    Receiver: 2323 2121<br>
+    323<br>
+    2323, France<br>
+    Post Code: 2323<br>
+    Phone: 2332<br>
+
+    <div class="blank10px"></div>
+</div>
+
+
+
+<div class="ordt_step_t">
+    <span class="ordtsp_sn_crt">4.</span> &nbsp; <b class="red_dark">Checkout and Payment Details</b>
+</div>
+<div class="ordt_step_c">
+
+
+
+
+
+    <input name="PaymentMethod" class="input_radio" type="radio" id="PayPalECS" value="PayPalECS" checked="checked" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,1);"><label for="PayPalECS">
+
+
+    <img src="/images/pay/PayPal_mark_60x38.gif" alt="PayPalECS" border="0" align="absmiddle">&nbsp;&nbsp;<b>PayPal Express Checkout</b>
+</label>
+
+    <div class="blank10px"></div>
+    <div style="display:" id="area_pay_method_exp_1">
+
+        <img align="right" alt="" border="0" hspace="5" src="/images/pay/pay_remark_paypal.gif">If you have PayPal account, you can pay your order by your PayPal account.<br>
+        If you don't have PayPal account, it doesn't matter. You firstly charge your Paypal with you credit card or bank debit card , then also pay via PayPal.<br>
+        Payment can be submitted in any currency.&nbsp;<br>
+        Our PayPal account is: <b style="font-size: 18px;">sinpecal@gmail.com</b>
+        <div class="blank10px"></div>
+
+        <form action="/api_ppec/paypal_ec_redirect.php" method="POST" id="form_jumpto_checkout_papal_ecs">
+            <input type="hidden" name="PAYMENTREQUEST_0_INVNUM" value="U2171206446086">
+
+            <input type="hidden" name="paymentType" value="Sale">
+
+
+            <input type="hidden" name="CANCELURL" value="http://m.UOBDII.com/app/order_checkout.asp?OrderSN=U2171206446086">
+
+            <input type="hidden" name="currencyCodeType" value="USD">
+
+
+            <input type="hidden" name="L_PAYMENTREQUEST_0_NAME0" value="2017+Newest+Scania+VCI+%26amp%3B+VCI2+SDP3+V2%2E32+Software+for+Trucks%2FBuses+Without+USB+Dongle">
+            <input type="hidden" name="L_PAYMENTREQUEST_0_NUMBER0" value="SH58-S1">
+            <input type="hidden" name="L_PAYMENTREQUEST_0_AMT0" value="89.99">
+            <input type="hidden" name="L_PAYMENTREQUEST_0_QTY0" value="1">
+            <input type="hidden" name="L_PAYMENTREQUEST_0_DESC0" value="77949; 1; %2D; %2D; 100">
+
+
+            <input type="hidden" name="PAYMENTREQUEST_0_ITEMAMT" value="89.99">
+            <input type="hidden" name="PAYMENTREQUEST_0_SHIPPINGAMT" value="0.00">
+
+
+
+            <input type="hidden" name="PAYMENTREQUEST_0_AMT" value="89.99">
+
+            <input type="hidden" name="PAYMENTREQUEST_0_CUSTOM" value="0|351041|0.0||0.0|0.00|0|100|http://m.UOBDII.com">
+
+            <input type="hidden" name="myOrderProNum" value="0">
+
+            <input type="hidden" name="LOGOIMG" value="http://m.UOBDII.com/images/logo.png">
+
+            <input type="submit" style="display:none">
+            <input name="" type="image" class="ipt_img" src="/images/checkout-paypal-large.png" alt="Check out with PayPal" id="myPPECbutton">
+        </form>
+
+
+
+
+
+    </div>
+
+
+
+    <div class="blank10px"></div>
+    <div class="dashed_line"></div>
+    <div class="blank10px"></div>
+
+
+    <input name="PaymentMethod" class="input_radio" type="radio" id="Western Union" value="Western Union" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,2);"><label for="Western Union">
+
+
+    <img src="/images/pay/ico_western_union.gif" alt="Western Union" border="0" align="absmiddle">&nbsp;&nbsp;<b>Western Union</b>
+</label>
+
+    <div class="blank10px"></div>
+    <div style="display:none" id="area_pay_method_exp_2">
+
+        <p><strong>First Name: Yue<br>
+            Last Name : Lin</strong><br>
+            <strong>City: SHENZHEN</strong><br>
+            <strong>Country:CHINA</strong><br>
+            <strong>Postal Code:518112</strong><br>
+            <strong>Mobile: +</strong><strong>0086-13995696053</strong><br>
+            <strong>Tel: +86-755-28704781</strong><br>
+            <strong>Fax:+86-755-28700303</strong></p>
+
+        <p>Note: Please make sure leave the Order# in the remark section.<br>
+            After you make the payment, please remember to Sign In "My Account" on our site, and submit the Western Union Money Transfer Control Number (MTCN) on the page of "Submit a Request Ticket". We will confirm your payment within 24 hours upon the receipt of the money.</p>
+
+    </div>
+
+
+
+    <div class="blank10px"></div>
+    <div class="dashed_line"></div>
+    <div class="blank10px"></div>
+
+
+    <input name="PaymentMethod" class="input_radio" type="radio" id="Bank Transfer" value="Bank Transfer" onclick="javascript:AreaMultiShowHide('area_pay_method_exp_',3,3);"><label for="Bank Transfer">
+
+
+    <img src="/images/pay/logo_icbc.png" alt="Bank Transfer" border="0" align="absmiddle">&nbsp;&nbsp;<b>Bank Transfer</b>
+</label>
+
+    <div class="blank10px"></div>
+    <div style="display:none" id="area_pay_method_exp_3">
+
+        <div><strong>Name of Corporation: Shenzhen Sinoy Technology Co.,Ltd &nbsp;&nbsp;<br>
+            Account: 4000025109910016894&nbsp;<br>
+            Bank name: INDUSTRIAL AND COMMERCIAL BANK OF CHINA &nbsp; SHENZHEN BRANCH HENGGANG SUB-BRANCH XINSHI JIE SQUARE &nbsp;<br>
+            Swift Code: ICBKCNBJSZN<br>
+            Bank Address: NEW WORLD SQUARE 2A01 HENGGANG TOWN SHENZHEN CITY CHINA</strong></div>
+
+        <p><strong>Shenzhen Sinoy Technology Co.,Ltd</strong>&nbsp;is&nbsp;the designated bank and transfer the money to the designated account above. The money will arrive in our account in about 2-4 business days.<br>
+            <strong>Note: Please make sure leave the Order# in the remark section.</strong><br>
+            After you make the payment, please remember to Sign In "My Account" on our site, and submit a notice about payment on the page of "Submit a Request Ttcket". We will confirm your payment within 24 hours upon the receipt of the money.</p>
+
+    </div>
+    <div class="blank10px"></div>
+</div>
