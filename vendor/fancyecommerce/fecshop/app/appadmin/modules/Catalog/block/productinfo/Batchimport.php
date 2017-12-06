@@ -34,9 +34,6 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
 
         $this->_saveUrl = CUrl::getUrl('catalog/productinfo/batchimportsave');
         parent::init();
-
-
-        //$this->_param		= $request_param[$this->_editFormData];
     }
 
     public function setService()

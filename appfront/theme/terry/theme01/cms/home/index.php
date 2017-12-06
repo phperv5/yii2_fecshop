@@ -168,7 +168,6 @@
             type: 'get',
             async: true,
             dataType: 'html',
-
             success: function (data, textStatus) {
                 $("body").append(data);
             },
