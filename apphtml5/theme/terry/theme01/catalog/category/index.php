@@ -12,12 +12,7 @@
                     <div class="list-cont">
                         <h3 class="list-title"><?= $product['name'] ?></h3>
                         <div class="now-price"><var>US $</var><strong>13.13 - 65.38</strong> / Piece</div>
-                        <div class="priceOnApp"><var class="mobileIcon"></var>US $12.6 on App</div>
-                        <div class="freeship-coupon">
-                            <span class="free-shipping">Free Shipping</span>
-                            <var>|</var>
-                            <span class="clip-coupon">Coupon</span>
-                        </div>
+                        <span name="cc_v_USD" style="display:"><span class="pri_pg_vip">$159.00</span><span class="pri_pg_sale"><i>$179.00</i></span></span>
                         <div class="min-order">Min. Order 4 Pieces</div>
                         <div class="orders">1554 Orders</div>
                         <div class="reviews clearfix"><span class="reviewsCon"><span class="reviewsNum" style="width:90%;"></span></span><em>(387)</em></div>
