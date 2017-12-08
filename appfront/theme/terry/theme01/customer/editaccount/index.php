@@ -70,7 +70,7 @@
 
                         <dt><span class="red_star">*</span><b>New E-mail Address:</b></dt>
                         <dd><input name="email" id="email" type="text" size="40" maxlength="40" class="input_normal"
-                                   value="312043814@qq.com" onfocus="InputCss(this,'focus');"
+                                   value="" onfocus="InputCss(this,'focus');"
                                    onblur="CheckVerifyEmailSetNew('email','txtIDemail',351041);"><span id="txtIDemail"
                                                                                                        class="alert"></span>
                         </dd>
