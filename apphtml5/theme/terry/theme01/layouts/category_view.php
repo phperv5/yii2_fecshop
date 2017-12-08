@@ -17,8 +17,6 @@ $jsOptions = [
 		'js'	=>[
                          'js/jquery.js',
                          'js/common.js',
-                         'js/pro.js',
-                         'js/plugins/layer/layer.js',
 		],
 	],
 ];
@@ -28,8 +26,7 @@ $cssOptions = [
 	# css config 1.
 	[
 		'css'	=>[
-			'css/style.css',
- 			'js/plugins/layer/skin/layer.css',               
+			'css/en.css',
 		],
 	],
 ];
