@@ -92,7 +92,7 @@
                     <input name="numVerify" id="numVerify" type="text" maxlength="4" size="10"
                            onkeypress="event.returnValue=IsDigit();"
                            onblur="CheckVerificationCode('numVerify', 'numVerifyConfirm', 'u_reg_verification_code', 'rowfull', 0);">
-                    &nbsp; <span class="span_num_verify">2120</span><input name="numVerifyConfirm" id="numVerifyConfirm"
+                    &nbsp; <span class="span_num_verify">5266</span><input name="numVerifyConfirm" id="numVerifyConfirm"
                                                                            type="hidden" value="2120"/>
                 </div>
                 <div class="clear"></div>
@@ -135,7 +135,7 @@ $passwordMatchValidate = Yii::$service->page->translate->__('Please make sure yo
             $(".validation-advice").remove();
             $(".validation-failed").removeClass("validation-failed");
 
-            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            var myreg = /[\w-.]+@[\w-]+(.[\w_-]+)+/;
             // empty check
             $(".account-register .required-entry").each(function () {
                 val = $(this).val();

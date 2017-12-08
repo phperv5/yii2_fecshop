@@ -58,7 +58,7 @@ $passwordMatchValidate = Yii::$service->page->translate->__('Please make sure yo
             $(".validation-advice").remove();
             $(".validation-failed").removeClass("validation-failed");
 
-            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            var myreg = /[\w-.]+@[\w-]+(.[\w_-]+)+/;
             // empty check
             $(".account-create .required-entry").each(function () {
                 val = $(this).val();
