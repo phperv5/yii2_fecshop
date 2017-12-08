@@ -33,7 +33,7 @@ class EmailBody
             'contactsEmailAddress'    => Email::contactsEmailAddress(),
             'contactsPhone'            => Email::contactsPhone(),
             'homeUrl'    => Yii::$service->url->homeUrl(),
-            'logoImg'    => Yii::$service->image->getImgUrl('mail/logo.png', 'appfront'),
+            'logoImg'    => Yii::$service->image->getImgUrl('email/logo.png'),
             'identity'  => $identity,
         ];
     }
