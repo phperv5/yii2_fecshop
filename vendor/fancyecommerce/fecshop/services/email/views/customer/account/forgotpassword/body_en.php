@@ -23,9 +23,6 @@
                        
 							</td>
                         </tr>
-                        <tr>
-                            <td style="background-color: #EAEAEA; text-align: center;"><p style="font-size:12px; margin:0; text-align: center;">Thank you, <strong><?= $storeName; ?></strong></p></td>
-                        </tr>
                     </table>
                 </td>
             </tr>
