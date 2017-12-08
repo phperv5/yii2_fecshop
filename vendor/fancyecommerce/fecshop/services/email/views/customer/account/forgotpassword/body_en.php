@@ -7,7 +7,7 @@
                         <tr>
 							<td valign="top">
 								<a href="<?= $homeUrl; ?>">
-									<img src="<?=  $logoImg; ?>" alt="" style="margin:10px 0 ;" border="0"/>
+									<img src="<?=  $logoImg; ?>" alt="" style="margin-left:10px;width: 200px;" border="0"/>
 								</a>
 							</td>
 						</tr>
