@@ -15,6 +15,10 @@ class HomeController extends AppfrontController
     // 网站信息管理
     public function actionIndex()
     {
+        $cache = Yii::$app->cache;
+        $cache->set('cache_data_key', 1, 60*60);
+        $data = $cache->get('cache_data_key');
+        var_dump($data);
         $data = $this->getBlock()->getLastData();
         return $this->render($this->action->id, $data);
     }
