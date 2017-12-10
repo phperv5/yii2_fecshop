@@ -1,6 +1,3 @@
-<?php
-
-?>
 <div class="main">
     <div class="page_where_l"><a href="/" rel="nofollow">Home</a> - <a href="/wholesale/" rel="nofollow">Products</a> - <?= $name; ?>
     </div>

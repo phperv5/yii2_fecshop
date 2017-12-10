@@ -1,5 +1,7 @@
- <?php if(isset($special_price) && !empty($special_price)):  ?>
-     <span name="cc_v_USD" style="display:"><span class="pri_pg_vip"><?= $special_price['symbol'].$special_price['value'] ?></span><span class="pri_pg_sale"><i><?= $price['symbol'].$price['value'] ?></i></span></span>
+<?php if(isset($special_price) && !empty($special_price)):  ?>
+ <div class="now-price"><var><?= $special_price['symbol'] ?></var><strong><?= $special_price['value'] ?></strong> / Piece</div>
+ <div class="priceOnApp"><?= $price['symbol'].$price['value'] ?></div>
  <?php else: ?>
-     <span name="cc_v_USD" style="display:"><span class="pri_pg_vip"><?= $price['symbol'].$price['value'] ?></span></span>
+<div class="now-price"><var><?= $price['symbol'] ?></var><strong><?= $price['value'] ?></strong> / Piece</div>
+<div class="priceOnApp"></div>
  <?php endif;  ?>

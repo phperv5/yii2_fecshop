@@ -1,4 +1,3 @@
-
 <?php foreach($parentThis['products'] as $item=>$product): ?>
 <div class="pro_grid_list">
 <div class="pro_grid">

@@ -1,30 +1,14 @@
-
-
-
-
-<div itemscope="" itemtype="http://schema.org/Product">
-    <meta itemprop="name" content="SuperOBD SKP-900 V5.0 Hand-Held OBD2 Auto Key Programmer">
-    <meta itemprop="sku" content="SK155">
-    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-        <meta itemprop="priceCurrency" content="USD">
-        <meta itemprop="price" content="399.00">
-        <meta itemprop="availability" itemtype="http://schema.org/ItemAvailability" content="http://schema.org/InStock">
-        <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition">
-    </div>
-
-    <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-        <meta itemprop="ratingValue" content="4.2">
-        <meta itemprop="bestRating" content="5">
-        <meta itemprop="reviewCount" content="113">
-    </div>
-
-</div>
-
-<div class="callbacks_container"><a href="/product_photos_5803.html">
-    <ul class="rslides callbacks callbacks1" id="slider4">		<li id="callbacks1_s0" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out;"><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-1.jpg"></li>		<li id="callbacks1_s1" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;"><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-2.jpg"></li>		<li id="callbacks1_s2" class="callbacks1_on" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out;"><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-3.jpg"></li>		<li id="callbacks1_s3" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;" class=""><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-4.jpg"></li>		<li id="callbacks1_s4" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;" class=""><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-5.jpg"></li>		<li id="callbacks1_s5" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;" class=""><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-6.jpg"></li>		<li id="callbacks1_s6" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;" class=""><img src="http://www.UOBDII.com/upload/pro/superobd-skp-900-7.jpg"></li></ul><a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#" class="callbacks_nav callbacks1_nav next">Next</a></a>
-</div>
-
-
+<?php # 图片部分。
+$imageView = [
+    'view' => 'catalog/product/index/image.php'
+];
+$imageParam = [
+    'media_size' => $media_size,
+    'image' => $image_thumbnails,
+    'productImgMagnifier' => $productImgMagnifier,
+];
+?>
+<?= Yii::$service->page->widget->render($imageView, $imageParam); ?>
 <h1 class="proname">SuperOBD SKP-900 V5.0 Hand-Held OBD2 Auto Key Programmer</h1>
 
 <div class="pro_chf">
@@ -531,18 +515,13 @@
 
 <script>
     <?php $this->beginBlock('owl_fecshop_slider') ?>
-
     $(function () {
-        // Slideshow 4
-        $("#slider4").responsiveSlides({
-            auto: true,
-            pager: false,
-            nav: true,
-            speed: 500,
-            namespace: "callbacks"
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
     });
-
     <?php $this->endBlock(); ?>
 </script>
 <?php $this->registerJs($this->blocks['owl_fecshop_slider'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>

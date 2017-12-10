@@ -7,31 +7,129 @@
  * @license http://www.fecshop.com/license/
  */
 ?>
-                <div class="pro_chf_photo_view" onmouseover="javascript:document.getElementById('pro_chf_pv_arr_zoom').style.display='';" onmouseout="javascript:document.getElementById('pro_chf_pv_arr_zoom').style.display='none';"><a href="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-1.3.jpg" title="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" target="_blank" id="hrefProImg"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-1.3.jpg" width="500" height="500" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" id="proPicView" /></a>
-                </div><div class="pro_chf_pv_arr_zoom" id="pro_chf_pv_arr_zoom" style="display:none"><span>View Larger Image</span></div><div class="blank10px"></div>
-                <div class="pro_chf_photo_more" id="pro_chf_photo_more" style="width:510px;"><div class="pro_chf_photo_more_item">
-                    <div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-1.3.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-1.3.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-1.3.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-1.3.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.1.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.1.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.1.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.1.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300-dp-1.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300-dp-1.jpg';"><img src="/upload/pro/obdstar-x300-dp-1.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300-dp-1.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-3.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.1.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.1.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.1.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.1.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-6.jpg" /> </a></div></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-7.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-7.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-7.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-7.jpg" /> </a></div></div>
-                    <div class="blank5px"></div>
-                    <div class="pro_chf_photo_more_item"><div class="img50px"><a href="javascript:void(0);" onmouseover="javascript:document.getElementById('proPicView').src='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-8.jpg';document.getElementById('proPicView').width='500';document.getElementById('proPicView').height='500';document.getElementById('hrefProImg').href='/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-8.jpg';"><img src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-8.jpg" width="50" height="50" border="0" hspace="0" vspace="0" alt="OBDSTAR X300 DP X-300DP PAD Tablet Key Programmer Full Configuration Free Shipping by DHL" align="absmiddle" layer-src="/upload/pro/obdstar-x300dp-diagnosis-programmer-key-master-8.jpg" /> </a></div></div>
-                </div>
-                <script type="text/javascript">
-                    layer.config({
-                        extend: [
-                            'extend/layer.ext.js'
-                     ]});
-                    layer.ready(function(){
-                        layer.photos({
-                            photos: '#pro_chf_photo_more',
-                            shift: 0,
-                            shade:0.7,
-                            closeBtn: 1
-                        });
-                    });
-                </script>
+<?php 
+$media_size = $parentThis['media_size'];
+$image = $parentThis['image'];
+$productImgMagnifier = $parentThis['productImgMagnifier'];
+$small_img_width = $media_size['small_img_width'];
+$small_img_height = $media_size['small_img_height'];
+$middle_img_width = $media_size['middle_img_width'];
+?>
+<?php  $main_img = isset($image['main']['image']) ? $image['main']['image'] : '' ?>
+<div class="product-main-img">
+	<img id="zoom_03" src="<?= Yii::$service->product->image->getResize($main_img,$middle_img_width,false) ?>" data-zoom-image="<?= Yii::$service->product->image->getUrl($main_img);  ?>"/>
+</div>
+<?php
+	if(isset($image['gallery']) && is_array($image['gallery']) && !empty($image['gallery'])):
+		$gallerys = $image['gallery'];
+		$gallerys = \fec\helpers\CFunc::array_sort($gallerys,'sort_order',$dir='asc');
+		if(is_array($image['main']) && !empty($image['main'])):
+			$main_arr[] = $image['main'];
+			$gallerys = array_merge($main_arr,$gallerys);
+		endif;	
+	elseif(is_array($image['main']) && !empty($image['main'])):
+		$main_arr[] = $image['main'];
+		$gallerys = $main_arr;
+	endif;
+	if(is_array($gallerys) && !empty($gallerys)):
+?>
+		<div class="product-img-box">
+			<div class="gallery-img">
+				<a href="javascript:;" class="pre_images"></a>
+				<div class="box-img" id="gal1">
+					<div class="list-img" >
+		<?php	
+			foreach($gallerys as $gallery):
+				$image		= $gallery['image'];
+				$sort_order = $gallery['sort_order'];
+				$label 		= $gallery['label'];
+		?>
+           <a href="#" data-image="<?= Yii::$service->product->image->getResize($image,$middle_img_width,false) ?>" data-zoom-image="<?= Yii::$service->product->image->getUrl($image);  ?>">
+				<img class="elevateZoom lazyOwl" id="img_01" src="<?= Yii::$service->product->image->getResize($image,[$small_img_width,$small_img_height],false) ?>" />
+		   </a>
+		<?php
+			endforeach;
+		?>
+					</div>
+				</div>
+<!--				<a href="javascript:;" class="next_images"></a>-->
+				<div class="clear"></div>
+			</div>
+		</div>
+	<div class="clear"></div>
+<?php endif; ?>
+
+<script>
+<?php $this->beginBlock('product_view_zoom') ?>
+$(document).ready(function(){
+   //initiate the plugin and pass the id of the div containing gallery images
+	$("#zoom_03").elevateZoom({
+			gallery:'gal1',
+			cursor: 'pointer',
+			galleryActiveClass: 'active',
+			imageCrossfade: true,
+			//preloading: 1,
+			loadingIcon: '<?= Yii::$service->image->getImgUrl('images/lazyload.gif'); ?>',
+		<?php if(!$productImgMagnifier):  ?>
+			zoomType:"inner",
+			cursor: "crosshair"
+		<?php endif;  ?>
+	});
+
+	//pass the images to Fancybox
+	$("#zoom_03").bind("click", function(e) {
+		var ez =   $('#zoom_03').data('elevateZoom');
+		$.fancybox(ez.getGalleryList());
+		return false;
+	});
+	$(document).ready(function(){
+		$(".next_images").click(function(){
+			//83
+			i = 0;
+			$(".product-img-box .box-img .list-img img").each(function(){
+				i++;
+			});
+			maxright = 1*(i-4);
+			nowright = $(".product-img-box .list-img").css("top");
+			nowright = parseFloat(nowright.replace("px",""));
+			abs_nowright = Math.abs(nowright);
+			//alert(nowright);
+			if(abs_nowright >= maxright && (nowright < 0)){
+				$(".product-img-box .list-img").animate({top: '0px'}, "slow");
+			}else{
+				$(".product-img-box .list-img").animate({top: '-=125px'}, "fast");
+			}
+		});
+
+		$(".pre_images").click(function(){
+
+			//83
+			i = 0;
+			$(".product-img-box .box-img .list-img img").each(function(){
+				i++;
+			});
+			maxright = 83*(i-4);
+			nowright = $(".product-img-box .list-img").css("top");
+			nowright = parseFloat(nowright.replace("px",""));
+			abs_nowright = Math.abs(nowright);
+
+			if(nowright<0){
+
+				$(".product-img-box .list-img").animate({top: '+=125px'}, "fast");
+			}else{
+				$(".product-img-box .list-img").animate({top: '0px'}, "slow");
+			}
+
+		});
+	});
+});
+<?php $this->endBlock(); ?>
+</script>  
+<?php $this->registerJs($this->blocks['product_view_zoom'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
+
+<style>
+.owl-theme .owl-controls{display:none}
+.owl-theme:hover .owl-controls .owl-buttons div.owl-next{right:-5px}
+.owl-theme:hover .owl-controls .owl-buttons div.owl-prev{left:-5px}
+.list-img a{text-decoration:none;}
+</style>

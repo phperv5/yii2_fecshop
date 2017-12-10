@@ -1,20 +1,17 @@
-<div class="callbacks_container">
-    <ul class="rslides callbacks callbacks1" id="slider4">
-            <?php
-            $ads = Yii::$service->product->ads->getAdList();
-            foreach ($ads as $v):?>
-
-            <li id="callbacks1_s0" class="">
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <?php
+        $ads = Yii::$service->product->ads->getAdList();
+        foreach ($ads as $v):?>
+        <div class="swiper-slide">
             <a href="<?= $v['url'] ?>">
-                <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>">
+                <img src="<?= $v['banner'] ?>" alt="<?= $v['title'] ?>" style="width: 100%">
             </a>
-        </li>
-            <?php endforeach; ?>
-
-
-    </ul>
-    <a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#"
-                                                                         class="callbacks_nav callbacks1_nav next">Next</a>
+        </div>
+        <?php endforeach; ?>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
 </div>
 <div class="blank10px"></div>
 <div class="mn_row"><a href="/featured_products.html"><b> Our Recommendations</b> <i
@@ -32,8 +29,8 @@
         <div class="pro_gr_name">KTAG KESS KTM Dimsport BDM Probe Adapters Full Set (Denso, Marelli, Bosch, Siemens)
         </div>
         <div class="pro_gr_pri_vew">
-            <div id="ProPriDisp_m_h_"><span name="cc_v_USD" style="display:"><span
-                    class="pri_ph_vip">$189.00</span></span>
+            <div id="ProPriDisp_m_h_">
+                <span name="cc_v_USD" style="display:"><span class="pri_ph_vip">$189.00</span></span>
                 <span name="cc_v_EUR" style="display:none"><span class="pri_ph_vip">€160.65</span></span>
                 <span name="cc_v_GBP" style="display:none"><span class="pri_ph_vip">£147.42</span></span>
                 <span name="cc_v_AUD" style="display:none"><span class="pri_ph_vip">AU$241.92</span></span>
@@ -213,18 +210,13 @@
 
 <script>
     <?php $this->beginBlock('owl_fecshop_slider') ?>
-
     $(function () {
-        // Slideshow 4
-        $("#slider4").responsiveSlides({
-            auto: true,
-            pager: false,
-            nav: true,
-            speed: 500,
-            namespace: "callbacks"
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
     });
-
     <?php $this->endBlock(); ?>
 </script>
 <?php $this->registerJs($this->blocks['owl_fecshop_slider'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>

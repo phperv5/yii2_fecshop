@@ -11,7 +11,7 @@ $jsOptions = [
             'js/jquery.js',
             'js/js.js',
             'js/plugins/layer/layer.js',
-            'js/plugins/ResponsiveSlides/responsiveslides.min.js',
+            'js/dist/js/swiper.min.js',
         ],
     ],
 ];
@@ -22,8 +22,9 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
+            'css/en.css',
             'js/plugins/layer/skin/layer.css',
-            'js/plugins/ResponsiveSlides/responsiveslides.css',
+            'js/dist/css/swiper.min.css',
         ],
     ],
 ];
