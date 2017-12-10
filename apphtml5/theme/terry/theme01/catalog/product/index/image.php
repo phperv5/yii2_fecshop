@@ -1,4 +1,13 @@
 <?php
+$media_size = $parentThis['media_size'];
+$image = $parentThis['image'];
+$productImgMagnifier = $parentThis['productImgMagnifier'];
+$small_img_width = $media_size['small_img_width'];
+$small_img_height = $media_size['small_img_height'];
+$middle_img_width = $media_size['middle_img_width'];
+?>
+
+<?php
 if(isset($image['gallery']) && is_array($image['gallery']) && !empty($image['gallery'])):
     $gallerys = $image['gallery'];
     $gallerys = \fec\helpers\CFunc::array_sort($gallerys,'sort_order',$dir='asc');
@@ -10,6 +19,7 @@ elseif(is_array($image['main']) && !empty($image['main'])):
     $main_arr[] = $image['main'];
     $gallerys = $main_arr;
 endif;
+
 if(is_array($gallerys) && !empty($gallerys)):
 ?>
 

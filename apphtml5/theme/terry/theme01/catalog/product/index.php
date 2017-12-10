@@ -2,6 +2,7 @@
 $imageView = [
     'view' => 'catalog/product/index/image.php'
 ];
+
 $imageParam = [
     'media_size' => $media_size,
     'image' => $image_thumbnails,
