@@ -1231,6 +1231,14 @@ input.btn_h_reg:hover {
     z-index: 9999;
 }
 
+/*二级分类*/
+.left_proclass_menu td {
+    float: left;
+    padding: 5px 0px 5px 10px;
+    width: 190px;
+    vertical-align: top;
+}
+
 .hd_wr_nav_main ul {
     list-style: none;
     width: 160px;

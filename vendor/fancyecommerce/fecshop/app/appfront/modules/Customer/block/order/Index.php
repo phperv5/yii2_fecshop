@@ -17,7 +17,7 @@ use Yii;
  */
 class Index
 {
-    protected $numPerPage = 10;
+    protected $numPerPage = 15;
     protected $pageNum;
     protected $orderBy;
     protected $customer_id;
@@ -43,11 +43,11 @@ class Index
     {
         $this->initParam();
         $return_arr = [];
-        $where['customer_id'] = $this->customer_id;
         if ($this->order_status) {
             $where['order_status'] = $this->order_status;
         }
         if ($this->customer_id) {
+            $where['customer_id'] = $this->customer_id->id;
             $filter = [
                 'numPerPage' => $this->numPerPage,
                 'pageNum' => $this->pageNum,

@@ -9,7 +9,30 @@
             <strong>Categories</strong>
             <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
             <?php foreach ($categories as $category): ?>
-                <h2 class=" fir"><a href="<?= $category['url'] ?>"><?= $category['name'] ?></a></h2>
+                <div class="left_proclass_menu">
+                    <h2 class="fir"><a href="<?= $category['url'] ?>"><?= $category['name'] ?></a></h2>
+                    <?php $cates = Yii::$service->category->getChildCate($category['_id']); ?>
+                    <?php if (isset($cates) && !empty($cates)): ?>
+                        <div class="hd_wr_nav_main">
+                            <div style="width: 600px;background-color: #fff;border: none;box-shadow: 3px 3px 3px #E1E1E1;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <?php foreach ($cates as $k => $c): ?>
+                                        <?php if ($k % 3 == 0): ?>
+                                            <tr>
+                                        <?php endif; ?>
+                                        <td><a href="<?= $c['url_key']; ?>"
+                                               target="_blank"><?= $c['name']['name_en']; ?></a></td>
+                                        <?php if ($k % 3 == 0): ?>
+                                            </tr>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
             <?php endforeach; ?>
             <div class="clear"></div>
         </div>
@@ -122,7 +145,21 @@
     <div class="exh_bottom"></div>
 </div>
 </div>
+<script>
+    <?php $this->beginBlock('owl_fecshop_slider') ?>
 
+    $(document).ready(function () {
+
+        $(".left_proclass_menu").bind('mouseover', function () {
+            $(this).find('.hd_wr_nav_main').show();
+        })
+        $(".left_proclass_menu").bind('mouseout', function () {
+            $('.hd_wr_nav_main').hide();
+        })
+    });
+    <?php $this->endBlock(); ?>
+</script>
+<?php $this->registerJs($this->blocks['owl_fecshop_slider'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
 
 
 

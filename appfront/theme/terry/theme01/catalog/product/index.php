@@ -175,8 +175,8 @@
             <div class="exh_m_bri">
                 <?= $main_description; ?>
             </div>
+            <div class="blank10px"></div>
             <?php endif;?>
-
             <div class="exh_m_cont">
                 <?= $description; ?>
                 <div class="about-us">
