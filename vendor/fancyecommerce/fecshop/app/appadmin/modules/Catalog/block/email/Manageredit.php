@@ -13,11 +13,6 @@ use fec\helpers\CUrl;
 use Yii;
 use fecshop\app\console\modules\Amqp\block\Push;
 
-/**
- * block cms\article.
- * @author Terry Zhao <2358269014@qq.com>
- * @since 1.0
- */
 class Manageredit
 {
     public $_saveUrl;
@@ -37,7 +32,6 @@ class Manageredit
             'to' => $this->_to,
         ];
     }
-
 
     /**
      * save article data,  get rewrite url and save to article url key.
