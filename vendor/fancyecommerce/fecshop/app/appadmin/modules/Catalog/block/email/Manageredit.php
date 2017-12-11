@@ -44,27 +44,6 @@ class Manageredit
      */
     public function save()
     {
-<<<<<<< HEAD
-        set_time_limit(0);
-        try {
-           
-            $editForm = Yii::$app->request->post('editForm');
-            if($editForm['toall']){
-                $emailArr = Yii::$service->customer->getAllUserEmail();
-                foreach($emailArr as $email){
-                    $to =$email;
-                   $subject = $editForm['subject'];
-                   $htmlBody = $editForm['htmlBody'];
-                     $sendInfo = compact('to', 'subject', 'htmlBody');
-                     Yii::$service->email->send($sendInfo);
-                }
-            }else{
-                   $to =$editForm['to'];
-                   $subject = $editForm['subject'];
-                   $htmlBody = $editForm['htmlBody'];
-                    $sendInfo = compact('to', 'subject', 'htmlBody');
-                     Yii::$service->email->send($sendInfo);
-=======
         $editForm = Yii::$app->request->post('editForm');
         if (!$editForm['subject']) {
             exit(json_encode(['statusCode' => '300', 'message' => 'subject不能为空']));
@@ -79,7 +58,6 @@ class Manageredit
                 $htmlBody = $editForm['htmlBody'];
                 $sendInfo = compact('email', 'subject', 'htmlBody');
                 Yii::$app->queue->delay(2)->push(new Push($sendInfo));
->>>>>>> 6a91aeefa61f1745fba3f92fa627eca1dfbcbd1c
             }
         } else {
             $email = $editForm['to'];
