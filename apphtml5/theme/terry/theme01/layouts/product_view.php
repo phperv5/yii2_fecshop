@@ -7,8 +7,6 @@ $jsOptions = [
             //	'condition'=> 'lt IE 9',
         ],
         'js' => [
-            'js/jquery.js',
-            'js/detail/base.js',
             'js/detail/detail.js',
         ],
     ],
