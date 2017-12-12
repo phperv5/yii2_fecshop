@@ -41,16 +41,6 @@ $imageParam = [
 </section>
 
 
-<section class="datail-btn j-datail-btn">
-    <div class="com-ripple-btn butnow j-buySelectSkuAttr" data-skupop="buy"><a href="javascript:;" rel="nofollow">Buy it Now</a></div>
-    <div class="com-ripple-btn addtocart j-cartSelectSkuAttr" data-skupop="cart"><a href="javascript:;" rel="nofollow">Add to Cart</a></div>
-</section>
-
-
-<div class="split-line"></div>
-
-
-
 <section class="com-ripple-btn datail-specification j-tabShowBtn" data-type="specification">
     <a href="javascript:;" rel="nofollow"><h2 class="specification-name">Specification</h2><span class="public-arrow"></span></a>
 </section>
