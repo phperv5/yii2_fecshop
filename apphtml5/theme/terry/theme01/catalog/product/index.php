@@ -15,13 +15,15 @@ $imageParam = [
     <h1 class="datail-name"><?= $name; ?></h1>
 </section>
 
-<section class="datail-price-warp">
-    <div class="datail-price-box">
-        <div class="detail-price-container"><span class="price-span">US $51.30</span></div>
-        <p class="detail-origin-price"><del>US $114.00</del></p>
-    </div>
-</section>
-
+<?php # 价格部分
+   $priceView = [
+   'view' => 'catalog/product/index/price.php'
+   ];
+   $priceParam = [
+    'price_info' => $price_info,
+    ];
+ ?>
+<?= Yii::$service->page->widget->render($priceView, $priceParam); ?>
 <div class="split-line"></div>
 
 <section class="com-ripple-btn datail-attribute j-selectSkuAttr" data-skupop="select">
