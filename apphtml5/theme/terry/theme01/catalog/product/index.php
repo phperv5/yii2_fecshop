@@ -26,16 +26,18 @@ $imageParam = [
 
 <section class="com-ripple-btn datail-attribute j-selectSkuAttr" data-skupop="select">
     <a href="javascript:;" rel="nofollow">
-        <p class="attribute-name j-attribute-name">Please Select Options</p>
-        <p>Quantity: <span class="j-quantityVal">1</span></p>
+        <p class="attribute-name j-attribute-name">Item No. SK236</p>
+        <p>Quantity: <span class="j-quantityVal">
+                <input name="oQty" id="oQty" type="text" class="input" size="4" maxlength="6" onkeypress="event.returnValue=IsDigit();" value="1" onkeyup="IsOrderNeedQty('Y','oQty',0);ProQtySubTotal(this,'1','209.00','txtSingleProSubTotal','Subtotal: ');">
+            </span></p>
         <span class="public-arrow"></span>
     </a>
 </section>
 
 <section class="com-ripple-btn datail-address-shipping j-shipcostBtn">
     <a href="javascript:;" rel="nofollow">
-        <p class="datail-shippingcost">Shipping Cost: <strong>Free Shipping</strong></p>
-        <p class="datail-address-tip">To United States Via ePacket Est.Delivery Dec 26 and Jan 14</p>
+        <p class="datail-shippingcost">Weight: 0.1KG</p>
+        <p class="datail-address-tip">Returns: Return for refund within 7 days,buyer pays return shipping.</p>
         <span class="public-arrow"></span>
     </a>
 </section>
