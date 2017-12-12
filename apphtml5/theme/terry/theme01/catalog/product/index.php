@@ -42,7 +42,7 @@ $imageParam = [
     </a>
 </section>
 
-
+<div class="split-line"></div>
 <section class="com-ripple-btn datail-specification j-tabShowBtn" data-type="specification">
     <a href="javascript:;" rel="nofollow"><h2 class="specification-name">Specification</h2><span class="public-arrow"></span></a>
 </section>
@@ -267,22 +267,6 @@ $imageParam = [
         </div>
     </div>
     <div class="com-ripple-href"><a href="https://m.dhgate.com/static/detail/reviews.html?itemcode=399037048&#10;" class="allreviews" rel="nofollow">View all reviews (81)</a></div>
-</section>
-
-<div class="split-line"></div>
-
-
-<section class="buyer-protection">
-    <div class="buyer-protectiontit">Buyer Protection</div>
-    <div class="protection-box">
-        <ul>
-            <div class="protection-icon"></div>
-            <li class="protection-list"><span></span>Guaranteed Secure Payments on Every Order</li>
-            <li class="protection-list"><span></span>Refund if your item is not delivered or as described</li>
-            <li class="protection-list"><span></span>Buyer Protection after order confirmation</li>
-            <li class="protection-payment"><span class="datail-vise"></span><span class="datail-mc"></span><span class="datail-ae"></span></li>
-        </ul>
-    </div>
 </section>
 
 <div class="split-line"></div>
