@@ -10,36 +10,15 @@ $imageParam = [
 ];
 ?>
 <?= Yii::$service->page->widget->render($imageView, $imageParam); ?>
-<section class="detail-flashdeals">
-    <div class="detail-flashdeals-box">
-        <div class="detail-flashdeals-left">Flash<span></span>Deals</div>
-        <span class="daily-time j-flashDealsCountdown"><span class="time-nub">00</span><span class="time-colon"><b>:</b></span><span class="time-nub">49</span><span class="time-colon"><b>:</b></span><span class="time-nub">37</span></span>
-    </div>
-</section>
 
 <section class="datail-name-box">
-    <h1 class="datail-name">New Korean Fashion Couple Bracelet Couple Titanium Steel Rose Gold Bracelet Love Oath Bracelet wholesale free shipping</h1>
+    <h1 class="datail-name"><?= $name; ?></h1>
 </section>
-
-
 
 <section class="datail-price-warp">
     <div class="datail-price-box">
-
-        <p class="vip-price-container">
-            <span class="vip-price">
-                50% Off
-            </span>
-            <span class="promotionTime j-timeLeft"></span>
-        </p>
-        <p class="present-price-container"><span class="present-price j-discountPrice">US $7.32 - 17.15</span> / Piece </p>
-        <p class="original-price"><span class="j-originalPrice">US $14.64 - 34.29</span> / Piece</p>
-        <p class="min-order-container">
-            Min. Order: 1 Piece
-        </p>
-        <p class="min-order-container">Max order amount: 25 Pieces</p>
-        <p class="min-order-container">Stock remaining: 25 Pieces</p>
-        <p class="orders-num"><span class="min-order"><b>1222</b> Orders</span></p>
+        <div class="detail-price-container"><span class="price-span">US $51.30</span></div>
+        <p class="detail-origin-price"><del>US $114.00</del></p>
     </div>
 </section>
 
