@@ -7324,6 +7324,10 @@ table.pro-table-two {
     padding-bottom: 2px;
     line-height: 24px;
 }
+.detail-price-container .price-span {
+    font-size: 21px;
+    color: #F44336;
+}
 .ms-detail-price .detail-origin-price {
     font-size: 14px;
     color: #B0B2B7;
