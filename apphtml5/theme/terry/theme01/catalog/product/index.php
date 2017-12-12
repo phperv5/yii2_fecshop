@@ -29,8 +29,8 @@ $imageParam = [
         <p class="attribute-name j-attribute-name">Item No. SK236</p>
         <p>Quantity: <span class="j-quantityVal">
                 <input name="oQty" id="oQty" type="text" class="input" size="4" maxlength="6" onkeypress="event.returnValue=IsDigit();" value="1" onkeyup="IsOrderNeedQty('Y','oQty',0);ProQtySubTotal(this,'1','209.00','txtSingleProSubTotal','Subtotal: ');">
-            </span></p>
-        <span class="public-arrow"></span>
+            </span>
+        </p>
     </a>
 </section>
 
