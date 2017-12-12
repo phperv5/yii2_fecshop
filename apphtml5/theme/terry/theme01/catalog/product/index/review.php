@@ -1,5 +1,3 @@
-
-
 <?php  if(is_array($coll) && !empty($coll)):  ?>
 <div class="split-line"></div>
 <section class="datail-reviews j-detail-reviews">
