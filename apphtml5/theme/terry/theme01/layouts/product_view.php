@@ -21,8 +21,7 @@ $cssOptions = [
     # css config 1.
     [
         'css' => [
-            'css/style.css',
-            'css/en.css',
+            'css/product.css',
             'js/plugins/layer/skin/layer.css',
             'js/dist/css/swiper.min.css',
         ],
