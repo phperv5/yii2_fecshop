@@ -256,10 +256,10 @@ $buyAlsoBuyParam = [
     </div>
 
     <div class="layer-bottom-cartWarp j-layer-bottom-cartWarp">
-        <span class="com-ripple-btn layer-bottom-collection j-bto-fav"><a href="javascript:;" class="j-favBtn"
-                                                                          data-style="botFav" rel="nofollow"></a></span>
-        <span class="com-ripple-href layer-bottom-cart"><a class="cart-num j-cartnum" rel="nofollow"
-                                                           href="/viewcart.do#mpu1509-cart">1</a></span>
+        <span class="com-ripple-btn layer-bottom-collection j-bto-fav">
+            <a href="javascript:;" class="j-favBtn"  data-style="botFav" rel="nofollow"></a></span>
+        <span class="com-ripple-href layer-bottom-cart">
+            <a class="cart-num j-cartnum" rel="nofollow"  href="/viewcart.do#mpu1509-cart">1</a></span>
         <div class="layer-bottom-box j-layer-bottom-box">
             <a href="javascript:;" class="com-ripple-btn layer-bottom-but j-buySelectSkuAttr" data-skupop="buy"
                rel="nofollow">Buy it Now</a>
