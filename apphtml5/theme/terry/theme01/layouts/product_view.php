@@ -19,7 +19,6 @@ $cssOptions = [
     [
         'css' => [
             'css/product.css',
-            'js/dist/css/swiper.min.css',
         ],
     ],
 ];

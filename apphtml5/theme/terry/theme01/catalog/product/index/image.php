@@ -32,14 +32,14 @@ if(is_array($gallerys) && !empty($gallerys)):
         $sort_order = $gallery['sort_order'];
         $label 		= $gallery['label'];
         ?>
-            <li class="swiper-slide swiper-slide-active" style="width: 400px;">
+            <li class="swiper-slide" style="width: 400px;">
                 <img src="<?= Yii::$service->product->image->getResize($image,$middle_img_width,false) ?>" alt="Brazilian Human Hair Closure 4*4 water wave peruvian hair deep wave body wave straight bleached knots free part swiss lace closure G-EASY">
             </li>
         <?php
     endforeach;
     ?>
         </ul>
-        <div class="swiper-pagination swiper-pagination-white j-thumbnail-pagination swiper-pagination-clickable"></div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 <?php endif; ?>
