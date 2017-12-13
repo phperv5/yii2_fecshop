@@ -22,7 +22,7 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
-           // 'css/en.css',
+            'css/en.css',
             'js/plugins/layer/skin/layer.css',
             'js/dist/css/swiper.min.css',
         ],
