@@ -12,7 +12,6 @@ $jsOptions = [
             'js/js.js',
             'js/plugins/layer/layer.js',
             'js/dist/js/swiper.min.js',
-
         ],
     ],
 ];

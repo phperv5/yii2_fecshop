@@ -8,7 +8,7 @@ $jsOptions = [
         ],
         'js' => [
             'js/jquery.js',
-            'js/detail/detail.js',
+            'js/dist/js/swiper.min.js',
         ],
     ],
 ];
@@ -19,6 +19,7 @@ $cssOptions = [
     [
         'css' => [
             'css/product.css',
+            'js/dist/css/swiper.min.css',
         ],
     ],
 ];
