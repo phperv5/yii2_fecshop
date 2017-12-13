@@ -310,7 +310,7 @@ a:active { color:#C30; }
 .pro_cart_btn { margin: 0px; padding: 0px; clear: both; width: 100%; position: fixed; left: 0px; bottom: 0px; }
 
 .pro_grid_list{width:50%;float: left;}
-.pro_grid { margin: 5px  5px; padding: 10px 0px;   background: #FFF; box-shadow: 3px 3px 3px #e6e6e6; border: 1px solid #e6e6e6; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.pro_grid { margin: 5px  5px; padding: 5px 0px;   background: #FFF; box-shadow: 3px 3px 3px #e6e6e6; border: 1px solid #e6e6e6; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
     .pro_gr_photo { margin: 0px auto; padding: 10px; clear: both; text-align: center; }
     .pro_gr_name { padding: 5px 10px; margin: 0px; clear: both; height: 3.2em; overflow: hidden; font-size: 0.8em; }
     .pro_gr_pri_vew { margin: 0px; padding: 5px 10px; clear: both; }
@@ -347,7 +347,7 @@ a:active { color:#C30; }
 .pri_pg_vip { margin: 0px; padding: 0px; float: left; display: inline; font-size: 1.2em; font-weight: bold; color: #F60; }
 .pri_pg_off { font-size: 0.7em; color: #FFC; background: #390; display: inline; padding: 2px 3px; float: left; margin-top: 2px; border-radius: 0.3em; margin-left: 10px; }
 
-.pri_ph_vip { margin: 0px; padding: 2px 0px 0px; float: left; display: inline; font-size: 0.8em; font-weight: bold; color: #F44336; }
+.pri_ph_vip { margin: 0px; padding: 2px 0px 0px; float: left; display: inline; font-size: 0.8em; font-weight: bold; color: #F60; }
 .pri_ph_off { font-size: 0.7em; color: #FFC; background: #390; display: inline; padding: 1px 3px; float: left; border-radius: 0.3em; margin-left: 10px; }
 
 
