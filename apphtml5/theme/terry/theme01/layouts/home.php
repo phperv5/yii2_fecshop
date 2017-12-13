@@ -41,10 +41,9 @@ $cssOptions = [
 </head>
 <body>
 <?php $this->beginBody() ?>
-<header id="header">
-    <?= Yii::$service->page->widget->render('header', $this); ?>
-    <?= Yii::$service->page->widget->render('menu', $this); ?>
-</header>
+
+   <?= Yii::$service->page->widget->render('header', $this); ?>
+
 
 <div class="main-container">
     <?= $content;?>
