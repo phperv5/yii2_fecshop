@@ -13,7 +13,7 @@
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
 </div>
-<div class="blank10px"></div>
+
 <div class="mn_row"><a href="/featured_products.html"><b> Our Recommendations</b> <i
         class="iconfont icon-right m_row_fr_right"></i></a>
     <div class="clear"></div>
@@ -66,8 +66,6 @@
     <div class="clear"></div>
 </div>
 </div>
-<div class="blank10px"></div>
-<div class="blank10px"></div>
 <div class="mn_row"><a href="/producttags/new-arrivals.html"><b>New Arrivals</b> <i
         class="iconfont icon-right m_row_fr_right"></i></a>
     <div class="clear"></div>

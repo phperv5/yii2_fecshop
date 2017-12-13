@@ -38,7 +38,7 @@ $cssOptions = [
       lang="<?= $currentLangCode ?>">
 <head>
     <style>
-        backgroud:#f5f4ef;
+        body{background:#f5f4ef;}
     </style>
     <?= Yii::$service->page->widget->render('head', $this); ?>
 </head>
