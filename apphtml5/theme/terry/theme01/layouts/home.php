@@ -37,6 +37,9 @@ $cssOptions = [
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?= $currentLangCode = Yii::$service->store->currentLangCode; ?>"
       lang="<?= $currentLangCode ?>">
 <head>
+    <style>
+        backgroud:#f5f4ef;
+    </style>
     <?= Yii::$service->page->widget->render('head', $this); ?>
 </head>
 <body>
