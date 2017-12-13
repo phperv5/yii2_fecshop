@@ -347,7 +347,7 @@ a:active { color:#C30; }
 .pri_pg_vip { margin: 0px; padding: 0px; float: left; display: inline; font-size: 1.2em; font-weight: bold; color: #F60; }
 .pri_pg_off { font-size: 0.7em; color: #FFC; background: #390; display: inline; padding: 2px 3px; float: left; margin-top: 2px; border-radius: 0.3em; margin-left: 10px; }
 
-.pri_ph_vip { margin: 0px; padding: 2px 0px 0px; float: left; display: inline; font-size: 0.8em; font-weight: bold; color: #F60; }
+.pri_ph_vip { margin: 0px; padding: 2px 0px 0px; float: left; display: inline; font-size: 0.8em; font-weight: bold; color: #F44336; }
 .pri_ph_off { font-size: 0.7em; color: #FFC; background: #390; display: inline; padding: 1px 3px; float: left; border-radius: 0.3em; margin-left: 10px; }
 
 
