@@ -48,10 +48,12 @@ $priceParam = [
 
     <div class="split-line"></div>
     <section class="com-ripple-btn datail-specification j-tabShowBtn" data-type="specification">
-        <a href="javascript:;" rel="nofollow"><h2 class="specification-name">Specification</h2><span class="public-arrow"></span></a>
+        <a href="javascript:;" rel="nofollow"><h2 class="specification-name">Specification</h2><span
+                    class="public-arrow"></span></a>
     </section>
     <section class="com-ripple-btn datail-description j-tabShowBtn" data-type="description">
-        <a href="javascript:;" rel="nofollow"><h2 class="description-name">Description</h2><span class="public-arrow"></span></a>
+        <a href="javascript:;" rel="nofollow"><h2 class="description-name">Description</h2><span
+                    class="public-arrow"></span></a>
     </section>
     <section class="detail-share j-detailShare">
         <a href="javascript:;" rel="nofollow" class="com-ripple-btn ga-share" data-name="google"><span></span></a>
@@ -71,7 +73,7 @@ $priceParam = [
             </div>
         </div>
 
-        <div class="datail-specification-box dhm-hide j-tabContent" data-type="specification" style="height: 138px;">
+        <div class="datail-specification-box dhm-hide j-tabContent" data-type="specification" style="">
             <dl>
                 <dt>Item Name</dt>
                 <dd>
@@ -79,131 +81,15 @@ $priceParam = [
                     Bracelet wholesale free shipping
                 </dd>
             </dl>
-            <dl>
-                <dt>Item Code</dt>
-                <dd>
-                    399037048
-                </dd>
-            </dl>
-            <dl>
-                <dt>Category</dt>
-                <dd>
-                    <a class="aColor" href="https://m.dhgate.com/wholesale/bangle/c100002001.html">Bangle</a>
-                </dd>
-            </dl>
-            <div class="datail-specification-h2">
-                <dl>
-                    <dt>Short Description</dt>
-                    <dd>This produce is designed for lovers in our company,we can prefer more than 10000 price for you
-                        anywhen.And we can designed any produce which you love
-                    </dd>
-                </dl>
-            </div>
-            <dl>
-                <dt>Quantity</dt>
-                <dd>
-                    1 Piece
-                </dd>
-            </dl>
-            <dl>
-                <dt>Package Size</dt>
-                <dd>
-                    10.0*12.0*15.0(cm)
-                </dd>
-            </dl>
-            <dl>
-                <dt>Gross Weight/Package</dt>
-                <dd>
-                    0.09(kg)
-                </dd>
-            </dl>
-            <dl>
-                <dt>Bracelets Type</dt>
-                <dd>
-                    Bangle
-                </dd>
-            </dl>
-            <dl>
-                <dt>Main Stone Color</dt>
-                <dd>
-                    White
-                </dd>
-            </dl>
-            <dl>
-                <dt>Bracelets Material</dt>
-                <dd>
-                    Titanium
-                </dd>
-            </dl>
-            <dl>
-                <dt>Style</dt>
-                <dd>
-                    Bohemian
-                </dd>
-            </dl>
-            <dl>
-                <dt>Setting Type</dt>
-                <dd>
-                    Prong Setting
-                </dd>
-            </dl>
-            <dl>
-                <dt>Metal Color</dt>
-                <dd>
-                    18K Gold Plated
-                </dd>
-            </dl>
-            <dl>
-                <dt>Clasp Type</dt>
-                <dd>
-                    Lobster-claw-clasps
-                </dd>
-            </dl>
-            <dl>
-                <dt>Metals Type</dt>
-                <dd>
-                    Titanium
-                </dd>
-            </dl>
-            <dl>
-                <dt>Gender</dt>
-                <dd>
-                    Women's
-                </dd>
-            </dl>
-            <dl>
-                <dt>Holiday</dt>
-                <dd>
-                    Valentine's Day
-                </dd>
-            </dl>
-            <dl>
-                <dt>Bracelets Stone Material</dt>
-                <dd>
-                    Moonstone
-                </dd>
-            </dl>
-            <dl>
-                <dt>Occasion</dt>
-                <dd>
-                    Engagement
-                </dd>
-            </dl>
-            <dl>
-                <dt>Chain Type</dt>
-                <dd>
-                    Twisted Singapore Chain
-                </dd>
-            </dl>
         </div>
 
         <div class="datail-description-box j-tabContent" data-type="description" style="height: 138px;">
-            <div class="product-details">
-                <?php if($main_description):?>
-                <div class="exh_m_bri">
-                    <?= $main_description; ?>
-                </div>
-                <?php endif;?>
+            <div class="product-details" style="width: 100%">
+                <?php if ($main_description): ?>
+                    <div class="exh_m_bri">
+                        <?= $main_description; ?>
+                    </div>
+                <?php endif; ?>
                 <?= $description; ?>
             </div>
         </div>
@@ -554,11 +440,15 @@ $reviewView = [
                 $('.datail-reviews-layer').removeClass('close-layer1').removeClass('dhm-hide').addClass('open-layer1');
                 $('.com-ripple-btn[data-type="specification"]').removeClass('current');
                 $('.com-ripple-btn[data-type="description"]').addClass('current');
+                height = $(window).height() - 45;
+                $('.j-tabContent[data-type="description"]').height(height);
             })
             $('.j-tabShowBtn[data-type="description"]').click(function () {
                 $('.datail-reviews-layer').removeClass('close-layer1').removeClass('dhm-hide').addClass('open-layer1');
                 $('.com-ripple-btn[data-type="specification"]').addClass('current');
                 $('.com-ripple-btn[data-type="description"]').removeClass('current');
+                height = $(window).height() - 45;
+                $('.j-tabContent[data-type="specification"]').height(height);
             })
             $('.j-tabCloseBtn').click(function () {
                 $('.datail-reviews-layer').addClass('close-layer1').addClass('dhm-hide').removeClass('open-layer1');
