@@ -278,7 +278,7 @@ a:active { color:#C30; }
 
 .main_h_banner { margin: 0px; padding: 0px; clear: both; }
 
-.mn_row { line-height: 40px; margin: 0px; padding: 0px 10px; clear: both; height: 40px; background: #e6e6e6; border-bottom: 1px solid #CCC; }
+.mn_row { line-height: 40px; margin: 0px; padding: 0px 10px; clear: both; height: 40px; background: #fff; border-bottom: 1px solid #CCC; }
     .mn_row h1 { margin: 0px; padding: 0px; clear: both; background: url(none); }
     .mn_row a { display: block; }
     .m_row_cate { font-size: 1.2em; vertical-align: middle; }
