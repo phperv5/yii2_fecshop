@@ -30,9 +30,7 @@ $priceParam = [
         <a href="javascript:;" rel="nofollow">
             <p class="attribute-name j-attribute-name">Item No.<?= $sku; ?></p>
             <p>Quantity: <span class="j-quantityVal">
-                <input name="oQty" id="oQty" type="text" class="input" size="4" maxlength="6"
-                       onkeypress="event.returnValue=IsDigit();" value="1"
-                       onkeyup="IsOrderNeedQty('Y','oQty',0);ProQtySubTotal(this,'1','209.00','txtSingleProSubTotal','Subtotal: ');">
+                <input name="oQty" id="oQty" type="text" class="input" size="4" maxlength="6">
             </span>
             </p>
         </a>
@@ -40,7 +38,6 @@ $priceParam = [
 
     <section class="com-ripple-btn datail-address-shipping j-shipcostBtn">
         <a href="javascript:;" rel="nofollow">
-            <p class="datail-shippingcost"><?= $weight; ?>KG</p>
             <p class="datail-address-tip">Returns: Return for refund within 7 days,buyer pays return shipping.</p>
             <span class="public-arrow"></span>
         </a>
@@ -75,15 +72,16 @@ $priceParam = [
 
         <div class="datail-specification-box dhm-hide j-tabContent" data-type="specification" style="">
             <dl>
-                <dt>Item Name</dt>
-                <dd>
-                    Wholesale New Korean Fashion Couple Bracelet Couple Titanium Steel Rose Gold Bracelet Love Oath
-                    Bracelet wholesale free shipping
-                </dd>
+                <dt>Weight</dt>
+                <dd><?= $weight; ?>KG</dd>
+            </dl>
+            <dl>
+                <dt>Package</dt>
+                <dd><?php if ($package) echo $package; else echo 'none'; ?></dd>
             </dl>
         </div>
 
-        <div class="datail-description-box j-tabContent" data-type="description" style="height: 138px;">
+        <div class="datail-description-box j-tabContent" data-type="description">
             <div class="product-details" style="width: 100%">
                 <?php if ($main_description): ?>
                     <div class="exh_m_bri">
@@ -106,157 +104,16 @@ $reviewView = [
 ?>
 <?= Yii::$service->page->widget->render($reviewView, $reviewParam); ?>
 
+<?php # tier price 部分。
+$buyAlsoBuyView = [
+    'view' => 'catalog/product/index/buy_also_buy.php'
+];
+$buyAlsoBuyParam = [
+    'products' => $buy_also_buy,
+];
 
-    <div id="goto-recommended">
-        <section class="recommended-products j-recommended-products"><h2 class="country-tit">Recommended Products</h2>
-            <div class="datail-pro-list">
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/factory-direct-sales-speed-through-the-amazon/399032667.html#cppd-1-9|null:102:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M00/FC/13/rBVaI1kF7aaAGsOOAAB4IZer6hk699.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M00/FC/13/rBVaI1kF7aaAGsOOAAB4IZer6hk699.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $3.66</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/new-screws-never-lose-style-silver-18k-rose/397645274.html#cppd-2-9|null:102:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M01/36/53/rBVaI1jX04yAaeHFAATAip-Z7jY461.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M01/36/53/rBVaI1jX04yAaeHFAATAip-Z7jY461.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $45.72</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/new-jewelry-fashion-generous-opening-metal/399028537.html#cppd-3-9|null:102:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M00/E9/5F/rBVaI1kFtCeAdc2TAAEFw3BlaLs259.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M00/E9/5F/rBVaI1kFtCeAdc2TAAEFw3BlaLs259.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $2.06</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/2017-high-quality-new-titanium-steel-bangle/401780488.html#cppd-4-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M00/5F/73/rBVaJFlbVnaABo-oAAK7h-Rb2Ic717.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M00/5F/73/rBVaJFlbVnaABo-oAAK7h-Rb2Ic717.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $6.56</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/love-bracelets-for-women-opening-bracelets/401384390.html#cppd-5-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M01/7F/47/rBVaJFlNHdOAJU2kAAGFltAKC24875.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M01/7F/47/rBVaJFlNHdOAJU2kAAGFltAKC24875.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $1.53</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/factory-direct-wholesale-925-sterling-silver/381928561.html#cppd-6-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g4/M01/49/83/rBVaEFcLYYeABh1-AACl2n37A-M846.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g4/M01/49/83/rBVaEFcLYYeABh1-AACl2n37A-M846.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $13.72</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/gold-plated-bangle-brand-design-fast-colors/212775686.html#cppd-7-3|ff8080815f25413c01602f1b25eb609c:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g2/M01/77/F3/rBVaG1XddNaAEYunAAHftWfsoEY088.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g2/M01/77/F3/rBVaG1XddNaAEYunAAHftWfsoEY088.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $7.58</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/wholesale-925-sterling-silver-plated-fashion/396522770.html#cppd-8-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M00/B6/28/rBVaI1iyUoiAVcDTAAIbT53LDPA913.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M00/B6/28/rBVaI1iyUoiAVcDTAAIbT53LDPA913.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $28.95</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/low-price-sell-new-korean-fashion-couple/405418897.html#cppd-9-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M00/F1/03/rBVaI1ncMKqAaI-aAAHdoT8LYqo417.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M00/F1/03/rBVaI1ncMKqAaI-aAAHdoT8LYqo417.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $29.71</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/fashion-bangle-jewelry-wholesale-black-box/405141624.html#cppd-10-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g4/M00/EE/0F/rBVaEFnL_ueAeWMzAAFYS2YhCC8347.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g4/M00/EE/0F/rBVaEFnL_ueAeWMzAAFYS2YhCC8347.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $17.26</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/jewelry-wholesale-and-cross-opening-bracelet/401684691.html#cppd-11-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M01/86/09/rBVaI1lXqi-AOYVNAAGVHSUn-mU864.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M01/86/09/rBVaI1lXqi-AOYVNAAGVHSUn-mU864.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $16</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/luxury-stainless-steel-cuff-bracelets-bangles/400259864.html#cppd-12-9|null:108:r1460666847">
-                            <div class="datail-pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                       src="https://www.dhresource.com/0x0/f2/albu/g5/M01/01/01/rBVaJFkprlOAHJ74AAJL1xDVd2U445.jpg"
-                                                                                       data-original="https://www.dhresource.com/0x0/f2/albu/g5/M01/01/01/rBVaJFkprlOAHJ74AAJL1xDVd2U445.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $12.7</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/2016-new-fashion-14k-gold-tone-round-black/385103255.html#cppd-13-9|null:108:r1460666847">
-                            <div class="datail-pro-img"><img class="fade-in lazy"
-                                                             src="//css.dhresource.com/mobile/home/image/grey.png"
-                                                             data-original="https://www.dhresource.com/0x0/f2/albu/g4/M00/C4/88/rBVaEFdJuCeAJyVeAADeBk_JUKQ228.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $2.75</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/europe-and-america-hotsale-aaa-cz-open-size/405719160.html#cppd-14-9|null:108:r1460666847">
-                            <div class="datail-pro-img"><img class="fade-in lazy"
-                                                             src="//css.dhresource.com/mobile/home/image/grey.png"
-                                                             data-original="https://www.dhresource.com/0x0/f2/albu/g5/M00/1F/21/rBVaI1nnRT2AeR2gAAJJ8kvUMdE200.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $5.6</p></div>
-                        </a></li>
-                </ul>
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/chikage-jewelry-gold-bracelet-18k-gold-bracelet/388723980.html#cppd-15-9|null:108:r1460666847">
-                            <div class="datail-pro-img"><img class="fade-in lazy"
-                                                             src="//css.dhresource.com/mobile/home/image/grey.png"
-                                                             data-original="https://www.dhresource.com/0x0/f2/albu/g4/M00/15/4D/rBVaEFekmrWAEt_aAAF1jEt0Mq4266.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $117.03</p></div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/couple-bracelet-rose-gold-glossy-titanium/380400368.html#cppd-16-9|null:108:r1460666847">
-                            <div class="datail-pro-img"><img class="fade-in lazy"
-                                                             src="//css.dhresource.com/mobile/home/image/grey.png"
-                                                             data-original="https://www.dhresource.com/0x0/f2/albu/g4/M01/9B/B3/rBVaEFccjb2AU-djAABLAiPqqoo434.jpg">
-                            </div>
-                            <div class="datail-pro-name"><p class="datail-pro-piece">US $10.24</p></div>
-                        </a></li>
-                </ul>
-            </div>
-        </section>
-    </div>
+?>
+<?= Yii::$service->page->widget->render($buyAlsoBuyView, $buyAlsoBuyParam); ?>
     <div class="j-recommend-ymlike">
         <div class="viewed1">
             <div class="pro-tit">You May Like<span class="see-all com-ripple-href"><a rel="nofollow"
@@ -392,29 +249,6 @@ $reviewView = [
                                                       data-original="https://www.dhresource.com/albu_289064732_00/1.0x0.jpg">
                             </div>
                             <div class="pro-text"><p class="pro-piece">US $1.12</p></div>
-                        </a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="j-recommend-yviewed">
-        <div class="viewed1 viewed-common">
-            <div class="pro-tit">You Viewed</div>
-            <div class="pro-box">
-                <ul>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/2017-new-fashion-high-quality-sunglasses/402033153.html#mvdpd-1-9|null:01:r0389608382">
-                            <div class="pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                src="https://www.dhresource.com/0x0/f2/albu/g5/M01/63/D3/rBVaI1ljTlaAJaO6AAOzG-D8H_o392.jpg"
-                                                                                data-original="https://www.dhresource.com/0x0/f2/albu/g5/M01/63/D3/rBVaI1ljTlaAJaO6AAOzG-D8H_o392.jpg">
-                            </div>
-                        </a></li>
-                    <li class="com-ripple-href"><a rel="nofollow"
-                                                   href="https://m.dhgate.com/product/wholesale-mens-sleeveless-sweatshirt-hoodies/390046609.html#mvdpd-2-9|null:01:r0389608382">
-                            <div class="pro-img" style="background: none;"><img class="fade-in lazy show"
-                                                                                src="https://www.dhresource.com/0x0/f2/albu/g4/M00/6E/89/rBVaEVfO1saAWc1cAAIc-3v0u9c005.jpg"
-                                                                                data-original="https://www.dhresource.com/0x0/f2/albu/g4/M00/6E/89/rBVaEVfO1saAWc1cAAIc-3v0u9c005.jpg">
-                            </div>
                         </a></li>
                 </ul>
             </div>
