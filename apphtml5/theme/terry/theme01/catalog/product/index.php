@@ -24,8 +24,9 @@ $priceParam = [
 ];
 ?>
 <?= Yii::$service->page->widget->render($priceView, $priceParam); ?>
+    <input type="hidden" class="product_view_id" value="<?= $_id ?>">
+    <input type="hidden" class="sku" value="<?= $sku; ?>"/>
     <div class="split-line"></div>
-
     <section class="com-ripple-btn datail-attribute j-selectSkuAttr" data-skupop="select">
         <a href="javascript:;" rel="nofollow">
             <p class="attribute-name j-attribute-name">Item No.<?= $sku; ?></p>
@@ -263,7 +264,7 @@ $buyAlsoBuyParam = [
         <div class="layer-bottom-box j-layer-bottom-box">
             <a href="javascript:;" class="com-ripple-btn layer-bottom-but j-buySelectSkuAttr" data-skupop="buy"
                rel="nofollow">Buy it Now</a>
-            <a href="javascript:;" class="com-ripple-btn layer-bottom-add j-cartSelectSkuAttr" data-skupop="cart"
+            <a href="javascript:;" class="com-ripple-btn layer-bottom-add j-cartSelectSkuAttr goProductToCart" data-skupop="cart"
                rel="nofollow">Add to Cart</a>
         </div>
     </div>
@@ -300,6 +301,60 @@ $buyAlsoBuyParam = [
                 $('.j-tabContent[data-type="description"]').removeClass('dhm-hide');
                 $('.j-tabContent[data-type="specification"]').addClass('dhm-hide');
             })
+
+
+            $(".goProductToCart").click(function () {
+                i = 1;
+
+                if (i) {
+                    custom_option = new Object();
+                    $(".product_custom_options .pg .rg ul").each(function () {
+                        $m = $(this).find("li.current a.current");
+                        attr = $m.attr("attr");
+                        value = $m.attr("value");
+                        custom_option[attr] = value;
+                    });
+                    custom_option_json = JSON.stringify(custom_option);
+                    //alert(custom_option_json);
+                    sku = $(".sku").val();
+                    qty = $(".qty").val();
+                    qty = qty ? qty : 1;
+                    csrfName = $(".product_csrf").attr("name");
+                    csrfVal = $(".product_csrf").val();
+
+                    $(".product_custom_options").val(custom_option_json);
+                    $(this).addClass("dataUp");
+                    // ajax 提交数据
+
+                    addToCartUrl = "<?= Yii::$service->url->getUrl('checkout/cart/add'); ?>";
+                    $data = {};
+                    $data['custom_option'] = custom_option_json;
+                    $data['product_id'] = "<?= $_id ?>";
+                    $data['qty'] = qty;
+                    $data[csrfName] = csrfVal;
+                    jQuery.ajax({
+                        async: true,
+                        timeout: 6000,
+                        dataType: 'json',
+                        type: 'post',
+                        data: $data,
+                        url: addToCartUrl,
+                        success: function (data, textStatus) {
+                            if (data.status == 'success') {
+                                window.location.href = "<?= Yii::$service->url->getUrl("checkout/cart") ?>";
+                            } else {
+                                content = data.content;
+                                $(".addProductToCart").removeClass("dataUp");
+                                alert(content);
+                            }
+
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        }
+                    });
+
+                }
+            });
 
         });
         <?php $this->endBlock(); ?>

@@ -16,11 +16,6 @@ $jsOptions = [
 		//	'condition'=> 'lt IE 9',
 		],
 		'js'	=>[
-			'js/jquery-3.0.0.min.js',
-			'js/jquery.lazyload.min.js',
-			'js/owl.carousel.min.js',
-			'js/js.js',
-            'js/common.js',
 		],
 	],
 ];
@@ -30,9 +25,8 @@ $cssOptions = [
 	# css config 1.
 	[
 		'css'	=>[
-			'css/style.css',
-			'css/ie.css',
-			'onestepcheckout/onestepcheckout.css',
+			'css/en.css',
+			'css/cart.css',
 		],
 	],
 ];
