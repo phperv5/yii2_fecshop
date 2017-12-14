@@ -1768,10 +1768,7 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label, .mdl-textfield.is-disab
     height: 22px;
 }
 
-.checked {
-    background: url(//css.dhresource.com/mobile/cart/image/checked.png) no-repeat 0 0;
-    background-size: 22px 22px
-}
+
 
 .od-img-warp {
     display: inline-block;
