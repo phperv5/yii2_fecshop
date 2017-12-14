@@ -19,7 +19,7 @@ use fecshop\app\appfront\helper\Format;
                     <p class="od-productAttr">Item No.<?= $product_one['sku']; ?></p>
                     <div class="unit-price j-unit-price"><strong><?=  $currency_info['symbol'];  ?></strong><strong class="j-itemPrice"><?= Format::price($product_one['product_price']); ?></strong>/ Piece</div>
                     <span class="ui-number">
-                        <input class="j-numDecrease d-decrease cartqtydown" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" type="button" value="-"><input class="j-num d-num" rel="<?= $product_one['item_id']; ?>" type="text" value="<?= $product_one['qty']; ?>"><input class="j-numIncrease d-increase cartqtyup" el="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" type="button" value="+">
+                        <input class="j-numDecrease d-decrease cartqtydown" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" type="button" value="-"><input class="j-num d-num" rel="<?= $product_one['item_id']; ?>" type="text" value="<?= $product_one['qty']; ?>"><input class="j-numIncrease d-increase cartqtyup" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" type="button" value="+">
                         <a class="j-odDelete com-ripple-btn" href="javascript:;">Delete</a></span>
                 </div>
             </div>
