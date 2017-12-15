@@ -7,9 +7,9 @@
  * @license http://www.fecshop.com/license/
  */
 
-namespace fecshop\app\apphtml5\modules\Checkout;
+namespace fecshop\app\appfront\modules\Checkout;
 
-use fecshop\app\apphtml5\modules\AppfrontModule;
+use fecshop\app\appfront\modules\AppfrontModule;
 use Yii;
 
 /**
@@ -39,6 +39,8 @@ class Module extends AppfrontModule
         //$this->_currentDir			= 	__DIR__ ;
         //$this->_currentNameSpace	=   __NAMESPACE__;
 
+        // 指定默认的man文件
+        //$this->layout = "home.php";
         // 设置该模块的view(theme)的默认layout文件。
         Yii::$service->page->theme->layoutFile = 'one_step_checkout.php';
         parent::init();

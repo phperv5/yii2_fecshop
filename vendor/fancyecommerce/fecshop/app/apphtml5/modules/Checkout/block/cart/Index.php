@@ -21,10 +21,12 @@ class Index
     {
         $this->initHead();
         $currency_info = Yii::$service->page->currency->getCurrencyInfo();
-
         return [
             'cart_info' => $this->getCartInfo(),
             'currency_info' => $currency_info,
+            //zhuang edit
+            'country' => Yii::$service->helper->country->getAllCountryArray(),
+            'allShipMethod' => Yii::$service->shipping->getShippingMethod(),
         ];
     }
 
@@ -55,7 +57,6 @@ class Index
     public function getCartInfo()
     {
         $cart_info = Yii::$service->cart->getCartInfo();
-
         if (isset($cart_info['products']) && is_array($cart_info['products'])) {
             foreach ($cart_info['products'] as $k=>$product_one) {
                 // 设置名字，得到当前store的语言名字。

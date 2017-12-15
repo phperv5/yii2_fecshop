@@ -43,20 +43,45 @@ class Index
         $shippings = $this->getShippings();
         $last_cart_info = $this->getCartInfo($this->_shipping_method, $this->_country, $this->_state);
 
-        return [
-            'payments'                    => $this->getPayment(),
-            'shippings'                => $shippings,
-            'current_payment_method'    => $this->_payment_method,
-            'cart_info'                => $last_cart_info,
-            'currency_info'            => $currency_info,
-            'address_view_file'        => $this->_address_view_file,
-            'cart_address'                => $this->_address,
-            'cart_address_id'            => $this->_address_id,
-            'address_list'                => $this->_address_list,
-            'country_select'            => $this->_countrySelect,
-            //'state_select'			=> $this->_stateSelect,
-            'state_html'                => $this->_stateHtml,
+        $customer_id = Yii::$app->user->identity['id'];
+        $filter = [
+                    'numPerPage' => 50,
+                    'pageNum' => 1,
+                    'orderBy' => ['updated_at' => SORT_DESC],
+                    'where' => [
+                        ['customer_id' => $customer_id],
+                    ],
+                    'asArray' => true,
         ];
+        $address_list = Yii::$service->customer->address->Coll($filter)['coll'];
+        $address_select = $this->getDefaultAddress($address_list);
+        return [
+            'payments' => $this->getPayment(),
+            'shippings' => $shippings,
+            'current_payment_method' => $this->_payment_method,
+            'cart_info' => $last_cart_info,
+            'currency_info' => $currency_info,
+            'address_view_file' => $this->_address_view_file,
+            'cart_address' => $this->_address,
+            'cart_address_id' => $this->_address_id,
+            'address_list' => $address_list,
+            'address_select' => $address_select,
+            'country_select' => $this->_countrySelect,
+            'state_html' => $this->_stateHtml,
+        ];
+    }
+
+    /*
+     * zhuang edit 獲取默認地址
+     */
+    public function getDefaultAddress($address_list)
+    {
+        foreach ($address_list as $v) {
+            if ($v['is_default'] == 1) {
+                return $v;
+            }
+        }
+        return false;
     }
 
     /**
@@ -120,7 +145,6 @@ class Index
         }
         $this->_address = $address_info;
         $this->_address_list = Yii::$service->customer->address->currentAddressList();
-        //var_dump($this->_address_list);
         // 如果购物车存在customer_address_id，而且用户地址中也存在customer_address_id
         // 则执行if{}内代码。
         if ($address_id && isset($this->_address_list[$address_id]) && !empty($this->_address_list[$address_id])) {
@@ -240,11 +264,11 @@ class Index
         }
         $stateHtml = Yii::$service->helper->country->getStateOptionsByContryCode($country, $state);
         if (!$stateHtml) {
-            $stateHtml = '<input id="state" name="billing[state]" value="'.$state.'" title="State" class="address_state input-text" style="" type="text">';
+            $stateHtml = '<input id="state" name="billing[state]" value="' . $state . '" title="State" class="address_state input-text" style="" type="text">';
         } else {
             $stateHtml = '<select id="address:state" class="address_state validate-select" title="State" name="billing[state]">
 							<option value="">Please select region, state or province</option>'
-                        .$stateHtml.'</select>';
+                . $stateHtml . '</select>';
         }
         $this->_stateHtml = $stateHtml;
     }
@@ -273,7 +297,7 @@ class Index
         if (!$this->_cart_info) {
             $cart_info = Yii::$service->cart->getCartInfo($shipping_method, $country, $state);
             if (isset($cart_info['products']) && is_array($cart_info['products'])) {
-                foreach ($cart_info['products'] as $k=>$product_one) {
+                foreach ($cart_info['products'] as $k => $product_one) {
                     // 设置名字，得到当前store的语言名字。
                     $cart_info['products'][$k]['name'] = Yii::$service->store->getStoreAttrVal($product_one['product_name'], 'name');
                     // 设置图片
@@ -310,7 +334,7 @@ class Index
         $custom_option_sku = $product_one['custom_option_sku'];
         if (isset($custom_option[$custom_option_sku]) && !empty($custom_option[$custom_option_sku])) {
             $custom_option_info = $custom_option[$custom_option_sku];
-            foreach ($custom_option_info as $attr=>$val) {
+            foreach ($custom_option_info as $attr => $val) {
                 if (!in_array($attr, ['qty', 'sku', 'price', 'image'])) {
                     $attr = str_replace('_', ' ', $attr);
                     $attr = ucfirst($attr);
@@ -426,7 +450,7 @@ class Index
         $shipping_i = 1;
         $arr = [];
         if (is_array($allshipping)) {
-            foreach ($allshipping as $method=>$shipping) {
+            foreach ($allshipping as $method => $shipping) {
                 $label = $shipping['label'];
                 $name = $shipping['name'];
                 // 得到运费的金额
@@ -443,10 +467,10 @@ class Index
                     $checked = '';
                 }
                 $arr[] = [
-                    'method'=> $method,
+                    'method' => $method,
                     'label' => $label,
-                    'name'  => $name,
-                    'cost'  => $currentCurrencyCost,
+                    'name' => $name,
+                    'cost' => $currentCurrencyCost,
                     'symbol' => $symbol,
                     'checked' => $checked,
                     'shipping_i' => $shipping_i,
@@ -472,9 +496,9 @@ class Index
      * @proeprty Array，
      * @return json_encode(Array)，Array格式如下：
      *                                                   [
-     *                                                   'status' 		=> 'success',
-     *                                                   'shippingHtml' 	=> $shippingHtml,
-     *                                                   'reviewOrderHtml' 	=> $reviewOrderHtml,
+     *                                                   'status'        => 'success',
+     *                                                   'shippingHtml'    => $shippingHtml,
+     *                                                   'reviewOrderHtml'    => $reviewOrderHtml,
      *                                                   ]
      *                                                   返回给js后，js根据数据将信息更新到相应的部分。
      */
@@ -515,7 +539,7 @@ class Index
              * 由于fecshop多多模板系统，预先从高级别的模板路径中依次查找view文件，存在则使用该view文件.
              */
             $shippingView = [
-                'view'    => 'checkout/onepage/index/shipping.php',
+                'view' => 'checkout/onepage/index/shipping.php',
             ];
             $shippingParam = [
                 'shippings' => $shippings,
@@ -540,7 +564,7 @@ class Index
             // 得到当前货币
             $currency_info = Yii::$service->page->currency->getCurrencyInfo();
             $reviewOrderView = [
-                'view'    => 'checkout/onepage/index/review_order.php',
+                'view' => 'checkout/onepage/index/review_order.php',
             ];
             $cart_info = $this->getCartInfo($shipping_method, $this->_country, $this->_state);
 
@@ -550,9 +574,9 @@ class Index
             ];
             $reviewOrderHtml = Yii::$service->page->widget->render($reviewOrderView, $reviewOrderParam);
             echo json_encode([
-                'status'        => 'success',
-                'shippingHtml'    => $shippingHtml,
-                'reviewOrderHtml'    => $reviewOrderHtml,
+                'status' => 'success',
+                'shippingHtml' => $shippingHtml,
+                'reviewOrderHtml' => $reviewOrderHtml,
             ]);
             exit;
         }
