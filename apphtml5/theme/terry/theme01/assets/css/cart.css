@@ -2981,11 +2981,11 @@ input.ui-button {
     transition: background-color .2s
 }
 
-.ms-country-wrap .ms-rc-custom.selected .circle span {
+.ms-country-wrap .ms-rc-custom .current span {
     background-color: #FF4D40
 }
 
-.ms-country-wrap .ms-rc-custom.selected .circle {
+.ms-country-wrap .ms-rc-custom .current {
     border-color: #FF4D40
 }
 
@@ -3251,7 +3251,9 @@ input.ui-button {
     margin-bottom: 16px
 }
 
-
+.shopcart-list .mb-40 {
+    margin-bottom: 20px
+}
 
 .shopcart-list .mb-48 {
     margin-bottom: 24px
@@ -4013,7 +4015,11 @@ body {
 
 .shopcart-list .mb-40 {
     margin: 0;
-    padding: 5px 0
+    padding: 16px 0
+}
+
+.bigsalebackground {
+    background: url(https://ae01.alicdn.com/kf/HTB1.sz9hhuaVKJjSZFj763jmpXaz.png) round !important
 }
 
 .shopcart-list .mb-24 {

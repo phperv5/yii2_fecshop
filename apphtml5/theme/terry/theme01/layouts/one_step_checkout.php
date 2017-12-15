@@ -26,7 +26,7 @@ $cssOptions = [
 	# css config 1.
 	[
 		'css'	=>[
-			'css/en.css',
+			//'css/en.css',
 			'css/cart.css',
 		],
 	],

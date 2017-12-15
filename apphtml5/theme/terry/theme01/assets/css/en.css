@@ -3846,17 +3846,6 @@ body {
     background: #fff
 }
 
-.ic-md {
-    position: relative;
-    display: inline-block;
-    font-family: icomoon !important;
-    font-size: 16px;
-    line-height: 1;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: .2px;
-    -moz-osx-font-smoothing: grayscale
-}
 
 @font-face {
     font-family: 'icomoon';
@@ -3892,11 +3881,7 @@ body {
     content: "\ea38"
 }
 
-.ic-close-md:before {
-    content: "\ea18";
-    line-height: 45px;
-    font-size: 20px
-}
+
 
 .ic-download-md:before {
     content: "\e906";
