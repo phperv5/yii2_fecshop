@@ -34,12 +34,12 @@ use fecshop\app\appfront\helper\Format;
                                 <div class="clearfix">
                                     <div class="trim">
                                                 <span class="trim ms-numberic ms-numberic-20081458765" data-shop-cartid="20081458765">
-                                                    <a href="javascript:;" class="ms-minus cartqtydown">
-                                                        <i class="ic-md ic-remove-md" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></i>
+                                                    <a href="javascript:;" class="ms-minus">
+                                                        <i class="ic-md ic-remove-md cartqtydown" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></i>
                                                     </a>
                                                     <input type="number" id="quantity-20081458765" min="1" max="6" value="<?= $product_one['qty']; ?>" rel="<?= $product_one['item_id']; ?>">
-                                                    <a href="javascript:;" class="ms-plus cartqtyup">
-                                                        <i class="ic-md ic-add-md" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></i>
+                                                    <a href="javascript:;" class="ms-plus">
+                                                        <i class="ic-md ic-add-md cartqtyup" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"></i>
                                                     </a>
                                                 </span>
                                     </div>
