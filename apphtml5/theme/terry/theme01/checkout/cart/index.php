@@ -2,8 +2,15 @@
 use fecshop\app\appfront\helper\Format;
 ?>
 <section class="shopcart-list" id="shopcart-list">
+    <div class="shipto bb p-24 pwa-shadow">
+        Ship my order(s) to<span class="ship-to" id="ship-to">
+            <?php if($cart_info['shipping_country']) echo $cart_info['shipping_country'];else echo 'Select' ?>
+        </span>
+    </div>
     <div class="shipto bb p-24 mb-16 pwa-shadow">
-        Ship my order(s) to<span class="ship-to" id="ship-to">Canada</span>
+        shipping<span class="ship-to" id="ship-method">
+            <?php if($cart_info['shipping_method']) echo $cart_info['shipping_method'];else echo 'Select' ?>
+        </span>
     </div>
     <article id="seller-cart-220588563" class="seller-products pwa-shadow">
         <ul class="product bt">
@@ -74,7 +81,7 @@ use fecshop\app\appfront\helper\Format;
                 <dd><span><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></dd>
             </dl>
             <dl class="seller-costs-shipping mt-16 clearfix">
-                <dt>Shipping&nbsp;:</dt>
+                <dt>Shipping Cost:</dt>
                 <dd><span><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></dd>
             </dl>
         </div>
@@ -84,55 +91,9 @@ use fecshop\app\appfront\helper\Format;
                 <span>Total&nbsp;:</span>
                 <span class="mt-16 price"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['grand_total']) ?></span>
             </div>
-            <div class="ui-button ui-button-main buyall pwa-shadow ">Buy All</div>
+            <div class="ui-button ui-button-main buyall pwa-shadow" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'>Buy All</div>
         </div>
     </article>
-
-    <form id="submit-for-seller-create-order" method="post" action="/order/createNewOrderForCombine.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" data-role="seller-shopcart-ids" name="availableProductShopcartIds" value="">
-    </form>
-
-    <form id="submit-for-delete" method="post" action="/shopcart/detail.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" name="action" value="/shopcart/mobi_shopcart_action">
-        <input type="hidden" data-role="shopcart-id" name="shopcartId" value="">
-        <input type="hidden" name="event_submit_do_delete_shopcart" value="anything">
-    </form>
-
-    <form id="submit-for-delete-all" method="post" action="/shopcart/detail.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" name="action" value="/shopcart/mobi_shopcart_action">
-        <input type="hidden" name="event_submit_do_delete_all_shopcart" value="anything">
-    </form>
-
-    <form id="submit-for-update-quantity" method="post" action="/shopcart/detail.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" name="action" value="/shopcart/mobi_shopcart_action">
-        <input type="hidden" data-role="shopcart-id" name="shopcartId" value="">
-        <input type="hidden" data-role="quantity" name="quantity" value="">
-        <input type="hidden" name="event_submit_do_update_quantity" value="anything">
-    </form>
-
-    <form id="submit-for-update-freight" method="post" action="/shopcart/detail.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" name="action" value="/shopcart/mobi_shopcart_action">
-        <input type="hidden" data-role="shopcart-id" name="shopcartId" value="">
-        <input type="hidden" data-role="freight" name="logisticService" value="">
-        <input type="hidden" name="event_submit_do_update_logistic_service" value="anything">
-    </form>
-
-    <form id="submit-for-update-country" method="post" action="/shopcart/detail.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" name="action" value="/shopcart/mobi_shopcart_action">
-        <input type="hidden" data-role="country-code" name="countryCode" value="">
-        <input type="hidden" name="event_submit_do_update_buyer_country" value="anything">
-    </form>
-
-    <form id="submit-for-buy-all" method="post" action="/order/createNewOrderForCombine.htm">
-        <input name="_csrf_token_" type="hidden" value="s73ert97ohum">
-        <input type="hidden" data-role="seller-shopcart-ids" name="availableProductShopcartIds" value="">
-    </form>
 </section>
 
 <div class="ms-toast">
@@ -140,7 +101,7 @@ use fecshop\app\appfront\helper\Format;
     <div class="ms-toast-content" data-role="content"></div>
 </div>
 <div id="ai-jb7lm8t9">
-    <div class="ms-panel-md panel-show" id="panel-ai-jb7lm8t9" style="top: 0%;">
+    <div class="ms-panel-md panel-show" id="panel-ai-jb7lm8t9" style="top: 100%;">
         <div class="ms-panel-header">
             <span class="ms-panel-title" data-role="panel-title">Country</span>
             <span class="ms-panel-cancel">
@@ -150,11 +111,34 @@ use fecshop\app\appfront\helper\Format;
         <div class="ms-panel-bodyer" data-role="panel-body">
             <section class="ms-country-wrap" id="country-jb7lm8t8">
                 <ul class="ms-country-list">
-                    <li data-name="all" data-code="-1" class="ms-country-all">All <i class="ms-icon icon-check"></i></li>
+                    <li data-name="all" data-code="-1" class="ms-country-all">All <i class="ms-icon icon-check"></i>
+                    </li>
                     <?php foreach ($country as $code => $c): ?>
-                        <li class="ms-rc-ripple ms-rc-custom>" data-type="pop" data-code="<?= $code; ?>"
+                        <li class="ms-rc-ripple ms-rc-custom" data-type="pop" data-code="<?= $code; ?>"
                             data-name="<?= $c; ?>" data-index="0"><?= $c; ?>
-                            <div class="circle <?php if($cart_info['shipping_country'] == $code) echo 'current'; ?>"><span></span></div>
+                            <div class="oShipCountry circle <?php if ($cart_info['shipping_country'] == $code) echo 'current'; ?>">
+                                <span></span></div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="ms-panel-md panel-show" id="panel-ai-ship" style="top: 100%;">
+        <div class="ms-panel-header">
+            <span class="ms-panel-title" data-role="panel-title">Shipping Method</span>
+            <span class="ms-panel-cancel">
+            <i class="ic-md ic-close-md"></i>
+        </span>
+        </div>
+        <div class="ms-panel-bodyer" data-role="panel-body">
+            <section class="ms-country-wrap" id="country-jb7lm8t8">
+                <ul class="ms-country-list">
+                    <?php foreach ($allShipMethod as $code => $c): ?>
+                        <li class="ms-rc-ripple ms-rc-custom" data-type="pop" data-code="<?= $code; ?>"
+                            data-name="<?= $c['name'] ?>" data-index="0"><?= $c['name'] ?>
+                            <div class="oShipMethod circle <?php if ($cart_info['shipping_method'] == $code) echo 'current'; ?>">
+                                <span></span></div>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -280,8 +264,8 @@ use fecshop\app\appfront\helper\Format;
         });
 
         //修改发货方式
-        $('#oShipMethod').change(function () {
-            var oShipMethod = $(this).val();
+        $('.oShipMethod').on('click',function () {
+            var oShipMethod = $(this).parents('li').attr('data-code');
             jQuery.ajax({
                 async: true,
                 timeout: 6000,
@@ -301,8 +285,11 @@ use fecshop\app\appfront\helper\Format;
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                 }
             });
+
+
+
         })
-        $('.circle').on('click', function () {
+        $('.oShipCountry').on('click', function () {
             var shipping_country = $(this).parents('li').attr('data-code');
             jQuery.ajax({
                 async: true,
@@ -323,6 +310,13 @@ use fecshop\app\appfront\helper\Format;
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                 }
             });
+        })
+
+        $('#ship-to').click(function () {
+            $('#panel-ai-jb7lm8t9').css('top','0%');
+        })
+        $('#ship-method').click(function () {
+            $('#panel-ai-ship').css('top','0%');
         })
     });
 
