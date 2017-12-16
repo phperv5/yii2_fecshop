@@ -2877,7 +2877,7 @@ input.ui-button {
 }
 
 .ms-panel-bodyer {
-    background-color: #f2f2f2
+    background-color: #fff;
 }
 
 .ms-country-wrap {
@@ -4280,13 +4280,9 @@ body {
     margin-top: 8px
 }
 
-.form-group .ms-msg-error {
-    margin-left: 72px;
-    margin-right: 16px;
-    font-size: 12px;
-    line-height: 16px;
-    color: #FC751B;
-    display: none
+.form-group .validation-advice {
+    color: #E62E04;
+
 }
 
 .form-group .ms-msg-error .fm-md {
@@ -4479,8 +4475,7 @@ body {
     margin-bottom: 24px;
     font-size: 12px;
     line-height: 1.5;
-    color: #3A3E4A;
-    text-decoration: underline;
+    color: #E62E04;
     text-align: center
 }
 

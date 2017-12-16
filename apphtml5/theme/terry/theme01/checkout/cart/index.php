@@ -91,7 +91,7 @@ use fecshop\app\appfront\helper\Format;
                 <span>Total&nbsp;:</span>
                 <span class="mt-16 price"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['grand_total']) ?></span>
             </div>
-            <div class="ui-button ui-button-main buyall pwa-shadow" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'>Buy All</div>
+            <div class="ui-button ui-button-main buyall pwa-shadow" onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'">Buy All</div>
         </div>
     </article>
 </section>

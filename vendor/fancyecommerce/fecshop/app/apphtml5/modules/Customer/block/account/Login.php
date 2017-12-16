@@ -1,11 +1,5 @@
 <?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
+
 
 namespace fecshop\app\apphtml5\modules\Customer\block\account;
 
@@ -23,7 +17,6 @@ class Login
         $loginParam = \Yii::$app->getModule('customer')->params['login'];
         $loginPageCaptcha = isset($loginParam['loginPageCaptcha']) ? $loginParam['loginPageCaptcha'] : false;
         $email = isset($param['email']) ? $param['email'] : '';
-
         return [
             'loginPageCaptcha' => $loginPageCaptcha,
             'email' => $email,
