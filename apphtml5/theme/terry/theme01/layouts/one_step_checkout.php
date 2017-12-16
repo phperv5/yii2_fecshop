@@ -17,6 +17,7 @@ $jsOptions = [
 		],
 		'js'	=>[
             'js/jquery.js',
+            'js/js.js',
 		],
 	],
 ];

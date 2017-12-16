@@ -1,3 +1,5 @@
+<input type="hidden" class="currentBaseUrl" value="<?= $currentBaseUrl ?>" />
+<input type="hidden" class="logoutUrl" value="<?= $logoutUrl ?>" />
 <header class="new-header j-headerWarp">
     <div class="new-header-inner">
         <div class="new-return j-common-back com-ripple-btn"><i class="ic-md ic-return-md"></i></div>

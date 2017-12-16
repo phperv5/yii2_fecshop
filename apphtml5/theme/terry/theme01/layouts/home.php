@@ -38,18 +38,20 @@ $cssOptions = [
       lang="<?= $currentLangCode ?>">
 <head>
     <style>
-        body{background:#f5f4ef;}
+        body {
+            background: #f5f4ef;
+        }
     </style>
     <?= Yii::$service->page->widget->render('head', $this); ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-   <?= Yii::$service->page->widget->render('header', $this); ?>
+<?= Yii::$service->page->widget->render('header', $this); ?>
 
 
 <div class="main-container">
-    <?= $content;?>
+    <?= $content; ?>
 </div>
 <div class="footer-container">
     <?= Yii::$service->page->widget->render('footer', $this); ?>
