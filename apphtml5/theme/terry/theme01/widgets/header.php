@@ -7,7 +7,7 @@
                 <i class="ic-md ic-search-md"></i>
             </div>
             <div class="new-head-cart com-ripple-href">
-                <a href="/viewcart.do#mhp1601_cart" rel="nofollow" id="cartnum" class="cart"><i class="ic-md ic-shoppingcart-md"></i><span class="cart-number j-cartnum">0</span></a>
+                <a href="<?= Yii::$service->url->getUrl('checkout/cart') ?>" rel="nofollow" id="cartnum" class="cart"><i class="ic-md ic-shoppingcart-md"></i></a>
             </div>
         </div>
     </div>

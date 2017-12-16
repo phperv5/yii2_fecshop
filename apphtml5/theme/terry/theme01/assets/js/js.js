@@ -55,8 +55,8 @@ $(document).ready(function () {
                 $(".product_csrf").val(data.csrfVal);
             }
             if (data.cart_qty) {
-                var str = '<span id="str_num_mycart">Cart: <b class="yellow px16 verdana">' + data.cart_qty + '</b> <span class="no_bold px11">item</span></span>';
-                $("#hd_mycart").html(str);
+                var str = '<span class="cart-number j-cartnum" style="display: inline;">' + data.cart_qty + '</span>';
+                $("#cartnum").append(str);
             }
             if (data.email) {
                 var str = '<b class="px14">Welcome!</b><br/> <b class="px12">' + data.customer_name + '</b><br/>User ID: <span class="email">' + data.email + '</span><br/>E-Mail: <span class="email">' + data.email + '</span><br/>Account Status:<b>Normal</b><br/>';

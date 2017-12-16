@@ -9,6 +9,7 @@ $jsOptions = [
         'js' => [
             'js/jquery.js',
             'js/dist/js/swiper.min.js',
+            'js/js.js',
         ],
     ],
 ];
