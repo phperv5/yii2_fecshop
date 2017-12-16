@@ -18,6 +18,7 @@ $jsOptions = [
 		'js'	=>[
             'js/jquery.js',
             'js/js.js',
+            'js/common.js',
 		],
 	],
 ];
@@ -29,6 +30,7 @@ $cssOptions = [
 		'css'	=>[
 			'css/en.css',
 			'css/cart.css',
+            'css/order.css',
 		],
 	],
 ];
