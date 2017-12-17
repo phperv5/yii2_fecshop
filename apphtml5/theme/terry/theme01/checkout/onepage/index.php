@@ -1,3 +1,4 @@
+<?= Yii::$service->page->widget->render('flashmessage'); ?>
 <section id="place-order">
     <div class="pwa-cart-block pwa-shadow">
         <div class="pwa-title-block small">
@@ -23,6 +24,7 @@
     <div id="bind-card"></div>
     <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
         <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
+        <input type="hidden" id="s_method_flatrate_flatrate2" name="shipping_method" value="<?= $cart_info['shipping_method'] ?>" class="validate-one-required-by-name">
         <?php # review order部分
         $reviewOrderView = [
             'view' => 'checkout/onepage/index/review_order.php'
