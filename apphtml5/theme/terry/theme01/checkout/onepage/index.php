@@ -15,8 +15,7 @@
                 <li class="item" data-role="zip">21</li>
             </ul>
             <div class="ms-rc-ripple ms-rc-custom has-btn">
-                <a href="javascript:postManageAddress('/order/addressList.htm',1233320249)" id="change-address"
-                   class="pwa-btn transparent">Change Shipping Address</a>
+                <a href="<?= Yii::$service->url->getUrl('customer/address?redirect_url='.Yii::$service->url->getUrl('checkout/onepage')) ?>" id="change-address" class="pwa-btn transparent">Change Shipping Address</a>
             </div>
         </div>
     </div>

@@ -30,6 +30,9 @@ $cssOptions = [
             'css/cart.css',
             'css/login.css',
             'css/login-form-min.css',
+            'css/login-form-min.css',
+            'css/address.css',
+            'css/editaddress.css',
         ],
     ],
 

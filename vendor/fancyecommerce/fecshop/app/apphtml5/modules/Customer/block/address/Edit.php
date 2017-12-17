@@ -103,7 +103,7 @@ class Edit
 
     public function getCountrySelect()
     {
-        $countrySelect = Yii::$service->helper->country->getAllCountryOptions('', '', $this->_country, '--Select Country--');
+        $countrySelect = Yii::$service->helper->country->getAllCountryArray();
         $this->_address['countrySelect'] = $countrySelect;
     }
 
@@ -113,17 +113,11 @@ class Edit
         if (!$country) {
             $country = $this->_country;
         }
-        $stateHtml = Yii::$service->helper->country->getStateOptionsByContryCode($country, $state);
-        if (!$stateHtml) {
-            $stateHtml = '<input id="state" name="address[state]" value="'.$state.'" title="State" class="input-text" style="" type="text">';
-        } else {
-            $stateHtml = '<select id="address:state" class="address_state validate-select" title="State" name="address[state]">
-							<option value="">Please select region, state or province</option>'
-                        .$stateHtml.'</select>';
-        }
-        $this->_address['stateHtml'] = $stateHtml;
+        $states = Yii::$service->helper->country->getStateByContryCode($country, $state);
 
-        return $stateHtml;
+        $this->_address['states'] = $states;
+
+        return $states;
     }
 
     public function getAjaxState()
@@ -198,6 +192,7 @@ class Edit
         } else {
             $arr['zip'] = $zip;
         }
+        var_dump($error);
         if (!empty($error)) {
             $str = implode(',', $error).' can not empty';
             Yii::$service->page->message->addError($str);
