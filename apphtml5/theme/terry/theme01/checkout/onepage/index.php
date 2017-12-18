@@ -1,24 +1,20 @@
 <?= Yii::$service->page->widget->render('flashmessage'); ?>
 <section id="place-order">
-    <div class="pwa-cart-block pwa-shadow">
-        <div class="pwa-title-block small">
-            <div class="content">
-                <span class="title">shipping address&nbsp; :</span>
-            </div>
-        </div>
-        <div class="pwa-address-item order-shipping-address">
-            <div class="name">1111</div>
-            <ul class="address-items">
-                <li class="item" data-role="address">212121</li>
-                <li class="item"><span>21</span><span>Mato Grosso</span></li>
-                <li class="item" data-role="country">United States</li>
-                <li class="item" data-role="zip">21</li>
-            </ul>
-            <div class="ms-rc-ripple ms-rc-custom has-btn">
-                <a href="<?= Yii::$service->url->getUrl('customer/address?redirect_url='.Yii::$service->url->getUrl('checkout/onepage')) ?>" id="change-address" class="pwa-btn transparent">Change Shipping Address</a>
-            </div>
-        </div>
-    </div>
+    <?php # address
+    $addressView = [
+        'view' => $address_view_file,
+    ];
+    $addressParam = [
+        'cart_address_id' => $cart_address_id,
+        'address_list' => $address_list,
+        'address_select' => $address_select,
+        'customer_info' => $customer_info,
+        'country_select' => $country_select,
+        'state_html' => $state_html,
+        'cart_address' => $cart_address,
+    ];
+    ?>
+    <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
     <div class="pwa-gap"></div>
     <div id="bind-card"></div>
     <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">

@@ -3266,6 +3266,10 @@ body, html {
     background-color: #FFF;
     width: 100%
 }
+.add-address .btn a{
+    color: #318FE1;
+    text-decoration:none;
+}
 
 .add-address.address-disabled {
     padding: 16px;

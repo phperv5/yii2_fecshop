@@ -1,11 +1,8 @@
-
 <div class="addressList">
     <?php if (is_array($coll) && !empty($coll)): ?>
     <ul class="wrapper pwa-shadow">
         <?php foreach ($coll as $one): ?>
-        <li class="address-item  ms-rc-ripple ms-rc-custom selected">
-            <form id="Address-Form-1233320249" name="Address-Form-1233320249-id" action="//m.aliexpress.com/order/createNewOrderForCombinePwa.htm" method="post" class="form-item" data-action="default">
-
+        <li class="form-item address-item  ms-rc-ripple ms-rc-custom <?php if($one['is_default'] == 1) echo 'selected';?>">
                 <div class="name"><?= $one['first_name'] ?>&nbsp;<?= $one['last_name'] ?></div>
                 <div class="detail">
                     <div class="address-info"><?= $one['street1'] ?></div>
@@ -16,7 +13,6 @@
                     <div class="address-info"><?= $one['zip'] ?></div>
                     <div class="address-info"><?= $one['telephone'] ?></div>
                 </div>
-            </form>
             <a href="<?= Yii::$service->url->getUrl('customer/address/edit',['address_id' => $one['address_id']]); ?>" id="manageAddressHref" class="btn">Edit Address</a>
             <div class="circle"><span></span></div>
         </li>

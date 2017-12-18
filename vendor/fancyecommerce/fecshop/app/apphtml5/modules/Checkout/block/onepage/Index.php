@@ -49,7 +49,9 @@ class Index
                     'pageNum' => 1,
                     'orderBy' => ['updated_at' => SORT_DESC],
                     'where' => [
-                        ['customer_id' => $customer_id],
+                        [
+                            'customer_id' => $customer_id
+                        ],
                     ],
                     'asArray' => true,
         ];
