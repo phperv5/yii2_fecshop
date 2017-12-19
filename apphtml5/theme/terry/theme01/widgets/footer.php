@@ -1,9 +1,7 @@
+<div class="blank10"></div>
 <div class="footer">
-
     <div class="ft_menu">
         <a href="/">Home</a>
-
-
         <a href="/producttags/latest-update-notice.html">Latest Update Notice</a>
 
         <a href="/info/news-notice/">News &amp; Notice</a>
