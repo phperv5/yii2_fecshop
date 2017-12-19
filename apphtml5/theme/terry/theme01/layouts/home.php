@@ -26,7 +26,6 @@ $cssOptions = [
             'css/en.css',
             'js/dist/css/swiper.min.css',
             'css/sm.min.css',
-            'css/menu.css',
         ],
     ],
 ];
