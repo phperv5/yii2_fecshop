@@ -6,7 +6,6 @@ $jsOptions = [
             'position' => 'POS_END',
         ],
         'js' => [
-            'js/common.js',
             'js/jquery.js',
             'js/zepto.min.js',
             'js/js.js',
@@ -22,7 +21,6 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
-            'css/en.css',
             'js/dist/css/swiper.min.css',
             'css/sm.min.css',
         ],

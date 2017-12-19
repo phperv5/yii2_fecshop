@@ -117,3 +117,62 @@ function addProductToCart(product_id) {
 
 }
 
+//区域显示、隐藏
+//操作单个区域显示隐藏
+function AreaShowHide(areaID)
+{
+    var areaID=document.getElementById(areaID);
+    if(areaID.style.display=="none")
+    {
+        areaID.style.display="";
+    }
+    else
+    {
+        areaID.style.display="none";
+    }
+}
+
+//操作多个区域显示隐藏，无菜单
+function AreaMultiShowHide(p_area_prefix,p_sum_area,p_curr_area)
+{
+    var area_id_current = p_area_prefix + p_curr_area;
+    for (i=1;i<p_sum_area+1;i++)
+    {
+        area_id_circle = p_area_prefix + i;
+        if (area_id_current == area_id_circle)
+        {
+            document.getElementById(area_id_circle).style.display = "";
+        }
+        else
+        {
+            document.getElementById(area_id_circle).style.display = "none";
+        }
+    }
+}
+
+//操作多个区域显示隐藏，含切换菜单css
+function AreaMultiMenuShowHide(mA,aA,iAll,iA,css_on,css_off)
+{
+    var m,a,cM,cA;
+    cM=mA+iA;
+    cA=aA+iA;
+    for (i=1;i<iAll+1;i++)
+    {
+        m=mA+i;
+        a=aA+i;
+        if (document.getElementById(m)!=undefined) {
+            if (m==cM)
+            {
+                document.getElementById(m).className = css_on;
+                document.getElementById(a).style.display = "";
+            }
+            else
+            {
+                document.getElementById(m).className = css_off;
+                document.getElementById(a).style.display = "none";
+            }
+        }
+
+    }
+}
+

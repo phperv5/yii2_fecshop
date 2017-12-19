@@ -26,7 +26,7 @@ $cssOptions = [
     # css config 1.
     [
         'css' => [
-            'css/en.css',
+            'css/style.css',
             'css/cart.css',
             'css/login.css',
             'css/login-form-min.css',
