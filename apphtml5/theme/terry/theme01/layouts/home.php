@@ -9,8 +9,10 @@ $jsOptions = [
         'js' => [
             'js/common.js',
             'js/jquery.js',
+            'js/zepto.min.js',
             'js/js.js',
             'js/dist/js/swiper.min.js',
+            'js/sm.min.js',
         ],
     ],
 ];
@@ -48,7 +50,7 @@ $cssOptions = [
 <body>
 <?php $this->beginBody() ?>
 <div class="page-group">
-    <div class="page">
+    <div class="page main-page page-current">
         <?= Yii::$service->page->widget->render('header', $this); ?>
         <div class="content">
             <?= $content; ?>

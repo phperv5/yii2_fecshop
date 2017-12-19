@@ -23,7 +23,7 @@ $(document).ready(function () {
     logoutUrl = $(".logoutUrl").val();
     product_id = $(".product_view_id").val();
     product_id = product_id ? product_id : null;
-    jQuery.ajax({
+    $.ajax({
         async: true,
         timeout: 6000,
         dataType: 'json',
