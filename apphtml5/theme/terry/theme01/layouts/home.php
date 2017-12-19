@@ -4,7 +4,6 @@ $jsOptions = [
     [
         'options' => [
             'position' => 'POS_END',
-            //	'condition'=> 'lt IE 9',
         ],
         'js' => [
             'js/common.js',
@@ -52,6 +51,9 @@ $cssOptions = [
         <?= Yii::$service->page->widget->render('header', $this); ?>
         <div class="content">
             <?= $content; ?>
+            <div class="footer-container">
+                <?= Yii::$service->page->widget->render('footer', $this); ?>
+            </div>
         </div>
     </div>
     <?= Yii::$service->page->widget->render('menu', $this); ?>
