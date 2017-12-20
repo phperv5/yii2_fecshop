@@ -1,7 +1,5 @@
 <?php $address_select = $parentThis['address_select']; ?>
 
-<!--地址列表-->
-<input type="hidden" name="address_id" class="address_id" value="<?= $address_select['address_id'] ?>">
 <div class="pwa-cart-block pwa-shadow">
     <div class="pwa-title-block small">
         <div class="content">
