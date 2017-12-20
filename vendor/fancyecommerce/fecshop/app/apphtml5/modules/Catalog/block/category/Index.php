@@ -83,8 +83,8 @@ class Index
             'filter_price'      => $this->getFilterPrice(),
             'filter_category'   => $this->getFilterCategoryHtml(),
             'page_count'        => $page_count,
-            //'content' => Yii::$service->store->getStoreAttrVal($this->_category['content'],'content'),
-            //'created_at' => $this->_category['created_at'],
+            'product_count'        => $this->_productCount,
+            'product_page' => $this->getProductPage(),
         ];
     }
     /**
@@ -530,5 +530,26 @@ class Index
         } else {
             Yii::$service->page->breadcrumbs->active = false;
         }
+    }
+
+    /**
+     * 得到产品页面的toolbar部分
+     * 也就是分类页面的分页工具条部分。
+     */
+    protected function getProductPage()
+    {
+        $productNumPerPage = $this->getNumPerPage();
+        $productCount = $this->_productCount;
+        $pageNum = $this->getPageNum();
+        $config = [
+            'class' => 'fecshop\app\apphtml5\widgets\Page',
+            'view' => 'widgets/page.php',
+            'pageNum' => $pageNum,
+            'numPerPage' => $productNumPerPage,
+            'countTotal' => $productCount,
+            'page' => $this->_page,
+        ];
+
+        return Yii::$service->page->widget->renderContent('category_product_page', $config);
     }
 }

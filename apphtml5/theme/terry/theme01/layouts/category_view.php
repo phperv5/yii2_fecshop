@@ -18,6 +18,7 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
+            'css/list.css',
         ],
     ],
 ];

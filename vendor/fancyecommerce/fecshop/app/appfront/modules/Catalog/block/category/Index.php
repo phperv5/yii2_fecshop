@@ -76,8 +76,6 @@ class Index
             'filter_info' => $this->getFilterInfo(),
             'filter_price' => $this->getFilterPrice(),
             'filter_category' => $this->getFilterCategoryHtml(),
-            //'content' => Yii::$service->store->getStoreAttrVal($this->_category['content'],'content'),
-            //'created_at' => $this->_category['created_at'],
         ];
     }
 

@@ -1,4 +1,9 @@
-<h1><?= $name ?></h1>
+<div class="j-nav">
+    <nav class="nav clearfix">
+        <h1 class="results"> <?= $product_count ?>&nbsp;Results</h1>
+    </nav>
+</div>
+
 <div id="J_list" class="productsCon j-product-list clearfix dh-list" style="padding-top: 0px;">
     <ul class="clearfix">
         <?php if (is_array($products) && !empty($products)): ?>
@@ -33,17 +38,5 @@
         <?php endif; ?>
     </ul>
 </div>
-<div class="page">
-    <div class="pageNum">Page <span>1</span> of <span>100</span></div>
-    <div class="pageCon clearfix">
-         <span class="pagePre js-page-prev">
-            <a href="javascript:;" class="pageDisable">
-        <var></var>Previous</a>
-        </span>
+<?= $product_page; ?>
 
-        <span class="com-ripple-href pageNext js-page-next">
-            <a href="https://m.dhgate.com/wholesale/hair-extensions/c130002/1.html" rel="nofollow">
-        Next<var></var></a>
-        </span>
-    </div>
-</div>

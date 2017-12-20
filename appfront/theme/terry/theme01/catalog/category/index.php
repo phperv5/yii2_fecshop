@@ -138,6 +138,7 @@
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
+            <?php var_dump(get_defined_vars());?>
             <?= $product_page; ?>
         </div>
         <div class="clear"></div>
