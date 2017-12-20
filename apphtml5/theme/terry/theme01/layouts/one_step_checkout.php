@@ -41,10 +41,6 @@ $cssOptions = [
 <div class="main-container">
     <?= $content; ?>
 </div>
-<div class="footer-container">
-    <?= Yii::$service->page->widget->render('footer', $this); ?>
-</div>
-<?= Yii::$service->page->widget->render('scroll', $this); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

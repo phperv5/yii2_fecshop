@@ -1,13 +1,4 @@
 <?php
-/**
- * FecShop file.
- *
- * @link http://www.fecshop.com/
- * @copyright Copyright (c) 2016 FecShop Software LLC
- * @license http://www.fecshop.com/license/
- */
-?>
-<?php
 $jsOptions = [
     # js config 1
     [
@@ -26,7 +17,7 @@ $cssOptions = [
     # css config 1.
     [
         'css' => [
-            'css/en.css',
+            'css/style.css',
         ],
     ],
 ];

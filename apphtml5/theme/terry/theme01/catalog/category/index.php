@@ -47,15 +47,3 @@
         </span>
     </div>
 </div>
-<script>
-    <?php $this->beginBlock('owl_fecshop_slider') ?>
-    $(function () {
-        var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
-    });
-    <?php $this->endBlock(); ?>
-</script>
-<?php $this->registerJs($this->blocks['owl_fecshop_slider'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
