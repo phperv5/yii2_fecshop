@@ -1,5 +1,6 @@
 <?= Yii::$service->page->widget->render('flashmessage'); ?>
 <section id="place-order">
+    <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
     <?php # address
     $addressView = [
         'view' => $address_view_file,
@@ -17,7 +18,6 @@
     <?= Yii::$service->page->widget->render($addressView, $addressParam); ?>
     <div class="pwa-gap"></div>
     <div id="bind-card"></div>
-    <form action="<?= Yii::$service->url->getUrl('checkout/onepage'); ?>" method="post" id="onestepcheckout-form">
         <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
         <input type="hidden" id="s_method_flatrate_flatrate2" name="shipping_method" value="<?= $cart_info['shipping_method'] ?>" class="validate-one-required-by-name">
         <?php # review order部分

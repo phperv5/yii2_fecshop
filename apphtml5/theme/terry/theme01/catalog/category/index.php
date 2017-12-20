@@ -27,7 +27,7 @@
                     </div>
                 </a>
             </div>
-            <span data-pagetype="4" data-itemcode="388085854" class="com-ripple-btn j-favorite favorite"><var class="icon-nofavorite"></var></span>
+            <span class="com-ripple-btn j-favorite favorite"><var class="icon-nofavorite"></var></span>
         </li>
             <?php endforeach; ?>
         <?php endif; ?>
