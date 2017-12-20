@@ -8,7 +8,6 @@ $jsOptions = [
         'js' => [
             'js/jquery.js',
             'js/js.js',
-            'js/plugins/layer/layer.js',
             'js/dist/js/swiper.min.js',
         ],
     ],
@@ -20,8 +19,6 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
-            'css/home.css',
-            'js/plugins/layer/skin/layer.css',
             'js/dist/css/swiper.min.css',
         ],
     ],
