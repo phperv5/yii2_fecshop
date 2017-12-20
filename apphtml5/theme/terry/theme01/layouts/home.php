@@ -7,11 +7,9 @@ $jsOptions = [
         ],
         'js' => [
             'js/jquery.js',
-            'js/zepto.min.js',
             'js/js.js',
             'js/plugins/layer/layer.js',
             'js/dist/js/swiper.min.js',
-            'js/sm.min.js',
         ],
     ],
 ];
@@ -22,7 +20,7 @@ $cssOptions = [
     [
         'css' => [
             'css/style.css',
-            'css/en.css',
+            'css/home.css',
             'js/plugins/layer/skin/layer.css',
             'js/dist/css/swiper.min.css',
         ],
@@ -46,11 +44,8 @@ $cssOptions = [
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-
 <?= Yii::$service->page->widget->render('header', $this); ?>
-
-
+<?= Yii::$service->page->widget->render('menu', $this); ?>
 <div class="main-container">
     <?= $content; ?>
 </div>
