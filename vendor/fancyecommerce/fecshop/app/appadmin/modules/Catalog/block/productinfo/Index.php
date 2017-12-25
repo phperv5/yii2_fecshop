@@ -24,6 +24,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 {
     protected $_copyUrl;
     protected $_batchImportUrl;
+    public $_editCategoryUrl;
 
     /**
      * 为了可以使用rewriteMap，use 引入的文件统一采用下面的方式，通过Yii::mapGet()得到className和Object
@@ -54,6 +55,7 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
          * service component, data provider
          */
         $this->_batchImportUrl = CUrl::getUrl('catalog/productinfo/batchimport');
+        $this->_editCategoryUrl = CUrl::getUrl('catalog/productinfo/editcategory');
         $this->_service = Yii::$service->product;
         parent::init();
     }
@@ -380,9 +382,11 @@ class Index extends AppadminbaseBlock implements AppadminbaseBlockInterface
 
     public function getBatchImportBar()
     {
-        return '<div class="panelBar"><ul class="toolBar">
+        return '<div class="panelBar">
+              <ul class="toolBar">
 					<li><a class="add"   href="'.$this->_batchImportUrl.'"  target="dialog" height="580" width="1000" drawable="true" mask="true"><span>批量导入</span></a></li>
-				</ul></div>';
+				</ul>
+				</div>';
 
     }
 

@@ -473,4 +473,9 @@ class Product extends Service
         $products = Yii::$service->category->product->convertToCategoryInfo($products);
         return $products;
     }
+
+    protected function actionCategorySave($one, $category)
+    {
+        return $this->_product->categorySave($one, $category);
+    }
 }

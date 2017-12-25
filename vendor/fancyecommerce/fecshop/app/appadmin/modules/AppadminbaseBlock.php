@@ -68,6 +68,7 @@ class AppadminbaseBlock extends Object
      */
     public $_deleteUrl;
     public $_currentUrl;
+    public $_editCategoryUrl;
 
     /**
      * it will be execute during initialization ,the following object variables will be initialize.
@@ -403,9 +404,14 @@ class AppadminbaseBlock extends Object
         */
         return '<ul class="toolBar">
 					<li><a class="add"   href="'.$this->_editUrl.'"  target="dialog" height="580" width="1000" drawable="true" mask="true"><span>添加</span></a></li>
-
 					<li><a target="dialog" height="580" width="1000" drawable="true" mask="true" class="edit" href="'.$this->_editUrl.'?'.$this->_primaryKey.'={sid_user}" ><span>修改</span></a></li>
 					<li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="'.$this->_primaryKey.'s" postType="string" href="'.$this->_deleteUrl.'" class="delete"><span>批量删除</span></a></li>
+					<li>
+				       	<a class="edit"  title="批量修改分类" target="pldialog"  rel="'.$this->_primaryKey.'s"  href="'.$this->_editCategoryUrl .'?_ids="   mask=true maxable=true minable=true resizable=true drawable=true   height="580" width="1000">
+					        <span>批量修改分类</span>
+					    </a>
+					</li>
+					
 				</ul>';
     }
 
@@ -576,7 +582,7 @@ class AppadminbaseBlock extends Object
             }
             $str .= '<td class="center">
 						<a title="编辑" target="dialog" class="btnEdit" mask="true" drawable="true" width="1000" height="580" href="'.$this->_editUrl.'?'.$this->_primaryKey.'='.$one[$this->_primaryKey].'" >编辑</a>
-						<a title="删除" target="ajaxTodo" href="'.$this->_deleteUrl.'?'.$csrfString.'&'.$this->_primaryKey.'='.$one[$this->_primaryKey].'" class="btnDel">删除</a>
+						<a title="删除" target="ajaxTodo" href="'.$this->_editCategoryUrl.'?'.$csrfString.'&'.$this->_primaryKey.'='.$one[$this->_primaryKey].'" class="btnDel">删除</a>
 					</td>';
             $str .= '</tr>';
         }
