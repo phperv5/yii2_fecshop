@@ -56,23 +56,41 @@ class Editcategory extends AppadminbaseBlockEdit implements AppadminbaseBlockEdi
     public function save()
     {
         $request_param = CRequest::param();
-        $_ids = explode(',',$request_param['_ids']);
+        $_ids = explode(',', $request_param['_ids']);
+        if (!$_ids) {
+            echo json_encode([
+                'statusCode' => '300',
+                'message' => '请选择产品',
+            ]);
+            exit;
+        }
+
         $category = $request_param['category'];
-        if ($category) {
-            $category = explode(',', $category);
-            if (!empty($category)) {
-                $cates = [];
-                foreach ($category  as $cate) {
-                    if ($cate) {
-                        $cates[] = $cate;
-                    }
+        $category = explode(',', $category);
+        if (!empty($category)) {
+            $cates = [];
+            foreach ($category as $cate) {
+                if ($cate) {
+                    $cates[] = $cate;
                 }
-                $this->_param['category'] = $cates;
-            } else {
-                $this->_param['category'] = [];
             }
+
+        }
+        $category = $cates;
+        $this->_service->categorySave($_ids, $category);
+        $errors = Yii::$service->helper->errors->get();
+        if (!$errors) {
+            echo  json_encode([
+                'statusCode'=>'200',
+                'message'=>'save success',
+            ]);
+            exit;
         } else {
-            $this->_param['category'] = [];
+            echo  json_encode([
+                'statusCode'=>'300',
+                'message'=>$errors,
+            ]);
+            exit;
         }
     }
 
