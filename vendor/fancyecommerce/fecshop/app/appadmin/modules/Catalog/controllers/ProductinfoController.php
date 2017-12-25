@@ -78,4 +78,17 @@ class ProductinfoController extends CatalogController
     {
         $this->getBlock('imageupload')->attachmentupload();
     }
+
+    public function actionEditcategory()
+    {
+        $data = $this->getBlock()->getLastData();
+
+        return $this->render($this->action->id, $data);
+    }
+
+    //批量修改分类保存
+    public function actionEditcategorysave()
+    {
+        $data = $this->getBlock('editcategory')->save();
+    }
 }

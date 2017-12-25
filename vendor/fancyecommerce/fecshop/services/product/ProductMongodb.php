@@ -664,4 +664,87 @@ class ProductMongodb implements ProductInterface
             }
         }
     }
+
+    /*
+     * 批量修改category
+     */
+    public function categorySave($one, $originUrlKey = 'catalog/product/index')
+    {
+        if (!$this->initSave($one)) {
+            return;
+        }
+
+        $currentDateTime = \fec\helpers\CDate::getCurrentDateTime();
+        $primaryVal = isset($one[$this->getPrimaryKey()]) ? $one[$this->getPrimaryKey()] : '';
+        if ($primaryVal) {
+            $model = $this->_productModel->findOne($primaryVal);
+            if (!$model) {
+                Yii::$service->helper->errors->add('Product ' . $this->getPrimaryKey() . ' is not exist');
+
+                return;
+            }
+
+            //验证sku 是否重复
+            $product_one = $this->_productModel->find()->asArray()->where([
+                '<>', $this->getPrimaryKey(), (new \MongoDB\BSON\ObjectId($primaryVal)),
+            ])->andWhere([
+                'sku' => $one['sku'],
+            ])->one();
+            if ($product_one['sku']) {
+                Yii::$service->helper->errors->add('Product Sku 已经存在，请使用其他的sku');
+
+                return;
+            }
+        } else {
+            $model = new $this->_productModelName();
+            $model->created_at = time();
+            $model->created_user_id = \fec\helpers\CUser::getCurrentUserId();
+            $primaryVal = new \MongoDB\BSON\ObjectId();
+            $model->{$this->getPrimaryKey()} = $primaryVal;
+            //验证sku 是否重复
+            $product_one = $this->_productModel->find()->asArray()->where([
+                'sku' => $one['sku'],
+            ])->one();
+            if ($product_one['sku']) {
+                Yii::$service->helper->errors->add('Product Sku 已经存在，请使用其他的sku');
+
+                return;
+            }
+        }
+        $model->updated_at = time();
+        /*
+         * 计算出来产品的最终价格。
+         */
+        $one['final_price'] = Yii::$service->product->price->getFinalPrice($one['price'], $one['special_price'], $one['special_from'], $one['special_to']);
+        $one['score'] = (int)$one['score'];
+        unset($one['_id']);
+        /**
+         * 保存产品
+         */
+        $saveStatus = Yii::$service->helper->ar->save($model, $one);
+
+        /*
+         * 自定义url部分
+         */
+        if ($originUrlKey) {
+            $originUrl = $originUrlKey . '?' . $this->getPrimaryKey() . '=' . $primaryVal;
+            $originUrlKey = isset($one['url_key']) ? $one['url_key'] : '';
+            $defaultLangTitle = Yii::$service->fecshoplang->getDefaultLangAttrVal($one['name'], 'name');
+            $urlKey = Yii::$service->url->saveRewriteUrlKeyByStr($defaultLangTitle, $originUrl, $originUrlKey);
+            $model->url_key = $urlKey;
+            $model->save();
+        }
+        $product_id = $model->{$this->getPrimaryKey()};
+        /**
+         * 更新产品库存。
+         */
+
+        Yii::$service->product->stock->saveProductStock($product_id, $one);
+        /**
+         * 更新产品信息到搜索表。
+         */
+        Yii::$service->search->syncProductInfo([$product_id]);
+
+        return true;
+    }
 }
