@@ -514,6 +514,9 @@ class ProductMongodb implements ProductInterface
         if(isset($filter['offset'])){
             $query->offset($filter['offset']);
         }
+        if (isset($filter['orderBy'])) {
+            $query->orderBy($filter['orderBy']);
+        }
         return $query->all();
     }
 
