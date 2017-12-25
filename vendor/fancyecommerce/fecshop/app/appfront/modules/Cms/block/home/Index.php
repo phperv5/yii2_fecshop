@@ -41,7 +41,7 @@ class Index
             'special_from', 'special_to',
             'url_key', 'score',
         ];
-        $filter['where'] = ['category' => $category_id];
+        //$filter['where'] = ['category' => $category_id];
         if ($skus) {
             $filter['where'] = ['in', 'sku', $skus];
         }
