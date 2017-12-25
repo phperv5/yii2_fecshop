@@ -45,7 +45,7 @@ class Index
         if ($skus) {
             $filter['where'] = ['in', 'sku', $skus];
         }
-        $filter['orderBy'] = ['score' => -1];
+        //$filter['orderBy'] = ['score' => -1];
         $filter['limit'] = $limit;
         $products = Yii::$service->product->getProducts($filter);
         $products = Yii::$service->category->product->convertToCategoryInfo($products);
