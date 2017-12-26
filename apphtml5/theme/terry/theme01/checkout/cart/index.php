@@ -1,6 +1,68 @@
 <?php
 use fecshop\app\appfront\helper\Format;
 ?>
+<style>
+    .ms-ept-page {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 40;
+background-color: #F8F8F8;
+padding: 0 12%;
+text-align: center;
+}
+    .ms-ept-icon {
+        text-align: center;
+        margin-top: 40px;
+        color: #EBEBEC;
+        font-size: 91px;
+    }
+    .ic-shoppingcart-md:before {
+        content: "\E60E";
+    }
+
+    .ic-md {
+        position: relative;
+        display: inline-block;
+        font-family: icmd!important;
+        font-size: 16px;
+        line-height: 1;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: .2px;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .ms-ept-info {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #3A3E4A;
+        line-height: 20px;
+        text-align: left;
+    }
+    .ms-ept-button {
+        display: block;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        background-color: #F44336;
+        height: 36px;
+        line-height: 36px;
+        margin-top: 16px;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px #cccccc;
+        padding: 0 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+    }
+</style>
+<?php if(!empty($cart_info)){  ?>
 <section class="shopcart-list" id="shopcart-list">
     <div class="shipto bb p-24 pwa-shadow">
         Ship my order(s) to<span class="ship-to" id="ship-to">
@@ -146,7 +208,6 @@ use fecshop\app\appfront\helper\Format;
         </div>
     </div>
 </div>
-
 <script>
     // add to cart js
     <?php $this->beginBlock('changeCartInfo') ?>
@@ -323,3 +384,18 @@ use fecshop\app\appfront\helper\Format;
     <?php $this->endBlock(); ?>
     <?php $this->registerJs($this->blocks['changeCartInfo'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
 </script>
+<?php  }else{  ?>
+
+    <div class="ms-ept-page" style="top: 57px; display: block;">
+        <a class="ms-ept-icon ic-md ic-shoppingcart-md"></a>
+        <p class="ms-ept-info">
+            There currently are no items in your shopping cart. If you already have an account, please sign in to view your cart items
+        </p>
+
+        <a class="ms-ept-button" onclick="window.location.href ='/'">
+            start shopping
+        </a>
+
+    </div>
+
+<?php  } ?>

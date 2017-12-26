@@ -69,7 +69,7 @@
             $('html').removeClass('dhm-htmlOverflow');
         })
         $('.j-headCategoryBtn').bind('click', function () {
-            $('.j-categoryWarp').removeClass('categoryWarp-close').removeClass('dhm-hide').addClass('categoryWarp-open');
+            $('.j-categoryWarp').removeClass('categoryWarp-close').removeClass('dhm-hide').addClass('fadeIn categoryWarp-open ');
             $('.j-fixedShadow').show();
             $('html').addClass('dhm-htmlOverflow');
         })

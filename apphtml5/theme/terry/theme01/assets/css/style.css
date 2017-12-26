@@ -186,7 +186,7 @@ td, th {
     box-sizing: border-box
 }
 
-a, abbr, acronym, address, article, aside, blockquote, body, caption, code, dd, del, dfn, dialog, div, dl, dt, em, figure, firldset, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, label, legend, li, nav, object, ol, p, pre, q, section, span, table, tbody, td, tfoot, th, thead, tr, ul {
+a, abbr, acronym, address, article, aside, blockquote, body, caption, code, dd, del, dfn, dialog, div, dl, dt, em, figure, firldset, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, label, legend, li, nav, object, ol, p, pre, q, section, span, table, tbody, td, tfoot, th, thead, tr, ul,details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0
 }
@@ -523,7 +523,6 @@ h1.proname { margin: 0px; padding: 5px 10px 10px; clear: both; font-size: 0.95em
 .category_menu ul li ul{font-size:0.7rem;}
 .category_menu ul li ul .icon-right{float:left;font-size:0.4rem;margin-top:1em;}
 .category_menu > ul{margin-top:0.1rem}
-
 
 
 
@@ -883,8 +882,9 @@ td, th {
 .head-search {
     position: relative;
     padding: 5px;
-    height: 45px;
-    background-color: #68655e
+    height: 55px;
+    background-color: #68655e;
+    overflow: hidden;
 }
 
 .search-box {
@@ -2427,6 +2427,11 @@ td, th {
         transform: scale(2);
         opacity: 0
     }
+}
+.search-btnWarp {
+    float: right;
+    width: 45px;
+    height: 45px;
 }
 
 .mask {
