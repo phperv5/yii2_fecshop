@@ -162,7 +162,7 @@ use fecshop\app\appfront\helper\Format;
 
         $("[name='Proceed_to_Checkout']").click(function () {
             var _value = $('#oShipMethod').val();
-            if (_value) {
+            if (!_value) {
                 alert('Please select shipping method')
                 return false;
             }
