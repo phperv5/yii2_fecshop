@@ -128,6 +128,7 @@ class Batchimport extends AppadminbaseBlockEdit implements AppadminbaseBlockEdit
             $product['video']['video_en'] = $value[12];
             $product['is_in_stock'] = 1;
             $product['created_at'] = time();
+            $product['status'] = 2;
 
             $error = $this->_service->apiSave($product);
         }
