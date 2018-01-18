@@ -128,7 +128,7 @@ class Image extends Service
 
         if($newPath && $newUrl){
             if (!file_exists($newPath)) {
-                //\fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
+                \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
             }
             return $newUrl;
         }
