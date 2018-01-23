@@ -1,7 +1,7 @@
 <?php $products = $parentThis['products'];?>
 <div class="main_h_flashsale">
     <div class="main_h_fs_title"><span class="red">New Arrivals</span><span class="gray">  &amp; </span><span class="green">Flash Sale</span>
-        <div class="fr"><span class="px12 arial no_bold"><a href="producttags/new-arrivals.html" class="gray">View More</a></span></div>
+        <div class="fr"><span class="px12 arial no_bold"><a href="<?= Yii::$service->url->getUrl('new-arrvival'); ?>" class="gray">View More</a></span></div>
     </div>
     <div class="main_h_fs_are">
         <div class="main_h_fs_item">
