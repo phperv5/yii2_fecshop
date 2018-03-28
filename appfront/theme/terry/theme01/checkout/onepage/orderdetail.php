@@ -124,11 +124,11 @@ use fecshop\app\appfront\helper\Format;
                         <div class="blank5px"></div>
                         <div <?php if($cart_info['payment_method'] != 'WesternUnion'): ?> style="display: none;" <?php endif;?> class="pay_ex_a" id="area_pay_method_exp_2">
                             <p>
-                                <strong>First Name: PING<br>Last Name : YANG</strong><br>
+                                <strong>First Name: LEI<br>Last Name : CUI</strong><br>
                                 <strong>City: SHENZHEN</strong><br>
                                 <strong>Country:CHINA</strong><br>
                                 <strong>Postal Code:518000</strong><br>
-                                <strong>Tel: +8618565823526</strong><br>
+                                <strong>Tel: +8618617061230</strong><br>
                             </p>
                             <p>
                                 Note: for easy and quick confirmation of your payment, please do not fix the exchange rate of money.
