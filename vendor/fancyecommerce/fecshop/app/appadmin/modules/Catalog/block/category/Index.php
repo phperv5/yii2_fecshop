@@ -306,6 +306,7 @@ class Index extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterf
                 'require' => 0,
             ],
             [
+
                 'label' => '排序',
                 'name' => 'sort',
                 'display' => [
@@ -317,6 +318,7 @@ class Index extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterf
                 'label' => '分类描述',
                 'name' => 'description',
                 'display' => [
+
                     'type' => 'textarea',
                     'lang' => true,
                     'rows' => 14,
