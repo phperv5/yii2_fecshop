@@ -85,19 +85,6 @@ class Index extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterf
         $str .= '</ul>';
 
         return $str;
-        /*
-        <ul class="tree treeFolder">
-                <li><a href="javascript:void(0);">11</a>
-                    <ul>
-                        <li><a href="javascript:void(0);" >22</a></li>
-                        <li><a href="javascript:void(0);" >33</a></li>
-                        <li><a href="javascript:void(0);" >44</a></li>
-                        <li><a href="javascript:void(0);" >55</a></li>
-                    </ul>
-                </li>
-
-             </ul>
-        */
     }
 
     public function saveCategory()

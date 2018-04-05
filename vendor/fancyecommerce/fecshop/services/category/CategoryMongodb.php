@@ -208,8 +208,8 @@ class CategoryMongodb implements CategoryInterface
         } else {
             $where = ['parent_id' => $rootCategoryId];
         }
-        $categorys = $this->_categoryModel->find()->asArray()->where($where)->all();
-        //var_dump($categorys);exit;
+        $categorys = $this->_categoryModel->find()->asArray()->where($where)->orderBy('sort ASC')->all();
+//        var_dump($categorys);exit;
         $idKey = $this->getPrimaryKey();
         if (!empty($categorys)) {
             foreach ($categorys as $cate) {
@@ -413,7 +413,7 @@ class CategoryMongodb implements CategoryInterface
         //echo $category_id;
         $data = $this->_categoryModel->find()->asArray()->where([
                         'parent_id' => $category_id,
-                    ])->all();
+                    ])->orderBy('sort ASC')->all();
         $arr = [];
         if (is_array($data) && !empty($data)) {
             foreach ($data as $one) {
