@@ -9,10 +9,7 @@ appfront/config/fecshop_local_services/Store.php
 common/config/fecshop_local_services/Image.php
 common/config/fecshop_local_services/Email.php
 common/config/main-local.php
-<<<<<<< HEAD
 
-appfront/config/fecshop_local_modules/Catalog.php
-=======
 appfront/config/fecshop_local_modules/Catalog.php
 common/config/fecshop_local_services/Payment.php
 common/config/fecshop_local_services/Payment_old.php
@@ -27,4 +24,4 @@ common/config/fecshop_local_services/Payment_new.php
 appfront/web/
 vendor/fancyecommerce/fecshop/shell/backup.sh
 common/config/fecshop_local_services/Email.php
->>>>>>> 5d63216c67f47904503585948a2b37dc1b127bcc
+

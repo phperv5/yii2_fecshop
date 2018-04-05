@@ -11,13 +11,7 @@ $homeUrl = $http.'://'.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['SCRIPT_NAME
  */
 
 $use_merge_config_file = false;
-
-<<<<<<< HEAD
-defined('YII_DEBUG') or define('YII_DEBUG', false);
-
-=======
 defined('YII_DEBUG') or define('YII_DEBUG',false);
->>>>>>> 5d63216c67f47904503585948a2b37dc1b127bcc
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require __DIR__.'/../../vendor/autoload.php';
