@@ -137,6 +137,7 @@ class CategoryMongodb implements CategoryInterface
         $one['status']    = (int)$one['status'];
         $one['menu_show'] = (int)$one['menu_show'];
         $one['is_brand'] = (int)$one['is_brand'];
+        $one['sort'] = (int)$one['sort'];
         $saveStatus = Yii::$service->helper->ar->save($model, $one);
         $originUrl = $originUrlKey.'?'.$this->getPrimaryKey() .'='. $primaryVal;
         $originUrlKey = isset($one['url_key']) ? $one['url_key'] : '';
