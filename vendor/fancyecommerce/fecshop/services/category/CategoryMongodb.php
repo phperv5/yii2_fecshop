@@ -415,6 +415,7 @@ class CategoryMongodb implements CategoryInterface
                         'parent_id' => $category_id,
                     ])->orderBy('sort ASC')->all();
         $arr = [];
+
         if (is_array($data) && !empty($data)) {
             foreach ($data as $one) {
                 $currentUrlKey = $one['url_key'];
