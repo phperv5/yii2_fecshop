@@ -43,7 +43,11 @@
                 <div class="blank15px"></div>
                 <div class="pro_bo_m">
                     <div class="pro_bo_stock_pra">
-                        <!--                        <div class="p_bo_instock">In Stock</div>-->
+                        <?php if($is_in_stock):?>
+                            <div class="p_bo_instock">In Stock</div>
+                        <?php else:?>
+                            <div class="p_bo_outofstock">Out of Stock</div>
+                        <?php endif; ?>
                     </div>
                     <div class="">
                         <?php # 价格部分
@@ -56,33 +60,36 @@
                         ?>
                         <?= Yii::$service->page->widget->render($priceView, $priceParam); ?>
                     </div>
-                    <div class="pro_b_item" id="id_pro_b_item_oQty">
-                        <div class="pro_bitm_tit">Quantity:</div>
-                        <div class="pro_bitm_cont">
-                            <input type="text" name="qty" class="qty" value="1"/><span class="px11"></span>
-                            <span id="txtSingleProSubTotal" class="px12 verdana"></span>
+                    <?php if($is_in_stock):?>
+                        <div class="pro_b_item" id="id_pro_b_item_oQty">
+                            <div class="pro_bitm_tit">Quantity:</div>
+                            <div class="pro_bitm_cont">
+                                <input type="text" name="qty" class="qty" value="1"/><span class="px11"></span>
+                                <span id="txtSingleProSubTotal" class="px12 verdana"></span>
+                            </div>
+                            <div class="clear"></div>
                         </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="blank10px"></div>
-                    <div class="blank10px"></div>
-                    <div class="pro_bo_add_l">
-                        <input name="btn_buyitnow" type="button" class="btn_buyitnow goProductToCart" value=""
-                               title="Buy It Now"/>
-                    </div>
-                    <div class="pro_bo_add_m">
-                        <div id="flyItem" class="fly_item"><img
-                                    src="<?= Yii::$service->product->image->getResize($image_thumbnails['main']['image'], [40, 40], false) ?>"
-                                    width="40" height="40"></div>
-                        <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value=""
-                               title="Add to Cart"/>
-                    </div>
-
-                    <div class="pro_bo_add_r">
-                        <input name="add_to_favorites" type="button" class="btn_add_to_favorites" id="divMyFavorite"
-                               url="<?= Yii::$service->url->getUrl('catalog/favoriteproduct/add', ['product_id' => $_id]); ?>"/>
-                        <span id="txt_r_addToFavorites"></span>
-                    </div>
+                        <div class="blank10px"></div>
+                        <div class="blank10px"></div>
+                        <div class="pro_bo_add_l">
+                            <input name="btn_buyitnow" type="button" class="btn_buyitnow goProductToCart" value=""
+                                   title="Buy It Now"/>
+                        </div>
+                        <div class="pro_bo_add_m">
+                            <div id="flyItem" class="fly_item"><img
+                                        src="<?= Yii::$service->product->image->getResize($image_thumbnails['main']['image'], [40, 40], false) ?>"
+                                        width="40" height="40"></div>
+                            <input name="add_to_cart" type="button" class="btn_addtocart addProductToCart" value=""
+                                   title="Add to Cart"/>
+                        </div>
+                        <div class="pro_bo_add_r">
+                            <input name="add_to_favorites" type="button" class="btn_add_to_favorites" id="divMyFavorite"
+                                   url="<?= Yii::$service->url->getUrl('catalog/favoriteproduct/add', ['product_id' => $_id]); ?>"/>
+                            <span id="txt_r_addToFavorites"></span>
+                        </div>
+                    <?php else:?>
+                        <div class="blank10px"></div>
+                    <?php endif; ?>
                     <div class="blank5px"></div>
                 </div>
                 <!--            11-->
@@ -92,7 +99,7 @@
                     <dd class="w420px">
                         Express Shipping Service&nbsp;<br/>
                         <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a
-                                    href="/how-we-ship-the-item-to-you" target="_blank"><span
+                                    href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span
                                         class="px10">See details &raquo;</span></a></span></dd>
                     <dt class="w100px">Weight:</dt>
                     <dd class="w420px"><?= $weight; ?>KG</dd>
@@ -110,8 +117,8 @@
                 <?php if (!empty($attachment)): ?>
                     <div class="line18em"><b class="green_dark">Related Download Files:</b>
                         <?php foreach($attachment as $attach):?>
-                        <br>&nbsp;&nbsp;<a href="<?= $attach['path'];?>" target="_blank"><b><img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif') ?>" align="absmiddle" border="0" hspace="5"><?= $attach['name'];?></b></a>
-                    <?php endforeach;?>
+                            <br>&nbsp;&nbsp;<a href="<?= $attach['path'];?>" target="_blank"><b><img src="<?= Yii::$service->image->getImgUrl('images/ico/download.gif') ?>" align="absmiddle" border="0" hspace="5"><?= $attach['name'];?></b></a>
+                        <?php endforeach;?>
                     </div>
                     <div class="blank5px"></div>
                     <div class="dashed5px"></div>
@@ -172,10 +179,10 @@
         <div id="p_ab_vw_1" style="display:">
             <div class="blank5px"></div>
             <?php if($main_description):?>
-            <div class="exh_m_bri">
-                <?= $main_description; ?>
-            </div>
-            <div class="blank10px"></div>
+                <div class="exh_m_bri">
+                    <?= $main_description; ?>
+                </div>
+                <div class="blank10px"></div>
             <?php endif;?>
             <div class="exh_m_cont">
                 <?= $description; ?>
