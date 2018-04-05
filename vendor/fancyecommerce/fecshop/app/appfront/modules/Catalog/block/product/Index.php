@@ -68,10 +68,10 @@ class Index
         if (!empty($this->_product['attachment'])) {
             foreach ($this->_product['attachment'] as $k => $v) {
                 $attach[$k]['name'] = $v;
-                $attach[$k]['path'] = Yii::$service->image->getImgUrl('attachment/'.$v);
+                $attach[$k]['path'] = Yii::$service->image->getImgUrl('attachment/' . $v);
             }
         }
-
+        //var_dump($this->_product);
         return [
             'groupAttrArr' => $groupAttrArr,
             'name' => Yii::$service->store->getStoreAttrVal($this->_product['name'], 'name'),
@@ -104,6 +104,7 @@ class Index
             'attachment' => $attach,
             'main_description' => Yii::$service->store->getStoreAttrVal($this->_product['main_description'], 'main_description'),
             'about_us' => Yii::$service->product->config->getOne('about_us'),
+            'is_in_stock' => $this->_product['is_in_stock'] == 1 ? true : false,
         ];
     }
 
