@@ -12,50 +12,57 @@ use fecshop\app\appfront\helper\Format;
         <div class="blank10px"></div>
         <?php if (!empty($cart_info['products'])) { ?>
             <table class="tab_comm" id="#shopping-cart-table">
-                    <tr class="tr_head">
-                        <td width="120">&nbsp;</td>
-                        <td>Product Name</td>
-                        <td width="100">Unit Price</td>
-                        <td width="100">Qty.</td>
-                        <td width="100">Subtotal</td>
+                <tr class="tr_head">
+                    <td width="120">&nbsp;</td>
+                    <td>Product Name</td>
+                    <td width="100">Unit Price</td>
+                    <td width="100">Qty.</td>
+                    <td width="100">Subtotal</td>
+                </tr>
+                <?php foreach ($cart_info['products'] as $product_one): ?>
+                    <tr class="tr_info">
+                        <td>
+                            <div class="img100px"><a href="<?= $product_one['url'] ?>"
+                                                     title="<?= $product_one['name'] ?>" target="_blank">
+                                    <img src="<?= Yii::$service->product->image->getResize($product_one['image'], [100, 100], false) ?>"
+                                         width="100" height="100" border="0" hspace="0" vspace="0"
+                                         alt="<?= $product_one['name'] ?>" align="absmiddle"/></a>
+                            </div>
+                        </td>
+                        <td class="align_left gray">
+                            <a href="<?= $product_one['url'] ?>"><span
+                                        class="px13"><?= $product_one['name'] ?></span></a>
+                            <div class="blank10px"></div>
+                            Item No.<?= $product_one['sku'] ?>
+                            <div class="blank10px"></div>
+                            <a href="javascript:void(0)" rel="<?= $product_one['item_id']; ?>" title="Remove item"
+                               class="btn-remove btn-remove2"><?= Yii::$service->page->translate->__('Remove item'); ?></a>
+                        </td>
+                        <td><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_price']); ?></td>
+                        <td>
+                            <div class="amount-wrapper">
+                                <div class="item-amount">
+                                    <a href="javascript:void(0)" class="J_Minus minus cartdown"
+                                       rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"
+                                       style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">-</a>
+                                    <input type="text" rel="<?= $product_one['item_id']; ?>"
+                                           value="<?= $product_one['qty']; ?>" class="text text-amount J_ItemAmount"
+                                           maxlength="12" autocomplete="off"
+                                           style="width: 39px;  height: 15px;  line-height: 15px;  border: 1px solid #aaa;  color: #343434;  text-align: center;  padding: 4px 0;  background-color: #fff;float: left">
+                                    <a href="javascript:void(0)" class="J_Plus plus cartup"
+                                       rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"
+                                       style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">+</a>
+                                </div>
+                                <div class="amount-msg J_AmountMsg"></div>
+                            </div>
+                        </td>
+                        <td>
+                            <b><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_row_price']); ?></b>
+                        </td>
                     </tr>
-                    <?php foreach ($cart_info['products'] as $product_one): ?>
-                        <tr class="tr_info">
-                            <td>
-                                <div class="img100px"><a href="<?= $product_one['url'] ?>"
-                                                         title="<?= $product_one['name'] ?>" target="_blank">
-                                        <img src="<?= Yii::$service->product->image->getResize($product_one['image'], [100, 100], false) ?>"
-                                             width="100" height="100" border="0" hspace="0" vspace="0"
-                                             alt="<?= $product_one['name'] ?>" align="absmiddle"/></a>
-                                </div>
-                            </td>
-                            <td class="align_left gray">
-                                <a href="<?= $product_one['url'] ?>"><span
-                                            class="px13"><?= $product_one['name'] ?></span></a>
-                                <div class="blank10px"></div>
-                                Item No.<?= $product_one['sku'] ?>
-                                <div class="blank10px"></div>
-                                <a href="javascript:void(0)" rel="<?= $product_one['item_id']; ?>" title="Remove item"
-                                   class="btn-remove btn-remove2"><?= Yii::$service->page->translate->__('Remove item'); ?></a>
-                            </td>
-                            <td><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_price']); ?></td>
-                            <td>
-                                <div class="amount-wrapper">
-                                    <div class="item-amount">
-                                        <a href="javascript:void(0)"  class="J_Minus minus cartdown" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>" style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">-</a>
-                                        <input type="text" rel="<?= $product_one['item_id']; ?>" value="<?= $product_one['qty']; ?>" class="text text-amount J_ItemAmount"  maxlength="12" autocomplete="off" style="width: 39px;  height: 15px;  line-height: 15px;  border: 1px solid #aaa;  color: #343434;  text-align: center;  padding: 4px 0;  background-color: #fff;float: left">
-                                        <a href="javascript:void(0)"  class="J_Plus plus cartup" rel="<?= $product_one['item_id']; ?>" num="<?= $product_one['qty']; ?>"  style="display: block;height: 23px;width: 17px;border: 1px solid #e5e5e5;background: #f0f0f0;text-align: center;line-height: 23px;color: #444;float: left">+</a>
-                                    </div>
-                                    <div class="amount-msg J_AmountMsg"></div>
-                                </div>
-                            </td>
-                            <td>
-                                <b><?= $currency_info['symbol']; ?><?= Format::price($product_one['product_row_price']); ?></b>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                    <tr class="tr_info" id="trShipToCountryChoose">
-                        <td colspan="5" class="align_right px11">
+                <?php endforeach; ?>
+                <tr class="tr_info" id="trShipToCountryChoose">
+                    <td colspan="5" class="align_right px11">
                             <span id="v_h_country_select" style="">
                             Ship my order(s) to:
                             <select name="shipping_country" id="oShipCountry" class="input">
@@ -65,10 +72,10 @@ use fecshop\app\appfront\helper\Format;
                                 <?php } ?>
                             </select>
                             </span>
-                        </td>
-                    </tr>
-                    <tr class="tr_info">
-                        <td colspan="5" class="align_right px11">
+                    </td>
+                </tr>
+                <tr class="tr_info">
+                    <td colspan="5" class="align_right px11">
                             <span>
                                 <select name="shipping_method" id="oShipMethod" class="input">
                                           <option value="">select shipping method</option>
@@ -77,28 +84,29 @@ use fecshop\app\appfront\helper\Format;
                                     <?php } ?>
                                 </select>
                             </span>
-                        </td>
-                    </tr>
+                    </td>
+                </tr>
 
-                    <tr class="tr_info">
-                        <td colspan="5" class="align_right verdana line18em">
-                            <b>Items Total: <span
-                                        class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></b>&nbsp;&nbsp;&nbsp;
-                            <b>
-                                <?php if (empty($cart_info['shipping_cost'])) { ?>
-                                    <span class="green">Free Shipping</span>
+                <tr class="tr_info">
+                    <td colspan="5" class="align_right verdana line18em">
+                        <b>Items Total: <span
+                                    class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['product_total']); ?></span></b>&nbsp;&nbsp;&nbsp;
+                        <b>
+                            <?php if (empty($cart_info['shipping_cost'])) { ?>
+                                <span class="green">Free Shipping</span>
                                 </span>
-                                <?php } else { ?>
-                                    <b>Shipping Cost:<span class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
-                                <?php } ?>
-                            </b>
-                            <br/>
-                            <b class="red px16">Total
-                                Sum:<?= $currency_info['symbol']; ?><?= Format::price($cart_info['grand_total']) ?></b>
-                        </td>
-                    </tr>
-                    <tr class="tr_info">
-                        <td colspan="5" class="align_right">
+                            <?php } else { ?>
+                                <b>Shipping Cost:<span
+                                            class="red_dark"><?= $currency_info['symbol']; ?><?= Format::price($cart_info['shipping_cost']); ?></span></b>
+                            <?php } ?>
+                        </b>
+                        <br/>
+                        <b class="red px16">Total
+                            Sum:<?= $currency_info['symbol']; ?><?= Format::price($cart_info['grand_total']) ?></b>
+                    </td>
+                </tr>
+                <tr class="tr_info">
+                    <td colspan="5" class="align_right">
                         <span id="v_apply_couponcode" style="display:"><strong>Coupon Code: </strong>
 							<input type="hidden" class="couponType" value="<?= $cart_info['coupon_code'] ? 1 : 2; ?>"/>
 							<input type="text" style="width:80px; height:18px; margin-top:10px;" id="coupon_code"
@@ -106,17 +114,16 @@ use fecshop\app\appfront\helper\Format;
                             <a href="javascript:void(0)"
                                class="btn_near"><span><span><?= Yii::$service->page->translate->__($cart_info['coupon_code'] ? 'Cancel Coupon' : 'Apply'); ?></span></span> </a>
                         </span>
-                        </td>
-                    </tr>
-                </table>
+                    </td>
+                </tr>
+            </table>
             <div class="blank10px"></div>
             <div class="fl" style="margin-top:10px;">
-                                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping" onclick="javascript:window.location.href='/';return false;">
+                <input name="Continue_Shopping" type="button" class="btn_near btn_mid" value="Continue Shopping"
+                       onclick="javascript:window.location.href='/';return false;">
             </div>
             <div class="float_right" style="margin-top:10px;">
-                <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid"
-                                value="Proceed to Checkout"
-                                onclick="location.href='<?= Yii::$service->url->getUrl('checkout/onepage'); ?>'">
+                <input name="Proceed_to_Checkout" type="button" class="btn_near btn_mid" value="Proceed to Checkout">
             </div>
 
             <div class="blank10px"></div>
@@ -152,6 +159,16 @@ use fecshop\app\appfront\helper\Format;
     $(document).ready(function () {
         currentUrl = "<?= Yii::$service->url->getUrl('checkout/cart') ?>"
         updateCartInfoUrl = "<?= Yii::$service->url->getUrl('checkout/cart/updateinfo') ?>"
+
+        $("[name='Proceed_to_Checkout']").click(function () {
+            var _value = $('#oShipMethod').val();
+            if (!_value) {
+                alert('Please select shipping method')
+                return false;
+            }
+            location.href = "<?= Yii::$service->url->getUrl('checkout/onepage'); ?>";
+        })
+
         $(".cartdown").click(function () {
             $item_id = $(this).attr("rel");
             num = $(this).attr("num");

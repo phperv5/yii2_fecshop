@@ -16,7 +16,7 @@ class UploadFile
     //文件保存路径
     public $savePath = './upload/';
     //最大上传大小 默认最大上传 2M =2097152 B
-    public $maxSize = 10097152;
+    public $maxSize = 100097152;
     //最近一次的错误
     private $error = '';
     //自动检测文件 默认未开启

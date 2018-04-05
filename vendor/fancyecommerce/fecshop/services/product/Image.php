@@ -127,10 +127,14 @@ class Image extends Service
         if ($isWatered) {
             $waterImgPath = $this->getDir('/' . $this->waterImg);
         }
-        list($newPath, $newUrl) = $this->getProductNewPath($imageVal, $imgResize, $waterImgPath);
+        list($newPath, $newUrl, $path) = $this->getProductNewPath($imageVal, $imgResize, $waterImgPath);
 
         if ($newPath && $newUrl) {
             if (!file_exists($newPath)) {
+                $defaultImage = 'default.jpg';
+                if (stripos($originImgPath, $defaultImage) !== false) {
+                    $newPath = $path . $defaultImage;
+                }
                 \fec\helpers\CImage::saveResizeMiddleWaterImg($originImgPath, $newPath, $imgResize, $waterImgPath);
             }
             return $newUrl;
@@ -205,6 +209,7 @@ class Image extends Service
         \fec\helpers\CDir::createFloder($this->getBaseDir(), $dirArr);
         $newPath = $this->getBaseDir() . $baseDir . '/' . $width . '/' . $height . $imageVal;
         $newUrl = $this->getBaseUrl() . $baseDir . '/' . $width . '/' . $height . $imageVal;
-        return [$newPath, $newUrl];
+        $path = $this->getBaseDir() . $baseDir . '/' . $width . '/' . $height . '/';
+        return [$newPath, $newUrl, $path];
     }
 }
