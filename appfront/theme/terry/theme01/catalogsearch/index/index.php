@@ -7,7 +7,7 @@
 
     <div class="main_left">
         <div class="col_t_x col_t_cate">
-            <strong>OBD2 Categories</strong>
+            <strong>Categories</strong>
             <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
             <?php foreach ($categories as $category): ?>
                 <h2 class=" fir"><a href="<?= $category['url'] ?>"><?= $category['name'] ?></a></h2>
@@ -20,14 +20,12 @@
 
         <div class="col_t_x col_t_tag col_t_tag_feature">
             <h3>Browse by Feature</h3>
-            <a href="../../producttags/mb-bga-tool.html">MB BGA Tool</a>
-            <a href="../../producttags/vvdi2.html">VVDI2</a>
-            <a href="../../producttags/2017-launch-x431.html">2017 Launch X431</a>
-            <a href="../../producttags/xtruck-usb-link.html">XTruck USB Link</a>
-            <a href="../../producttags/vxdiag-vcx-nano.html">VXDIAG VCX NANO</a>
-            <a href="../../producttags/volvo-vcads.html">Volvo VCADS</a>
-            <a href="../../producttags/xtuner.html">XTUNER</a>
-            <a href="../../producttags/launch-x431-v.html">Launch X431 V</a>
+            <?php
+            $keywords = Yii::$service->product->keywords->getKeywordsList(3);
+            foreach ($keywords as $v):
+                ?>
+                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
+            <?php endforeach; ?>
             <div class="clear"></div>
         </div>
         <div class="col_d_b"></div>
@@ -35,12 +33,12 @@
 
         <div class="col_d_t">Popular Search</div>
         <div class="col_m_tag">
-            <a href="../../producttags/autel-maxisys.html"><strong>Autel MaxiSYS</strong></a>&nbsp;&nbsp;
-            <a href="../../producttags/launch-x431-v.html">Launch X431 V</a>&nbsp;&nbsp;
-            <a href="../../producttags/autel-maxidiag-elite.html"><strong>Autel MaxiDiag Elite</strong></a>&nbsp;&nbsp;
-            <a href="../../producttags/original-obdstar.html">Original OBDSTAR</a>&nbsp;&nbsp;
-            <a href="../../producttags/vxdiag-vcx-nano.html"><strong>VXDIAG VCX NANO</strong></a>&nbsp;&nbsp;
-            <a href="../../producttags/launch-creader.html">Launch Creader</a>&nbsp;&nbsp;
+            <?php
+            $keywords = Yii::$service->product->keywords->getKeywordsList(2);
+            foreach ($keywords as $v):
+                ?>
+                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
+            <?php endforeach; ?>
 
             <div class="clear"></div>
         </div>
@@ -85,11 +83,11 @@
                             <div class="blank10px"></div>
                             <?= $product['short_description']; ?>
                             <div class="blank5px"></div>
-
                             <div class="clear"></div>
                         </div>
                         <div class="order_fun px11">
                             <div class="blank5px"></div>
+<<<<<<< HEAD
                             <?php if(isset($product['special_price']) && !empty($product['special_price'])):  ?>
                                 <span class="pro_pri_tit_sale_s">Latest price:</span><span class="pro_pri_curr_sale_s" name="" style="display:"><strong><?=  $product['price']['symbol']. $product['price']['value'] ?></strong></span>
                                 <span class="pro_pri_tit_vip_m">Buy It Now:</span>
@@ -99,27 +97,38 @@
                                 <span class="pro_pri_tit_vip_m">Buy It Now:</span>
                                 <span class="pro_pri_curr_vip_m" name="" style="display:"><?= $product['price']['symbol'].$product['price']['value'] ?></span>
                             <?php endif;  ?>
+=======
+                            <?php
+                            $config = [
+                                'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                                'view' => 'catalog/category/price.php',
+                                'price' => $product['price'],
+                                'special_price' => $product['special_price'],
+                                'special_from' => $product['special_from'],
+                                'special_to' => $product['special_to'],
+                            ];
+                            echo Yii::$service->page->widget->renderContent('category_product_price', $config);
+                            ?>
+>>>>>>> 5d63216c67f47904503585948a2b37dc1b127bcc
                             <div class="blank5px"></div>
                             <div class="dashed_line"></div>
                             <div class="blank5px"></div>
                             <div class="blank5px"></div>
+<<<<<<< HEAD
                             <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['_id'] ?>');return false;"/>
+=======
+                            <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['product_id'] ?>');return false;"/>
+>>>>>>> 5d63216c67f47904503585948a2b37dc1b127bcc
                         </div>
                         <div class="clear"></div>
                     </div>
                 <?php endforeach; ?>
+                <?= $product_page; ?>
             <?php else: ?>
                 <div class="fl">
                     Search results for<span class="red">'<?= $searchText ?>'</span> returns no results
                 </div>
 
-            <?php endif; ?>
-        </div>
-        <div class="page_nav">
-            <?php if ($pageToolBar): ?>
-                <div class="pageToolbar">
-                    <?= $pageToolBar ?>
-                </div>
             <?php endif; ?>
         </div>
         <div class="clear"></div>

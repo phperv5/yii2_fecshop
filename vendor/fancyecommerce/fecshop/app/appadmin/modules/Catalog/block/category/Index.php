@@ -306,6 +306,14 @@ class Index extends AppadminbaseBlockEdit implements AppadminbaseBlockEditInterf
                 'require' => 0,
             ],
             [
+                'label'=>'排序',
+                'name'=>'sort',
+                'display'=>[
+                    'type' => 'inputString',
+                ],
+                'require' => 0,
+            ],
+            [
                 'label'=>'分类描述',
                 'name'=>'description',
                 'display'=>[

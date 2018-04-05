@@ -9,10 +9,15 @@ $homeUrl = $http.'://'.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['SCRIPT_NAME
  * 注意：打开后，当您修改了配置，都需要访问一次上面的链接，重新生成单文件配置数组，否则修改的配置不会生效
  * 建议：本地开发环境关闭，开发环境如果访问量不大，关闭也行，如果访问量大，建议打开
  */
+
 $use_merge_config_file = false;
 
+<<<<<<< HEAD
 defined('YII_DEBUG') or define('YII_DEBUG', false);
 
+=======
+defined('YII_DEBUG') or define('YII_DEBUG',false);
+>>>>>>> 5d63216c67f47904503585948a2b37dc1b127bcc
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require __DIR__.'/../../vendor/autoload.php';

@@ -37,7 +37,7 @@
                     <?php endforeach; ?>
                 <?php else: ?>
                     <legend>Your Shipping Address Book</legend>
-                    Your shipping address is null, please <a href="#addNewAdd">Add Your Shipping Address</a>.
+                    Your shipping address is null, please <a href="<?= Yii::$service->url->getUrl('customer/address/edit') ?>">Add Your Shipping Address</a>.
                 <?php endif; ?>
 
             </fieldset>
