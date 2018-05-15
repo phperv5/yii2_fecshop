@@ -25,3 +25,4 @@ appfront/web/
 vendor/fancyecommerce/fecshop/shell/backup.sh
 common/config/fecshop_local_services/Email.php
 
+.idea/php.xml

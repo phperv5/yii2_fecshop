@@ -99,7 +99,7 @@
                     <dd class="w420px">
                         Express Shipping Service&nbsp;<br/>
                         <span class="px11 verdana gray_dark">Estimated delivery time: 3-5 Days.<a
-                                    href="/support/how-we-ship-the-item-to-you-4072.html" target="_blank"><span
+                                    href="<?= Yii::$service->url->getUrl('/how-we-ship-the-item-to-you'); ?>" target="_blank"><span
                                         class="px10">See details &raquo;</span></a></span></dd>
                     <dt class="w100px">Weight:</dt>
                     <dd class="w420px"><?= $weight; ?>KG</dd>
