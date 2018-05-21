@@ -28,3 +28,4 @@ common/config/fecshop_local_services/Email.php
 apphtml5/config/fecshop_local_services/Store.php
 .idea/misc.xml
 
+.idea/php.xml
