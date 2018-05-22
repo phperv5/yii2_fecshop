@@ -8,11 +8,11 @@
             <div class="swiper-pagination"></div>
             <div class="swiper-wrapper">
                 <?php
-                $middle_banner = Yii::$service->product->banner->getList('middle_position',4);
-                foreach($middle_banner as $v):
+                $ads = Yii::$service->product->ads->getAdList();
+                foreach($ads as $v):
                 ?>
                 <div class="swiper-slide">
-                    <a class="" href="<?= $v['url'] ?>"><img class="img-response" src="<?= $v['banner_url'] ?>"  alt="<?= $v['title'] ?>" /></a>
+                    <a class="" target="_blank" href="<?= $v['url'] ?>"><img class="img-response" src="<?= $v['banner'] ?>"  alt="<?= $v['title'] ?>" /></a>
                 </div>
                 <?php endforeach;?>
             </div>
