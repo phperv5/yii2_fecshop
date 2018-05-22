@@ -20,7 +20,7 @@ $cssOptions = [
     # css config 1.
     [
         'css' => [
-            'css/style.css?v=20180510',
+            'css/style.css',
             'css/style_h.css',
             //'css/nav.css',
             'js/plugins/owlcarousel/assets/owl.carousel.min.css',
