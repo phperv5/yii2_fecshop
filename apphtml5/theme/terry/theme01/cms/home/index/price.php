@@ -1,12 +1,9 @@
-<div class="hm_progrd_price">
+
+<div class="product-price radius">
     <?php if(isset($special_price) && !empty($special_price)):  ?>
-    <span class="pro_pri_curr_vip_s" name="cc_v_USD" style="">
-        <?= $special_price['symbol'] ?><?= $special_price['value'] ?>
-    </span>
-    <span class="pro_pri_curr_sale" name="cc_v_USD" style="display:"><strong><?= $price['symbol'] ?><?= $price['value'] ?></strong></span>
+    <span><?= $special_price['symbol'] ?><?= $special_price['value'] ?></span>
+    <del><?= $price['symbol'] ?><?= $price['value'] ?></del>
     <?php else: ?>
-    <span class="pro_pri_curr_vip_s" name="cc_v_USD" style="display:">
-        <?= $price['symbol'] ?><?= $price['value'] ?>
-        </span>
+        <span><?= $price['symbol'] ?><?= $price['value'] ?></span>
     <?php endif; ?>
 </div>

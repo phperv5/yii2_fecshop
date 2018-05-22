@@ -38,106 +38,31 @@
             </ul>
           </div>
         </div>
-        <div class="floor-deals mt-24">
-          <div class="coupon shadow radius">
-            <a href="//m.aliexpress.com/coupon/getCoupon.htm?p=2m3Kfj3Q6%2BHyaIoqs9mQKmx1z6faogkuhLIYBSf8X5v1s2k4Z%2FH9Cw%3D%3D">
-              <div class="radius i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined i-amphtml-layout" layout="fixed-height" style="height: 80px;">
-                <img class="i-amphtml-fill-content i-amphtml-replaced-content" src="http://ae01.alicdn.com/kf/HTB19Q3UlgvD8KJjy0Flq6ygBFXaf.jpg_q70.jpg">
-              </div>
-            </a>
-          </div>
-        </div>
+<!--        <div class="floor-deals mt-24">-->
+<!--          <div class="coupon shadow radius">-->
+<!--            <a href="//m.aliexpress.com/coupon/getCoupon.htm?p=2m3Kfj3Q6%2BHyaIoqs9mQKmx1z6faogkuhLIYBSf8X5v1s2k4Z%2FH9Cw%3D%3D">-->
+<!--              <div class="radius i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined i-amphtml-layout" layout="fixed-height" style="height: 80px;">-->
+<!--                <img class="i-amphtml-fill-content i-amphtml-replaced-content" src="http://ae01.alicdn.com/kf/HTB19Q3UlgvD8KJjy0Flq6ygBFXaf.jpg_q70.jpg">-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
         <div class="under-five">
             <div class="deals-title-container">
                 <a href="list.html" class="block">
-                    <span class="float">Popular items under $5</span>
+                    <span class="float">New Arrivals  & Flash Sale</span>
                     <span class="float">More</span>
                 </a>
             </div>
-            <div class="junlong-method">
-                <div id="under-five" class="junlong-method-list i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined i-amphtml-layout">
-                    <div class="i-amphtml-fill-content i-amphtml-replaced-content" role="list">
-                        <div class="amp-carousel radius shadow" role="listitem">
-                            <a href="list.html" target="_top">
-                                <div class="product-img">
-                                    <div class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 27.22vw; height: 27.22vw;">
-                                        <img alt="Booksew New 30 pieces 10cmx10cm cotton Twill fabrics charm packs patchwork fabrics quilting  stash no repeat design tissue cloth" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://ae01.alicdn.com/kf/HTB1fMwoXekJL1JjSZFmq6Aw0XXak.jpg_220x220q90.jpg">
-                                    </div>
-                                </div>
-                                <div class="product-price radius">
-                                    <span>US $1.77</span>
-                                    <del>US $1.77</del>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="amp-carousel radius shadow" role="listitem">
-                            <a href="list.html" target="_top">
-                                <div class="product-img">
-                                    <div class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 27.22vw; height: 27.22vw;">
-                                        <img alt="Booksew New 30 pieces 10cmx10cm cotton Twill fabrics charm packs patchwork fabrics quilting  stash no repeat design tissue cloth" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://ae01.alicdn.com/kf/HTB1fMwoXekJL1JjSZFmq6Aw0XXak.jpg_220x220q90.jpg">
-                                    </div>
-                                </div>
-                                <div class="product-price radius">
-                                    <span>US $1.77</span>
-                                    <del>US $1.77</del>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="amp-carousel radius shadow" role="listitem">
-                            <a href="https://sale.aliexpress.com/UNDER_X_m.htm?pid=32684298876" target="_top">
-                                <div class="product-img">
-                                    <div class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 27.22vw; height: 27.22vw;">
-                                        <img alt="Booksew New 30 pieces 10cmx10cm cotton Twill fabrics charm packs patchwork fabrics quilting  stash no repeat design tissue cloth" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://ae01.alicdn.com/kf/HTB1fMwoXekJL1JjSZFmq6Aw0XXak.jpg_220x220q90.jpg">
-                                    </div>
-                                </div>
-                                <div class="product-price radius">
-                                    <span>US $1.77</span>
-                                    <del>US $1.77</del>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="amp-carousel radius shadow" role="listitem">
-                            <a href="https://sale.aliexpress.com/UNDER_X_m.htm?pid=32684298876" target="_top">
-                                <div class="product-img">
-                                    <div class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 27.22vw; height: 27.22vw;">
-                                        <img alt="Booksew New 30 pieces 10cmx10cm cotton Twill fabrics charm packs patchwork fabrics quilting  stash no repeat design tissue cloth" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://ae01.alicdn.com/kf/HTB1fMwoXekJL1JjSZFmq6Aw0XXak.jpg_220x220q90.jpg">
-                                    </div>
-                                </div>
-                                <div class="product-price radius">
-                                    <span>US $1.77</span>
-                                    <del>US $1.77</del>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="amp-carousel radius shadow" role="listitem">
-                            <a href="https://sale.aliexpress.com/UNDER_X_m.htm?pid=32684298876" target="_top">
-                                <div class="product-img">
-                                    <div class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 27.22vw; height: 27.22vw;">
-                                        <img alt="Booksew New 30 pieces 10cmx10cm cotton Twill fabrics charm packs patchwork fabrics quilting  stash no repeat design tissue cloth" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://ae01.alicdn.com/kf/HTB1fMwoXekJL1JjSZFmq6Aw0XXak.jpg_220x220q90.jpg">
-                                    </div>
-                                </div>
-                                <div class="product-price radius">
-                                    <span>US $1.77</span>
-                                    <del>US $1.77</del>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="amp-carousel radius shadow" role="listitem">
-                            <a href="https://sale.aliexpress.com/UNDER_X_m.htm?pid=32684298876" target="_top">
-                                <div class="product-img">
-                                    <div class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 27.22vw; height: 27.22vw;">
-                                        <img alt="Booksew New 30 pieces 10cmx10cm cotton Twill fabrics charm packs patchwork fabrics quilting  stash no repeat design tissue cloth" class="i-amphtml-fill-content i-amphtml-replaced-content" src="https://ae01.alicdn.com/kf/HTB1fMwoXekJL1JjSZFmq6Aw0XXak.jpg_220x220q90.jpg">
-                                    </div>
-                                </div>
-                                <div class="product-price radius">
-                                    <span>US $1.77</span>
-                                    <del>US $1.77</del>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <?php
+            $parentThis['products'] = $newArrivals;
+            $parentThis['name'] = 'New Arrivals';
+            $config = [
+                'view' => 'cms/home/index/newArrivals.php',
+            ];
+            echo Yii::$service->page->widget->renderContent('category_newArrivals_price', $config, $parentThis);
+            ?>
         </div>
 
         <div class="flash-deals">
