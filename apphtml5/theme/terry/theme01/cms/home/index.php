@@ -17,69 +17,8 @@
                 <?php endforeach;?>
             </div>
         </div>
-        <h3 class="big-sale-title ellipsis" data-role="#DEB055">FIND DEALS BY CATEGORY</h3>
-        <ul class="big-sale-list" data-role="#DEB055">
-            <li class="big-sale-item">
-                <a href="details.html">
-                    <div class="img-box">
-                        <img class="img-response" src="./img/HTB1JIibbAOWBuNjSsppq6xPgpXaJ.jpg_640x640.jpg">
-                    </div>
-                    <h4 class="flex align-items-center justify-content-center" data-role="#F340DF">Beauty &amp; Hair</h4>
-                </a>
-            </li>
-            <li class="big-sale-item">
-                <a href="details.html">
-                    <div class="img-box">
-                        <img class="img-response" src="./img/HTB1JIibbAOWBuNjSsppq6xPgpXaJ.jpg_640x640.jpg">
-                    </div>
-                    <h4 class="flex align-items-center justify-content-center" data-role="#F340DF">Beauty &amp; Hair</h4>
-                </a>
-            </li>
-            <li class="big-sale-item">
-                <a href="details.html">
-                    <div class="img-box">
-                        <img class="img-response" src="./img/HTB1JIibbAOWBuNjSsppq6xPgpXaJ.jpg_640x640.jpg">
-                    </div>
-                    <h4 class="flex align-items-center justify-content-center" data-role="#F340DF">Beauty &amp; Hair</h4>
-                </a>
-            </li>
-        </ul>
-        <h3 class="big-sale-title ellipsis">FIND DEALS BY LIFESTYLE</h3>
-        <ul class="big-sale-list" data-role="#DEB055">
-            <li class="big-sale-item">
-                <a href="details.html">
-                    <div class="img-box">
-                        <img class="img-response" src="./img/HTB1JIibbAOWBuNjSsppq6xPgpXaJ.jpg_640x640.jpg">
-                    </div>
-                    <h4 class="flex align-items-center justify-content-center" data-role="#F340DF">Beauty &amp; Hair</h4>
-                </a>
-            </li>
-            <li class="big-sale-item">
-                <a href="details.html">
-                    <div class="img-box">
-                        <img class="img-response" src="./img/HTB1JIibbAOWBuNjSsppq6xPgpXaJ.jpg_640x640.jpg">
-                    </div>
-                    <h4 class="flex align-items-center justify-content-center" data-role="#F340DF">Beauty &amp; Hair</h4>
-                </a>
-            </li>
-            <li class="big-sale-item">
-                <a href="details.html">
-                    <div class="img-box">
-                        <img class="img-response" src="./img/HTB1JIibbAOWBuNjSsppq6xPgpXaJ.jpg_640x640.jpg">
-                    </div>
-                    <h4 class="flex align-items-center justify-content-center" data-role="#F340DF">Beauty &amp; Hair</h4>
-                </a>
-            </li>
-        </ul>
-        <div class="big-sale-banner coupon-info" data-role="#DEB055">
-            <a href="https://sale.aliexpress.com/20180328_Select_Coupon.htm">
-                <div layout="responsive" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout">
-                    <span style="display: block; padding-top: 33.3333%;"></span>
-                    <img class="i-amphtml-fill-content i-amphtml-replaced-content" src="http://ae01.alicdn.com/kf/HTB1117Ucv9TBuNjy1zb760pepXa7.png">
-                </div>
-            </a>
-        </div>
-        <!--<div class="category">
+
+        <div class="category">
           <div class="category-container">
             <ul class="category-list">
               <li><a href="category.html"><span class="icon"> <i class="ic-md icon-ic_all_category_md shadow"></i> </span> <span class="text">All Categories</span> </a></li>
@@ -107,7 +46,7 @@
               </div>
             </a>
           </div>
-        </div>-->
+        </div>
         <div class="under-five">
             <div class="deals-title-container">
                 <a href="list.html" class="block">
