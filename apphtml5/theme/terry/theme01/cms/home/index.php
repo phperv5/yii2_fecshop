@@ -69,6 +69,18 @@
         <div id="favor-list" class="favor-list">
             <div class="qp-title">Original Brand Tool</div>
             <?php
+            $parentThis['products'] = $bestSellerProducts1;
+            $parentThis['name'] = 'best-seller';
+            $config = [
+                'view' => 'cms/home/index/product.php',
+            ];
+            echo Yii::$service->page->widget->renderContent('category_product_price', $config, $parentThis);
+            ?>
+
+        </div>
+        <div id="favor-list" class="favor-list">
+            <div class="qp-title">Car Diagnostic Tool</div>
+            <?php
             $parentThis['products'] = $bestSellerProducts2;
             $parentThis['name'] = 'best-seller';
             $config = [
@@ -78,7 +90,30 @@
             ?>
 
         </div>
+        <div id="favor-list" class="favor-list">
+            <div class="qp-title">Auto Key Programmer</div>
+            <?php
+            $parentThis['products'] = $bestSellerProducts3;
+            $parentThis['name'] = 'best-seller';
+            $config = [
+                'view' => 'cms/home/index/product.php',
+            ];
+            echo Yii::$service->page->widget->renderContent('category_product_price', $config, $parentThis);
+            ?>
 
+        </div>
+        <div id="favor-list" class="favor-list">
+            <div class="qp-title">ECU Chip Tuning</div>
+            <?php
+            $parentThis['products'] = $bestSellerProducts4;
+            $parentThis['name'] = 'best-seller';
+            $config = [
+                'view' => 'cms/home/index/product.php',
+            ];
+            echo Yii::$service->page->widget->renderContent('category_product_price', $config, $parentThis);
+            ?>
+
+        </div>
     </div>
     <footer>
         <div class="banner-register shadow radius">
