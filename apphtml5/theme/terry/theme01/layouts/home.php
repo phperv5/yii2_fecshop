@@ -9,7 +9,7 @@ $jsOptions = [
         'js' => [
             'js/jquery-3.3.1.min.js',
             'libs/swiper/js/swiper.min.js',
-            'js/my-app.js?v=1',
+            'js/my-app.js',
         ],
     ],
 ];
