@@ -1,70 +1,85 @@
-<div class="main">
-    <?php
-    $leftMenu = [
-        'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
-        'view' => 'customer/leftmenu.php'
-    ];
-    ?>
-    <?= Yii::$service->page->widget->render($leftMenu, $this); ?>
-    <div class="main_scene">
-        <div class="exh_top"></div>
-        <div class="exh_main">
-            <div class="align_right px11 verdana" style="margin-top:-10px;"><a href="../">Home</a> - <a href="<?= Yii::$service->url->getUrl('customer/order') ?>">My Account: <b class="red account-email"></b></a> - Manage Address Book</div>
-            <div class="blank5px"></div>
-            <h1>Manage Address Book</h1>
-            <fieldset>
-                <?php if (is_array($coll) && !empty($coll)): ?>
-                    <legend>Your Shipping Address Book</legend>
-                    <?php foreach ($coll as $one): ?>
-                        <div class="blank5px"></div>
-                        <div class="fr">
-                            <a href="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit',['address_id' => $one['address_id']]); ?>'">
-                                <img src="<?= Yii::$service->image->getImgUrl('images/ico/edit.gif');?>" hspace="3" align="absmiddle" border="0"/>Edit</a>&nbsp;&nbsp;&nbsp;
-                            <a href="javascript:deleteAddress(<?= $one['address_id'] ?>)">
-                                <img src="<?= Yii::$service->image->getImgUrl('images/ico/del.gif');?>" hspace="3" align="absmiddle" border="0"/>Delete
-                            </a>
-                        </div>
+<?php
+/**
+ * FecShop file.
+ *
+ * @link http://www.fecshop.com/
+ * @copyright Copyright (c) 2016 FecShop Software LLC
+ * @license http://www.fecshop.com/license/
+ */
+?>
+<div class="main container two-columns-left">
+	<div class="col-main account_center">
+		<div class="std">
+			<div style="margin:4px 0 0">
+				<div class="page-title">
+					<h2><?= Yii::$service->page->translate->__('Customer Address');?></h2>
+				</div>
+				<table class="addressbook" width="100%" cellspacing="0" cellpadding="0" border="0">
+					<thead>
+						<tr class="ress_tit">
+							<th width="76" valign="middle" align="center" height="31"><?= Yii::$service->page->translate->__('First Name');?></th>  
+							<th width="72" valign="middle" align="center" height="31"><?= Yii::$service->page->translate->__('Last Name');?></th>                                                                                       
+							<th width="167" valign="middle" align="center"><?= Yii::$service->page->translate->__('Email Address');?></th>
+							<th width="67" valign="middle" align="center"><?= Yii::$service->page->translate->__('Country');?></th>
+							<th width="79" valign="middle" align="center"><?= Yii::$service->page->translate->__('State');?></th>
+							
+							<th width="81" valign="middle" align="center"> <?= Yii::$service->page->translate->__('Zip Code');?> </th>
+							<th width="101" valign="middle" align="center"><?= Yii::$service->page->translate->__('Telephone');?> </th>
+							<th class="th3" width="71" valign="middle" align="center"><?= Yii::$service->page->translate->__('Operation');?></th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php   if(is_array($coll) && !empty($coll)):   ?>
+					<?php 		foreach($coll as $one): ?>
+						<tr class="">
+							<td valign="top" align="center"><?= $one['first_name'] ?></td>
+							<td valign="top" align="center"><?= $one['last_name'] ?></td>
+							<td valign="top" align="center"><?= $one['email'] ?></td>
+							<td valign="top" align="center"><?= $one['country'] ?></td>
+							<td valign="top" align="center"><?= $one['state'] ?></td>
+							<td valign="top" align="center"><?= $one['zip'] ?></td>
+							<td valign="top" align="center"><?= $one['telephone'] ?></td>
+							<td class="ltp" valign="top ltp" align="center">
+								<input onclick="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit',['address_id' => $one['address_id']]); ?>'" class="cpointer" value="<?= Yii::$service->page->translate->__('Modify');?>" name="" type="button">
+								<a href="javascript:deleteAddress(<?= $one['address_id'] ?>)"><?= Yii::$service->page->translate->__('Delete');?></a>
+								<?php  if($one['is_default'] == 1): ?>
+								<span style=" color:#cc0000"><?= Yii::$service->page->translate->__('Default');?></span> 
+								<?php  endif; ?>								
+							</td>
+						</tr>	
+					<?php 		endforeach; ?>
+					<?php 	endif; ?>
+					</tbody>
+				</table>
+				<div class="product-Reviews">
+					<input onclick="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit') ?>'" class="submitbutton addnew cpointer" value="<?= Yii::$service->page->translate->__('Add New Address');?>" name="" type="button">
+					
+				</div>
+			</div>
+		</div>
 
-                        <b class="red_dark">Serial #1</b><br/>
-                        <b><?= $one['first_name'] ?>&nbsp;<?= $one['last_name'] ?></b><br/>
-                        <?= $one['street1'] ?><br/>
-                        <?= $one['street2'] ?><br/>
-                        <?= $one['city'] ?>, <?= $one['state'] ?>, <?= $one['country'] ?><br/>
-                        <?= $one['zip'] ?><br/>
-                        Phone:<?= $one['telephone'] ?><br/>
-                        <div class="blank5px"></div>
-                        <div class="dashed5px"></div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <legend>Your Shipping Address Book</legend>
-                    Your shipping address is null, please <a href="<?= Yii::$service->url->getUrl('customer/address/edit') ?>">Add Your Shipping Address</a>.
-                <?php endif; ?>
+		<script>
+		 function deleteAddress(address_id){
+			var r=confirm('do you readly want delete this address?'); 
+			if (r==true){ 
+				url = "<?= Yii::$service->url->getUrl('customer/address') ?>?method=remove&address_id="+address_id;
+				
+				window.location.href=url;
+			}
+		 }
 
-            </fieldset>
-            <div class="blank5px"></div>
-            <div class="blank5px"></div>
-            <input onclick="javascript:window.location.href='<?= Yii::$service->url->getUrl('customer/address/edit') ?>'" class="btn_submit" value="<?= Yii::$service->page->translate->__('Add New Address');?>" name="" type="button">
-            <div class="clear"></div>
-        </div>
-        <div class="exh_bottom"></div>
-    </div>
-    <div class="main_bottom"></div>
+		</script>
+	</div>
+	
+	<div class="col-left ">
+		<?php
+			$leftMenu = [
+				'class' => 'fecshop\app\appfront\modules\Customer\block\LeftMenu',
+				'view'	=> 'customer/leftmenu.php'
+			];
+		?>
+		<?= Yii::$service->page->widget->render($leftMenu,$this); ?>
+	</div>
+	<div class="clear"></div>
 </div>
-<script>
-    function deleteAddress(address_id){
-        var r=confirm('do you readly want delete this address?');
-        if (r==true){
-            url = "<?= Yii::$service->url->getUrl('customer/address') ?>?method=remove&address_id="+address_id;
-
-            window.location.href=url;
-        }
-    }
-</script>
-
-
-
-
-
-
-
-
+	

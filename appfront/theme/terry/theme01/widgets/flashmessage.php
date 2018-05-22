@@ -6,6 +6,7 @@
  * @copyright Copyright (c) 2016 FecShop Software LLC
  * @license http://www.fecshop.com/license/
  */
+
 ?>
 <?php 	$corrects = Yii::$service->page->message->getCorrects(); ?>
 <?php 	$errors   = Yii::$service->page->message->getErrors(); ?>

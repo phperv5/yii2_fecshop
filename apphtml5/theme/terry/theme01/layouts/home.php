@@ -4,11 +4,12 @@ $jsOptions = [
     [
         'options' => [
             'position' => 'POS_END',
+            //	'condition'=> 'lt IE 9',
         ],
         'js' => [
-            'js/jquery.js',
-            'js/js.js',
-            'js/dist/js/swiper.min.js',
+            'js/jquery-3.3.1.min.js',
+            'libs/swiper/js/swiper.min.js',
+            'js/my-app.js?v=1',
         ],
     ],
 ];
@@ -18,33 +19,33 @@ $cssOptions = [
     # css config 1.
     [
         'css' => [
-            'css/style.css',
-            'js/dist/css/swiper.min.css',
+            'fonts/iconfont.css',
+            'libs/swiper/css/swiper.min.css',
+            'css/my-app.css',
         ],
     ],
 ];
 \Yii::$service->page->asset->jsOptions = $jsOptions;
 \Yii::$service->page->asset->cssOptions = $cssOptions;
 \Yii::$service->page->asset->register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?= $currentLangCode = Yii::$service->store->currentLangCode; ?>"
       lang="<?= $currentLangCode ?>">
 <head>
-    <style>
-        body {
-            background: #f5f4ef;
-        }
-    </style>
     <?= Yii::$service->page->widget->render('head', $this); ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?= Yii::$service->page->widget->render('header', $this); ?>
-<?= Yii::$service->page->widget->render('menu', $this); ?>
+<header id="header">
+    <?= Yii::$service->page->widget->render('header', $this); ?>
+    <?= Yii::$service->page->widget->render('menu', $this); ?>
+</header>
+
 <div class="main-container">
-    <?= $content; ?>
+    <?= $content;?>
 </div>
 <div class="footer-container">
     <?= Yii::$service->page->widget->render('footer', $this); ?>
@@ -53,6 +54,7 @@ $cssOptions = [
 <?php $this->endBody() ?>
 </body>
 </html>
+<script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=94621973"></script>
 <?php $this->endPage() ?>
 
 

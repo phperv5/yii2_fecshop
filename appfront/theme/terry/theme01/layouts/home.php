@@ -20,7 +20,7 @@ $cssOptions = [
     # css config 1.
     [
         'css' => [
-            'css/style.css',
+            'css/style.css?v=20180510',
             'css/style_h.css',
             //'css/nav.css',
             'js/plugins/owlcarousel/assets/owl.carousel.min.css',
@@ -30,6 +30,7 @@ $cssOptions = [
 \Yii::$service->page->asset->jsOptions = $jsOptions;
 \Yii::$service->page->asset->cssOptions = $cssOptions;
 \Yii::$service->page->asset->register($this);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

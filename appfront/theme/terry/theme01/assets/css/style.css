@@ -1605,7 +1605,8 @@ a.hd_menu_nv_gohome:hover {
     padding: 0px;
     float: left;
     height: 359px;
-    width: 238px;
+    width:19.8%;
+    max-width: 238px;
     border-right: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
     border-left: 1px solid #CCC;
@@ -1644,12 +1645,14 @@ a.hd_menu_nv_gohome:hover {
     background-position: 220px -150px;
 }
 
+
 .main_h_banner {
     margin: 0px;
     padding: 0px;
     float: left;
     height: 360px;
-    width: 960px;
+    width:79%;
+    max-width: 960px;
     position: relative;
     z-index: 2;
 }

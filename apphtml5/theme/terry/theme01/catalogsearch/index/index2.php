@@ -1,126 +1,147 @@
-<div class="main">
-    <div class="page_where_l">
-        <a href="/" rel="nofollow">Home</a>
-    </div>
-    <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
-    <div class="blank8px"></div>
-
-    <div class="main_left">
-        <div class="col_t_x col_t_cate">
-            <strong>Categories</strong>
-            <?php $categories = Yii::$service->category->menu->getChildCate('0'); ?>
-            <?php foreach ($categories as $category): ?>
-                <h2 class=" fir"><a href="<?= $category['url'] ?>"><?= $category['name'] ?></a></h2>
-            <?php endforeach; ?>
-            <div class="clear"></div>
-        </div>
-        <div class="col_d_b"></div>
-        <div class="blank10px"></div>
-        <!--categories end -->
-
-        <div class="col_t_x col_t_tag col_t_tag_feature">
-            <h3>Browse by Feature</h3>
-            <?php
-            $keywords = Yii::$service->product->keywords->getKeywordsList(3);
-            foreach ($keywords as $v):
-                ?>
-                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
-            <?php endforeach; ?>
-            <div class="clear"></div>
-        </div>
-        <div class="col_d_b"></div>
-        <div class="blank10px"></div>
-
-        <div class="col_d_t">Popular Search</div>
-        <div class="col_m_tag">
-            <?php
-            $keywords = Yii::$service->product->keywords->getKeywordsList(2);
-            foreach ($keywords as $v):
-                ?>
-                <a href="<?= Yii::$service->url->getUrl('catalogsearch/index?q=' . $v['keywords']); ?>"><?= $v['keywords']; ?></a>
-            <?php endforeach; ?>
-
-            <div class="clear"></div>
-        </div>
-        <div class="col_d_b"></div>
-        <div class="blank10px"></div>
-
-
-    </div>
-
-    <div class="main_scene">
-        <div class="exh_top"></div>
-        <div class="exh_main_pl">
-            <h1>Search Result: <span class="red"><?= $searchText ?></span></h1>
-            <div class="blank10px"></div>
-            <?php if (is_array($products) && !empty($products)): ?>
-                <?php foreach ($products as $product): ?>
-                    <div class="pro_list pro_list_feaured">
-                        <div class="photo">
-                            <a href="<?= $product['url'] ?>" title="<?= $product['name'] ?>">
-                                <img src="<?= Yii::$service->product->image->getResize($product['image'], [230, 230], false) ?>" width="120" height="120" border="0" hspace="0" vspace="0" alt="" align="absmiddle"/>
-                            </a>
-                        </div>
-                        <div class="brief">
-                            <h2>
-                                <span class="specialoffer"></span>
-                                <a href="<?= $product['url'] ?>">
-                                    <?= $product['name'] ?>
-                                </a>
-                            </h2>
-                            <div class="clear"></div>
-                            <span class="px11">Item No.<?= $product['sku']; ?></span>&nbsp;&nbsp;&nbsp;
-                            <!--                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;-->
-                            <div class="fr w150px">
-                                <div class="rate_star_w100">
-                                    <div class="rate_star_w100_bg">
-                                        <div class="rate_star_w100_vw" style="width:96px;"></div>
+<?php
+/**
+ * FecShop file.
+ *
+ * @link http://www.fecshop.com/
+ * @copyright Copyright (c) 2016 FecShop Software LLC
+ * @license http://www.fecshop.com/license/
+ */
+?>
+<div class="main container two-columns-left">
+<?php // echo count($products); ?>
+<?php  $count = 4; $end = $count-1; ?>
+	<div class="col-main">
+		<?= Yii::$service->page->widget->render('breadcrumbs',$this); ?>
+		<div class="menu_category">
+			<?php  if(is_array($products) && !empty($products)): ?>
+				<div class="panelBar">
+					<?php
+						$parentThis = [
+							'query_item' => $query_item,
+							'product_page'=>$product_page,
+						];
+						$config = [
+							'view'  		=> 'catalogsearch/index/index/toolbar.php',
+						];
+						$toolbar = Yii::$service->page->widget->renderContent('category_toolbar',$config,$parentThis);
+						echo $toolbar;
+					?>
+				</div>
+				<div class="category_product">
+					<?php $i = 0;  foreach($products as $product): ?>
+                        <?php  if(isset($product['sku']) && $product['sku']): ?>
+                            <?php  if($i%$count == 0): ?>
+                            <ul>
+                            <?php  endif; ?>
+                                <li>
+                                    <div class="c_img">
+                                        <a href="<?= $product['url'] ?>">
+                                            <img  class="js_lazy" src="<?= Yii::$service->image->getImgUrl('images/lazyload.gif');   ?>" data-original="<?= Yii::$service->product->image->getResize($product['image'],[230,230],false) ?>"  />
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="rate_star_w100_tx"><a href="../../reviews/pro57665.html" target="_blank">(24)</a>
-                                </div>
-                            </div>
-                            <div class="blank10px"></div>
-                            <?= $product['short_description']; ?>
-                            <div class="blank5px"></div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="order_fun px11">
-                            <div class="blank5px"></div>
-                            <?php
-                            $config = [
-                                'class' => 'fecshop\app\appfront\modules\Catalog\block\category\Price',
-                                'view' => 'catalog/category/price.php',
-                                'price' => $product['price'],
-                                'special_price' => $product['special_price'],
-                                'special_from' => $product['special_from'],
-                                'special_to' => $product['special_to'],
-                            ];
-                            echo Yii::$service->page->widget->renderContent('category_product_price', $config);
-                            ?>
-                            <div class="blank5px"></div>
-                            <div class="dashed_line"></div>
-                            <div class="blank5px"></div>
-                            <div class="blank5px"></div>
-                            <input name="add_to_cart" type="button" class="btn_addtocart_s" value="" title="Add to Cart" onclick="javascript:addProductToCart('<?= $product['product_id'] ?>');return false;"/>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                <?php endforeach; ?>
-                <?= $product_page; ?>
-            <?php else: ?>
-                <div class="fl">
-                    Search results for<span class="red">'<?= $searchText ?>'</span> returns no results
-                </div>
-
-            <?php endif; ?>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="exh_bottom"></div>
+                                    <div class="c_name">
+                                        <a href="<?= $product['url'] ?>">
+                                            <?= $product['name'] ?>
+                                        </a>
+                                    </div>
+                                    <?php
+                                        $config = [
+                                            'class' 		=> 'fecshop\app\appfront\modules\Catalog\block\category\Price',
+                                            'view'  		=> 'catalog/category/price.php',
+                                            'price' 		=> $product['price'],
+                                            'special_price' => $product['special_price'],
+                                        ];
+                                        echo Yii::$service->page->widget->renderContent('category_product_price',$config);
+                                    ?>
+                                </li>
+                            <?php  if($i%$count == $end): ?>
+                            </ul>
+                            <?php  endif; ?>
+                            <?php  $i++; ?>
+                        <?php  endif; ?>
+					<?php  endforeach;  ?>
+					<?php  if($i%$count != $end): ?>
+						</ul>
+                    <?php  endif; ?>
+					
+				</div>
+				<div class="clear"></div>
+				<div class="panelBar">
+					<?php echo $toolbar; ?>
+				</div>
+			<?php else: ?>
+				<?= Yii::$service->page->translate->__('Search results for \'{searchText}\' returns no results',['searchText' => $searchText]); ?>
+				
+			<?php endif; ?>
+		</div>
+	</div>
+	<div class="col-left ">
+		
+		<?php
+			# Refind By
+			$parentThis = [
+				'refine_by_info' => $refine_by_info,
+			];
+			$config = [
+				'view'  		=> 'catalog/category/index/filter/refineby.php',
+			];
+			echo Yii::$service->page->widget->renderContent('category_product_filter_refine_by',$config,$parentThis);
+		?>
+		<?php
+			# Category Left Filter subCategory
+			$parentThis = [
+				'filter_category' => $filter_category,
+				'current_category'=> $name,
+			];
+			$config = [
+				'view'  		=> 'catalog/category/index/filter/subcategory.php',
+			];
+			echo Yii::$service->page->widget->renderContent('category_product_filter_sub_category',$config,$parentThis);
+		?>
+		<?php
+			# Category Left Filter Product Attributes
+			$parentThis = [
+				'filters' => $filter_info,
+			];
+			$config = [
+				'view'  		=> 'catalog/category/index/filter/attr.php',
+			];
+			echo Yii::$service->page->widget->renderContent('category_product_filter_attr',$config,$parentThis);
+		?>
+		<?php
+			# Category Left Filter Product Price
+			$parentThis = [
+				'filter_price' => $filter_price,
+			];
+			$config = [
+				'view'  		=> 'catalog/category/index/filter/price.php',
+			];
+			echo Yii::$service->page->widget->renderContent('category_product_filter_price',$config,$parentThis);
+		?>
+	</div>
+	<div class="clear"></div>
 </div>
-</div>
-
-
-
-
+<script>
+<?php $this->beginBlock('category_product_filter') ?>  
+$(document).ready(function(){
+	$(".product_sort").change(function(){	
+		url = $(this).find("option:selected").attr('url');
+		window.location.href = url;
+	});
+	$(".product_num_per_page").change(function(){
+		url = $(this).find("option:selected").attr('url');
+		window.location.href = url;
+	});
+	
+	$(".filter_attr_info a").click(function(){
+		if($(this).hasClass("checked")){
+			$(this).removeClass("checked");
+		}else{
+			$(this).parent().find("a.checked").removeClass("checked");
+			$(this).addClass("checked");
+		}
+	});
+});
+<?php $this->endBlock(); ?>  
+</script>  
+<?php $this->registerJs($this->blocks['category_product_filter'],\yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>

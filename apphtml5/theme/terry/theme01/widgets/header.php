@@ -1,52 +1,64 @@
 <input type="hidden" class="currentBaseUrl" value="<?= $currentBaseUrl ?>" />
 <input type="hidden" class="logoutUrl" value="<?= $logoutUrl ?>" />
-<header class="new-header j-headerWarp">
-    <div class="new-header-inner">
-        <div class="new-return j-common-back com-ripple-btn"><i class="common-ic-md ic-return-md"></i></div>
-        <div class="new-head-category j-headCategoryBtn com-ripple-btn"><i class="common-ic-md ic-menu-md"></i></div>
-        <div class="head-right-Warp">
-            <div class="new-head-search com-ripple-btn" id="J_searchBtn">
-                <i class="common-ic-md common-ic-search-md"></i>
+<input type="hidden" class="logoutStr" value="<?= Yii::$service->page->translate->__('Logout'); ?>" />
+<input type="hidden" class="welcome_str" value="<?= Yii::$service->page->translate->__('Welcome!'); ?>" />
+<div class="hd_wrapper">
+    <div class="hd_wrap_fun">
+        <div class="hd_wr_f_nav" id="hd_f_signin">
+            <div class="login-text t_r">
+            <a href="<?= Yii::$service->url->getUrl('customer/account/login') ?>" class="link_green" rel="nofollow"><b>Sign In</b></a>
+            <span class="gray px11">or</span>
+            <a href="<?= Yii::$service->url->getUrl('customer/account/register'); ?>" class="link_green" rel="nofollow"><b>Register</b></a>
             </div>
-            <div class="new-head-cart com-ripple-href">
-                <a href="<?= Yii::$service->url->getUrl('checkout/cart') ?>" rel="nofollow" id="cartnum" class="cart"><i class="common-ic-md common-ic-shoppingcart-md"></i></a>
+        </div>
+        <div class="hd_wr_f_bar">
+            <div class="hd_wr_f_my">
+                <div class="hd_wr_nav"><a href="<?= Yii::$service->url->getUrl('customer/order') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Account'); ?></a>
+                    <ul>
+                        <a href="<?= Yii::$service->url->getUrl('customer/order') ?>"
+                           rel="nofollow"><?= Yii::$service->page->translate->__('My Orders'); ?><span
+                                    id="myaccount_num_orders"></span></a>
+                        <a href="<?= Yii::$service->url->getUrl('customer/productreview') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Review'); ?><span id="myaccount_num_orders"></span></a>
+                        <a id="myaccount_myfavorites" href="<?= Yii::$service->url->getUrl('customer/productfavorite') ?>" rel="nofollow"><?= Yii::$service->page->translate->__('My Favorites'); ?><span id="myaccount_num_orders"></span></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="hd_wr_f_help">
+                <div class="hd_wr_nav"><a href="support/support.html">Help</a>
+                    <ul>
+                        <a href="<?= Yii::$service->url->getUrl('help') ?>">Help Center</a>
+                        <a href="<?= Yii::$service->url->getUrl('freed back') ?>">Feed Back</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="hd_wr_f_help">
+            <div class="hd_wr_nav">
+                        <a class="current_currency" style="color: #039;padding-left:10px"><b><?= $currency['code'] ?></b></a>
+                        <ul class="currency_list">
+                            <?php foreach($currencys as $c):    ?>
+                                <a rel="<?= $c['code'] ?>"><?= $c['code'] ?></a>
+                            <?php endforeach; ?>
+                        </ul>
+            </div>
             </div>
         </div>
     </div>
-    <div class="new-logotext j-header-title">Sports Shoes</div>
-</header>
-<section id="J_search" class="dhm-hide">
-    <div class="head-search">
-        <form action="<?= Yii::$service->url->getUrl('catalogsearch/index');   ?>" method="get" autocomplete="off">
-            <div class="j-search-box search-box search-mar">
-                <div class="search-btnWarp com-ripple-btn"><input type="submit" class="search-btn j-topSearchBtn" value="" onclick="javascript:ga('send', 'event', 'MPU1509', 'search')"></div>
-                <div class="search-text">
-                    <input id="J_searchInput" type="text" value="" name="key" class="inputtext" placeholder="I'm shopping for...">
-                    <input type="hidden" name="cid" id="cateId">
-                    <input type="hidden" name="tag" id="tagId">
-                    <input type="hidden" name="scht" id="schtypeId">
-                </div>
-                <div id="J_searchDel" class="search-close dhm-hide"></div>
-            </div>
-            <div id="J_searchCl" class="search-cancel">
-                <a href="javascript:;" class="com-ripple-btn">Cancel</a>
-            </div>
-        </form>
+</div>
+<div class="header" id="WebPageTop">
+    <div class="hd_logo"><a href="<?= $homeUrl ?>" target="_top"><h1></h1></a></div>
+    <?= Yii::$service->page->widget->render('topsearch',$this); ?>
+    <div class="hd_cart">
+        <a href="<?= Yii::$service->url->getUrl('checkout/cart') ?>" target="_top" rel="nofollow" id="hd_mycart">
+            <span class="mycart-text">My Shopping Cart</span>
+        </a>
     </div>
-    <div id="J_searchList" class="search-list dhm-hide"></div>
-</section>
-<script type="text/javascript">
-    <?php $this->beginBlock('owl_fecshop_header') ?>
-    $(function () {
-        $('#J_searchBtn').bind('click',function(){
-            $('#J_search').addClass('fadeIn section-active').removeClass('dhm-hide');
-        })
-        
-        $('#J_searchCl').bind('click',function(){
-            $('#J_search').addClass('dhm-hide').removeClass('fadeIn section-active');
-        })
-    });
-    <?php $this->endBlock(); ?>
-</script>
-<?php $this->registerJs($this->blocks['owl_fecshop_header'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
-
+    <div class="hd_pop_kw">
+        <?php
+            $keywords = Yii::$service->product->keywords->getKeywordsList(1);
+            foreach($keywords as $v):
+        ?>
+          <a href="<?php if(isset($v['url']) && !empty($v['url'])) echo $v['url'];else echo  Yii::$service->url->getUrl('catalogsearch/index?q='.$v['keywords']);?>"><?= $v['keywords'];?></a>
+        <?php endforeach;?>
+    </div>
+    <div class="clear">
+    </div>

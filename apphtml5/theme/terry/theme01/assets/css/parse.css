@@ -1,0 +1,50 @@
+body {
+  margin: 0
+}
+
+img {
+  width: 100%;
+  height: auto
+}
+
+table {
+  width: 100%;
+  height: auto
+}
+
+a,
+address,
+article,
+aside,
+blockquote,
+body,
+code,
+dd,
+del,
+div,
+dl,
+dt,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+iframe,
+img,
+label,
+li,
+nav,
+object,
+p,
+pre,
+section,
+span,
+ul {
+  margin: 0;
+  padding: 0
+}

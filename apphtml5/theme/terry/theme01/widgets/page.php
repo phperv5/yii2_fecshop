@@ -1,24 +1,50 @@
+<?php
+/**
+ * FecShop file.
+ *
+ * @link http://www.fecshop.com/
+ * @copyright Copyright (c) 2016 FecShop Software LLC
+ * @license http://www.fecshop.com/license/
+ */
+//echo '<pre>';
+////var_dump(get_defined_vars());
+?>
+<div class="page_nav">
+    <div class="fr">
+        <?php  if($prevPage):  ?>
+            <a href="<?= $prevPage['url']['url'] ?>">« Previous</a>
+        <?php endif;  ?>
+        <?php if($firstSpaceShow):  ?>
+            <a href="<?= $firstSpaceShow['url']['url'] ?>"><?= $firstSpaceShow['p'] ?></a>
+        <?php endif;  ?>
+        <?= $hiddenFrontStr ?>
+        <?php  if(!empty($frontPage )): ?>
+            <?php foreach($frontPage as $page): ?>
+                <a href="<?= $page['url']['url'] ?>"><?= $page['p'] ?></a>
+            <?php endforeach;  ?>
+        <?php endif;  ?>
 
-<div class="page">
-    <div class="pageCon clearfix">
-        <?php  if($prevPage){  ?>
-         <span class="pagePre js-page-prev">
-            <a href="<?= $prevPage['url']['url'] ?>" class=""><var></var>Previous</a>
-        </span>
-        <?php }else{ ?>
-            <span class="pagePre js-page-prev">
-            <a href="javascropt:void(0)" class="pageDisable"><var></var>Previous</a>
-        </span>
-        <?php }  ?>
-        <?php if($nextPage){  ?>
-        <span class="com-ripple-href pageNext js-page-next">
-            <a href="<?= $nextPage['url']['url'] ?>" rel="nofollow">Next<var></var></a>
-        </span>
-        <?php }else{ ?>
-            <span class="com-ripple-href pageNext js-page-next">
-            <a href="javascropt:void(0)" class="pageDisable"><var></var>Previous</a>
-        </span>
-        <?php }  ?>
+        <?php if($currentPage): ?>
+            <span class="current" ><?= $currentPage['p'] ?></span>
+        <?php endif;  ?>
+
+        <?php if(!empty($behindPage )): ?>
+            <?php foreach($behindPage as $page): ?>
+                <a href="<?= $page['url']['url'] ?>"><?= $page['p'] ?></a>
+            <?php endforeach;  ?>
+        <?php endif;  ?>
+
+        <?= $hiddenBehindStr ?>
+        <?php if($lastSpaceShow): ?>
+            <a href="<?= $lastSpaceShow['url']['url'] ?>"><?= $lastSpaceShow['p'] ?></a>
+        <?php endif;  ?>
+        <?php if($nextPage):  ?>
+            <a href="<?= $nextPage['url']['url'] ?>">Next »</a>
+        <?php endif;  ?>
+
     </div>
+        <div class="fl">
+<!--            Total:2 items,&nbsp;15 items/p,&nbsp; Page:<b class=red>1</b>/1.-->
+        </div><div class=clear></div>
 </div>
-
+	

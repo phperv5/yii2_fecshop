@@ -1,15 +1,33 @@
-<header class="new-header j-headerWarp">
-    <div class="new-header-inner">
-        <div class="new-return j-common-back com-ripple-btn"><i class="ic-md ic-return-md"></i></div>
-        <div class="new-head-category j-headCategoryBtn com-ripple-btn"><i class="ic-md ic-menu-md"></i></div>
-        <div class="head-right-Warp">
-            <div class="new-head-search com-ripple-btn" id="J_searchBtn">
-                <i class="ic-md ic-search-md"></i>
-            </div>
-            <div class="new-head-cart com-ripple-href">
-                <a href="/viewcart.do#mhp1601_cart" rel="nofollow" id="cartnum" class="cart"><i class="ic-md ic-shoppingcart-md"></i><span class="cart-number j-cartnum">0</span></a>
-            </div>
+<div class="hd_menu">
+    <a href="/" class="hd_menu_nv_gohome">Home</a>
+    <div class="hd_menu_cate">
+        <div class="hd_wr_nav"><a href="javascript:void(0);" rel="nofollow"><strong>Categories</strong></a>
+            <ul class="hdcate">
+                <?php $categories = Yii::$service->category->menu->getChildCate('0');?>
+                <?php foreach($categories as $category): ?>
+                    <a href="<?= $category['url'] ?>" class="mhl_first"><?= $category['name'] ?></a>
+                <?php endforeach; ?>
+            </ul>
         </div>
     </div>
-    <div class="new-logotext j-header-title">Sports Shoes</div>
-</header>
+
+    <div class="hd_menu_brands">
+        <div class="hd_wr_nav"><a href="javascript:void(0);" rel="nofollow"><b>Brands</b></a>
+            <ul class="hdbrands">
+                <?php $categories = Yii::$service->category->menu->getBrand();?>
+                <?php foreach($categories as $category): ?>
+                    <a href="<?= $category['url'] ?>">
+                        <img src="<?= Yii::$service->category->image->getBaseUrl().$category['thumbnail_image'] ?>" width="120" height="40" border="0" hspace="0" vspace="0" alt="<?= $category['name'] ?>" align="absmiddle"/>
+                    </a>
+                <?php endforeach; ?>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hd_menu_nav">
+        <?php foreach ($categoryArr as $category1): ?>
+            <a class="" href="<?= $category1['url'] ?>"><?= $category1['name'] ?></a>
+        <?php endforeach; ?>
+    </div>
+</div>

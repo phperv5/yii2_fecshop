@@ -1,87 +1,117 @@
-<div class="ms-panel-bodyer account-register" data-role="panel-body"><div id="wap-register" class="join">
-        <form id="register-form" method="post" action="<?= Yii::$service->url->getUrl('customer/account/register'); ?>">
-        <div class="form-group">
-                <lable class="label fm-md fm-email-md"></lable>
-                <div class="input-wrap input-box">
-                    <div class="ms-man-loading"></div>
-                    <input id="email_address" type="text" class="form-control validate-email required-entry" placeholder="Email" name="editForm[email]" value="<?= $email; ?>" >
-                    <div class="underline">
-                        <div class="unfocused-line"></div>
-                        <div class="focused-line"></div>
-                    </div>
-                </div>
-            </div><div class="form-group">
-                <lable class="label fm-md fm-user-md"></lable>
-                <div class="input-wrap input-box">
-                    <!--anita-if-->
-                    <input id="firstname" type="text" class="form-control required-entry" placeholder="First Name" name="editForm[firstname]" value="<?= $firstname ?>" >
-                    <div class="underline">
-                        <div class="unfocused-line"></div>
-                        <div class="focused-line"></div>
-                    </div>
-                </div>
+<style TYPE="text/css">
+    .input-box {
+        float: left;
+    }
+</style>
+<div class="main container one-column">
+    <?= Yii::$service->page->widget->render('flashmessage'); ?>
+    <div class="page_where_l"><a href="/">Home</a> - Membership Registration</div>
+    <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
+    <div class="blank8px"></div>
+    <div class="mn_full account-register">
+        <h1>Membership Registration</h1>
 
-            </div><div class="form-group">
-                <lable class="label fm-md fm-user-md"></lable>
-                <div class="input-wrap input-box">
-                    <!--anita-if-->
-                    <input id="lastname" type="text" class="form-control required-entry" placeholder="Last Name" name="editForm[lastname]" value="<?= $lastname; ?>">
-                    <div class="underline">
-                        <div class="unfocused-line"></div>
-                        <div class="focused-line"></div>
+        <div class="blank10px"></div>
+        <span class="px11 gray"><span class="red_star px10">*</span> means required fields </span>
+        <div class="float_right px13">New Customer? <a
+                    href="<?= Yii::$service->url->getUrl("customer/account/login"); ?>" class="btn_blue"><span
+                        class="white">Sign In</span></a></div>
+        <div class="blank10px"></div>
+
+        <form action="<?= Yii::$service->url->getUrl('customer/account/register'); ?>" method="post" id="form-validate">
+            <?= \fec\helpers\CRequest::getCsrfInputHtml(); ?>
+            <div id="u_reg_email" class="rowfull">
+                <div class="rowf_per25tr"><span class="red_star">*</span><b>E-mail Address:</b></div>
+                <div class="rowf_per70">
+                    <div class="input-box">
+                        <input name="editForm[email]" id="email_address" value="<?= $email ?>" title="Email Address"
+                               class="input-text validate-email required-entry" type="text">
                     </div>
                 </div>
-            </div><div class="form-group">
-                <lable class="label fm-md fm-password-md"></lable>
-                <div class="input-wrap input-box">
-                    <!--anita-if-->
-                    <input id="password" type="password" class="form-control" placeholder="Password required-entry validate-password" name="editForm[password]" data-verify-type="password">
-                    <div class="underline">
-                        <div class="unfocused-line"></div>
-                        <div class="focused-line"></div>
-                    </div>
-                </div>
-            </div><div class="form-group">
-                <lable class="label fm-md fm-password-md"></lable>
-                <div class="input-wrap input-box">
-                    <!--anita-if-->
-                    <input id="confirmation" type="password" class="form-control required-entry validate-cpassword" placeholder="Reenter Password" name="editForm[confirmation]" data-verify-type="repassword">
-                    <div class="underline">
-                        <div class="unfocused-line"></div>
-                        <div class="focused-line"></div>
-                    </div>
-                </div>
-            </div><div class="form-group verify-error">
-                <lable class="label fm-md fm-security-md"></lable>
-                <!--anita-if-->
-                <div class="input-wrap input-box clearfix">
-                    <div class="code-wrap">
-                        <input id="buyer_join_imagePassword" type="text" class="check-code" placeholder="" name="editForm[captcha]" data-verify-type="checkCode">
-                        <div class="underline">
-                            <div class="unfocused-line"></div>
-                            <div class="focused-line"></div>
-                        </div>
-                    </div>
-                    <div class="imgcode-wp">
-                        <img class="login-captcha-img"  title="click refresh" src="<?= Yii::$service->url->getUrl('site/helper/captcha'); ?>" align="absbottom" onclick="this.src='<?= Yii::$service->url->getUrl('site/helper/captcha'); ?>?'+Math.random();"></img>
-                    </div>
-                </div>
+                <div class="clear"></div>
             </div>
-            <!--ai-repeat-end-->
-            <span class="agreement-box validation-advice">
-                <?= Yii::$service->page->widget->render('flashmessage'); ?>
-            </span>
-            <div class="fm-submit-wrap">
-                <span type="button" class="fm-submit" id="js_registBtn"><span></span>Agree &amp; Create My Account</span>
+
+            <div id="u_reg_password" class="rowfull">
+                <div class="rowf_per25tr"><span class="red_star">*</span><b>Password:</b></div>
+                <div class="rowf_per70">
+                    <div class="input-box">
+                        <input name="editForm[password]" id="password" title="Password"
+                               class="input-text required-entry validate-password" type="password">
+                    </div>
+                    <br/><span class="remark">4 to 20 characters (A-Z, a-z, 0-9, no space).<span class="red">Case sensitive.</span></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="u_reg_password_confirm" class="rowfull">
+                <div class="rowf_per25tr"><span class="red_star">*</span><b>Confirm Password:</b></div>
+                <div class="rowf_per70">
+                    <div class="input-box">
+                        <input name="editForm[confirmation]" title="Confirm Password" id="confirmation"
+                               class="input-text required-entry validate-cpassword" type="password">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+            <div id="u_reg_myname" class="rowfull">
+                <div class="rowf_per25tr"><span class="red_star">*</span><b> My Name is</b>:</div>
+                <div class="rowf_per70">
+                    <div class="input-box">
+                        <input id="firstname" name="editForm[firstname]" value="<?= $firstname ?>" title="First Name"
+                               maxlength="255" class="input-text required-entry" type="text">
+                    </div>
+                    <div class="input-box" style='margin-left:10px;'>
+                        <input id="lastname" name="editForm[lastname]" value="<?= $lastname ?>" title="Last Name"
+                               maxlength="255" class="input-text required-entry" type="text">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="u_reg_country" class="rowfull">
+                <div class="rowf_per25tr"><span class="red_star">*</span><b>Country / Region:</b></div>
+                <div class="rowf_per70">
+                    <div class="input-box">
+                        <select name="editForm[country]" id="uCountry" size="10" class='required-entry'>
+                            <option value="">---- All Countries &amp; Territories (A to Z) ----</option>
+                            <?php foreach ($country as $code => $c) { ?>
+                                <option value="<?= $code; ?>"><?= $c; ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+            <div id="u_reg_verification_code" class="rowfull">
+                <div class="rowf_per25tr"><span class="red_star">*</span><b>Verification Code:</b></div>
+                <div class="rowf_per70">
+                    <input name="numVerify" id="numVerify" type="text" maxlength="4" size="10"
+                           onkeypress="event.returnValue=IsDigit();"
+                           onblur="CheckVerificationCode('numVerify', 'numVerifyConfirm', 'u_reg_verification_code', 'rowfull', 0);">
+                    &nbsp; <span class="span_num_verify">5266</span><input name="numVerifyConfirm" id="numVerifyConfirm"
+                                                                           type="hidden" value="2120"/>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="rowfull">
+                <div class="rowf_per25tr">&nbsp;</div>
+                <div class="rowf_per70">
+                    <button type="button" id="js_registBtn"
+                            class="redBtn btn_submit btn_big"><?= Yii::$service->page->translate->__('Submit'); ?></button>
+                    <div class="blank10px"></div>
+
+                </div>
+                <div class="clear"></div>
             </div>
         </form>
-        <section class="sns-login-wrap">
-            <ul class="sns-btns radius">
-                <li class="facebook"><span class="logo"></span><a data-partner="facebook" href="//thirdparty.aliexpress.com/login.htm?type=fb&amp;from=msite" target="_blank">Sign In With Facebook</a></li>
-            </ul>
-        </section>
-        <p class="fm-bottom">Already have an account?<a class="link">Sign In</a></p>
+        <div class="clear"></div>
     </div>
+    <div class="clear"></div>
 </div>
 <?php
 $requiredValidate = Yii::$service->page->translate->__('This is a required field.');
@@ -105,7 +135,7 @@ $passwordMatchValidate = Yii::$service->page->translate->__('Please make sure yo
             $(".validation-advice").remove();
             $(".validation-failed").removeClass("validation-failed");
 
-            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            var myreg = /[\w-.]+@[\w-]+(.[\w_-]+)+/;
             // empty check
             $(".account-register .required-entry").each(function () {
                 val = $(this).val();
@@ -182,10 +212,15 @@ $passwordMatchValidate = Yii::$service->page->translate->__('Please make sure yo
 
             if (validate) {
                 $(this).addClass("dataUp");
-                $("#register-form").submit();
+                $("#form-validate").submit();
             }
         });
     });
     <?php $this->endBlock(); ?>
 </script>
 <?php $this->registerJs($this->blocks['customer_account_register'], \yii\web\View::POS_END);//将编写的js代码注册到页面底部 ?>
+
+
+
+
+
