@@ -1,6 +1,5 @@
 <div class="main">
-    <div class="page_where_l">
-        <?= Yii::$service->page->widget->render('breadcrumbs', $this); ?>
+    <?= Yii::$service->page->widget->render('breadcrumbs', $this); ?>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="main_left">
