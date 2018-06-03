@@ -1,7 +1,6 @@
 <div class="main">
     <div class="page_where_l">
-        <a href="/" rel="nofollow">Home</a> - <a href="/" rel="nofollow">Products</a> -<a
-                href="/">Original Brand Tool</a></div>
+        <?= Yii::$service->page->widget->render('breadcrumbs', $this); ?>
     <div class="page_where_r"><a href="javascript:history.go(-1);" rel="nofollow">&laquo; Go Back</a></div>
     <div class="blank8px"></div>
     <div class="main_left">
@@ -203,15 +202,15 @@
                             <div class="clear"></div>
                             <span class="px11">Item No.<?= $product['sku']; ?></span>&nbsp;&nbsp;&nbsp;
                             <!--                            <img src="../../images/ico/freeshipping.gif" border="0" align="absmiddle"/>&nbsp;&nbsp;&nbsp;-->
-                            <div class="fr w150px">
-                                <div class="rate_star_w100">
-                                    <div class="rate_star_w100_bg">
-                                        <div class="rate_star_w100_vw" style="width:96px;"></div>
-                                    </div>
-                                </div>
-                                <div class="rate_star_w100_tx"><a href="../../reviews/pro57665.html" target="_blank">(24)</a>
-                                </div>
-                            </div>
+<!--                            <div class="fr w150px">-->
+<!--                                <div class="rate_star_w100">-->
+<!--                                    <div class="rate_star_w100_bg">-->
+<!--                                        <div class="rate_star_w100_vw" style="width:96px;"></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="rate_star_w100_tx"><a href="../../reviews/pro57665.html" target="_blank">(24)</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="blank10px"></div>
                             <?= $product['short_description']; ?>
                             <div class="blank5px"></div>
