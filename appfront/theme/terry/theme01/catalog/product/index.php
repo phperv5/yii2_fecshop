@@ -32,7 +32,7 @@
                     <span id="num_pro_sold_51561"></span>
                 </div>
                 <div class="pro_ch_bf_rate" id="pro_rate_51561">
-                    <div class="" style="float: left;width:150px;">
+                    <div class="" style="float: left;width:150px;height: 30px;">
 
                     </div>
                     <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a
