@@ -32,9 +32,7 @@
                     <span id="num_pro_sold_51561"></span>
                 </div>
                 <div class="pro_ch_bf_rate" id="pro_rate_51561">
-                    <div class="pro_ch_bf_rate_bg">
 
-                    </div>
                     <div class="pro_ch_bf_rate_tx"><?= $reviw_rate_star_average ?> stars, <a
                                 href="<?= Yii::$service->url->getUrl('catalog/reviewproduct/lists', ['spu' => $spu, '_id' => $_id]); ?>"
                                 target="_blank"><?= $review_count ?> reviews.</a></div>
