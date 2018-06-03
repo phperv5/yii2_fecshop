@@ -170,9 +170,9 @@ class ProductMongodb implements ProductInterface
     public function apiSave($product_one)
     {
         $collection = $this->_productModel->find()->getCollection();
-        $collection->save($product_one);
+        $result = (string)$collection->save($product_one);
 
-        return true;
+        return $result;
     }
 
     /**
