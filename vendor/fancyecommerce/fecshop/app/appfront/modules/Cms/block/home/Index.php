@@ -14,17 +14,22 @@ class Index
     {
         $this->initHead();
         $newArrivals = Yii::$service->product->newarrivals->getList();
+        $proList = Yii::$service->product->prolist->getList();
+        $emptyArr = ['_test_'];
         return [
             'newArrivals' => $this->getNewArrivals($newArrivals),
-            'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14008','12001', '11005', '11001', 'AVDI', '21001', '19001', 'VVDI2', '22001', '20002', '20006', '11004','20011']),
-            'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['19006', '21002', '23001', '23002', '16001']),
-            'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14027','CK0014','14001', '14015', '14029', '14028', 'CK0002', 'T300', '19009', 'CK0007', '14031']),
-            'bestSellerProducts4' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['25001','23001','23004', '12051', '23005', '18 in 1', 'ELS']),
-//            'bestSellerProducts5' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-//            'bestSellerProducts6' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-//            'bestSellerProducts7' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
-//            'bestSellerProducts8' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82'),
+            'bestSellerProducts1' => $this->getBestSellerProducts('', isset($proList[0])?$proList[0]:$emptyArr),
+            'bestSellerProducts2' => $this->getBestSellerProducts('', isset($proList[1])?$proList[1]:$emptyArr),
+            'bestSellerProducts3' => $this->getBestSellerProducts('', isset($proList[2])?$proList[2]:$emptyArr),
+            'bestSellerProducts4' => $this->getBestSellerProducts('', isset($proList[3])?$proList[3]:$emptyArr),
         ];
+//        return [
+//            'newArrivals' => $this->getNewArrivals($newArrivals),
+//            'bestSellerProducts1' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14008','12001', '11005', '11001', 'AVDI', '21001', '19001', 'VVDI2', '22001', '20002', '20006', '11004','20011']),
+//            'bestSellerProducts2' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['19006', '21002', '23001', '23002', '16001']),
+//            'bestSellerProducts3' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['14027','CK0014','14001', '14015', '14029', '14028', 'CK0002', 'T300', '19009', 'CK0007', '14031']),
+//            'bestSellerProducts4' => $this->getBestSellerProducts('599823c3625a9c1a0f792c82', ['25001','23001','23004', '12051', '23005', '18 in 1', 'ELS']),
+//        ];
     }
 
     public function getFeaturedProduct()
